@@ -128,6 +128,8 @@
 
   window.addEventListener('keydown', function (e) {
     ultimaFoiTab = e.key === 'Tab';
+    // o Tab move o foco na hora: um clique no player logo depois não conta como chegada pelo teclado
+    if (ultimaFoiTab) setTimeout(function () { ultimaFoiTab = false; }, 300);
     if (e.key === 'Escape') fechar();
   }, true);
 
@@ -142,6 +144,15 @@
       var f = q('iframe.yt-trailer');
       if (!f || document.activeElement !== f || document.fullscreenElement) return;
       q(D).focus({ preventScroll: true });
+    }, 400);
+  });
+
+  // Ao sair da tela cheia o foco continua no player, e o Escape seguinte não chegaria aqui.
+  document.addEventListener('fullscreenchange', function () {
+    if (document.fullscreenElement) return;
+    setTimeout(function () {
+      var f = q('iframe.yt-trailer');
+      if (f && document.activeElement === f) q(D).focus({ preventScroll: true });
     }, 400);
   });
 })();
