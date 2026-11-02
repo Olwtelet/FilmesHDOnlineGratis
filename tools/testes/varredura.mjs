@@ -58,7 +58,7 @@ for (const f of paginas) {
   }
 }
 
-const PERMITIDOS = [/^https:\/\/discord\.gg\/(wSSJEJAJgt|B5DKdJuuWc)$/, /^https:\/\/www\.youtube\.com\/@/, /^https:\/\/steamcommunity\.com\/groups\/FilmesHDOnlineGratis$/, /^https:\/\/github\.com\/Olwtelet/, /^https:\/\/filmeshdonlinegratis\.vercel\.app\//, /^https:\/\/www\.themoviedb\.org/, /^https:\/\/policies\.google\.com\/privacy/];
+const PERMITIDOS = [/^https:\/\/discord\.gg\/(wSSJEJAJgt|B5DKdJuuWc)$/, /^https:\/\/www\.youtube\.com\/@/, /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/, /^https:\/\/steamcommunity\.com\/groups\/FilmesHDOnlineGratis$/, /^https:\/\/github\.com\/Olwtelet/, /^https:\/\/filmeshdonlinegratis\.vercel\.app\//, /^https:\/\/www\.themoviedb\.org/, /^https:\/\/policies\.google\.com\/privacy/];
 for (const u of EXTERNOS) if (!PERMITIDOS.some((re) => re.test(u))) achados.push(`link externo fora da lista: ${u}`);
 
 // Marca nos metadados de cada página

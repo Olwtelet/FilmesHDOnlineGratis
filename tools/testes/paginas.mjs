@@ -961,6 +961,7 @@ async function parteLinks() {
     const onde = [...externos.get(u)];
     if (onde.every((o) => /^(link|meta)/.test(o)) && u.startsWith('https://filmeshdonlinegratis.vercel.app')) return;
     if (u.startsWith('https://filmeshdonlinegratis.vercel.app')) return;
+    if (/^https:\/\/www\.youtube\.com\/watch\?v=/.test(u)) return; // os IDs já são conferidos pelo oEmbed, abaixo
     let status, final, titulo = '';
     try {
       const c = new AbortController();

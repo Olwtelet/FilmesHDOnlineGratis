@@ -509,6 +509,11 @@ body::after { /* scanlines e vinheta de monitor */
 [data-youtube] .video-mask-w { position: relative; background: #000; } /* a moldura do filme fica como passe-partout preto */
 /* inset de 3%: na moldura ondulada, 2% é o mínimo para nenhum pixel do player ser cortado */
 iframe.yt-trailer { position: absolute; inset: 3%; width: 94%; height: 94%; border: 0; pointer-events: auto !important; }
+/* Janela larga e baixa: o bloco ocupa 80% da largura e, em 16:9, passaria da altura da tela, levando os controles do player, o X e o link junto.
+   O diálogo é centrado na janela pelo app.js; aqui só encolhe, em 16:9, até caber. */
+@media screen and (min-width: 768px) {
+  [data-youtube] .video-player-dialog { inset: max(0px, calc(50% - 50svh + .75rem)) max(0px, calc(50% - (50svh - .75rem) * 16 / 9)); width: auto; height: auto; }
+}
 [data-youtube] .video-bar.top { inset: 0 auto auto 100%; width: auto; height: auto; padding: 0 0 0 .75rem; } /* fechar fora do player */
 [data-youtube] .close-btn { top: 0; }
 .video-player-dialog:focus, .video-player-dialog.open:focus { outline: none; }
@@ -528,16 +533,30 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
 }
 .trailer-opcao:hover { color: var(--cor-navegacao); }
 .trailer-opcao[aria-pressed="true"] { color: var(--sinal-preto); background-color: var(--cor-ativo-fundo); border-color: var(--cor-ativo-fundo); }
-@media screen and (min-width: 1200px) { /* na margem esquerda, à altura do botão de fechar */
-  .trailer-opcoes { top: 0; right: 100%; flex-direction: column; width: calc(10vw - 1.5rem); margin-right: .75rem; }
+@media screen and (min-width: 1200px) { /* na margem esquerda, à altura do botão de fechar; em janela baixa, abaixo do logo */
+  .trailer-opcoes { top: max(0px, calc(5.5rem + 50% - 50svh)); right: 100%; flex-direction: column; width: calc(10vw - 1.5rem); margin-right: .75rem; }
   .trailer-opcao { flex: none; }
 }
 @media screen and (max-width: 1199px) { /* abaixo do player */
   .trailer-opcoes { top: 100%; left: 0; right: 0; padding-top: .75rem; }
 }
+/* Deitado: abaixo do player não sobra janela e a rolagem está presa; na margem esquerda, acima do link do YouTube.
+   621 px é a altura que cabe o seletor abaixo do player a 1199 px de largura. */
+@media screen and (min-width: 768px) and (max-width: 1199px) and (max-height: 621px) {
+  .trailer-opcoes { top: 50%; left: auto; right: 100%; flex-direction: column; width: max(5.25rem, calc(10vw - 1.5rem)); margin-right: .75rem; padding-top: 0; transform: translateY(-50%); }
+  .trailer-opcao { flex: none; padding-inline: .4rem; }
+}
+/* saída para o YouTube: na margem esquerda, ao pé do player; a margem cabe em toda largura a partir de 768 px */
+.trailer-fora {
+  position: absolute; z-index: 3; right: 100%; bottom: 0; display: flex; align-items: flex-end; width: max(5.25rem, calc(10vw - 1.5rem)); min-height: 2.75rem; margin-right: .75rem;
+  color: var(--sinal-texto); font-family: var(--font-rotulo); font-size: .625rem; line-height: 1.2; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; pointer-events: auto;
+}
+.trailer-fora:hover { color: var(--cor-navegacao); }
 @media screen and (max-width: 767px) {
   /* celular: sem máscara, o player ocupa a largura e nunca fica abaixo dos 200 px que o YouTube pede */
   [data-youtube] .video-mask-w { -webkit-clip-path: none; clip-path: none; background: transparent; }
+  /* acima do player, na linha do botão de fechar; a caixa acompanha o texto: o resto da faixa continua fechando o diálogo */
+  .trailer-fora { right: auto; left: 0; bottom: calc(50% + max(100px, 28.125vw)); width: fit-content; max-width: calc(100% - 4.75rem); margin: 0 0 .75rem; }
   iframe.yt-trailer { inset: auto; left: calc(var(--sgx) * -1); top: 50%; transform: translateY(-50%); width: 100vw; height: max(200px, 56.25vw); }
   [data-youtube] .video-bar.top { inset: auto 0 calc(50% + max(100px, 28.125vw)) auto; padding: 0 0 .75rem 0; }
   .trailer-opcoes { top: calc(50% + max(100px, 28.125vw)); }
@@ -609,7 +628,7 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
 }
 
 /* 8. Foco e seleção */
-:focus-visible { outline: 2px solid var(--cor-ativo); outline-offset: 2px; }
+:focus-visible, a:focus-visible { outline: 2px solid var(--cor-ativo); outline-offset: 2px; } /* a: o a:hover{outline:0} do webflow.css apagaria o anel com o ponteiro em cima */
 /* os gatilhos dos menus são inputs invisíveis: o anel vai para o elemento que os contém */
 .checkbox-w:has(.menu-input:focus-visible), .mmenu-col.btn:has(> .menu-input:focus-visible) { outline: 2px solid var(--cor-ativo); outline-offset: -2px; }
 /* links atenuados precisam do anel inteiro; na lista de filmes, o anel fica dentro da linha */

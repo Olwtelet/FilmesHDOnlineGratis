@@ -58,9 +58,25 @@
     (function tenta(n) {
       if (!d.classList.contains('open')) return;
       if (parseFloat(escuro.style.opacity) >= 0.9) b.click();
+      else if (document.hidden) setTimeout(function () { tenta(n); }, 100); // sem quadros o escurecimento não anda: o pedido espera a volta à aba
       else if (n < 100) setTimeout(function () { tenta(n + 1); }, 100);
     })(0);
   }
+
+  // Girar o aparelho muda a altura da página, e com o Lenis parado não há como rolar de volta: o player, o X e o link ficariam
+  // fora da tela. O app.js só centra ao abrir. Duas passadas, porque os blocos da página ainda se recalculam depois do resize.
+  function recentrar() {
+    var d = q(D);
+    var wrap = q("[data-videoplayer='wrapper']");
+    if (!d || !wrap || !d.classList.contains('open')) return;
+    var r = wrap.getBoundingClientRect();
+    window.scrollTo(0, window.scrollY + r.top + r.height / 2 - window.innerHeight / 2);
+  }
+  var esperas = [];
+  window.addEventListener('resize', function () {
+    esperas.forEach(clearTimeout);
+    esperas = [setTimeout(recentrar, 150), setTimeout(recentrar, 900)];
+  });
 
   function trocarTrailer(botao) {
     var wrap = q("[data-videoplayer='wrapper']");
@@ -70,6 +86,8 @@
     botao.parentNode.querySelectorAll('[data-trailer]').forEach(function (b) {
       b.setAttribute('aria-pressed', b === botao ? 'true' : 'false');
     });
+    var fora = q('[data-trailer-fora]');
+    if (fora) fora.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(botao.dataset.trailer);
     var f = wrap.querySelector('iframe.yt-trailer');
     if (f) f.remove(); // um iframe novo em vez de trocar o src, que criaria uma entrada no histórico do navegador
     montar();
@@ -97,8 +115,15 @@
       trocarTrailer(opcao);
       return;
     }
-    // só o teclado chega a um link com o diálogo aberto: o escurecimento cobre o resto
-    if (alvo.closest('a[href]')) fechar();
+    // Com o diálogo aberto, só se chega ao link do YouTube ou, pelo teclado, aos links atrás do escurecimento. A aba nova para os
+    // quadros e o fechamento só terminaria na volta, então o som do player sai antes.
+    if (alvo.closest('a[href]')) {
+      if (alvo.closest('[data-trailer-fora]')) {
+        var f = q('iframe.yt-trailer');
+        if (f) f.remove();
+      }
+      fechar();
+    }
   }, true);
 
   window.addEventListener('keydown', function (e) {

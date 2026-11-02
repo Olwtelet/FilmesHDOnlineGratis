@@ -1,6 +1,6 @@
 // Trailers: os 22 tocando de verdade nas 21 páginas de sessão e todos os caminhos de fechar, contra o build em produção.
 //   node tools/testes/trailers.mjs [--url=http://localhost:4322] [--canal=msedge] [--partes=oembed,tocar,...] [--paralelo=1] [--tentativas=3] [--saida=pasta]
-// Partes: oembed, tocar, antes, fechar, dupla, rede, repetir, teclado, controles, paisagem, geometria (padrão: todas).
+// Partes: oembed, tocar, antes, fechar, dupla, rede, repetir, teclado, controles, paisagem, geometria, saida (padrão: todas).
 // Sempre headless. Cada caso reprovado sai como FALHA e o processo termina com código 1.
 //
 // Como o player é lido: frame.evaluate dentro do iframe de youtube-nocookie, em #movie_player e no <video> dele. O site monta
@@ -25,7 +25,7 @@ const CANAL = arg('canal', 'msedge');
 const PARALELO = +arg('paralelo', '1');
 const TENTATIVAS = +arg('tentativas', '3');
 const SAIDA = arg('saida', '');
-const PARTES = arg('partes', 'oembed,tocar,antes,fechar,dupla,rede,repetir,teclado,controles,paisagem,geometria').split(',');
+const PARTES = arg('partes', 'oembed,tocar,antes,fechar,dupla,rede,repetir,teclado,controles,paisagem,geometria,saida').split(',');
 if (SAIDA) fs.mkdirSync(SAIDA, { recursive: true });
 
 const PASTA = path.resolve(import.meta.dirname, '../../src/data/sessoes');
@@ -59,11 +59,17 @@ const EXTRAS = [
   ['1180x820 tablet deitado', { viewport: { width: 1180, height: 820 }, ...toque(UA_TABLET) }],
   ['1024x768 tablet deitado', { viewport: { width: 1024, height: 768 }, ...toque(UA_TABLET) }],
   ['768x1024 tablet', { viewport: { width: 768, height: 1024 }, ...toque(UA_TABLET) }],
-  ['767x1024', { viewport: { width: 767, height: 1024 }, ...toque(UA_TABLET) }],
   ['360x640 celular', { viewport: { width: 360, height: 640 }, ...toque(UA_CELULAR) }],
   ['320x568 celular', { viewport: { width: 320, height: 568 }, ...toque(UA_CELULAR) }],
-  ['667x375 celular deitado', { viewport: { width: 667, height: 375 }, ...toque(UA_CELULAR) }],
+  // De 480 a 767 px de largura o aviso de girar cobre tudo, de propósito: o trailer nem chega a abrir
+  ['800x360 celular deitado', { viewport: { width: 800, height: 360 }, ...toque(UA_CELULAR) }],
+  ['915x412 celular deitado', { viewport: { width: 915, height: 412 }, ...toque(UA_CELULAR) }],
   ['932x430 celular deitado', { viewport: { width: 932, height: 430 }, ...toque(UA_CELULAR) }],
+  // Largas e baixas: o 16:9 de 80% da largura passaria da altura da janela
+  ['1536x730', { viewport: { width: 1536, height: 730 } }],
+  ['1920x800', { viewport: { width: 1920, height: 800 } }],
+  ['2560x950', { viewport: { width: 2560, height: 950 } }],
+  ['3440x1300', { viewport: { width: 3440, height: 1300 } }],
 ];
 const HOST_FORA = /(^|\.)(youtube\.com|youtube-nocookie\.com|youtu\.be|ytimg\.com|googlevideo\.com|ggpht\.com|google\.com|google\.[a-z.]+|googleapis\.com|gstatic\.com|googleusercontent\.com|doubleclick\.net|googlesyndication\.com|google-analytics\.com|googletagmanager\.com)$/i;
 
@@ -396,6 +402,8 @@ const medirAberto = (page) =>
         faixaCobre: antes.display !== 'none' && r.top < parseFloat(antes.height),
         fechar: acertavel(q(FECHAR)),
         opcoes: [...document.querySelectorAll('[data-trailer]')].map((b) => ({ ...acertavel(b), id: b.dataset.trailer, apertado: b.getAttribute('aria-pressed') })),
+        saida: { ...acertavel(q('[data-trailer-fora]')), href: q('[data-trailer-fora]')?.href, rel: q('[data-trailer-fora]')?.rel },
+        logo: (() => { const b = q('.marca-nav')?.getBoundingClientRect(); return b ? { x: b.left + b.width / 2, y: b.top + b.height / 2, l: Math.round(b.width), a: Math.round(b.height) } : null; })(),
         escuro: q(ESCURO).style.opacity,
         lenisParado: document.documentElement.classList.contains('lenis-stopped'),
         menu: { op: +getComputedStyle(m).opacity, vis: getComputedStyle(m).visibility },
@@ -422,6 +430,15 @@ function problemasAberto(m, id, { exigeSelecionado } = {}) {
   if (m.rect.w < 200 || m.rect.h < 200) p.push(`player menor que 200x200: ${Math.round(m.rect.w)}x${Math.round(m.rect.h)}`);
   if (!m.fechar?.dentro || !m.fechar?.acerta) p.push(`fechar inalcançável: ${JSON.stringify(m.fechar)}`);
   for (const o of m.opcoes) if (!o.dentro || !o.acerta) p.push(`opção ${o.id} inalcançável: ${JSON.stringify(o)}`);
+  if (!m.saida.dentro || !m.saida.acerta) p.push(`link do YouTube inalcançável: ${JSON.stringify(m.saida)}`);
+  if (m.saida.href !== `https://www.youtube.com/watch?v=${id}`) p.push(`link do YouTube aponta para ${m.saida.href}`);
+  if (m.saida.rel !== 'noopener noreferrer') p.push(`link do YouTube com rel "${m.saida.rel}"`);
+  // acertavel só olha o centro: a caixa inteira não pode cobrir o X, e nada do seletor fica sob o logo, que pinta por cima
+  const cruza = (a, b) => a && b && Math.abs(a.x - b.x) < (a.l + b.l) / 2 && Math.abs(a.y - b.y) < (a.a + b.a) / 2;
+  if (cruza(m.saida, m.fechar)) p.push(`link do YouTube sobre o X: ${JSON.stringify(m.saida)} ${JSON.stringify(m.fechar)}`);
+  if (cruza(m.saida, m.logo)) p.push(`link do YouTube sob o logo: ${JSON.stringify(m.saida)} ${JSON.stringify(m.logo)}`);
+  for (const o of m.opcoes) if (cruza(o, m.logo)) p.push(`opção ${o.id} sob o logo: ${JSON.stringify(o)} ${JSON.stringify(m.logo)}`);
+  for (const o of m.opcoes) if (cruza(o, m.saida)) p.push(`opção ${o.id} sobre o link do YouTube: ${JSON.stringify(o)} ${JSON.stringify(m.saida)}`);
   if (!m.lenisParado) p.push('Lenis solto com o diálogo aberto');
   if (m.menu.vis !== 'hidden') p.push(`menu visível sobre o trailer: ${JSON.stringify(m.menu)}`);
   if (m.videoSrc || m.videoAtual) p.push(`<video> com fonte: ${m.videoSrc} ${m.videoAtual}`);
@@ -572,7 +589,7 @@ async function esperarSessao(page, slug) {
 async function pontoEscuro(page) {
   return page.evaluate((ESCURO) => {
     const e = document.querySelector(ESCURO);
-    const perto = [...document.querySelectorAll("iframe.yt-trailer, [data-videoplayer='close'], [data-trailer]")].map((n) => n.getBoundingClientRect());
+    const perto = [...document.querySelectorAll("iframe.yt-trailer, [data-videoplayer='close'], [data-trailer], [data-trailer-fora]")].map((n) => n.getBoundingClientRect());
     const longe = (x, y) => perto.every((r) => x < r.left - 30 || x > r.right + 30 || y < r.top - 30 || y > r.bottom + 30);
     const achados = [];
     let total = 0;
@@ -737,6 +754,8 @@ function casosDeFechar(disp, slug) {
         const frame = framesYouTube(page)[0];
         const rolagemAntes = await page.evaluate(() => scrollY);
         const info = await CAMINHOS[nome](page);
+        // um toque que caísse no link do YouTube também fecharia: só uma aba aberta denuncia
+        confere(`${rotulo}: nenhuma aba nova`, page.context().pages().length === 1, `${page.context().pages().length} abas`, true);
         await conferirFechado(page, `${rotulo}${info ? ` (${info})` : ''}`, { frameAntigo: frame, rolagemAntes });
         await reabre(page, rotulo, f.id);
       }),
@@ -938,7 +957,7 @@ async function lerSituacao(page) {
     : null;
   const doSite = await page.evaluate((d) => {
     const dl = document.querySelector(d);
-    const candidatos = [...dl.querySelectorAll('*')].filter((n) => !n.closest('iframe') && !n.closest('[data-videoplayer="ui"]') && !n.closest('.trailer-opcoes') && !n.closest('button') && n.children.length === 0 && n.textContent.trim() && getComputedStyle(n).visibility === 'visible' && n.getClientRects().length);
+    const candidatos = [...dl.querySelectorAll('*')].filter((n) => !n.closest('iframe') && !n.closest('[data-videoplayer="ui"]') && !n.closest('.trailer-opcoes') && !n.closest('[data-trailer-fora]') && !n.closest('button') && n.children.length === 0 && n.textContent.trim() && getComputedStyle(n).visibility === 'visible' && n.getClientRects().length);
     return candidatos.map((n) => n.textContent.trim()).join(' | ');
   }, DIALOGO);
   const honesto = !!frame?.erro || !!(frame?.url.startsWith('chrome-error') && frame.texto) || !!doSite;
@@ -962,7 +981,8 @@ function casosDeBloqueio(nome, disp, slug, preparar, saidas = Object.keys(CAMINH
         confere(`${rotulo}: diálogo abre, nada por cima`, pa.length === 0, pa.join('; ') || resumoAberto(m));
         const s = await lerSituacao(page);
         if (i === 0) {
-          confere(`bloqueio ${nome}, ${disp}: o visitante lê o que aconteceu`, s.honesto, `frame ${JSON.stringify(s.frame)} | texto do site no diálogo: "${s.doSite}"`);
+          // O site não enxerga o player de outra origem: sem texto de erro, o que resta ao visitante é o link, conferido em problemasAberto
+          if (!s.honesto) aviso(`bloqueio ${nome}, ${disp}: sem texto de erro, resta o link`, `frame ${JSON.stringify(s.frame)}`);
           fichas.push({ tipo: 'bloqueio', nome, disp, frame: s.frame, avisoDoSite: s.doSite });
           await salvarTela(page, `bloqueio-${nome}-${disp}`);
         }
@@ -1000,8 +1020,9 @@ async function parteRede() {
       await page.waitForTimeout(6000);
       await salvarTela(page, 'bloqueio-sem-internet-celular');
       const s = await lerSituacao(page);
-      confere('bloqueio sem internet: o visitante lê o que aconteceu', s.honesto, `frame ${JSON.stringify(s.frame)} | texto do site no diálogo: "${s.doSite}"`);
+      if (!s.honesto) aviso('bloqueio sem internet: sem texto de erro, resta o link', `frame ${JSON.stringify(s.frame)}`);
       const m = await medirAberto(page);
+      confere('bloqueio sem internet: link do YouTube à vista', m.saida.dentro && m.saida.acerta, JSON.stringify(m.saida));
       await clicarEm(page, m.fechar.x, m.fechar.y);
       await page.waitForFunction((d) => !document.querySelector(d).classList.contains('open'), DIALOGO, { timeout: 30000 });
       await ctx.setOffline(false);
@@ -1344,11 +1365,15 @@ async function parteTeclado() {
       await irPara(page, 'the-menu-2022');
       await abrirTrailer(page);
       await esperarTocando(page, f.id, { avanco: 0.5 });
-      await page.keyboard.press('Tab');
-      await page.keyboard.press('Tab');
+      // X, link do YouTube, player
+      const paradas = [];
+      for (let i = 0; i < 3; i++) {
+        await page.keyboard.press('Tab');
+        paradas.push(await page.evaluate(() => document.activeElement?.dataset?.trailerFora !== undefined ? 'link' : document.activeElement?.tagName));
+      }
       await page.waitForTimeout(600);
       const noFrame = await page.evaluate(() => document.activeElement?.tagName);
-      confere('teclado: segundo Tab entra no player, sem ser devolvido', noFrame === 'IFRAME', noFrame);
+      confere('teclado: terceiro Tab entra no player, depois do X e do link, sem ser devolvido', noFrame === 'IFRAME' && paradas[1] === 'link', paradas.join(' > '));
       await page.keyboard.press('Escape');
       await page.waitForTimeout(1200);
       const abertoAinda = await page.evaluate((d) => document.querySelector(d).classList.contains('open'), DIALOGO);
@@ -1592,6 +1617,37 @@ async function partePaisagem() {
   await emLotes(tarefas);
 }
 
+// O link para o YouTube abre o filme escolhido em outra aba, fecha o diálogo e não troca a página
+async function parteSaida() {
+  const tarefas = [];
+  for (const disp of ['desktop', 'tablet', 'celular']) {
+    tarefas.push(() =>
+      caso(`saída ${disp}`, disp, async (page, ctx) => {
+        const alvo = sessao(DUPLA).filmes[1];
+        await irPara(page, DUPLA);
+        await abrirTrailer(page);
+        const antes = await medirAberto(page);
+        await clicarEm(page, antes.opcoes[1].x, antes.opcoes[1].y);
+        await page.waitForFunction((id) => document.querySelector('iframe.yt-trailer')?.src.includes(id), alvo.id, { timeout: 15000 });
+        const m = await medirAberto(page);
+        const frame = framesYouTube(page)[0];
+        const [aba] = await Promise.all([ctx.waitForEvent('page', { timeout: 15000 }), clicarEm(page, m.saida.x, m.saida.y)]);
+        // o player sai no próprio clique, sem esperar um quadro: com a aba nova na frente eles param
+        const iframesNoClique = await page.evaluate(() => document.querySelectorAll('iframe.yt-trailer').length);
+        confere(`saída ${disp}: o player sai no clique`, iframesNoClique === 0, `${iframesNoClique} iframes`);
+        const chegou = aba.url().includes(`watch?v=${alvo.id}`) || (await aba.waitForURL(`**/watch?v=${alvo.id}*`, { timeout: 30000 }).then(() => true, () => false));
+        confere(`saída ${disp}: abre o filme escolhido em outra aba`, chegou, aba.url());
+        const lido = await aba.evaluate(() => ({ opener: window.opener === null, referrer: document.referrer })).catch(() => null);
+        confere(`saída ${disp}: a outra aba não enxerga o site nem recebe a origem`, lido?.opener === true && lido?.referrer === '', JSON.stringify(lido));
+        await aba.close();
+        confere(`saída ${disp}: a página continua na sessão`, page.url().endsWith(`/sessoes/${DUPLA}/`), page.url());
+        await conferirFechado(page, `saída ${disp}: diálogo fechado, sem player`, { frameAntigo: frame });
+      }),
+    );
+  }
+  await emLotes(tarefas);
+}
+
 // Tamanhos além dos pedidos: só a geometria, sem esperar o vídeo
 async function parteGeometria() {
   const tarefas = [];
@@ -1613,7 +1669,7 @@ async function parteGeometria() {
 
 // ---------------------------------------------------------------- execução
 
-const TODAS = { oembed: parteOembed, tocar: parteTocar, antes: parteAntes, fechar: parteFechar, dupla: parteDupla, rede: parteRede, repetir: parteRepetir, teclado: parteTeclado, controles: parteControles, paisagem: partePaisagem, geometria: parteGeometria };
+const TODAS = { oembed: parteOembed, tocar: parteTocar, antes: parteAntes, fechar: parteFechar, dupla: parteDupla, rede: parteRede, repetir: parteRepetir, teclado: parteTeclado, controles: parteControles, paisagem: partePaisagem, geometria: parteGeometria, saida: parteSaida };
 for (const p of PARTES) {
   console.log(`\n== ${p} (${CANAL})`);
   await TODAS[p]();

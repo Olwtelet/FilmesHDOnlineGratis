@@ -65,6 +65,8 @@ const tituloDe = (filme: string) => `Trailer de ${filme}`;
               </div>
             )
           }
+          {/* O site não enxerga um player que falhou em outra origem: a saída fica sempre à vista, e o clique tira o player e fecha o diálogo */}
+          <a href={`https://www.youtube.com/watch?v=${primeiro.youtube}`} target="_blank" rel="noopener noreferrer" data-trailer-fora class="trailer-fora">Não abriu? Ver no YouTube</a>
           <div class="video-bar">
             <div data-videoplayer="ui" class="video-ctrls">
               <div data-vid="play" class="playpause-w">
