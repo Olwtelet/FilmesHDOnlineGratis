@@ -23,6 +23,8 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Saída para o YouTube | Link "Não abriu? Ver no YouTube", sempre à vista e fora do player, com o filme escolhido. O clique tira o player na hora e fecha o diálogo | O site não enxerga um player que falhou em outra origem, então não há como mostrar um aviso só quando falha |
 | Tamanho do diálogo | A partir de 768 px, encolhe em 16:9 até caber na janela. Em janela larga e baixa o bloco de 80% da largura passava da altura da tela e levava os controles do player, o X e o link junto. Ao mudar o tamanho da janela ou girar o aparelho, o player volta ao centro | Com a rolagem presa, quem girava o celular com o trailer aberto não tinha como voltar |
 | Sessão dupla | Uma página, dois trailers, seletor de dois botões fora do player | O `Ia` do bundle aceita um único player |
+| Teclado | Menus abrem e fecham com Espaço e Enter. Saem do Tab os painéis fechados, os cartões da home fora da tela e o link do lightbox. Paradas de Tab: home 5, Programação 7, sessão 27, Sobre 21, Contato 5, 404 9, Cookies 20 | Com 21 sessões a home tinha 97 paradas, 92 delas invisíveis |
+| Ouvinte de teclado da Programação | Patch no `app.js`: guarda a referência para conseguir remover o ouvinte ao sair da página | O original criava uma função nova ao remover, e o ouvinte antigo continuava ativo depois de sair |
 | Busca | Filtro no painel pequeno do menu, em `<textarea rows=1>` | `Hn` captura todo `input` sob `[data-menu=w]` por posição |
 | Imagens | Hospedadas no site, derivadas do TMDB: hero 1920, roll 1600, cartaz 800, cenas 960 e 640 | `or()` não tem `onerror`, CDN externa travaria a página; Work carrega todos os quadros de uma vez |
 | Lightbox | Número par de quadros, 14 por sessão, 640 px | O shader quebra a emenda com total ímpar; 14 a 640 px mantém o orçamento de GPU da Siena |
@@ -167,41 +169,61 @@ Exceções ao sábado às 20:30: `the-menu-2022` (terça), `obsession-2026` e `w
 
 ## 7. Evidência dos testes
 
-Todos os testes de navegador rodaram sem janela, contra o build de produção, salvo indicação.
+Rodada de 02/11/2026, contra o build de produção. Sem janela no Edge, salvo indicação.
 
 | Verificação | Resultado | Observação |
 |---|---|---|
-| `tools/testes/varredura.mjs` | Nenhum achado no build final | Siena, filmes antigos, estrelas, promessas, links internos, imagens, metadados |
+| `tools/testes/varredura.mjs` | Nenhum achado | Siena, filmes antigos, estrelas, promessas, links internos, imagens, metadados |
 | `tools/checar-textos.mjs` | 21 sessões dentro dos limites | |
-| `tools/testes/ordem.mjs` | 47 de 47 no Edge | Antes, durante e depois da sessão, exceções, virada do dia, duas futuras, nenhuma futura, fusos, término explícito, aba aberta, escondida, CENAS e ENTER na tela. Rodou antes dos últimos ajustes de CSS e elenco, que não tocam nessa lógica. Uma versão anterior deu 44 de 44 também no Chrome |
-| Trailers, Edge | Os 22 tocaram pelo clique real nas 21 páginas, com som ligado (86 de 86 checagens). Nenhum pedido externo antes do clique (12 de 12) | Headless, build de produção |
-| Trailers, Chrome | Pelo site, 4 tocaram: Bugonia, O Lagosta e os dois da sessão dupla. Os 22 tocaram numa página de teste anterior, fora do site, e responderam ao oEmbed | A rodada dos 22 pelo site no Chrome não terminou |
-| Trailers, fechar | X, escurecimento, Escape, voltar e navegar durante a abertura passaram no Edge e no Chrome, no servidor de desenvolvimento | A repetição no build de produção não terminou |
-| Páginas, dados | 534 de 535 | A falha era o elenco em inglês, corrigido depois |
-| Páginas, 29 endereços a 1440 e 390 px | 800 de 870 | Ver a triagem abaixo |
-| Páginas, 5 outros tamanhos | 1.022 de 1.086 | Ver a triagem abaixo |
-| Tutorial | 40 de 40 no Edge e no Chrome | Vídeo só depois do ENTER, nada no celular |
-| ENTER, visita limpa, n=8 | Edge 3.705 ms, Chrome 3.759 ms | Referência 3.751,5 ms |
-| Revisão de código | 19 achados, 0 bloqueios | Corrigidos: datas e limites no zod, aba escondida, CENAS, abertura na tela, máscara, canonical da 404, JSON-LD |
+| `tools/testes/ordem.mjs` | 47 de 47 | Antes, durante e depois da sessão, exceções, virada do dia, duas futuras, nenhuma futura, fusos, término explícito, aba aberta, escondida, CENAS e ENTER na tela |
+| `tools/testes/interacoes.mjs` | 475 de 475 | Teclado, menus, filtro, toque, cadeia de navegação. A parte de mouse repetida depois do último ajuste do teste: 74 de 74 |
+| `tools/testes/trailers.mjs` | 768 checagens, nenhuma falha | Os 22 trailers tocam pelo clique real, com som (85), oEmbed (22), nada externo antes do clique (18), saída para o YouTube (18), geometria em 30 janelas (30), celular deitado (34), sessão dupla (38), YouTube bloqueado (90), fechar (288), repetir (106), teclado (20), controles (19) |
+| `tools/testes/paginas.mjs` | 3.294 de 3.294, depois da triagem abaixo | 7 tamanhos, de 360x640 a 1920x1080, com sessão futura, aviso e títulos longos, mais dados, links, marca e menus |
+| `tools/testes/abertura.mjs` | 21 de 21 | Tempos, quadros, 5 caminhos de falha (máscara, textura, `app.js` bloqueado, movimento reduzido, sem WebGL), visita de volta, nenhum vídeo antes do ENTER |
+| `tools/testes/janela-real.mjs`, **Chrome e Brave reais, com janela** | 92 de 92 | 8 visitas por navegador a 1440 e 1536 px, limpa e com cache: a abertura anima, a home abre, o tutorial toca sem parar, a seta troca o filme, console limpo. Trailer de Bugonia toca pelo clique, Escape fecha, o link abre o filme no YouTube e, de volta à aba, o diálogo está fechado e a página rola |
+| Tutorial | 40 de 40 no Edge e no Chrome | Rodada anterior à formatação. Vídeo só depois do ENTER, nada no celular |
+| Revisão de código | 19 achados, 0 bloqueios | Rodada anterior. Corrigidos: datas e limites no zod, aba escondida, CENAS, abertura na tela, máscara, canonical da 404, JSON-LD |
 | Revisão visual | Folhas de home, Programação, menus, sessões e Sobre vistas uma a uma | Desktop e celular, títulos curtos e longos, com sessão futura e com aviso |
 
-**Triagem das falhas de página.** 41 eram o aviso `Unable to preventDefault` do próprio bundle. As letras em movimento do Sobre e da 404, e os clones do rollover, são falso positivo. A lista do menu a 1536x730 é cortada pela janela e rola. O `@` do e-mail perde 1,5 px, sem efeito visível. Três eram cortes reais, já corrigidos em `tema-sinal.css`, mas **sem nova conferência no navegador**: til e cedilha nos rótulos das notas do celular, última letra do rodapé e letra do título da home.
+**Tempos da abertura, em ms (mediana).** PC parado havia mais de 2 horas, sem jogo aberto, com o Wallpaper Engine aberto, que usa a GPU. Com jogo aberto não foi medido.
+
+| Onde | ENTER, visita limpa | ENTER, com cache | Home depois do clique, limpa e com cache |
+|---|---:|---:|---:|
+| Edge sem janela, n=8 | 3.703 | 3.716 | 1.717 e 1.716 |
+| Chrome com janela, n=4 | 3.853 | 3.655 | 1.712 e 1.717 |
+| Brave com janela, n=4 | 3.854 | 3.695 | 1.715 e 1.719 |
+| Site original da Siena, no ar, Edge sem janela, n=6 | 3.913 | 3.736 | 1.710 e 1.713 |
+
+O ENTER é um timer fixo de 3,5 s, contado desde que o `app.js` começa a rodar (150 a 350 ms depois da navegação). Em 60 visitas perfiladas, 30 no Edge e 30 no Chrome, o timer atrasou no máximo 7 ms, a espera do quadro seguinte foi de no máximo 8 ms, e a preparação terminou de 1,97 a 2,13 s antes do timer, nunca depois. A leitura de 4,0 a 4,8 s de 01/11, com o VALORANT aberto e uma sonda antiga, não se repetiu, então o `app.js` não foi mexido por causa disso. Nas janelas reais, 146 a 151 quadros por segundo. A referência antiga de 1.838 ms até a home era de antes da formatação do PC: o site original, medido agora, dá o mesmo valor deste site.
+
+**Triagem das falhas de Páginas.** Na bateria de 02/11, 32 de 3.294 checagens falharam, todas em "nenhum texto cortado".
+
+- Reais, corrigidas em `tema-sinal.css`: o título do Sobre em qualquer tela abaixo de 768 px, com as letras visivelmente cortadas embaixo, porque o original desce cada linha .4rem e o `main.css` reduz o corpo a 4vw; e o `@` do e-mail do Contato, que perdia 1,5 px.
+- Falso positivo, teste ajustado: o giro das letras do título da home, animação do original a cada 6 s; a cópia do rollover da 404, que o `clip-path` do tema esconde; as palavras do Sobre que correm com a rolagem; e a lista de filmes do menu, cortada pela própria caixa, que rola até o último item (conferido com a roda a 1440x900, 1536x730 e 1280x720).
+- Os três cortes corrigidos antes, sem conferência, não reapareceram: til e cedilha nos rótulos das notas do celular, última letra do rodapé e letra do título da home.
+
+**Triagem das interações.** Corrigido: o trailer não prende o foco depois de Tab e clique no player, Escape volta a fechar depois de clicar no player e de sair da tela cheia, o diálogo cabe em janela larga e baixa (a 2560x950 o player tem 1547x870), o seletor da sessão dupla não some com o celular deitado, os menus respondem a Espaço e Enter, o Tab não para em nada invisível e o ouvinte de teclado da Programação não sobrevive à saída da página.
+
+Em 11 cenários de YouTube bloqueado ou vídeo indisponível, o player não mostra texto de erro legível pelo site. O link "Não abriu? Ver no YouTube" é a saída nesses casos, e é por isso que ele fica sempre à vista.
 
 ### O que não foi verificado
 
-O PC desligou sozinho três vezes em 01/11/2026 (08:50, 17:58 e 21:29), sempre com testes rodando, e os testes de navegador foram interrompidos de propósito. Ficaram sem rodar:
-
-- **Chrome e Brave reais, primeira visita e cache.** Pedido do proprietário. Nenhuma execução com janela visível foi feita depois da troca da abertura.
-- `tools/testes/abertura.mjs`: escrito, nunca executado. Falta medir a visita com cache, o tempo até a home e os caminhos de falha no build final.
-- `tools/testes/interacoes.mjs`: nenhuma rodada completa. Nas parciais, o teclado na página, o filtro, o toque e a cadeia de navegação passaram nas verificações dos implementadores; várias falhas da suíte foram tempo esgotado sob carga e não foram separadas das reais.
-- **Programação em tablet (820 px).** O canvas vai a 3.280 px, a página anda de lado, e numa captura os cartazes não apareceram. A Siena tinha a mesma expansão (2.097 px), com cartazes alinhados. A hipótese é acrescentar `minimum-scale=1` à meta viewport; não testada.
 - Safari, Firefox, aparelhos reais e publicação de verdade na Vercel.
+- **Chrome e Brave reais, além do caminho principal.** Neles rodaram abertura, tutorial, troca de filme, um trailer e a saída para o YouTube. Menus, filtro, teclado, toque e os outros 21 trailers rodaram só no Edge sem janela.
+- **Programação em iPad.** Em emulação a 820x1180 a janela não anda de lado, a escala fica em 1 e os cartazes aparecem. O conteúdo de 4.150 px é recortado de propósito. Num iPad de verdade não foi visto.
+- Tempos da abertura com jogo aberto. Nenhum estava aberto durante a medição.
+- Depois da bateria mudaram só as duas regras do Sobre e do Contato e os testes de Páginas e abertura: foram repetidos varredura, abertura e Páginas. O resto não depende dessas regras.
 
 ### Herdado da estrutura original, sem alteração
 
 - Com roda de mouse física, cada entalhe soma 0,06 de filme e o `update()` puxa 10% de volta por quadro: a roda mexe o rolo e não troca de filme. Trackpad, arrasto, setas e toque trocam.
-- Painéis fechados continuam na ordem do Tab. Com 21 sessões são 92 de 97 paradas invisíveis na home.
 - Escape só fecha o trailer e limpa o filtro; não fecha os menus nem o tutorial.
+- No celular, o gesto que começa em cima do slider de leituras não rola a página, porque o bundle segura o `touchstart`. Rola pela margem.
+- Sobre no celular: o `main.css` deixa o título em 4vw e as linhas pequenas em 1,8vw, com `!important`. A 390 px são 15,6 px e 7 px, pequeno para ler.
+- Entre 480 e 767 px de largura, a página inteira fica coberta por "Gire o aparelho para ver melhor". Isso pega celular deitado e tablet pequeno em pé.
+- Os ouvintes de `resize` e de toque da Programação também ficam depois de sair da página. Nenhum efeito visto.
+
+Do link novo do trailer, sem alteração: o clique com o botão do meio abre a aba e não fecha o diálogo, e o texto do link não diz o nome do filme nem que abre outra aba.
 
 ## 8. Decisões que dependem do proprietário
 

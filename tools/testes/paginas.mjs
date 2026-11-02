@@ -147,6 +147,12 @@ const MEDIR = () => {
     return a;
   };
   const fixo = (el) => { for (let a = el; a; a = a.parentElement) if (getComputedStyle(a).position === 'fixed') return true; return false; };
+  const emRepouso = (copia) => {
+    const caixa = copia.parentElement.getBoundingClientRect();
+    const desvio = (e) => Math.abs(e.getBoundingClientRect().top - caixa.top);
+    const outra = copia.previousElementSibling || copia.nextElementSibling;
+    return (!outra || desvio(copia) <= desvio(outra)) && desvio(copia) < parseFloat(getComputedStyle(copia).fontSize) * 0.35;
+  };
 
   const cortes = [];
   const blocos = new Map();
@@ -164,6 +170,10 @@ const MEDIR = () => {
     const texto = n.data;
     if (!texto.trim()) { const b = blocoDe(el); if (blocos.has(b)) blocos.get(b).push(null); continue; }
     if (!visivel(el)) continue;
+    // Rollover: duas cópias de cada letra giram na caixa. Só conta a que está parada lá; a outra e as que giram são a animação.
+    if (el.closest('.cloneText2')) continue;
+    const copia = el.closest('.originalText,.cloneText,.originalText2');
+    if (copia && !emRepouso(copia)) continue;
     range.selectNodeContents(n);
     const u = range.getBoundingClientRect();
     if (u.width < 0.5 || u.height < 0.5 || u.right < 0 || u.left > vw || u.bottom < 0 || u.top > vh) continue;
@@ -180,7 +190,9 @@ const MEDIR = () => {
     let culpado = null;
     const carrossel = el.closest('[data-slider="item"],[data-roll="item"],[data-reviews="slide"],[data-footage="item"],[data-footage="item2"],[data-marquee],.about-md-text,.about-xl-text,.menu-films-w');
     const rc = carrossel && carrossel.getBoundingClientRect();
-    const carrosselFora = rc && (rc.left < 0 || rc.right > vw || rc.top < 0 || rc.bottom > vh);
+    // As palavras do Sobre correm com a rolagem e a lista do menu rola: sair da própria caixa ou da janela é o movimento delas.
+    const corre = el.closest('.about-md-text,.about-xl-text,.menu-films-w');
+    const carrosselFora = corre || (rc && (rc.left < 0 || rc.right > vw || rc.top < 0 || rc.bottom > vh));
     for (let i = 0; i < texto.length; i++) {
       const original = texto[i];
       if (/\s/.test(original)) { lista.push(null); continue; }
@@ -203,7 +215,7 @@ const MEDIR = () => {
       // Sinal gráfico não tem essa folga: sem o til, PROGRAMAÇÃO vira outra palavra.
       const temAcento = /[ÃÕÁÉÍÓÚÂÊÔÀÇãõáéíóúâêôàç]/.test(ch);
       const tol = temAcento ? TOL : Math.max(TOL, E * 0.04);
-      const caixas = clips.filter((c) => !carrossel || !c.el.contains(carrossel) || c.el === carrossel).map((c) => ({ ...c, nome: null }));
+      const caixas = clips.filter((c) => (!carrossel || !c.el.contains(carrossel) || c.el === carrossel) && c.el !== corre).map((c) => ({ ...c, nome: null }));
       // Cartão de carrossel ou texto que corre com a rolagem pode sair da janela: é a própria animação.
       if (!carrosselFora) {
         caixas.push({ r: { top: -1e9, bottom: 1e9, left: 0, right: vw }, ox: true, oy: false, el: null, nome: 'borda da janela' });

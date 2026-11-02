@@ -293,6 +293,10 @@ body { font-synthesis: none; }
 /* O mesmo para as outras caixas que recortam texto */
 .footer-of-w, .footer-of-w.last { height: 1.12em; padding: .3em .06em .2em; margin: -.22em -.06em -.2em; }
 .about-he .span-clip { display: block; padding-block: .28em .22em; margin-block: -.28em -.22em; }
+/* Abaixo de 768 px o original desce cada linha .4rem. Com o corpo de 4vw do main.css, isso corta a parte de baixo das letras */
+@media screen and (max-width: 767px) { .about-he .span-move { transform: none; } }
+/* O e-mail passa do fundo da caixa que o recorta e o @ perdia a ponta de baixo. Em coluna, abaixo de 768 px, ele cabe */
+@media screen and (min-width: 768px) { .contact-li-it .roll-cont-eyeb.parish { position: relative; top: -2px; } }
 ._404-line { display: flow-root; }
 ._404-line .ovfl-hidden { height: calc(1.5em + 18px); padding-top: calc(.15em + 10px); padding-bottom: 8px; margin-block: -10px -8px; }
 .menu-text-title-w { padding-top: 4px; margin-top: -4px; }

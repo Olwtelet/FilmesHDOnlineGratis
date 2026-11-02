@@ -1,7 +1,8 @@
 // Abertura da home contra o build em produção: tempos do ENTER e da home, quadros do primeiro carregamento, caminhos de falha
 // e visita de volta. Sempre headless. Rode com nada mais usando a máquina: os tempos são a parte que importa aqui.
 //   node tools/testes/abertura.mjs [--url=http://localhost:4322] [--canal=msedge] [--n=8] [--partes=tempos,quadros,falhas,retorno] [--saida=pasta]
-// Referência dos tempos: reference/fase2/relatorios/preloader.md, seção 5 (Edge a 1440x900, com 9 filmes).
+// Referência dos tempos: o site original da Siena medido nesta máquina em 02/11/2026 (Edge a 1440x900, n=6). O ENTER da visita limpa lá
+// depende da rede, então esse fica o do protótipo em reference/fase2/relatorios/preloader.md, seção 5. Em outra máquina, meça de novo.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -14,7 +15,7 @@ const CANAL = arg('canal', 'msedge');
 const N = +arg('n', 8);
 const PARTES = arg('partes', 'tempos,quadros,falhas,retorno').split(',');
 const SAIDA = path.resolve(arg('saida', path.join(os.tmpdir(), 'fhdog-abertura')));
-const REF = { enterLimpa: 3751.5, enterCache: 3783.5, homeLimpa: 1838.5, homeCache: 1845.5 };
+const REF = { enterLimpa: 3751.5, enterCache: 3736, homeLimpa: 1709.5, homeCache: 1712.5 };
 const FOLGA = 50;
 const CELULAR = {
   viewport: { width: 390, height: 844 },
