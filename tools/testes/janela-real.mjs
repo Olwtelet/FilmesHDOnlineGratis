@@ -1,5 +1,6 @@
 // Chrome e Brave de verdade, com janela visível, perfil descartável, relógio real e sem as opções de lançamento do Playwright:
-// só a conexão CDP para observar. Abre janelas na tela: rode com o PC livre e o trabalho salvo.
+// só a conexão CDP para observar. Abre janelas na tela. Com outro programa na frente o navegador deixaria de desenhar a janela
+// coberta, o que parece defeito de início e não é: por isso a oclusão fica desligada, e o tempo medido com o PC em uso vale menos.
 //   node tools/testes/janela-real.mjs [--url=http://localhost:4322] [--navegadores=chrome,brave] [--larguras=1440,1536] [--rodadas=2] [--saida=pasta]
 // Cada rodada faz uma visita limpa (perfil novo) e uma com cache (mesmo perfil, sem os cookies da abertura). Em cada visita: a
 // abertura anima, o ENTER aparece, o clique abre a home, o tutorial toca sem parar no decodificador, FECHAR funciona e o rolo responde.
@@ -63,7 +64,7 @@ const SONDA = () => {
 let porta = 9300 + (process.pid % 400);
 async function abrirNavegador(tipo, perfil, largura) {
   porta++;
-  const filho = spawn(EXE[tipo], [`--remote-debugging-port=${porta}`, `--user-data-dir=${perfil}`, '--no-first-run', '--no-default-browser-check', `--window-size=${largura + 16},${ALTURA + 120}`, 'about:blank'], { stdio: 'ignore' });
+  const filho = spawn(EXE[tipo], [`--remote-debugging-port=${porta}`, `--user-data-dir=${perfil}`, '--no-first-run', '--no-default-browser-check', '--disable-backgrounding-occluded-windows', '--disable-features=CalculateNativeWinOcclusion', `--window-size=${largura + 16},${ALTURA + 120}`, 'about:blank'], { stdio: 'ignore' });
   for (let i = 0; i < 100; i++) {
     try { if ((await fetch(`http://127.0.0.1:${porta}/json/version`)).ok) break; } catch {}
     await dormir(100);
@@ -118,7 +119,13 @@ async function visita(page, cdp, rotulo, comFoto) {
   await page.click('[data-tutorial="close"]', { timeout: 10000 }).catch((e) => r.console.push(`FECHAR: ${String(e).split('\n')[0]}`));
   await page.waitForFunction(() => { const t = document.querySelector('[data-tutorial="w"]'); return !t || t.getClientRects().length === 0 || +getComputedStyle(t).opacity < 0.05; }, null, { timeout: 8000 }).catch(() => r.console.push('tutorial não saiu'));
   await dormir(1500);
-  const titulo = () => page.evaluate(() => document.querySelector('[data-menu="w"] .top-m-film-title, .top-m-film-title')?.textContent.trim());
+  // o item do rolo que está no meio da janela; o primeiro .top-m-film-title é fixo da lista do menu e nunca muda
+  const titulo = () => page.evaluate(() => {
+    const itens = [...document.querySelectorAll('[data-roll="item"]')];
+    const d = itens.map((el) => { const b = el.getBoundingClientRect(); return Math.abs(b.top + b.height / 2 - innerHeight / 2); });
+    const it = itens[d.indexOf(Math.min(...d))];
+    return it ? it.getAttribute('data-sessao') || 'aviso' : null;
+  });
   const t0 = await titulo();
   await page.keyboard.press('ArrowDown');
   await dormir(1500);
@@ -192,6 +199,19 @@ for (const tipo of NAVEGADORES) {
     await dormir(1500);
     const saiu = await n.page.evaluate(() => !document.querySelector('iframe.yt-trailer'));
     confere(`${tipo}: Escape fecha o trailer`, saiu);
+    // O link do YouTube com aba de verdade: a aba nova vem para a frente e a do site para de desenhar. O som tem de sair mesmo assim.
+    await n.page.click("[data-videoplayer='trigger']", { timeout: 15000 });
+    await dormir(5000);
+    const [aba] = await Promise.all([n.ctx.waitForEvent('page', { timeout: 15000 }), n.page.click('[data-trailer-fora]', { timeout: 15000 })]);
+    await dormir(1500);
+    const atras = await n.page.evaluate(() => ({ iframes: document.querySelectorAll('iframe.yt-trailer').length, escondida: document.hidden }));
+    confere(`${tipo}: link do YouTube tira o player na hora`, atras.iframes === 0, JSON.stringify(atras));
+    await aba.waitForURL('**/watch?v=*', { timeout: 30000 }).catch(() => {});
+    confere(`${tipo}: link do YouTube abre o filme`, /watch\?v=giAMydh9_4I/.test(aba.url()), aba.url());
+    await aba.close();
+    await n.page.bringToFront();
+    const fechou = await n.page.waitForFunction(() => !document.querySelector("[data-videoplayer='dialog']").classList.contains('open') && !document.documentElement.classList.contains('lenis-stopped'), null, { timeout: 10000 }).then(() => true, () => false);
+    confere(`${tipo}: de volta à aba, diálogo fechado e página rolando`, fechou);
   } catch (e) {
     confere(`${tipo}: Programação e trailer`, false, String(e).split('\n')[0]);
   }

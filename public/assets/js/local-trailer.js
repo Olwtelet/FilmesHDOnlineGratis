@@ -128,10 +128,15 @@
 
   window.addEventListener('keydown', function (e) {
     ultimaFoiTab = e.key === 'Tab';
-    // o Tab move o foco na hora: um clique no player logo depois não conta como chegada pelo teclado
-    if (ultimaFoiTab) setTimeout(function () { ultimaFoiTab = false; }, 300);
     if (e.key === 'Escape') fechar();
   }, true);
+
+  // O Tab move o foco no keydown: se o keyup ainda chega aqui, o foco não entrou no player, e um clique nele depois não conta como
+  // chegada pelo teclado. Dentro do player o keyup fica lá, e o ponteiro no site também encerra a chegada pelo teclado.
+  window.addEventListener('keyup', function (e) {
+    if (e.key === 'Tab') ultimaFoiTab = false;
+  }, true);
+  window.addEventListener('pointerdown', function () { ultimaFoiTab = false; }, true);
 
   window.addEventListener('popstate', fechar, true);
 

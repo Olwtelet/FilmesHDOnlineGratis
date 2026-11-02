@@ -1,5 +1,5 @@
 // Trailers: os 22 tocando de verdade nas 21 páginas de sessão e todos os caminhos de fechar, contra o build em produção.
-//   node tools/testes/trailers.mjs [--url=http://localhost:4322] [--canal=msedge] [--partes=oembed,tocar,...] [--paralelo=1] [--tentativas=3] [--saida=pasta]
+//   node tools/testes/trailers.mjs [--url=http://localhost:4322] [--canal=msedge] [--partes=oembed,tocar,...] [--so=expressão] [--paralelo=1] [--tentativas=3] [--saida=pasta]
 // Partes: oembed, tocar, antes, fechar, dupla, rede, repetir, teclado, controles, paisagem, geometria, saida (padrão: todas).
 // Sempre headless. Cada caso reprovado sai como FALHA e o processo termina com código 1.
 //
@@ -25,6 +25,7 @@ const CANAL = arg('canal', 'msedge');
 const PARALELO = +arg('paralelo', '1');
 const TENTATIVAS = +arg('tentativas', '3');
 const SAIDA = arg('saida', '');
+const SO = arg('so', ''); // só os casos cujo nome casa com esta expressão
 const PARTES = arg('partes', 'oembed,tocar,antes,fechar,dupla,rede,repetir,teclado,controles,paisagem,geometria,saida').split(',');
 if (SAIDA) fs.mkdirSync(SAIDA, { recursive: true });
 
@@ -194,6 +195,7 @@ async function umaVez(nome, disp, fn, opcoes) {
 
 // Cada caso em aba própria. Exceção vira FALHA; console do site e CSP são conferidos no fim de todos.
 async function caso(nome, disp, fn, opcoes) {
+  if (SO && !new RegExp(SO).test(nome)) return;
   for (let tentativa = 1; ; tentativa++) {
     const guardadas = [];
     await casoAtual.run(guardadas, () => umaVez(nome, disp, fn, opcoes));
