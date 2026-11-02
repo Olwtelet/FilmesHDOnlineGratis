@@ -605,6 +605,15 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
 /* Sobre, linhas pequenas do herói: um respiro para o acento da segunda linha não encostar na primeira */
 .about-he-of-w + .about-he-of-w { margin-top: .16em; }
 
+/* Sobre no celular: o main.css deixa o título em 4vw e as linhas pequenas em 1,8vw, 15,6 e 7 px a 390 px. Os 15vw e 20 px do
+   webflow.css cabem, mas o fim de ONLINE e de CURADORIA some na camisa branca da foto; 11vw e 4vw ficam legíveis sobre ela */
+@media screen and (max-width: 479px) {
+  [data-page=about] .about-he, [data-page=about] .about-he > .span-clip { font-size: 11vw !important; }
+  [data-page=about] .about-he-sm-tx { font-size: 4vw !important; }
+  /* O letter-spacing negativo do original encurta a linha, e a caixa cortava a ponta do último A de CURADORIA */
+  .about-he .span-clip { padding-inline: .08em; margin-inline: -.08em; }
+}
+
 /* Rodapé, coluna do RSS: campo só de leitura no lugar do e-mail. O .w-input pinta campos readonly de cinza. */
 .ft-newsletter-input[readonly] { background-color: transparent; cursor: text; text-overflow: ellipsis; font-size: .72rem; letter-spacing: 0; padding-left: 1rem; padding-right: 0; }
 .ft-newsletter-btn { position: relative; flex: none; }

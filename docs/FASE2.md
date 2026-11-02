@@ -24,6 +24,7 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Tamanho do diálogo | A partir de 768 px, encolhe em 16:9 até caber na janela. Em janela larga e baixa o bloco de 80% da largura passava da altura da tela e levava os controles do player, o X e o link junto. Ao mudar o tamanho da janela ou girar o aparelho, o player volta ao centro | Com a rolagem presa, quem girava o celular com o trailer aberto não tinha como voltar |
 | Sessão dupla | Uma página, dois trailers, seletor de dois botões fora do player | O `Ia` do bundle aceita um único player |
 | Teclado | Menus abrem e fecham com Espaço e Enter. Saem do Tab os painéis fechados, os cartões da home fora da tela e o link do lightbox. Paradas de Tab: home 5, Programação 7, sessão 27, Sobre 21, Contato 5, 404 9, Cookies 20 | Com 21 sessões a home tinha 97 paradas, 92 delas invisíveis |
+| Sobre no celular | Até 479 px, título em 11vw e linhas pequenas em 4vw, com `!important` em `tema-sinal.css`: 42,9 e 15,6 px a 390 px | O `main.css` original deixa 15,6 e 7 px, difícil de ler; o site da Siena no ar está igual. Os 15vw e 20 px do `webflow.css` cabem, mas o fim de ONLINE e de CURADORIA some na camisa branca da foto |
 | Ouvinte de teclado da Programação | Patch no `app.js`: guarda a referência para conseguir remover o ouvinte ao sair da página | O original criava uma função nova ao remover, e o ouvinte antigo continuava ativo depois de sair |
 | Busca | Filtro no painel pequeno do menu, em `<textarea rows=1>` | `Hn` captura todo `input` sob `[data-menu=w]` por posição |
 | Imagens | Hospedadas no site, derivadas do TMDB: hero 1920, roll 1600, cartaz 800, cenas 960 e 640 | `or()` não tem `onerror`, CDN externa travaria a página; Work carrega todos os quadros de uma vez |
@@ -212,14 +213,13 @@ Em 11 cenários de YouTube bloqueado ou vídeo indisponível, o player não most
 - **Chrome e Brave reais, além do caminho principal.** Neles rodaram abertura, tutorial, troca de filme, um trailer e a saída para o YouTube. Menus, filtro, teclado, toque e os outros 21 trailers rodaram só no Edge sem janela.
 - **Programação em iPad.** Em emulação a 820x1180 a janela não anda de lado, a escala fica em 1 e os cartazes aparecem. O conteúdo de 4.150 px é recortado de propósito. Num iPad de verdade não foi visto.
 - Tempos da abertura com jogo aberto. Nenhum estava aberto durante a medição.
-- Depois da bateria mudaram só as duas regras do Sobre e do Contato e os testes de Páginas e abertura: foram repetidos varredura, abertura e Páginas. O resto não depende dessas regras.
+- Depois da bateria mudaram só as regras do Sobre e do Contato e os testes de Páginas e abertura: foram repetidos varredura, abertura e Páginas. O aumento do texto do Sobre no celular veio por último e repetiu varredura, textos e Páginas só no Sobre, em todos os tamanhos (148 de 148). O resto não depende dessas regras.
 
 ### Herdado da estrutura original, sem alteração
 
 - Com roda de mouse física, cada entalhe soma 0,06 de filme e o `update()` puxa 10% de volta por quadro: a roda mexe o rolo e não troca de filme. Trackpad, arrasto, setas e toque trocam.
 - Escape só fecha o trailer e limpa o filtro; não fecha os menus nem o tutorial.
 - No celular, o gesto que começa em cima do slider de leituras não rola a página, porque o bundle segura o `touchstart`. Rola pela margem.
-- Sobre no celular: o `main.css` deixa o título em 4vw e as linhas pequenas em 1,8vw, com `!important`. A 390 px são 15,6 px e 7 px, pequeno para ler.
 - Entre 480 e 767 px de largura, a página inteira fica coberta por "Gire o aparelho para ver melhor". Isso pega celular deitado e tablet pequeno em pé.
 - Os ouvintes de `resize` e de toque da Programação também ficam depois de sair da página. Nenhum efeito visto.
 
