@@ -1,0 +1,31 @@
+---
+/** "QUEM FAZ" em /sobre/: lista de cartões (imagem, função, nome, texto). */
+import AboutArticle from './AboutArticle.astro';
+import type { ABOUT_TEAM } from '../../data/about';
+
+interface Props {
+  team: typeof ABOUT_TEAM;
+}
+const { team } = Astro.props;
+---
+
+<AboutArticle title={team.title}>
+  <div class="team-coll-w w-dyn-list">
+    <div role="list" class="team-w w-dyn-items">
+      {
+        team.members.map((m) => (
+          <div role="listitem" class="team-item w-dyn-item">
+            <div class="team-img-w">
+              <img src={m.image.src} loading="lazy" alt="" sizes={m.image.sizes} srcset={m.image.srcset} class="team-img" />
+            </div>
+            <div class="team-text">
+              <div class="roll-cont-eyeb parish mb-2">{m.role}</div>
+              <h3 class="team-he">{m.name}</h3>
+              <div class="team-bio">{m.bio}</div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</AboutArticle>

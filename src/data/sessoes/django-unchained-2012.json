@@ -1,0 +1,200 @@
+{
+  "slug": "django-unchained-2012",
+  "titulo": "Django Livre",
+  "categoria": "Faroeste",
+  "sessao": {
+    "data": "2026-09-05",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Django Livre",
+      "tituloOriginal": "Django Unchained",
+      "ano": 2012,
+      "direcao": "Quentin Tarantino",
+      "duracao": 165,
+      "classificacao": "16",
+      "generos": [
+        "Faroeste",
+        "Ação",
+        "Drama"
+      ],
+      "trailer": {
+        "youtube": "9vO2pd_y6s8",
+        "canal": "Sony Pictures Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "Django Livre | Trailer 2 Legendado | 18 de janeiro nos cinemas"
+      },
+      "tmdb": 68718,
+      "imdb": "tt1853728"
+    }
+  ],
+  "sinais": [
+    "ação",
+    "drama",
+    "faroeste",
+    "vingança",
+    "clássico",
+    "crime",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Um sangue dói, o outro diverte",
+    "leitura": "O sangue dos escravizados dói na tela. O dos senhores jorra feito chafariz, e a plateia comemora. Django Livre entrega a arma ao homem escravizado, mas quem o compra, treina e lhe conta a lenda da própria mulher é um dentista alemão.",
+    "descricao": "Um homem liberto e um caçador alemão vão ao Mississippi buscar a mulher dele. Tarantino cobra a escravidão em sangue e faz da cobrança um prazer.",
+    "notasHome": [
+      {
+        "rotulo": "Montaria",
+        "frase": "Um homem negro a cavalo trava a cidade"
+      },
+      {
+        "rotulo": "O dentista",
+        "frase": "Schultz odeia a escravidão e a usa"
+      },
+      {
+        "rotulo": "Casa de Candie",
+        "frase": "Stephen é quem pensa em Candyland"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Comprado por um dentista",
+        "frase": "A liberdade de Django começa como compra. Schultz, dentista alemão, diz que despreza a escravidão e vai usá-la mesmo assim."
+      },
+      {
+        "rotulo": "A cidade que para",
+        "frase": "Tarantino leva o faroeste italiano ao Sul escravista. Um homem negro a cavalo basta para parar uma cidade inteira."
+      },
+      {
+        "rotulo": "Quem conta a lenda",
+        "frase": "A vingança é de Django, mas é o alemão quem liberta, treina e traduz. A lenda de Broomhilda vem dele, e ela fica à espera."
+      },
+      {
+        "rotulo": "Chafariz e chicote",
+        "frase": "Os cães e a luta entre escravizados são filmados para doer. Quando a bala acerta os senhores, o sangue vira chafariz e sobe o rap."
+      },
+      {
+        "rotulo": "Django olha os cães",
+        "frase": "Para manter o disfarce, Django vê um homem ser dado aos cães sem mudar de cara. A cena fabrica a sede que depois vai matar."
+      },
+      {
+        "rotulo": "O cérebro de Candyland",
+        "frase": "Quem pensa em Candyland é Stephen, um escravizado. É a ideia mais dura do filme: acusa o sistema ou alivia quem o criou?"
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Quentin Tarantino"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Robert Richardson"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Fred Raskin"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Stacey Sher"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Reginald Hudlin"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Pilar Savone"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Django Freeman",
+        "nome": "Jamie Foxx"
+      },
+      {
+        "funcao": "Dr. King Schultz",
+        "nome": "Christoph Waltz"
+      },
+      {
+        "funcao": "Calvin J. Candie",
+        "nome": "Leonardo DiCaprio"
+      },
+      {
+        "funcao": "Broomhilda von Shaft",
+        "nome": "Kerry Washington"
+      },
+      {
+        "funcao": "Stephen",
+        "nome": "Samuel L. Jackson"
+      },
+      {
+        "funcao": "Billy Crash",
+        "nome": "Walton Goggins"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "8cs96njK3qaPDoyUNKYAWjWoWFF.jpg"
+    },
+    "cartaz": {
+      "tmdb": "ar63Sx8jeqk0OOu2uchS477S2zE.jpg"
+    },
+    "direcao": {
+      "tmdb": "yLr2uJ6SYXlbzADsfzg01uD7Asu.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "8cs96njK3qaPDoyUNKYAWjWoWFF.jpg"
+      },
+      {
+        "tmdb": "yLr2uJ6SYXlbzADsfzg01uD7Asu.jpg"
+      },
+      {
+        "tmdb": "lVcI3MOtumvEbOdS1Og7QoV6Lfc.jpg"
+      },
+      {
+        "tmdb": "7IrHTCH5yOLDblgJq98a1k9HXN9.jpg"
+      },
+      {
+        "tmdb": "2GsMFKx6cMAtKklk60xPA41BeRk.jpg"
+      },
+      {
+        "tmdb": "34ofLAZ1duOMzO0aLslPdWlvPju.jpg"
+      },
+      {
+        "tmdb": "xYOkwpPAfy64vpAkL4yGakRGymi.jpg"
+      },
+      {
+        "tmdb": "9iNyECcekbs5G0EKb4P0Zbq9DIx.jpg"
+      },
+      {
+        "tmdb": "sjzkeSj13ebnFFgYQhQu0TKsQAN.jpg"
+      },
+      {
+        "tmdb": "c1KGjSNrN4xsia1vSAJlg9sqoXb.jpg"
+      },
+      {
+        "tmdb": "eSfHn4xjkD83vUakUTvN5brsS7.jpg"
+      },
+      {
+        "tmdb": "fjdHKYVCN366og3ESs3nYWlxTPV.jpg"
+      },
+      {
+        "tmdb": "mojjlb3lAFz7GW72n2pyjNDaPuu.jpg"
+      },
+      {
+        "tmdb": "rxQyQ6hX5bGAiqgwMH53tMOpZyt.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

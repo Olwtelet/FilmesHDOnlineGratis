@@ -1,0 +1,49 @@
+---
+/**
+ * Coluna lateral do herói de /sobre/ (só desktop e tablet grande): contorno tracejado do arco, desenhado pelo app.js
+ * (traços .reveal), e a foto com a máscara do arco.
+ *
+ * Props
+ *   image   foto dentro do arco
+ *   clipId  quando vem, a coluna também publica o clipPath do arco com esse id (a coluna esquerda leva #arch2, para o
+ *           qual aponta o clip-path das duas colunas)
+ */
+import type { AboutImage } from '../../data/about';
+import { ARCH_CLIP_D } from './svg-paths';
+
+interface Props {
+  image: AboutImage;
+  clipId?: string;
+}
+const { image, clipId } = Astro.props;
+const ARCH_LINES = ['M5.5 4c272.786 0 359.736 263.535 359.736 818', 'M363 7C89.65 7 1.236 275.228 1.236 826.5M1.236 62.5h364'];
+---
+
+<div data-hide="mobile" class="col-g tall-arch-ratio no-tablet">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 366 837" width="100%" class="tall-arch-svg">
+    <rect width="363" height="835" x="1.736" y=".5" stroke="currentColor" stroke-dasharray="4 4" rx="11.5" opacity=".6"></rect>
+    <rect width="363" height="835" x="1.736" y=".5" stroke="black" rx="11.5" stroke-width="3" class="reveal"></rect>
+    {
+      ARCH_LINES.map((d) => (
+        <Fragment>
+          <path stroke="currentColor" stroke-dasharray="4 4" d={d} opacity=".6"></path>
+          <path stroke="black" d={d} stroke-width="3" class="reveal"></path>
+        </Fragment>
+      ))
+    }
+  </svg>
+  <div class="abs arch-img-w">
+    {
+      clipId && (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 364 773" width="100%" class="arch-img-mask">
+          <clipPath clipPathUnits="objectBoundingBox" id={clipId}>
+            <path fill="currentColor" d={ARCH_CLIP_D} transform="scale(0.002750426316, 0.001294498382)"></path>
+          </clipPath>
+        </svg>
+      )
+    }
+    <div class="arch-img-mask-w">
+      <img src={image.src} loading="eager" sizes={image.sizes} srcset={image.srcset} alt="" class="arch-masked-img" />
+    </div>
+  </div>
+</div>

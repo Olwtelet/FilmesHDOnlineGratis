@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+# screenshots/videos produced by tools/compare.mjs and the scenario runner (several GB)
+reference/captures/
+
+backups/
+
+# binários retirados do site na Fase 2 e imagens de origem das sessões (baixadas de novo por tools/imagens-sessoes.mjs)
+reference/retirados-fase2/
+reference/sessoes-origem/
+reference/fase2/tutorial/tutorial-mestre.webm

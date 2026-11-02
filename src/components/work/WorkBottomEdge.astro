@@ -1,0 +1,39 @@
+---
+/**
+ * Base de /programacao/ (div.work-edge.bottom, data-slider="additionaltrigger"): régua de rolagem, os alvos do Flip
+ * para onde vão os textos e os quadros do cartão ativo (data-flip="target", data-footage="img") e o botão Explorar,
+ * que o app.js aponta para a sessão ativa (data-slider="link").
+ */
+import { WORK_EXPLORE_LABEL } from '../../data/work-page';
+import ExploreButton from '../ui/ExploreButton.astro';
+import WorkScrollLines from './WorkScrollLines.astro';
+---
+
+<div data-slider="additionaltrigger" data-cursor="hide" class="work-edge bottom">
+  <WorkScrollLines />
+  <div class="abs work-bott-item">
+    <div class="footage-view-cont">
+      <div class="flip-target-w">
+        <div class="footage-he-w mark">
+          <div data-footage="img" class="lightbox-img-m"></div>
+        </div>
+        <div data-flip="target" class="roll-cont-item mark first">
+          <div class="div-block-6"></div>
+        </div>
+        <div data-flip="target" class="roll-cont-item mark last">
+          <div class="div-block-6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="abs work-bott-item align-right">
+    <a data-slider="link" href="#" class="explore-link-w w-inline-block">
+      <div class="btn-no-mob">
+        <ExploreButton label={WORK_EXPLORE_LABEL} variant="base" />
+      </div>
+      <div class="btn-yes-mb">
+        <ExploreButton label={WORK_EXPLORE_LABEL} arrow="single" ticket="dash" />
+      </div>
+    </a>
+  </div>
+</div>

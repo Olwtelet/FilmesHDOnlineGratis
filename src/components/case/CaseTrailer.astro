@@ -1,0 +1,119 @@
+---
+// Bloco do trailer (div#second): chamada "AÇÃO! / VER Trailer" sobre o pôster mascarado e o diálogo do Ia do app.js, que
+// procura tudo por data-videoplayer. O player é um iframe do YouTube montado no clique por public/assets/js/local-trailer.js.
+//   - o <video> fica, sem o atributo src: é o que faz o app.js nunca chamar play() nele;
+//   - a barra de controles fica oculta pelo CSS, porque o app.js lê os filhos de [data-videoplayer="ui"] ao carregar;
+//   - sessão dupla: um só wrapper, porque o Ia aceita um player por página, e um seletor fora do retângulo do vídeo.
+// Sem trailer no dado: só o pôster, sem chamada nem diálogo, e o Ia não é criado.
+import FilmMaskSvg from '../ui/svg/FilmMaskSvg.astro';
+import FilmMaskMobileSvg from '../ui/svg/FilmMaskMobileSvg.astro';
+import PlayBadgeSvg from './svg/PlayBadgeSvg.astro';
+import CloseSvg from './svg/CloseSvg.astro';
+import PlaySvg from './svg/PlaySvg.astro';
+import { responsive } from './cms';
+import type { Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const primeiro = film.trailers[0];
+const temTrailer = !!primeiro;
+const tituloDe = (filme: string) => `Trailer de ${filme}`;
+---
+
+<div id="second" data-color="white" class="s h-auto bg-white relative">
+  <FilmMaskSvg id="video" />
+  <div
+    data-videoplayer={temTrailer ? 'wrapper' : undefined}
+    data-youtube={primeiro?.youtube}
+    data-youtube-title={primeiro && tituloDe(primeiro.film)}
+    class="video-comp-w"
+  >
+    {
+      temTrailer && (
+        <button type="button" data-videoplayer="trigger" aria-label={`Ver trailer de ${film.title}`} class="video-cta-w">
+          <div class="btn-play overlay">
+            <div class="circle full"></div>
+          </div>
+          <div class="btn-play red">
+            <PlayBadgeSvg />
+          </div>
+          <div class="div-block-24">
+            <div class="roll-cont-eyeb parish mb-2">AÇÃO!</div>
+            <h2 class="heading-5">VER<br />Trailer</h2>
+          </div>
+        </button>
+      )
+    }
+    {
+      temTrailer && (
+        <div data-videoplayer="dialog" role="dialog" aria-label={tituloDe(film.title)} tabindex="-1" class="video-player-dialog">
+          <div class="video-bar top">
+            <button type="button" data-videoplayer="close" aria-label="Fechar o trailer" class="close-btn">
+              <CloseSvg />
+            </button>
+          </div>
+          {
+            film.trailers.length > 1 && (
+              <div role="group" aria-label="Escolher o trailer" class="trailer-opcoes">
+                {film.trailers.map((t, i) => (
+                  <button type="button" data-trailer={t.youtube} data-trailer-title={tituloDe(t.film)} aria-pressed={i === 0 ? 'true' : 'false'} class="trailer-opcao">
+                    {t.film}
+                  </button>
+                ))}
+              </div>
+            )
+          }
+          <div class="video-bar">
+            <div data-videoplayer="ui" class="video-ctrls">
+              <div data-vid="play" class="playpause-w">
+                <div class="pause-btn">
+                  <div class="bar h-auto"></div>
+                  <div class="bar h-auto"></div>
+                </div>
+                <div class="play-btn">
+                  <PlaySvg />
+                </div>
+              </div>
+              <div class="progress-bar">
+                <div data-vid="curr" class="video_plr-text">00:00</div>
+                <div data-videoplayer="scrub" class="progress-bar-w">
+                  <div class="bar-w">
+                    <div class="bar-dash"></div>
+                    <div data-vid="progress" class="div-block-21">
+                      <div class="bar-fill"></div>
+                      <div class="bar-dot"></div>
+                    </div>
+                  </div>
+                </div>
+                <div data-vid="total" class="video_plr-text">00:00</div>
+              </div>
+              <div class="sound-toggle">
+                <div data-vid="sound" class="sound-toggle-tx">SOM&nbsp;LIGADO</div>
+              </div>
+            </div>
+          </div>
+          <div class="abs videoplayer-video">
+            <div class="video-mask-w">
+              <video playsinline="true" data-videoplayer="video" class="videoplayer-vieo-comp"></video>
+            </div>
+          </div>
+          <div data-videoplayer="bg" class="abs bg-black video"></div>
+        </div>
+      )
+    }
+    <div data-videoplayer={temTrailer ? 'image' : undefined} class="abs video-comp">
+      <div class="clip-img-video-w">
+        <div class="abs tint-dark lighter"></div>
+        <img src={film.hero.src} loading="eager" alt="" {...responsive(film.hero, '(max-width: 767px) 100vw, 80vw')} class="image-2" />
+        <div data-videoplayer={temTrailer ? 'mask' : undefined} class="mask-abs">
+          <FilmMaskSvg id="film" />
+          <FilmMaskMobileSvg />
+        </div>
+      </div>
+      <div data-videoplayer={temTrailer ? 'video' : undefined} class="video-el"></div>
+    </div>
+  </div>
+  {temTrailer && <div data-videoplayer="darken" class="abs video-opacity-bg"></div>}
+</div>

@@ -1,0 +1,40 @@
+---
+// /sobre/: página preta (classe "pw black"), com o rodapé na variante on-black.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import AboutHero from '../components/about/AboutHero.astro';
+import AboutTypeComp from '../components/about/AboutTypeComp.astro';
+import AboutGrid from '../components/about/AboutGrid.astro';
+import TeamSection from '../components/about/TeamSection.astro';
+import ServicesSection from '../components/about/ServicesSection.astro';
+import CollabSection from '../components/about/CollabSection.astro';
+import FilmsCta from '../components/about/FilmsCta.astro';
+import {
+  ABOUT_PAGE,
+  ABOUT_JSON_LD,
+  ABOUT_HERO,
+  ABOUT_TYPE_COMP,
+  ABOUT_GRID,
+  ABOUT_TEAM,
+  ABOUT_SERVICES,
+  ABOUT_COLLABORATORS,
+  ABOUT_FILMS_CTA,
+} from '../data/about';
+
+const { route, title, description } = ABOUT_PAGE;
+---
+
+<BaseLayout title={title} description={description} jsonLd={ABOUT_JSON_LD} rotate="after">
+  <div data-page="about" data-taxi-view="" class="pw black">
+    <Nav currentPath={route} />
+    <AboutHero hero={ABOUT_HERO} anchor={ABOUT_TYPE_COMP.id} />
+    <AboutTypeComp comp={ABOUT_TYPE_COMP} />
+    <AboutGrid grid={ABOUT_GRID} />
+    <TeamSection team={ABOUT_TEAM} />
+    <ServicesSection services={ABOUT_SERVICES} />
+    <CollabSection collaborators={ABOUT_COLLABORATORS} />
+    <FilmsCta cta={ABOUT_FILMS_CTA} />
+    <Footer variant="on-black" currentPath={route} />
+  </div>
+</BaseLayout>

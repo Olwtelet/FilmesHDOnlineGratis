@@ -1,0 +1,35 @@
+---
+// Uma cena de uma faixa da galeria (.cs-footage-it). A faixa 1 (data-footage="item") tem máscara e carrega de imediato;
+// a faixa 2 (data-footage="item2") vai no sentido contrário e carrega sob demanda.
+// A div de legenda fica vazia de propósito: o app.js esconde ao acaso o primeiro [data-parallax] de cada item e, sem ela,
+// a faixa 2 guarda null e a página morre (TypeError em setupParallaxItems). O CSS original já a mantém invisível.
+import FootageMaskSvg from './svg/FootageMaskSvg.astro';
+import { responsive } from './cms';
+import type { FilmImage } from '../../data/films';
+
+interface Props {
+  image: FilmImage;
+  strip: 1 | 2;
+  alt: string;
+}
+const { image, strip, alt } = Astro.props;
+const sizes = responsive(image, '(max-width: 767px) 54vw, (max-width: 991px) 288px, 29vw');
+---
+
+<div data-footage={strip === 1 ? 'item' : 'item2'} role="listitem" class="cs-footage-it w-dyn-item w-dyn-repeater-item">
+  {
+    strip === 1 ? (
+      <div class="cs-footage-mask-group">
+        <img src={image.src} loading="eager" draggable="false" data-imgParallax="1" alt={alt} {...sizes} class="cs-footage-img" />
+        <div class="abs cs-footage-mask-w">
+          <FootageMaskSvg />
+        </div>
+      </div>
+    ) : (
+      <div class="cs-footage-mask-group">
+        <img src={image.src} loading="lazy" data-imgParallax="1" alt={alt} {...sizes} class="cs-footage-img" />
+      </div>
+    )
+  }
+  <div data-parallax="2" class="abs cs-footage-cont"></div>
+</div>

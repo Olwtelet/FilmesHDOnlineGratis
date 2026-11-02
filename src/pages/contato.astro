@@ -1,0 +1,14 @@
+---
+// /contato/: página de tela cheia, com a navegação e o bloco de contato (sem rodapé).
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import ContactSection from '../components/contact/ContactSection.astro';
+import { CONTACT_PAGE as page } from '../data/contact';
+---
+
+<BaseLayout title={page.title} description={page.description} rotate="after">
+  <div data-page="contact" data-taxi-view="" class="pw h-screen">
+    <Nav currentPath={page.path} />
+    <ContactSection eyebrow={page.eyebrow} headline={page.headline} rows={page.rows} />
+  </div>
+</BaseLayout>

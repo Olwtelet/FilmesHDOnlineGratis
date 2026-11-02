@@ -1,0 +1,33 @@
+---
+/**
+ * Bloco de conteúdo de /sobre/: <article> aberto pelo título em forma de ingresso (".ticket-btn-c") com os dois furos,
+ * seguido do conteúdo do slot.
+ *
+ * Props
+ *   title  texto do título (h2.ticket-btn-tx)
+ *   class  classes do article (padrão "s h-auto")
+ *   css    true -> data-css="" (o bloco de canais)
+ */
+interface Props {
+  title: string;
+  class?: string;
+  css?: boolean;
+}
+const { title, class: cls = 's h-auto', css = false } = Astro.props;
+---
+
+<article data-css={css ? '' : undefined} class={cls}>
+  <div class="ticket-btn-c mb-3">
+    <div class="ticket-btn">
+      <div class="ticket-btn-w">
+        <h2 class="ticket-btn-tx">{title}</h2>
+        <div class="div-block-20"></div>
+      </div>
+      <div class="ticket-btn-ovly">
+        <div class="dot size-9"></div>
+        <div class="dot size-9"></div>
+      </div>
+    </div>
+  </div>
+  <slot />
+</article>

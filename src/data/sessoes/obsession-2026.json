@@ -1,0 +1,203 @@
+{
+  "slug": "obsession-2026",
+  "titulo": "Obsessão",
+  "categoria": "Terror",
+  "sessao": {
+    "data": "2026-07-02",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Obsessão",
+      "tituloOriginal": "Obsession",
+      "ano": 2025,
+      "direcao": "Curry Barker",
+      "duracao": 109,
+      "classificacao": "18",
+      "generos": [
+        "Terror",
+        "Suspense",
+        "Romance Sombrio"
+      ],
+      "trailer": {
+        "youtube": "OYueQyeNgOk",
+        "canal": "Universal Pictures Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "OBSESSÃO  | Trailer Oficial"
+      },
+      "tmdb": 1339713,
+      "imdb": "tt37287335"
+    }
+  ],
+  "sinais": [
+    "terror",
+    "suspense",
+    "obsessão",
+    "perturbador",
+    "drama",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Ninguém perguntou a Nikki",
+    "leitura": "O título parece falar de Nikki, mas a primeira obsessão é de Bear, que quebra um brinquedo de desejos e pede que ela o ame acima de todos. O medo vem dela, a culpa é dele, e o filme sabe disso. Ainda assim, é a mulher sem vontade própria quem vira o monstro.",
+    "descricao": "Um rapaz tímido quebra um brinquedo e pede que a amiga o ame acima de todos. Terror sobre o que sobra de uma pessoa quando o amor vem por ordem de outra.",
+    "notasHome": [
+      {
+        "rotulo": "Acima de todos",
+        "frase": "Uma frase basta para apagar uma pessoa"
+      },
+      {
+        "rotulo": "Loja de música",
+        "frase": "Toda canção de amor pede a mesma coisa"
+      },
+      {
+        "rotulo": "Obsessão de quem",
+        "frase": "A primeira obsessão do filme é a dele"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Brinquedo de um desejo",
+        "frase": "Tudo sai de um brinquedo de loja, quebrado por um rapaz que trabalha ao lado de Nikki e nunca teve coragem de dizer o que sente."
+      },
+      {
+        "rotulo": "A frase do pedido",
+        "frase": "Ser amado acima de todos é verso de canção, e Bear vende música. Dito como ordem, o verso retira a vontade de outra pessoa."
+      },
+      {
+        "rotulo": "O monstro de quem?",
+        "frase": "Bear causa o horror e Nikki o encarna. O filme acusa o rapaz, mas é do corpo dela que nos ensina a ter medo."
+      },
+      {
+        "rotulo": "Comédia romântica sem fim",
+        "frase": "Inde Navarrette repete os gestos da comédia romântica, o olhar fixo, o abraço, a atenção total, e não para quando a cena acaba."
+      },
+      {
+        "rotulo": "A vez do tímido",
+        "frase": "No começo você quer que o tímido fique com a moça, como em toda história de amigo apaixonado. Ele fica. Era isso que você queria?"
+      },
+      {
+        "rotulo": "Quem sobrou em Nikki",
+        "frase": "O medo encobre uma dúvida pior: se ainda mora alguém dentro de Nikki, e se esse alguém consegue dizer não."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Curry Barker"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Taylor Clemons"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Rock Burwell"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Curry Barker"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "James Harris"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Haley Nicole Johnson"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Christian Mercuri"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Bear",
+        "nome": "Michael Johnston"
+      },
+      {
+        "funcao": "Nikki",
+        "nome": "Inde Navarrette"
+      },
+      {
+        "funcao": "Ian",
+        "nome": "Cooper Tomlinson"
+      },
+      {
+        "funcao": "Sarah",
+        "nome": "Megan Lawless"
+      },
+      {
+        "funcao": "Carter",
+        "nome": "Andy Richter"
+      },
+      {
+        "funcao": "Viola",
+        "nome": "Haley Fitzgerald"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "5lTZyuBTNOfawsfPT8Q0cIg6qAF.jpg"
+    },
+    "cartaz": {
+      "tmdb": "wUc6IDf5ChjM1UyQye21qFBeJY0.jpg"
+    },
+    "direcao": {
+      "tmdb": "uoTZOIXnkcTgJe1emITpsQq7sPu.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "5lTZyuBTNOfawsfPT8Q0cIg6qAF.jpg"
+      },
+      {
+        "tmdb": "uoTZOIXnkcTgJe1emITpsQq7sPu.jpg"
+      },
+      {
+        "tmdb": "diOZbaDnB2CIilwd0527AB1qMvW.jpg"
+      },
+      {
+        "tmdb": "u5BkYDM5gfK4wINfoIFMAcEUKhx.jpg"
+      },
+      {
+        "tmdb": "7xZCxnhIB7XNwbJDoaNocFzGOmO.jpg"
+      },
+      {
+        "tmdb": "oICYZzr1arFtiaPrQfOTYZOOrCy.jpg"
+      },
+      {
+        "tmdb": "d40SQY5TXCF8NJN2C6FnxFHsOD4.jpg"
+      },
+      {
+        "tmdb": "fnASfC4pJ4NSzJ1ch7FBD99PiaZ.jpg"
+      },
+      {
+        "tmdb": "8nnO9zr2jUH2qH2PysbRQ1TMaye.jpg"
+      },
+      {
+        "tmdb": "15baaheTOxyJvnzFw8Xv8otes5g.jpg"
+      },
+      {
+        "tmdb": "aJNHKRM5BiGroXGPDhrHeAnSWQ3.jpg"
+      },
+      {
+        "tmdb": "ovFpatjBA43fsjcWo5RRpq6r6Ou.jpg"
+      },
+      {
+        "tmdb": "jJUYB1WUZhP3NbbdxLeC3ERNGK.jpg"
+      },
+      {
+        "tmdb": "3PIc1ToM2bNf19P2k1VlHC6i1Kt.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 1
+}

@@ -1,0 +1,52 @@
+---
+// Herói da sessão (header.cs-hero): imagem com parallax, volta à Programação, estado da sessão, título com os fios que o
+// app.js anima e a seta para o trailer (#second). O estado é escrito por components/SessoesOrdem.astro; a data é o padrão.
+// Fios: o bundle esconde o terceiro pelo tamanho do slug, que nada diz sobre o título. Aqui saem linhas + 1 fios, nunca
+// menos de 3 porque o bundle lê o terceiro, e o CSS da seção 7c do tema decide por data-linhas.
+import DownArrowButton from '../ui/DownArrowButton.astro';
+import { responsive } from './cms';
+import { ROUTES } from '../../data/site';
+import { sessaoAttrs, type Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const fios = Array.from({ length: Math.max(3, film.heroLines + 1) });
+// O título curto existe para os espaços pequenos (ingresso, painel, próximo). O herói aguenta 36 caracteres e
+// linhasTitulo descreve o que aparece aqui: o completo, quando cabe.
+const TITULO_MAX = 36;
+const titulo = film.fullTitle.length <= TITULO_MAX ? film.fullTitle : film.title;
+---
+
+<header data-cs="herow" class="s fullbleed cs-hero bg-white">
+  <div data-color="black" data-a="parallaxImg" class="cs-img-w">
+    <div class="div-block-31">
+      <img src={film.hero.src} loading="eager" alt="" {...responsive(film.hero, '100vw')} class="cs-main-img" />
+    </div>
+    <div class="abs top-grad">
+      <div class="work-btn-w">
+        <a href={ROUTES.work} class="work-back-btn w-inline-block">
+          <DownArrowButton class="left" />
+          <div class="roll-cont-eyeb parish mb-0">Programação</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div data-color="white" class="w-layout-vflex cs-hero">
+    <div data-delay="0" data-a="casetitle" data-once="true" class="cs-text-hero">
+      <div class="div-block-33">
+        <div data-a="alpha" data-estado="" {...sessaoAttrs(film)} class="roll-cont-eyeb parish larger is-cs">{film.session.fullDate}</div>
+      </div>
+      <div class="cs-text-w">
+        <h1 data-cs="title" class="cs-title">{titulo}</h1>
+        <div data-cs="lines" data-linhas={film.heroLines} class="abs cs-hero-lines case-he">
+          {fios.map(() => <div data-a="line" class="line black"></div>)}
+        </div>
+      </div>
+      <a data-a="alpha" href="#second" aria-label="Ir para o trailer" class="arrow-link-w w-inline-block">
+        <DownArrowButton class="black" />
+      </a>
+    </div>
+  </div>
+</header>

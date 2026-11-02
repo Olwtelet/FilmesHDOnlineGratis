@@ -1,0 +1,26 @@
+---
+/**
+ * Grade de imagens de /sobre/ (data-a="aboutgrid"): um painel com background-image por célula.
+ * Todas as células usam o mesmo id de grade do Webflow, que é o que o CSS posiciona.
+ */
+import type { ABOUT_GRID } from '../../data/about';
+
+interface Props {
+  grid: typeof ABOUT_GRID;
+}
+const { grid } = Astro.props;
+---
+
+<div class="s fullbleed grid aboutgrid">
+  <section data-a="aboutgrid" class="about-grid-coll w-dyn-list">
+    <div role="list" class="about-grid-w w-dyn-items">
+      {
+        grid.images.map((src) => (
+          <div id={grid.nodeId} role="listitem" class="about-grid-item w-dyn-item">
+            <div style={`background-image:url("${src}")`} class="about-grid-item img" />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>

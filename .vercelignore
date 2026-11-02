@@ -1,0 +1,9 @@
+# Só o que o build precisa sobe. As referências ocupam dezenas de GB e têm material que não deve ser publicado.
+dist/
+.astro/
+node_modules/
+reference/
+backups/
+docs/
+tools/legado-siena/
+*.tar.gz

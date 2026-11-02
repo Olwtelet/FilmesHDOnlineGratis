@@ -1,0 +1,23 @@
+---
+/**
+ * Quadros de uma sessão no modo CENAS (div.collection-item). O app.js lê o JSON do script.w-json em
+ * data-frames="lightbox".
+ *
+ * O primeiro lightbox da lista dá a geometria de todos os quadros: se ele estivesse vazio, o modo CENAS ficaria em
+ * branco para todas as sessões, sem erro. Por isso nenhum recebe w-dyn-bind-empty, todo item tem o script JSON, e o
+ * aviso, que vira o primeiro quando não há sessão futura, traz quadros próprios.
+ */
+import { sessaoAttrs, type Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const json = JSON.stringify({ items: film.frames.map((url) => ({ url, type: 'image' })), group: '' }, null, 2);
+---
+
+<div role="listitem" class="collection-item w-dyn-item" {...sessaoAttrs(film)}>
+  <a href="#" data-frames="lightbox" class="footage-img-sizer w-inline-block w-lightbox">
+    <script is:inline type="application/json" class="w-json" set:html={json} />
+  </a>
+</div>

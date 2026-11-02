@@ -1,0 +1,196 @@
+{
+  "slug": "pulp-fiction-1994",
+  "titulo": "Pulp Fiction: Tempo de Violência",
+  "categoria": "Crime",
+  "sessao": {
+    "data": "2026-10-24",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Pulp Fiction: Tempo de Violência",
+      "tituloOriginal": "Pulp Fiction",
+      "ano": 1994,
+      "direcao": "Quentin Tarantino",
+      "duracao": 154,
+      "classificacao": "18",
+      "generos": [
+        "Crime",
+        "Drama",
+        "Comédia Sombria"
+      ],
+      "trailer": {
+        "youtube": "tGpTpVyI_OQ",
+        "canal": "Miramax",
+        "idioma": "en",
+        "tituloVideo": "Pulp Fiction | Official Trailer (HD) - John Travolta, Uma Thurman, Samuel L. Jackson | MIRAMAX"
+      },
+      "tmdb": 680,
+      "imdb": "tt0110912"
+    }
+  ],
+  "sinais": [
+    "crime",
+    "drama",
+    "comédia",
+    "suspense",
+    "clássico",
+    "cult",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "A graça vem da montagem",
+    "leitura": "Dois matadores veem o mesmo acaso: um chama de milagre, o outro de sorte. O filme de Quentin Tarantino finge que nada importa, com versículo recitado por pose e tiro virando faxina. Mas reordena o tempo, e a última palavra fica com quem acreditou.",
+    "descricao": "Um filme de crime que posa de amoral e esconde um sermão na montagem: matadores, um boxeador e assaltantes se cruzam em Los Angeles, fora de ordem.",
+    "notasHome": [
+      {
+        "rotulo": "Ezequiel decorado",
+        "frase": "Recitado por pose antes do tiro"
+      },
+      {
+        "rotulo": "Carro para limpar",
+        "frase": "Morto no carro, e o problema é limpar"
+      },
+      {
+        "rotulo": "Ordem dos fatores",
+        "frase": "O corte decide quem tem a última palavra"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Hambúrguer antes do serviço",
+        "frase": "A caminho de um serviço, dois matadores discutem hambúrguer e massagem no pé. O tom está dado: aqui nada pesa mais que o papo."
+      },
+      {
+        "rotulo": "Citar por efeito",
+        "frase": "Jules recita um versículo antes de atirar, por efeito. O filme cita igual: seu restaurante de sósias é um museu do que soa bem."
+      },
+      {
+        "rotulo": "O sermão escondido",
+        "frase": "Diante do mesmo acaso, um diz sorte, outro diz milagre. O filme que finge não ligar toma partido, e a montagem o entrega."
+      },
+      {
+        "rotulo": "O fim fora do lugar",
+        "frase": "O fim acontece antes de cenas que você já viu. A montagem de Sally Menke escolhe onde parar, e esse é o juízo moral do filme."
+      },
+      {
+        "rotulo": "A casa do Jimmie",
+        "frase": "Um tiro acidental vira faxina com hora marcada, e você torce por ela. Tarantino surge repetindo uma ofensa racial e o riso segue."
+      },
+      {
+        "rotulo": "Pose ou fé",
+        "frase": "Jules decorou a frase para assustar; o filme é feito de frases assim. Nenhum dos dois garante que uma citação possa virar crença."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Quentin Tarantino"
+      },
+      {
+        "funcao": "Argumento",
+        "nome": "Roger Avary"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Andrzej Sekula"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Sally Menke"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Lawrence Bender"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Vincent Vega",
+        "nome": "John Travolta"
+      },
+      {
+        "funcao": "Jules Winnfield",
+        "nome": "Samuel L. Jackson"
+      },
+      {
+        "funcao": "Mia Wallace",
+        "nome": "Uma Thurman"
+      },
+      {
+        "funcao": "Butch Coolidge",
+        "nome": "Bruce Willis"
+      },
+      {
+        "funcao": "Marsellus Wallace",
+        "nome": "Ving Rhames"
+      },
+      {
+        "funcao": "Winston Wolfe",
+        "nome": "Harvey Keitel"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg"
+    },
+    "cartaz": {
+      "tmdb": "tptjnB2LDbuUWya9Cx5sQtv5hqb.jpg"
+    },
+    "direcao": {
+      "tmdb": "9pGM43a9VmXxwIxmhJoiDkcB2hT.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg"
+      },
+      {
+        "tmdb": "9pGM43a9VmXxwIxmhJoiDkcB2hT.jpg"
+      },
+      {
+        "tmdb": "eDMZmfnH50DDboUxTRnOYYpE9aY.jpg"
+      },
+      {
+        "tmdb": "19joFuQ6YTkcru4rvOf8b9CIjjg.jpg"
+      },
+      {
+        "tmdb": "tfaY1QVIhkr4ft1eUk1UP2ZdfCC.jpg"
+      },
+      {
+        "tmdb": "tamCUHl16mptimLh1ZwJ1XH6QOr.jpg"
+      },
+      {
+        "tmdb": "vrk8HqZ6Q5vaW1fYqTbfupsPpXQ.jpg"
+      },
+      {
+        "tmdb": "u68kjtFhoulKVdcYVHUzBai9TTY.jpg"
+      },
+      {
+        "tmdb": "zlHyF5q27hyA5T6IwlJp0rcyW3R.jpg"
+      },
+      {
+        "tmdb": "7AR20EehD6HxHU0mUTetQKHCxUd.jpg"
+      },
+      {
+        "tmdb": "aHq7BwReAmLB5Mip3WWQSELAjDC.jpg"
+      },
+      {
+        "tmdb": "1z0Mh1mVuIkAEqMXDzJwRSiahLm.jpg"
+      },
+      {
+        "tmdb": "1SUIPFsfuNnAQExdbWyawXBGf4v.jpg"
+      },
+      {
+        "tmdb": "t0vJ5SkdOxzECDw4X9IvaXc1o68.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 3
+}

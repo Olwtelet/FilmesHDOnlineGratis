@@ -1,0 +1,19 @@
+---
+// Lista de coleção do Webflow (.w-dyn-list): o contêiner dos itens (role="list") com os .w-dyn-item no slot.
+// Quem chama decide o que fazer com lista vazia: nada aqui imprime estado vazio.
+interface Props {
+  listClass: string;
+  itemsClass: string;
+  /** atributos extras do contêiner (ex.: data-reviews="wrapper") */
+  itemsAttrs?: Record<string, string>;
+  /** atributos extras do invólucro (ex.: aria-hidden nas cópias do letreiro) */
+  listAttrs?: Record<string, string>;
+}
+const { listClass, itemsClass, itemsAttrs = {}, listAttrs = {} } = Astro.props;
+---
+
+<div {...listAttrs} class={listClass}>
+  <div {...itemsAttrs} role="list" class={itemsClass}>
+    <slot />
+  </div>
+</div>

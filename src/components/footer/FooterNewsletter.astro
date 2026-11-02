@@ -1,0 +1,73 @@
+---
+// Coluna do RSS no rodapé, no lugar da antiga newsletter: mesma forma, sem formulário e sem coletar dado. O campo mostra o
+// endereço do feed, a seta copia de verdade e a mensagem diz o que aconteceu. O id de grade do Webflow fica.
+//
+// O Taxi troca a página sem recarregar: o script usa data-taxi-reload para rodar também quando se chega aqui navegando,
+// ouve no document e liga uma vez só. O link do feed tem target, então o Taxi não o intercepta.
+import DownArrowButton from '../ui/DownArrowButton.astro';
+import { cls } from './variant';
+import { SITE } from '../../data/site';
+
+interface Props {
+  onBlack: boolean;
+}
+const { onBlack } = Astro.props;
+const feed = new URL(SITE.rss, SITE.url).href;
+---
+
+<div id="w-node-_557a978e-b1b7-f9c9-6c87-98a047c344b7-47c344a4" class="ft-newsletter-w" data-feed="w">
+  <h2 class={cls('roll-cont-eyeb parish mobile-mb', onBlack)}>Programação por RSS</h2>
+  <div class="form-block">
+    <div class={cls('ft-newsletter-input-w', onBlack)}>
+      <input class={cls('ft-newsletter-input', onBlack, 'w-input')} type="text" readonly value={feed} aria-label="Endereço do feed RSS" data-feed="campo" />
+      <div class="ft-newsletter-btn">
+        <DownArrowButton class={cls('right black smaller', onBlack)} svgClass="smaller" />
+        <button type="button" class="ft-feed-copiar" aria-label="Copiar o endereço do feed" data-feed="copiar"></button>
+      </div>
+    </div>
+    <div aria-live="polite">
+      <div class="w-form-done" data-feed="ok"></div>
+      <div class="w-form-fail" data-feed="erro"></div>
+    </div>
+  </div>
+  <a href={SITE.rss} target="_blank" rel="noopener" class="roll-cont-eyeb parish ft-feed-lk">Abrir o feed</a>
+</div>
+
+<script is:inline data-taxi-reload>
+(function () {
+  if (window.__feedRss) return;
+  window.__feedRss = true;
+  var OK = 'Endereço copiado.';
+  var ERRO = 'Não deu para copiar daqui. O endereço está selecionado no campo: copie à mão.';
+  function mostrar(w, chave, texto) {
+    ['ok', 'erro'].forEach(function (c) {
+      var slot = w.querySelector('[data-feed="' + c + '"]');
+      slot.textContent = c === chave ? texto : '';
+      slot.style.display = c === chave ? 'block' : 'none';
+    });
+  }
+  function selecionar(campo) {
+    campo.focus();
+    campo.setSelectionRange(0, campo.value.length);
+  }
+  document.addEventListener('click', function (e) {
+    var botao = e.target.closest && e.target.closest('[data-feed="copiar"]');
+    if (!botao) return;
+    var w = botao.closest('[data-feed="w"]');
+    var campo = w.querySelector('[data-feed="campo"]');
+    var pedido = navigator.clipboard && navigator.clipboard.writeText
+      ? navigator.clipboard.writeText(campo.value)
+      : Promise.reject(new Error('sem Clipboard API'));
+    pedido.then(function () {
+      mostrar(w, 'ok', OK);
+    }, function () {
+      selecionar(campo);
+      mostrar(w, 'erro', ERRO);
+    });
+  });
+  // um toque ou Tab no campo já deixa o endereço pronto para copiar
+  document.addEventListener('focusin', function (e) {
+    if (e.target.matches && e.target.matches('[data-feed="campo"]')) selecionar(e.target);
+  });
+})();
+</script>

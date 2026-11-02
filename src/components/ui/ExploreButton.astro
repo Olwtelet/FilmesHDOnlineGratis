@@ -1,0 +1,169 @@
+---
+/**
+ * Webflow "explore-btn" (ticket-shaped CTA): renders `.explore-btn-w`. app.js drives it through
+ * data-btn="explore" / data-x / data-explore / data-animatedash, so every attribute matters.
+ *
+ * Props
+ *   label      text, also copied to data-after (unless `after` is given)
+ *   variant    'base' | 'white' -> data-wf--explore-btn--variant (only real component instances
+ *              carry it; detached copies omit it)
+ *   as         'button' (default) | 'div'
+ *   modifier   extra class after explore-btn-w: 'desktop' | 'mobile' | 'smaller'
+ *   parallax   data-parallax value, default '24'; null omits the attribute
+ *   tuto       true -> data-tuto="true" (tutorial close button)
+ *   arrow      right-hand arrow block (default 'double'):
+ *                'double'       .text-of-w.arrow > 2x .explore-arrow-w[data-x] (2nd: ._2nd) > svg.svg.arrow-r
+ *                'close'        same wrappers, "X" icon svg.svg (14x15)
+ *                'single'       .text-of-w > svg.svg.arrow-r[data-x] > path.path-2
+ *                'single-black' .text-of-w > svg.svg.arrow-r._2nd (fill="black", no data-x)
+ *                'pair'         .text-of-w.arrow > svg.svg.arrow-r._2nd[data-x] + svg.svg.arrow-r[data-x] > path.path-2
+ *   ticket     background ticket svg (default 'explore'):
+ *                'explore'        bg stroke="white" data-explore="bg"; line data-explore="line"
+ *                'explore-stroke' bg stroke="currentColor" data-explore="bg"; line data-explore="line"
+ *                'close'          bg (no stroke) data-explore="close"; line data-explore="line"
+ *                'dash'           svg fill="none"; bg data-animatedash; line stroke="black" data-verticaldash
+ *                'dash-filled'    bg data-animatedash fill="white"; line stroke="black"
+ *                'dash-white'     svg fill="white"; bg data-animatedash; line stroke="back" .path-3
+ *
+ * Occurrences in the original site (34 buttons, 9 distinct shapes; none on /films/*):
+ *   /404     "GO BACK"                       variant="base"                                  (double / explore)
+ *   /about   CTA "EXPLORE"                   variant="white"                                 (double / explore)
+ *   /        roll cards, desktop (9x)        label="EXPLORE" variant="base"                  (double / explore)
+ *   /        roll cards, mobile (9x)         label="EXPLORE" arrow="single-black" ticket="dash-filled"
+ *   /        preloader "ENTER" desktop       modifier="desktop" ticket="explore-stroke"      (double)
+ *   /        preloader "ENTER" mobile        modifier="mobile" arrow="single" ticket="dash"
+ *   /        tutorial "CLOSE"                modifier="smaller" tuto arrow="close" ticket="close"
+ *   /work    list rows, mobile (9x)          as="div" parallax={null} arrow="pair" ticket="dash-white"
+ *   /work    bottom CTA .btn-no-mob          label="EXPLORE" variant="base"                  (double / explore)
+ *   /work    bottom CTA .btn-yes-mb          label="EXPLORE" arrow="single" ticket="dash"
+ */
+import { ARROW_D } from './svg-paths';
+interface Props {
+  label: string;
+  after?: string;
+  variant?: 'base' | 'white';
+  as?: 'button' | 'div';
+  modifier?: 'desktop' | 'mobile' | 'smaller';
+  parallax?: string | null;
+  tuto?: boolean;
+  arrow?: 'double' | 'close' | 'single' | 'single-black' | 'pair';
+  ticket?: 'explore' | 'explore-stroke' | 'close' | 'dash' | 'dash-filled' | 'dash-white';
+}
+
+const {
+  label,
+  after = label,
+  variant,
+  as = 'button',
+  modifier,
+  parallax = '24',
+  tuto = false,
+  arrow = 'double',
+  ticket = 'explore',
+} = Astro.props;
+
+const Tag = as;
+const CLOSE_D = [
+  'M9.654 8.135C13.26 5.855 14.088 1.967 13.993 0H12c0 3.954-3.35 6.194-5.025 6.937C2.729 4.73 2.058 1.47 2.253 0H0c0 4.02 2.205 6.608 4.338 8.052a4.873 4.873 0 0 0 5.316.083Z',
+  'M4.346 6.447C.74 8.728-.088 12.615.007 14.582H2c0-3.954 3.35-6.194 5.025-6.937 4.246 2.206 4.917 5.466 4.722 6.937H14c0-4.02-2.206-6.608-4.338-8.052a4.873 4.873 0 0 0-5.316-.083Z',
+];
+const TICKET_D =
+  'M5 1h90c0 1 .6 3 3 3s3-2 3-3h36c0 3.2 2.667 4.144 4 4.216V39c-3.2 0-4 2.667-4 4h-35c0-1.333-.8-4-4-4s-4 2.667-4 4H5c0-3.6-2.667-4.167-4-4V5c3.2 0 4-2.667 4-4Z';
+const EXPLORE_LINE = { stroke: 'currentColor', 'stroke-dasharray': '4', 'data-explore': 'line' };
+const TICKETS: Record<NonNullable<Props['ticket']>, { svg: Record<string, string>; bg: Record<string, string>; line: Record<string, string> }> = {
+  explore: { svg: {}, bg: { stroke: 'white', 'data-explore': 'bg' }, line: EXPLORE_LINE },
+  'explore-stroke': { svg: {}, bg: { stroke: 'currentColor', 'data-explore': 'bg' }, line: EXPLORE_LINE },
+  close: { svg: {}, bg: { 'data-explore': 'close' }, line: EXPLORE_LINE },
+  dash: {
+    svg: { fill: 'none' },
+    bg: { stroke: 'currentColor', 'data-animatedash': '' },
+    line: { stroke: 'black', 'data-verticaldash': '', 'stroke-dasharray': '4' },
+  },
+  'dash-filled': {
+    svg: {},
+    bg: { stroke: 'currentColor', 'data-animatedash': '', fill: 'white' },
+    line: { stroke: 'black', 'stroke-dasharray': '4' },
+  },
+  'dash-white': {
+    svg: { fill: 'white' },
+    bg: { stroke: 'currentColor', 'data-animatedash': '' },
+    line: { stroke: 'back', 'stroke-dasharray': '4', class: 'path-3' },
+  },
+};
+const t = TICKETS[ticket];
+---
+
+<Tag
+  data-wf--explore-btn--variant={variant}
+  data-parallax={parallax ?? undefined}
+  data-cursor="hide"
+  data-btn="explore"
+  data-sound-hover="0"
+  data-tuto={tuto ? 'true' : undefined}
+  class={modifier ? `explore-btn-w ${modifier}` : 'explore-btn-w'}
+>
+  <div class="explore-col">
+    <div class="text-of-w">
+      <div data-after={after} class="footagemenu-cta-tx">{label}</div>
+    </div>
+  </div>
+  <div class="explore-col last">
+    {
+      (arrow === 'double' || arrow === 'close') && (
+        <div class="text-of-w arrow">
+          {['explore-arrow-w', 'explore-arrow-w _2nd'].map((cls) => (
+            <div data-x="" class={cls}>
+              {arrow === 'double' ? (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10" class="svg arrow-r">
+                  <path fill="currentColor" d={ARROW_D} />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15" width="100%" class="svg">
+                  {CLOSE_D.map((d) => (
+                    <path fill="currentColor" d={d} />
+                  ))}
+                </svg>
+              )}
+            </div>
+          ))}
+        </div>
+      )
+    }
+    {
+      arrow === 'single' && (
+        <div class="text-of-w">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10" data-x="" class="svg arrow-r">
+            <path fill="currentColor" d={ARROW_D} class="path-2" />
+          </svg>
+        </div>
+      )
+    }
+    {
+      arrow === 'single-black' && (
+        <div class="text-of-w">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 11 10" class="svg arrow-r _2nd">
+            <path fill="black" d={ARROW_D} />
+          </svg>
+        </div>
+      )
+    }
+    {
+      arrow === 'pair' && (
+        <div class="text-of-w arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10" data-x="" class="svg arrow-r _2nd">
+            <path fill="currentColor" d={ARROW_D} />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10" data-x="" class="svg arrow-r">
+            <path fill="currentColor" d={ARROW_D} class="path-2" />
+          </svg>
+        </div>
+      )
+    }
+  </div>
+  <div class="abs explore-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142 44" width="100%" {...t.svg}>
+      <path d={TICKET_D} {...t.bg} />
+      <path d="M98 4.5v34" {...t.line} />
+    </svg>
+  </div>
+</Tag>

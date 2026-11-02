@@ -1,0 +1,197 @@
+{
+  "slug": "eyes-wide-shut-1999",
+  "titulo": "De Olhos Bem Fechados",
+  "categoria": "Drama",
+  "sessao": {
+    "data": "2026-08-29",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "De Olhos Bem Fechados",
+      "tituloOriginal": "Eyes Wide Shut",
+      "ano": 1999,
+      "direcao": "Stanley Kubrick",
+      "duracao": 159,
+      "classificacao": "18",
+      "generos": [
+        "Drama",
+        "Mistério",
+        "Suspense Psicológico"
+      ],
+      "trailer": {
+        "youtube": "VSS47StLOhk",
+        "canal": "Park Circus",
+        "idioma": "en",
+        "tituloVideo": "Eyes Wide Shut: 20th Anniversary | Official Trailer | Park Circus"
+      },
+      "tmdb": 345,
+      "imdb": "tt0120663"
+    }
+  ],
+  "sinais": [
+    "suspense",
+    "drama",
+    "mistério",
+    "perturbador",
+    "obsessão",
+    "clássico",
+    "cult",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Ciúme do que nunca aconteceu",
+    "leitura": "Alice confessa ter desejado um oficial que nunca tocou. Bill passa a noite tentando trair de volta e falha em cada porta, mostrando a carteira de médico como distintivo. Kubrick entra pelo ciúme, e o que Bill encontra lá dentro é a própria classe.",
+    "descricao": "Depois de ouvir a mulher confessar um desejo, um médico vaga por Nova York tentando trair de volta. Kubrick filma um ciúme sem fato e uma carteira cheia.",
+    "notasHome": [
+      {
+        "rotulo": "Carteira aberta",
+        "frase": "A carteira faz as vezes de distintivo"
+      },
+      {
+        "rotulo": "O oficial de Alice",
+        "frase": "O ciúme ganha cenas em preto e branco"
+      },
+      {
+        "rotulo": "Piano na rua",
+        "frase": "Um piano de poucas notas segue Bill na rua"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "O oficial da Marinha",
+        "frase": "Alice, chapada, diz que largaria tudo por um oficial que só viu nas férias. Ela não fez nada, e a noite de Bill nasce desse nada."
+      },
+      {
+        "rotulo": "Aluguel de fantasia",
+        "frase": "Bill reage à confissão com a carteira. Paga o táxi, paga a moça, aluga a fantasia na loja de Milich, sempre avisando que é médico."
+      },
+      {
+        "rotulo": "Corpos de enfeite",
+        "frase": "Na festa e na mansão, as mulheres nuas são mobília dos ricos. Kubrick denuncia o uso e arruma os corpos com olho de decorador."
+      },
+      {
+        "rotulo": "Natal em todo cômodo",
+        "frase": "Há luzes de Natal em quase todo cômodo, e Bill repete a última frase de quem lhe fala. Nova York passa por ele sem ser vista."
+      },
+      {
+        "rotulo": "O vestido que cai",
+        "frase": "O primeiro plano mostra Kidman de costas, tirando o vestido, e corta para o preto. Quem veio espiar o casal famoso já foi pego."
+      },
+      {
+        "rotulo": "Ela fica em casa",
+        "frase": "Alice diz a única coisa verdadeira do filme e a câmera sai atrás do marido. Será que Kubrick sabe que seguiu o sujeito errado?"
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Stanley Kubrick & Frederic Raphael"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Arthur Schnitzler"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Larry Smith"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Jocelyn Pook"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Stanley Kubrick"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Dr. Bill Harford",
+        "nome": "Tom Cruise"
+      },
+      {
+        "funcao": "Alice Harford",
+        "nome": "Nicole Kidman"
+      },
+      {
+        "funcao": "Victor Ziegler",
+        "nome": "Sydney Pollack"
+      },
+      {
+        "funcao": "Marion Nathanson",
+        "nome": "Marie Richardson"
+      },
+      {
+        "funcao": "Milich",
+        "nome": "Rade Šerbedžija"
+      },
+      {
+        "funcao": "Nick Nightingale",
+        "nome": "Todd Field"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "cAZ87S5bONxKMMAlPxK8LZvdOcm.jpg"
+    },
+    "cartaz": {
+      "tmdb": "rrz3J0ascmMVnknnGOelpChj7n5.jpg"
+    },
+    "direcao": {
+      "tmdb": "gCCaVhcsNh8Ni4ne0k6nNcr5PHZ.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "cAZ87S5bONxKMMAlPxK8LZvdOcm.jpg"
+      },
+      {
+        "tmdb": "gCCaVhcsNh8Ni4ne0k6nNcr5PHZ.jpg"
+      },
+      {
+        "tmdb": "9BCKtndgyhcFk4omuLWqZ2P4fKu.jpg"
+      },
+      {
+        "tmdb": "nIytsYeL1wvUYz13fMH83qBvkI2.jpg"
+      },
+      {
+        "tmdb": "d0A76lLOqu1qJPBqQaWGvTk6zxk.jpg"
+      },
+      {
+        "tmdb": "pNlRpt8Ts8D13cONG6voSu1jAyl.jpg"
+      },
+      {
+        "tmdb": "rqFkuEvPn8kJI3IJYkjGV9xyMWh.jpg"
+      },
+      {
+        "tmdb": "nEDO3Xdq6oNZ8xR0Iz6Kxfurv6X.jpg"
+      },
+      {
+        "tmdb": "qUuYxC4z8SAwB03R98Ul9srvl3m.jpg"
+      },
+      {
+        "tmdb": "kImwvmtMNZezdljFmgBYBvahTzp.jpg"
+      },
+      {
+        "tmdb": "AklO85uUDAL3O7iSOtFGfqT3w8n.jpg"
+      },
+      {
+        "tmdb": "rqfvMj7pRz1KqX832Z9wVFjNjnA.jpg"
+      },
+      {
+        "tmdb": "dhrMAf7xr3TBHYZrXhwDsMclCSJ.jpg"
+      },
+      {
+        "tmdb": "790ztJ7cVR5ZGnNNO6t0BtJaEmh.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 3
+}

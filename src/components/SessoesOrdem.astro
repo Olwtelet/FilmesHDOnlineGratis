@@ -1,0 +1,152 @@
+---
+/**
+ * Ordem das sessões, decidida no navegador pelo relógio de São Paulo, sem novo deploy.
+ *
+ * Fica inline e com data-taxi-reload porque precisa rodar no primeiro carregamento (o app.js é deferido e ainda não
+ * leu o DOM) e em toda navegação do Taxi, inclusive de página em cache, depois da troca do DOM e antes de os módulos e
+ * o WebGL serem criados. Um script com src carregaria em paralelo com eles.
+ *
+ * Contrato com o HTML gerado:
+ *   - cada filho de lista tem data-sessao, data-ini e data-fim (sessaoAttrs em data/films.ts); o aviso tem data-aviso;
+ *   - cada [data-estado] traz data-sessao, data-ini e data-fim e recebe aqui o texto do estado da sessão.
+ *
+ * Testes: tools/testes/ordem.mjs (relógio controlado).
+ */
+---
+
+<script is:inline data-taxi-reload>
+(function () {
+  var LISTAS = ['[data-roll="container"]', '.work-roll-w', '.work-overl-w', '[data-menu="films"]', '[data-menu="footages"]', '.menu-films-w', '[data-nextcms="w"]'];
+  var OCIOSO_MS = 20000;
+  var S = window.__sessoes || (window.__sessoes = { avisos: {}, ultimoGesto: Date.now() });
+  var FMT = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+
+  function agora() {
+    var p = {};
+    FMT.formatToParts(new Date(Date.now())).forEach(function (x) { p[x.type] = x.value; });
+    return p.year + '-' + p.month + '-' + p.day + 'T' + p.hour + ':' + p.minute;
+  }
+  function vai(el, t) { return el.getAttribute('data-fim') > t; }
+  function comparar(t) {
+    return function (a, b) {
+      var fa = vai(a, t), fb = vai(b, t), ia = a.getAttribute('data-ini'), ib = b.getAttribute('data-ini');
+      if (fa !== fb) return fa ? -1 : 1;
+      if (ia === ib) return a.getAttribute('data-sessao') < b.getAttribute('data-sessao') ? -1 : 1;
+      return (ia < ib ? -1 : 1) * (fa ? 1 : -1);
+    };
+  }
+  function filhos(l, attr) {
+    return Array.prototype.filter.call(l.children, function (c) { return c.hasAttribute(attr); });
+  }
+  // A cópia vem da última página visitada: o link atual de lá não vale na página em que ela for reinserida.
+  function semAtual(el) {
+    el.querySelectorAll('.w--current, [aria-current]').forEach(function (n) {
+      n.classList.remove('w--current');
+      n.removeAttribute('aria-current');
+    });
+    return el;
+  }
+  function ordenar(l, sel, t, temFutura) {
+    var sessoes = filhos(l, 'data-sessao');
+    if (!sessoes.length) return;
+    sessoes.sort(comparar(t)).forEach(function (c) { l.appendChild(c); });
+    var aviso = filhos(l, 'data-aviso')[0];
+    if (temFutura) {
+      if (aviso) {
+        // a primeira página fica no cache do Taxi já sem o aviso: guarda uma cópia para a sessão que terminar com a aba aberta
+        S.avisos[sel] = semAtual(aviso.cloneNode(true));
+        aviso.remove();
+      }
+    } else {
+      aviso = aviso || (S.avisos[sel] && S.avisos[sel].cloneNode(true));
+      if (aviso) l.insertBefore(aviso, l.firstChild);
+    }
+  }
+  // Calcula a ordem a partir de qualquer lista: todas têm as mesmas sessões.
+  function calcular(t) {
+    var ref = document.querySelector('[data-menu="films"]');
+    var todas = ref ? filhos(ref, 'data-sessao') : [];
+    var futuras = todas.filter(function (c) { return vai(c, t); });
+    return {
+      temFutura: futuras.length > 0,
+      primeira: futuras.sort(comparar(t))[0],
+      assinatura: todas.slice().sort(comparar(t)).map(function (c) { return c.getAttribute('data-sessao'); }).join() + '|' + (futuras.length > 0),
+    };
+  }
+  function textoEstado(e, ini) {
+    var dm = ini.slice(8, 10) + '/' + ini.slice(5, 7), h = ini.slice(11);
+    return { hoje: 'Sessão de hoje · ' + h, curso: 'Sessão em curso', proxima: 'Próxima sessão · ' + dm + ' ' + h, agendada: 'Agendada · ' + dm + ' ' + h, exibida: 'Exibida · ' + dm + '/' + ini.slice(0, 4) }[e];
+  }
+  function rotular(t, primeira) {
+    var slug = primeira && primeira.getAttribute('data-sessao');
+    document.querySelectorAll('[data-estado]').forEach(function (n) {
+      var ini = n.getAttribute('data-ini'), e;
+      if (!vai(n, t)) e = 'exibida';
+      else if (ini.slice(0, 10) === t.slice(0, 10)) e = 'hoje';
+      else if (ini <= t) e = 'curso';
+      else e = n.getAttribute('data-sessao') === slug ? 'proxima' : 'agendada';
+      n.setAttribute('data-estado', e);
+      var texto = textoEstado(e, ini);
+      if (n.textContent !== texto) n.textContent = texto;
+    });
+  }
+  function pagina() {
+    var v = document.querySelector('[data-taxi-view]');
+    return v ? v.getAttribute('data-page') : '';
+  }
+  function naTela(sel) {
+    var e = document.querySelector(sel);
+    return !!e && e.getClientRects().length > 0;
+  }
+  // Só existe em home e Programação: abertura ou tutorial na tela, painel aberto, modo CENAS ou filtro em uso.
+  function ocupado() {
+    return naTela('[data-preloader="w"]') || naTela('[data-tutorial="w"]') ||
+      !!document.querySelector('[data-menu="w"] input:checked, [data-menu="footagepanel"].open, [data-work="toggleWrapper"].toggled') ||
+      !!(document.activeElement && document.activeElement.classList.contains('menu-filtro'));
+  }
+  // Home e Programação guardam as listas nos módulos e no WebGL: recarregar é o que não cria corrida com eles.
+  function recarregar() {
+    // quem ainda não viu a abertura continua tendo direito a ela
+    if (!naTela('[data-preloader="w"]')) {
+      document.cookie = 'preloader_shown=' + Date.now() + '; path=/; max-age=3600';
+      document.cookie = 'tutorial_shown=true; path=/; max-age=172800';
+    }
+    location.reload();
+  }
+  // motivo: 'volta' quando a aba reaparece, 'cache' quando sai do bfcache, nada no intervalo.
+  function verificar(motivo) {
+    var t = agora(), c = calcular(t);
+    rotular(t, c.primeira);
+    if (c.assinatura === S.assinatura) return;
+    var p = pagina();
+    if (p === 'home' || p === 'work') {
+      // Escondida, espera a volta: em segundo plano não há rAF para o WebGL recomeçar.
+      if (document.hidden) return;
+      if (motivo === 'cache' || (!ocupado() && (motivo === 'volta' || Date.now() - S.ultimoGesto >= OCIOSO_MS))) recarregar();
+      return;
+    }
+    // Nas outras páginas só o painel pequeno mostra a ordem; o restante vale a partir da próxima navegação.
+    var l = document.querySelector('.menu-films-w');
+    if (l) ordenar(l, '.menu-films-w', t, c.temFutura);
+    S.assinatura = c.assinatura;
+  }
+
+  var t = agora(), c = calcular(t);
+  LISTAS.forEach(function (sel) {
+    var l = document.querySelector(sel);
+    if (l) ordenar(l, sel, t, c.temFutura);
+  });
+  rotular(t, c.primeira);
+  S.assinatura = c.assinatura;
+
+  if (S.ligado) return;
+  S.ligado = true;
+  S.verificar = verificar;
+  setInterval(function () { verificar(); }, 30000);
+  document.addEventListener('visibilitychange', function () { verificar('volta'); });
+  window.addEventListener('pageshow', function (e) { if (e.persisted) verificar('cache'); });
+  ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart'].forEach(function (ev) {
+    window.addEventListener(ev, function () { S.ultimoGesto = Date.now(); }, { passive: true, capture: true });
+  });
+})();
+</script>

@@ -1,0 +1,30 @@
+---
+// Início ("/"): o roll de sessões em tela cheia, conduzido pelo app.js, com a abertura e o tutorial por cima.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import CursorBox from '../components/ui/CursorBox.astro';
+import HomeRoll from '../components/home/HomeRoll.astro';
+import Preloader from '../components/home/Preloader.astro';
+import Tutorial from '../components/home/Tutorial.astro';
+import { HOME_META } from '../data/home';
+---
+
+<BaseLayout title={HOME_META.title} rotate="before">
+  <Fragment slot="head-local">
+    {/* Abertura vista há menos de 1 h (a mesma regra do app.js): some antes do primeiro quadro, e ele só faz o fade do fundo.
+        Senão, pré-carrega a máscara, com crossorigin porque máscara de CSS vem em modo CORS: sem ele, a imagem viria duas vezes. */}
+    <script is:inline data-local-replica>(function(){var m=/(?:^|; )preloader_shown=(\d+)/.exec(document.cookie);if(m&&Date.now()-m[1]<36e5){document.documentElement.classList.add('abertura-vista');return}var l=document.createElement('link');l.rel='preload';l.as='image';l.type='image/webp';l.crossOrigin='anonymous';l.href='/assets/img/site/simbolo-mascara.webp';document.head.appendChild(l)})()</script>
+    <script is:inline defer src="/assets/js/local-preloader.js" data-local-replica></script>
+  </Fragment>
+  <div data-page="home" data-taxi-view="" class="pw h-screen home">
+    <Nav currentPath="/" />
+    <HomeRoll />
+    <CursorBox page="home" />
+    <div class="grad-bg"></div>
+    <div class="grad-bg bottom"></div>
+  </div>
+  <Fragment slot="after">
+    <Preloader />
+    <Tutorial />
+  </Fragment>
+</BaseLayout>

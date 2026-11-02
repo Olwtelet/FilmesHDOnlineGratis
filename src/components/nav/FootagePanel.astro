@@ -1,0 +1,54 @@
+---
+// Painel de filme do menu, aberto no modo CENAS: um cartão por item (manchete, direção, curadoria e o botão para a
+// sessão), trocado pelo app.js pela posição em data-menu="footages". No aviso, o botão leva à página Sobre.
+import TicketCardEdges from './TicketCardEdges.astro';
+import { ITENS, filmHref, sessaoAttrs } from '../../data/films';
+import { ROUTES, SITE } from '../../data/site';
+import { wfLink } from '../ui/link';
+import { ARROW_D } from '../ui/svg-paths';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+---
+
+<div data-menu="footagepanel" class="footage-panel">
+  <div class="panel-content-w">
+    <div class="panel-content">
+      <div data-menu="line" class="line-menu light"></div>
+      <div class="w-dyn-list">
+        <div data-menu="footages" role="list" class="menu-footage-w w-dyn-items">
+          {
+            ITENS.map((film) => (
+              <div data-roll="menuItem" role="listitem" class="menu-footage-item w-dyn-item" {...sessaoAttrs(film)}>
+                <div class="menu-panel-cont">
+                  <div class="footagemenu-text-box">
+                    <div class="footage-menu-eyeb">MANCHETE</div>
+                    <div class="footage-menu-title">{film.headline}</div>
+                  </div>
+                  <div class="footagemenu-text-box left">
+                    <div class="footage-menu-eyeb">DIREÇÃO</div>
+                    <div class="footage-menu-title">{film.directorShort}</div>
+                    <div class="footage-menu-eyeb">CURADORIA</div>
+                    <div class="footage-menu-title">{SITE.author}</div>
+                  </div>
+                </div>
+                <a data-footagemenu="w" {...wfLink(film.aviso ? ROUTES.about : filmHref(film.slug), currentPath, 'footagemenu-cta-w w-inline-block')}>
+                  <div data-after="EXPLORAR" class="footagemenu-cta-tx smaller">{film.aviso ? 'SOBRE A SALA' : 'VER SESSÃO'}</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10" class="svg footagemenu-cta"><path fill="currentColor" d={ARROW_D}></path></svg>
+                  <div class="menu-dots-w vert">
+                    <div class="dots-side-w">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 237 43" class="svg-8"><path fill="currentColor" d="M237 .5V34a9 9 0 0 0-9 9H9a9 9 0 0 0-9-9V.5h237Z" data-footagemenu="bg" class="path-4"></path></svg>
+                    </div>
+                  </div>
+                </a>
+                <TicketCardEdges />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

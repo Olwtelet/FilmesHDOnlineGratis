@@ -1,0 +1,39 @@
+---
+// Painel de caso do menu: a leitura da sessão em /sessoes/<slug>/ e o lema do site nas outras páginas. O espaço .rating-w,
+// que no original guardava a nota, mostra a duração e some quando não há sessão.
+import TicketCardEdges from './TicketCardEdges.astro';
+import { FILMS, filmHref } from '../../data/films';
+import { SITE } from '../../data/site';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+const film = FILMS.find((f) => filmHref(f.slug) === currentPath);
+const text = film ? film.synopsis : SITE.tagline;
+const duracao = film?.minutes ? `${film.minutes} MIN` : '';
+---
+
+<div data-menu="casepanel" class="case-panel">
+  <div class="panel-content-w">
+    <div class="panel-content">
+      <div data-menu="line" class="line-menu light shorter"></div>
+      <div class="menu-panel-cont case">
+        <div class="casemenu-text-box">
+          <div class="case-menu-tx">{text}</div>
+        </div>
+      </div>
+      <div class="casemenu-bottom-w">
+        <TicketCardEdges />
+        {
+          duracao && (
+            <div class="rating-w">
+              <div data-after={duracao} class="footagemenu-cta-tx smaller">{duracao}</div>
+            </div>
+          )
+        }
+        <div class="casemenu-imgs-w"></div>
+      </div>
+    </div>
+  </div>
+</div>

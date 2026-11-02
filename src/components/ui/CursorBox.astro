@@ -1,0 +1,34 @@
+---
+/**
+ * Cursor próprio e áreas de anterior e próximo dos carrosséis (div.cursor-box.out), movidos pelo app.js por
+ * data-cursor / data-hitbox. O app.js escreve ROLAR no texto do cursor ao iniciar; data-hitbox é seletor, nunca aparece.
+ *
+ *   <CursorBox page="home" />   roll da home (áreas .pre-next-hb / .pre-next-hb.bottom)
+ *   <CursorBox page="work" />   /programacao/ (acrescenta .work aos invólucros do cursor; áreas .left / .right)
+ */
+interface Props {
+  page: 'home' | 'work';
+}
+const { page } = Astro.props;
+const work = page === 'work';
+const w = (base: string) => (work ? `${base} work` : base);
+---
+
+<div class="cursor-box out">
+  <div class={w('cursor-w-out')}>
+    <div data-cursor="home" class={w('cursor-w')}>
+      <div class={w('arrow-of first')}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 23" width="100%" data-cursor="arrow" class="svg cursor-arrow"><path fill="currentColor" d="M20.108.974C32.215 5.824 34.855 16.886 34.59 22.15h-4.924c0-9.384-8.278-14.7-12.417-16.462C6.759 10.924 5.099 18.66 5.58 22.15H.015C-.423 10.453 8.293 3.74 14.419 1.034c1.806-.798 3.857-.794 5.69-.06Z"></path></svg>
+      </div>
+      <div class="text-of-w">
+        <div data-cursor="text" class="text-block-4">ROLAR</div>
+      </div>
+      <div class="circle"></div>
+      <div class={w('arrow-of')}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 23" width="100%" data-cursor="arrow" class="svg cursor-arrow flip-y"><path fill="currentColor" d="M20.108.974C32.215 5.824 34.855 16.886 34.59 22.15h-4.924c0-9.384-8.278-14.7-12.417-16.462C6.759 10.924 5.099 18.66 5.58 22.15H.015C-.423 10.453 8.293 3.74 14.419 1.034c1.806-.798 3.857-.794 5.69-.06Z"></path></svg>
+      </div>
+    </div>
+  </div>
+  <div data-hitbox="PREV" class={work ? 'pre-next-hb left' : 'pre-next-hb'}></div>
+  <div data-hitbox="NEXT" class={work ? 'pre-next-hb right' : 'pre-next-hb bottom'}></div>
+</div>

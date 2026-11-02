@@ -1,0 +1,183 @@
+{
+  "slug": "vivarium-2019",
+  "titulo": "Vivarium",
+  "categoria": "Ficção Científica",
+  "sessao": {
+    "data": "2026-06-13",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Vivarium",
+      "tituloOriginal": "Vivarium",
+      "ano": 2019,
+      "direcao": "Lorcan Finnegan",
+      "duracao": 97,
+      "classificacao": "16",
+      "generos": [
+        "Ficção Científica",
+        "Suspense",
+        "Terror Psicológico"
+      ],
+      "trailer": {
+        "youtube": "L33tYvvTg50",
+        "canal": "Umbrella Entertainment",
+        "idioma": "en",
+        "tituloVideo": "Vivarium (2019) Official Trailer – On Demand and Digital"
+      },
+      "tmdb": 458305,
+      "imdb": "tt8368406"
+    }
+  ],
+  "sinais": [
+    "ficção-científica",
+    "suspense",
+    "terror",
+    "perturbador",
+    "obscuro",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O cuco avisa no primeiro plano",
+    "leitura": "Vivarium entrega sua alegoria na abertura: um cuco em ninho alheio. Depois tranca Tom e Gemma num loteamento verde, com um bebê numa caixa, e o que mais assusta é ver esse casal moderno cair sozinho na divisão de tarefas de 1950.",
+    "descricao": "Um casal visita uma casa modelo, não acha a saída do loteamento e recebe um bebê para criar. Fábula seca sobre casa própria e papéis que voltam sozinhos.",
+    "notasHome": [
+      {
+        "rotulo": "Casa número 9",
+        "frase": "Toda rua devolve o casal à mesma porta"
+      },
+      {
+        "rotulo": "A pá",
+        "frase": "Tom cava para não ficar em casa"
+      },
+      {
+        "rotulo": "A palavra mãe",
+        "frase": "Ela recusa o nome e serve o prato"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Ninho alheio",
+        "frase": "Um filhote de cuco joga os outros para fora do ninho antes de qualquer fala. A tese chega antes dos personagens."
+      },
+      {
+        "rotulo": "A pá e o menino",
+        "frase": "Ninguém manda o paisagista Tom cavar, nem a professora Gemma ficar com a criança. O casal refaz sozinho a família de 1950."
+      },
+      {
+        "rotulo": "Nenhum dia bom",
+        "frase": "O filme condena a vida doméstica sem conceder a ela um único dia bom. A alegoria vence fácil, porque joga sozinha."
+      },
+      {
+        "rotulo": "Céu de maquete",
+        "frase": "Casas verdes iguais, nuvens de desenho, comida a vácuo sem gosto. Tudo parece maquete, e maquete não explica quem a construiu."
+      },
+      {
+        "rotulo": "Cansaço contagioso",
+        "frase": "O menino copia as vozes e berra até comer. O filme se repete junto com ele, e o cansaço do casal passa para a plateia."
+      },
+      {
+        "rotulo": "Quem assina",
+        "frase": "Yonder nunca explica quem o mantém nem por quê. Melhor perguntar quanta gente assinaria esse contrato de olhos abertos."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Garret Shanley"
+      },
+      {
+        "funcao": "Argumento",
+        "nome": "Lorcan Finnegan"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "MacGregor"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Kristian Eidnes Andersen"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "John McDonnell"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Brendan McCarthy"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Gemma",
+        "nome": "Imogen Poots"
+      },
+      {
+        "funcao": "Tom",
+        "nome": "Jesse Eisenberg"
+      },
+      {
+        "funcao": "O Menino",
+        "nome": "Senan Jennings"
+      },
+      {
+        "funcao": "O Rapaz",
+        "nome": "Éanna Hardwicke"
+      },
+      {
+        "funcao": "Martin",
+        "nome": "Jonathan Aris"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "gzrxB8PLoSZhzKi1t5mKYGFZT3s.jpg"
+    },
+    "cartaz": {
+      "tmdb": "myf3qzpeN0JbuFRPwSpJcz7rmAT.jpg"
+    },
+    "direcao": {
+      "tmdb": "ux9s3gwuA2qgoTNFFom2QOHeK9w.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "gzrxB8PLoSZhzKi1t5mKYGFZT3s.jpg"
+      },
+      {
+        "tmdb": "ux9s3gwuA2qgoTNFFom2QOHeK9w.jpg"
+      },
+      {
+        "tmdb": "i1kmEj4oPLuSXwlBfwgCqqdEkjY.jpg"
+      },
+      {
+        "tmdb": "eCcJkBqqGhjswDtadLmRmZVXpoj.jpg"
+      },
+      {
+        "tmdb": "jg675a839JrP0DSrriUPP9KBiBe.jpg"
+      },
+      {
+        "tmdb": "mPAnIUerw9OUsIR0rMqI2SEbMge.jpg"
+      },
+      {
+        "tmdb": "inlg8EsXowlP2SpfyZkj9xwpsdD.jpg"
+      },
+      {
+        "tmdb": "apzuJXA9RVfMEWXmv80fZv5Yof2.jpg"
+      },
+      {
+        "tmdb": "3KbXRhzg5pITV70MEwWLf4jaiZp.jpg"
+      },
+      {
+        "tmdb": "7601ez9A07THOeilJYouYFLvruo.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 1
+}

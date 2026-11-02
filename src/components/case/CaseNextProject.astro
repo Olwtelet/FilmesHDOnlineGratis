@@ -1,0 +1,80 @@
+---
+// Próxima (div.s.next-proj): chamada para a Programação e um cartão por sessão. O script de ordem (SessoesOrdem) põe os
+// cartões na ordem calculada e o app.js só mostra o que vem depois da sessão atual (data-nextcms / data-id), voltando ao primeiro.
+// O rótulo do cartão é o estado da sessão, porque o seguinte da lista pode ser uma sessão já exibida; o texto fixo é o padrão.
+import DownArrowButton from '../ui/DownArrowButton.astro';
+import { wfLink } from '../ui/link';
+import { responsive } from './cms';
+import { FILMS, filmHref, sessaoAttrs } from '../../data/films';
+import { ROUTES } from '../../data/site';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+const FUROS = Array.from({ length: 10 });
+---
+
+<div data-color="white" class="s next-proj bg-white">
+  <a href={ROUTES.work} class="all-work-cta-w w-inline-block">
+    <div>
+      <div class="spacer_cs">
+        <div class="roll-cont-eyeb parish mb-2">Programação</div>
+      </div>
+      <div class="previousnext-he">SESSÕES</div>
+    </div>
+    <div class="previousnext-cta-w">
+      <div class="text-block-10">EXPLORAR</div>
+      <DownArrowButton class="right black smaller" svgClass="smaller" />
+    </div>
+  </a>
+  <div class="previousnext-c w-dyn-list">
+    <div data-nextcms="w" role="list" class="previousnext-w w-dyn-items">
+      {
+        FILMS.map((film) => (
+          <div data-a="parallaxImg" {...sessaoAttrs(film)} data-id={film.slug} role="listitem" class="previousnext-item w-dyn-item">
+            <div class="previousnext-text-w">
+              <div>
+                <div class="spacer_cs">
+                  <div data-estado="" {...sessaoAttrs(film)} class="roll-cont-eyeb parish mb-2">Próxima sessão</div>
+                </div>
+                <div class="previousnext-he">{film.title}</div>
+              </div>
+              <div class="previousnext-cta-w">
+                <div class="text-block-10">PRÓXIMA</div>
+                <DownArrowButton class="right black-copy smaller" svgClass="smaller" />
+              </div>
+            </div>
+            <div class="previousnext-img-w">
+              <div class="abs-img-w">
+                <div class="full-img-w">
+                  <img
+                    src={film.hero.src}
+                    loading="lazy"
+                    data-pnext="img"
+                    alt=""
+                    {...responsive(film.hero, '(max-width: 767px) 100vw, (max-width: 991px) 73vw, 74vw')}
+                    class="prevnext-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="abs ticket-holes">
+              <div class="ticket-holes-w">
+                {FUROS.map(() => (
+                  <div class="dot white larger"></div>
+                ))}
+              </div>
+              <div class="ticket-holes-w right">
+                {FUROS.map(() => (
+                  <div class="dot white larger"></div>
+                ))}
+              </div>
+            </div>
+            <a data-pnext="hover" aria-label={`Abrir a sessão: ${film.title}`} {...wfLink(filmHref(film.slug), currentPath, 'abs next-link w-inline-block')}></a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

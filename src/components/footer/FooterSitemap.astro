@@ -1,0 +1,29 @@
+---
+// Coluna "navegar" do rodapé.
+import DownArrowButton from '../ui/DownArrowButton.astro';
+import { cls } from './variant';
+import { wfLink } from '../ui/link';
+import { FOOTER_SITEMAP } from '../../data/site';
+
+interface Props {
+  onBlack: boolean;
+  currentPath: string;
+}
+const { onBlack, currentPath } = Astro.props;
+---
+
+<div id="w-node-_557a978e-b1b7-f9c9-6c87-98a047c344c9-47c344a4" class="ft-sitemap-w">
+  <h2 class={cls('roll-cont-eyeb parish mobile-mb', onBlack)}>navegar</h2>
+  <ul role="list" class="ft-sitemap-ls w-list-unstyled">
+    {
+      FOOTER_SITEMAP.map((link) => (
+        <li class="ft-sitemap-li-item">
+          <a {...wfLink(link.href, currentPath, 'ft-sitemap-lk w-inline-block')}>
+            <h3 class={cls('ft-li-lk-tx', onBlack)}>{link.label}</h3>
+            <DownArrowButton class={cls('right black smaller', onBlack)} svgClass="smaller" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

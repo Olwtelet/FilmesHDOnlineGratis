@@ -1,0 +1,227 @@
+{
+  "slug": "ready-or-not-double-feature-2026",
+  "titulo": "Casamento Sangrento + Casamento Sangrento: A Viúva",
+  "tituloCurto": "Casamento Sangrento + A Viúva",
+  "categoria": "Terror",
+  "direcaoCurta": "Bettinelli-Olpin & Gillett",
+  "sessao": {
+    "data": "2026-07-25",
+    "hora": "19:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Casamento Sangrento",
+      "tituloOriginal": "Ready or Not",
+      "ano": 2019,
+      "direcao": "Matt Bettinelli-Olpin & Tyler Gillett",
+      "duracao": 95,
+      "classificacao": "18",
+      "generos": [
+        "Terror",
+        "Suspense",
+        "Comédia Sombria"
+      ],
+      "hora": "19:30",
+      "trailer": {
+        "youtube": "ZtYTwUxhAoI",
+        "canal": "SearchlightPictures",
+        "idioma": "en",
+        "tituloVideo": "READY OR NOT | Red Band Trailer [HD] | FOX Searchlight"
+      },
+      "tmdb": 567609,
+      "imdb": "tt7798634"
+    },
+    {
+      "titulo": "Casamento Sangrento: A Viúva",
+      "tituloOriginal": "Ready or Not: Here I Come",
+      "ano": 2026,
+      "direcao": "Matt Bettinelli-Olpin & Tyler Gillett",
+      "duracao": 108,
+      "classificacao": "18",
+      "generos": [
+        "Terror",
+        "Suspense",
+        "Comédia Sombria"
+      ],
+      "hora": "21:30",
+      "trailer": {
+        "youtube": "upSQJG_kOt4",
+        "canal": "20th Century Studios Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "Casamento Sangrento: A Viúva | Trailer Oficial Legendado"
+      },
+      "tmdb": 1266127,
+      "imdb": "tt33978029"
+    }
+  ],
+  "sinais": [
+    "sessão-dupla",
+    "terror",
+    "suspense",
+    "comédia",
+    "sobrevivência"
+  ],
+  "texto": {
+    "manchete": "Da sogra ao cartel de ricos",
+    "leitura": "Casamento Sangrento prende uma noiva numa mansão e ri de uma família rica que mal sabe usar as próprias armas. A Viúva começa logo depois e abre o jogo para quatro famílias, um advogado e um campo de golfe. Visto o segundo, o sogro de Grace era só gerente de filial.",
+    "descricao": "Uma noiva caçada pela família do marido e, no filme seguinte, por quatro famílias da elite. Sessão dupla sobre o que acontece a uma sátira quando cresce.",
+    "notasHome": [
+      {
+        "rotulo": "As empregadas",
+        "frase": "A sátira também ri das criadas mortas"
+      },
+      {
+        "rotulo": "Algemas",
+        "frase": "A irmã afastada volta algemada a Grace"
+      },
+      {
+        "rotulo": "Campo de golfe",
+        "frase": "O medo doméstico vira torneio de elite"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A carta da meia-noite",
+        "frase": "Entrar para os Le Domas exige tirar uma carta. Grace tira esconde-esconde, e a família vai buscar as armas antigas."
+      },
+      {
+        "rotulo": "Matriz e filial",
+        "frase": "O primeiro ri de uma casa de ricos trapalhões. O segundo mostra um conselho, com regras e advogado, e os Le Domas viram filial."
+      },
+      {
+        "rotulo": "Sogra assusta mais",
+        "frase": "Sogra armada em casa incomoda porque está perto. Conselho secreto fica longe. A Viúva ganha tamanho e perde esse incômodo."
+      },
+      {
+        "rotulo": "Onde se esconder",
+        "frase": "Esconde-esconde pede paredes e passagens secretas. A caçada de 2026 começa num campo de golfe, paisagem feita para rico."
+      },
+      {
+        "rotulo": "O riso sobre a criadagem",
+        "frase": "A plateia ri quando um rico erra o tiro e mata uma empregada. É assim que os Le Domas veem a própria casa."
+      },
+      {
+        "rotulo": "O que Grace queria",
+        "frase": "Grace cresceu sem família e casou para ter uma. A segunda noite lhe devolve uma irmã algemada: resposta ou castigo?"
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Guy Busick & R. Christopher Murphy"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Brett Jutkiewicz"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Brian Tyler & Sven Faulconer"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Terel Gibson & Jay Prychidny"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Tripp Vinson"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "James Vanderbilt"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "William Sherak"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Grace",
+        "nome": "Samara Weaving"
+      },
+      {
+        "funcao": "Daniel",
+        "nome": "Adam Brody"
+      },
+      {
+        "funcao": "Becky",
+        "nome": "Andie MacDowell"
+      },
+      {
+        "funcao": "Faith",
+        "nome": "Kathryn Newton"
+      },
+      {
+        "funcao": "Ursula Danforth",
+        "nome": "Sarah Michelle Gellar"
+      },
+      {
+        "funcao": "O Advogado",
+        "nome": "Elijah Wood"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "oJ1MIABA0WF0a7MDVQnnMvBdex8.jpg"
+    },
+    "cartaz": {
+      "tmdb": "k5dJuAdjv1wCq2Vzj1GZfwGmLoU.jpg"
+    },
+    "direcao": {
+      "tmdb": "2wbXwwEseGuVAfnmYvVopkBPbAl.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "oJ1MIABA0WF0a7MDVQnnMvBdex8.jpg"
+      },
+      {
+        "tmdb": "2wbXwwEseGuVAfnmYvVopkBPbAl.jpg"
+      },
+      {
+        "tmdb": "5clwbYVMmV5FytxYO8KZ5LpJcQZ.jpg"
+      },
+      {
+        "tmdb": "2okNnNRrFPZHwCqZg21kVn3uIsC.jpg"
+      },
+      {
+        "tmdb": "aNrNi5QExO6b8MnEGsfpgp21NIY.jpg"
+      },
+      {
+        "tmdb": "pDbGF6T0lacZx8a3XQLCAfKZFAP.jpg"
+      },
+      {
+        "tmdb": "j8uPZSPjKYzHlN2B4NhPQVWWZ5x.jpg"
+      },
+      {
+        "tmdb": "5Z9BnEJ6wOJZRvYwd79twOmb0v3.jpg"
+      },
+      {
+        "tmdb": "ubqaGfwYxZMaTEVfhPghF87tzYm.jpg"
+      },
+      {
+        "tmdb": "4ByIxFqL1dsJVaD2mSYCpjGgY8O.jpg"
+      },
+      {
+        "tmdb": "lg6umZ6dzD39zyiYamktfvJCFzs.jpg"
+      },
+      {
+        "tmdb": "8csGpIW1esx3x3EfW1SwXZaxwGJ.jpg"
+      },
+      {
+        "tmdb": "y3XBQL53Ks0FMH6ewPrK6tghTHN.jpg"
+      },
+      {
+        "tmdb": "fpl1fBFvJkRJIzRePXqTMNlSfBx.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 3
+}

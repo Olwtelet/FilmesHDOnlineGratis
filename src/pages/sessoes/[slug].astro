@@ -1,0 +1,80 @@
+---
+// Página de uma sessão, uma rota por arquivo em data/sessoes: /sessoes/<slug>/.
+// O conteúdo vem todo de data/films.ts; nenhum bloco tem texto próprio de filme.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CaseHero from '../../components/case/CaseHero.astro';
+import CaseTrailer from '../../components/case/CaseTrailer.astro';
+import CaseCredits from '../../components/case/CaseCredits.astro';
+import CaseShowcase from '../../components/case/CaseShowcase.astro';
+import CasePrizes from '../../components/case/CasePrizes.astro';
+import CaseInvestors from '../../components/case/CaseInvestors.astro';
+import CaseNextProject from '../../components/case/CaseNextProject.astro';
+import { FILMS, filmHref, filmesDaSessao, getFilm } from '../../data/films';
+import { ROUTES, SITE } from '../../data/site';
+
+export function getStaticPaths() {
+  return FILMS.map((film) => ({ params: { slug: film.slug } }));
+}
+
+const { slug } = Astro.params as { slug: string };
+const film = getFilm(slug);
+const currentPath = filmHref(slug);
+
+const absoluto = (caminho: string) => new URL(caminho, SITE.url).href;
+const ogImage = `/og/${slug}.jpg`;
+// o cartão traz o título, a data, a hora e a sala sobre uma cena
+const ogImageAlt = `${film.fullTitle}: sessão de ${film.session.fullDate} às ${film.session.time}, ${film.session.room}`;
+
+// O nome do filme é o que o buscador mostra; a exibição acontece na sala, nunca nesta página.
+const obras = filmesDaSessao(slug).map((f) => ({
+  '@type': 'Movie',
+  name: f.title,
+  director: f.director.split(' & ').map((name) => ({ '@type': 'Person', name })),
+  duration: `PT${f.minutes}M`,
+  trailer: {
+    '@type': 'VideoObject',
+    name: `Trailer de ${f.title}`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${f.youtube}`,
+  },
+}));
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ScreeningEvent',
+    name: film.fullTitle,
+    description: film.description,
+    url: absoluto(currentPath),
+    image: absoluto(ogImage),
+    startDate: film.session.startIso,
+    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+    location: { '@type': 'VirtualLocation', name: film.session.room, url: film.session.roomUrl },
+    workPresented: obras.length === 1 ? obras[0] : obras,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: absoluto(ROUTES.home) },
+      { '@type': 'ListItem', position: 2, name: 'Programação', item: absoluto(ROUTES.work) },
+      { '@type': 'ListItem', position: 3, name: film.fullTitle, item: absoluto(currentPath) },
+    ],
+  },
+];
+---
+
+<BaseLayout title={film.fullTitle} description={film.description} ogImage={ogImage} ogImageAlt={ogImageAlt} jsonLd={jsonLd}>
+  <div data-case={slug} data-taxi-view="" data-page="case" class="pw cs">
+    <Nav currentPath={currentPath} />
+    <CaseHero film={film} />
+    <CaseTrailer film={film} />
+    <CaseCredits film={film} />
+    <CaseShowcase film={film} />
+    <CasePrizes film={film} />
+    <CaseInvestors film={film} />
+    <CaseNextProject currentPath={currentPath} />
+    <Footer variant="base" currentPath={currentPath} />
+  </div>
+</BaseLayout>

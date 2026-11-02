@@ -1,0 +1,84 @@
+---
+/**
+ * Navegação do site: div.nav-w, sempre o primeiro filho da view (<div data-page data-taxi-view class="pw ...">). Toda
+ * página tem, exceto a 404.
+ *
+ *   <Nav currentPath="/sessoes/bugonia-2025/" />
+ *
+ * O que muda por rota:
+ *   - links cujo href é igual a currentPath recebem aria-current="page" e a classe w--current (logo em "/", links do
+ *     painel principal e, em /sessoes/<slug>/, o botão do painel de filme e o link direto daquela sessão);
+ *   - o painel de caso (.case-menu-tx) mostra a leitura em /sessoes/<slug>/ e o lema do site nas outras páginas.
+ *
+ * As três listas de sessões (ingresso, painel de filme, painel pequeno) vêm de ITENS e o script de ordem as ordena: o
+ * app.js as liga pela posição, então todas terminam com os mesmos itens na mesma ordem.
+ */
+import MenuFilmRows from './nav/MenuFilmRows.astro';
+import FootagePanel from './nav/FootagePanel.astro';
+import CasePanel from './nav/CasePanel.astro';
+import SmallPanel from './nav/SmallPanel.astro';
+import AboutMenu from './nav/AboutMenu.astro';
+import ContactMenu from './nav/ContactMenu.astro';
+import MainPanel from './nav/MainPanel.astro';
+import { wfLink } from './ui/link';
+import { ROUTES } from '../data/site';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+---
+
+<div class="nav-w">
+  <div class="menu-close-trig"></div>
+  <a data-a="logo" {...wfLink(ROUTES.home, currentPath, 'nav-link logo w-inline-block')}>
+    <span class="marca-nav" role="img" aria-label="Filmes HD Online Grátis">
+      <span class="marca-simbolo"></span>
+      <span class="marca-nome">FILMES HD<br />ONLINE GRÁTIS</span>
+    </span>
+    <div data-cursor="hide" class="abs cursor-hide-hitbox logo-sized"></div>
+  </a>
+  <div data-a="menu" data-menu="w" data-cursor="hide" data-sound-hover="1" class="menu-w">
+    <div class="mmenu-col large">
+      <MenuFilmRows />
+      <div class="abs checkbox-w">
+        <input type="checkbox" id="smallpanel" class="menu-input" aria-label="Abrir o menu de sessões" />
+      </div>
+      <div class="menu-dots-w large">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 237 103" width="100%">
+          <path d="M237 94V9a9 9 0 0 1-9-9H9a9 9 0 0 1-9 9v85a9 9 0 0 1 9 9h219a9 9 0 0 1 9-9Z"></path>
+          <clipPath id="ticketMaskLarge" clipPathUnits="objectBoundingBox">
+            <path fill="currentColor" d="M237 94V9a9 9 0 0 1-9-9H9a9 9 0 0 1-9 9v85a9 9 0 0 1 9 9h219a9 9 0 0 1 9-9Z" transform="scale(0.004219409283, 0.009708737864)"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <FootagePanel currentPath={currentPath} />
+      <CasePanel currentPath={currentPath} />
+      <SmallPanel currentPath={currentPath} />
+      <AboutMenu />
+      <ContactMenu />
+    </div>
+    <div class="vert-line-w">
+      <div class="nav-line-w">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 2 85" fill="none" class="nav-dash-line"><path d="M1 0L1 85" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></path></svg>
+      </div>
+    </div>
+    <div class="mobile-shadow"></div>
+    <div data-hover="bggrow" data-menu="maintrigger" class="mmenu-col btn">
+      <input type="checkbox" id="mainpanel" class="menu-input" aria-label="Abrir o menu do site" />
+      <div class="menu-icon-w">
+        <div data-menu="iconline" class="menu-icon-line"></div>
+        <div data-menu="iconline" class="menu-icon-line"></div>
+        <div data-menu="iconline" class="menu-icon-line"></div>
+      </div>
+      <div class="menu-dots-w">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 103 103" width="100%"><path d="M103 94V9a9 9 0 0 1-9-9H9a9 9 0 0 1-9 9v85a9 9 0 0 1 9 9h85a9 9 0 0 1 9-9Z"></path><clipPath id="ticketMask" clipPathUnits="objectBoundingBox"><path d="M103 94V9a9 9 0 0 1-9-9H9a9 9 0 0 1-9 9v85a9 9 0 0 1 9 9h85a9 9 0 0 1 9-9Z" transform="scale(0.009708737864, 0.009708737864)"></path></clipPath></svg>
+      </div>
+    </div>
+    <MainPanel currentPath={currentPath} />
+    <div class="nav-shadow w-embed">
+      <svg width="341" height="103" viewBox="0 0 341 103" fill="none" xmlns="http://www.w3.org/2000/svg">{'\n'}<path fill-rule="evenodd" clip-rule="evenodd" d="M331 0H246C246 5.52344 241.523 10 236 10C230.477 10 226 5.52344 226 0H10C10 5.52344 5.52344 10 0 10V93C5.52344 93 10 97.4766 10 103H226C226 97.4766 230.477 93 236 93C241.523 93 246 97.4766 246 103H331C331 97.4766 335.477 93 341 93V10C335.477 10 331 5.52344 331 0Z" fill="black"></path>{'\n'}</svg>
+    </div>
+  </div>
+  <div class="menu-mobile-bg"></div>
+</div>

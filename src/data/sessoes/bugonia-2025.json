@@ -1,0 +1,199 @@
+{
+  "slug": "bugonia-2025",
+  "titulo": "Bugonia",
+  "categoria": "Suspense Psicológico",
+  "sessao": {
+    "data": "2026-07-18",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Bugonia",
+      "tituloOriginal": "Bugonia",
+      "ano": 2025,
+      "direcao": "Yorgos Lanthimos",
+      "duracao": 118,
+      "classificacao": "18",
+      "generos": [
+        "Suspense Psicológico",
+        "Ficção Científica",
+        "Comédia Sombria"
+      ],
+      "trailer": {
+        "youtube": "giAMydh9_4I",
+        "canal": "Universal Pictures Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "BUGONIA | Trailer Oficial (Universal Pictures) - HD"
+      },
+      "tmdb": 701387,
+      "imdb": "tt12300742"
+    }
+  ],
+  "sinais": [
+    "suspense",
+    "ficção-científica",
+    "comédia",
+    "perturbador",
+    "bizarro",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O porão copia o laboratório",
+    "leitura": "Teddy raspa a cabeça da CEO e a trata no porão como a firma dela tratou a mãe dele, posta em coma por um teste de remédio. Lanthimos ri dos dois com o mesmo gelo. O riso é oferecido a você como lugar seguro e não sobrevive à primeira conversa longa entre eles.",
+    "descricao": "Certos de que a CEO de uma farmacêutica é alienígena, um apicultor e o primo a sequestram. Lanthimos tranca a certeza deles e a calma dela num só porão.",
+    "notasHome": [
+      {
+        "rotulo": "Mãe em coma",
+        "frase": "A nave é tese. A mãe no leito é fato"
+      },
+      {
+        "rotulo": "Cabeça raspada",
+        "frase": "Teddy monta um laboratório de porão"
+      },
+      {
+        "rotulo": "Fala de CEO",
+        "frase": "Refém, ela ainda conduz a reunião"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Abelhas e um leito",
+        "frase": "Antes da nave há um leito: a mãe de Teddy, em coma após um teste de remédio. As abelhas morrem, e para ele a CEO é alienígena."
+      },
+      {
+        "rotulo": "Ensaio no porão",
+        "frase": "Cabeça raspada, creme no corpo, prazo até o eclipse. Teddy aplica em Michelle um protocolo, como a firma dela aplicou na mãe dele."
+      },
+      {
+        "rotulo": "Dois vocabulários",
+        "frase": "Ele fala em naves, ela em negociação. A comédia os trata por igual, como se o homem do porão e a chefe da firma pesassem o mesmo."
+      },
+      {
+        "rotulo": "Reunião com refém",
+        "frase": "Presa no porão, de cabeça raspada, Michelle ainda preside. O quadro frio de Lanthimos não tira dela o cargo."
+      },
+      {
+        "rotulo": "De que lado você riu",
+        "frase": "Você entra rindo de Teddy e temendo por Michelle. Aí ouve os dois falarem, e a sua simpatia troca de lugar mais de uma vez."
+      },
+      {
+        "rotulo": "O boi da lenda",
+        "frase": "O título vem de um rito antigo: abelhas que nasceriam da carcaça de um boi. Leve a imagem para a sessão e pergunte quem é o boi."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Will Tracy"
+      },
+      {
+        "funcao": "Filme original",
+        "nome": "Jang Joon-hwan"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Robbie Ryan"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Jerskin Fendrix"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Ed Guiney"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Andrew Lowe"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Yorgos Lanthimos"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Michelle",
+        "nome": "Emma Stone"
+      },
+      {
+        "funcao": "Teddy",
+        "nome": "Jesse Plemons"
+      },
+      {
+        "funcao": "Don",
+        "nome": "Aidan Delbis"
+      },
+      {
+        "funcao": "Casey",
+        "nome": "Stavros Halkias"
+      },
+      {
+        "funcao": "Sandy",
+        "nome": "Alicia Silverstone"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "jihTSrMksmU5ujqRZnc6SBFSyfq.jpg"
+    },
+    "cartaz": {
+      "tmdb": "6OeJbx1QGDwrlL8SPZeLKjLhhA7.jpg"
+    },
+    "direcao": {
+      "tmdb": "yq4qnZrCwghyUMrdRfnDtHtafZy.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "jihTSrMksmU5ujqRZnc6SBFSyfq.jpg"
+      },
+      {
+        "tmdb": "yq4qnZrCwghyUMrdRfnDtHtafZy.jpg"
+      },
+      {
+        "tmdb": "k1pjgp4LFLZTT2lUWS1fLlm0aL8.jpg"
+      },
+      {
+        "tmdb": "16EHmLgyVwTCnX05SoI240qr3iR.jpg"
+      },
+      {
+        "tmdb": "iW6ackYLGkOJ72BtSLYRrg6f0HW.jpg"
+      },
+      {
+        "tmdb": "fRRSgQObvUduBZtc2ta8nH7iEVI.jpg"
+      },
+      {
+        "tmdb": "cj2fug7Ayk0eaYOpW0npBaHXMCc.jpg"
+      },
+      {
+        "tmdb": "plna0LjGMlfQkVwWTKXajHv1VxV.jpg"
+      },
+      {
+        "tmdb": "rxB4T6M1nFH2es5SX8Ytm9Q2f3d.jpg"
+      },
+      {
+        "tmdb": "sukDxjiGCNkldfGpXePqJxNU8V8.jpg"
+      },
+      {
+        "tmdb": "uv2QglfswUynxr1I0tAxELIcwt5.jpg"
+      },
+      {
+        "tmdb": "4L9E7F3Jj0C3VXKxCMXkrqcMJF7.jpg"
+      },
+      {
+        "tmdb": "kMtUDuZnHDjiXtusgoDKL581wpq.jpg"
+      },
+      {
+        "tmdb": "e8gXUwRcwUWri3pSqiF54dr86Mx.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 1
+}

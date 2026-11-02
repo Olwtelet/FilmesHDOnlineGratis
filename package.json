@@ -1,0 +1,29 @@
+{
+  "name": "filmes-hd-online-gratis",
+  "version": "1.0.0",
+  "description": "Site de Filmes HD Online Grátis: curadoria de cinema com sessões ao vivo na sala do Discord (Astro e o runtime original da estrutura)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "node tools/serve.mjs 4322",
+    "start": "astro build && node tools/serve.mjs 4322",
+    "imagens": "node tools/imagens-sessoes.mjs",
+    "marca": "node tools/marca.mjs",
+    "og": "node tools/gerar-og.mjs",
+    "textos": "node tools/checar-textos.mjs",
+    "tutorial": "node tools/gravar-tutorial.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "astro": "^7.4.4"
+  },
+  "devDependencies": {
+    "mp4-muxer": "5.2.2",
+    "parse5": "^8.0.1",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.64.1",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.35.5"
+  },
+  "private": true
+}

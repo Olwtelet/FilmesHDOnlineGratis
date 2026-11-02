@@ -1,0 +1,199 @@
+{
+  "slug": "doctor-sleep-2019",
+  "titulo": "Doutor Sono",
+  "categoria": "Terror",
+  "sessao": {
+    "data": "2026-09-19",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Doutor Sono",
+      "tituloOriginal": "Doctor Sleep",
+      "ano": 2019,
+      "direcao": "Mike Flanagan",
+      "duracao": 152,
+      "classificacao": "16",
+      "generos": [
+        "Terror",
+        "Suspense",
+        "Fantasia Sombria"
+      ],
+      "trailer": {
+        "youtube": "oM4Jp05zI7E",
+        "canal": "Warner Bros. Pictures Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "Doutor Sono - Trailer Final"
+      },
+      "tmdb": 501170,
+      "imdb": "tt5606664"
+    }
+  ],
+  "sinais": [
+    "terror",
+    "suspense",
+    "drama",
+    "perturbador",
+    "sobrevivência",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O Overlook como recaída",
+    "leitura": "Dan Torrance conta os dias sem beber enquanto o filme conta os minutos até voltar ao Overlook. O trauma aqui se trata como vício, com reunião e padrinho, e Mike Flanagan trata Kubrick do mesmo jeito: sabe que não devia entrar naquele hotel e entra.",
+    "descricao": "Adulto e alcoólatra como o pai, Danny Torrance protege uma menina com o mesmo dom. Uma sequência de O Iluminado que trata a volta ao hotel como recaída.",
+    "notasHome": [
+      {
+        "rotulo": "Sede antiga",
+        "frase": "Trauma tratado como alcoolismo"
+      },
+      {
+        "rotulo": "Plantão final",
+        "frase": "O dom serve à cabeceira de quem morre"
+      },
+      {
+        "rotulo": "Planos refeitos",
+        "frase": "Kubrick refeito com rostos trocados"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A garrafa do pai",
+        "frase": "O menino de O Iluminado volta adulto, de ressaca, bebendo para calar o que enxerga. A herança de Jack chegou pela garrafa."
+      },
+      {
+        "rotulo": "O último quarto",
+        "frase": "Sóbrio, Dan acompanha doentes terminais até o fim. O que o fazia beber agora serve a alguém, e Flanagan aposta nisso toda a cura."
+      },
+      {
+        "rotulo": "A recaída do próprio filme",
+        "frase": "Tudo aqui ensina a ficar longe do que vicia. Mesmo assim o filme ruma para o hotel de Kubrick com a sede de quem jurou parar."
+      },
+      {
+        "rotulo": "Rostos quase iguais",
+        "frase": "Flanagan refaz planos de Kubrick com outros atores nos mesmos papéis. Os rostos quase batem, e esse quase é o fantasma novo."
+      },
+      {
+        "rotulo": "À mesa do Nó",
+        "frase": "O Verdadeiro Nó come o sofrimento de crianças. A cena do menino do beisebol não tem pressa, e quem veio pelo susto fica à mesa."
+      },
+      {
+        "rotulo": "Remédio ou bebida",
+        "frase": "Voltar ao lugar da ferida cura ou só muda a dose? No Overlook, Flanagan serve as duas respostas no mesmo copo."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Mike Flanagan"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Stephen King"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Michael Fimognari"
+      },
+      {
+        "funcao": "Música",
+        "nome": "The Newton Brothers"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Trevor Macy"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Jon Berg"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Dan Torrance",
+        "nome": "Ewan McGregor"
+      },
+      {
+        "funcao": "Rose the Hat",
+        "nome": "Rebecca Ferguson"
+      },
+      {
+        "funcao": "Abra Stone",
+        "nome": "Kyliegh Curran"
+      },
+      {
+        "funcao": "Billy Freeman",
+        "nome": "Cliff Curtis"
+      },
+      {
+        "funcao": "Crow Daddy",
+        "nome": "Zahn McClarnon"
+      },
+      {
+        "funcao": "Snakebite Andi",
+        "nome": "Emily Alyn Lind"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "gKk8Bg4qpHfniAJC3phzCZpkaIg.jpg"
+    },
+    "cartaz": {
+      "tmdb": "1Sp02vj2faWSF72OqIM9E7HuSG9.jpg"
+    },
+    "direcao": {
+      "tmdb": "A1lvRqwbLz0PIs5QyivFVzCarc6.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "gKk8Bg4qpHfniAJC3phzCZpkaIg.jpg"
+      },
+      {
+        "tmdb": "A1lvRqwbLz0PIs5QyivFVzCarc6.jpg"
+      },
+      {
+        "tmdb": "b1SGSQrWsvtThke5m7sMjCIZHNq.jpg"
+      },
+      {
+        "tmdb": "a6FfVn74RwINqRB8l3GxCLxnq9Z.jpg"
+      },
+      {
+        "tmdb": "5PeGXB91GrQtRtfdFy1Yd7WOML3.jpg"
+      },
+      {
+        "tmdb": "e0PO7FYdulmqlpQpQ0ncqCxZjwy.jpg"
+      },
+      {
+        "tmdb": "zaKRw2WVgwiUm2PacZ5Jm6q8tOJ.jpg"
+      },
+      {
+        "tmdb": "4D4Ic9N4tnwaW4x241LGb1XOi7O.jpg"
+      },
+      {
+        "tmdb": "acbxQQoOyDZ8pgz1fApZkL6w0zD.jpg"
+      },
+      {
+        "tmdb": "rOjEhPgIe6pNYgQ12Lnwl1HXD2y.jpg"
+      },
+      {
+        "tmdb": "zqzob0FEWsOrrQJq0geVcSbdYc4.jpg"
+      },
+      {
+        "tmdb": "qLP84ZGnstYOaNwOxq28599qo0E.jpg"
+      },
+      {
+        "tmdb": "gKUHNrgymzJjdtQtFLpL7iYfZQ8.jpg"
+      },
+      {
+        "tmdb": "ap6Zc5NDOfbZaMhkRDyghbGeLf0.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

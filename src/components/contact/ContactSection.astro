@@ -1,0 +1,37 @@
+---
+/**
+ * Bloco de tela cheia de /contato/ (header.contact-s): sobrancelha, título que rola com seus fios e as linhas de contato
+ * (e-mail e Discord).
+ */
+import ContactRow from './ContactRow.astro';
+import RuleLines from './RuleLines.astro';
+import type { ContactPage } from '../../data/contact';
+
+interface Props {
+  eyebrow: ContactPage['eyebrow'];
+  headline: ContactPage['headline'];
+  rows: ContactPage['rows'];
+}
+const { eyebrow, headline, rows } = Astro.props;
+---
+
+<header data-a="group" class="contact-s">
+  <div class="div-block-38">
+    <div class="ovfl-w">
+      <h1 data-a="item" class="roll-cont-eyeb parish lg is--contact">{eyebrow}</h1>
+    </div>
+    <div class="contact-main-he-w">
+      {
+        headline.map((line) => (
+          <div class="contact-h-of">
+            <div data-an="rollover" class="contact-h">{line}</div>
+          </div>
+        ))
+      }
+      <RuleLines count={headline.length + 1} />
+    </div>
+  </div>
+  <ul role="list" class="contact-li-w w-list-unstyled">
+    {rows.map((row) => <ContactRow row={row} />)}
+  </ul>
+</header>

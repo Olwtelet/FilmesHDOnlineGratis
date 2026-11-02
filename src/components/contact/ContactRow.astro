@@ -1,0 +1,22 @@
+---
+/**
+ * Uma linha da lista de /contato/ (li.contact-li-it): rótulo pequeno, valor grande e os dois fios. O bloco inteiro é o
+ * link; os externos abrem em outra aba, o que também os deixa fora do Taxi.
+ */
+import RuleLines from './RuleLines.astro';
+import type { ContactRow } from '../../data/contact';
+
+interface Props {
+  row: ContactRow;
+}
+const { row } = Astro.props;
+const externo = row.external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+---
+
+<li class="contact-li-it">
+  <a href={row.href} {...externo} class="div-block-23 w-inline-block">
+    <div data-a="alpha" class="roll-cont-eyeb parish mb-0 contact-off">{row.label}</div>
+    <div data-a="item" class="contact-lab">{row.value}</div>
+    <RuleLines count={2} />
+  </a>
+</li>

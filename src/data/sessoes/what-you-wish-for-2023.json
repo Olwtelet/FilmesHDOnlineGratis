@@ -1,0 +1,188 @@
+{
+  "slug": "what-you-wish-for-2023",
+  "titulo": "Aquilo que Você Deseja",
+  "categoria": "Suspense",
+  "sessao": {
+    "data": "2026-07-16",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Aquilo que Você Deseja",
+      "tituloOriginal": "What You Wish For",
+      "ano": 2023,
+      "direcao": "Nicholas Tomnay",
+      "duracao": 101,
+      "classificacao": "16",
+      "generos": [
+        "Suspense",
+        "Thriller",
+        "Drama"
+      ],
+      "trailer": {
+        "youtube": "E9secK4nEGI",
+        "canal": "Looke Filmes",
+        "idioma": "pt-BR dublado",
+        "tituloVideo": "Aquilo que Você Deseja | Trailer Dublado"
+      },
+      "tmdb": 1126934,
+      "imdb": "tt13638858"
+    }
+  ],
+  "sinais": [
+    "suspense",
+    "thriller",
+    "drama",
+    "crime",
+    "obsessão",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "A dívida muda de credor",
+    "leitura": "Ryan cobra um adiantamento em nome de outro homem para pagar quem ameaça sua mãe, e o suspense pede que você ache isso razoável. Você acha. Depois cada prato pesa mais nessa torcida, e a pergunta fica com quem está de avental, não com quem está à mesa.",
+    "descricao": "Na América Latina, um chef afundado em dívidas de jogo assume o nome de um colega rico. Suspense sobre o que alguém aceita servir para não voltar a dever.",
+    "notasHome": [
+      {
+        "rotulo": "O adiantamento",
+        "frase": "Paga uma dívida e assina outra"
+      },
+      {
+        "rotulo": "Carteira falsa",
+        "frase": "Outra vida, comprada pela internet"
+      },
+      {
+        "rotulo": "Atende por Jack",
+        "frase": "Chamam Ryan de Jack e você prende o ar"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Dívida de jogo",
+        "frase": "Ryan cozinha bem e não para de apostar. Chega à casa de um colega da escola de culinária devendo a gente que ameaça a mãe dele."
+      },
+      {
+        "rotulo": "Troca de credor",
+        "frase": "Virar Jack rende um adiantamento e quita a conta. Ryan só trocou de credor: o novo cobra em outra moeda, sem levantar a voz."
+      },
+      {
+        "rotulo": "A casa bonita demais",
+        "frase": "A câmera se demora na casa, na louça, na bancada, e dá vontade de morar ali. Só depois ela pede que você desconfie."
+      },
+      {
+        "rotulo": "Prato limpo, quadro limpo",
+        "frase": "A imagem tem a polidez de um bom garçom: luz calma, nenhuma pressa, nada fora do lugar. E um bom garçom não pergunta o que serve."
+      },
+      {
+        "rotulo": "Cúmplice do impostor",
+        "frase": "Toda vez que alguém chama Ryan de Jack, você quer que ele se safe. O filme anota essa vontade e vai subindo o preço dela."
+      },
+      {
+        "rotulo": "A conta por fechar",
+        "frase": "Odiar quem paga é fácil, e o filme facilita. Difícil é a pergunta que ele deixa na bancada: quem só cozinha está limpo?"
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Nicholas Tomnay"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Mateo Guzmán"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Jeff Russo & Tracie Turnbull"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Nicholas Tomnay"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Nicholas Tomnay"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Francesca Silvestri"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Kevin Chinoy"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Ryan",
+        "nome": "Nick Stahl"
+      },
+      {
+        "funcao": "Imogene",
+        "nome": "Tamsin Topolski"
+      },
+      {
+        "funcao": "Detetive Ruiz",
+        "nome": "Randy Vasquez"
+      },
+      {
+        "funcao": "Alice",
+        "nome": "Penelope Mitchell"
+      },
+      {
+        "funcao": "Jack",
+        "nome": "Brian Groh"
+      },
+      {
+        "funcao": "Maurice",
+        "nome": "Juan Carlos Messier"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "5dawGWbeskQTJsTd0QNUkmRZCSv.jpg"
+    },
+    "cartaz": {
+      "tmdb": "kekxNg1VB5wgpihPXOyN2gsN9AT.jpg"
+    },
+    "direcao": {
+      "tmdb": "xRyknWbheZjv8BPihffxPV3yHwO.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "5dawGWbeskQTJsTd0QNUkmRZCSv.jpg"
+      },
+      {
+        "tmdb": "xRyknWbheZjv8BPihffxPV3yHwO.jpg"
+      },
+      {
+        "tmdb": "1nhTeCl7hSRfnCVhxB4AADxeBEe.jpg"
+      },
+      {
+        "tmdb": "40SSJe41OHfRZp2rzdefokR4HSJ.jpg"
+      },
+      {
+        "tmdb": "qzNZWNMnNyTn8hn4o6uAQ7vXm8C.jpg"
+      },
+      {
+        "tmdb": "rvQ9ykbT9B7MUxFMm2hwzLGmXLC.jpg"
+      },
+      {
+        "tmdb": "sGAvgQDy1HShW8ja7R6pkUqJUKe.jpg"
+      },
+      {
+        "tmdb": "8lJ87AOOs9G0vay20s4Zv3LwAl.jpg"
+      },
+      {
+        "tmdb": "idEMUdiEcWnmV01Fp15BRkvK7XP.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

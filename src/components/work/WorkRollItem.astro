@@ -1,0 +1,72 @@
+---
+/**
+ * Um cartão de /programacao/ (div.work-roll-item). O app.js lê data-slider="item", troca as cópias data-alt pelas
+ * cópias data-flip="item" (GSAP Flip) ao mudar entre CENAS e CARTAZ e arrasta o cartaz img[data-roll=img]. O primeiro
+ * <a> do cartão é o destino do botão Explorar; o do aviso leva à página Sobre.
+ */
+import { filmHref, sessaoAttrs, type Film } from '../../data/films';
+import { ROUTES } from '../../data/site';
+import { WORK_CALLOUT_LABELS, WORK_EXPLORE_LABEL, WORK_POSTER_SIZES, workLinkText } from '../../data/work-page';
+import ExploreButton from '../ui/ExploreButton.astro';
+import { estadoAttrs, estadoTexto } from '../ui/estado';
+import RollCallouts from './RollCallouts.astro';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const href = film.aviso ? ROUTES.about : filmHref(film.slug);
+const { poster, session } = film;
+const rows = [
+  { label: WORK_CALLOUT_LABELS.year, value: film.year },
+  { label: WORK_CALLOUT_LABELS.session, value: film.aviso ? session.dayMonth : `${session.dayMonth} ${session.time}` },
+  { label: WORK_CALLOUT_LABELS.category, value: film.category },
+];
+const tituloEstilo = film.flipScale ? `--titulo-flip:${film.flipScale}` : undefined;
+// Células de grade do Webflow nas duas cópias das linhas (sufixo = id da página)
+const STATIC_LINE_IDS = ['cfe33', 'cfe37', 'cfe3c', 'cfe41'].map((n) => `w-node-a728b364-149b-1b12-56e3-7c4e105${n}-6053a7be`);
+const FLIP_LINE_IDS = ['8a0e', '8a12', '8a17', '8a1c'].map((n) => `w-node-_4ca783d8-d14f-7d6a-aff7-1cdc962c${n}-6053a7be`);
+---
+
+<div data-url={film.slug} data-slider="item" role="listitem" class="work-roll-item w-dyn-item" {...sessaoAttrs(film)}>
+  <a href={href} class="hidden-link">{film.aviso ? 'Sobre a sala' : workLinkText(film.title)}</a>
+  <div data-parallax="1" class="work-roll-c">
+    <div data-alt="view" class="roll-cont-item work">
+      <div class="div-block-7">
+        <div data-alt="movey" aria-hidden="true" class="roll-he-flip-w">
+          <div class="roll-cont-eyeb parish work" {...estadoAttrs(film)}>{estadoTexto(film)}</div>
+          <h2 class="roll-cont-he work" style={tituloEstilo}>{film.title}</h2>
+        </div>
+        <div data-flip="item" class="roll-he-flip-w swappable">
+          <div class="roll-cont-eyeb parish work" {...estadoAttrs(film)}>{estadoTexto(film)}</div>
+          <h2 class="roll-cont-he work" style={tituloEstilo}>{film.title}</h2>
+        </div>
+      </div>
+      <div class="div-block-8">
+        <div data-alt="hide" aria-hidden="true" class="roll-subh-flip-w">
+          <RollCallouts rows={rows} lineIds={STATIC_LINE_IDS} />
+        </div>
+        <div data-flip="item" class="roll-subh-flip-w swappable">
+          <RollCallouts rows={rows} lineIds={FLIP_LINE_IDS} />
+        </div>
+      </div>
+      <a data-hide="desktop" href={href} class="explore-link-w mobile w-inline-block">
+        <ExploreButton label={WORK_EXPLORE_LABEL} as="div" parallax={null} arrow="pair" ticket="dash-white" />
+      </a>
+    </div>
+  </div>
+  <div class="abs work-img">
+    <div class="roll-img-w work">
+      <img
+        src={poster.src}
+        loading="eager"
+        data-roll="img"
+        draggable="false"
+        alt={film.aviso ? '' : `Cartaz de ${film.title}`}
+        sizes={poster.srcset ? WORK_POSTER_SIZES : undefined}
+        srcset={poster.srcset}
+        class="image"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,200 @@
+{
+  "slug": "the-lobster-2015",
+  "titulo": "O Lagosta",
+  "categoria": "Ficção Científica",
+  "sessao": {
+    "data": "2026-10-17",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "O Lagosta",
+      "tituloOriginal": "The Lobster",
+      "ano": 2015,
+      "direcao": "Yorgos Lanthimos",
+      "duracao": 119,
+      "classificacao": "16",
+      "generos": [
+        "Ficção Científica",
+        "Comédia Sombria",
+        "Drama"
+      ],
+      "trailer": {
+        "youtube": "LTNZmOJxuAc",
+        "canal": "A24",
+        "idioma": "en",
+        "tituloVideo": "The Lobster | Official Trailer HD | A24"
+      },
+      "tmdb": 254320,
+      "imdb": "tt3464902"
+    }
+  ],
+  "sinais": [
+    "ficção-científica",
+    "distopia",
+    "comédia",
+    "drama",
+    "bizarro",
+    "cult",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Casal por defeito em comum",
+    "leitura": "Um hóspede bate o rosto para sangrar igual à pretendente, porque ali casal se forma por defeito em comum. Na floresta dos fugitivos as regras são tão duras quanto, e o amor proibido repete o critério do hotel. Yorgos Lanthimos não oferece um terceiro lado.",
+    "descricao": "Solteiros têm 45 dias num hotel para achar par ou viram animais. Na floresta dos fugitivos, só muda o regulamento.",
+    "notasHome": [
+      {
+        "rotulo": "Golpe no nariz",
+        "frase": "Sangrar de propósito para virar casal"
+      },
+      {
+        "rotulo": "Floresta regrada",
+        "frase": "Os rebeldes também têm regulamento"
+      },
+      {
+        "rotulo": "Voz de ata",
+        "frase": "Todo mundo fala como quem lê um informe"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Escolha o seu animal",
+        "frase": "O hotel pergunta em que animal você quer virar se falhar. David diz lagosta e justifica com dados, como quem preenche um perfil."
+      },
+      {
+        "rotulo": "Afinidade de cadastro",
+        "frase": "Aqui o amor é item de ficha: manqueira, língua presa, sangue no nariz. Quem não tem o defeito do outro trata de arranjar um."
+      },
+      {
+        "rotulo": "O formulário fugiu junto",
+        "frase": "Os Solitários punem flerte e dançam de fone, cada um na sua. David se apaixona ali e procura o que os dois têm em comum."
+      },
+      {
+        "rotulo": "Dicção de informe",
+        "frase": "Todos falam sem entonação, e uma narradora conta o que David sente. A ternura, quando vem, é um código de gestos: outra regra."
+      },
+      {
+        "rotulo": "O primeiro encontro",
+        "frase": "Sangrar de propósito é ridículo até você lembrar do que fingiu gostar num primeiro encontro. A piada sai do hotel e vem para cá."
+      },
+      {
+        "rotulo": "Nada a declarar",
+        "frase": "Hotel, floresta, cidade que vigia casais: Lanthimos filma os três e nenhuma saída. Gostar sem motivo não consta em nenhum deles."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Yorgos Lanthimos & Efthimis Filippou"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Thimios Bakatakis"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Yorgos Mavropsaridis"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Ceci Dempsey"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Ed Guiney"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Lee Magiday"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "David",
+        "nome": "Colin Farrell"
+      },
+      {
+        "funcao": "Mulher Míope",
+        "nome": "Rachel Weisz"
+      },
+      {
+        "funcao": "Gerente do Hotel",
+        "nome": "Olivia Colman"
+      },
+      {
+        "funcao": "Líder dos Solitários",
+        "nome": "Léa Seydoux"
+      },
+      {
+        "funcao": "Solitário Nadador",
+        "nome": "Michael Smiley"
+      },
+      {
+        "funcao": "A Camareira",
+        "nome": "Ariane Labed"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "s48CvFbWoWHhSPgz2wW9Rffw04q.jpg"
+    },
+    "cartaz": {
+      "tmdb": "cUiXj9cGE7xjAm9L23jSKPnxs8g.jpg"
+    },
+    "direcao": {
+      "tmdb": "rqMvkc7P5yYfomhYXDmteWQoUeK.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "s48CvFbWoWHhSPgz2wW9Rffw04q.jpg"
+      },
+      {
+        "tmdb": "rqMvkc7P5yYfomhYXDmteWQoUeK.jpg"
+      },
+      {
+        "tmdb": "2JmiFFiOxdTMOYgUbZThC3QsAsE.jpg"
+      },
+      {
+        "tmdb": "oLIdWgOuuB5HtpTcC9ywZrXPhVR.jpg"
+      },
+      {
+        "tmdb": "7KBufhNhLaSBmEg2s4GcmKhJkIa.jpg"
+      },
+      {
+        "tmdb": "9WSMvUBd18mK5yuOy3y06RpXu60.jpg"
+      },
+      {
+        "tmdb": "94YrKYbwLpekGRf4YI8RyBYxQYo.jpg"
+      },
+      {
+        "tmdb": "jRcexaXo41F5sJ3w8oCtej6G551.jpg"
+      },
+      {
+        "tmdb": "u4NWlK02GkIzWOcZat4Pq0ZJ8xy.jpg"
+      },
+      {
+        "tmdb": "lyRwGflXyvGLIOc6U08CRGs9J5l.jpg"
+      },
+      {
+        "tmdb": "7ZNpC4KHrR6T1Ejy2uM69clz2uK.jpg"
+      },
+      {
+        "tmdb": "744uCsFeZlr5E1XFUNJXz439Ci.jpg"
+      },
+      {
+        "tmdb": "es1u1cu7pPk0o2InwXA1BrYRD3d.jpg"
+      },
+      {
+        "tmdb": "wrrA1xzZq7z84hacSsSTbJoPaUx.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 1
+}

@@ -1,0 +1,20 @@
+---
+// Título em forma de ingresso das seções escuras da página de sessão ("GALERIA", "LEITURAS").
+interface Props {
+  label: string;
+}
+const { label } = Astro.props;
+---
+
+<div class="ticket-btn-c">
+  <div class="ticket-btn">
+    <div class="ticket-btn-w">
+      <h2 class="ticket-btn-tx">{label}</h2>
+      <div class="div-block-20"></div>
+    </div>
+    <div class="ticket-btn-ovly">
+      <div class="dot size-9"></div>
+      <div class="dot size-9"></div>
+    </div>
+  </div>
+</div>

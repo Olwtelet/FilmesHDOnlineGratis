@@ -1,0 +1,639 @@
+/* Tema "Sinal": camada visual da Fase 1 (só desta réplica, não vem do site original).
+   Carregado depois de webflow.css e main.css, sem alterar seletores, DOM nem bundles.
+   O que muda de marca ou de paleta na Fase 2 fica nos tokens do bloco 1. Detalhes em docs/TEMA.md. */
+
+/* 0. Fontes. Cada família é uma instância fixa da fonte variável (Archivo e JetBrains Mono, licença SIL OFL), com as
+      métricas verticais da fonte que substitui, para o texto ocupar as mesmas caixas. */
+@font-face { /* no lugar de Neue Brucke */
+  font-family: 'Sinal Display';
+  src: url('/assets/fonts/tema/archivo-latin-wdth-normal.woff2') format('woff2');
+  font-weight: 800; font-stretch: 77%; font-style: normal; font-display: swap;
+  ascent-override: 70%; descent-override: 20%; line-gap-override: 0%;
+}
+@font-face { /* títulos que o bundle divide em letras: um pouco mais estreitos, para quebrar nas mesmas linhas */
+  font-family: 'Sinal Titulo';
+  src: url('/assets/fonts/tema/archivo-latin-wdth-normal.woff2') format('woff2');
+  font-weight: 800; font-stretch: 75%; font-style: normal; font-display: swap;
+  ascent-override: 70%; descent-override: 20%; line-gap-override: 0%;
+}
+@font-face { /* rótulos pequenos, onde o peso 800 empasta */
+  font-family: 'Sinal Display Leve';
+  src: url('/assets/fonts/tema/archivo-latin-wdth-normal.woff2') format('woff2');
+  font-weight: 600; font-stretch: 82%; font-style: normal; font-display: swap;
+  ascent-override: 70%; descent-override: 20%; line-gap-override: 0%;
+}
+@font-face { /* no lugar de NB International; a faixa de pesos mantém o negrito do texto corrido */
+  font-family: 'Sinal Texto';
+  src: url('/assets/fonts/tema/archivo-latin-wdth-normal.woff2') format('woff2');
+  font-weight: 300 800; font-stretch: 101%; font-style: normal; font-display: swap;
+  ascent-override: 93%; descent-override: 23%; line-gap-override: 0%;
+}
+@font-face { /* no lugar de P22 Parrish Roman */
+  font-family: 'Sinal Rotulo';
+  src: url('/assets/fonts/tema/jetbrains-mono-latin-wght-normal.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+  ascent-override: 89%; descent-override: 27%; line-gap-override: 0%;
+}
+@font-face { /* reserva dos títulos enquanto a fonte não chega: o bundle divide as linhas uma vez só, ao carregar */
+  font-family: 'Sinal Reserva';
+  src: local('Arial');
+  size-adjust: 84%; ascent-override: 70%; descent-override: 20%; line-gap-override: 0%;
+}
+@font-face { /* números do menu: a mono com as métricas da Neue Brucke, para a linha manter a altura original */
+  font-family: 'Sinal Numero';
+  src: url('/assets/fonts/tema/jetbrains-mono-latin-wght-normal.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+  ascent-override: 70%; descent-override: 20%; line-gap-override: 0%;
+}
+
+/* 1. Tokens */
+:root {
+  /* base neutra, medida no Filmes HD Online Grátis */
+  --sinal-preto: #050506;
+  --sinal-superficie-1: #0a0b0c;
+  --sinal-superficie-2: #101113;
+  --sinal-superficie-3: #17191b;
+  --sinal-linha: #23262a;
+  --sinal-linha-forte: #33373c;
+  --sinal-linha-tracejada: #5c6168;        /* o tracejado precisa de mais luz para ler como linha */
+  --sinal-ingresso: #1e2124;               /* corpo dos ingressos: destaca a silhueta e os furos sobre o preto */
+  --sinal-texto: #e8e9ea;
+  --sinal-texto-2: #9ba0a6;
+  --sinal-texto-3: #868c93;
+
+  /* barras SMPTE a 75% */
+  --smpte-cinza: #c0c0c0;
+  --smpte-amarelo: #c0c000;
+  --smpte-ciano: #00c0c0;
+  --smpte-verde: #00c000;
+  --smpte-magenta: #c000c0;
+  --smpte-vermelho: #c00000;
+  --smpte-azul: #0000c0;
+
+  /* as mesmas cores, clareadas para ler sobre o preto */
+  --acento-verde: #45d145;
+  --acento-amarelo: #d6d63b;
+  --acento-ciano: #3bd6d6;
+  --acento-magenta: #e85ae8;
+  --acento-vermelho: #f0564b;
+
+  /* cada cor tem uma função; fora daqui, as barras só aparecem como faixa */
+  --cor-ativo: var(--acento-verde);        /* seleção atual, modo ligado, foco, hover principal */
+  --cor-ativo-fundo: var(--smpte-verde);   /* preenchimento com texto preto por cima */
+  --cor-navegacao: var(--acento-ciano);    /* hover de links e menus */
+  --cor-gravacao: var(--acento-vermelho);  /* play, trailer, progresso de reprodução */
+  --cor-destaque: var(--acento-amarelo);   /* rótulos de seção sobre superfície, como nas fichas de referência */
+  --contato-fundo: var(--sinal-preto);     /* a página Contact era vermelha no original */
+
+  --faixa-smpte: linear-gradient(90deg,
+    var(--smpte-cinza) 0 14.2857%, var(--smpte-amarelo) 0 28.5714%, var(--smpte-ciano) 0 42.8571%,
+    var(--smpte-verde) 0 57.1428%, var(--smpte-magenta) 0 71.4285%, var(--smpte-vermelho) 0 85.7142%,
+    var(--smpte-azul) 0 100%);
+  --faixa-altura: 3px;
+  --scan-alfa: .04;
+  --vinheta-alfa: .28;
+  --aberracao: .012em 0 rgb(0 192 192 / .35), -.012em 0 rgb(192 0 192 / .35);
+  /* ruído estático: um ladrilho pintado uma vez, sem animação; a força fica no slope do feFuncA */
+  --ruido: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='.03'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  --font-display: 'Sinal Display', Arial, sans-serif;
+  --font-display-leve: 'Sinal Display Leve', 'Sinal Display', Arial, sans-serif;
+  --font-texto: 'Sinal Texto', Arial, sans-serif;
+  --font-rotulo: 'Sinal Rotulo', ui-monospace, monospace;
+
+  /* variáveis do CSS original, apontadas para os tokens */
+  --black: var(--sinal-preto);
+  --white: var(--sinal-texto);
+  --red: var(--cor-gravacao);
+  --gold: var(--cor-ativo);
+  --gray: var(--sinal-superficie-3);
+  --white--30: color-mix(in srgb, var(--sinal-texto) 30%, transparent);
+  --col--gray: var(--sinal-texto-2);
+}
+
+/* 2. Superfícies. O original usa --white e --black tanto para texto quanto para fundo, então cada fundo é tratado aqui:
+      o que era papel creme vira superfície escura, e o que era tinta preta sobre o papel vira texto claro. */
+html, body { background-color: var(--sinal-preto); }
+
+/* dentro do antigo papel, --black passa a ser a cor do texto e das linhas; --white continua claro */
+.menu-w,
+.pw.cs .bg-white,
+.s.footer:not(.black):not(.w-variant-ff3af7bd-5bdd-e152-9111-9fa617f1f874),
+.all-work-cta-w { --black: var(--sinal-texto); }
+.pw.cs { --black: var(--sinal-texto); background-color: var(--sinal-preto); color: var(--sinal-texto); }
+.menu-w { color: var(--sinal-texto); }
+
+/* papel creme: superfícies escuras, da mais funda para a mais elevada */
+.pw.cs .bg-white, .s.fullbleed.cs-hero.bg-white { background-color: var(--sinal-superficie-1); }
+.s.footer:not(.black):not(.w-variant-ff3af7bd-5bdd-e152-9111-9fa617f1f874) { background-color: var(--sinal-superficie-2); }
+.dots-bg, .menu-dots-w, .hole-block.filler { background-color: var(--sinal-ingresso); }
+.menu-dots-w { color: var(--sinal-ingresso); }
+.menu-dots-w.vert { background-color: transparent; }
+.ticket-btn-w, .service-header { background-color: var(--sinal-ingresso); color: var(--sinal-texto); }
+/* furos feitos com bolinhas: têm a cor do fundo que aparece através do ingresso */
+.ticket-btn-ovly .dot { background-color: var(--sinal-preto); }
+.ticket-holes .dot.white { background-color: var(--sinal-superficie-1); }
+.tut-el { background-color: var(--sinal-superficie-2); }
+.contact-s { --black: var(--sinal-texto); background-color: var(--contato-fundo); color: var(--sinal-texto); }
+.w-form-done, .w-dyn-empty { background-color: var(--sinal-superficie-3); color: var(--sinal-texto); }
+.w-form-fail { background-color: var(--sinal-superficie-3); color: var(--cor-gravacao); }
+
+/* faixas pretas sobre o papel, que aqui são a superfície mais elevada */
+.credit-row-w.main,
+.roll-cont-eyeb.parish.mb-0.credit-row-title { background-color: var(--sinal-superficie-3); color: var(--sinal-texto); }
+.previousnext-text-w { background-color: var(--sinal-ingresso); color: var(--sinal-texto); }
+/* no estudo de caso, o corte entre o antigo papel e as seções pretas vira um fio neutro, para a página manter o ritmo */
+.pw.cs .section-w { box-shadow: 0 -1px 0 var(--sinal-linha-forte), 0 1px 0 var(--sinal-linha-forte); }
+
+/* véus, máscaras e sombras sobre imagem: sempre pretos, mesmo dentro do antigo papel */
+.abs.tint-dark, .abs.bg-black, .abs.video-opacity-bg, .abs-b-60, .previousnext-img-w, .video-el, .mask-abs, .clip-img-w,
+.clip-img-video-w, .tut-grad, .credit-main-row-item, .switch-bg, .section-w { background-color: var(--sinal-preto); }
+@media screen and (max-width: 991px) { .mobile-shadow { background-color: var(--sinal-preto); } }
+@media screen and (max-width: 767px) { .menu-mobile-bg, .div-block-44 { background-color: var(--sinal-preto); } }
+
+/* botões redondos: sempre claros, com ícone escuro */
+.down-arrow-btn, .down-arrow-btn.black, .down-arrow-btn.right.black.smaller { background-color: var(--sinal-texto); color: var(--sinal-preto); }
+.down-arrow-btn.red { background-color: var(--cor-gravacao); color: var(--sinal-preto); }
+
+/* linhas pontilhadas de ingresso: fundo da superfície, traço visível */
+.nav-line-w { background-color: var(--sinal-superficie-2); }
+
+/* Linhas que o original fixou em preto */
+.info-grid-w.centeer, .footer-line.last, .about-menu-bottom-bar, .aobut-menu-tx-w.has-line {
+  border-color: var(--sinal-linha-forte);
+}
+.line-menu, .nav-line-w, .div-block-20,
+.credit-grid.cols-3, .credit-grid.flex, .credit-grid.flex.small, .credit-text.dash, .credit-row-cont-w, .all-work-cta-w,
+.ft-newsletter-input-w, .rating-w, .footagemenu-text-box.left, .footagemenu-cta-w, .casemenu-bottom-w {
+  border-color: var(--sinal-linha-tracejada);
+}
+.credit-row-cont-w, .team-item { outline-color: var(--sinal-linha-tracejada); }
+.credit-row-cont-w { outline-color: transparent; } /* no original, preto sobre a faixa preta: nunca foi visível */
+.menu-w .line.black { background-color: var(--sinal-linha-forte); }
+.about-menu-tx { color: var(--sinal-texto-2); }
+@media screen and (min-width: 992px) { .about-he-sm-tx { color: var(--sinal-texto-2); } } /* abaixo disso fica sobre a imagem, na cor original */
+
+/* 3. Tipografia: o mesmo tamanho e entrelinha, com letra de transmissão */
+body, .case-menu-tx, .about-small-text-wrap, .about-small-struct { font-family: var(--font-texto); }
+h2, h4, .roll-cont-item, .roll-cont-eyeb.parish.mb-0.darker.slider, .menu-row-bot, .menu-link-list-item, .copyright-menu-text,
+.menu-film-title, .top-m-film-title, .awards-w h3, .explore-col, .footagemenu-cta-tx, .s.fullbleed.about-type-comp,
+.div-block-12, .about-xl-text, .team-he, .cs-title, .credit-grid, .footage-menu-title,
+.credit-main-tx-w, .review-he, .c, .previousnext-he, .text-block-10, .footer-line.vert, .ft-li-lk-tx, .ft-contact-li-he,
+.ft-newsletter-input, .service-row, .cta-he, .prize-he, .dc-tx, .sound-toggle-tx, .cs-footage-cont-he,
+.contact-s, ._404-he, .about-he-sm-tx, .about-he, .text-block-11, .nav-alt-tx, .c-menu-cta-tx,
+.div-block-47, .about-menu-tx, .policy-rich-tx h3, .policy-rich-tx h1, ._404-rolll-tx {
+  font-family: var(--font-display);
+}
+.roll-cont-eyeb.parish, .awards-w p, .credit-name.smallest.last { font-family: var(--font-rotulo); }
+.roll-cont-eyeb.parish.mb-0.darker.slider { font-family: var(--font-display); }
+.info-grid-tx, .text-block-6, .text-block-7, .c-menu-cta-tx, .about-menu-tx, .footagemenu-cta-tx, .menu-film-title, .menu-link.xs,
+.copyright-menu-text, .swap-tx, .dc-tx, .footage-menu-title, .text-block-10, .ticket-btn-tx, .about-he-sm-tx, .top-m-film-title, .sound-toggle-tx {
+  font-family: var(--font-display-leve);
+}
+body { font-synthesis: none; }
+/* a letra mono é um pouco mais estreita que a P22; o acréscimo devolve a largura original dos rótulos */
+.roll-cont-eyeb.parish { letter-spacing: .33em; }
+.awards-w p { letter-spacing: calc(var(--leading-md) * 1.06); }
+/* a única instrução do carrossel de críticas, em 9,6 px, com a opacidade original */
+.roll-cont-eyeb.parish.mb-0.darker { opacity: .6; }
+/* os links do rodapé ficam atenuados até o hover; sobre o escuro, 20% não se lê */
+@media screen and (min-width: 992px) { .ft-sitemap-lk { opacity: .5; } }
+.ft-sitemap-lk:hover { opacity: 1; }
+/* rótulos de seção sobre superfície */
+.roll-cont-eyeb.parish.mb-0.credit-row-title, .roll-cont-eyeb.parish.larger.is-cs { color: var(--cor-destaque); }
+.roll-cont-eyeb.parish.lg { color: var(--cor-gravacao); }
+/* títulos grandes: leve desvio de cor nas bordas, como um sinal de vídeo */
+.roll-cont-he, .cs-title, .span-move, .cta-he, .footer-of-w, .text-block-12, .text-block-13, .c { text-shadow: var(--aberracao); }
+/* números e tempo em mono, como canal e timecode */
+[data-counter=menuLinkText]:before { font-family: 'Sinal Numero', var(--font-rotulo); }
+.video_plr-text { font-family: var(--font-rotulo); }
+/* o bundle divide estes títulos em letras, que perdem o kerning: sem kerning desde o início, a linha medida é a linha final */
+.roll-cont-he { font-family: 'Sinal Titulo', 'Sinal Reserva', var(--font-display); font-kerning: none; }
+
+/* 3b. Medidas em ch. A unidade depende da largura do "0" de cada fonte, então a troca de fonte encolheria estas caixas.
+       Aqui elas ficam em em, com a proporção da fonte original (gerado por tools/theme-gen-ch.cjs). */
+:root { --ch-display: .598em; --ch-texto: .6196em; }
+.roll-cont-he { max-width: calc(8 * var(--ch-display)); }
+.roll-cont-he.work { width: calc(9 * var(--ch-display)); }
+.roll-cont-he.home { max-width: calc(12 * var(--ch-display)); }
+.roll-cont-item { width: calc(33 * var(--ch-display)); }
+.roll-cont-item.mark { width: calc(15 * var(--ch-display)); }
+.roll-cont-item.mark { height: calc(9 * var(--ch-display)); }
+.roll-cont-item.mark.first { width: calc(25 * var(--ch-display)); }
+.roll-cont-item.mark.last { width: calc(22 * var(--ch-display)); }
+.roll-cont-item.mark.last { height: calc(6 * var(--ch-display)); }
+.linecallout-list { width: calc(30 * var(--ch-display)); }
+.linecallout-list.home { width: calc(33 * var(--ch-display)); }
+.awards-w { max-width: calc(15 * var(--ch-texto)); }
+.awards-w h3 { max-width: calc(15 * var(--ch-display)); }
+.circle { width: calc(14 * var(--ch-texto)); }
+.flip-target-w { height: calc(9 * var(--ch-texto)); }
+.div-block-2 { width: calc(10 * var(--ch-texto)); }
+.div-block-9 { width: calc(11 * var(--ch-display)); }
+.team-he { max-width: calc(3 * var(--ch-display)); }
+.cs-title { max-width: calc(10 * var(--ch-display)); }
+.credit-name { width: calc(9 * var(--ch-display)); }
+.credit-name.smaller { width: calc(6 * var(--ch-display)); }
+.previousnext-text-w { width: calc(27 * var(--ch-texto)); }
+.previousnext-he { height: calc(3 * var(--ch-display)); }
+.ft-contact-li-he { margin-left: calc(1 * var(--ch-display)); }
+.heading-4 { max-width: calc(10 * var(--ch-display)); }
+.prize-coll-w { max-width: calc(23 * var(--ch-texto)); }
+.sound-toggle-tx { width: calc(10 * var(--ch-display)); }
+.about-small-text-wrap { max-width: calc(55 * var(--ch-texto)); }
+.contact-li-it { min-width: calc(50 * var(--ch-display)); }
+.video_plr-text { min-width: calc(6 * var(--ch-texto)); }
+.policy-rich-tx { max-width: calc(80 * var(--ch-texto)); }
+.policy-rich-tx p { max-width: calc(60 * var(--ch-texto)); }
+.policy-rich-tx ul { max-width: calc(60 * var(--ch-texto)); }
+@media screen and (max-width:991px) {
+  .credit-name.smaller { width: auto; }
+}
+@media screen and (max-width:767px) {
+  .linecallout-list.home { width: auto; }
+  .credit-name.smaller { width: 100%; }
+  .previousnext-text-w { width: 100%; }
+  .prize-coll-w { max-width: calc(32 * var(--ch-texto)); }
+  .contact-li-it { min-width: 100%; }
+}
+@media screen and (max-width:479px) {
+  .roll-cont-he.home { width: calc(9 * var(--ch-display)); }
+  .roll-cont-he.home { max-width: calc(13 * var(--ch-display)); }
+  .roll-cont-item { width: 100%; }
+  .credit-name.smaller { width: 100%; }
+  .prize-coll-w { max-width: calc(24 * var(--ch-texto)); }
+}
+
+/* 3c. Ajustes pequenos onde a troca de fonte mudaria o número de linhas (depois do 3b, que também define max-width) */
+.prize-he, .credit-name:not(.smaller) { letter-spacing: -.012em; }
+.cs-title { max-width: calc(9.8 * var(--ch-display)); }
+.team-bio { letter-spacing: -.012em; }
+@media screen and (max-width: 479px) { .team-bio { letter-spacing: .006em; } }
+.case-menu-tx { letter-spacing: 0; }
+.awards-w p { max-width: 21.2em; }
+/* o 3b repete a margem em em; esta regra do original zerava a margem no celular e precisa continuar vencendo */
+@media screen and (max-width: 479px) { .ft-contact-li-he:where(.w-variant-ff3af7bd-5bdd-e152-9111-9fa617f1f874) { margin-left: 0; } }
+
+/* 3d. Títulos e acentos do português. As letras e caixas de recorte foram feitas para títulos ingleses curtos. */
+
+/* Título da home. A caixa sai da coluna de 33ch, centrada sobre ela: cabe uma palavra de 10 letras. */
+@media (min-width: 768px) { .roll-cont-he.home { width: 29rem; max-width: 29rem; } }
+@media (min-width: 768px) and (max-width: 991px) { .roll-cont-he.home { font-size: 4.6rem; width: 26rem; max-width: 26rem; } }
+@media (max-width: 479px) { .roll-cont-he.home { width: 100%; max-width: 100%; } }
+/* Depois do split cada letra é um inline-block: sem isto, a palavra quebra entre letras. */
+.split-line-wrapper .split-line-move { white-space: nowrap; }
+
+/* A caixa de recorte de cada letra cresce só para o recorte, com margem negativa: a linha não muda.
+   O .079em desfaz o efeito do y:18% do bundle, que passa a medir a caixa maior. */
+.split-line-move > .split-rollover { padding: .2em .05em .24em; margin: -.2em -.05em -.24em; }
+.split-line-move .originalText2, .split-line-move .cloneText2 { padding-block: .2em .24em; }
+.split-line-move .originalText2 { margin-block: -.2em -.24em; position: relative; top: -.079em; }
+.split-line-move .cloneText2 { top: calc(100% - .079em); }
+
+/* O mesmo para as outras caixas que recortam texto */
+.footer-of-w, .footer-of-w.last { height: 1.12em; padding: .3em .06em .2em; margin: -.22em -.06em -.2em; }
+.about-he .span-clip { display: block; padding-block: .28em .22em; margin-block: -.28em -.22em; }
+._404-line { display: flow-root; }
+._404-line .ovfl-hidden { height: calc(1.5em + 18px); padding-top: calc(.15em + 10px); padding-bottom: 8px; margin-block: -10px -8px; }
+.menu-text-title-w { padding-top: 4px; margin-top: -4px; }
+
+/* Cartão "próximo" no celular: a caixa de texto cresce e a imagem cede, em vez de o título invadir o CTA */
+@media (max-width: 767px) { .previousnext-text-w { height: auto; min-height: 42%; } .previousnext-he { height: auto; } }
+/* Linha de baixo do ingresso: cabe um gênero de 20 letras */
+.info-grid-tx { padding-left: .5rem; padding-right: .5rem; }
+/* Título das páginas legais no celular: PRIVACIDADE cabe */
+@media (max-width: 479px) { .policy-rich-tx h1 { font-size: 13vw; } }
+/* Barra do modo CENAS na Programação: títulos longos ficam dentro da janela (--titulo-flip vem do dado) */
+.roll-cont-item.mark.first .roll-cont-he.work { width: 16.1rem; font-size: calc(var(--text-h3) * var(--titulo-flip, 1)); }
+
+/* 4. Botões em forma de ingresso (SVG com cores fixas no HTML e no main.css) */
+[data-explore=bg] { stroke: var(--sinal-texto); } /* o preenchimento é transparente no desktop e claro no celular, como no original */
+[data-explore=line] { stroke: var(--sinal-texto); }
+[data-wf--explore-btn--variant=white] [data-explore=line] { stroke: var(--sinal-preto); }
+@media (min-width: 767px) {
+  [data-btn=explore]:hover [data-explore=bg] { fill: var(--cor-ativo-fundo); stroke: var(--cor-ativo-fundo); }
+  [data-btn=explore]:hover [data-explore=line] { stroke: var(--sinal-preto); }
+  [data-btn=explore]:hover [data-after], [data-btn=explore]:hover [data-x] { color: var(--sinal-preto); }
+  [data-tuto=true]:hover [data-explore=line] { stroke: var(--sinal-preto); }
+  [data-tuto=true]:hover [data-x], [data-tuto=true]:hover [data-after] { color: var(--sinal-preto); }
+  [data-explore=close] { transition: fill var(--duration) var(--ease); }
+  [data-tuto=true]:hover [data-explore=close] { fill: var(--cor-ativo-fundo); }
+  [data-wf--explore-btn--variant=white] { color: var(--sinal-preto); }
+  [data-wf--explore-btn--variant=white] [data-explore=bg] { fill: var(--sinal-texto); }
+  [data-wf--explore-btn--variant=white]:hover [data-explore=bg] { fill: var(--cor-ativo-fundo); }
+}
+@media (max-width: 767px) {
+  [data-btn=explore] .abs svg, [data-btn=explore] .abs svg path[data-animatedash] { fill: var(--sinal-texto); }
+  [data-btn=explore] .abs svg { stroke: var(--sinal-preto); }
+}
+[data-hover=bggrow]:before { background-color: var(--sinal-linha-forte); }
+.menu-film-item:hover .menu-film-title, .menu-link:hover, .ft-small-lk:hover, .ft-sitemap-lk:hover .ft-li-lk-tx { color: var(--cor-navegacao); }
+.menu-film-item .dot { background-color: var(--cor-ativo); }
+.menu-film-direct-link:hover svg path { fill: var(--sinal-preto); }
+.menu-film-direct-link:hover svg path:first-of-type { fill: var(--cor-navegacao); }
+[data-footagemenu=w]:hover { color: var(--sinal-preto); }
+[data-footagemenu=w]:hover [data-footagemenu=bg], .footagemenu-cta-w:hover [data-footagemenu=bg] { fill: var(--cor-navegacao) !important; }
+.all-work-cta-w:hover { background-color: var(--sinal-superficie-3); outline: 1px solid var(--cor-ativo); outline-offset: -1px; }
+.all-work-cta-w:hover .roll-cont-eyeb, .all-work-cta-w:hover .previousnext-he, .all-work-cta-w:hover .text-block-10 { color: var(--cor-ativo); }
+.review-slide-cont:hover .review-he, .review-slide-cont:hover .roll-cont-eyeb { color: var(--cor-gravacao); } /* o original usa red literal, que o token não alcança */
+.trig-bg svg path { fill: var(--sinal-ingresso); }
+.ft-newsletter-input { color: var(--sinal-texto); caret-color: var(--cor-ativo); }
+.ft-newsletter-input::placeholder { color: var(--sinal-texto-2); }
+.ft-newsletter-input-w:has(.ft-newsletter-input:focus-visible) { outline: 2px solid var(--cor-ativo); outline-offset: 2px; }
+
+/* 5. Work */
+.v-lines-marker { background-color: var(--sinal-preto); border-color: var(--cor-ativo); }
+.work-vert-line { background-image: linear-gradient(var(--sinal-preto), var(--cor-ativo) 55%, var(--sinal-preto) 92%); }
+
+/* 6. Marcas de sinal, que não ocupam espaço no layout */
+body::before { /* faixa de barras no topo, em todas as páginas */
+  content: ""; position: fixed; inset: 0 0 auto; height: var(--faixa-altura);
+  background: var(--faixa-smpte); z-index: 2147483646; pointer-events: none;
+}
+body::after { /* scanlines e vinheta de monitor */
+  content: ""; position: fixed; inset: 0; z-index: 2147483645; pointer-events: none;
+  background:
+    repeating-linear-gradient(rgb(0 0 0 / var(--scan-alfa)) 0 1px, transparent 1px 3px),
+    radial-gradient(118% 88% at 50% 50%, transparent 56%, rgb(0 0 0 / var(--vinheta-alfa)) 100%),
+    var(--ruido);
+}
+.s.footer { position: relative; }
+.s.footer::before { /* separador do rodapé */
+  content: ""; position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); pointer-events: none;
+}
+
+/* 7. Abertura sem vídeo: barras em transform e a máscara do símbolo, sem decodificador nenhum. Por dentro da máscara,
+      o mesmo pente em branco sobre preto, com o mesmo tempo: dentro é sempre o inverso exato de fora. O ENTER continua
+      vindo do timer do app.js; o atraso inicial mantém o botão no mesmo ponto do ritmo. */
+.preloader-w { background-color: #000; }
+.preloader-w .preloader-video { display: none; } /* vazio, só porque o app.js exige o elemento */
+.preloader-cont { z-index: 1; }
+.abertura-vista .abertura { display: none; }
+.abertura { position: absolute; inset: 0; overflow: hidden; contain: strict;
+  --p: 4.6875vw; --s: min(28.2vw, 64svh); --atraso: .33s; --ini: .01s; --fim: 2.56s; --rev: .74s; --revd: .5s; --cresce0: .62s; --cresce: 1.83s; --nome: 2.5s;
+  --janela: 26vw;
+  animation: ab-entra .1s linear var(--atraso) both; }
+@media only screen and (min-width: 1800px) { .abertura { --p: 3.125vw; --s: min(19.2vw, 64svh); --janela: 18vw; } }
+@media only screen and (max-width: 991px) { .abertura { --p: 5.9vw; --s: min(59vw, 74svh); --fim: 2.13s; --rev: .6s; --revd: .42s; --cresce0: .5s; --cresce: 1.41s; --nome: 2.2s; --janela: 54vw; } }
+@media only screen and (max-height: 500px) { .abertura { --s: 42svh; --janela: 50svh; } } /* tela baixa: símbolo e nome ficam acima do botão */
+.ab-carta { position: absolute; inset: 0; background-repeat: no-repeat;
+  background-image: linear-gradient(#fff, #fff), var(--faixa-smpte),
+    linear-gradient(90deg, var(--smpte-azul) 0 14.2857%, #131313 0 28.5714%, var(--smpte-magenta) 0 42.8571%, #131313 0 57.1428%, var(--smpte-ciano) 0 71.4285%, #131313 0 85.7142%, var(--smpte-cinza) 0 100%),
+    linear-gradient(90deg, #00214c 0 17.86%, #fff 0 35.71%, #32006a 0 53.57%, #131313 0 71.43%, #090909 0 76.2%, #131313 0 80.95%, #1d1d1d 0 85.7%, #131313 0 100%);
+  background-size: var(--janela) var(--janela), 100% 67%, 100% 8%, 100% 25%;
+  background-position: center, 0 0, 0 72.83%, 0 100%; }
+.ab-comb { position: absolute; inset: 0; display: flex; justify-content: center; }
+.ab-comb i { display: block; flex: none; width: var(--p); height: 100%; animation: ab-barra var(--fim) cubic-bezier(.37,0,.63,1) calc(var(--atraso) + var(--ini)) both; }
+.ab-fora i { background: #000; }
+.ab-dentro { background: #000; animation: ab-descresce var(--cresce) linear calc(var(--atraso) + var(--cresce0)) both; }
+.ab-dentro i { background: #fff; }
+.ab-simbolo { position: absolute; inset: 0;
+  -webkit-mask: url(/assets/img/site/simbolo-mascara.webp) center / var(--s) var(--s) no-repeat;
+  mask: url(/assets/img/site/simbolo-mascara.webp) center / var(--s) var(--s) no-repeat;
+  animation: ab-cresce var(--cresce) linear calc(var(--atraso) + var(--cresce0)) both; }
+.ab-janela { position: absolute; inset: 0; overflow: hidden; animation: ab-janela var(--revd) linear calc(var(--atraso) + var(--rev)) both; }
+.ab-contra { position: absolute; inset: 0; animation: ab-contra var(--revd) linear calc(var(--atraso) + var(--rev)) both; }
+.ab-nome { position: absolute; left: 0; right: 0; top: calc(50% + var(--s) * .39 + 1.5vw); text-align: center; white-space: nowrap;
+  font-family: var(--font-rotulo); font-size: max(.9vw, 10px); letter-spacing: .42em; text-indent: .42em; color: #fff; text-transform: uppercase;
+  animation: ab-nome .45s ease-out calc(var(--atraso) + var(--nome)) both; }
+@keyframes ab-entra { from { opacity: 0 } to { opacity: 1 } }
+@keyframes ab-barra { from { transform: scaleX(0) } to { transform: scaleX(1.02) } }
+@keyframes ab-janela { from { transform: translateX(calc(-50% - var(--s) * .32)) } to { transform: translateX(calc(-50% + var(--s) * .32)) } }
+@keyframes ab-contra { from { transform: translateX(calc(50% + var(--s) * .32)) } to { transform: translateX(calc(50% - var(--s) * .32)) } }
+@keyframes ab-cresce { 0% { transform: scale(.9) } 25% { transform: scale(.94) } 50% { transform: scale(.97) } 75% { transform: scale(.99) } 100% { transform: scale(1) } }
+@keyframes ab-descresce { 0% { transform: scale(1.11111) } 25% { transform: scale(1.06383) } 50% { transform: scale(1.03093) } 75% { transform: scale(1.0101) } 100% { transform: scale(1) } }
+@keyframes ab-nome { from { opacity: 0; filter: blur(10px) } to { opacity: 1; filter: blur(0) } }
+@media (prefers-reduced-motion: reduce) {
+  .ab-carta, .ab-fora, .ab-janela { display: none; }
+  .ab-simbolo { background: #fff; transform: none; animation: ab-entra .4s linear both; }
+  .ab-nome { animation: ab-entra .4s linear both; }
+}
+
+/* 7b. Fase 2: home, Programação e menu */
+
+/* Notas da home no celular: o overflow:clip original cortava o til e o cedilha dos rótulos ("PLANTAO") */
+.awards-w.mobile { padding-top: 4px; margin-top: -4px; }
+
+/* Linhas de direção, ano, gênero: as fileiras tinham a altura das maiúsculas, e o Ç e os acentos invadiam a vizinha */
+.linecallout-item.home, .roll-cont-item .linecallout-list.work .linecallout-item { height: 1em; }
+
+/* Painel de filme: os cartões ficam na mesma célula da grade, e a altura vem do mais alto, não do primeiro da lista.
+   O cartão invisível precisa de visibility: só com opacity, o último da pilha recebe o clique no corpo do cartão que
+   aparece, e o carrossel salta para ele. O autoAlpha do bundle escreve visibility em linha a partir da primeira troca. */
+.menu-footage-w { display: grid; }
+.menu-footage-item { grid-area: 1 / 1; position: relative; inset: auto; visibility: hidden; }
+.menu-footage-item:first-child { visibility: visible; }
+
+/* Painel pequeno: o filtro fica acima da lista, e a lista rola dentro da janela */
+.menu-filtro-w { padding: .55rem .8rem .5rem; }
+.menu-filtro {
+  display: block; width: 100%; height: 1.5em; margin: 0; padding: 0;
+  border: 0; border-radius: 0; background: none; outline-offset: .3em; resize: none; overflow: hidden; white-space: nowrap;
+  color: var(--sinal-texto); caret-color: var(--cor-ativo);
+  font-family: var(--font-rotulo); font-size: .6rem; line-height: 1.5em; letter-spacing: .2em; text-transform: uppercase;
+}
+.menu-filtro::placeholder { color: var(--sinal-texto-2); opacity: 1; }
+/* fechado, o painel só tem altura zero: sem isto o Tab cairia no campo escondido */
+.menu-w:not(:has(#smallpanel:checked)) .menu-filtro { visibility: hidden; }
+/* 100svh menos o menu (135 px), o filtro (32 px) e uma folga: nunca passa da janela */
+.menu-films-w {
+  max-height: calc(100svh - 187px); overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: var(--sinal-linha-tracejada) transparent;
+}
+.menu-film-oculta { display: none; }
+.menu-film-title.menu { text-align: left; } /* o botão centraliza: um título de duas linhas ficaria fora da coluna */
+.menu-film-item-w { max-width: calc(100% - 1.9rem); } /* título longo quebra antes do link direto, que aparece no hover */
+/* a primeira linha já não encosta no topo recortado do ingresso */
+.menu-film:first-of-type { clip-path: none; }
+.menu-filtro-vazio {
+  padding: .9rem .8rem 1.2rem;
+  color: var(--sinal-texto-2); font-family: var(--font-rotulo); font-size: .6rem; line-height: 1.3em; letter-spacing: .2em; text-transform: uppercase;
+}
+
+/* 7c. Fase 2: páginas de sessão e trailer */
+
+/* Fios do herói: linhas + 1. O important vence o display:none inline que o bundle põe no terceiro quando o slug é curto. */
+[data-cs=lines]:not([data-linhas="1"]) > .line:nth-child(3) { display: block !important; }
+[data-cs=lines][data-linhas="1"] > .line:nth-child(3) { display: none !important; }
+/* Título: a entrelinha de .7em punha o til dentro da linha de cima e a cedilha abaixo do fio. Na fonte, os acentos vão a
+   .88em acima da base e a cedilha a .21em abaixo: com 1.11, cada linha cabe inteira entre dois fios. O fio sobe .09em até
+   ficar logo abaixo da cedilha. No desktop, títulos de 3 linhas ou mais diminuem para não tomar o lugar da imagem; o
+   max-width é em em, então as quebras não mudam. */
+.cs-text-w { --cs-titulo: 6.1rem; }
+@media screen and (min-width: 992px) {
+  .cs-text-w:has([data-linhas="3"]) { --cs-titulo: 4.9rem; }
+  .cs-text-w:has([data-linhas="4"]) { --cs-titulo: 4.3rem; }
+  .cs-text-w:has([data-linhas="5"]) { --cs-titulo: 3.7rem; }
+}
+@media screen and (max-width: 991px) { .cs-text-w { --cs-titulo: 4.4rem; } }
+@media screen and (max-width: 767px) { .cs-text-w { --cs-titulo: 4.1rem; } }
+@media screen and (max-width: 479px) { .cs-text-w { --cs-titulo: 3rem; } }
+.cs-title { font-size: var(--cs-titulo); line-height: 1.11; }
+.abs.cs-hero-lines.case-he { transform: translateY(calc(var(--cs-titulo) * -.09)); }
+
+/* Créditos: uma palavra maior que a caixa em ch transbordava só para a direita e tirava o nome do centro */
+.credit-text .credit-name { min-width: min-content; }
+/* a entrelinha de .8em punha o acento dentro da linha de cima, nos nomes e no título da próxima sessão */
+.credit-name, .previousnext-he { line-height: .92em; }
+@media screen and (min-width: 992px) { /* a linha principal tem 2 colunas e 3 ou 4 nomes */
+  .credit-row-w.main .credit-text:nth-child(even) { border-right-style: none; }
+  .credit-row-w.main .credit-text:nth-child(n+3) { border-top: 1px dashed var(--white); }
+  .credit-row-w.main .credit-text:last-child:nth-child(odd) { grid-column: 1 / -1; border-right-style: none; }
+}
+
+/* Leituras: até 130 caracteres no corpo original chegavam às barras vermelhas, fixas a 25% do cartão */
+@media screen and (min-width: 480px) { .review-he { font-size: 2.1rem; } }
+
+/* Ficha da sessão: o título ocupa o respiro de cima da seção, sem mudar a altura */
+.s.prizes { flex-direction: column; }
+.s.prizes > .ticket-btn-c { margin-top: -5.5rem; margin-bottom: 3.25rem; }
+/* o letreiro é texto claro sobre uma cena qualquer, que pode ser clara: uma coluna escura entre a imagem e o texto */
+.prize-w::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, transparent 18%, rgb(0 0 0 / .78) 36% 64%, transparent 82%);
+}
+@media screen and (max-width: 767px) { .prize-w::after { background: rgb(0 0 0 / .62); } }
+
+/* Na sala: o webflow.css esconde todo <a> por padrão */
+.investor-rt h5 { margin-top: .4rem; }
+.investor-rt a {
+  display: inline-block; margin-top: 1rem; padding: .7rem 1.1rem; color: var(--sinal-texto);
+  border: 1px dashed var(--sinal-linha-tracejada); border-radius: var(--rounded-xs);
+  transition: color var(--duration) var(--ease), background-color var(--duration) var(--ease);
+}
+.investor-rt a:hover { color: var(--sinal-preto); background-color: var(--cor-ativo-fundo); border-color: var(--cor-ativo-fundo); }
+
+/* Trailer: o player do YouTube, com os controles dele, sem nada por cima. A barra do bundle fica no DOM porque o app.js a lê. */
+[data-youtube] .video-bar:not(.top) { display: none; }
+[data-youtube] video[data-videoplayer='video'] { display: none; }
+[data-youtube] .video-mask-w { position: relative; background: #000; } /* a moldura do filme fica como passe-partout preto */
+/* inset de 3%: na moldura ondulada, 2% é o mínimo para nenhum pixel do player ser cortado */
+iframe.yt-trailer { position: absolute; inset: 3%; width: 94%; height: 94%; border: 0; pointer-events: auto !important; }
+[data-youtube] .video-bar.top { inset: 0 auto auto 100%; width: auto; height: auto; padding: 0 0 0 .75rem; } /* fechar fora do player */
+[data-youtube] .close-btn { top: 0; }
+.video-player-dialog:focus, .video-player-dialog.open:focus { outline: none; }
+body:has(.video-player-dialog.open)::after { display: none; } /* scanlines e vinheta ficariam na frente do player */
+/* sair pelo logo deixaria o Lenis parado; a área de clique dele é um filho com pointer-events próprio */
+body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialog.open) .nav-link.logo * { pointer-events: none !important; }
+/* o texto do cartão de direção tem z-index próprio e ficaria acima do escurecimento, inclusive para o clique que fecha */
+#second:has(.video-player-dialog.open) { z-index: 3; }
+
+/* Sessão dupla: os dois títulos, fora do retângulo do player */
+.trailer-opcoes { position: absolute; z-index: 3; display: flex; gap: .5rem; }
+.trailer-opcao {
+  flex: 1 1 0; min-height: 2.75rem; padding: .55rem .7rem; color: var(--sinal-texto); text-align: left; text-transform: uppercase;
+  font-family: var(--font-rotulo); font-size: .625rem; line-height: 1.2; letter-spacing: .08em;
+  background-color: #0000004d; border: 1px solid var(--white--30); border-radius: var(--rounded-xs); cursor: pointer;
+  transition: color var(--duration) var(--ease), background-color var(--duration) var(--ease);
+}
+.trailer-opcao:hover { color: var(--cor-navegacao); }
+.trailer-opcao[aria-pressed="true"] { color: var(--sinal-preto); background-color: var(--cor-ativo-fundo); border-color: var(--cor-ativo-fundo); }
+@media screen and (min-width: 1200px) { /* na margem esquerda, à altura do botão de fechar */
+  .trailer-opcoes { top: 0; right: 100%; flex-direction: column; width: calc(10vw - 1.5rem); margin-right: .75rem; }
+  .trailer-opcao { flex: none; }
+}
+@media screen and (max-width: 1199px) { /* abaixo do player */
+  .trailer-opcoes { top: 100%; left: 0; right: 0; padding-top: .75rem; }
+}
+@media screen and (max-width: 767px) {
+  /* celular: sem máscara, o player ocupa a largura e nunca fica abaixo dos 200 px que o YouTube pede */
+  [data-youtube] .video-mask-w { -webkit-clip-path: none; clip-path: none; background: transparent; }
+  iframe.yt-trailer { inset: auto; left: calc(var(--sgx) * -1); top: 50%; transform: translateY(-50%); width: 100vw; height: max(200px, 56.25vw); }
+  [data-youtube] .video-bar.top { inset: auto 0 calc(50% + max(100px, 28.125vw)) auto; padding: 0 0 .75rem 0; }
+  .trailer-opcoes { top: calc(50% + max(100px, 28.125vw)); }
+}
+
+/* 7d. Fase 2: marca. O símbolo é sempre a mesma máscara (tools/marca.mjs), pintada na cor do texto. A forma ocupa 78% da
+       altura do arquivo: 128,3% faz a altura da forma igualar a da caixa. */
+.marca-simbolo { display: block; background-color: currentColor;
+  -webkit-mask: url(/assets/img/site/simbolo-mascara-256.webp) center / auto 128.3% no-repeat;
+  mask: url(/assets/img/site/simbolo-mascara-256.webp) center / auto 128.3% no-repeat;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; } /* é fundo: sem isto, a impressão apagaria o símbolo */
+.logo-footer.marca-simbolo { aspect-ratio: 89 / 88; }
+/* Logo do menu: a altura é a do antigo SVG (viewBox 131 x 63, com 6,15rem, 5,125rem e 75 px de largura), e --u é uma
+   unidade daquele viewBox. O nome pede cerca de 12% a mais de largura; abaixo de 8,5 px ele deixa de se ler. O filho em
+   difference fica isolado na caixa, como o path dentro do svg; no celular é a caixa inteira que mescla. */
+.marca-nav { --u: calc(6.15rem / 131); position: relative; display: flex; align-items: center; gap: calc(var(--u) * 7);
+  height: calc(var(--u) * 63); isolation: isolate; }
+.marca-nav > * { mix-blend-mode: difference; }
+.marca-nav .marca-simbolo { flex: none; height: 100%; aspect-ratio: .8; }
+.marca-nome { flex: none; font-family: var(--font-display-leve); font-size: max(8.5px, calc(var(--u) * 13)); line-height: 1.12; letter-spacing: .03em; white-space: nowrap; }
+@media screen and (max-width: 767px) { .marca-nav { --u: calc(5.125rem / 131); } }
+@media screen and (max-width: 479px) { .marca-nav { --u: calc(75px / 131); mix-blend-mode: difference; } }
+/* Tutorial: guarda a altura da caixa antes de o pôster e o vídeo carregarem */
+.video-2 { aspect-ratio: 1668 / 1080; object-fit: cover; }
+/* com entrelinha 1em, o acento de maiúscula sai da linha: a janela o cortaria na primeira linha e o texto em espera
+   apareceria como um ponto sob o atual */
+.tut-text { line-height: 1.2em; }
+
+/* 7e. Fase 2: sobre, contato, rodapé e páginas legais */
+
+/* Sobre: o fundo de reserva da grade é um desenho com as palavras "Background Image", visível enquanto a foto carrega */
+.about-grid-item { background-image: none; }
+
+/* Sobre, linhas pequenas do herói: um respiro para o acento da segunda linha não encostar na primeira */
+.about-he-of-w + .about-he-of-w { margin-top: .16em; }
+
+/* Rodapé, coluna do RSS: campo só de leitura no lugar do e-mail. O .w-input pinta campos readonly de cinza. */
+.ft-newsletter-input[readonly] { background-color: transparent; cursor: text; text-overflow: ellipsis; font-size: .72rem; letter-spacing: 0; padding-left: 1rem; padding-right: 0; }
+.ft-newsletter-btn { position: relative; flex: none; }
+.ft-feed-copiar { position: absolute; inset: 0; padding: 0; border: 0; border-radius: 50%; background: none; color: inherit; cursor: pointer; }
+.ft-newsletter-w .form-block { margin-bottom: .6rem; }
+.ft-newsletter-w .w-form-done, .ft-newsletter-w .w-form-fail { box-sizing: border-box; width: 0; min-width: 100%; margin-top: .6rem; padding: .6rem .9rem; border-radius: .5rem; font-size: .75rem; line-height: 1.25; text-align: left; }
+.ft-feed-lk { display: inline-flex; align-items: center; min-height: 2.75rem; color: inherit; text-decoration: underline; text-underline-offset: .3em; }
+.ft-feed-lk:hover, .ft-credito-lk:hover { color: var(--cor-navegacao); }
+/* Crédito da curadoria, em linha própria sob o copyright. O webflow.css esconde todo <a> sem classe de exibição. */
+.ft-credito { display: block; margin-top: .25rem; }
+.ft-credito-lk { display: inline; color: inherit; text-decoration: underline; text-underline-offset: .3em; }
+
+/* Páginas legais: links dentro da frase, com a cor do texto e sublinhados */
+.policy-rich-tx a { display: inline; color: inherit; text-decoration: underline; text-underline-offset: .2em; overflow-wrap: anywhere; }
+.policy-rich-tx a:hover { color: var(--cor-navegacao); }
+.policy-rich-tx p + p { margin-top: .8em; }
+
+/* Contato no celular: o endereço de e-mail ocupa o rótulo pequeno e só cabe com menos espaço entre as letras */
+@media (max-width: 479px) { .roll-cont-eyeb.parish.mb-0.contact-off { letter-spacing: .15em; } }
+
+/* Dígitos da 404: em caixas mais altas que o texto, a cópia que rola fica aparecendo no topo. O recorte fica na caixa do dígito. */
+._404-rolll-tx .split-rollover { clip-path: inset(-.08em -.1em); }
+
+/* 404 em notebook de tela baixa: os dígitos medem pela largura e empurram o botão para cima da barra de baixo */
+@media (min-width: 992px) and (max-height: 800px) { ._404-rolll-tx { font-size: 54vh; } }
+
+/* 404 no celular e no tablet: os 93vh do bloco mais a barra de baixo passam da tela, e o .pw recorta o que sobra, com os
+   links legais junto. O bloco cede a altura, e a página só cresce se a tela for curta demais. */
+@media (max-width: 991px) {
+  .pw.h-screen[data-page="404"] { display: flex; flex-direction: column; height: auto; min-height: 100svh; }
+  .pw.h-screen[data-page="404"] .s._404 { flex: 1 0 auto; height: auto; }
+  .s.footer.black .col-1-3.left { top: 0; }
+}
+
+/* 8. Foco e seleção */
+:focus-visible { outline: 2px solid var(--cor-ativo); outline-offset: 2px; }
+/* os gatilhos dos menus são inputs invisíveis: o anel vai para o elemento que os contém */
+.checkbox-w:has(.menu-input:focus-visible), .mmenu-col.btn:has(> .menu-input:focus-visible) { outline: 2px solid var(--cor-ativo); outline-offset: -2px; }
+/* links atenuados precisam do anel inteiro; na lista de filmes, o anel fica dentro da linha */
+.ft-sitemap-lk:focus-visible { opacity: 1; }
+.footer-line.last:has(:focus-visible) { opacity: 1; }
+.menu-film-item:focus-visible { outline-offset: -2px; }
+.menu-film-item .menu-film-direct-link:focus-visible { opacity: 1; transform: scale(1); outline-offset: -2px; }
+::selection { background: var(--cor-ativo-fundo); color: var(--sinal-preto); }
+
+/* O bundle escurece o logo nas seções que eram brancas; aqui todas são escuras, então ele fica sempre claro */
+.nav-link.logo, .marca-nav { color: var(--sinal-texto) !important; }
+/* com o trailer aberto, o logo recua quando o bundle o escurece, como no original */
+body:has(.video-player-dialog.open) .nav-link.logo[style*="black"], body:has(.video-player-dialog.open) .nav-link.logo[style*="black"] .marca-nav { color: var(--sinal-linha-forte) !important; transition: color .5s .2s; }
+/* Texto sobre a imagem do topo dos estudos de caso, que fica dentro de uma superfície invertida */
+.work-back-btn, .work-back-btn .roll-cont-eyeb { color: var(--sinal-texto); }
+
+/* 9. Impressão: sem as marcas de monitor, e tinta sobre papel, com ou sem os gráficos de fundo */
+@media print {
+  body::before, body::after, .s.footer::before, .abertura { display: none; }
+  :root {
+    --aberracao: none;
+    --sinal-preto: #fff; --sinal-superficie-1: #fff; --sinal-superficie-2: #fff; --sinal-superficie-3: #fff; --sinal-ingresso: #fff; --contato-fundo: #fff;
+    --sinal-linha: #999; --sinal-linha-forte: #666; --sinal-linha-tracejada: #666;
+    --sinal-texto: #000; --sinal-texto-2: #333; --sinal-texto-3: #333;
+    --cor-destaque: #000; --cor-gravacao: #c00000; --cor-ativo: #000; --cor-navegacao: #000;
+  }
+}

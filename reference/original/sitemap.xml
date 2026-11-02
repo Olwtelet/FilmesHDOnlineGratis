@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>
+            https://siena.film
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://siena.film/work
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://siena.film/about
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://siena.film/contact
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://siena.film/terms
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://siena.film/cookies
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://siena.film/privacy
+        </loc>
+    </url>
+</urlset>

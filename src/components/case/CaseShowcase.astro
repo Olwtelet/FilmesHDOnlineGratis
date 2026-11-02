@@ -1,0 +1,17 @@
+---
+// div.section-w: GALERIA e LEITURAS. O selo DIRECTOR'S CUT saiu: nunca aparecia (display:none no webflow.css), o bundle
+// não lê nenhum seletor dele e o texto seria uma afirmação falsa.
+import CaseGallery from './CaseGallery.astro';
+import CaseReviews from './CaseReviews.astro';
+import type { Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+---
+
+<div class="section-w">
+  <CaseGallery film={film} />
+  <CaseReviews readings={film.readings} />
+</div>

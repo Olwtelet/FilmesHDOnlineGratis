@@ -1,0 +1,36 @@
+---
+/**
+ * Chamada final de /sobre/ (div.s.prizes): título e botão branco em forma de ingresso para a Programação, sobre a
+ * imagem com parallax recortada pelos clipPaths (#film no desktop, #filmmob no celular).
+ */
+import ExploreButton from '../ui/ExploreButton.astro';
+import type { ABOUT_FILMS_CTA } from '../../data/about';
+import FilmMaskSvg from '../ui/svg/FilmMaskSvg.astro';
+import FilmMaskMobileSvg from '../ui/svg/FilmMaskMobileSvg.astro';
+
+interface Props {
+  cta: typeof ABOUT_FILMS_CTA;
+}
+const { cta } = Astro.props;
+const { image } = cta;
+---
+
+<div class="s prizes">
+  <div class="cta-comp-w">
+    <div class="cta-content-w films">
+      <div class="cta-he">{cta.title}</div>
+      <a href={cta.href} class="w-inline-block">
+        <ExploreButton label={cta.label} variant="white" />
+      </a>
+    </div>
+    <div data-amount="3" data-a="parallaxImg" class="abs video-comp">
+      <div class="mask-abs">
+        <FilmMaskSvg id="film" />
+        <FilmMaskMobileSvg />
+      </div>
+      <div class="clip-img-w">
+        <img src={image.src} loading="eager" sizes={image.sizes} srcset={image.srcset} alt="" class="image-2" />
+      </div>
+    </div>
+  </div>
+</div>

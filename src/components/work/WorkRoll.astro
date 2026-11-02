@@ -1,0 +1,25 @@
+---
+/**
+ * Carrossel de /programacao/ (div.work-roll): a lista arrastável de cartões (data-slider="wrapper") e, ao lado, os
+ * quadros de cada sessão. O índice do carrossel escolhe o lightbox pela posição, então as duas listas têm os mesmos
+ * itens na mesma ordem, e o script de ordem (components/SessoesOrdem.astro) ordena as duas.
+ */
+import { ITENS } from '../../data/films';
+import WorkRollItem from './WorkRollItem.astro';
+import WorkLightbox from './WorkLightbox.astro';
+---
+
+<div class="work-roll">
+  <div class="rel-w">
+    <div data-slider="wrapper" class="work-roll-coll w-dyn-list">
+      <div role="list" class="work-roll-w w-dyn-items">
+        {ITENS.map((film) => <WorkRollItem film={film} />)}
+      </div>
+    </div>
+    <div class="work-overl-coll w-dyn-list">
+      <div role="list" class="work-overl-w w-dyn-items">
+        {ITENS.map((film) => <WorkLightbox film={film} />)}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+---
+/**
+ * Rodapé do site: renderiza footer.footer, sempre o último filho da página.
+ *
+ *   <Footer variant="base" | "on-black" | "black" currentPath="/sobre/" />
+ *
+ *   variant="base"      páginas de sessão
+ *   variant="on-black"  /sobre/ e páginas legais: soma a classe de variante do Webflow onde o original a tem
+ *   variant="black"     404: só a barra preta do modelo (footer.s.footer.black), com redes e links legais
+ *   currentPath         marca o link correspondente em navegar e nos legais (w--current + aria-current)
+ */
+import FooterNewsletter from './footer/FooterNewsletter.astro';
+import FooterSitemap from './footer/FooterSitemap.astro';
+import FooterContact from './footer/FooterContact.astro';
+import FooterBottomBar from './footer/FooterBottomBar.astro';
+import LogoSquare from './ui/LogoSquare.astro';
+import { cls } from './footer/variant';
+import { FOOTER_TAGLINE } from '../data/site';
+
+interface Props {
+  variant: 'base' | 'on-black' | 'black';
+  currentPath: string;
+}
+const { variant = 'black', currentPath } = Astro.props;
+const onBlack = variant === 'on-black';
+---
+
+{
+  variant === 'black' ? (
+    <footer data-s="footer" data-a="group" class="s footer black">
+      <FooterBottomBar variant="black" currentPath={currentPath} />
+    </footer>
+  ) : (
+    <footer data-once="true" data-a="group" data-s="footer" class={cls('s footer', onBlack)}>
+      <div class="footer-line vert full">
+        <LogoSquare />
+        <div class="footer-bt-w">
+          {FOOTER_TAGLINE.map((word, i) =>
+            i === FOOTER_TAGLINE.length - 1 ? (
+              <div class={cls('footer-of-w', onBlack, 'last')}>
+                <div data-a="item" class="text-block-13">{word}</div>
+              </div>
+            ) : (
+              <div class={cls('footer-of-w', onBlack)}>
+                <div data-a="item">{word}</div>
+              </div>
+            )
+          )}
+          <div class={cls('abs footer-line-w', onBlack)}>
+            {Array.from({ length: 4 }, () => (
+              <div data-a="line" class={cls('line full', onBlack)}></div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="footer-line grid">
+        <FooterNewsletter onBlack={onBlack} />
+        <FooterSitemap onBlack={onBlack} currentPath={currentPath} />
+        <FooterContact onBlack={onBlack} />
+      </div>
+      <FooterBottomBar variant={variant} currentPath={currentPath} />
+    </footer>
+  )
+}

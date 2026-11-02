@@ -1,0 +1,191 @@
+{
+  "slug": "inglourious-basterds-2009",
+  "titulo": "Bastardos Inglórios",
+  "categoria": "Guerra",
+  "sessao": {
+    "data": "2026-06-27",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Bastardos Inglórios",
+      "tituloOriginal": "Inglourious Basterds",
+      "ano": 2009,
+      "direcao": "Quentin Tarantino",
+      "duracao": 153,
+      "classificacao": "18",
+      "generos": [
+        "Guerra",
+        "Drama",
+        "Ação"
+      ],
+      "trailer": {
+        "youtube": "uSEDz-my7XQ",
+        "canal": "Arrow Video",
+        "idioma": "en",
+        "tituloVideo": "Inglourious Basterds | Original Trailer | Quentin Tarantino, 2009"
+      },
+      "tmdb": 16869,
+      "imdb": "tt0361748"
+    }
+  ],
+  "sinais": [
+    "ação",
+    "drama",
+    "guerra",
+    "vingança",
+    "clássico",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O nazista também ri no cinema",
+    "leitura": "Numa sala de Paris, nazistas gargalham diante de um filme de guerra. Tarantino mostra esse riso e oferece o mesmo prazer a nós, em escalpos e vingança. A armadilha tem saída de emergência: como o alvo é nazista, a gente se diverte sem pagar a conta.",
+    "descricao": "Soldados judeus caçam nazistas e a dona de um cinema em Paris trama sua vingança. Um sotaque mata, e a sala ri como os nazistas da tela.",
+    "notasHome": [
+      {
+        "rotulo": "Três dedos",
+        "frase": "Um gesto de bar pode custar a vida"
+      },
+      {
+        "rotulo": "Quatro idiomas",
+        "frase": "Quem fala melhor é o caçador de judeus"
+      },
+      {
+        "rotulo": "Testa marcada",
+        "frase": "Os mocinhos cortam suásticas em testas"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Copo de leite",
+        "frase": "Landa elogia o leite, acende o cachimbo e troca de idioma. A primeira matança do filme começa como conversa educada."
+      },
+      {
+        "rotulo": "Morrer por sotaque",
+        "frase": "Aqui se morre por um sotaque, por um dedo levantado errado, por uma palavra em língua alheia. Quem domina idiomas manda na cena."
+      },
+      {
+        "rotulo": "O caçador tem as falas",
+        "frase": "O filme promete vingança judaica e se apaixona por Landa. O caçador de judeus fica com as falas, o charme e a atenção da câmera."
+      },
+      {
+        "rotulo": "Cinco capítulos de mesa",
+        "frase": "Tarantino divide tudo em capítulos e estica cada conversa de mesa até doer. O suspense mora no strudel, no cigarro e no leite."
+      },
+      {
+        "rotulo": "A outra plateia",
+        "frase": "Nazistas riem de uma matança na tela, e o atirador retratado levanta e sai. A gente vê isso e continua querendo a nossa matança."
+      },
+      {
+        "rotulo": "Os mortos e o ingresso",
+        "frase": "A vingança toda passa por uma sala de cinema, e Tarantino não separa o que deve aos mortos do que deve a quem comprou ingresso."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Quentin Tarantino"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Robert Richardson"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Sally Menke"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Lawrence Bender"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Tenente Aldo Raine",
+        "nome": "Brad Pitt"
+      },
+      {
+        "funcao": "Shosanna Dreyfus",
+        "nome": "Mélanie Laurent"
+      },
+      {
+        "funcao": "Coronel Hans Landa",
+        "nome": "Christoph Waltz"
+      },
+      {
+        "funcao": "Sargento Donny Donowitz",
+        "nome": "Eli Roth"
+      },
+      {
+        "funcao": "Tenente Archie Hicox",
+        "nome": "Michael Fassbender"
+      },
+      {
+        "funcao": "Bridget von Hammersmark",
+        "nome": "Diane Kruger"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "cr0aR8A8TN8rfayqsZIfiL5Gw4k.jpg"
+    },
+    "cartaz": {
+      "tmdb": "col4fqppvbht1nvT4OL11SDG4We.jpg"
+    },
+    "direcao": {
+      "tmdb": "tm43wuKhVoPTCWDJ5tAR0E22h0k.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "cr0aR8A8TN8rfayqsZIfiL5Gw4k.jpg"
+      },
+      {
+        "tmdb": "tm43wuKhVoPTCWDJ5tAR0E22h0k.jpg"
+      },
+      {
+        "tmdb": "9xjj7lXiGJmCgeLuRS299c8mJ3P.jpg"
+      },
+      {
+        "tmdb": "y8EHVHSnTiWKvzOKLo9PiyRGesR.jpg"
+      },
+      {
+        "tmdb": "92ewsLVoZhO09b4KcF4Lg3o73Wf.jpg"
+      },
+      {
+        "tmdb": "2v0rKccg3s7vWN1ac2YX9j2uUTl.jpg"
+      },
+      {
+        "tmdb": "pd5u0sttA2RdWz1OvOefKNZQ48z.jpg"
+      },
+      {
+        "tmdb": "snV10wwjldKh465xTy80XKPs9pU.jpg"
+      },
+      {
+        "tmdb": "1YSMA6POgdNYhVyAcpypw0jdYMt.jpg"
+      },
+      {
+        "tmdb": "idynOqKtTaAZy0vmtziro9CMC8G.jpg"
+      },
+      {
+        "tmdb": "g7FBvWy7obJlZviVTP0eFlO7JMG.jpg"
+      },
+      {
+        "tmdb": "qCRx7pryOX3YDYHwEMYLX1EJJP4.jpg"
+      },
+      {
+        "tmdb": "9SDgHM1gpCGOGpYYlOXyADufhTv.jpg"
+      },
+      {
+        "tmdb": "aKF0po0AL3kledxJCd3gXajdvhv.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

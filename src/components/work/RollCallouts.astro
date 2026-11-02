@@ -1,0 +1,30 @@
+---
+/**
+ * Linhas de um cartão de /programacao/ (ul.linecallout-list.work): Ano / Sessão / Gênero, separadas pelas linhas
+ * animadas (data-a="line"). Cada cartão tem duas cópias (a fixa e a que troca com o Flip); o Webflow deu a cada cópia
+ * suas próprias células de grade, passadas em `lineIds` (linha de cima da primeira fileira e a de baixo de cada uma).
+ */
+interface Row {
+  label: string;
+  value: string | number;
+}
+interface Props {
+  rows: Row[];
+  /** ids w-node-*: [linha de cima, fileira 1, fileira 2, fileira 3] */
+  lineIds: string[];
+}
+const { rows, lineIds } = Astro.props;
+---
+
+<ul role="list" class="linecallout-list work w-list-unstyled">
+  {
+    rows.map((row, i) => (
+      <li class="linecallout-item">
+        {i === 0 && <div data-a="line" id={lineIds[0]} class="line top" />}
+        <div>{row.label}</div>
+        <div>{row.value}</div>
+        <div data-a="line" id={lineIds[i + 1]} class="line b-up work" />
+      </li>
+    ))
+  }
+</ul>

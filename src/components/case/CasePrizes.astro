@@ -1,0 +1,74 @@
+---
+// Ficha da sessão (div.s.prizes): o letreiro vertical dos prêmios, com 7 cópias da mesma lista, agora com fatos do dado.
+// O app.js clona a primeira cópia e dá a velocidade pelo número de itens (no máximo 14), e morre se o letreiro vier sem filhos.
+import DynList from './DynList.astro';
+import TicketHeading from './TicketHeading.astro';
+import { responsive } from './cms';
+import { filmesDaSessao, type Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+
+const COPIAS = Array.from({ length: 7 });
+const MINIMO = 7;
+const MAXIMO = 14;
+/** marca interna da curadoria, não diz nada a quem lê */
+const SINAIS_OCULTOS = ['indicação-da-semana'];
+
+const { session } = film;
+const filmes = filmesDaSessao(film.slug);
+const dupla = filmes.length > 1;
+const semana = session.weekday[0].toUpperCase() + session.weekday.slice(1);
+const classificacao = [...new Set(film.ratings)].map((c) => (c === 'L' ? 'Livre' : `${c} anos`)).join(' e ');
+const generos = film.genres.map((g) => g.toLowerCase());
+const sinais = film.signals
+  .filter((s) => !SINAIS_OCULTOS.includes(s))
+  .map((s) => s.replace(/-/g, ' '))
+  // o gênero já está na ficha: "terror" não aparece duas vezes
+  .filter((s) => !generos.includes(s.toLowerCase()));
+
+const ficha = [
+  { categoria: 'Data', valor: session.fullDate },
+  ...(dupla
+    ? filmes.map((f) => ({ categoria: `Horário · ${f.title}`, valor: `${semana}, ${f.time}` }))
+    : [{ categoria: 'Horário', valor: `${semana}, ${session.time}` }]),
+  { categoria: 'Sala', valor: session.room },
+  { categoria: 'Direção', valor: film.director },
+  ...(dupla
+    ? filmes.map((f) => ({ categoria: `Duração · ${f.title}`, valor: `${f.minutes} min` }))
+    : [{ categoria: 'Duração', valor: `${film.minutes} min` }]),
+  ...(classificacao ? [{ categoria: 'Classificação', valor: classificacao }] : []),
+  ...film.genres.map((valor) => ({ categoria: 'Gênero', valor })),
+  ...sinais.map((valor) => ({ categoria: 'Sinal', valor })),
+];
+// Com poucos itens o letreiro corre depressa demais: completa com outros fatos do dado, sem inventar nenhum.
+if (ficha.length < MINIMO) ficha.push({ categoria: 'Ano', valor: film.year }, { categoria: 'Título original', valor: film.originalTitle });
+const itens = ficha.slice(0, MAXIMO);
+---
+
+<div data-color="white" class="s prizes bg-white">
+  <TicketHeading label="FICHA DA SESSÃO" />
+  <div class="prize-w">
+    <div data-marquee="vertical" class="prizes-content-w abs">
+      {
+        COPIAS.map((_, i) => (
+          <DynList listClass="w-dyn-list" itemsClass="prize-coll-w w-dyn-items" listAttrs={i > 0 ? { 'aria-hidden': 'true' } : {}}>
+            {itens.map((item) => (
+              <div role="listitem" class="prize-coll-it w-dyn-item">
+                <div class="roll-cont-eyeb parish mb-0">{item.categoria}</div>
+                <h3 class="prize-he">{item.valor}</h3>
+              </div>
+            ))}
+          </DynList>
+        ))
+      }
+    </div>
+    <div data-amount="3" data-a="parallaxImg" class="abs review-img no-abs">
+      <div class="clip-img-w">
+        <img src={film.hero.src} loading="eager" alt="" {...responsive(film.hero, '100vw')} class="image-2" />
+      </div>
+    </div>
+  </div>
+</div>

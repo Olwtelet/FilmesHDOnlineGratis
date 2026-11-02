@@ -1,0 +1,23 @@
+---
+/**
+ * Bloco de data de um cartão do roll (só desktop), no lugar da láurea: data em destaque e dia da semana, hora e sala.
+ * Não há imagem: nenhuma sessão tem prêmio a mostrar.
+ */
+import type { Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const { dayMonth, weekday, time, room } = film.session;
+const headline = film.aviso ? 'Aguardando programação' : `${weekday} ${time} ${room}`;
+---
+
+<div data-hide="mobile" data-parallax="12" class="roll-cont-item award">
+  <div class="div-block-40">
+    <div class="award-year">{dayMonth}</div>
+  </div>
+  <div class="award_headline-wrap">
+    <div class="award_headline">{headline}</div>
+  </div>
+</div>

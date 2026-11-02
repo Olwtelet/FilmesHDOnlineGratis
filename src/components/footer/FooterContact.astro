@@ -1,0 +1,35 @@
+---
+// Coluna "contato" do rodapé: e-mail e Discord. Os externos abrem em outra aba, o que os deixa fora do Taxi.
+import { cls } from './variant';
+import { FOOTER_CONTACTS } from '../../data/site';
+
+interface Props {
+  onBlack: boolean;
+}
+const { onBlack } = Astro.props;
+---
+
+<div id="w-node-_557a978e-b1b7-f9c9-6c87-98a047c344ed-47c344a4" class="ft-contact-w">
+  <h2 class={cls('roll-cont-eyeb parish mobile-mb', onBlack)}>contato</h2>
+  <ul role="list" class="ft-contact-li w-list-unstyled">
+    {
+      FOOTER_CONTACTS.map((contact) => (
+        <li>
+          <a
+            href={contact.href}
+            target={contact.external ? '_blank' : undefined}
+            rel={contact.external ? 'noopener noreferrer' : undefined}
+            class={cls('ft-contact-li-it', onBlack, 'w-inline-block')}
+          >
+            <div data-a="line" class={cls('line full', onBlack, 'contact top')}></div>
+            <div class={cls('roll-cont-eyeb parish mb-line', onBlack, 'ft')}>
+              {contact.hideLabelOnMobile ? <span data-hide="mobile">{contact.label}</span> : contact.label}
+            </div>
+            <div class={cls('ft-contact-li-he', onBlack)}>{contact.address}</div>
+            <div data-a="line" class={cls('line full', onBlack, 'up-2')}></div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

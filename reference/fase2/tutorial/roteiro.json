@@ -1,0 +1,170 @@
+{
+ "gravado": "2026-11-01T04:17:57.793Z",
+ "url": "http://localhost:4322",
+ "canal": "msedge",
+ "placa": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 (0x00002584) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "tela": {
+  "width": 1440,
+  "height": 933
+ },
+ "fps": 30,
+ "duracao": 23.8,
+ "log": [
+  {
+   "t": 0.5,
+   "mover": "ponto",
+   "para": [
+    720,
+    560
+   ]
+  },
+  {
+   "t": 1.067,
+   "acao": "apertar"
+  },
+  {
+   "t": 1.4,
+   "mover": "ponto",
+   "para": [
+    720,
+    300
+   ]
+  },
+  {
+   "t": 2.9,
+   "mover": "ponto",
+   "para": [
+    720,
+    270
+   ]
+  },
+  {
+   "t": 3.267,
+   "acao": "soltar"
+  },
+  {
+   "t": 5,
+   "acao": "rolar",
+   "noCentro": "doctor-sleep-2019"
+  },
+  {
+   "t": 6.267,
+   "acao": "rolar",
+   "noCentro": "django-unchained-2012"
+  },
+  {
+   "t": 7.5,
+   "acao": "rolar",
+   "noCentro": "eyes-wide-shut-1999"
+  },
+  {
+   "t": 9.3,
+   "mover": "ingresso",
+   "para": [
+    1172,
+    63
+   ]
+  },
+  {
+   "t": 9.967,
+   "acao": "clicar",
+   "sobre": "limitless-2011"
+  },
+  {
+   "t": 10.3,
+   "mover": "linha",
+   "para": [
+    1148,
+    369
+   ]
+  },
+  {
+   "t": 11.2,
+   "acao": "clicar",
+   "sobre": "limitless-2011"
+  },
+  {
+   "t": 12.767,
+   "mover": "ingresso",
+   "para": [
+    1172,
+    63
+   ]
+  },
+  {
+   "t": 13.4,
+   "acao": "clicar",
+   "sobre": "under-the-silver-lake-2018"
+  },
+  {
+   "t": 14.6,
+   "mover": "hamburguer",
+   "para": [
+    1355,
+    84
+   ]
+  },
+  {
+   "t": 15.267,
+   "acao": "clicar",
+   "sobre": "under-the-silver-lake-2018"
+  },
+  {
+   "t": 15.867,
+   "mover": "link1",
+   "para": [
+    1185,
+    176
+   ]
+  },
+  {
+   "t": 16.5,
+   "mover": "link2",
+   "para": [
+    1168,
+    218
+   ]
+  },
+  {
+   "t": 17.067,
+   "mover": "link3",
+   "para": [
+    1168,
+    260
+   ]
+  },
+  {
+   "t": 17.667,
+   "mover": "hamburguer",
+   "para": [
+    1355,
+    84
+   ]
+  },
+  {
+   "t": 18.267,
+   "acao": "clicar",
+   "sobre": "under-the-silver-lake-2018"
+  },
+  {
+   "t": 19.4,
+   "mover": "explorar",
+   "para": [
+    1238,
+    745
+   ]
+  },
+  {
+   "t": 22.3,
+   "mover": "ponto",
+   "para": [
+    860,
+    560
+   ]
+  },
+  {
+   "t": 23.8,
+   "final": "under-the-silver-lake-2018"
+  }
+ ]
+}

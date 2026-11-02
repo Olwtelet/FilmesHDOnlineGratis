@@ -1,0 +1,58 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/rss.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" }]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/(.*)\\.(woff2|woff)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/(img|audio|video)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+    }
+  ],
+
+  "redirects": [
+    { "source": "/mural{/}?", "destination": "/", "permanent": false },
+    { "source": "/ranking{/}?", "destination": "/programacao/", "permanent": false },
+    { "source": "/perfil/:path*{/}?", "destination": "/", "permanent": false },
+    { "source": "/favoritos{/}?", "destination": "/programacao/", "permanent": false },
+    { "source": "/assistidos{/}?", "destination": "/programacao/", "permanent": false },
+    { "source": "/admin/:path*{/}?", "destination": "/", "permanent": false },
+    { "source": "/auth/:path*{/}?", "destination": "/", "permanent": false },
+    { "source": "/dossie{/}?", "destination": "/programacao/", "permanent": true },
+    { "source": "/generos/:path*{/}?", "destination": "/programacao/", "permanent": true },
+    { "source": "/tags/:path*{/}?", "destination": "/programacao/", "permanent": true },
+    { "source": "/busca.json", "destination": "/programacao/", "permanent": true },
+    { "source": "/search-index.json", "destination": "/programacao/", "permanent": true },
+    { "source": "/feed{/}?", "destination": "/rss.xml", "permanent": true },
+    { "source": "/feed.xml", "destination": "/rss.xml", "permanent": true },
+    { "source": "/sitemap-index.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/sitemap-0.xml", "destination": "/sitemap.xml", "permanent": true }
+  ]
+}

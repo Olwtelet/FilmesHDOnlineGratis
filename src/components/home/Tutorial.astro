@@ -1,0 +1,32 @@
+---
+/**
+ * Tutorial da primeira visita (div.tutorial-wrapper): as dicas que o app.js alterna (data-tutorial="texts") e o botão
+ * FECHAR. O <video> é uma gravação da home real, feita por tools/gravar-tutorial.mjs (npm run tutorial), e o app.js dá
+ * play() 2 s depois do ENTER. Com preload="none", nada do vídeo é pedido antes disso, nem abaixo de 992 px, onde o tutorial
+ * nem existe. Sem o elemento, as dicas param. Toda dica precisa ocupar as mesmas 2 linhas.
+ */
+import { TUTORIAL } from '../../data/home';
+import ExploreButton from '../ui/ExploreButton.astro';
+---
+
+<div data-tutorial="w" class="tutorial-wrapper visible">
+  <div data-cursor="hide" class="tut-el">
+    <div class="abs tutorial-bg-grad">
+      <div class="tut-grad"></div>
+    </div>
+    <div class="tut-video-w">
+      <video poster="/assets/img/site/tutorial-poster.webp" preload="none" muted="" playsinline="true" width="100%" data-tutorial="video" class="video-2">
+        <source src="/assets/video/tutorial.webm" type='video/webm; codecs="vp9"' />
+        <source src="/assets/video/tutorial.mp4" type='video/mp4; codecs="avc1.42E01F"' />
+      </video>
+    </div>
+    <div class="div-block-49">
+      <div data-tutorial="texts" class="tut-tx-w">
+        {TUTORIAL.texts.map((text, i) => <div class={i === 0 ? 'tut-text' : 'tut-text second'}>{text}</div>)}
+      </div>
+      <div data-tutorial="close" class="tutorial-btn-w">
+        <ExploreButton label={TUTORIAL.closeLabel} modifier="smaller" tuto arrow="close" ticket="close" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+---
+// Linha de baixo do rodapé: redes, copyright com o crédito da curadoria e links legais. É compartilhada pelo rodapé
+// (variantes base e on-black) e pela barra preta da 404, que marca seus blocos com _404 e white.
+import { cls } from './variant';
+import { SOCIAL_ICONS } from './social-icons';
+import { wfLink } from '../ui/link';
+import { SITE, SOCIAL, FOOTER_LEGAL_LINKS, FOOTER_COPYRIGHT, FOOTER_COPYRIGHT_404 } from '../../data/site';
+
+interface Props {
+  variant: 'base' | 'on-black' | 'black';
+  currentPath: string;
+}
+const { variant, currentPath } = Astro.props;
+const onBlack = variant === 'on-black';
+const is404 = variant === 'black';
+const socialClass = is404 ? 'footer-social-icon-w _404 w-inline-block' : cls('footer-social-icon-w', onBlack, 'w-inline-block');
+const legalClass = is404 ? 'ft-small-lk white w-inline-block' : cls('ft-small-lk', onBlack, 'w-inline-block');
+---
+
+<div class={cls('footer-line last', onBlack)}>
+  <div class="col-1-3 left">
+    <div class="roll-cont-eyeb parish center left">Siga —</div>
+    <div class={is404 ? 'div-block-48 _404' : 'div-block-48'}>
+      {
+        SOCIAL_ICONS.map((rede) => (
+          <a href={rede.href} target="_blank" rel="noopener noreferrer" aria-label={rede.label} class={socialClass}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" aria-hidden="true" class="svg-social smaller">
+              <path fill="currentColor" d={rede.d}></path>
+            </svg>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div class="col-1-3">
+    <div class="roll-cont-eyeb parish center">
+      {is404 ? FOOTER_COPYRIGHT_404 : FOOTER_COPYRIGHT}
+      <span class="ft-credito">Curadoria <a href={SOCIAL.github} target="_blank" rel="noopener noreferrer" class="ft-credito-lk">{SITE.author}</a></span>
+    </div>
+  </div>
+  <div class="col-1-3 right">
+    {
+      FOOTER_LEGAL_LINKS.map((link, i) => (
+        <>
+          {i > 0 && <div class="roll-cont-eyeb parish center">-</div>}
+          <a {...wfLink(link.href, currentPath, legalClass)}>
+            <div class="roll-cont-eyeb parish center">{link.label}</div>
+          </a>
+        </>
+      ))
+    }
+  </div>
+</div>

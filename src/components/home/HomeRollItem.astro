@@ -1,0 +1,58 @@
+---
+/**
+ * Um cartão do roll da home (div.home-roll-item): imagem de fundo, bloco de data, notas curatoriais (cópias de celular
+ * e de desktop), sobrancelha de estado, título, direção / ano / gênero e os botões de Explorar.
+ *
+ * A imagem não tem srcset: o WebGL carrega o src, e um srcset baixaria o arquivo duas vezes. O h2 não pode ter nada em
+ * volta do texto: o app.js transforma a primeira palavra em classe, e um espaço no começo derruba a página.
+ */
+import { filmHref, sessaoAttrs, type Film } from '../../data/films';
+import { HOME_EXPLORE } from '../../data/home';
+import { ROUTES } from '../../data/site';
+import ExploreButton from '../ui/ExploreButton.astro';
+import { estadoAttrs, estadoTexto } from '../ui/estado';
+import RollAward from './RollAward.astro';
+import RollReviews from './RollReviews.astro';
+import RollCallout from './RollCallout.astro';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const href = film.aviso ? ROUTES.work : filmHref(film.slug);
+const ariaLabel = film.aviso ? 'abrir a programação' : HOME_EXPLORE.ariaLabel;
+---
+
+<div data-roll="item" role="listitem" class="home-roll-item w-dyn-item" {...sessaoAttrs(film)}>
+  <div class="home-roll-c">
+    <div class="roll-img-w home">
+      <img src={film.image.src} loading="eager" data-roll="img" alt={film.aviso ? '' : `Cena de ${film.title}`} class="image" />
+    </div>
+    <div class="abs gg home">
+      <div data-parallax="2" class="roll-content-w">
+        <div class="roll-cont-col">
+          <RollAward film={film} />
+          <div data-hide="desktop" class="mobile-reviews">
+            <RollReviews notes={film.homeNotes} mobile />
+          </div>
+          <div data-parallax="15" class="roll-cont-item">
+            <div class="roll-cont-eyeb parish" {...estadoAttrs(film)}>{estadoTexto(film)}</div>
+            <h2 class="roll-cont-he home" style={film.homeTitleSize ? `--text-h1:${film.homeTitleSize}` : undefined}>{film.title}</h2>
+            <RollCallout director={film.directorShort} year={film.year} category={film.category} />
+            <a data-hide="desktop" href={href} class="explore-w mobile w-inline-block">
+              <ExploreButton label={HOME_EXPLORE.label} arrow="single-black" ticket="dash-filled" />
+              <div data-cursor="hide" class="abs cursor-hide-hitbox"></div>
+            </a>
+          </div>
+        </div>
+        <div data-hide="mobile" class="roll-cont-col reviews">
+          <RollReviews notes={film.homeNotes} />
+          <a aria-label={ariaLabel} href={href} class="explore-w w-inline-block">
+            <ExploreButton label={HOME_EXPLORE.label} variant="base" />
+            <div data-cursor="hide" class="abs cursor-hide-hitbox"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

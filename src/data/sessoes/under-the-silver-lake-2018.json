@@ -1,0 +1,204 @@
+{
+  "slug": "under-the-silver-lake-2018",
+  "titulo": "O Mistério de Silver Lake",
+  "categoria": "Mistério",
+  "sessao": {
+    "data": "2026-09-26",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "O Mistério de Silver Lake",
+      "tituloOriginal": "Under the Silver Lake",
+      "ano": 2018,
+      "direcao": "David Robert Mitchell",
+      "duracao": 139,
+      "classificacao": "18",
+      "generos": [
+        "Mistério",
+        "Suspense",
+        "Comédia Sombria"
+      ],
+      "trailer": {
+        "youtube": "mwgUesU1pz4",
+        "canal": "A24",
+        "idioma": "en",
+        "tituloVideo": "Under the Silver Lake | Official Trailer HD | A24"
+      },
+      "tmdb": 396461,
+      "imdb": "tt5691670"
+    }
+  ],
+  "sinais": [
+    "mistério",
+    "suspense",
+    "comédia",
+    "obsessão",
+    "cult",
+    "bizarro",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Tudo é pista, menos o aluguel",
+    "leitura": "Sam não paga o aluguel, espia as vizinhas de binóculo e decide que a cultura pop inteira foi escrita para ele. O filme ri dessa vaidade e enche o cenário de sinais para você cair nela. David Robert Mitchell nunca decide se quer curar a mania de Sam ou premiá-la.",
+    "descricao": "Um desempregado de Los Angeles procura a vizinha sumida em letras de música e embalagens. Um mistério que ri de quem acha que a cultura fala com ele.",
+    "notasHome": [
+      {
+        "rotulo": "Detetive sem renda",
+        "frase": "Chama o desemprego de investigação"
+      },
+      {
+        "rotulo": "Varanda com vista",
+        "frase": "A câmera gosta da vista que condena"
+      },
+      {
+        "rotulo": "Cheiro de gambá",
+        "frase": "Música de noir para um herói que fede"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Aviso de despejo",
+        "frase": "Sam tem aluguel atrasado, nenhum trabalho e um binóculo na varanda. Quando a vizinha some, ele enfim arruma uma ocupação."
+      },
+      {
+        "rotulo": "Tudo endereçado a ele",
+        "frase": "Letra de música, embalagem, revista de videogame: Sam lê tudo como recado pessoal. Paranoia é o jeito dele de se achar importante."
+      },
+      {
+        "rotulo": "A vista que o filme aprecia",
+        "frase": "Mitchell ri do homem que vê nas mulheres um enigma a resolver. A própria câmera, porém, olha para elas da mesma varanda, e gosta."
+      },
+      {
+        "rotulo": "Orquestra para um fedido",
+        "frase": "Uma orquestra de suspense à moda antiga acompanha um sujeito fedendo a gambá. A música promete um segredo, o corpo desmente."
+      },
+      {
+        "rotulo": "Você também anota",
+        "frase": "Lá pela segunda hora você já vasculha o cenário atrás de sinais. O filme transmite a mania de Sam e não avisa do contágio."
+      },
+      {
+        "rotulo": "Fome de sentido",
+        "frase": "Mitchell zomba de quem decifra e segue plantando sinais no cenário. Se há código ou só fome de sentido, ele não diz."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "David Robert Mitchell"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Mike Gioulakis"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Disasterpeace"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Julio Perez IV"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Michael De Luca"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Chris Bender"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Jake Weiner"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Sam",
+        "nome": "Andrew Garfield"
+      },
+      {
+        "funcao": "Sarah",
+        "nome": "Riley Keough"
+      },
+      {
+        "funcao": "Amigo do Bar",
+        "nome": "Topher Grace"
+      },
+      {
+        "funcao": "Millicent Sevence",
+        "nome": "Callie Hernandez"
+      },
+      {
+        "funcao": "O Homem do Fim",
+        "nome": "Don McManus"
+      },
+      {
+        "funcao": "O Compositor",
+        "nome": "Jeremy Bobb"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "r2z8ceIsg9ON8DIHTf6cMqnK3CL.jpg"
+    },
+    "cartaz": {
+      "tmdb": "cJ9aKlEgTLYtpYjNqin06YqJRUl.jpg"
+    },
+    "direcao": {
+      "tmdb": "smc5oE6iRdp4hguSPT3RHsyceQH.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "r2z8ceIsg9ON8DIHTf6cMqnK3CL.jpg"
+      },
+      {
+        "tmdb": "smc5oE6iRdp4hguSPT3RHsyceQH.jpg"
+      },
+      {
+        "tmdb": "aGFCehJ6AoDUGLrBWwxm8VATieu.jpg"
+      },
+      {
+        "tmdb": "nRMEwXTStVoK4rHlbrTwjugHeJA.jpg"
+      },
+      {
+        "tmdb": "7VkjHXUvLVyomy5NO4zKHjyl9te.jpg"
+      },
+      {
+        "tmdb": "87d2mP3ZGaoh8xUFKVfUAJKsqiP.jpg"
+      },
+      {
+        "tmdb": "coMRkCXB0xeemCKjIECb0YRZSqL.jpg"
+      },
+      {
+        "tmdb": "gDhJlg4eddijnwjSLrGNAFrNC8p.jpg"
+      },
+      {
+        "tmdb": "cr5gCwsYCCJ5tIakXQFVdS5yQzL.jpg"
+      },
+      {
+        "tmdb": "cdlCXtMEblkt9RNXfUQW857dgon.jpg"
+      },
+      {
+        "tmdb": "3JglkXfUpWoPsIeBJkd9ZbxchEh.jpg"
+      },
+      {
+        "tmdb": "UX0JcA7hR8aFllDYlk19gcbjgv.jpg"
+      },
+      {
+        "tmdb": "83XTQgnCYVrHtU3aXst3eaJGtza.jpg"
+      },
+      {
+        "tmdb": "kR9oHhyeKExiftmn9IXtvJAhlIX.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 3
+}

@@ -1,0 +1,204 @@
+{
+  "slug": "the-running-man-2026",
+  "titulo": "The Running Man",
+  "categoria": "Ação",
+  "sessao": {
+    "data": "2026-04-25",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "The Running Man",
+      "tituloOriginal": "The Running Man",
+      "ano": 2025,
+      "direcao": "Edgar Wright",
+      "duracao": 133,
+      "classificacao": "18",
+      "generos": [
+        "Ação",
+        "Thriller",
+        "Ficção Científica"
+      ],
+      "trailer": {
+        "youtube": "mDrsB34BeuI",
+        "canal": "Paramount Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "O Sobrevivente | Trailer Oficial | LEG | Paramount Pictures Brasil"
+      },
+      "tmdb": 798645,
+      "imdb": "tt14107334"
+    }
+  ],
+  "sinais": [
+    "ação",
+    "thriller",
+    "ficção-científica",
+    "sobrevivência",
+    "indicação-da-semana",
+    "distopia",
+    "suspense"
+  ],
+  "texto": {
+    "manchete": "Wright edita como a rede",
+    "leitura": "Ben Richards perde o trabalho por militar no sindicato e topa um programa que mata ao vivo, pelo remédio da filha. Quando denuncia a rede, ela põe no ar um deepfake de boca suja. Edgar Wright condena essa mesa de edição, monta igual e ainda vende Glen Powell de toalha.",
+    "descricao": "Um operário na lista negra topa um reality mortal pelo remédio da filha. Edgar Wright ataca a TV que edita heróis, num filme que também edita o seu.",
+    "notasHome": [
+      {
+        "rotulo": "Lista negra",
+        "frase": "Do sindicato para o horário nobre"
+      },
+      {
+        "rotulo": "O deepfake",
+        "frase": "A rede põe palavrões na boca dele"
+      },
+      {
+        "rotulo": "A toalha",
+        "frase": "Ironiza o herói e exibe o físico dele"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A gripe de Cathy",
+        "frase": "Tudo começa num remédio de gripe que um pai não consegue pagar. O programa que mata é a única farmácia aberta."
+      },
+      {
+        "rotulo": "Raiva com contrato",
+        "frase": "A rede não quer o sindicalista. Compra a raiva dele, corta o motivo e põe no ar com cara de vilão."
+      },
+      {
+        "rotulo": "Toalha e manifesto",
+        "frase": "O filme zomba da TV que fabrica heróis e pendura Glen Powell de toalha num prédio. Conhece a piada e cobra ingresso por ela."
+      },
+      {
+        "rotulo": "Mesmo rosto, outra frase",
+        "frase": "O deepfake resume tudo: o rosto igual, a frase trocada. Wright denuncia a fraude e segue cortando no ritmo da rede."
+      },
+      {
+        "rotulo": "Caça de rua",
+        "frase": "Na rua, cidadãos comuns caçam Richards porque a TV mandou. O vizinho vira caçador, e a cena vale como mais uma perseguição."
+      },
+      {
+        "rotulo": "Um show melhor",
+        "frase": "Dá para virar a plateia contra o show dando a ela um show melhor? A cada perseguição bem cortada, a resposta fica mais difícil."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Michael Bacall & Edgar Wright"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Stephen King"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Chung Chung-hoon"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Steven Price"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Simon Kinberg"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Nira Park"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Edgar Wright"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Ben Richards",
+        "nome": "Glen Powell"
+      },
+      {
+        "funcao": "Bobby T",
+        "nome": "Colman Domingo"
+      },
+      {
+        "funcao": "Evan McCone",
+        "nome": "Lee Pace"
+      },
+      {
+        "funcao": "Dan Killian",
+        "nome": "Josh Brolin"
+      },
+      {
+        "funcao": "Molie",
+        "nome": "William H. Macy"
+      },
+      {
+        "funcao": "Elton Parrakis",
+        "nome": "Michael Cera"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "at7Vtn4EKNSNNWfQFKEulLraera.jpg"
+    },
+    "cartaz": {
+      "tmdb": "8nBuPCAXLFSuUBjO1WvJ2blEVmK.jpg"
+    },
+    "direcao": {
+      "tmdb": "ujMlwV1HDGKEHES0ZVbSMkFYBKM.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "at7Vtn4EKNSNNWfQFKEulLraera.jpg"
+      },
+      {
+        "tmdb": "ujMlwV1HDGKEHES0ZVbSMkFYBKM.jpg"
+      },
+      {
+        "tmdb": "pnkEOG38EKA4MxgbRMjWGBPGevO.jpg"
+      },
+      {
+        "tmdb": "r2AECYSJXRcPpGmWmfkUztpmK75.jpg"
+      },
+      {
+        "tmdb": "lGnPqsK1C3XQkF5ZBCWqAzfuuRc.jpg"
+      },
+      {
+        "tmdb": "nLR4VEx5Jv2E7nfPdy3ZOguyk71.jpg"
+      },
+      {
+        "tmdb": "qS6WGs5co80ATvBRew1RQnoGJ3K.jpg"
+      },
+      {
+        "tmdb": "olzb4W4UsqhUMEVwKyRFKGLnajK.jpg"
+      },
+      {
+        "tmdb": "nuCVfa3HGbQ4QBzwZPvKT0TJSke.jpg"
+      },
+      {
+        "tmdb": "vnLK0jsfKCYurLIDj8zyIyZM42F.jpg"
+      },
+      {
+        "tmdb": "mCYlV3UAGtDBIAVtkZnKMSSgmoJ.jpg"
+      },
+      {
+        "tmdb": "nrzTiAyKO9rGzCAbpMlIZ8KVXb9.jpg"
+      },
+      {
+        "tmdb": "rn2s85HbpmNdl9HtBhTNFIpPkWY.jpg"
+      },
+      {
+        "tmdb": "8fMOzkMoTB7IR1z50yeOv40NOUU.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

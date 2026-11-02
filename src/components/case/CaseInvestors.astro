@@ -1,0 +1,27 @@
+---
+// Na sala (div.s.investor): onde e quando, o aviso de que o site não exibe filmes, as regras da casa e o link da sala.
+// Dentro de .investor-rt o webflow.css só mostra h3, h4 e h5; um <p> aqui some sem aviso.
+import { filmesDaSessao, type Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const { session } = film;
+const horas = [...new Set(filmesDaSessao(film.slug).map((f) => f.time))];
+const quando = `${session.longDate}, às ${horas.join(' e às ')}`;
+const REGRAS = 'Chegue alguns minutos antes. Microfone mudo do início ao fim. Nenhum spoiler no chat. O resto é com o filme.';
+---
+
+<div data-color="white" class="s investor bg-white">
+  <div class="c flex-ve">
+    <h2 class="investor-he">Na sala</h2>
+    <div class="investor-rt w-richtext">
+      <h3>{quando}</h3>
+      <h4>{session.room}, no Discord</h4>
+      <h5>O site não hospeda filmes: a sessão é ao vivo, na sala.</h5>
+      <h5>{REGRAS}</h5>
+      <h4 class="investor-sala"><a href={session.roomUrl} target="_blank" rel="noopener noreferrer">Entrar na sala</a></h4>
+    </div>
+  </div>
+</div>

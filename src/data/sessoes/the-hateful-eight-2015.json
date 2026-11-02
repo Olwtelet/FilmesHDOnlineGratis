@@ -1,0 +1,204 @@
+{
+  "slug": "the-hateful-eight-2015",
+  "titulo": "Os Oito Odiados",
+  "categoria": "Faroeste",
+  "sessao": {
+    "data": "2026-10-31",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Os Oito Odiados",
+      "tituloOriginal": "The Hateful Eight",
+      "ano": 2015,
+      "direcao": "Quentin Tarantino",
+      "duracao": 168,
+      "classificacao": "18",
+      "generos": [
+        "Faroeste",
+        "Mistério",
+        "Suspense"
+      ],
+      "trailer": {
+        "youtube": "xKjoznVA1O0",
+        "canal": "Diamond Films Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "Os Oito Odiados - Trailer Oficial 1 Legendado - dia 7/1/2016 nos cinemas"
+      },
+      "tmdb": 273248,
+      "imdb": "tt3460252"
+    }
+  ],
+  "sinais": [
+    "faroeste",
+    "mistério",
+    "suspense",
+    "crime",
+    "vingança",
+    "perturbador",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "A Guerra Civil numa cabana",
+    "leitura": "Uma nevasca tranca todos na hospedaria, mas quem fecha a porta é a Guerra Civil, que ninguém ali deu por terminada. Quentin Tarantino aponta uma tela de épico para uma cabana, faz você vigiar o fundo do quadro e recusa um único personagem por quem torcer em paz.",
+    "descricao": "Faroeste de quarto fechado no Wyoming: uma nevasca prende caçadores de recompensa e uma prisioneira, e a Guerra Civil continua lá dentro.",
+    "notasHome": [
+      {
+        "rotulo": "Sala em mapa",
+        "frase": "Norte e Sul seguem sob o mesmo teto"
+      },
+      {
+        "rotulo": "Setenta milímetros",
+        "frase": "Largura de épico para vigiar uma cabana"
+      },
+      {
+        "rotulo": "Riso e hematoma",
+        "frase": "O primeiro golpe em Daisy arranca riso"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Cristo na neve",
+        "frase": "A abertura demora num crucifixo sob a neve, ao som de Morricone. Logo de saída: perdão não passa nessa estrada."
+      },
+      {
+        "rotulo": "Norte e Sul na cabana",
+        "frase": "A sala vira mapa: major da União de um lado, general sulista do outro. A guerra acabou no calendário, não na escolha da cadeira."
+      },
+      {
+        "rotulo": "A lei de John Ruth",
+        "frase": "John Ruth quer Daisy viva na forca, em nome da lei, e no caminho arrebenta o rosto dela. O filme debate justiça e mostra o punho."
+      },
+      {
+        "rotulo": "Largura para suspeitos",
+        "frase": "Tela de épico numa cabana: a largura serve para caber suspeitos. No meio, uma voz invade o filme e diz que você olhou errado."
+      },
+      {
+        "rotulo": "O soco que faz rir",
+        "frase": "O primeiro soco em Daisy faz rir, e a sala cheia de racistas empurra você para o lado de Warren. As duas coisas saem caro."
+      },
+      {
+        "rotulo": "A carta no bolso",
+        "frase": "Warren anda com uma carta de Lincoln que abre portas. O filme não larga esse papel, porque é nele que o país pede para acreditar."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Quentin Tarantino"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Robert Richardson"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Ennio Morricone"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Fred Raskin"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Richard N. Gladstein"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Stacey Sher"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Shannon McIntosh"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Major Marquis Warren",
+        "nome": "Samuel L. Jackson"
+      },
+      {
+        "funcao": "John \"The Hangman\" Ruth",
+        "nome": "Kurt Russell"
+      },
+      {
+        "funcao": "Daisy Domergue",
+        "nome": "Jennifer Jason Leigh"
+      },
+      {
+        "funcao": "Chris Mannix",
+        "nome": "Walton Goggins"
+      },
+      {
+        "funcao": "Bob",
+        "nome": "Demián Bichir"
+      },
+      {
+        "funcao": "Oswaldo Mobray",
+        "nome": "Tim Roth"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "7g1zO5t0bd27Iqn5ZUDJmksOGPJ.jpg"
+    },
+    "cartaz": {
+      "tmdb": "jfTo9U9OgOXODEEspNnYFuZdR1q.jpg"
+    },
+    "direcao": {
+      "tmdb": "dqQIgYgP65tAOcgzXzjbqOQ2BV9.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "7g1zO5t0bd27Iqn5ZUDJmksOGPJ.jpg"
+      },
+      {
+        "tmdb": "dqQIgYgP65tAOcgzXzjbqOQ2BV9.jpg"
+      },
+      {
+        "tmdb": "9jQdllO3v0lZLrmz7W1C9jVT55z.jpg"
+      },
+      {
+        "tmdb": "iWVXhCkL579GYHjQMs6OxTLOcyk.jpg"
+      },
+      {
+        "tmdb": "cDxcPmqwhAfpdHFB8mvIqDZslT9.jpg"
+      },
+      {
+        "tmdb": "8iKMXL7luxnVMAhCxP53Y0OAKsw.jpg"
+      },
+      {
+        "tmdb": "zWGCll0p3x34elDzNEyOKKzT3Fq.jpg"
+      },
+      {
+        "tmdb": "ncTlQsLHZJgOir1kbBSTvSoEZZZ.jpg"
+      },
+      {
+        "tmdb": "ooccnzULstLzvZt4mZ2AA6kzazd.jpg"
+      },
+      {
+        "tmdb": "5zEbHRQ2H672eYT5IoRg5M0592K.jpg"
+      },
+      {
+        "tmdb": "1QTl3YRjL3xHrcx4pydTETAVDUP.jpg"
+      },
+      {
+        "tmdb": "4eboUcfhRVsxIUfmgZMsQpS38GW.jpg"
+      },
+      {
+        "tmdb": "zm7lKFXAyZUPTqBDfdQyFLZRF5V.jpg"
+      },
+      {
+        "tmdb": "3mWWyaNdYEhAnv25s4dvnsCqEBl.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

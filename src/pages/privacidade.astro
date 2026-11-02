@@ -1,0 +1,7 @@
+---
+// /privacidade/: página legal (LegalTemplate, texto em src/data/legal.ts).
+import LegalTemplate from '../components/legal/LegalTemplate.astro';
+import { LEGAL_PAGES } from '../data/legal';
+---
+
+<LegalTemplate page={LEGAL_PAGES.privacy} />

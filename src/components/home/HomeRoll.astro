@@ -1,0 +1,15 @@
+---
+/**
+ * Roll da home (div.home-roll-coll): um cartão por item de ITENS, o aviso e as sessões. O script de ordem
+ * (components/SessoesOrdem.astro) ordena os filhos e tira ou promove o aviso antes de o app.js montar o carrossel a
+ * partir de data-roll="wrapper" / "container" / "item".
+ */
+import { ITENS } from '../../data/films';
+import HomeRollItem from './HomeRollItem.astro';
+---
+
+<div data-roll="wrapper" class="home-roll-coll w-dyn-list">
+  <div data-roll="container" role="list" class="home-roll-w w-dyn-items">
+    {ITENS.map((film) => <HomeRollItem film={film} />)}
+  </div>
+</div>

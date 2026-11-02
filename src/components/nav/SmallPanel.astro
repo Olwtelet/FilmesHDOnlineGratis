@@ -1,0 +1,77 @@
+---
+// Painel pequeno do menu: filtro e uma linha por item (miniatura, título e link direto). Abaixo de 992 px a coluna do
+// ingresso inteira some (webflow.css), então este painel existe só no desktop e no tablet grande.
+//
+// A posição da linha é o índice em que o app.js põe a roda, por isso o filtro em local-menu.js esconde as linhas e nunca
+// as remove. O campo é um <textarea> porque o Hn do bundle captura por posição todo <input> sob [data-menu=w].
+import { ITENS, filmHref, sessaoAttrs, type Film } from '../../data/films';
+import { ROUTES } from '../../data/site';
+import { wfLink } from '../ui/link';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+/** Termos da busca, em minúsculas e sem acentos: local-menu.js dobra o que é digitado do mesmo jeito. */
+function termos(film: Film) {
+  return [...new Set([film.title, film.fullTitle, film.originalTitle, film.director, film.year, ...film.genres, ...film.signals])]
+    .join(' ')
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase();
+}
+---
+
+<div data-menu="smallpanel" class="small-panel">
+  <div class="panel-content-w">
+    <div class="panel-content">
+      <div data-menu="line" class="line-menu light shorter"></div>
+      <div class="menu-filtro-w">
+        <textarea rows="1" wrap="off" spellcheck="false" autocomplete="off" class="menu-filtro" aria-label="Filtrar sessões" placeholder="FILTRAR SESSÕES"></textarea>
+      </div>
+      <div data-menu="line" class="line-menu light"></div>
+      <div class="w-dyn-list">
+        <div role="list" data-lenis-prevent class="menu-films-w w-dyn-items">
+          {
+            ITENS.map((film) => (
+              <div data-roll="menuItem" role="listitem" data-busca={termos(film)} class="menu-film w-dyn-item" {...sessaoAttrs(film)}>
+                <button data-hover="bggrow" class="menu-film-item">
+                  <div class="menu-film-item-w">
+                    <div data-animation-delay="stagger" data-menu="x" class="menu-film-img">
+                      <img src={film.thumb} loading="lazy" width="70" alt="" class="menu-smalll-film-img" />
+                    </div>
+                    <div class="menu-text-title-w">
+                      <div data-animation-delay="stagger" data-a="y" class="menu-film-title menu">{film.title}</div>
+                    </div>
+                  </div>
+                  <div class="dot"></div>
+                  <a aria-label={film.aviso ? 'Abrir a programação' : `Abrir ${film.title}`} {...wfLink(film.aviso ? ROUTES.work : filmHref(film.slug), currentPath, 'menu-film-direct-link w-inline-block')}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 26" width="100%" class="film-direct-link-svg">
+                      <path stroke="currentColor" stroke-dasharray="2 2" d="M23 25H3.2L1 22.333V3.256L3.2 1H23l2 2.051v19.282L23 25Z"></path>
+                      <path fill="currentColor" d="M16.886 12.1C15.856 8.67 13.228 7.933 12 8.005v1.28c2.118 0 3.318 2.153 3.716 3.23-1.182 2.727-2.928 3.159-3.716 3.033v1.448c2.826.122 4.363-2.484 4.882-4.071.087-.268.085-.556.004-.825Z"></path>
+                      <path fill="currentColor" fill-rule="evenodd" d="M9 11.75h7.5v1.5H9v-1.5Z" clip-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                </button>
+                <div data-animation-delay="stagger" data-menu="line" class="line-menu light"></div>
+              </div>
+            ))
+          }
+        </div>
+        <div role="status" hidden class="menu-filtro-vazio">Nenhuma sessão encontrada</div>
+      </div>
+      <div class="menu-dots-w vert">
+        <div class="dots-side-w">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 237 9" width="100%" class="dots-side"><path fill="currentColor" d="M0 9a9 9 0 0 0 9-9h219a9 9 0 0 0 9 9H0Z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 237 63" width="100%"><clipPath id="smallPanelClipTop" clipPathUnits="objectBoundingBox"><path fill="currentColor" d="M0 43.5V9a9 9 0 0 0 9-9h219a9 9 0 0 0 9 9v34.5H0Z" transform="scale(0.004219409283, 0.02298850575)"></path></clipPath></svg>
+        </div>
+        <div class="dots-bg"></div>
+        <div class="dots-side-w">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 237 9" width="100%" class="dots-side flip"><path fill="currentColor" d="M0 9a9 9 0 0 0 9-9h219a9 9 0 0 0 9 9H0Z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 237 63" width="100%"><clipPath id="smallPanelClip" clipPathUnits="objectBoundingBox"><path fill="currentColor" d="M237 0v34.5a9 9 0 0 0-9 9H9a9 9 0 0 0-9-9V0h237Z" transform="scale(0.004219409283, 0.02298850575)"></path></clipPath></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,208 @@
+{
+  "slug": "truth-treachery-2026",
+  "titulo": "Verdade e Traição",
+  "categoria": "Drama",
+  "sessao": {
+    "data": "2026-08-08",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Verdade e Traição",
+      "tituloOriginal": "Truth & Treason",
+      "ano": 2025,
+      "direcao": "Matt Whitaker",
+      "duracao": 121,
+      "classificacao": "16",
+      "generos": [
+        "Drama",
+        "Histórico",
+        "Suspense"
+      ],
+      "trailer": {
+        "youtube": "M0lWlRGVF1M",
+        "canal": "ParisFilmes",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "Verdade & Traição | Trailer Oficial"
+      },
+      "tmdb": 1443940,
+      "imdb": "tt21825416"
+    }
+  ],
+  "sinais": [
+    "drama",
+    "suspense",
+    "histórico",
+    "guerra",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "A capela saúda, o filme perdoa",
+    "leitura": "Hübener tem dezesseis anos, um rádio proibido e papel vermelho. A melhor ideia do filme vem cedo: na capela, o líder da congregação faz a saudação nazista e todos cantam um hino. Depois Verdade e Traição começa a distribuir desculpas, e a excomunhão do garoto fica de fora.",
+    "descricao": "Em Hamburgo, um adolescente mórmon ouve a BBC proibida e espalha panfletos contra Hitler. O filme aponta o nazismo na igreja dele e depois alivia.",
+    "notasHome": [
+      {
+        "rotulo": "Na capela",
+        "frase": "Saudação nazista antes do hino"
+      },
+      {
+        "rotulo": "Mussener",
+        "frase": "A Gestapo ganha um pai de luto"
+      },
+      {
+        "rotulo": "Corte na história",
+        "frase": "A excomunhão fica fora do filme"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Papel vermelho",
+        "frase": "Hübener é estagiário, tem dezesseis anos e um rádio proibido. A resistência dele cabe numa folha vermelha batida à máquina."
+      },
+      {
+        "rotulo": "Saudação, depois hino",
+        "frase": "A saudação nazista sobe na capela e todos cantam Do What Is Right. Hübener sai dali com a frase que vai recrutar os amigos."
+      },
+      {
+        "rotulo": "Desculpas para todos",
+        "frase": "Zander quase denuncia o garoto e recua. A excomunhão que ele anotou na ficha real fica de fora. A verdade do título tem limite."
+      },
+      {
+        "rotulo": "Contornos de hino",
+        "frase": "A trilha de Aaron Zigman tem contornos de hino. A igreja que barrou Salomon na porta volta pelo som e abençoa os panfletos."
+      },
+      {
+        "rotulo": "Uma filha sob as bombas",
+        "frase": "Mussener espanca Hübener e chora uma filha morta num bombardeio aliado. Você sai com pena do agente da Gestapo. Repare."
+      },
+      {
+        "rotulo": "Salomon na porta",
+        "frase": "O cartaz barra Salomon na igreja, e o filme segue o garoto mórmon que reagiu. Quem conta a história de quem ficou do lado de fora?"
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Matt Whitaker & Ethan Vincent"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Bianca Cline"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Aaron Zigman"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Adam L. Banks"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "John Foss"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Russ Kendall"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Matt Whitaker"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Helmuth Hübener",
+        "nome": "Ewan Horrocks"
+      },
+      {
+        "funcao": "Erwin Mussener",
+        "nome": "Rupert Evans"
+      },
+      {
+        "funcao": "Karl-Heinz Schnibbe",
+        "nome": "Ferdinand McKay"
+      },
+      {
+        "funcao": "Rudi Wobbe",
+        "nome": "Daf Thomas"
+      },
+      {
+        "funcao": "Salomon Schwarz",
+        "nome": "Nye Occomore"
+      },
+      {
+        "funcao": "Emma Hübener",
+        "nome": "Joanna Christie"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "yUBjDdAfZqg09f1Uu3Lu5cw2xPP.jpg"
+    },
+    "cartaz": {
+      "tmdb": "yUBjDdAfZqg09f1Uu3Lu5cw2xPP.jpg",
+      "recorte": {
+        "x": 0.07,
+        "y": 0,
+        "largura": 0.375,
+        "altura": 1
+      }
+    },
+    "direcao": {
+      "tmdb": "uXNmzaA0i7ugrR1GizlEpLdAcwK.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "yUBjDdAfZqg09f1Uu3Lu5cw2xPP.jpg"
+      },
+      {
+        "tmdb": "uXNmzaA0i7ugrR1GizlEpLdAcwK.jpg"
+      },
+      {
+        "tmdb": "yUBjDdAfZqg09f1Uu3Lu5cw2xPP.jpg",
+        "recorte": {
+          "x": 0.45,
+          "y": 0.05,
+          "largura": 0.55,
+          "altura": 0.55
+        }
+      },
+      {
+        "tmdb": "uXNmzaA0i7ugrR1GizlEpLdAcwK.jpg",
+        "recorte": {
+          "x": 0.15,
+          "y": 0.1,
+          "largura": 0.5,
+          "altura": 0.5
+        }
+      },
+      {
+        "tmdb": "yUBjDdAfZqg09f1Uu3Lu5cw2xPP.jpg",
+        "recorte": {
+          "x": 0.05,
+          "y": 0.05,
+          "largura": 0.5,
+          "altura": 0.5
+        }
+      },
+      {
+        "tmdb": "uXNmzaA0i7ugrR1GizlEpLdAcwK.jpg",
+        "recorte": {
+          "x": 0.45,
+          "y": 0.05,
+          "largura": 0.5,
+          "altura": 0.5
+        }
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

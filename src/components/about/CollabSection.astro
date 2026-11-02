@@ -1,0 +1,45 @@
+---
+/**
+ * Canais do site em /sobre/: Discord, YouTube e Steam, cada um dentro da moldura de ingresso (o id da máscara é o mesmo
+ * em todos os itens). O CSS original esconde este bloco em todas as larguras.
+ */
+import AboutArticle from './AboutArticle.astro';
+import type { ABOUT_COLLABORATORS } from '../../data/about';
+import { COLLAB_FRAME_D, COLLAB_MASK_D } from './svg-paths';
+
+interface Props {
+  collaborators: typeof ABOUT_COLLABORATORS;
+}
+const { collaborators } = Astro.props;
+const MASK_ID = 'path-1-inside-1_2707_6883';
+---
+
+<AboutArticle title={collaborators.title} class="s h-auto flex-center pt-lg" css>
+  <div class="wrap-mt-3">
+    <div class="w-dyn-list">
+      <div role="list" class="collab-w w-dyn-items">
+        {
+          collaborators.items.map((c) => (
+            <div role="listitem" class="collab-item w-dyn-item">
+              <div class="collab-row">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 274 394" width="100%" class="collab-svg">
+                  <mask id={MASK_ID} fill="currentColor">
+                    <path fill-rule="evenodd" d={COLLAB_MASK_D} clip-rule="evenodd" />
+                  </mask>
+                  <path fill="currentColor" d={COLLAB_FRAME_D} mask={`url(#${MASK_ID})`} />
+                </svg>
+                <div class="abs flex-cent z-2">
+                  <img src={c.logo} loading="lazy" alt="" class="collab-logo" />
+                </div>
+              </div>
+              <div class="collab-row-xs">
+                <div class="roll-cont-eyeb parish">{c.label}</div>
+                <a href={c.href} target="_blank" rel="noopener noreferrer" class="text-block-11">{c.name}</a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</AboutArticle>

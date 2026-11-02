@@ -1,0 +1,38 @@
+---
+/**
+ * Linhas Direção / Ano / Gênero de um cartão do roll (.line-callout-w.home). Os ids w-node são células de grade do
+ * template do Webflow, iguais em todos os cartões; data-a="line" move as linhas. O span.text-span do primeiro rótulo
+ * tem um deslocamento próprio em webflow.css.
+ */
+interface Props {
+  director: string;
+  year: string;
+  category: string;
+}
+const { director, year, category } = Astro.props;
+---
+
+<div class="line-callout-w home">
+  <ul role="list" class="linecallout-list home w-list-unstyled">
+    <li class="linecallout-item home">
+      <div data-a="line" id="w-node-f1e178c6-afef-1ee0-728f-c37b4226d1a8-03d43c19" class="line top"></div>
+      <div class="paragraph">
+        <span class="text-span">Direção</span>
+      </div>
+      <div id="w-node-_74b69705-4031-5431-3c93-9b9edca4e791-03d43c19" class="paragraph">{director}</div>
+      <div data-a="line" id="w-node-ef5880fd-72ab-3a1d-a26b-8f9852aaae96-03d43c19" class="line b-up"></div>
+    </li>
+    <li class="linecallout-item home">
+      <div>
+        <span class="paragraph">Ano</span>
+      </div>
+      <div>{year}</div>
+      <div data-a="line" id="w-node-b7a2f439-9204-519a-bd01-3d04a1be8c6d-03d43c19" class="line b-up"></div>
+    </li>
+    <li class="linecallout-item home">
+      <div class="paragraph">Gênero</div>
+      <div class="paragraph">{category}</div>
+      <div data-a="line" id="w-node-_5e88df4a-6be3-0c97-d7de-bbb26af2a977-03d43c19" class="line b-up"></div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,24 @@
+---
+/**
+ * Notas curatoriais de um cartão do roll (div.awards-w.w-richtext), lidas pelo app.js em data-roll="reviews". Aparecem
+ * duas vezes por cartão: em .mobile-reviews (celular) e em .roll-cont-col.reviews (desktop).
+ *
+ * O <figure> vazio é obrigatório: sg() no bundle separa os blocos por "<figure" e só cria o parallax de cada um quando
+ * o pedaço tem <figure, <p e <h3. Não há estrelas nem crítico atribuído.
+ */
+import type { Note } from '../../data/films';
+
+interface Props {
+  notes: Note[];
+  mobile?: boolean;
+}
+const { notes, mobile = false } = Astro.props;
+---
+
+<div data-roll="reviews" data-parallax="2" class={mobile ? 'awards-w mobile w-richtext' : 'awards-w w-richtext'}>
+  {
+    notes.map((note) => (
+      <Fragment><figure class="w-richtext-align-center w-richtext-figure-type-image"></figure><p>{note.label}</p><h3>{note.text}</h3></Fragment>
+    ))
+  }
+</div>

@@ -1,0 +1,21 @@
+---
+// Canhoto do ingresso do menu em /sobre/ (fixo): nome, sala e número de sessões da curadoria.
+import { FILMS } from '../../data/films';
+import { SITE } from '../../data/site';
+
+const total = String(FILMS.length).padStart(3, '0');
+---
+
+<div class="about-menu-w center">
+  <div class="about-menu-bottom-bar">
+    <div class="aobut-menu-tx-w has-line">
+      <div class="about-menu-tx">{SITE.shortName}</div>
+    </div>
+    <div class="aobut-menu-tx-w has-line is-larger">
+      <div class="about-menu-tx">SALA&nbsp;24</div>
+    </div>
+    <div class="aobut-menu-tx-w">
+      <div class="about-menu-tx">{total}</div>
+    </div>
+  </div>
+</div>

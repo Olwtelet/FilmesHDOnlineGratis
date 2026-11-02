@@ -1,0 +1,203 @@
+{
+  "slug": "v-for-vendetta-2005",
+  "titulo": "V de Vingança",
+  "categoria": "Ação",
+  "sessao": {
+    "data": "2026-07-04",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "V de Vingança",
+      "tituloOriginal": "V for Vendetta",
+      "ano": 2005,
+      "direcao": "James McTeigue",
+      "duracao": 132,
+      "classificacao": "16",
+      "generos": [
+        "Ação",
+        "Drama",
+        "Ficção Científica"
+      ],
+      "trailer": {
+        "youtube": "V5VGq23aZ-g",
+        "canal": "Warner Bros. Entertainment",
+        "idioma": "en",
+        "tituloVideo": "V for Vendetta | 4K Trailer | Warner Bros. Entertainment"
+      },
+      "tmdb": 752,
+      "imdb": "tt0434409"
+    }
+  ],
+  "sinais": [
+    "ação",
+    "drama",
+    "ficção-científica",
+    "cult",
+    "clássico",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "A bomba vem com orquestra",
+    "leitura": "Um tribunal explode em Londres ao som de Tchaikovsky, e a cena espera palmas. O discurso fala em ideias o tempo todo, o enredo segue o acerto de contas de um homem. O povo passa quase toda a história vendo TV em casa, e a revolução vai para quem faz o melhor programa.",
+    "descricao": "Numa Inglaterra fascista, um mascarado explode prédios ao som de orquestra e toma a TV estatal. O filme ama seu terrorista e quer que você o ame também.",
+    "notasHome": [
+      {
+        "rotulo": "Old Bailey",
+        "frase": "O filme pede palmas para um atentado"
+      },
+      {
+        "rotulo": "O sorriso fixo",
+        "frase": "Hugo Weaving atua sem mexer o rosto"
+      },
+      {
+        "rotulo": "Culpa na TV",
+        "frase": "Acusa o público e depois o absolve"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Fogos sobre o Old Bailey",
+        "frase": "Londres, fogos, Tchaikovsky nos alto-falantes, um tribunal em pedaços. A cena é montada para a plateia comemorar um atentado."
+      },
+      {
+        "rotulo": "Ideia contra vingança",
+        "frase": "V jura ser uma ideia, e ideias não morrem com bala. O enredo segue uma lista de acertos de contas. O título é o mais honesto aqui."
+      },
+      {
+        "rotulo": "A cela de Evey",
+        "frase": "O medo é o inimigo declarado. Mesmo assim, Evey passa por uma cela, e o que sai dali se chama liberdade. O método pede outro nome."
+      },
+      {
+        "rotulo": "Um rosto que não muda",
+        "frase": "Hugo Weaving trabalha atrás de um sorriso parado, só com voz, cabeça e mãos. Sem rosto para julgar, fica fácil amar o homem."
+      },
+      {
+        "rotulo": "Plateia de sofá",
+        "frase": "O povo do filme acompanha tudo pela TV, em pubs e salas de estar. Você assiste igual, e o programa de V é melhor que o do governo."
+      },
+      {
+        "rotulo": "O culpado no espelho",
+        "frase": "V diz na TV que o culpado está no espelho. A investigação de Finch conta outra história, de um povo enganado. O filme não escolhe."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "The Wachowskis"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "David Lloyd"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Adrian Biddle"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Dario Marianelli"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Joel Silver"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Grant Hill"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "The Wachowskis"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Evey Hammond",
+        "nome": "Natalie Portman"
+      },
+      {
+        "funcao": "V",
+        "nome": "Hugo Weaving"
+      },
+      {
+        "funcao": "Eric Finch",
+        "nome": "Stephen Rea"
+      },
+      {
+        "funcao": "Gordon Deitrich",
+        "nome": "Stephen Fry"
+      },
+      {
+        "funcao": "Adam Sutler",
+        "nome": "John Hurt"
+      },
+      {
+        "funcao": "Peter Creedy",
+        "nome": "Tim Pigott-Smith"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "sFEYsEfzTx7hhjetlNrme8B5OUo.jpg"
+    },
+    "cartaz": {
+      "tmdb": "Awk4uagfl0wz6WiqlCitfswHwcT.jpg"
+    },
+    "direcao": {
+      "tmdb": "7pFgSoKuq3INFBlNUYoK5cx9n9P.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "sFEYsEfzTx7hhjetlNrme8B5OUo.jpg"
+      },
+      {
+        "tmdb": "7pFgSoKuq3INFBlNUYoK5cx9n9P.jpg"
+      },
+      {
+        "tmdb": "fv4XvbQW2NDEXV8Zdxhmv0wHuu3.jpg"
+      },
+      {
+        "tmdb": "mnm1WMXMMS77NtVHbs3sQ27AVbm.jpg"
+      },
+      {
+        "tmdb": "cKMZqcYKMvuoESDa8O5NMojdmfL.jpg"
+      },
+      {
+        "tmdb": "jFMjSMpTiUU5FYvlORTz7YveNqe.jpg"
+      },
+      {
+        "tmdb": "hd9v1P8eHHlXofqR04mdJn8Va7x.jpg"
+      },
+      {
+        "tmdb": "yv5fcr3YhjdqEHKSxzkqdJ7icrl.jpg"
+      },
+      {
+        "tmdb": "84DvFeWnbhGHyTDCuGAo10j9MZ5.jpg"
+      },
+      {
+        "tmdb": "b8x3sTom98rjJLzhEcW9d41qMzq.jpg"
+      },
+      {
+        "tmdb": "gj7HCslrHhaVY0R0yyMSHn3UDpt.jpg"
+      },
+      {
+        "tmdb": "4vU0t17acqu8eeV3KypxD5QUpyZ.jpg"
+      },
+      {
+        "tmdb": "h3O3peJByVG5ufR9OAkk2FqT6jh.jpg"
+      },
+      {
+        "tmdb": "sGcqFRwQEpgp4pD1DUewf1vSjbQ.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

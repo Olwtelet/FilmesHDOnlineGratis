@@ -1,0 +1,103 @@
+---
+/**
+ * Herói de /sobre/ (header[data-track="abouthero"]): duas colunas com foto em arco em volta do quadrado do símbolo, o
+ * título, a moldura tracejada que se redimensiona (data-svg="resize") e o arco do celular e tablet.
+ * A seta leva até o bloco tipográfico (#anchor).
+ */
+import DownArrowButton from '../ui/DownArrowButton.astro';
+import HeroArch from './HeroArch.astro';
+import HeroSmallText from './HeroSmallText.astro';
+import type { ABOUT_HERO } from '../../data/about';
+import LogoSquare from '../ui/LogoSquare.astro';
+import { ARCH_CLIP_D } from './svg-paths';
+
+interface Props {
+  hero: typeof ABOUT_HERO;
+  /** id of the section the down arrow links to */
+  anchor: string;
+}
+const { hero, anchor } = Astro.props;
+const { mobileImage } = hero;
+---
+
+<header data-track="abouthero" class="s about-hero">
+  <HeroArch image={hero.leftImage} clipId="arch2" />
+  <div data-once="true" data-a="group" class="col-55 flex-center rel-w">
+    <LogoSquare class="mb-0" />
+    <a href={`#${anchor}`} class="abs bottom flex-center mb-50 arrow-link-w w-inline-block" aria-label="Descer para o texto">
+      <DownArrowButton />
+    </a>
+    <HeroSmallText lines={hero.topLines} />
+    <div class="about-he-w full">
+      <h1 class="about-he">
+        {
+          hero.words.map((word) => (
+            <span class="span-clip">
+              <span data-a="item" class="span-move">
+                {word}
+              </span>
+            </span>
+          ))
+        }
+      </h1>
+      <div class="abs cs-hero-lines">
+        {Array.from({ length: hero.headingLines }, () => <div data-a="line" class="line" />)}
+      </div>
+    </div>
+    <HeroSmallText lines={hero.bottomLines} />
+    <div data-svg="resizer" class="abs">
+      <div class="abs svg-w">
+        <svg width="100%" data-svg="resize" height="100%" data-reveal="svg" class="svg-6">
+          <rect
+            id="responsive-rect"
+            x="2"
+            y="2"
+            width="100"
+            height="100"
+            rx="11.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-dasharray="4"
+            vector-effect="non-scaling-stroke"
+            opacity=".6"
+          ></rect>
+          <rect
+            id="responsive-rect"
+            x="2"
+            y="2"
+            width="100"
+            height="100"
+            rx="11.5"
+            stroke="black"
+            stroke-width="10"
+            vector-effect="non-scaling-stroke"
+            class="reveal"
+          ></rect>
+        </svg>
+      </div>
+    </div>
+    <div class="abs mobile-svg tablet">
+      <div class="col-g tall-arch-ratio mobile-bg">
+        <div class="abs arch-img-w">
+          <div class="arch-img-mask-w">
+            <img
+              src={mobileImage.src}
+              loading="eager"
+              sizes={mobileImage.sizes}
+              srcset={mobileImage.srcset}
+              alt=""
+              class="arch-masked-img"
+            />
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 364 773" width="100%" class="arch-img-mask _2">
+            <clipPath clipPathUnits="objectBoundingBox" id="arch-mobile">
+              <path fill="currentColor" d={ARCH_CLIP_D} transform="scale(0.002750426316, 0.001294498382)"></path>
+            </clipPath>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <HeroArch image={hero.rightImage} />
+</header>

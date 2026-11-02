@@ -1,0 +1,47 @@
+---
+// Ingresso do menu: uma linha por item (miniatura, título, gênero / ano / minutos), trocada pelo app.js pela posição em
+// data-menu="films". Nas páginas de sessão, data-id precisa ser igual ao data-case da página. Os ids w-node são células
+// de grade do template do Webflow, repetidas em todas as linhas.
+import { ITENS, sessaoAttrs } from '../../data/films';
+---
+
+<div class="menu-row-film-w">
+  <div class="collection-list-wrapper w-dyn-list">
+    <div data-menu="films" role="list" class="menu-coll-w w-dyn-items">
+      {
+        ITENS.map((film) => (
+          <div data-id={film.slug} role="listitem" class="menu-row-film-item w-dyn-item" {...sessaoAttrs(film)}>
+            <div class="menu-row-top">
+              <div data-menu="mainx" class="top-m-film-img">
+                <img src={film.thumb} loading="lazy" alt="" class="menu-main-film-img" />
+              </div>
+              <div data-menu="mainyr" class="top-m-film-title">{film.title}</div>
+            </div>
+            <div class="menu-row-bot">
+              <div data-menu="mainline" class="line black"></div>
+              <div class="clip-anim-w">
+                <div data-menu="mainy" class="top-m-film-info-w">
+                  <div id="w-node-_5f7cb390-63c3-52da-5bb7-2905d4a63826-d4a6380e" class="info-grid-w">
+                    <div id="w-node-_5f7cb390-63c3-52da-5bb7-2905d4a63827-d4a6380e" class="info-grid-tx">{film.category}</div>
+                  </div>
+                  <div id="w-node-_5f7cb390-63c3-52da-5bb7-2905d4a63829-d4a6380e" class="info-grid-w centeer">
+                    <div id="w-node-_5f7cb390-63c3-52da-5bb7-2905d4a6382a-d4a6380e" class="info-grid-tx">{film.firstYear}</div>
+                  </div>
+                  <div id="w-node-_5f7cb390-63c3-52da-5bb7-2905d4a6382c-d4a6380e" class="info-grid-w">
+                    <div class="info-grid-tx">
+                      <div class="text-block-7">MIN.</div>
+                      <div id="w-node-_5f7cb390-63c3-52da-5bb7-2905d4a6382d-d4a6380e" class="text-block-6">{film.aviso ? '—' : film.minutes}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="abs menu-arrow-w">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 8" width="100%" data-a="arrow" class="svg arrow-line"><path stroke="currentColor" stroke-width="1.5" d="m1 1 5.086 5.086a2 2 0 0 0 2.828 0L14 1"></path></svg>
+  </div>
+</div>

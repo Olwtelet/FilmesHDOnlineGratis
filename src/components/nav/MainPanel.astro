@@ -1,0 +1,114 @@
+---
+// Painel principal do menu: links grandes, links legais, redes, copyright e os cantos furados do ingresso.
+import { SOCIAL_ICONS } from '../footer/social-icons';
+import { wfLink } from '../ui/link';
+import { NAV_MAIN_LINKS, NAV_LEGAL_LINKS, NAV_COPYRIGHT } from '../../data/site';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+---
+
+<div data-menu="mainpanel" class="main-panel">
+  <div class="panel-content-w">
+    <div class="panel-content">
+      <div class="lp-line-t-w">
+        <div class="line-menu holed first"></div>
+        <div data-hide="mobile" class="line-menu holed last"></div>
+      </div>
+      <ul data-hover="mainlinkgroup" role="list" class="menu-link-list">
+        {
+          NAV_MAIN_LINKS.map((link, i) => (
+            <li class="menu-link-list-item">
+              <a data-hover="mainlink" {...wfLink(link.href, currentPath, 'menu-link large w-inline-block')}>
+                <div data-delay={`.${i + 1}`} data-counter="menuLinkText" data-a="y" class="menu-link-list-text">{link.label}</div>
+              </a>
+              {link.prerender && <link rel="prerender" href={link.href} />}
+            </li>
+          ))
+        }
+      </ul>
+      <div data-delay=".2" data-menu="line" class="line-menu light"></div>
+      <ul role="list" class="menu-link-list legal w-list-unstyled">
+        {
+          NAV_LEGAL_LINKS.map((link, i) => (
+            <li id={link.nodeId} class="menu-link-list-item">
+              <a {...wfLink(link.href, currentPath, 'menu-link xs light w-inline-block')}>
+                <div data-delay={`.${i + 3}`} data-a="y">{link.label}</div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div data-delay=".3" data-menu="line" class="line-menu light"></div>
+      <ul role="list" class="menu-link-list social w-list-unstyled">
+        {
+          SOCIAL_ICONS.map((rede, i) => (
+            <li id={i === 0 ? 'w-node-_5f7cb390-63c3-52da-5bb7-2905d4a63882-d4a6380e' : undefined} class="menu-link-list-item">
+              <a href={rede.href} target="_blank" rel="noopener noreferrer" aria-label={rede.label} class="menu-link social w-inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" aria-hidden="true" class="svg social">
+                  <path d={rede.d} fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div data-delay=".4" data-menu="line" class="line-menu light"></div>
+      <div class="copyright-menu-text">
+        <div class="light">{NAV_COPYRIGHT}</div>
+      </div>
+      <div class="menu-dots-w vert">
+        <div class="corner-hole-bg">
+          <div class="hole-block">
+            <div class="hole-corner">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" width="100%" class="corner-svg tl"><path fill="currentColor" d="M75 0C33.583 0 0 33.583 0 75V0h75Z" class="corner-fill"></path></svg>
+            </div>
+            <div class="hole-block filler center-hole-size"></div>
+            <div data-hide="mobile" class="hole-corner tab-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" width="100%" class="corner-svg tr">
+                <g clip-path="url(#clip0_2659_6334)">
+                  <path fill="currentColor" d="M75 0C33.583 0 0 33.583 0 75V0h75Z" class="corner-fill"></path>
+                  <path d="M75 0C33.583 0 0 33.583 0 75h75V0Z" class="corner-clip"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2659_6334">
+                    <path fill="currentColor" d="M0 0h75v75H0z"></path>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div data-hide="mobile" class="hole-corner tab-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" width="100%" class="corner-svg tl">
+                <g clip-path="url(#clip0_2659_6334)">
+                  <path fill="currentColor" d="M75 0C33.583 0 0 33.583 0 75V0h75Z" class="corner-fill"></path>
+                  <path d="M75 0C33.583 0 0 33.583 0 75h75V0Z" class="corner-clip"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2659_6334">
+                    <path fill="currentColor" d="M0 0h75v75H0z"></path>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="hole-block filler"></div>
+            <div class="hole-corner">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" width="100%" class="corner-svg tr"><path fill="currentColor" d="M75 0C33.583 0 0 33.583 0 75V0h75Z" class="corner-fill"></path></svg>
+            </div>
+          </div>
+          <div class="hole-block filler"></div>
+          <div class="hole-block">
+            <div class="hole-corner bl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" width="100%" class="corner-svg"><path fill="currentColor" d="M75 0C33.583 0 0 33.583 0 75V0h75Z" class="corner-fill"></path></svg>
+            </div>
+            <div class="hole-block filler"></div>
+            <div class="hole-corner">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" width="100%" class="corner-svg"><path fill="currentColor" d="M75 0C33.583 0 0 33.583 0 75V0h75Z" class="corner-fill"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

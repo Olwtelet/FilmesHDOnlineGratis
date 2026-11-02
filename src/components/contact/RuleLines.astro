@@ -1,0 +1,14 @@
+---
+/**
+ * Fios horizontais desenhados pelo app.js (data-a="line") sobre um bloco de contato:
+ * div.abs.flexve > N x div.line.black. O título tem um fio a mais que linhas de texto; cada linha de contato tem dois.
+ */
+interface Props {
+  count: number;
+}
+const { count } = Astro.props;
+---
+
+<div class="abs flexve">
+  {Array.from({ length: count }, () => <div data-a="line" class="line black"></div>)}
+</div>

@@ -1,0 +1,204 @@
+{
+  "slug": "limitless-2011",
+  "titulo": "Sem Limites",
+  "categoria": "Ficção Científica",
+  "sessao": {
+    "data": "2026-08-22",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Sem Limites",
+      "tituloOriginal": "Limitless",
+      "ano": 2011,
+      "direcao": "Neil Burger",
+      "duracao": 105,
+      "classificacao": "14",
+      "generos": [
+        "Ficção Científica",
+        "Suspense",
+        "Thriller"
+      ],
+      "trailer": {
+        "youtube": "JMU_ksS3fq4",
+        "canal": "Imagem Filmes",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "Sem Limites (2011) Trailer Nacional Legendado."
+      },
+      "tmdb": 51876,
+      "imdb": "tt1219289"
+    }
+  ],
+  "sinais": [
+    "ficção-científica",
+    "suspense",
+    "thriller",
+    "drama",
+    "obsessão",
+    "cult",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Gênio para quê? Para a bolsa.",
+    "leitura": "Sem Limites fala em potencial humano e só imagina um currículo de Wall Street. Eddie Morra toma a pílula, termina o livro travado e, no passo seguinte, pega dinheiro com um agiota para operar na bolsa. O filme ainda pinta tudo de dourado.",
+    "descricao": "Um escritor travado toma uma pílula que abre a mente inteira e corre para a bolsa. Thriller sobre o gênio humano, com a imaginação de um anúncio.",
+    "notasHome": [
+      {
+        "rotulo": "Depois do livro",
+        "frase": "Termina o livro e vai para a bolsa"
+      },
+      {
+        "rotulo": "Em dourado",
+        "frase": "A imagem fica dourada e a gente quer"
+      },
+      {
+        "rotulo": "Dezoito horas",
+        "frase": "Mulher morta? Contrata-se advogado"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A pílula do ex-cunhado",
+        "frase": "Eddie é um escritor sem livro, sem dinheiro e sem namorada quando o ex-cunhado lhe oferece uma pílula. Até ali, Nova York é cinza."
+      },
+      {
+        "rotulo": "Cem mil com um agiota",
+        "frase": "Com a mente inteira à mão, Eddie aprende línguas, pega cem mil com Gennady e vai para a bolsa. Outro destino nem lhe ocorre."
+      },
+      {
+        "rotulo": "O alerta que vende",
+        "frase": "O filme avisa que a droga cobra caro e a filma como anúncio. A abstinência vira logística: dose, comida, sono, estoque."
+      },
+      {
+        "rotulo": "Zoom sem fim",
+        "frase": "A câmera atravessa Nova York num zoom que nunca chega, e as letras caem do teto sobre Eddie. Pensar, aqui, é velocidade."
+      },
+      {
+        "rotulo": "Dezoito horas apagadas",
+        "frase": "Eddie perde dezoito horas e uma mulher aparece morta num hotel. Ele contrata um advogado, e o crime vira problema de agenda."
+      },
+      {
+        "rotulo": "Efeito colateral",
+        "frase": "Cada apagão e cada capanga prometem um acerto de contas. Fica para a sessão decidir se era ameaça ou só mais um anúncio da pílula."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Leslie Dixon"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Alan Glynn"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Jo Willems"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Paul Leonard-Morgan"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Leslie Dixon"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Scott Kroopf"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Ryan Kavanaugh"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Eddie Morra",
+        "nome": "Bradley Cooper"
+      },
+      {
+        "funcao": "Carl Van Loon",
+        "nome": "Robert De Niro"
+      },
+      {
+        "funcao": "Lindy",
+        "nome": "Abbie Cornish"
+      },
+      {
+        "funcao": "Gennady",
+        "nome": "Andrew Howard"
+      },
+      {
+        "funcao": "Melissa Gant",
+        "nome": "Anna Friel"
+      },
+      {
+        "funcao": "Vernon Gant",
+        "nome": "Johnny Whitworth"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "1wsl5RFtJdrEia9U7LTMq2bcOwW.jpg"
+    },
+    "cartaz": {
+      "tmdb": "r8anWUCVK7MZEolcfPrM9eFkRO4.jpg"
+    },
+    "direcao": {
+      "tmdb": "9BrEqPLAJVnDBxV0Fm1lKJ1WSmv.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "1wsl5RFtJdrEia9U7LTMq2bcOwW.jpg"
+      },
+      {
+        "tmdb": "9BrEqPLAJVnDBxV0Fm1lKJ1WSmv.jpg"
+      },
+      {
+        "tmdb": "bPsUUR9uY7mO2Sbql6MDVzigzgI.jpg"
+      },
+      {
+        "tmdb": "sXagoyyNpW1Gp9ijTfiepLXWqdP.jpg"
+      },
+      {
+        "tmdb": "bdDcO7EjJ5p7eO3rpluPHuXKDBN.jpg"
+      },
+      {
+        "tmdb": "hgP3DpOPgmbDRJYTfUVy4L83wXr.jpg"
+      },
+      {
+        "tmdb": "glCaVq3xLZScilMqv9yS0sJuw0m.jpg"
+      },
+      {
+        "tmdb": "5FsjxutoW2rCoPnY1m1m3KzOtqh.jpg"
+      },
+      {
+        "tmdb": "4Wc4jdGG1AlSl5z1b1h4Zaa0P13.jpg"
+      },
+      {
+        "tmdb": "gk0tSU5tbmtWBBe31CmU1qeaiVq.jpg"
+      },
+      {
+        "tmdb": "nBQzrxjf9RBdt3fBbm0AOwwMBEH.jpg"
+      },
+      {
+        "tmdb": "o3YDMn1ZBLsT372szJfCc5UxDkf.jpg"
+      },
+      {
+        "tmdb": "A6Af63l1CiOz3KpJokdA7ga8xzd.jpg"
+      },
+      {
+        "tmdb": "mcVNmTjUFS0U6mhxJRhsP8zhMeP.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 1
+}

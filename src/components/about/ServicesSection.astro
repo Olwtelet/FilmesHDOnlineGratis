@@ -1,0 +1,34 @@
+---
+/** "O QUE FAZEMOS" em /sobre/: linhas numeradas; cada linha do título é separada por um <br>. */
+import AboutArticle from './AboutArticle.astro';
+import type { ABOUT_SERVICES } from '../../data/about';
+
+interface Props {
+  services: typeof ABOUT_SERVICES;
+}
+const { services } = Astro.props;
+---
+
+<AboutArticle title={services.title}>
+  <div class="services-w">
+    {
+      services.items.map((s) => (
+        <div class="service-item">
+          <div class="service-header">
+            <div class="roll-cont-eyeb parish mb-0">{s.label}</div>
+          </div>
+          <div class="service-row">
+            <h3 class="service-he">
+              {s.lines.map((line, i) => (
+                <Fragment>
+                  {i > 0 && <br />}
+                  {line}
+                </Fragment>
+              ))}
+            </h3>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</AboutArticle>

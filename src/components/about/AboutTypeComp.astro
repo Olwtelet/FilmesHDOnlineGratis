@@ -1,0 +1,58 @@
+---
+/**
+ * Composição tipográfica de /sobre/ (section.about-type-comp, data-a="abouttext"): títulos do catálogo, a declaração de
+ * quatro linhas, o bloco de formatos e a palavra grande com o colofão. O bundle lê tudo por posição: ver data/about.ts.
+ * Também é o destino da seta do herói (id).
+ */
+import type { ABOUT_TYPE_COMP, AboutTitle } from '../../data/about';
+
+interface Props {
+  comp: typeof ABOUT_TYPE_COMP;
+}
+const { comp } = Astro.props;
+const titleClass = (t: AboutTitle) => (t.mod ? `about-title-tx ${t.mod}` : 'about-title-tx');
+---
+
+<section id={comp.id} data-a="abouttext" class="s fullbleed about-type-comp">
+  <div class="about-struct-tx p-10">
+    {comp.titles.map((t) => <div class={titleClass(t)}>{t.text}</div>)}
+  </div>
+  <div class="about-sm-text">
+    <div class="about-small-text-wrap">
+      {
+        comp.statement.map((line) => (
+          <div class="about-small-text-line">
+            {line.map((cell) => (
+              <div>{cell}</div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="about-md-text">
+    <div class="div-block-12">
+      {
+        comp.formats.map((words, i) => (
+          <div class={i === 0 ? 'div-block-11' : 'div-block-11 pl-20'}>
+            {i > 0 && <div class="_5-line about" />}
+            {words.map((w) => (
+              <div class="text-block-12">{w}</div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="about-xl-text mobile">
+    <div class="text-block-9">{comp.xlWord}</div>
+    <div>
+      <div class="about-struct-tx">
+        {comp.xlTitles.map((t) => <div class={titleClass(t)}>{t.text}</div>)}
+      </div>
+    </div>
+    <div class="about-small-struct">
+      {comp.colophon.map((line) => <div>{line}</div>)}
+    </div>
+  </div>
+</section>

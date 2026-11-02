@@ -1,0 +1,62 @@
+---
+// LEITURAS (div.s.full): slider de arrastar (data-reviews) com as notas da curadoria, com barra de progresso e botões.
+// São sempre 6 slides, o que cobre a tela até 2560 px; sem atribuição a crítico e sem aspas.
+// O contador é texto fixo porque o bundle nunca o atualiza: mostra o total real em vez de uma posição.
+import TicketHeading from './TicketHeading.astro';
+import DynList from './DynList.astro';
+import ReviewCardSvg from './svg/ReviewCardSvg.astro';
+import DownArrowButton from '../ui/DownArrowButton.astro';
+import type { Note } from '../../data/films';
+
+interface Props {
+  readings: Note[];
+}
+const { readings } = Astro.props;
+---
+
+<div data-color="black" class="s full">
+  <TicketHeading label="LEITURAS" />
+  <DynList listClass="reviews-slider-c w-dyn-list" itemsClass="reviews-slider-w w-dyn-items" itemsAttrs={{ 'data-reviews': 'wrapper' }}>
+    {
+      readings.map((r) => (
+        <div data-reviews="slide" role="listitem" class="review-slider-slide w-dyn-item">
+          <div class="review-slide-cont">
+            <ReviewCardSvg />
+            <div class="red-pause-w">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="review-tx-w">
+              <div>
+                <div class="roll-cont-eyeb parish mobile-mb">{r.label}</div>
+                <div class="review-he">{r.text}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </DynList>
+  <div class="reviews-slider-bar">
+    <div class="slider-bar-col">
+      <div class="roll-cont-eyeb parish mb-0 darker slider">{readings.length}&nbsp;NOTAS</div>
+    </div>
+    <div data-hide="mobile" class="slider-bar-col expand center">
+      <div class="slider-progress-bar">
+        <div data-reviews="progress" class="fill-bar"></div>
+        <div class="dash-bar"></div>
+      </div>
+    </div>
+    <div data-reviews="prevnext" class="slider-bar-col ho gap-2">
+      <button type="button" aria-label="Nota anterior" class="circle-btn">
+        <DownArrowButton class="left" />
+      </button>
+      <button type="button" aria-label="Próxima nota" class="circle-btn">
+        <DownArrowButton class="right" />
+      </button>
+    </div>
+  </div>
+  <div data-hide="mobile" class="div-block-34">
+    <div class="roll-cont-eyeb parish mb-0 darker">ARRASTE&nbsp;PARA&nbsp;VER</div>
+  </div>
+</div>

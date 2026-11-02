@@ -1,0 +1,102 @@
+---
+// Créditos (div.cs-credits-w): direção com imagem e a grade: linha principal (roteiro, fotografia, música, montagem),
+// faixa PRODUÇÃO e faixa ELENCO, com a função acima do nome. Só entram nomes do dado, e faixa sem nomes não é impressa.
+// O bundle não lê nada daqui; a segunda lista do elenco repete os dois primeiros porque o main.css os esconde
+// ([data-css=creditgrid2]:nth-child(-n+2)), como no original.
+import DynList from './DynList.astro';
+import { responsive } from './cms';
+import type { Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const { keyCrew, producers, crew } = film.credits;
+// A função só se repete sob a faixa quando alguém tem função diferente de "Produção".
+const faixaProducao = [...new Set(producers.map((p) => p.role))];
+const umaFuncao = faixaProducao.length === 1;
+---
+
+<div data-color="white" class="s cs-credits-w bg-white">
+  <div data-color="" id="w-node-_5511ac0b-71e6-e56b-6937-6fd64630e741-30953c00" class="credit-main-q">
+    <div class="credit-main-tx-w">
+      <div class="roll-cont-eyeb parish">Direção</div>
+      <div class="credit-name">{film.director}</div>
+    </div>
+    <div class="credits-main-img-w">
+      <img src={film.directorImage.src} loading="lazy" alt={`Cena de ${film.title}`} {...responsive(film.directorImage, '(max-width: 991px) 100vw, 25vw')} class="credit-main-img" />
+      <div class="abs-b-60"></div>
+    </div>
+  </div>
+  <div id="w-node-e3e1edc3-c492-a891-c5dc-00cdf01ca074-30953c00" class="credit-grid-w">
+    {
+      keyCrew.length > 0 && (
+        <div class="credit-row-w main">
+          <DynList listClass="credit-row w-dyn-list" itemsClass="credit-grid w-dyn-items">
+            {keyCrew.map((c) => (
+              <div role="listitem" class="credit-text dash white w-dyn-item">
+                <div class="roll-cont-eyeb parish mb-0">{c.role}</div>
+                <div class="credit-name">{c.name}</div>
+              </div>
+            ))}
+          </DynList>
+        </div>
+      )
+    }
+    {
+      producers.length > 0 && (
+        <div class="credit-row-w border-dash">
+          <div class="credit-man-row-w">
+            <DynList listClass="collection-list-wrapper-3 w-dyn-list" itemsClass="collection-list-4 w-dyn-items">
+              {(umaFuncao ? faixaProducao : producers.map((p) => p.role)).map((funcao) => (
+                <div role="listitem" class="credit-main-row-item w-dyn-item">
+                  <div class="roll-cont-eyeb parish mb-0 credit-row-title">{funcao}</div>
+                </div>
+              ))}
+            </DynList>
+            <div class="credit-main-row-item is-mobile">
+              <div class="roll-cont-eyeb parish mb-0 credit-row-title">Produção</div>
+            </div>
+          </div>
+          <DynList listClass="credit-row w-dyn-list" itemsClass="credit-grid cols-3 to-flex w-dyn-items">
+            {producers.map((p) => (
+              <div role="listitem" class="credit-text dash w-dyn-item">
+                {!umaFuncao && <div class="roll-cont-eyeb parish is-role is-main">{p.role}</div>}
+                <div class="credit-name smaller">{p.name}</div>
+              </div>
+            ))}
+          </DynList>
+        </div>
+      )
+    }
+    {
+      crew.length > 0 && (
+        <div class="credit-row-w border-dash">
+          <div class="roll-cont-eyeb parish mb-0 credit-row-title">Elenco</div>
+          <div class="credit-row-cont-w">
+            <DynList listClass="credit-row w-dyn-list" itemsClass="credit-grid flex first w-dyn-items">
+              {crew.slice(0, 2).map((c) => (
+                <div data-css="creditgrid" role="listitem" class="credit-text grow last w-dyn-item">
+                  <div class="roll-cont-eyeb parish is-role">{c.role}</div>
+                  <div class="credit-name smallest">{c.name}</div>
+                </div>
+              ))}
+            </DynList>
+            {
+              crew.length > 2 && (
+                <DynList listClass="credit-row w-dyn-list" itemsClass="credit-grid flex w-dyn-items">
+                  {crew.map((c) => (
+                    <div data-css="creditgrid2" role="listitem" class="credit-text grow last _1-4 w-dyn-item">
+                      <div class="roll-cont-eyeb parish is-role">{c.role}</div>
+                      <div class="credit-name smallest">{c.name}</div>
+                    </div>
+                  ))}
+                </DynList>
+              )
+            }
+          </div>
+        </div>
+      )
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+// GALERIA (div.s.footage): duas faixas com as mesmas cenas, que o app.js move em sentidos opostos com a rolagem
+// (data-footage="w" / "line"). As duas precisam do mesmo número de itens, e pelo menos 6: films.ts entrega sempre 14.
+import TicketHeading from './TicketHeading.astro';
+import FootageItem from './FootageItem.astro';
+import type { Film } from '../../data/films';
+
+interface Props {
+  film: Film;
+}
+const { film } = Astro.props;
+const FAIXAS = [1, 2] as const;
+const alt = `Cena de ${film.title}`;
+---
+
+<div data-color="black" class="s footage">
+  <TicketHeading label="GALERIA" />
+  <div data-footage="w" class="footage-w">
+    {
+      FAIXAS.map((faixa) => (
+        <div data-footage="line" class="cs-footage-c w-dyn-list">
+          <div role="list" class="cs-footage-w w-dyn-items">
+            {film.gallery.map((image) => (
+              <FootageItem image={image} strip={faixa} alt={alt} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

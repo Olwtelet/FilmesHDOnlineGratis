@@ -1,0 +1,34 @@
+---
+/**
+ * Herói das páginas legais: header.s.hero > .policy-rich-tx.w-richtext. Renderiza o título <h1> e os blocos da página em
+ * ordem; a marcação em linha de cada bloco (<strong>, <a>) vem de src/data/legal.ts.
+ */
+import type { LegalBlock } from '../../data/legal';
+
+interface Props {
+  heading: string;
+  blocks: LegalBlock[];
+}
+const { heading, blocks } = Astro.props;
+---
+
+<header class="s hero">
+  <div class="policy-rich-tx w-richtext">
+    <h1>{heading}</h1>
+    {
+      blocks.map((block) => {
+        if (block.tag === 'ul') {
+          return (
+            <ul role="list">
+              {block.items.map((item) => (
+                <li set:html={item} />
+              ))}
+            </ul>
+          );
+        }
+        const Tag = block.tag;
+        return <Tag set:html={block.html} />;
+      })
+    }
+  </div>
+</header>

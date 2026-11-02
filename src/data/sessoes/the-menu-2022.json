@@ -1,0 +1,203 @@
+{
+  "slug": "the-menu-2022",
+  "titulo": "The Menu",
+  "categoria": "Suspense",
+  "sessao": {
+    "data": "2026-06-30",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "The Menu",
+      "tituloOriginal": "The Menu",
+      "ano": 2022,
+      "direcao": "Mark Mylod",
+      "duracao": 107,
+      "classificacao": "16",
+      "generos": [
+        "Suspense",
+        "Terror Psicológico",
+        "Comédia Sombria"
+      ],
+      "trailer": {
+        "youtube": "Jd1rUZz1kd4",
+        "canal": "20th Century Studios Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "O Menu | Trailer Oficial Legendado"
+      },
+      "tmdb": 593643,
+      "imdb": "tt9764362"
+    }
+  ],
+  "sinais": [
+    "suspense",
+    "terror",
+    "comédia",
+    "perturbador",
+    "obsessão",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Nós também reservamos mesa",
+    "leitura": "The Menu serve a humilhação dos ricos em etapas, com título na tela e palma do chef, e a gente lê o cardápio junto. A sátira escolhe alvos que ninguém defende: crítica, investidores, ator decadente. E a revolta vem de cima, de um patrão que a brigada obedece em coro.",
+    "descricao": "Um casal janta num restaurante de luxo numa ilha, onde cada prato acusa alguém. A sátira pune quem consome arte cara e serve o castigo como atração.",
+    "notasHome": [
+      {
+        "rotulo": "A palma",
+        "frase": "Um bater de mãos cala a sala inteira"
+      },
+      {
+        "rotulo": "Tortilha",
+        "frase": "A culpa vem gravada a laser no prato"
+      },
+      {
+        "rotulo": "A convidada extra",
+        "frase": "Margot ainda trata comida como comida"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Uma palma, uma cartela",
+        "frase": "Slowik bate uma palma e a sala se cala. Uma cartela descreve cada prato na tela, e a gente lê como mais um convidado da mesa."
+      },
+      {
+        "rotulo": "Comer sem provar",
+        "frase": "Slowik acusa a sala de consumir seu trabalho sem sentir o gosto. Tyler fotografa o prato, a crítica disserta, ninguém mastiga."
+      },
+      {
+        "rotulo": "A revolta do patrão",
+        "frase": "No cardápio há luta de classes, mas a rebelião obedece ao chef, em coro. E o assédio que ele cometeu some no prato seguinte."
+      },
+      {
+        "rotulo": "Porções de desgraça",
+        "frase": "O roteiro trabalha em porções. Cada desgraça chega pequena, limpa, bem apresentada, e o apetite da sala cresce a cada prato."
+      },
+      {
+        "rotulo": "Prato barato",
+        "frase": "Ninguém na plateia se acha cliente do Hawthorn, e por isso sentar ali é fácil. Rir do rico é o prato mais barato da casa."
+      },
+      {
+        "rotulo": "Fora da lista",
+        "frase": "Margot não estava na lista e precisa dizer de que lado da cozinha fica. Resta saber se há lugar fora de quem paga e de quem serve."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Seth Reiss & Will Tracy"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Peter Deming"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Colin Stetson"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Christopher Tellefsen"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Adam McKay"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Betsy Koch"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Will Ferrell"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Margot",
+        "nome": "Anya Taylor-Joy"
+      },
+      {
+        "funcao": "Chef Slowik",
+        "nome": "Ralph Fiennes"
+      },
+      {
+        "funcao": "Tyler",
+        "nome": "Nicholas Hoult"
+      },
+      {
+        "funcao": "Lillian",
+        "nome": "Janet McTeer"
+      },
+      {
+        "funcao": "Ted",
+        "nome": "Paul Adelstein"
+      },
+      {
+        "funcao": "Bryce",
+        "nome": "Rob Yang"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "4vSBj7BYsyuKCx96EJzGyp20WfY.jpg"
+    },
+    "cartaz": {
+      "tmdb": "fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg"
+    },
+    "direcao": {
+      "tmdb": "tKHiT9rBKKbu3F9TuBNKq621JiD.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "4vSBj7BYsyuKCx96EJzGyp20WfY.jpg"
+      },
+      {
+        "tmdb": "tKHiT9rBKKbu3F9TuBNKq621JiD.jpg"
+      },
+      {
+        "tmdb": "vlBVkglm66XfpZnzN5hKZjekOCi.jpg"
+      },
+      {
+        "tmdb": "21aqNI7u45TliNOQfKHliSywZ3e.jpg"
+      },
+      {
+        "tmdb": "9q0e66c0cgaPAa9GQEgGCpEXJJ3.jpg"
+      },
+      {
+        "tmdb": "gkQoX62Sihlq7ga8PuYxxepsGXe.jpg"
+      },
+      {
+        "tmdb": "iwgwJsmUqAfRQkKs50oRFgo2Cr1.jpg"
+      },
+      {
+        "tmdb": "ffqpc7d6izC1KGcRwesaFbI7mHd.jpg"
+      },
+      {
+        "tmdb": "tosKn2ULGdIPiZjQxReJ986NGHm.jpg"
+      },
+      {
+        "tmdb": "kk5qZtPPOYDYTLBgmmKYcJ7Zhcf.jpg"
+      },
+      {
+        "tmdb": "8xrY0uhx8BD5nPhBBToYy4GC7kT.jpg"
+      },
+      {
+        "tmdb": "p3xFx5JJDY6Qvf9k4greb8noI34.jpg"
+      },
+      {
+        "tmdb": "uG8jHRfkbp1ZhjunO39PahJZ0Ac.jpg"
+      },
+      {
+        "tmdb": "jEv34FQaKvrL1n4NlxV3ZuKC7Aq.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 1
+}

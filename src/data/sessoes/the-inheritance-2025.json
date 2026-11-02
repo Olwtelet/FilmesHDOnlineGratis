@@ -1,0 +1,198 @@
+{
+  "slug": "the-inheritance-2025",
+  "titulo": "Manual Prático da Vingança Lucrativa",
+  "tituloCurto": "Manual Prático da Vingança",
+  "categoria": "Comédia",
+  "sessao": {
+    "data": "2026-08-15",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Manual Prático da Vingança Lucrativa",
+      "tituloOriginal": "How to Make a Killing",
+      "ano": 2026,
+      "direcao": "John Patton Ford",
+      "duracao": 105,
+      "classificacao": "16",
+      "generos": [
+        "Comédia",
+        "Suspense"
+      ],
+      "trailer": {
+        "youtube": "6EovZE2NR_U",
+        "canal": "Diamond Films Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "MANUAL PRÁTICO DA VINGANÇA LUCRATIVA | Trailer Oficial Legendado"
+      },
+      "tmdb": 467905,
+      "imdb": "tt4357198"
+    }
+  ],
+  "sinais": [
+    "comédia",
+    "suspense",
+    "crime",
+    "vingança",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Mata os ricos para ser rico",
+    "leitura": "A mãe de Becket Redfellow foi expulsa da família por manter a gravidez. Ele cresce, vende ternos de luxo e decide limpar a fila de uma herança de 28 bilhões. O filme se vende como vingança de classe, mas o sonho do herói continua sendo a mansão.",
+    "descricao": "Deserdado antes de nascer, um vendedor de ternos elimina os parentes que o separam da fortuna. Sátira dos ricos em que o assassino só quer ser um deles.",
+    "notasHome": [
+      {
+        "rotulo": "Sob medida",
+        "frase": "Mede os ricos antes de matá-los"
+      },
+      {
+        "rotulo": "Diante do padre",
+        "frase": "Confissão na cela, em tom de venda"
+      },
+      {
+        "rotulo": "Tio Warren",
+        "frase": "Um emprego pausa a guerra de classes"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Mary posta para fora",
+        "frase": "Os Redfellow expulsam Mary por manter a gravidez. A herança que ela deixa ao filho é um verbo, merecer, e Becket o leva a sério."
+      },
+      {
+        "rotulo": "A fila de 28 bilhões",
+        "frase": "Cada parente morto é um lugar a menos na fila. Becket usa o argumento dos ricos que elimina: a fortuna é dele por direito."
+      },
+      {
+        "rotulo": "Basta um tio simpático",
+        "frase": "A raiva de classe funciona contra caricaturas: o pastor, o artista do quarto escuro. Um emprego do tio Warren e ela esfria."
+      },
+      {
+        "rotulo": "Herdeiro de 1949",
+        "frase": "O formato vem de Kind Hearts and Coronets, de 1949: o condenado narra, os parentes caem. Um filme sobre herança que vive de uma."
+      },
+      {
+        "rotulo": "Lábia de loja",
+        "frase": "Quem narra é um vendedor de terno com a cara de Glen Powell. A plateia torce pelas mortes e só depois repara que foi atendida."
+      },
+      {
+        "rotulo": "A mansão, se houver",
+        "frase": "Se um Redfellow vindo de baixo chegar à mansão, o que muda lá dentro? A sátira ri até a porta e não entra nessa sala."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "John Patton Ford"
+      },
+      {
+        "funcao": "Filme original",
+        "nome": "Robert Hamer & John Dighton"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Todd Banhazl"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Emile Mosseri"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Graham Broadbent"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Peter Czernin"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Becket Redfellow",
+        "nome": "Glen Powell"
+      },
+      {
+        "funcao": "Julia Steinway",
+        "nome": "Margaret Qualley"
+      },
+      {
+        "funcao": "Ruth",
+        "nome": "Jessica Henwick"
+      },
+      {
+        "funcao": "Warren Redfellow",
+        "nome": "Bill Camp"
+      },
+      {
+        "funcao": "Noah Redfellow",
+        "nome": "Zach Woods"
+      },
+      {
+        "funcao": "Steven J. Redfellow",
+        "nome": "Topher Grace"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "vuaPZ4IbsIRr2wDARZT7rFQ5CgP.jpg"
+    },
+    "cartaz": {
+      "tmdb": "7zWwXsgM7aza7mBqOSCcrfG0FU6.jpg"
+    },
+    "direcao": {
+      "tmdb": "tJfyYC6KBgsra8mOeePS2KkkgBc.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "vuaPZ4IbsIRr2wDARZT7rFQ5CgP.jpg"
+      },
+      {
+        "tmdb": "tJfyYC6KBgsra8mOeePS2KkkgBc.jpg"
+      },
+      {
+        "tmdb": "bVkeFg8WQLfd8BwwqtqviftBkYF.jpg"
+      },
+      {
+        "tmdb": "8Tlk2Wax750IiFLCKay57ez4LhN.jpg"
+      },
+      {
+        "tmdb": "8NRG6L6Y35CDhppeElyUu0eyr8e.jpg"
+      },
+      {
+        "tmdb": "mhXdDrphWF7XTQWyp3d8MZUqb3o.jpg"
+      },
+      {
+        "tmdb": "3kjCA2oBdlHedkyuifEjRlrlSHY.jpg"
+      },
+      {
+        "tmdb": "fzj8Hn3JlBPaC3iuYRmQUWSV3fO.jpg"
+      },
+      {
+        "tmdb": "cnFfhwckqE9wv0h5zl4iSfY5CPD.jpg"
+      },
+      {
+        "tmdb": "bmPVC8zVzLcNPA28FJejKeRPtc6.jpg"
+      },
+      {
+        "tmdb": "2QDJW41bGwYNrVSFtb36skEh88E.jpg"
+      },
+      {
+        "tmdb": "lMsKDlFV2vttQi9hJpaC00Pd3WH.jpg"
+      },
+      {
+        "tmdb": "k5VP8fL72NXrjRYZATIicCaZoyM.jpg"
+      },
+      {
+        "tmdb": "8aQQ6VEcmCsiUMPRCymVSaNxA62.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 4
+}

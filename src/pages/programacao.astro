@@ -1,0 +1,21 @@
+---
+// /programacao/: carrossel de sessões (modos CENAS e CARTAZ) movido pelo app.js, que conhece esta página como "work".
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import CursorBox from '../components/ui/CursorBox.astro';
+import WorkTopEdge from '../components/work/WorkTopEdge.astro';
+import WorkRoll from '../components/work/WorkRoll.astro';
+import WorkBottomEdge from '../components/work/WorkBottomEdge.astro';
+import { WORK_PAGE } from '../data/work-page';
+---
+
+<BaseLayout title={WORK_PAGE.title} description={WORK_PAGE.description} rotate="after" webflowScript={WORK_PAGE.webflowScript}>
+  <div data-page="work" data-taxi-view="" class="pw h-screen work">
+    <Nav currentPath={WORK_PAGE.route} />
+    <WorkTopEdge />
+    <WorkRoll />
+    <WorkBottomEdge />
+    <CursorBox page="work" />
+    <div class="work-vert-line"></div>
+  </div>
+</BaseLayout>

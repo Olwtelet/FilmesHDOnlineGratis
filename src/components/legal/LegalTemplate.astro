@@ -1,0 +1,26 @@
+---
+/**
+ * Modelo das páginas legais (/cookies/, /termos/, /privacidade/): página preta (data-page="policy") com a navegação, o
+ * texto corrido e o rodapé on-black.
+ *
+ *   <LegalTemplate page={LEGAL_PAGES.cookies} />
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import LegalRichText from './LegalRichText.astro';
+import type { LegalPage } from '../../data/legal';
+
+interface Props {
+  page: LegalPage;
+}
+const { page } = Astro.props;
+---
+
+<BaseLayout title={page.title} description={page.description} rotate="none">
+  <div data-page="policy" data-taxi-view="" class="pw black">
+    <Nav currentPath={page.path} />
+    <LegalRichText heading={page.heading} blocks={page.blocks} />
+    <Footer variant="on-black" currentPath={page.path} />
+  </div>
+</BaseLayout>

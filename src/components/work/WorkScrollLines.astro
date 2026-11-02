@@ -1,0 +1,29 @@
+---
+/**
+ * Régua de rolagem da base de /programacao/ (figure.lines-scroll-w): um grupo de traços por sessão
+ * (data-slider="lines") e o marcador (data-slider="mark") que o app.js move com o carrossel. O app.js não lê os traços
+ * por posição: esta lista não precisa do aviso nem da ordem.
+ */
+import { FILMS } from '../../data/films';
+
+const TICKS = ['v-line', 'v-line', 'v-line center', 'v-line', 'v-line last'];
+---
+
+<figure class="lines-scroll-w">
+  <div class="vert-line-c">
+    <div class="collection-list-wrapper-2 w-dyn-list">
+      <div role="list" class="collection-list w-dyn-items">
+        {
+          FILMS.map(() => (
+            <div data-slider="lines" role="listitem" class="vert-line-item w-dyn-item">
+              {TICKS.map((cls) => (
+                <div class={cls} />
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div data-slider="mark" class="v-lines-marker"></div>
+</figure>

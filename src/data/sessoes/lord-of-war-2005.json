@@ -1,0 +1,203 @@
+{
+  "slug": "lord-of-war-2005",
+  "titulo": "O Senhor das Armas",
+  "categoria": "Crime",
+  "sessao": {
+    "data": "2026-07-11",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "O Senhor das Armas",
+      "tituloOriginal": "Lord of War",
+      "ano": 2005,
+      "direcao": "Andrew Niccol",
+      "duracao": 122,
+      "classificacao": "16",
+      "generos": [
+        "Crime",
+        "Drama",
+        "Suspense"
+      ],
+      "trailer": {
+        "youtube": "AXgyoER0aRc",
+        "canal": "Rotten Tomatoes Classic Trailers",
+        "idioma": "en",
+        "tituloVideo": "Lord of War (2005) Official Trailer #1 - Nicolas Cage Movie"
+      },
+      "tmdb": 1830,
+      "imdb": "tt0399295"
+    }
+  ],
+  "sinais": [
+    "crime",
+    "drama",
+    "suspense",
+    "cult",
+    "clássico",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O narrador está vendendo",
+    "leitura": "Quando Yuri Orlov olha para a câmera, você vira cliente. O filme denuncia o comércio de armas com a lábia de quem o pratica, da ode ao AK-47 ao avião depenado em uma noite. Funciona tão bem que, quando a acusação chega, você já riu.",
+    "descricao": "Imigrante ucraniano no Brooklyn vira traficante de armas e narra a carreira em tom de balcão. A sátira acusa esse comércio e se diverte com ele.",
+    "notasHome": [
+      {
+        "rotulo": "Vida de uma bala",
+        "frase": "Da fábrica à cabeça de um menino"
+      },
+      {
+        "rotulo": "Ode ao AK-47",
+        "frase": "Elogia o fuzil, e você ri junto"
+      },
+      {
+        "rotulo": "Libéria ao fundo",
+        "frase": "Os mortos só testam a moral dos Orlov"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A bala nos créditos",
+        "frase": "Yuri abre o filme fazendo contas para você. Os créditos seguem uma bala da fábrica à cabeça de um menino, com a mesma animação."
+      },
+      {
+        "rotulo": "Você é o cliente",
+        "frase": "A narração de Yuri tem ritmo de balcão: preço, piada, vantagem. Ele conta a própria vida como quem fecha negócio com você."
+      },
+      {
+        "rotulo": "Denúncia com charme",
+        "frase": "Cada truque de alfândega rende uma risada antes de render um corpo. A denúncia precisa do charme, e o charme trabalha para Yuri."
+      },
+      {
+        "rotulo": "Currículo de guerras",
+        "frase": "Beirute, o fim da União Soviética e a Libéria passam como etapas de currículo. A montagem trata guerra como abertura de mercado."
+      },
+      {
+        "rotulo": "A risada já foi dada",
+        "frase": "Você ri quando Yuri elogia o AK-47 por ser simples até para criança. Mais tarde a criança aparece armada, e a risada já saiu."
+      },
+      {
+        "rotulo": "Acusação em letreiro",
+        "frase": "A acusação maior fica para o fim, dita e escrita, sem imagem que a sustente. Depois de duas horas de riso, ela chega leve demais."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Andrew Niccol"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Amir Mokri"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Antonio Pinto"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Zach Staenberg"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Andrew Niccol"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Nicolas Cage"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Philippe Rousselet"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Yuri Orlov",
+        "nome": "Nicolas Cage"
+      },
+      {
+        "funcao": "Ava Fontaine",
+        "nome": "Bridget Moynahan"
+      },
+      {
+        "funcao": "Vitaly Orlov",
+        "nome": "Jared Leto"
+      },
+      {
+        "funcao": "Jack Valentine",
+        "nome": "Ethan Hawke"
+      },
+      {
+        "funcao": "André Baptiste Sr.",
+        "nome": "Eamonn Walker"
+      },
+      {
+        "funcao": "Simeon Weisz",
+        "nome": "Ian Holm"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "nkC2qbZooCzb0koMq03MuQ1YqKo.jpg"
+    },
+    "cartaz": {
+      "tmdb": "yLxbDZ1h7wbHo7mkyX5AR9hjODe.jpg"
+    },
+    "direcao": {
+      "tmdb": "1tyP2CmZIWlq3ybupKrRRXnfRbR.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "nkC2qbZooCzb0koMq03MuQ1YqKo.jpg"
+      },
+      {
+        "tmdb": "1tyP2CmZIWlq3ybupKrRRXnfRbR.jpg"
+      },
+      {
+        "tmdb": "qSe6q3q4ASw5vMav9YVGnOEtZsx.jpg"
+      },
+      {
+        "tmdb": "9fnCC4vAyn1eClbTPK8YBRy2f13.jpg"
+      },
+      {
+        "tmdb": "8mwTkP0ouOpnfqq1060qDoji3Oa.jpg"
+      },
+      {
+        "tmdb": "rFas9NuL5VPezt48JirQR0V2y7t.jpg"
+      },
+      {
+        "tmdb": "itZrt9Q5b4PJNfMT4ukRp3RDCHR.jpg"
+      },
+      {
+        "tmdb": "lt1gMRSw7SVQcj3xP8tGUTpd1qI.jpg"
+      },
+      {
+        "tmdb": "5HLNp2zEsXezVoXtOfLJE29xaUI.jpg"
+      },
+      {
+        "tmdb": "d3C6ZzIaq1I8q2LpL1TnUQaMlVb.jpg"
+      },
+      {
+        "tmdb": "qz2mgk4UwejtZLdkzrOsSWuzgmF.jpg"
+      },
+      {
+        "tmdb": "6faxYGRA1gNuBojuJiffjNAlYVx.jpg"
+      },
+      {
+        "tmdb": "aDswjn9q5QCtLi7DaoJ21rq2pm8.jpg"
+      },
+      {
+        "tmdb": "nc0gyicqDycGTWMgKowM9tULuZZ.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

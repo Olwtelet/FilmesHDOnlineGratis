@@ -1,0 +1,202 @@
+{
+  "slug": "the-long-walk-2025",
+  "titulo": "The Long Walk",
+  "categoria": "Thriller",
+  "sessao": {
+    "data": "2026-04-18",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "The Long Walk",
+      "tituloOriginal": "The Long Walk",
+      "ano": 2025,
+      "direcao": "Francis Lawrence",
+      "duracao": 108,
+      "classificacao": "18",
+      "generos": [
+        "Thriller",
+        "Distopia",
+        "Suspense"
+      ],
+      "trailer": {
+        "youtube": "B7gTKETLZ2I",
+        "canal": "ParisFilmes",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "A Longa Marcha: Caminhe ou Morra | Trailer Oficial Legendado"
+      },
+      "tmdb": 604079,
+      "imdb": "tt10374610"
+    }
+  ],
+  "sinais": [
+    "thriller",
+    "suspense",
+    "distopia",
+    "sobrevivência",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Voluntários da miséria",
+    "leitura": "Os cinquenta meninos se alistaram por vontade própria, num país em que a miséria faz o recrutamento. The Long Walk encontra ternura nessa estrada e confia nela além da conta: a amizade entre Garraty e McVries é verdadeira, e a aritmética da marcha continua igual.",
+    "descricao": "Cinquenta rapazes andam sem parar sob a mira do exército até restar um. Todos se alistaram, e a miséria cuidou da parte obrigatória.",
+    "notasHome": [
+      {
+        "rotulo": "O alistamento",
+        "frase": "A miséria assina a ficha de cada um"
+      },
+      {
+        "rotulo": "A transmissão",
+        "frase": "O soldado que atira também transmite"
+      },
+      {
+        "rotulo": "Aritmética",
+        "frase": "A amizade é real e a conta não muda"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A carona da mãe",
+        "frase": "Ninguém arrasta Ray Garraty até a largada. Ele se alistou, e é a própria mãe quem dirige até lá implorando que desista."
+      },
+      {
+        "rotulo": "Moral de quartel",
+        "frase": "O regime chama a marcha de patriotismo e ética de trabalho. Na estrada, essa moral tem uma regra só: quem para leva tiro."
+      },
+      {
+        "rotulo": "Ombro emprestado",
+        "frase": "McVries ampara quem fraqueja na estrada, e o filme o adora por isso. Só que pede a essa bondade uma saída que a regra não tem."
+      },
+      {
+        "rotulo": "Conversa em marcha",
+        "frase": "Quase tudo é diálogo em movimento, numa estrada sem fim. O tiro entra no meio da frase, e o plano segue com quem ainda anda."
+      },
+      {
+        "rotulo": "Conta de cabeça",
+        "frase": "A gente passa a contar quem falta. Torcer por Garraty é desejar, sem dizer em voz alta, a queda de outros 49 meninos."
+      },
+      {
+        "rotulo": "O pedido final",
+        "frase": "O vencedor leva dinheiro e um desejo. Que desejo sobra para quem viu todos os amigos caírem?"
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "JT Mollner"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Stephen King"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Jo Willems"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Jeremiah Fraites"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Roy Lee"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Steven Schneider"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Francis Lawrence"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Raymond Garraty",
+        "nome": "Cooper Hoffman"
+      },
+      {
+        "funcao": "Peter McVries",
+        "nome": "David Jonsson"
+      },
+      {
+        "funcao": "Billy Stebbins",
+        "nome": "Garrett Wareing"
+      },
+      {
+        "funcao": "Hank Olson",
+        "nome": "Ben Wang"
+      },
+      {
+        "funcao": "Arthur Baker",
+        "nome": "Tut Nyuot"
+      },
+      {
+        "funcao": "Gary Barkovitch",
+        "nome": "Charlie Plummer"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "zf7BQY4k5RNFI1sD4n9EVLnEG8m.jpg"
+    },
+    "cartaz": {
+      "tmdb": "qE0XKOHZvXtiM4aBLlTPUVZiIc5.jpg"
+    },
+    "direcao": {
+      "tmdb": "jyghveaMeSnTMFKT2ZebfVymhET.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "zf7BQY4k5RNFI1sD4n9EVLnEG8m.jpg"
+      },
+      {
+        "tmdb": "jyghveaMeSnTMFKT2ZebfVymhET.jpg"
+      },
+      {
+        "tmdb": "pIVvTbK6wIOXfIfErIymh7inXSV.jpg"
+      },
+      {
+        "tmdb": "rMjSSvCVyHVKaG1rOmOOIXlCp0z.jpg"
+      },
+      {
+        "tmdb": "mfgkSQVqrNrIzdbIffYhHRL9dfe.jpg"
+      },
+      {
+        "tmdb": "apSrVzdmHKPpZa5Dzb7sWFKExQO.jpg"
+      },
+      {
+        "tmdb": "bzwoNgJso0imrmqh0m0vzExQr3U.jpg"
+      },
+      {
+        "tmdb": "c3T1Ux7eZeZ4XLJ5hq3kSM6JI99.jpg"
+      },
+      {
+        "tmdb": "oV9TOQV0Dk8ggxwa1DzcY0R6WVK.jpg"
+      },
+      {
+        "tmdb": "iMaDXyZfjbeWyykuU1qQWOgjZuk.jpg"
+      },
+      {
+        "tmdb": "bYfjOg7YBiLbUfcBzHDHkylDWda.jpg"
+      },
+      {
+        "tmdb": "dQpY3kSMT5vkU0EGG3jGvU1Gyns.jpg"
+      },
+      {
+        "tmdb": "eR3J6DvVmGbctm6kWqwWRWCYOfy.jpg"
+      },
+      {
+        "tmdb": "veAaJEZdxthGPJY7xoUKA6dW6Cr.jpg"
+      }
+    ]
+  },
+  "linhasTitulo": 2
+}

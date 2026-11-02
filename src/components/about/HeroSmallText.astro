@@ -1,0 +1,30 @@
+---
+/**
+ * Herói de /sobre/: bloco de linhas pequenas em caixa alta (".about-he-w"), cada uma aparecendo aos poucos
+ * (data-a="alpha") sobre os seus fios decorativos (data-a="line").
+ */
+import type { HeroSmallLine } from '../../data/about';
+
+interface Props {
+  lines: HeroSmallLine[];
+}
+const { lines } = Astro.props;
+---
+
+<div class="about-he-w">
+  {
+    lines.map((line) => (
+      <div class="about-he-of-w">
+        <div data-a="alpha" class="about-he-sm-tx">
+          {line.text}
+          {line.br && <br />}
+        </div>
+        <div class="abs about-hero-lines">
+          {Array.from({ length: line.lines }, () => (
+            <div data-a="line" class="line" />
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

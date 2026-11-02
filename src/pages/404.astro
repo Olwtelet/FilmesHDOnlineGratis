@@ -1,0 +1,54 @@
+---
+// 404: modelo do Webflow, sem navegação: dígitos que rolam, as duas linhas do título com seus fios, o botão de voltar e a
+// barra preta do rodapé. As linhas não levam acento: cada uma cabe em uma janela estreita.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import ExploreButton from '../components/ui/ExploreButton.astro';
+import { ROUTES } from '../data/site';
+
+const page = {
+  path: '/404/',
+  title: 'Página não encontrada',
+  description: 'Este endereço não existe. A programação e as sessões continuam no restante do site.',
+  /** cada dígito entra com seu atraso: data-del=".3", ".4", ".5" */
+  digits: ['4', '0', '4'],
+  note: 'ERR 404:',
+  heading: 'SEM SINAL',
+  /** fios desenhados sobre o título (data-a="line") */
+  rules: 3,
+  cta: { label: 'VOLTAR', href: ROUTES.home },
+};
+---
+
+<BaseLayout title={page.title} description={page.description} noindex rotate="none">
+  <div data-page="404" data-taxi-view="" class="pw h-screen">
+    <div data-delay="1" data-a="group" class="s _404">
+      <div class="_404-num-w">
+        {
+          page.digits.map((digit, i) => (
+            <div class="_404-num-block">
+              <div data-del={`.${i + 3}`} data-an="rollover" class="_404-rolll-tx">{digit}</div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="div-block-50">
+        <div class="_404-line">
+          <div class="ovfl-hidden">
+            <h1 data-a="item" class="_404-he light">{page.note}<br /></h1>
+          </div>
+          <div class="ovfl-hidden">
+            <h1 data-a="item" class="_404-he">{page.heading}</h1>
+          </div>
+          <div class="abs _404-hero-lines">
+            {Array.from({ length: page.rules }, () => <div data-a="line" class="line"></div>)}
+          </div>
+        </div>
+        <a data-a="alpha" href={page.cta.href} class="flex-center w-inline-block">
+          <ExploreButton label={page.cta.label} variant="base" />
+        </a>
+      </div>
+    </div>
+    <Footer variant="black" currentPath={page.path} />
+  </div>
+</BaseLayout>

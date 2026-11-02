@@ -1,0 +1,58 @@
+{
+  "slug": "nome-do-filme-2026",
+  "titulo": "Título como deve aparecer",
+  "categoria": "Suspense",
+  "linhasTitulo": 2,
+  "sessao": {
+    "data": "2026-11-07",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Título como deve aparecer",
+      "tituloOriginal": "Original Title",
+      "ano": 2026,
+      "direcao": "Nome de Quem Dirigiu",
+      "duracao": 110,
+      "generos": ["Suspense", "Drama"],
+      "trailer": { "youtube": "IDDOVIDEO11", "canal": "Canal oficial", "idioma": "pt-BR legendado" }
+    }
+  ],
+  "sinais": ["suspense"],
+  "texto": {
+    "manchete": "Até 30 caracteres",
+    "leitura": "De 200 a 280 caracteres, a tese crítica da sessão.",
+    "descricao": "De 110 a 155 caracteres, para busca e compartilhamento: do que trata o filme e o ângulo, sem data.",
+    "notasHome": [
+      { "rotulo": "Rótulo curto", "frase": "Frase de até 44 caracteres" },
+      { "rotulo": "Rótulo curto", "frase": "Frase de até 44 caracteres" },
+      { "rotulo": "Rótulo curto", "frase": "Frase de até 44 caracteres" }
+    ],
+    "leituras": [
+      { "rotulo": "Entrada", "frase": "Frase de 80 a 130 caracteres." },
+      { "rotulo": "O argumento", "frase": "Frase de 80 a 130 caracteres." },
+      { "rotulo": "A contradição", "frase": "Frase de 80 a 130 caracteres." },
+      { "rotulo": "A forma", "frase": "Frase de 80 a 130 caracteres." },
+      { "rotulo": "O efeito", "frase": "Frase de 80 a 130 caracteres." },
+      { "rotulo": "O que fica", "frase": "Frase de 80 a 130 caracteres." }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      { "funcao": "Roteiro", "nome": "Nome" },
+      { "funcao": "Fotografia", "nome": "Nome" },
+      { "funcao": "Música", "nome": "Nome" },
+      { "funcao": "Montagem", "nome": "Nome" }
+    ],
+    "producao": [{ "funcao": "Produção", "nome": "Nome" }],
+    "elenco": [{ "funcao": "Personagem", "nome": "Nome de quem atua" }]
+  },
+  "imagens": {
+    "hero": { "tmdb": "arquivo-grande-do-tmdb.jpg" },
+    "cartaz": { "tmdb": "cartaz-do-tmdb.jpg" },
+    "direcao": { "tmdb": "cena-do-tmdb.jpg" },
+    "cenas": [{ "tmdb": "cena-1.jpg" }, { "tmdb": "cena-2.jpg" }, { "arquivo": "caminho/local/cena-3.jpg" }]
+  }
+}
