@@ -422,7 +422,15 @@ body::after { /* scanlines e vinheta de monitor */
    aparece, e o carrossel salta para ele. O autoAlpha do bundle escreve visibility em linha a partir da primeira troca. */
 .menu-footage-w { display: grid; }
 .menu-footage-item { grid-area: 1 / 1; position: relative; inset: auto; visibility: hidden; }
-.menu-footage-item:first-child { visibility: visible; }
+.menu-footage-item:first-child { visibility: inherit; }
+/* No original, painel fechado só tem altura zero: os links seguiam no Tab, invisíveis, e o foco rolava o painel por dentro.
+   visibility tira do Tab sem mexer no layout. step-end em vez de delay, porque o main.css zera transition-delay ao fechar:
+   assim o conteúdo fica visível até a grade terminar de fechar. */
+.menu-w:not(:has(#mainpanel:checked)) [data-menu=mainpanel] > .panel-content-w,
+.menu-w:not(:has(#smallpanel:checked)) [data-menu=smallpanel] > .panel-content-w,
+[data-menu=footagepanel]:not(.open) > .panel-content-w { visibility: hidden; transition: visibility var(--panels-duration) step-end; }
+/* Sobre e Contato não têm painel pequeno: o original desliga o ingresso só para o ponteiro, e o teclado abria uma camada sem nada */
+[data-page=about] #smallpanel, [data-page=contact] #smallpanel { display: none; }
 
 /* Painel pequeno: o filtro fica acima da lista, e a lista rola dentro da janela */
 .menu-filtro-w { padding: .55rem .8rem .5rem; }

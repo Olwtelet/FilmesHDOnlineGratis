@@ -6,6 +6,9 @@
  * O primeiro lightbox da lista dá a geometria de todos os quadros: se ele estivesse vazio, o modo CENAS ficaria em
  * branco para todas as sessões, sem erro. Por isso nenhum recebe w-dyn-bind-empty, todo item tem o script JSON, e o
  * aviso, que vira o primeiro quando não há sessão futura, traz quadros próprios.
+ *
+ * O âncora só guarda dados: mouse e toque nunca chegam nele, porque quem desenha os quadros é o WebGL. Fora do Tab, senão o
+ * Enter abre a caixa do Webflow, em inglês, que o site não apresenta.
  */
 import { sessaoAttrs, type Film } from '../../data/films';
 
@@ -17,7 +20,7 @@ const json = JSON.stringify({ items: film.frames.map((url) => ({ url, type: 'ima
 ---
 
 <div role="listitem" class="collection-item w-dyn-item" {...sessaoAttrs(film)}>
-  <a href="#" data-frames="lightbox" class="footage-img-sizer w-inline-block w-lightbox">
+  <a href="#" tabindex="-1" aria-hidden="true" data-frames="lightbox" class="footage-img-sizer w-inline-block w-lightbox">
     <script is:inline type="application/json" class="w-json" set:html={json} />
   </a>
 </div>

@@ -48,6 +48,20 @@
     }
   }, true);
 
+  // Os gatilhos dos menus são checkboxes que o mouse não toca: o bundle abre o painel no onclick do pai. Ao teclado sobrava o
+  // Espaço nativo, que a home e a Programação cancelam para girar o carrossel e que na sessão abria dois painéis juntos.
+  document.addEventListener('keydown', function (e) {
+    var alvo = e.target;
+    if (!alvo.classList) return;
+    if (alvo.classList.contains('menu-input') && (e.code === 'Space' || e.key === 'Enter')) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!e.repeat) alvo.parentElement.click();
+    } else if (e.code === 'Space' && alvo.matches('button.work-toggle:focus-visible, button.menu-film-item:focus-visible')) {
+      e.stopPropagation(); // o botão ativa sozinho e o carrossel não anda; depois de um clique do mouse, o Espaço segue girando
+    }
+  }, true);
+
   ['wheel', 'touchmove'].forEach(function (tipo) {
     document.addEventListener(tipo, function (e) {
       if (e.target.closest && e.target.closest('.small-panel')) e.stopPropagation();

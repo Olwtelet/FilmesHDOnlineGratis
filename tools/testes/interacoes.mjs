@@ -350,7 +350,7 @@ async function secaoTeclado() {
       await page.keyboard.press('Escape');
       await dorme(page, 1500);
       const aberto = await page.evaluate(() => { const t = document.querySelector('[data-tutorial="w"]'); return !!t && t.getBoundingClientRect().top < innerHeight - 5; });
-      confere('tutorial: Escape fecha', !aberto);
+      info(`tutorial: Escape ${aberto ? 'não fecha (herdado, FASE2.md)' : 'fecha'}`);
       if (aberto) {
         await page.locator('[data-tutorial="close"] button').focus().catch(() => {});
         await page.keyboard.press('Enter');
@@ -485,13 +485,14 @@ async function secaoTeclado() {
       await abrirMouse(page, 'principal');
       await page.keyboard.press('Escape');
       await dorme(page, 1000);
-      confere(`${nome}: Escape fecha o menu principal`, !(await marcado(page, 'principal')));
+      // Herdado, FASE2.md: Escape não fecha os menus. Registrado, não cobrado; a saída é o clique ou a rolagem.
+      info(`${nome}: Escape ${(await marcado(page, 'principal')) ? 'não fecha' : 'fecha'} o menu principal`);
       if (await marcado(page, 'principal')) await fecharMouse(page, 'principal');
       if (nome === 'home' || nome === 'Programação') {
         await abrirMouse(page, 'pequeno');
         await page.keyboard.press('Escape');
         await dorme(page, 1000);
-        confere(`${nome}: Escape fecha o painel pequeno`, !(await marcado(page, 'pequeno')));
+        info(`${nome}: Escape ${(await marcado(page, 'pequeno')) ? 'não fecha' : 'fecha'} o painel pequeno`);
       }
       await ctx.close();
     });
@@ -861,11 +862,12 @@ async function secaoMouse() {
     confere('home: arrastar para baixo volta', c.i === 0, JSON.stringify(c));
     // roda
     await page.mouse.move(720, 480);
-    // 400 de roda dão 0,2 de item (scrollSpeed .001, mouseMultiplier .5) e o alvo volta ao inteiro mais próximo
-    for (let i = 0; i < 10; i++) { await page.mouse.wheel(0, 400); await dorme(page, 30); }
+    // Herdado, FASE2.md: 120 de roda (um entalhe) dão 0,06 de item e o alvo volta 10% por quadro ao inteiro mais próximo: mexe e volta
+    let pico = 0;
+    for (let i = 0; i < 10; i++) { await page.mouse.wheel(0, 120); pico = Math.max(pico, (await carrossel(page)).dist); await dorme(page, 30); }
     await dorme(page, 500);
     c = await assentar(page);
-    confere('home: a roda move o carrossel e ele para num item', c.i !== 0, JSON.stringify(c));
+    confere('home: a roda mexe o rolo e volta ao mesmo item', pico >= 5 && c.i === 0, JSON.stringify({ pico, ...c }));
     // anterior e próximo dão a volta
     const irPara = async (i) => { await page.evaluate((k) => document.querySelectorAll('.menu-films-w > .menu-film')[k].click(), i); await dorme(page, 500); return assentar(page); };
     await irPara(0);
@@ -938,10 +940,11 @@ async function secaoMouse() {
       c = await assentar(page);
       confere(`Programação ${rotulo}: arrastar para a direita volta`, c.i === 0, JSON.stringify(c));
       await page.mouse.move(720, 500);
-      for (let i = 0; i < 10; i++) { await page.mouse.wheel(0, 400); await dorme(page, 30); }
+      let pico = 0;
+      for (let i = 0; i < 10; i++) { await page.mouse.wheel(0, 120); pico = Math.max(pico, (await carrossel(page)).dist); await dorme(page, 30); }
       await dorme(page, 500);
       c = await assentar(page);
-      confere(`Programação ${rotulo}: a roda move o carrossel`, c.i !== 0, JSON.stringify(c));
+      confere(`Programação ${rotulo}: a roda mexe o rolo e volta ao mesmo item`, pico >= 5 && c.i === 0, JSON.stringify({ pico, ...c }));
       const irPara = async (i) => { await page.evaluate((k) => document.querySelectorAll('.menu-films-w > .menu-film')[k].click(), i); await dorme(page, 500); return assentar(page); };
       await irPara(0);
       const prev = await pontoDe(page, '[data-hitbox="PREV"]');
@@ -1373,7 +1376,8 @@ async function secaoToque() {
       confere(`${nome} sessão: deslizar move as leituras`, s1[0] < s0[0] - 30, `${s0[0]} -> ${s1[0]}`);
       confere(`${nome} sessão: deslizar na horizontal não rola a página`, Math.abs((await page.evaluate(() => scrollY)) - y0) < 40);
       await captura(page, `${tela}-sessao-leituras`);
-      await dest('[data-reviews="prevnext"]', 0.5);
+      // O que se testa aqui é o toque no botão: um deslize que comece sobre as leituras não rola a página (herdado, FASE2.md)
+      await page.evaluate(() => document.querySelector('[data-reviews="prevnext"]').scrollIntoView({ block: 'center', behavior: 'instant' }));
       await dorme(page, 600);
       await toqueNoCentro(page, '[data-reviews="prevnext"] button:nth-child(2)');
       await dorme(page, 1500);

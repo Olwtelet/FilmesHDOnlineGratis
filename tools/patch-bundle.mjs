@@ -45,6 +45,27 @@ const TROCAS = [
     para: 'this.rolloverSplit.chars.forEach(e=>{let i=e.textContent;e.innerHTML=`<div class="originalText2">${i}</div><div class="cloneText2">${i}</div>`}),this.rolloverSplit.chars.forEach(e=>{let o=L.timeline({paused:!0}),l={repeat:L.utils.random(8,14,1),ease:"none",duration:1};L.set(e.children,{y:"18%"}),o.to(e.children,{yPercent:"-=100",...l}),this.charTimelines.push(o)})',
   },
   {
+    // O bind criava outra função, e o remove não achava nada: cada visita à Programação deixava um ouvinte em window que,
+    // em toda página seguinte, cancelava o Espaço (não rolava, não acionava botão nem menu) até recarregar.
+    arquivo: APP,
+    nome: 'ouvinte de teclado da Programação guarda a referência',
+    de: 'window.addEventListener("keydown",this.handleKeydown.bind(this))',
+    para: 'window.addEventListener("keydown",this.keydownHandler=this.handleKeydown.bind(this))',
+  },
+  {
+    arquivo: APP,
+    nome: 'ouvinte de teclado da Programação sai ao trocar de página',
+    de: 'window.removeEventListener("keydown",this.handleKeydown)',
+    para: 'window.removeEventListener("keydown",this.keydownHandler)',
+  },
+  {
+    // Só o cartão atual fica na tela; os outros seguiam no Tab, cortados pelo overflow. Com 21 sessões o EXPLORAR estava a 56 Tabs.
+    arquivo: APP,
+    nome: 'cartões fora da tela saem do Tab na home',
+    de: 'onSlideChange(t){P.SLIDER_SETTLED=this.currentIndex,this.trimTriggers.forEach(',
+    para: 'onSlideChange(t){P.SLIDER_SETTLED=this.currentIndex,this.items.forEach((i,r)=>i.querySelectorAll("a,button").forEach(e=>{r===t?e.removeAttribute("tabindex"):e.tabIndex=-1})),this.trimTriggers.forEach(',
+  },
+  {
     // Ajuste de linha do título de cada filme da Siena; nenhuma classe dessas existe mais no HTML.
     arquivo: MAIN,
     nome: 'regras por filme do main.css',
