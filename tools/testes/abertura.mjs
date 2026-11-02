@@ -148,7 +148,7 @@ if (PARTES.includes('quadros')) {
   await folhaDeQuadros('1440', { viewport: { width: 1440, height: 900 } });
   await folhaDeQuadros('390', CELULAR);
   await folhaDeQuadros('1440-css-lento', { viewport: { width: 1440, height: 900 } }, '**/tema-sinal.css');
-  await folhaDeQuadros('1440-mascara-lenta', { viewport: { width: 1440, height: 900 } }, '**/simbolo-mascara*.webp');
+  await folhaDeQuadros('1440-fonte-lenta', { viewport: { width: 1440, height: 900 } }, '**/archivo-*.woff2');
 }
 
 async function caminhoDeFalha(nome, { bloquear, navegador = browser, opcoes = {}, depois }) {

@@ -7,6 +7,7 @@
   var ESCURO = "[data-videoplayer='darken']";
   var ultimaFoiTab = false;
   var q = function (s) { return document.querySelector(s); };
+  var html = document.documentElement;
 
   // O Ia liga em document um Escape que chama closeModal direto: isOpen e o menu ficam errados e, com o diálogo fechado, ele
   // inverte .open. E cada sessão visitada deixa mais um, nunca removido. Este arquivo roda antes do app.js, que é deferido,
@@ -32,10 +33,12 @@
   }
 
   // Seja qual for o caminho, o player sai quando o diálogo fecha de verdade: o áudio não sobrevive a um tween atrasado.
+  // A classe em html é o que o tema e o cursor leem; com :has(.open) no body, cada inserção no DOM recalculava o estilo da página inteira.
   function vigiar() {
     var d = q(D);
     if (!d) return;
     var obs = new MutationObserver(function () {
+      html.classList.toggle('trailer-aberto', d.classList.contains('open'));
       if (d.classList.contains('open')) return;
       obs.disconnect();
       var f = d.querySelector('iframe.yt-trailer');
@@ -72,6 +75,12 @@
     var r = wrap.getBoundingClientRect();
     window.scrollTo(0, window.scrollY + r.top + r.height / 2 - window.innerHeight / 2);
   }
+  // A página trocada com o diálogo aberto leva o observador junto com o nó.
+  var taxi = q('[data-taxi]');
+  if (taxi) new MutationObserver(function () {
+    if (!q(D + '.open')) html.classList.remove('trailer-aberto');
+  }).observe(taxi, { childList: true });
+
   var esperas = [];
   window.addEventListener('resize', function () {
     esperas.forEach(clearTimeout);
@@ -87,7 +96,10 @@
       b.setAttribute('aria-pressed', b === botao ? 'true' : 'false');
     });
     var fora = q('[data-trailer-fora]');
-    if (fora) fora.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(botao.dataset.trailer);
+    if (fora) {
+      fora.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(botao.dataset.trailer);
+      fora.setAttribute('aria-label', botao.dataset.trailerTitle + ': abrir no YouTube, em nova aba');
+    }
     var f = wrap.querySelector('iframe.yt-trailer');
     if (f) f.remove(); // um iframe novo em vez de trocar o src, que criaria uma entrada no histórico do navegador
     montar();
@@ -132,9 +144,13 @@
   }, true);
 
   // O Tab move o foco no keydown: se o keyup ainda chega aqui, o foco não entrou no player, e um clique nele depois não conta como
-  // chegada pelo teclado. Dentro do player o keyup fica lá, e o ponteiro no site também encerra a chegada pelo teclado.
+  // chegada pelo teclado. A exceção é o foco a caminho do player: cruzar para o iframe de outra origem leva alguns ms, e nesse
+  // meio-tempo o ativo já é o body ou o iframe, com o blur ainda por vir. Dentro do player o keyup fica lá, e o ponteiro no site
+  // também encerra a chegada pelo teclado.
   window.addEventListener('keyup', function (e) {
-    if (e.key === 'Tab') ultimaFoiTab = false;
+    if (e.key !== 'Tab') return;
+    var a = document.activeElement;
+    if (a !== document.body && a !== q('iframe.yt-trailer')) ultimaFoiTab = false;
   }, true);
   window.addEventListener('pointerdown', function () { ultimaFoiTab = false; }, true);
 
@@ -142,9 +158,12 @@
 
   // Tecla dentro de um iframe de outra origem nunca chega aqui: depois de um clique no player o Escape se perderia.
   // Devolve o foco ao diálogo, com atraso para o player terminar o próprio clique (com 0 ms o real perdia o clique).
-  // Quem chega com Tab fica lá dentro e mantém os atalhos do YouTube.
+  // Quem chega com Tab fica lá dentro e mantém os atalhos do YouTube. A marca vale só para o blur causado pela própria tecla: um Tab
+  // que sai para a barra do navegador não pode fazer um clique posterior no player passar por chegada pelo teclado.
   window.addEventListener('blur', function () {
-    if (ultimaFoiTab) return;
+    var porTab = ultimaFoiTab;
+    ultimaFoiTab = false;
+    if (porTab) return;
     setTimeout(function () {
       var f = q('iframe.yt-trailer');
       if (!f || document.activeElement !== f || document.fullscreenElement) return;

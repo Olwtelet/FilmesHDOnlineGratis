@@ -17,10 +17,15 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Fim da sessão | `sessao.fim` explícito vence; sem ele, 00:00 do dia seguinte em São Paulo | Regra do proprietário |
 | Sem próxima sessão | Um item-aviso (`data-aviso`) gerado em todas as listas posicionais; o script remove o item quando há sessão futura e o põe em primeiro quando não há | As listas precisam ter o mesmo N e nenhuma data é inventada |
 | Aba aberta | Checagem a cada 30 s, em `visibilitychange` e `pageshow`. Rótulos mudam no lugar. Home e Programação recarregam quando a ordem muda: escondida, só na volta; visível, após 20 s sem interação. Abertura ou tutorial na tela, painel aberto, modo CENAS e filtro em uso seguram a recarga. Depois da abertura, os cookies são gravados antes para não repeti-la | Recarregar reinicia o WebGL do zero, sem corrida, e nunca em segundo plano |
-| Abertura | Sem vídeo: barras em CSS `transform` e máscara derivada de `simbolo.png`. Um `<video>` vazio fica porque o `app.js` exige | Nenhum decodificador envolvido; 5,8 MB viram cerca de 18 KB; os vídeos tinham a marca nos quadros |
-| Tutorial | `<video preload="none">` com gravação da home real em WebM e MP4, feita por `npm run tutorial` com a home servida em 4322. Regravar se a home mudar de aparência | O arquivo antigo era uma gravação do site da Siena. Nada do vídeo é pedido antes do `play()`, 2 s depois do ENTER, nem abaixo de 992 px. Mestre e roteiro ficam em `reference/fase2/tutorial/` |
+| Abertura | Sem vídeo e sem o símbolo: barras em CSS `transform` e o nome grande, em modo diferença, que sai das cores invertidas do cartão para branco sobre preto conforme as barras fecham. Sem aperto de letras nem kerning, porque com eles o R e o Á de GRÁTIS se tocavam. Um `<video>` vazio fica porque o `app.js` exige | Nenhum decodificador envolvido; o nome é o protagonista; só transform e blend, que não param na tarefa longa do `app.js` |
+| Tutorial | `<video preload="none">` com gravação da home real em WebM e MP4, feita por `npm run tutorial` com a home servida em 4322. Regravar se a home mudar de aparência. Regravado nesta rodada, porque mostrava o anel antigo do cursor | O arquivo antigo era uma gravação do site da Siena. Nada do vídeo é pedido antes do `play()`, 2 s depois do ENTER, nem abaixo de 992 px. Mestre e roteiro ficam em `reference/fase2/tutorial/` |
+| Cartão sem programação | Só as barras SMPTE e o texto, sem o quadrado nem o símbolo, nos quatro tamanhos de `sem-sinal-*.webp`, gerados por `tools/marca.mjs`. O símbolo segue pequeno no menu, no rodapé, na página Sobre e no favicon, com o desenho original | O nome e a mensagem são o assunto do cartão |
+| Volta à home | Nenhum `:has()` em `tema-sinal.css`: o estado vem de classes (`html.trailer-aberto`, `.com-principal`, `.com-pequeno`, `.foco-*`) postas por `local-trailer.js` e `local-menu.js`. Cada imagem vira textura uma vez por visita. Filmes e quadros que saem da tela são descartados, e a carga de uma página que já foi trocada é ignorada | Com os 16 `:has()` do tema, a montagem da home gastava segundos em `Document::recalcStyle`. Nenhuma regra sozinha era a culpada. Os 25 do `main.css` original ficam, sem custo mensurável. Sem carregador e sem atraso artificial; números na seção 7 |
+| Leituras | Patch no `app.js`: o slider anda sozinho, dentro do próprio `render`, sem outro timer. Para fora da tela, com a aba escondida, durante o arrasto e com o foco de teclado nas setas. Depois de mexer com o ponteiro, volta em 3 s; depois da seta, em 6 s. Janela que mostra um cartão por vez troca a cada 6 s. Com movimento reduzido, só manual. A barra de progresso passa a dar a volta, e "ARRASTE PARA VER" sai | Pedido do proprietário. A cópia do preenchimento em `.fill-bar::before` evita o salto da barra na volta do ciclo |
+| Cursor | Retícula em `local-cursor.js` e no bloco 8c do tema: anel, ponto central e uma microbarra SMPTE. Estados de link, arrasto vertical e horizontal, play, setas e aperto, lidos por `closest` de `[data-hitbox]`, `[data-videoplayer]`, `[data-roll]`, `[data-slider]`, `[data-reviews]` e dos links. Em `[data-cursor="hide"]`, onde o `app.js` escondia o cursor antigo, a mira fica sem o rótulo de arrasto. O nó antigo `.cursor-w-out` fica no HTML e não aparece | Um cursor só, sem leitura de layout por movimento, e o laço de quadros para quando o anel alcança o ponto. Fora em toque, movimento reduzido, contraste alto e cores forçadas. Campos de texto mantêm o cursor de texto, e o player do YouTube mantém o dele |
+| Canais | Steam sai de dados, ícones e textos. X entra com `https://x.com/FilmesHDOG`, sem o `?s=20` de compartilhamento do endereço recebido. A varredura veta `steam` no build | O endereço respondeu 200, com o título da conta. Os dados de `src/data/site.ts` alimentam rodapé, Sobre e JSON-LD |
 | Trailer | `iframe` de `youtube-nocookie` montado no clique dentro do diálogo existente e removido ao fechar; controles do próprio YouTube; barra customizada oculta; `body::after` desligado enquanto aberto | A política do YouTube não permite sobreposição; nenhuma requisição antes do clique |
-| Saída para o YouTube | Link "Não abriu? Ver no YouTube", sempre à vista e fora do player, com o filme escolhido. O clique tira o player na hora e fecha o diálogo | O site não enxerga um player que falhou em outra origem, então não há como mostrar um aviso só quando falha |
+| Saída para o YouTube | Ícone sem texto, junto do X, com nome acessível e o filme escolhido. O clique tira o player na hora e fecha o diálogo | Sem frase na tela. O site não enxerga um player que falhou em outra origem, então não há como mostrar um aviso só quando falha; a saída fica sempre à mão |
 | Tamanho do diálogo | A partir de 768 px, encolhe em 16:9 até caber na janela. Em janela larga e baixa o bloco de 80% da largura passava da altura da tela e levava os controles do player, o X e o link junto. Ao mudar o tamanho da janela ou girar o aparelho, o player volta ao centro | Com a rolagem presa, quem girava o celular com o trailer aberto não tinha como voltar |
 | Sessão dupla | Uma página, dois trailers, seletor de dois botões fora do player | O `Ia` do bundle aceita um único player |
 | Teclado | Menus abrem e fecham com Espaço e Enter. Saem do Tab os painéis fechados, os cartões da home fora da tela e o link do lightbox. Paradas de Tab: home 5, Programação 7, sessão 27, Sobre 21, Contato 5, 404 9, Cookies 20 | Com 21 sessões a home tinha 97 paradas, 92 delas invisíveis |
@@ -34,7 +39,7 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Rollover dos títulos | Patch no `app.js`: escreve todas as letras e só depois cria as animações | O original forçava estilo e layout por letra. Com 299 letras em 21 títulos, isso virava uma tarefa longa de 4 a 11 s antes do timer do ENTER |
 | CSS por filme | As regras `.moon`, `.kafka`, `.my`, `.ana` e `.freud` saem do `main.css` | Nomes dos filmes antigos; nenhuma classe dessas existe mais no HTML |
 | Depuração do bundle | A tecla `g` deixa de abrir o painel lil-gui | Painel de desenvolvimento em inglês visível ao público |
-| Textos no bundle | `SCROLL` passa a `ROLAR` | Literal único; ver `tools/patch-bundle.mjs` |
+| Textos no bundle | `SCROLL` passa a `ROLAR` | Literal único; ver `tools/patch-bundle.mjs`. Desde o cursor do tema o rótulo não aparece: fica porque o `app.js` escreve nele |
 
 ## 2. Blocos da Siena e o que entra neles
 
@@ -57,7 +62,7 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Caso, investidores | `NA SALA`: sala, Discord, data, aviso de que o site não exibe o filme | O original só mostra `h3`, `h4` e `h5`, mais o link da sala que o tema reabilita |
 | Caso, próximo | Próxima na ordem calculada | |
 | Sobre, equipe | Curadoria (Olwtelet) e comunidade (Sala 24), com cartão de teste no lugar de retrato | Nenhuma pessoa inventada |
-| Sobre, colaboradores | Discord, YouTube, Steam | Bloco já oculto pelo CSS original |
+| Sobre, colaboradores | Discord, YouTube, X | Bloco já oculto pelo CSS original |
 | Contato | E-mail, Discord | Sem telefone nem endereço |
 | Rodapé, newsletter | Feed RSS: endereço, botão que copia de verdade, link | Nenhum dado pessoal coletado; nenhum sucesso simulado |
 
@@ -170,23 +175,57 @@ Exceções ao sábado às 20:30: `the-menu-2022` (terça), `obsession-2026` e `w
 
 ## 7. Evidência dos testes
 
-Rodada de 02/11/2026, contra o build de produção. Sem janela no Edge, salvo indicação.
+Rodada de 02/11/2026, contra o build de produção. Sem janela no Edge, salvo indicação. Jogo aberto registrado em todas as medições de tempo e de janela real, desde as 14:51; o Wallpaper Engine foi anotado ligado às 14:51, e depois essa condição não foi registrada. Depois da bateria principal mudaram o foco do player, o aperto das letras da abertura, o `data-cursor` e duas regras só abaixo de 360 px. Foram repetidos varredura, identidade, teclado, controles, saída, sessão dupla, mouse, abertura e janelas reais, e Páginas a 320 px e nas páginas legais. Os demais resultados são da bateria principal.
 
 | Verificação | Resultado | Observação |
 |---|---|---|
-| `tools/testes/varredura.mjs` | Nenhum achado | Siena, filmes antigos, estrelas, promessas, links internos, imagens, metadados |
+| `tools/testes/varredura.mjs` | Nenhum achado | Siena, Steam, filmes antigos, estrelas, promessas, links internos, imagens, metadados |
 | `tools/checar-textos.mjs` | 21 sessões dentro dos limites | |
+| `tools/testes/identidade.mjs` | 254 de 254 | Tabela de larguras abaixo. Conta as letras da abertura por imagem: 20 letras e o acento, sem nenhuma encostada. No Chrome real, com a aba escondida: 0 quadros e 0 px em 9 s, e na volta o cartão desliza no máximo 29 px por quadro |
+| `tools/testes/volta-home.mjs`, **Chrome e Brave reais, com janela** | 24 de 24 | Medição na subseção abaixo |
 | `tools/testes/ordem.mjs` | 47 de 47 | Antes, durante e depois da sessão, exceções, virada do dia, duas futuras, nenhuma futura, fusos, término explícito, aba aberta, escondida, CENAS e ENTER na tela |
-| `tools/testes/interacoes.mjs` | 475 de 475 | Teclado, menus, filtro, toque, cadeia de navegação. A parte de mouse repetida depois do último ajuste do teste: 74 de 74 |
-| `tools/testes/trailers.mjs` | 768 checagens, nenhuma falha | Os 22 trailers tocam pelo clique real, com som (85), oEmbed (22), nada externo antes do clique (18), saída para o YouTube (18), geometria em 30 janelas (30), celular deitado (34), sessão dupla (38), YouTube bloqueado (90), fechar (288), repetir (106), teclado (20), controles (19) |
-| `tools/testes/paginas.mjs` | 3.294 de 3.294, depois da triagem abaixo | 7 tamanhos, de 360x640 a 1920x1080, com sessão futura, aviso e títulos longos, mais dados, links, marca e menus |
+| `tools/testes/interacoes.mjs` | 475 de 475 | Teclado, menus, filtro, toque, cadeia de navegação. Teclado e mouse também a 1920 px (212 de 212), toque também a 320 px (24 de 24), e mouse repetido a 1440 px depois do cursor (74 de 74) |
+| `tools/testes/trailers.mjs` | 773 checagens, nenhuma falha | Os 22 trailers tocam pelo clique real, com som (85), oEmbed (22), nada externo antes do clique (18), saída para o YouTube (18), geometria em 15 janelas (30), celular deitado (34), sessão dupla (38), YouTube bloqueado (90), fechar (288), repetir (106), teclado (25), controles (19) |
+| `tools/testes/paginas.mjs` | 3.295 de 3.295 | 7 tamanhos, de 360x640 a 1920x1080, com sessão futura, aviso e títulos longos, mais dados, links, marca e menus. Depois, 320x568 inteiro (831 de 831) e Contato e páginas legais em 5 tamanhos (817 de 817), com as duas correções abaixo |
 | `tools/testes/abertura.mjs` | 21 de 21 | Tempos, quadros, 5 caminhos de falha (máscara, textura, `app.js` bloqueado, movimento reduzido, sem WebGL), visita de volta, nenhum vídeo antes do ENTER |
-| `tools/testes/janela-real.mjs`, **Chrome e Brave reais, com janela** | 92 de 92 | 8 visitas por navegador a 1440 e 1536 px, limpa e com cache: a abertura anima, a home abre, o tutorial toca sem parar, a seta troca o filme, console limpo. Trailer de Bugonia toca pelo clique, Escape fecha, o link abre o filme no YouTube e, de volta à aba, o diálogo está fechado e a página rola |
+| `tools/testes/janela-real.mjs`, **Chrome e Brave reais, com janela** | 87 de 87 | 8 visitas por navegador a 1440 e 1536 px, limpa e com cache: a abertura anima, a home abre, o tutorial toca sem parar, a seta troca o filme, console limpo. Trailer de Bugonia toca pelo clique, Escape fecha, o ícone abre o filme no YouTube e, de volta à aba, o diálogo está fechado e a página rola. 2 de 16 visitas, em rajada, ficaram de fora com a janela sem desenhar |
 | Tutorial | 40 de 40 no Edge e no Chrome | Rodada anterior à formatação. Vídeo só depois do ENTER, nada no celular |
 | Revisão de código | 19 achados, 0 bloqueios | Rodada anterior. Corrigidos: datas e limites no zod, aba escondida, CENAS, abertura na tela, máscara, canonical da 404, JSON-LD |
 | Revisão visual | Folhas de home, Programação, menus, sessões e Sobre vistas uma a uma | Desktop e celular, títulos curtos e longos, com sessão futura e com aviso |
 
-**Tempos da abertura, em ms (mediana).** PC parado havia mais de 2 horas, sem jogo aberto, com o Wallpaper Engine aberto, que usa a GPU. Com jogo aberto não foi medido.
+**Tempos da abertura nova contra a anterior, em ms (mediana).** Os dois builds um logo depois do outro, duas vezes, em janelas reais a 1440 px, com jogo aberto. Fora as visitas com a janela sem desenhar. Medido antes de tirar o aperto das letras, que é só CSS; os tempos depois disso estão logo abaixo.
+
+| Onde | ENTER, visita limpa | ENTER, com cache | Home depois do clique, limpa e com cache | Tarefa longa, limpa e com cache |
+|---|---:|---:|---:|---:|
+| Chrome, anterior, n=4 | 4.000 | 3.786 | 1.727 e 1.735 | 1.924 e 2.373 |
+| Chrome, abertura nova, n=3 | 4.051 | 3.688 | 1.712 e 1.699 | 506 e 452 |
+| Brave, anterior, n=4 | 4.029 | 3.842 | 1.722 e 1.731 | 2.056 e 2.431 |
+| Brave, abertura nova, n=3 | 4.019 | 3.727 | 1.722 e 1.703 | 458 e 370 |
+
+Na visita limpa, a diferença do ENTER fica dentro da variação entre visitas. Com cache, a abertura nova ficou cerca de 100 ms mais rápida, sem sobreposição entre as visitas. Em nenhum caso o ENTER piorou fora da variação. A tarefa longa cai de cerca de 2 s para cerca de 0,5 s entre os dois builds; a parte do `:has()` nessa queda não foi medida isoladamente na primeira visita.
+
+Depois de tirar o aperto das letras, sem o build anterior ao lado: Edge sem janela, n=8, ENTER 3.765 e 3.786 ms (limpa e com cache), dentro da referência de ±50 ms, e home 1.684 ms nas duas. Chrome com janela, n=4, ENTER 3.936 e 3.768 ms, home 1.693 e 1.692 ms. Brave com janela, n=3, ENTER 4.000 e 3.998 ms, home 1.698 e 1.691 ms. O Brave com cache oscilou de 3.686 a 4.010 ms, faixa mais larga que nas corridas anteriores (3.703 a 3.776 ms). A maior tarefa longa de cada grupo ficou de 411 a 465 ms.
+
+**O que rodou em cada largura.** Janela real só onde a coluna diz; o resto é Edge sem janela.
+
+| Estado | 320 | 390 | 820 | 1440 | 1920 |
+|---|---|---|---|---|---|
+| Abertura, cartão, trailer e sessão dupla | sim | sim | sim | sim | sim |
+| Páginas de filme, com corte de texto e menus | sim | sim | sim | sim | sim |
+| Leituras: anda, sem salto, barra | sim | sim | sim | sim | sim |
+| Leituras: o toque assume | sim | sim | sim | não se aplica | não se aplica |
+| Leituras: o mouse assume, foco nas setas, ciclo inteiro | não se aplica | não se aplica | não se aplica | sim | não |
+| Links sociais: rodapé e menu, com clique real | sim | sim | sim | sim | sim |
+| Ida e volta à home: duas viagens e o rolo respondendo | sim | sim | sim | sim | sim |
+| Pausa da volta à home medida, em janela real | não | não | não | sim | não |
+| Cursor | desligado | desligado | desligado | sim | sim |
+| Teclado, ícone do trailer pelo teclado, mouse | não se aplica | não se aplica | não se aplica | sim | sim |
+| Toque | sim | sim | sim | não se aplica | não se aplica |
+| Aba escondida, em janela real | não | sim | não | sim | não |
+
+**Correções que só o teste a 320 px mostrou.** O e-mail do Contato passava 5,5 px da caixa que o recorta e agora cabe, com menos espaço entre as letras abaixo de 360 px. Na Privacidade, "ARMAZENAMENTO", com corpo fixo, alargava o bloco 3,7 px além da janela, e o título passa a 11vw abaixo de 360 px.
+
+**Rodada anterior, PC parado havia mais de 2 horas**, sem jogo aberto, com a abertura antiga.
 
 | Onde | ENTER, visita limpa | ENTER, com cache | Home depois do clique, limpa e com cache |
 |---|---:|---:|---:|
@@ -195,7 +234,43 @@ Rodada de 02/11/2026, contra o build de produção. Sem janela no Edge, salvo in
 | Brave com janela, n=4 | 3.854 | 3.695 | 1.715 e 1.719 |
 | Site original da Siena, no ar, Edge sem janela, n=6 | 3.913 | 3.736 | 1.710 e 1.713 |
 
-O ENTER é um timer fixo de 3,5 s, contado desde que o `app.js` começa a rodar (150 a 350 ms depois da navegação). Em 60 visitas perfiladas, 30 no Edge e 30 no Chrome, o timer atrasou no máximo 7 ms, a espera do quadro seguinte foi de no máximo 8 ms, e a preparação terminou de 1,97 a 2,13 s antes do timer, nunca depois. A leitura de 4,0 a 4,8 s de 01/11, com o VALORANT aberto e uma sonda antiga, não se repetiu, então o `app.js` não foi mexido por causa disso. Nas janelas reais, 146 a 151 quadros por segundo. A referência antiga de 1.838 ms até a home era de antes da formatação do PC: o site original, medido agora, dá o mesmo valor deste site.
+O ENTER é um timer fixo de 3,5 s, contado desde que o `app.js` começa a rodar (230 a 490 ms depois da navegação, nas 60 visitas abaixo). Em 60 visitas perfiladas com a abertura nova, 30 no Edge e 30 no Chrome, com jogo aberto, o timer atrasou no máximo 6 ms, a espera do quadro seguinte foi de no máximo 7 ms, e a preparação terminou de 2,75 a 3,3 s antes do timer, nunca depois. A referência antiga de 1.838 ms até a home era de antes da formatação do PC: o site original, medido agora, dá o mesmo valor deste site.
+
+### Volta à home: home, EXPLORAR, sessão, logo, home
+
+**Causa.** Os 16 `:has()` de `tema-sinal.css`, em 12 regras. Com eles, a montagem da home gastava segundos em `Document::recalcStyle`. A explicação provável é que cada inserção invalidava o estilo do documento inteiro: o efeito foi medido, o mecanismo por nó não. O perfil culpava o ticker do GSAP com "layout forçado"; o rastro mostrou `Document::recalcStyle`. Testes A/B por grupo de regras não mostraram ganho em nenhum grupo isolado, só ao tirar todos. Os 25 `:has()` do `main.css` original ficaram, sem custo mensurável.
+
+**Causas menores, corrigidas também.** 22 chamadas de `texImage2D` a cada volta, somando de 360 a 560 ms, quase todas num mesmo quadro, porque cada imagem virava textura de novo; agora, nenhuma na volta. O WebGL também não soltava filmes nem assinaturas de quadro antigos, e a carga de uma página já trocada continuava rodando.
+
+**Maior pausa, em ms (mediana).** Janelas reais, perfil novo, build anterior e final um logo depois do outro, nas mesmas condições.
+
+| Caminho | Antes | Depois | Pior caso depois | n depois |
+|---|---:|---:|---:|---:|
+| Chrome, visita limpa, primeira volta | 1.853 | 153 | 189 | 2 |
+| Chrome, visita limpa, voltas seguintes | 1.986 | 153 | 239 | 4 |
+| Chrome, com cache, primeira volta | 1.845 | 233 | 283 | 2 |
+| Chrome, com cache, voltas seguintes | 1.881 | 214 | 267 | 4 |
+| Chrome, entrada direta na sessão | 1.873 | 545 | 545 | 1 |
+| Brave, visita limpa, primeira volta | 2.017 | 178 | 178 | 1 |
+| Brave, visita limpa, voltas seguintes | 1.967 | 203 | 239 | 4 |
+| Brave, com cache, primeira volta | 2.264 | 587, ver abaixo | 1.006 | 2 |
+| Brave, com cache, voltas seguintes | 2.211 | 217 | 311 | 2 |
+| Brave, entrada direta na sessão | 2.253 | 378 | 450 | 2 |
+
+Na linha do Brave com cache, 587 é a média de 167 ms e 1.006 ms, e o segundo valor é uma volta com a janela sem desenhar que o critério do teste não pegou. Mais cedo no mesmo dia, nas mesmas condições anotadas, com tudo mais lento por causa não medida e antes dos últimos ajustes da revisão, o build anterior parava de 3,2 a 4,4 s, e o novo, de 0,16 a 0,52 s.
+
+**O que se vê.** Nos quadros gravados da mesma volta no Chrome, o maior intervalo sem imagem nova cai de 2.256 ms para 283 ms (306 ms no Brave). Antes, a tela ficava escura de 0,37 s a 3,2 s, e o cartão completo aparecia em 4,4 s. Agora ela fica escura de 0,38 s a 1 s, e o cartão completo aparece em 2,2 s. Esse trecho escuro é a coreografia original do bundle, com os quadros andando. Nada foi acrescentado: nem carregador, nem atraso artificial.
+
+**Janela sem desenhar.** Com o jogo aberto, de vez em quando o site inteiro passa a desenhar a 1 quadro por segundo: a home leva 15 s para abrir e o tutorial não sai a tempo. As voltas com 4 ou mais intervalos de cerca de 1 s ficam fora das medianas e são contadas à parte. Nas primeiras medições o caso pesou contra o build novo (7 de 56 voltas e 4 de 16 visitas, contra 1 de 56 e 0 de 16), então ele foi tirado a limpo com 48 navegadores novos, alternando os dois builds. Deu **4 de 24 no build anterior e 2 de 24 no final**, todos em rajada, das 16:18 às 21. As mudanças desta rodada não causaram isso, e a diferença anterior era amostra pequena. No mesmo navegador, a página em branco ficou sempre acima de 130 quadros por segundo, antes e depois do site. Nenhuma outra página que desenha foi medida, então não se sabe se o caso depende do WebGL deste site, e a causa não foi investigada. Sem o caso, a abertura rodou a 180 q/s no final, contra 170 no anterior, e a home a 180 q/s nos dois.
+
+**Fora de propósito.** Reaproveitar o HTML dos títulos entre as voltas e arredondar as escritas por quadro: a pausa que sobra já cai na tela quase preta, e os dois mexem em mais código do bundle.
+
+**Capturas.** Abertura, cartão, trailer, cursor, rodapé e as folhas de quadros da volta à home, antes e depois, estão em `reference/fase2/capturas/`.
+
+**Triagem da bateria final.** Duas falhas de teste, resolvidas assim:
+
+- `trailers`, "terceiro Tab entra no player": defeito real em `local-trailer.js`. O foco leva alguns milissegundos para cruzar para o iframe, e o `keyup` chegava nesse intervalo. O site entendia que o foco não tinha entrado no player e o devolvia ao diálogo. Na rodada anterior o teste passava, talvez porque o recálculo dos `:has()` atrasava a tecla sintética; isso não foi medido. Corrigido, e o teste agora cobre também a tecla presa por 80 ms e o caminho de entrar, sair com Shift+Tab, clicar no player e fechar com Escape.
+- `janela-real`, 2 de 92 numa visita do Chrome ("tutorial não saiu" e a seta não trocou): compatível com a janela sem desenhar descrita acima, embora o log dessa visita, sem o novo medidor, só mostre 52 q/s até a home e 5,6 s para abri-la. Repetindo 10 visitas, duas vieram a 1 q/s, com a home em 15 s e o tutorial preso; as outras 8 passaram, com 104 a 170 q/s. O teste agora mede os quadros por segundo e conta esse caso à parte, aceitando no máximo 1 de cada 4 visitas. Na comparação dos builds, uma das quatro corridas ficou acima desse limite, 4 de 8, numa rajada; as outras três deram 53 de 53 e nenhuma falha no restante.
 
 **Triagem das falhas de Páginas.** Na bateria de 02/11, 32 de 3.294 checagens falharam, todas em "nenhum texto cortado".
 
@@ -205,15 +280,28 @@ O ENTER é um timer fixo de 3,5 s, contado desde que o `app.js` começa a rodar 
 
 **Triagem das interações.** Corrigido: o trailer não prende o foco depois de Tab e clique no player, Escape volta a fechar depois de clicar no player e de sair da tela cheia, o diálogo cabe em janela larga e baixa (a 2560x950 o player tem 1547x870), o seletor da sessão dupla não some com o celular deitado, os menus respondem a Espaço e Enter, o Tab não para em nada invisível e o ouvinte de teclado da Programação não sobrevive à saída da página.
 
-Em 11 cenários de YouTube bloqueado ou vídeo indisponível, o player não mostra texto de erro legível pelo site. O link "Não abriu? Ver no YouTube" é a saída nesses casos, e é por isso que ele fica sempre à vista.
+Em 9 de 12 cenários de YouTube bloqueado, nenhum texto de erro aparece. Com vídeo apagado, restrição de idade e bloqueador, o YouTube ou o navegador mostram o próprio texto, que o site não consegue ler. O ícone de abrir no YouTube, junto do X, é a saída em todos, e é por isso que ele fica sempre à vista.
 
 ### O que não foi verificado
 
 - Safari, Firefox, aparelhos reais e publicação de verdade na Vercel.
 - **Chrome e Brave reais, além do caminho principal.** Neles rodaram abertura, tutorial, troca de filme, um trailer e a saída para o YouTube. Menus, filtro, teclado, toque e os outros 21 trailers rodaram só no Edge sem janela.
 - **Programação em iPad.** Em emulação a 820x1180 a janela não anda de lado, a escala fica em 1 e os cartazes aparecem. O conteúdo de 4.150 px é recortado de propósito. Num iPad de verdade não foi visto.
-- Tempos da abertura com jogo aberto. Nenhum estava aberto durante a medição.
-- Depois da bateria mudaram só as regras do Sobre e do Contato e os testes de Páginas e abertura: foram repetidos varredura, abertura e Páginas. O aumento do texto do Sobre no celular veio por último e repetiu varredura, textos e Páginas só no Sobre, em todos os tamanhos (148 de 148). O resto não depende dessas regras.
+- **Volta à home a partir da Programação** não foi medida: só o caminho por EXPLORAR e a entrada direta na sessão.
+- **A janela sem desenhar** não foi explicada: só se sabe que não vem das mudanças desta rodada. Com o jogo fechado, o caso não foi medido nesta rodada.
+- Os relatórios de pesquisa em `reference/fase2/relatorios/` ainda citam a Steam, "ARRASTE PARA VER" e as classes antigas da abertura. São registro da pesquisa e não são servidos.
+- **Os tempos da rodada final foram medidos com jogo aberto.** Os números de PC parado na tabela da abertura são da rodada anterior, com a abertura antiga.
+- O destino do X foi conferido uma vez, pelo endereço e pelo título da página. O X pode pedir login a quem abre sem conta.
+- A Vercel pode manter por até 1 dia a versão antiga de `sem-sinal-*.webp` no cache de imagens depois do próximo deploy.
+
+### Limites conhecidos desta rodada
+
+- O cursor é um elemento da página: num travamento da thread principal, ele para junto. Nenhum movimento dele lê layout, e o laço de quadros dorme quando o anel alcança o ponto.
+- No Firefox a barra de rolagem nativa continua na lista de filmes do menu, porque o seletor usado é o do WebKit.
+- As leituras não andam sozinhas em janelas mais largas que o ciclo, cerca de 2.720 px, porque todos os cartões já estão à vista. Seguem manuais.
+- As leituras pausam sozinhas, mas não têm botão visível de pausa. O critério 2.2.2 da WCAG não foi avaliado.
+- Entrar direto numa sessão e voltar pelo logo ainda pausa mais que o caminho pela home, de 378 a 545 ms na maior pausa, porque a home monta do zero.
+- Com o foco dentro do player, chegando por Tab, o Escape não chega ao site e o diálogo fica aberto: uma página não recebe teclas de um iframe de outra origem. Sai-se com Shift+Tab até o X, e os atalhos do YouTube continuam valendo.
 
 ### Herdado da estrutura original, sem alteração
 
@@ -222,8 +310,10 @@ Em 11 cenários de YouTube bloqueado ou vídeo indisponível, o player não most
 - No celular, o gesto que começa em cima do slider de leituras não rola a página, porque o bundle segura o `touchstart`. Rola pela margem.
 - Entre 480 e 767 px de largura, a página inteira fica coberta por "Gire o aparelho para ver melhor". Isso pega celular deitado e tablet pequeno em pé.
 - Os ouvintes de `resize` e de toque da Programação também ficam depois de sair da página. Nenhum efeito visto.
+- `user-select:none` vem do CSS original e cobre quase todo o texto. O novo cursor não impede a seleção, porque ela já não existia nesses blocos.
+- Com a home parada, a thread principal fica ocupada de 160 a 320 ms por segundo, no WebGL e nos tickers do bundle. Era assim antes e não entrou nesta rodada.
 
-Do link novo do trailer, sem alteração: o clique com o botão do meio abre a aba e não fecha o diálogo, e o texto do link não diz o nome do filme nem que abre outra aba.
+Do ícone do trailer, sem alteração: o clique com o botão do meio abre a aba e não fecha o diálogo. O nome acessível diz o filme e que abre outra aba.
 
 ## 8. Decisões que dependem do proprietário
 

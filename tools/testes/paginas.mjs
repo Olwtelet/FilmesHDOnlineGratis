@@ -44,6 +44,7 @@ const TAMANHOS = [
   { nome: '820x1180', width: 820, height: 1180, ua: UA_TABLET },
   { nome: '390x844', width: 390, height: 844, ua: UA_CELULAR },
   { nome: '360x640', width: 360, height: 640, ua: UA_CELULAR },
+  { nome: '320x568', width: 320, height: 568, ua: UA_CELULAR },
 ];
 const tamanhosValidos = TAMANHOS.filter((t) => !SO_TAM || SO_TAM.includes(t.nome));
 const SEMPRE_TODOS = ['1440x900', '390x844'];
@@ -966,7 +967,7 @@ async function parteLinks() {
   }
   confere('canonical e og:url iguais à URL servida', canonicos.length === 0, curto(canonicos));
 
-  // Externos: GET com agente de navegador. Discord e Steam podem bloquear robôs: resposta 403/429 é anotada, não dada por quebrada.
+  // Externos: GET com agente de navegador. Discord e X podem bloquear robôs: resposta 403/429 é anotada, não dada por quebrada.
   const respostas = [];
   const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
   await emParalelo([...externos.keys()], 6, async (u) => {
@@ -981,7 +982,7 @@ async function parteLinks() {
       const r = await fetch(encodeURI(decodeURI(u)), { redirect: 'follow', headers: { 'user-agent': UA, 'accept-language': 'pt-BR' }, signal: c.signal });
       clearTimeout(t);
       status = r.status; final = r.url;
-      // HTTP 200 não basta: o Steam responde 200 com uma página de erro quando o grupo foi removido
+      // HTTP 200 não basta: um serviço pode responder 200 com uma página de erro
       const html = await r.text();
       titulo = /<title[^>]*>([^<]*)<\/title>/i.exec(html)?.[1]?.trim() || '';
     } catch (e) { status = `erro ${e.cause?.code || e.name}`; }
@@ -989,7 +990,7 @@ async function parteLinks() {
   });
   fs.writeFileSync(path.join(SAIDA, 'links-externos.json'), JSON.stringify(respostas, null, 1));
   for (const r of respostas) {
-    const bloqueavel = /discord\.gg|steamcommunity/.test(r.u);
+    const bloqueavel = /discord\.gg|\/\/x\.com\//.test(r.u);
     const ok = (r.status === 200 && !/(error|erro|not found|não encontrad)/i.test(r.titulo)) || (bloqueavel && (r.status === 403 || r.status === 429));
     confere(`externo ${r.u}`, ok, `${r.status} "${r.titulo}" -> ${r.final || ''} (${r.onde} referências)`);
   }
@@ -1017,6 +1018,15 @@ async function parteLinks() {
     const a = await fetch(`https://discord.com/api/v9/invites/${codigo}`, { headers: { 'user-agent': UA } });
     await a.body?.cancel().catch(() => {});
     confere(`convite do Discord ${codigo} válido`, a.status === 200 || a.status === 429, String(a.status));
+  }
+
+  // Perfil no X: a página pode recusar robô ou pedir login; o oEmbed público responde 200 para perfil existente e 404 para inexistente.
+  for (const r of respostas.filter((x) => /^https:\/\/x\.com\//.test(x.u))) {
+    try {
+      const a = await fetch(`https://publish.x.com/oembed?url=${encodeURIComponent(r.u)}`, { headers: { 'user-agent': UA } });
+      await a.body?.cancel().catch(() => {});
+      confere(`perfil do X ${r.u} existe`, a.status === 200 || a.status === 429, String(a.status));
+    } catch (e) { confere(`perfil do X ${r.u} existe`, false, String(e).slice(0, 120)); }
   }
 
   // Trailers: oEmbed responde 200 só para vídeo público e incorporável.

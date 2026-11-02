@@ -38,9 +38,9 @@ const titulo = film.fullTitle.length <= TITULO_MAX ? film.fullTitle : film.title
       <div class="div-block-33">
         <div data-a="alpha" data-estado="" {...sessaoAttrs(film)} class="roll-cont-eyeb parish larger is-cs">{film.session.fullDate}</div>
       </div>
-      <div class="cs-text-w">
+      <div class="cs-text-w" data-linhas={film.heroLines}>
         <h1 data-cs="title" class="cs-title">{titulo}</h1>
-        <div data-cs="lines" data-linhas={film.heroLines} class="abs cs-hero-lines case-he">
+        <div data-cs="lines" class="abs cs-hero-lines case-he">
           {fios.map(() => <div data-a="line" class="line black"></div>)}
         </div>
       </div>

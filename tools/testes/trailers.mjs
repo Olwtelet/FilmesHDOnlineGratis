@@ -1396,6 +1396,39 @@ async function parteTeclado() {
       }
     }),
   );
+  // Entrar no player pelo Tab não pode deixar marca: saindo dele com Shift+Tab, um clique no player devolve o foco, e o Escape fecha
+  tarefas.push(() =>
+    caso('teclado sai do player e clica nele', 'desktop', async (page) => {
+      await irPara(page, 'the-menu-2022');
+      await abrirTrailer(page);
+      await esperarTocando(page, f.id, { avanco: 0.5 });
+      for (let i = 0; i < 3; i++) await page.keyboard.press('Tab');
+      await page.waitForTimeout(300);
+      const dentro = await page.evaluate(() => document.activeElement?.tagName);
+      await page.keyboard.press('Shift+Tab');
+      await page.waitForTimeout(300);
+      const fora = await page.evaluate(() => document.activeElement?.tagName);
+      confere('teclado: Shift+Tab sai do player', dentro === 'IFRAME' && fora !== 'IFRAME', `${dentro} > ${fora}`);
+      const m = await medirAberto(page);
+      await page.mouse.click(m.rect.l + m.rect.w / 2, m.rect.t + m.rect.h / 2);
+      await page.waitForTimeout(1200);
+      const foco = await page.evaluate(() => document.activeElement?.tagName);
+      await page.keyboard.press('Escape');
+      await conferirFechado(page, `teclado: entra e sai do player, clique nele e Escape fecha (foco no ${foco})`);
+    }),
+  );
+  // O CDP solta a tecla antes do blur do iframe; uma pessoa, depois. Os dois caminhos têm de deixar o foco no player.
+  tarefas.push(() =>
+    caso('teclado foco no player, tecla demorada', 'desktop', async (page) => {
+      await irPara(page, 'the-menu-2022');
+      await abrirTrailer(page);
+      await esperarTocando(page, f.id, { avanco: 0.5 });
+      for (let i = 0; i < 3; i++) await page.keyboard.press('Tab', { delay: 80 });
+      await page.waitForTimeout(600);
+      const noFrame = await page.evaluate(() => document.activeElement?.tagName);
+      confere('teclado: Tab com a tecla presa 80 ms também entra no player e fica lá', noFrame === 'IFRAME', noFrame);
+    }),
+  );
   // Tab de trás: link atrás do diálogo. Enter navega, e o diálogo não fica preso
   tarefas.push(() =>
     caso('teclado link atrás do diálogo', 'desktop', async (page) => {

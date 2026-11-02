@@ -28,7 +28,7 @@ export const SOCIAL = {
   /** convite geral do servidor: abre o canal de regras */
   discord: 'https://discord.gg/wSSJEJAJgt',
   youtube: 'https://www.youtube.com/@FilmesHDOn-lineGrátis',
-  steam: 'https://steamcommunity.com/groups/FilmesHDOnlineGratis',
+  x: 'https://x.com/FilmesHDOG',
   github: 'https://github.com/Olwtelet',
 } as const;
 

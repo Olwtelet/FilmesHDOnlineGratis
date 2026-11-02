@@ -1,8 +1,7 @@
 ---
 /**
- * Abertura da home (div.preloader-w): barras em CSS e a máscara do símbolo, sem vídeo nenhum (bloco 7 do tema), e os
- * botões ENTRAR que a fecham. O <video> vazio fica porque o app.js lê video.muted ao iniciar: sem o elemento, o runtime
- * inteiro para.
+ * Abertura da home (div.preloader-w): as barras e o nome em CSS, sem vídeo nenhum (bloco 7 do tema), e os botões ENTRAR
+ * que a fecham. O <video> vazio fica porque o app.js lê video.muted ao iniciar: sem o elemento, o runtime inteiro para.
  */
 import { PRELOADER } from '../../data/home';
 import ExploreButton from '../ui/ExploreButton.astro';
@@ -13,10 +12,7 @@ import ExploreButton from '../ui/ExploreButton.astro';
   <div class="abertura" aria-hidden="true">
     <div class="ab-carta"></div>
     <div class="ab-comb ab-fora">{Array.from({ length: PRELOADER.barrasFora }, () => <i></i>)}</div>
-    <div class="ab-simbolo"><div class="ab-janela"><div class="ab-contra">
-      <div class="ab-comb ab-dentro">{Array.from({ length: PRELOADER.barrasDentro }, () => <i></i>)}</div>
-    </div></div></div>
-    <div class="ab-nome">{PRELOADER.nome}</div>
+    <div class="ab-nome"><span>{PRELOADER.nome[0]}</span> <span>{PRELOADER.nome[1]} <span>{PRELOADER.nome[2]}</span></span></div>
   </div>
   <div class="preloader-cont">
     <div data-preloader="btn" class="preloader-btn-w">

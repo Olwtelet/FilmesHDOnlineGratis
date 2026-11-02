@@ -1,7 +1,7 @@
 // Gera os recursos da marca a partir do arquivo oficial reference/brand/simbolo.png, sem redesenhar a forma:
 //   - máscara com transparência (alfa = luminância da fonte; só limpa o ruído do arquivo nas pontas);
 //   - favicon e ícone de toque (o próprio arquivo reduzido, branco sobre preto);
-//   - cartão de teste "sem sinal": imagem do item-aviso e dos cartões da página Sobre.
+//   - cartão de teste "sem sinal", só as barras: imagem do item-aviso e dos cartões da página Sobre.
 //   node tools/marca.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,7 +29,7 @@ await sharp(FONTE).removeAlpha().resize(32, 32).png().toFile(path.join(SITE, 'fa
 await sharp(FONTE).removeAlpha().resize(180, 180).png().toFile(path.join(SITE, 'icone-toque-180.png'));
 await sharp(FONTE).removeAlpha().resize(512, 512).png().toFile(path.join(SITE, 'icone-512.png'));
 
-// Cartão de teste: as mesmas barras SMPTE do tema, com o símbolo sobre o quadrado branco central.
+// Cartão de teste: as mesmas barras SMPTE do tema.
 const BARRAS = ['#c0c0c0', '#c0c000', '#00c0c0', '#00c000', '#c000c0', '#c00000', '#0000c0'];
 const INVERSAS = ['#0000c0', '#131313', '#c000c0', '#131313', '#00c0c0', '#131313', '#c0c0c0'];
 const BASE = [['#00214c', 17.86], ['#ffffff', 17.85], ['#32006a', 17.86], ['#131313', 17.86], ['#090909', 4.77], ['#131313', 4.75], ['#1d1d1d', 4.75], ['#131313', 14.3]];
@@ -47,16 +47,7 @@ function cartaoSvg(l, a) {
 }
 
 async function cartao(l, a, nome) {
-  const lado = Math.round(Math.min(l, a) * 0.42);
-  const janela = await sharp({ create: { width: lado, height: lado, channels: 3, background: '#000' } }).png().toBuffer();
-  const simbolo = await mascara.clone().resize(lado, lado).png().toBuffer();
-  await sharp(cartaoSvg(l, a))
-    .composite([
-      { input: janela, left: Math.round((l - lado) / 2), top: Math.round((a - lado) / 2) },
-      { input: simbolo, left: Math.round((l - lado) / 2), top: Math.round((a - lado) / 2) },
-    ])
-    .webp({ quality: 88 })
-    .toFile(path.join(SITE, `${nome}.webp`));
+  await sharp(cartaoSvg(l, a)).webp({ quality: 88 }).toFile(path.join(SITE, `${nome}.webp`));
 }
 await cartao(1600, 900, 'sem-sinal-1600');
 await cartao(800, 1200, 'sem-sinal-800');

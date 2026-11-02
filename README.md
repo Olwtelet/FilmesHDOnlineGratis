@@ -55,7 +55,7 @@ src/
                           sessoes/[slug], rss.xml, sitemap.xml
 public/
   assets/js/app.js        runtime original, com as edições de tools/patch-bundle.mjs
-  assets/js/local-*.js    camada local: imagens, abertura, menu e trailer
+  assets/js/local-*.js    camada local: imagens, abertura, menu, trailer e cursor
   assets/css/tema-sinal.css
   assets/img/sessoes/     imagens de cada sessão, geradas
   og/                     cartões de compartilhamento, gerados
@@ -67,11 +67,11 @@ reference/                histórico: capturas, HTML original, binários retirad
 
 **Ordem das sessões.** `SessoesOrdem.astro` é um script inline com `data-taxi-reload`: roda depois do DOM e antes do `app.js` e dos módulos, no primeiro carregamento e em toda navegação do Taxi, inclusive de página em cache. Ele ordena as listas pelo relógio de São Paulo, sem novo deploy e sem corrida com o WebGL. Ordem e aba aberta estão em [docs/FASE2.md](docs/FASE2.md).
 
-**Edições no runtime.** Ficam todas em `tools/patch-bundle.mjs`: o giro de entrada para no primeiro item, o rótulo `ROLAR`, a tecla de depuração retirada, o rollover sem layout por letra e as regras por filme do `main.css`.
+**Edições no runtime.** Ficam todas em `tools/patch-bundle.mjs`: o giro de entrada para no primeiro item, o rótulo `ROLAR`, que o cursor do tema deixou fora da tela, a tecla de depuração retirada, o rollover sem layout por letra, as regras por filme do `main.css`, as leituras que andam sozinhas e, na volta à home, uma textura por imagem e o descarte do que saiu da tela.
 
 ## Testes
 
-Todos sobem navegador sem janela e testam o build na 4322.
+Testam o build na 4322. Sobem navegador sem janela, menos os três marcados como janela real, que abrem o Chrome e o Brave instalados.
 
 | Comando | O que confere |
 |---|---|
@@ -81,12 +81,15 @@ Todos sobem navegador sem janela e testam o build na 4322.
 | `node tools/testes/trailers.mjs` | Os 22 trailers tocando e todos os caminhos de fechar |
 | `node tools/testes/interacoes.mjs` | Teclado, mouse, toque, som, menu, filtro, cadeia de navegação, RSS e peso |
 | `node tools/testes/abertura.mjs` | Tempos do ENTER e da home, quadros da abertura, caminhos de falha |
+| `node tools/testes/identidade.mjs` | Abertura, cartão, trailer, leituras, canais, cursor e ida e volta à home a 320, 390, 820, 1440 e 1920 px. Janela real só na parte `aba` |
+| `node tools/testes/janela-real.mjs` | Janela real: primeira visita, tutorial, rolo e um trailer no Chrome e no Brave |
+| `node tools/testes/volta-home.mjs` | Janela real: pausas na volta à home, com e sem cache, com antes e depois por `--referencia` |
 
 Cada suíte aceita `--url` e `--canal=msedge|chrome`. Rode uma por vez: elas usam a GPU, e o PC do proprietário já desligou sozinho durante rodadas longas e paralelas.
 
 ## Inicialização da home
 
-A primeira visita antiga podia travar no vídeo da abertura, em Chrome e Brave reais, por causa do decodificador. A investigação está em [docs/historico/README-replica-siena.md](docs/historico/README-replica-siena.md). Na Fase 2 o vídeo saiu: a abertura é feita de barras em CSS e da máscara do símbolo, sem decodificador nenhum.
+A primeira visita antiga podia travar no vídeo da abertura, em Chrome e Brave reais, por causa do decodificador. A investigação está em [docs/historico/README-replica-siena.md](docs/historico/README-replica-siena.md). Na Fase 2 o vídeo saiu: a abertura é feita de barras em CSS e do nome do site, sem decodificador nenhum.
 
 `public/assets/js/local-preloader.js` e `local-imagens.js` continuam observando a carga e só agem sobre um estado que falhou:
 

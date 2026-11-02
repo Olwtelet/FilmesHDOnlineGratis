@@ -116,8 +116,12 @@ async function visita(page, cdp, rotulo, comFoto) {
   const v2 = await page.evaluate(() => { const v = document.querySelector('[data-tutorial="video"]'); return v ? { t: v.currentTime, q: v.getVideoPlaybackQuality?.().totalVideoFrames ?? 0, perdidos: v.getVideoPlaybackQuality?.().droppedVideoFrames ?? 0, pausado: v.paused, pronto: v.readyState } : null; });
   r.tutorial = v1 && v2 ? { src: v1.src, avancou: +(v2.t - v1.t).toFixed(2), quadros: v2.q - v1.q, perdidos: v2.perdidos, pronto: v2.pronto } : null;
   if (comFoto) await page.screenshot({ path: path.join(SAIDA, `${rotulo}-tutorial.jpg`), type: 'jpeg', quality: 70 }).catch(() => {});
+  const q0 = await page.evaluate(() => ({ quadros: window.__m.quadros, t: performance.now() }));
   await page.click('[data-tutorial="close"]', { timeout: 10000 }).catch((e) => r.console.push(`FECHAR: ${String(e).split('\n')[0]}`));
   await page.waitForFunction(() => { const t = document.querySelector('[data-tutorial="w"]'); return !t || t.getClientRects().length === 0 || +getComputedStyle(t).opacity < 0.05; }, null, { timeout: 8000 }).catch(() => r.console.push('tutorial não saiu'));
+  const q1 = await page.evaluate(() => ({ quadros: window.__m.quadros, t: performance.now() }));
+  r.fpsFechar = Math.round(((q1.quadros - q0.quadros) * 1000) / (q1.t - q0.t));
+  r.msFechar = Math.round(q1.t - q0.t);
   await dormir(1500);
   // o item do rolo que está no meio da janela; o primeiro .top-m-film-title é fixo da lista do menu e nunca muda
   const titulo = () => page.evaluate(() => {
@@ -140,12 +144,22 @@ async function visita(page, cdp, rotulo, comFoto) {
   return r;
 }
 
+// Visita com o navegador a 1 quadro por segundo é janela sem desenhar, não o site: como na volta à home, fica fora da conta e é contada à parte.
+const semDesenhar = (r) => r.fps < 20 || r.fpsFechar < 20;
+
 function julgar(r) {
   const nome = r.rotulo;
+  if (semDesenhar(r)) {
+    console.log(`aviso ${nome}: janela sem desenhar, ${r.fps} q/s até a home e ${r.fpsFechar} q/s ao fechar o tutorial; home em ${r.home.toFixed(0)} ms, fora da conta`);
+    confere(`${nome}: home abre`, r.home > 0);
+    const erros = r.console.filter((x) => x !== 'tutorial não saiu' && !x.startsWith('FECHAR:'));
+    confere(`${nome}: console limpo`, erros.length === 0, erros.slice(0, 2).join(' | '));
+    return;
+  }
   confere(`${nome}: abertura anima`, r.animou);
   confere(`${nome}: home abre`, r.home > 0, `ENTER ${r.enter.toFixed(0)} ms, home ${r.home.toFixed(0)} ms depois do clique, ${r.fps} q/s, tarefa longa ${r.longa} ms`);
   confere(`${nome}: tutorial toca sem parar`, !!r.tutorial && r.tutorial.avancou > 3 && !r.midia.length, JSON.stringify(r.tutorial) + (r.midia.length ? ` mídia: ${r.midia.slice(0, 2).join(' | ')}` : ''));
-  confere(`${nome}: seta troca o filme`, !!r.rolo.de && r.rolo.de !== r.rolo.para, `${r.rolo.de} -> ${r.rolo.para}`);
+  confere(`${nome}: seta troca o filme`, !!r.rolo.de && r.rolo.de !== r.rolo.para, `${r.rolo.de} -> ${r.rolo.para}; FECHAR levou ${r.msFechar} ms a ${r.fpsFechar} q/s`);
   confere(`${nome}: console limpo`, r.console.length === 0, r.console.slice(0, 2).join(' | '));
 }
 
@@ -220,11 +234,13 @@ for (const tipo of NAVEGADORES) {
 
 for (const tipo of NAVEGADORES) {
   for (const v of ['limpa', 'cache']) {
-    const g = todas.filter((r) => r.tipo === tipo && r.visita === v && r.enter);
+    const g = todas.filter((r) => r.tipo === tipo && r.visita === v && r.enter && !semDesenhar(r));
     if (!g.length) continue;
     console.log(`info  ${tipo} ${v}, n=${g.length}: ENTER mediana ${mediana(g.map((r) => r.enter)).toFixed(0)} ms, máx ${Math.max(...g.map((r) => r.enter)).toFixed(0)}; home ${mediana(g.map((r) => r.home)).toFixed(0)} ms; tarefa longa máx ${Math.max(...g.map((r) => r.longa))} ms`);
   }
 }
+const fora = todas.filter(semDesenhar).length;
+confere('sobram visitas medidas: no máximo 1 em 4 com a janela sem desenhar', todas.length > 0 && fora * 4 <= todas.length, `${fora} de ${todas.length}`);
 fs.writeFileSync(path.join(SAIDA, 'visitas.json'), JSON.stringify(todas, null, 1));
 const falhas = resultados.filter((r) => !r.ok);
 console.log(`\n${resultados.length - falhas.length} de ${resultados.length} aprovados. Capturas em ${SAIDA}`);

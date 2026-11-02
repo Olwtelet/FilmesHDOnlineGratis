@@ -1,7 +1,8 @@
 ---
 /**
- * Cursor próprio e áreas de anterior e próximo dos carrosséis (div.cursor-box.out), movidos pelo app.js por
- * data-cursor / data-hitbox. O app.js escreve ROLAR no texto do cursor ao iniciar; data-hitbox é seletor, nunca aparece.
+ * Áreas de anterior e próximo dos carrosséis (div.cursor-box.out), ligadas pelo app.js por data-cursor / data-hitbox. O desenho
+ * do cursor antigo fica escondido pelo tema, e quem desenha agora é public/assets/js/local-cursor.js. O HTML dele fica porque o
+ * app.js escreve ROLAR no texto ao iniciar e, sem [data-cursor="home"], as áreas ficam sem clique; data-hitbox nunca aparece.
  *
  *   <CursorBox page="home" />   roll da home (áreas .pre-next-hb / .pre-next-hb.bottom)
  *   <CursorBox page="work" />   /programacao/ (acrescenta .work aos invólucros do cursor; áreas .left / .right)

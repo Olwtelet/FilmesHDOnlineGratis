@@ -9,6 +9,7 @@ import FilmMaskSvg from '../ui/svg/FilmMaskSvg.astro';
 import FilmMaskMobileSvg from '../ui/svg/FilmMaskMobileSvg.astro';
 import PlayBadgeSvg from './svg/PlayBadgeSvg.astro';
 import CloseSvg from './svg/CloseSvg.astro';
+import ExternalSvg from './svg/ExternalSvg.astro';
 import PlaySvg from './svg/PlaySvg.astro';
 import { responsive } from './cms';
 import type { Film } from '../../data/films';
@@ -53,6 +54,10 @@ const tituloDe = (filme: string) => `Trailer de ${filme}`;
             <button type="button" data-videoplayer="close" aria-label="Fechar o trailer" class="close-btn">
               <CloseSvg />
             </button>
+            {/* O site não enxerga um player que falhou em outra origem: a saída fica sempre à mão, e o clique tira o player e fecha o diálogo */}
+            <a href={`https://www.youtube.com/watch?v=${primeiro.youtube}`} target="_blank" rel="noopener noreferrer" data-trailer-fora aria-label={`${tituloDe(primeiro.film)}: abrir no YouTube, em nova aba`} title="Abrir no YouTube" class="trailer-fora">
+              <ExternalSvg />
+            </a>
           </div>
           {
             film.trailers.length > 1 && (
@@ -65,8 +70,6 @@ const tituloDe = (filme: string) => `Trailer de ${filme}`;
               </div>
             )
           }
-          {/* O site não enxerga um player que falhou em outra origem: a saída fica sempre à vista, e o clique tira o player e fecha o diálogo */}
-          <a href={`https://www.youtube.com/watch?v=${primeiro.youtube}`} target="_blank" rel="noopener noreferrer" data-trailer-fora class="trailer-fora">Não abriu? Ver no YouTube</a>
           <div class="video-bar">
             <div data-videoplayer="ui" class="video-ctrls">
               <div data-vid="play" class="playpause-w">

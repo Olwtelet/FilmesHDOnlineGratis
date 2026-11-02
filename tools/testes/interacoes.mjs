@@ -1,5 +1,5 @@
 // Teclado, mouse, toque, som, menu, filtro, navegação Taxi, RSS e peso, contra o build em produção.
-//   node tools/testes/interacoes.mjs [--url=http://localhost:4322] [--canal=msedge] [--secao=teclado,filtro,mouse,som,toque,cadeia,rss,peso] [--so=expressão] [--saida=pasta] [--gpu=software]
+//   node tools/testes/interacoes.mjs [--url=http://localhost:4322] [--canal=msedge] [--secao=teclado,filtro,mouse,som,toque,cadeia,rss,peso] [--so=expressão] [--desktop=1920x1080] [--saida=pasta] [--gpu=software]
 // Sempre headless. Sem --secao roda tudo. Com --saida grava as capturas lá. Cada caso imprime ok ou FALHA; sai com código 1 se houver FALHA.
 // Armadilhas: o relógio falso do Playwright não anda animação CSS; o bundle decide "celular" pelo user agent; WebGL headless é
 // software e lento, então aqui se espera por condição, nunca por tempo curto fixo. Teclas Espaço e setas são engolidas em window
@@ -18,8 +18,10 @@ if (SAIDA) fs.mkdirSync(SAIDA, { recursive: true });
 
 const UA_CELULAR = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36';
 const UA_TABLET = 'Mozilla/5.0 (Linux; Android 14; SM-X710) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+const [LARGO, ALTO] = arg('desktop', '1440x900').split('x').map(Number);
 const TELAS = {
-  desktop: { viewport: { width: 1440, height: 900 } },
+  desktop: { viewport: { width: LARGO, height: ALTO } },
+  c320: { viewport: { width: 320, height: 568 }, isMobile: true, hasTouch: true, userAgent: UA_CELULAR },
   c390: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, userAgent: UA_CELULAR },
   c360: { viewport: { width: 360, height: 640 }, isMobile: true, hasTouch: true, userAgent: UA_CELULAR },
   // sem isMobile: nesse modo o Chromium alarga a viewport de layout para caber o conteúdo (ver a checagem de innerWidth em secaoToque)
@@ -831,13 +833,13 @@ async function secaoMouse() {
     await dorme(page, 1000);
     const cursor = await page.evaluate(() => {
       const t = document.querySelector('[data-cursor="text"]');
-      const w = document.querySelector('[data-cursor="home"]');
-      const c = getComputedStyle(w);
-      const r = w.getBoundingClientRect();
-      return { texto: t.textContent, classe: w.className, op: +c.opacity, x: Math.round(r.x + r.width / 2), y: Math.round(r.y + r.height / 2) };
+      const antigo = document.querySelector('.cursor-w-out');
+      const no = document.querySelector('.cursor-sinal-no');
+      const r = no && no.querySelector('.cs-ponto').getBoundingClientRect();
+      return { texto: t.textContent, antigoEscondido: getComputedStyle(antigo).display === 'none', visivel: !!no && no.classList.contains('visivel'), x: r && Math.round(r.x), y: r && Math.round(r.y) };
     });
-    confere('home: cursor diz ROLAR, não SCROLL', cursor.texto === 'ROLAR' && !(await page.evaluate(() => /SCROLL/.test(document.body.textContent))), cursor.texto);
-    confere('home: o cursor segue o ponteiro e está visível', Math.abs(cursor.x - 720) < 60 && Math.abs(cursor.y - 480) < 60 && !/hide/.test(cursor.classe), JSON.stringify(cursor));
+    confere('home: o rótulo do cursor antigo está em português, escondido', cursor.texto === 'ROLAR' && cursor.antigoEscondido && !(await page.evaluate(() => /SCROLL/.test(document.body.textContent))), cursor.texto);
+    confere('home: o cursor do tema segue o ponteiro e está visível', cursor.visivel && Math.abs(cursor.x - 720) < 3 && Math.abs(cursor.y - 480) < 3, JSON.stringify(cursor));
     await captura(page, 'home-cursor');
     // arrastar
     await arrastar(page, { x: 720, y: 640 }, { x: 720, y: 420 });
@@ -1039,7 +1041,8 @@ async function secaoMouse() {
     confere('sessão: as faixas da galeria andam com a rolagem, em sentidos opostos', anda[0] !== 0 && anda[1] !== 0 && Math.sign(anda[0]) !== Math.sign(anda[1]), `${f0} -> ${f1}`);
     const itens = await page.evaluate(() => [...document.querySelectorAll('[data-footage="line"]')].map((l) => l.querySelectorAll('img').length));
     confere('sessão: duas faixas com 14 itens', itens.length === 2 && itens.every((x) => x === 14), JSON.stringify(itens));
-    // leituras
+    // leituras: aqui o que se mede é a mão, então a passagem automática fica desligada; ela tem um teste próprio, em identidade.mjs
+    await page.emulateMedia({ reducedMotion: 'reduce' });
     await trazer(page, '[data-reviews="wrapper"]', 0.2);
     const lerSlide = () => page.evaluate(() => [...document.querySelectorAll('[data-reviews="slide"]')].map((e) => Math.round(e.getBoundingClientRect().left)));
     const lerBarra = () => page.evaluate(() => { const e = document.querySelector('[data-reviews="progress"]'); return e.style.transform || getComputedStyle(e).width; });
@@ -1060,6 +1063,7 @@ async function secaoMouse() {
     await dorme(page, 1600);
     const s3 = await lerSlide();
     confere('sessão: botão de nota anterior volta', s3[0] !== s2[0], `${s2[0]} -> ${s3[0]}`);
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
     // letreiro
     await trazer(page, '.s.prizes', 0.1);
     await dorme(page, 800);
@@ -1231,7 +1235,7 @@ async function toqueNoCentro(page, seletor) {
 }
 
 async function secaoToque() {
-  for (const [tela, nome] of [['c390', '390x844'], ['c360', '360x640'], ['tablet', 'tablet 820x1180']]) {
+  for (const [tela, nome] of [['c320', '320x568'], ['c390', '390x844'], ['c360', '360x640'], ['tablet', 'tablet 820x1180']]) {
     const { width: W, height: H } = TELAS[tela].viewport;
     const CEL = tela !== 'tablet';
     await tenta(`toque na home ${nome}`, async () => {
@@ -1364,6 +1368,7 @@ async function secaoToque() {
         }
         return false;
       };
+      await page.emulateMedia({ reducedMotion: 'reduce' }); // a mão, sem a passagem automática
       await dest('[data-reviews="wrapper"]', 0.2);
       await dorme(page, 800);
       const lerSlide = () => page.evaluate(() => [...document.querySelectorAll('[data-reviews="slide"]')].map((e) => Math.round(e.getBoundingClientRect().left)));
@@ -1383,6 +1388,7 @@ async function secaoToque() {
       await dorme(page, 1500);
       const s2 = await lerSlide();
       confere(`${nome} sessão: tocar em próxima nota move`, s2[0] !== s1[0], `${s1[0]} -> ${s2[0]}`);
+      await page.emulateMedia({ reducedMotion: 'no-preference' });
       // próximo cartão
       await dest('[data-nextcms="w"]', 0.3);
       await dorme(page, 800);

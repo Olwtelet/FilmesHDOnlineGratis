@@ -62,6 +62,46 @@
     }
   }, true);
 
+  // O tema decide pelas classes de .menu-w se um painel está aberto, em vez de :has(#mainpanel:checked), que encarecia cada inserção no
+  // DOM do site inteiro. O bundle escreve .checked direto, sem evento, por isso o setter. Este arquivo roda antes do app.js, que é deferido.
+  var marcado = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'checked');
+  function espelhar(campo) {
+    var menu = campo.closest('.menu-w');
+    if (menu) menu.classList.toggle(campo.id === 'mainpanel' ? 'com-principal' : 'com-pequeno', marcado.get.call(campo));
+  }
+  Object.defineProperty(HTMLInputElement.prototype, 'checked', {
+    configurable: true,
+    enumerable: marcado.enumerable,
+    get: marcado.get,
+    set: function (valor) {
+      marcado.set.call(this, valor);
+      if (this.id === 'mainpanel' || this.id === 'smallpanel') espelhar(this);
+    },
+  });
+  document.addEventListener('change', function (e) {
+    if (e.target.id === 'mainpanel' || e.target.id === 'smallpanel') espelhar(e.target);
+  }, true);
+
+  // Foco que aparece em outro elemento, sem :has(). O gatilho do menu é um input invisível: o anel vai para quem o contém. A última linha
+  // do rodapé fica atenuada e acende só com o teclado, e o campo do feed tem o anel na caixa, não no botão ao lado.
+  document.addEventListener('focusin', function (e) {
+    var alvo = e.target;
+    if (!alvo.classList) return;
+    if (alvo.classList.contains('ft-newsletter-input')) alvo.parentElement.classList.add('foco-campo');
+    if (!alvo.matches(':focus-visible')) return;
+    if (alvo.classList.contains('menu-input')) alvo.parentElement.classList.add('foco-menu');
+    var linha = alvo.closest('.footer-line.last');
+    if (linha) linha.classList.add('foco-linha');
+  });
+  document.addEventListener('focusout', function (e) {
+    var alvo = e.target;
+    if (!alvo.classList) return;
+    if (alvo.classList.contains('ft-newsletter-input')) alvo.parentElement.classList.remove('foco-campo');
+    if (alvo.classList.contains('menu-input')) alvo.parentElement.classList.remove('foco-menu');
+    var linha = alvo.closest('.footer-line.last');
+    if (linha) linha.classList.remove('foco-linha');
+  });
+
   ['wheel', 'touchmove'].forEach(function (tipo) {
     document.addEventListener(tipo, function (e) {
       if (e.target.closest && e.target.closest('.small-panel')) e.stopPropagation();

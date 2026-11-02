@@ -45,7 +45,7 @@ export const ABOUT_JSON_LD = {
     name: SITE.name,
     foundingDate: SITE.since,
     url: SITE.url,
-    sameAs: [SOCIAL.discord, SOCIAL.youtube, SOCIAL.steam],
+    sameAs: [SOCIAL.discord, SOCIAL.youtube, SOCIAL.x],
   },
 };
 
@@ -167,7 +167,7 @@ export const ABOUT_COLLABORATORS: { title: string; items: { label: string; name:
   items: [
     { label: 'CANAL', name: 'Discord', logo: '/assets/img/site/social-discord.svg', href: SOCIAL.discord },
     { label: 'CANAL', name: 'YouTube', logo: '/assets/img/site/social-youtube.svg', href: SOCIAL.youtube },
-    { label: 'CANAL', name: 'Steam', logo: '/assets/img/site/social-steam.svg', href: SOCIAL.steam },
+    { label: 'CANAL', name: 'X', logo: '/assets/img/site/social-x.svg', href: SOCIAL.x },
   ],
 };
 

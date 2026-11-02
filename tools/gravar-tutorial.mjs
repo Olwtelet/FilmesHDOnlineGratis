@@ -192,6 +192,7 @@ async function gravar() {
     if (m.type() === 'error') erros.push(m.text());
   });
   await page.addInitScript(ANTES_DO_RELOGIO);
+  await page.addInitScript(() => { window.__semCursorSinal = true; }); // este arquivo desenha o próprio cursor na gravação
   await page.clock.install({ time: agora });
   await page.goto(`${URL_BASE}/`, { waitUntil: 'load' });
   await page.waitForFunction(() => getComputedStyle(document.querySelector('[data-taxi]')).visibility !== 'hidden', null, { timeout: 60000 });

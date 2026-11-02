@@ -343,7 +343,7 @@ body { font-synthesis: none; }
 .trig-bg svg path { fill: var(--sinal-ingresso); }
 .ft-newsletter-input { color: var(--sinal-texto); caret-color: var(--cor-ativo); }
 .ft-newsletter-input::placeholder { color: var(--sinal-texto-2); }
-.ft-newsletter-input-w:has(.ft-newsletter-input:focus-visible) { outline: 2px solid var(--cor-ativo); outline-offset: 2px; }
+.ft-newsletter-input-w.foco-campo { outline: 2px solid var(--cor-ativo); outline-offset: 2px; }
 
 /* 5. Work */
 .v-lines-marker { background-color: var(--sinal-preto); border-color: var(--cor-ativo); }
@@ -366,51 +366,47 @@ body::after { /* scanlines e vinheta de monitor */
   content: ""; position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); pointer-events: none;
 }
 
-/* 7. Abertura sem vídeo: barras em transform e a máscara do símbolo, sem decodificador nenhum. Por dentro da máscara,
-      o mesmo pente em branco sobre preto, com o mesmo tempo: dentro é sempre o inverso exato de fora. O ENTER continua
-      vindo do timer do app.js; o atraso inicial mantém o botão no mesmo ponto do ritmo. */
+/* 7. Abertura sem vídeo: barras em transform e o nome por cima, sem decodificador nenhum. O nome é branco em modo diferença:
+      sobre o cartão fica nas cores invertidas e, conforme o pente fecha, cada barra preta o deixa branco, sempre o inverso
+      exato de fora. Tudo isso roda no compositor, então não para na tarefa longa do app.js. O ENTER continua vindo do timer
+      do app.js; o atraso inicial mantém o botão no mesmo ponto do ritmo. */
 .preloader-w { background-color: #000; }
 .preloader-w .preloader-video { display: none; } /* vazio, só porque o app.js exige o elemento */
 .preloader-cont { z-index: 1; }
 .abertura-vista .abertura { display: none; }
 .abertura { position: absolute; inset: 0; overflow: hidden; contain: strict;
-  --p: 4.6875vw; --s: min(28.2vw, 64svh); --atraso: .33s; --ini: .01s; --fim: 2.56s; --rev: .74s; --revd: .5s; --cresce0: .62s; --cresce: 1.83s; --nome: 2.5s;
-  --janela: 26vw;
+  --p: 4.6875vw; --atraso: .33s; --ini: .01s; --fim: 2.56s; --cresce0: .62s; --cresce: 1.83s;
   animation: ab-entra .1s linear var(--atraso) both; }
-@media only screen and (min-width: 1800px) { .abertura { --p: 3.125vw; --s: min(19.2vw, 64svh); --janela: 18vw; } }
-@media only screen and (max-width: 991px) { .abertura { --p: 5.9vw; --s: min(59vw, 74svh); --fim: 2.13s; --rev: .6s; --revd: .42s; --cresce0: .5s; --cresce: 1.41s; --nome: 2.2s; --janela: 54vw; } }
-@media only screen and (max-height: 500px) { .abertura { --s: 42svh; --janela: 50svh; } } /* tela baixa: símbolo e nome ficam acima do botão */
+@media only screen and (min-width: 1800px) { .abertura { --p: 3.125vw; } }
+@media only screen and (max-width: 991px) { .abertura { --p: 5.9vw; --fim: 2.13s; --cresce0: .5s; --cresce: 1.41s; } }
 .ab-carta { position: absolute; inset: 0; background-repeat: no-repeat;
-  background-image: linear-gradient(#fff, #fff), var(--faixa-smpte),
+  background-image: var(--faixa-smpte),
     linear-gradient(90deg, var(--smpte-azul) 0 14.2857%, #131313 0 28.5714%, var(--smpte-magenta) 0 42.8571%, #131313 0 57.1428%, var(--smpte-ciano) 0 71.4285%, #131313 0 85.7142%, var(--smpte-cinza) 0 100%),
     linear-gradient(90deg, #00214c 0 17.86%, #fff 0 35.71%, #32006a 0 53.57%, #131313 0 71.43%, #090909 0 76.2%, #131313 0 80.95%, #1d1d1d 0 85.7%, #131313 0 100%);
-  background-size: var(--janela) var(--janela), 100% 67%, 100% 8%, 100% 25%;
-  background-position: center, 0 0, 0 72.83%, 0 100%; }
+  background-size: 100% 67%, 100% 8%, 100% 25%;
+  background-position: 0 0, 0 72.83%, 0 100%; }
 .ab-comb { position: absolute; inset: 0; display: flex; justify-content: center; }
 .ab-comb i { display: block; flex: none; width: var(--p); height: 100%; animation: ab-barra var(--fim) cubic-bezier(.37,0,.63,1) calc(var(--atraso) + var(--ini)) both; }
 .ab-fora i { background: #000; }
-.ab-dentro { background: #000; animation: ab-descresce var(--cresce) linear calc(var(--atraso) + var(--cresce0)) both; }
-.ab-dentro i { background: #fff; }
-.ab-simbolo { position: absolute; inset: 0;
-  -webkit-mask: url(/assets/img/site/simbolo-mascara.webp) center / var(--s) var(--s) no-repeat;
-  mask: url(/assets/img/site/simbolo-mascara.webp) center / var(--s) var(--s) no-repeat;
+/* O bloco fica um pouco acima do centro, para o botão ENTRAR ter onde aparecer embaixo dele */
+.ab-nome { position: absolute; inset: 0 0 12svh; display: flex; flex-direction: column; align-items: center; justify-content: center; white-space: nowrap;
+  font-family: 'Sinal Display', 'Sinal Reserva', Arial, sans-serif; font-size: min(12vw, 26svh); line-height: 1; letter-spacing: 0; font-kerning: none; color: #fff; text-transform: uppercase; mix-blend-mode: difference; /* sem aperto: com ele, o R e o Á de GRÁTIS se tocam */
   animation: ab-cresce var(--cresce) linear calc(var(--atraso) + var(--cresce0)) both; }
-.ab-janela { position: absolute; inset: 0; overflow: hidden; animation: ab-janela var(--revd) linear calc(var(--atraso) + var(--rev)) both; }
-.ab-contra { position: absolute; inset: 0; animation: ab-contra var(--revd) linear calc(var(--atraso) + var(--rev)) both; }
-.ab-nome { position: absolute; left: 0; right: 0; top: calc(50% + var(--s) * .39 + 1.5vw); text-align: center; white-space: nowrap;
-  font-family: var(--font-rotulo); font-size: max(.9vw, 10px); letter-spacing: .42em; text-indent: .42em; color: #fff; text-transform: uppercase;
-  animation: ab-nome .45s ease-out calc(var(--atraso) + var(--nome)) both; }
+.ab-nome > span { display: block; }
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .ab-nome { font-size: min(21vw, 13svh); text-align: center; }
+  .ab-nome span span { display: block; }
+}
 @keyframes ab-entra { from { opacity: 0 } to { opacity: 1 } }
 @keyframes ab-barra { from { transform: scaleX(0) } to { transform: scaleX(1.02) } }
-@keyframes ab-janela { from { transform: translateX(calc(-50% - var(--s) * .32)) } to { transform: translateX(calc(-50% + var(--s) * .32)) } }
-@keyframes ab-contra { from { transform: translateX(calc(50% + var(--s) * .32)) } to { transform: translateX(calc(50% - var(--s) * .32)) } }
 @keyframes ab-cresce { 0% { transform: scale(.9) } 25% { transform: scale(.94) } 50% { transform: scale(.97) } 75% { transform: scale(.99) } 100% { transform: scale(1) } }
-@keyframes ab-descresce { 0% { transform: scale(1.11111) } 25% { transform: scale(1.06383) } 50% { transform: scale(1.03093) } 75% { transform: scale(1.0101) } 100% { transform: scale(1) } }
-@keyframes ab-nome { from { opacity: 0; filter: blur(10px) } to { opacity: 1; filter: blur(0) } }
 @media (prefers-reduced-motion: reduce) {
-  .ab-carta, .ab-fora, .ab-janela { display: none; }
-  .ab-simbolo { background: #fff; transform: none; animation: ab-entra .4s linear both; }
-  .ab-nome { animation: ab-entra .4s linear both; }
+  .ab-carta, .ab-fora { display: none; }
+  .ab-nome { mix-blend-mode: normal; animation: ab-entra .4s linear both; }
+}
+@media (forced-colors: active) { /* o sistema troca as cores: em modo diferença, o nome sumiria sobre as barras */
+  .ab-carta, .ab-fora { display: none; }
+  .ab-nome { mix-blend-mode: normal; }
 }
 
 /* 7b. Fase 2: home, Programação e menu */
@@ -430,8 +426,8 @@ body::after { /* scanlines e vinheta de monitor */
 /* No original, painel fechado só tem altura zero: os links seguiam no Tab, invisíveis, e o foco rolava o painel por dentro.
    visibility tira do Tab sem mexer no layout. step-end em vez de delay, porque o main.css zera transition-delay ao fechar:
    assim o conteúdo fica visível até a grade terminar de fechar. */
-.menu-w:not(:has(#mainpanel:checked)) [data-menu=mainpanel] > .panel-content-w,
-.menu-w:not(:has(#smallpanel:checked)) [data-menu=smallpanel] > .panel-content-w,
+.menu-w:not(.com-principal) [data-menu=mainpanel] > .panel-content-w,
+.menu-w:not(.com-pequeno) [data-menu=smallpanel] > .panel-content-w,
 [data-menu=footagepanel]:not(.open) > .panel-content-w { visibility: hidden; transition: visibility var(--panels-duration) step-end; }
 /* Sobre e Contato não têm painel pequeno: o original desliga o ingresso só para o ponteiro, e o teclado abria uma camada sem nada */
 [data-page=about] #smallpanel, [data-page=contact] #smallpanel { display: none; }
@@ -446,11 +442,11 @@ body::after { /* scanlines e vinheta de monitor */
 }
 .menu-filtro::placeholder { color: var(--sinal-texto-2); opacity: 1; }
 /* fechado, o painel só tem altura zero: sem isto o Tab cairia no campo escondido */
-.menu-w:not(:has(#smallpanel:checked)) .menu-filtro { visibility: hidden; }
+.menu-w:not(.com-pequeno) .menu-filtro { visibility: hidden; }
 /* 100svh menos o menu (135 px), o filtro (32 px) e uma folga: nunca passa da janela */
 .menu-films-w {
   max-height: calc(100svh - 187px); overflow-y: auto; overscroll-behavior: contain;
-  scrollbar-width: thin; scrollbar-color: var(--sinal-linha-tracejada) transparent;
+  scrollbar-width: thin; scrollbar-color: var(--sinal-linha-tracejada) transparent; /* barra desenhada no WebKit, abaixo: a nativa mostraria a seta do sistema junto da mira */
 }
 .menu-film-oculta { display: none; }
 .menu-film-title.menu { text-align: left; } /* o botão centraliza: um título de duas linhas ficaria fora da coluna */
@@ -465,17 +461,17 @@ body::after { /* scanlines e vinheta de monitor */
 /* 7c. Fase 2: páginas de sessão e trailer */
 
 /* Fios do herói: linhas + 1. O important vence o display:none inline que o bundle põe no terceiro quando o slug é curto. */
-[data-cs=lines]:not([data-linhas="1"]) > .line:nth-child(3) { display: block !important; }
-[data-cs=lines][data-linhas="1"] > .line:nth-child(3) { display: none !important; }
+.cs-text-w:not([data-linhas="1"]) > [data-cs=lines] > .line:nth-child(3) { display: block !important; }
+.cs-text-w[data-linhas="1"] > [data-cs=lines] > .line:nth-child(3) { display: none !important; }
 /* Título: a entrelinha de .7em punha o til dentro da linha de cima e a cedilha abaixo do fio. Na fonte, os acentos vão a
    .88em acima da base e a cedilha a .21em abaixo: com 1.11, cada linha cabe inteira entre dois fios. O fio sobe .09em até
    ficar logo abaixo da cedilha. No desktop, títulos de 3 linhas ou mais diminuem para não tomar o lugar da imagem; o
    max-width é em em, então as quebras não mudam. */
 .cs-text-w { --cs-titulo: 6.1rem; }
 @media screen and (min-width: 992px) {
-  .cs-text-w:has([data-linhas="3"]) { --cs-titulo: 4.9rem; }
-  .cs-text-w:has([data-linhas="4"]) { --cs-titulo: 4.3rem; }
-  .cs-text-w:has([data-linhas="5"]) { --cs-titulo: 3.7rem; }
+  .cs-text-w[data-linhas="3"] { --cs-titulo: 4.9rem; }
+  .cs-text-w[data-linhas="4"] { --cs-titulo: 4.3rem; }
+  .cs-text-w[data-linhas="5"] { --cs-titulo: 3.7rem; }
 }
 @media screen and (max-width: 991px) { .cs-text-w { --cs-titulo: 4.4rem; } }
 @media screen and (max-width: 767px) { .cs-text-w { --cs-titulo: 4.1rem; } }
@@ -526,14 +522,14 @@ iframe.yt-trailer { position: absolute; inset: 3%; width: 94%; height: 94%; bord
 @media screen and (min-width: 768px) {
   [data-youtube] .video-player-dialog { inset: max(0px, calc(50% - 50svh + .75rem)) max(0px, calc(50% - (50svh - .75rem) * 16 / 9)); width: auto; height: auto; }
 }
-[data-youtube] .video-bar.top { inset: 0 auto auto 100%; width: auto; height: auto; padding: 0 0 0 .75rem; } /* fechar fora do player */
+[data-youtube] .video-bar.top { inset: 0 auto auto 100%; flex-direction: column; gap: .5rem; width: auto; height: auto; padding: 0 0 0 .75rem; } /* fechar e abrir fora, fora do player */
 [data-youtube] .close-btn { top: 0; }
 .video-player-dialog:focus, .video-player-dialog.open:focus { outline: none; }
-body:has(.video-player-dialog.open)::after { display: none; } /* scanlines e vinheta ficariam na frente do player */
+html.trailer-aberto body::after { display: none; } /* scanlines e vinheta ficariam na frente do player */
 /* sair pelo logo deixaria o Lenis parado; a área de clique dele é um filho com pointer-events próprio */
-body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialog.open) .nav-link.logo * { pointer-events: none !important; }
+html.trailer-aberto .nav-link.logo, html.trailer-aberto .nav-link.logo * { pointer-events: none !important; }
 /* o texto do cartão de direção tem z-index próprio e ficaria acima do escurecimento, inclusive para o clique que fecha */
-#second:has(.video-player-dialog.open) { z-index: 3; }
+html.trailer-aberto #second { z-index: 3; }
 
 /* Sessão dupla: os dois títulos, fora do retângulo do player */
 .trailer-opcoes { position: absolute; z-index: 3; display: flex; gap: .5rem; }
@@ -552,25 +548,25 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
 @media screen and (max-width: 1199px) { /* abaixo do player */
   .trailer-opcoes { top: 100%; left: 0; right: 0; padding-top: .75rem; }
 }
-/* Deitado: abaixo do player não sobra janela e a rolagem está presa; na margem esquerda, acima do link do YouTube.
+/* Deitado: abaixo do player não sobra janela e a rolagem está presa; na margem esquerda.
    621 px é a altura que cabe o seletor abaixo do player a 1199 px de largura. */
 @media screen and (min-width: 768px) and (max-width: 1199px) and (max-height: 621px) {
   .trailer-opcoes { top: 50%; left: auto; right: 100%; flex-direction: column; width: max(5.25rem, calc(10vw - 1.5rem)); margin-right: .75rem; padding-top: 0; transform: translateY(-50%); }
   .trailer-opcao { flex: none; padding-inline: .4rem; }
 }
-/* saída para o YouTube: na margem esquerda, ao pé do player; a margem cabe em toda largura a partir de 768 px */
+/* saída para o YouTube: um ícone sem texto, abaixo do X. 2,75rem é o menor alvo de toque que o tema usa */
 .trailer-fora {
-  position: absolute; z-index: 3; right: 100%; bottom: 0; display: flex; align-items: flex-end; width: max(5.25rem, calc(10vw - 1.5rem)); min-height: 2.75rem; margin-right: .75rem;
-  color: var(--sinal-texto); font-family: var(--font-rotulo); font-size: .625rem; line-height: 1.2; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; pointer-events: auto;
+  display: flex; flex: none; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; padding: .8rem; color: var(--sinal-texto-2);
+  background-color: #0000004d; border: 1px solid var(--white--30); border-radius: var(--rounded-full); pointer-events: auto;
+  transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
 }
-.trailer-fora:hover { color: var(--cor-navegacao); }
+.trailer-fora:hover { color: var(--white); border-color: var(--white); }
 @media screen and (max-width: 767px) {
   /* celular: sem máscara, o player ocupa a largura e nunca fica abaixo dos 200 px que o YouTube pede */
   [data-youtube] .video-mask-w { -webkit-clip-path: none; clip-path: none; background: transparent; }
-  /* acima do player, na linha do botão de fechar; a caixa acompanha o texto: o resto da faixa continua fechando o diálogo */
-  .trailer-fora { right: auto; left: 0; bottom: calc(50% + max(100px, 28.125vw)); width: fit-content; max-width: calc(100% - 4.75rem); margin: 0 0 .75rem; }
   iframe.yt-trailer { inset: auto; left: calc(var(--sgx) * -1); top: 50%; transform: translateY(-50%); width: 100vw; height: max(200px, 56.25vw); }
-  [data-youtube] .video-bar.top { inset: auto 0 calc(50% + max(100px, 28.125vw)) auto; padding: 0 0 .75rem 0; }
+  /* acima do player, com o X na ponta */
+  [data-youtube] .video-bar.top { inset: auto 0 calc(50% + max(100px, 28.125vw)) auto; flex-direction: row-reverse; padding: 0 0 .75rem 0; }
   .trailer-opcoes { top: calc(50% + max(100px, 28.125vw)); }
 }
 
@@ -630,9 +626,12 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
 .policy-rich-tx a { display: inline; color: inherit; text-decoration: underline; text-underline-offset: .2em; overflow-wrap: anywhere; }
 .policy-rich-tx a:hover { color: var(--cor-navegacao); }
 .policy-rich-tx p + p { margin-top: .8em; }
+/* "ARMAZENAMENTO", a palavra mais longa dos títulos, mede 306 px no corpo fixo: a 320 px alargava o bloco inteiro para fora da janela */
+@media (max-width: 359px) { .policy-rich-tx h3 { font-size: 11vw; } }
 
 /* Contato no celular: o endereço de e-mail ocupa o rótulo pequeno e só cabe com menos espaço entre as letras */
 @media (max-width: 479px) { .roll-cont-eyeb.parish.mb-0.contact-off { letter-spacing: .15em; } }
+@media (max-width: 359px) { .roll-cont-eyeb.parish.mb-0.contact-off { letter-spacing: .1em; } }
 
 /* Dígitos da 404: em caixas mais altas que o texto, a cópia que rola fica aparecendo no topo. O recorte fica na caixa do dígito. */
 ._404-rolll-tx .split-rollover { clip-path: inset(-.08em -.1em); }
@@ -648,13 +647,14 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
   .s.footer.black .col-1-3.left { top: 0; }
 }
 
-/* 8. Foco e seleção */
+/* 8. Foco e seleção. Nenhum :has() neste arquivo: aqui, ele fazia cada inserção no DOM recalcular o estilo do documento, o que somava
+      de 1 a 3 s na volta à home. O estado vem de classes postas por local-menu.js e local-trailer.js. */
 :focus-visible, a:focus-visible { outline: 2px solid var(--cor-ativo); outline-offset: 2px; } /* a: o a:hover{outline:0} do webflow.css apagaria o anel com o ponteiro em cima */
 /* os gatilhos dos menus são inputs invisíveis: o anel vai para o elemento que os contém */
-.checkbox-w:has(.menu-input:focus-visible), .mmenu-col.btn:has(> .menu-input:focus-visible) { outline: 2px solid var(--cor-ativo); outline-offset: -2px; }
+.foco-menu { outline: 2px solid var(--cor-ativo); outline-offset: -2px; }
 /* links atenuados precisam do anel inteiro; na lista de filmes, o anel fica dentro da linha */
 .ft-sitemap-lk:focus-visible { opacity: 1; }
-.footer-line.last:has(:focus-visible) { opacity: 1; }
+.footer-line.last.foco-linha { opacity: 1; }
 .menu-film-item:focus-visible { outline-offset: -2px; }
 .menu-film-item .menu-film-direct-link:focus-visible { opacity: 1; transform: scale(1); outline-offset: -2px; }
 ::selection { background: var(--cor-ativo-fundo); color: var(--sinal-preto); }
@@ -662,9 +662,64 @@ body:has(.video-player-dialog.open) .nav-link.logo, body:has(.video-player-dialo
 /* O bundle escurece o logo nas seções que eram brancas; aqui todas são escuras, então ele fica sempre claro */
 .nav-link.logo, .marca-nav { color: var(--sinal-texto) !important; }
 /* com o trailer aberto, o logo recua quando o bundle o escurece, como no original */
-body:has(.video-player-dialog.open) .nav-link.logo[style*="black"], body:has(.video-player-dialog.open) .nav-link.logo[style*="black"] .marca-nav { color: var(--sinal-linha-forte) !important; transition: color .5s .2s; }
+html.trailer-aberto .nav-link.logo[style*="black"], html.trailer-aberto .nav-link.logo[style*="black"] .marca-nav { color: var(--sinal-linha-forte) !important; transition: color .5s .2s; }
 /* Texto sobre a imagem do topo dos estudos de caso, que fica dentro de uma superfície invertida */
 .work-back-btn, .work-back-btn .roll-cont-eyeb { color: var(--sinal-texto); }
+
+/* 8b. Leituras: a barra de progresso sai pela direita enquanto a cópia entra pela esquerda, e o ciclo não salta */
+.fill-bar { position: relative; }
+.fill-bar::before { content: ""; position: absolute; inset: 0; background: inherit; transform: translateX(-500%); }
+
+@supports selector(::-webkit-scrollbar) {
+  .menu-films-w { scrollbar-width: auto; scrollbar-color: auto; }
+  .menu-films-w::-webkit-scrollbar { width: 6px; }
+  .menu-films-w::-webkit-scrollbar-thumb { background: var(--sinal-linha-tracejada); }
+}
+
+/* 8c. Cursor: mira de calibração, para quem usa mouse (public/assets/js/local-cursor.js). Ponto preciso, sem atraso; anel com quatro
+       marcas e, embaixo, as barras SMPTE bem pequenas. Só transform e opacity, para não repintar sobre o WebGL. O nó do cursor antigo
+       fica no DOM porque o app.js lê o texto e as áreas de anterior e próximo são irmãs dele. */
+.cursor-w-out { display: none; }
+[data-hitbox] { cursor: pointer; } /* essas áreas não têm desenho: sem o cursor do tema, a mãozinha é o único sinal */
+html.cursor-sinal:not(.trailer-aberto), html.cursor-sinal:not(.trailer-aberto) * { cursor: none !important; }
+html.cursor-sinal:not(.trailer-aberto) textarea, html.cursor-sinal:not(.trailer-aberto) input[type="text"] { cursor: text !important; }
+.cursor-sinal-no { position: fixed; inset: 0 auto auto 0; z-index: 2147483647; color: #fff; pointer-events: none; opacity: 0; transition: opacity .15s linear; }
+.cursor-sinal-no.visivel { opacity: 1; }
+html.trailer-aberto .cursor-sinal-no, .cursor-sinal-no[data-mira="texto"] { display: none; }
+.cs-anel, .cs-ponto { position: absolute; inset: 0 auto auto 0; will-change: transform; }
+.cs-ponto i { position: absolute; left: -2px; top: -2px; width: 4px; height: 4px; background: #fff; border-radius: 50%; box-shadow: 0 0 0 1px #000a; transition: opacity .15s linear; }
+.cs-anel svg { position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; overflow: visible; filter: drop-shadow(0 0 1px #000c); transform: scale(.72); transition: transform .24s cubic-bezier(.2,.8,.2,1); }
+.cs-anel path, .cs-circulo { transform-box: fill-box; transform-origin: center; transition: opacity .18s linear, transform .24s cubic-bezier(.2,.8,.2,1); }
+.cs-circulo, .cs-setas-v, .cs-setas-h, .cs-seta, .cs-play { opacity: 0; }
+.cs-barras { position: absolute; left: -11px; top: 15px; width: 22px; height: 2px; background: var(--faixa-smpte); opacity: .8; transform: scaleX(.6); transition: transform .24s cubic-bezier(.2,.8,.2,1), opacity .18s linear; }
+/* link: o anel fecha e as marcas giram */
+[data-mira="link"] .cs-anel svg { transform: scale(1); }
+[data-mira="link"] .cs-circulo { opacity: 1; }
+[data-mira="link"] .cs-ticks { transform: rotate(45deg) scale(.86); opacity: .75; }
+[data-mira="link"] .cs-barras { top: 21px; transform: scaleX(1); opacity: 1; }
+/* arrasto: setas no eixo em que a tela anda */
+[data-mira^="arrasto"] .cs-anel svg { transform: scale(1); }
+[data-mira^="arrasto"] .cs-circulo { opacity: .55; }
+[data-mira^="arrasto"] .cs-ticks { opacity: 0; }
+[data-mira="arrasto-v"] .cs-setas-v, [data-mira="arrasto-h"] .cs-setas-h { opacity: 1; }
+[data-mira^="arrasto"] .cs-barras { top: 24px; }
+.cursor-sinal-no.apertado .cs-anel svg { transform: scale(.82); }
+/* play: o triângulo toma o lugar do ponto */
+[data-mira="play"] .cs-anel svg { transform: scale(1.7); }
+[data-mira="play"] .cs-circulo, [data-mira="play"] .cs-play { opacity: 1; }
+[data-mira="play"] .cs-ticks { opacity: 0; }
+[data-mira="play"] .cs-ponto i { opacity: 0; }
+[data-mira="play"] .cs-barras { top: 28px; transform: scaleX(1.7); opacity: 1; }
+/* áreas de anterior e próximo: uma seta só, no sentido da troca */
+:is([data-mira="cima"], [data-mira="baixo"], [data-mira="esquerda"], [data-mira="direita"]) .cs-anel svg { transform: scale(1); }
+:is([data-mira="cima"], [data-mira="baixo"], [data-mira="esquerda"], [data-mira="direita"]) .cs-circulo { opacity: .55; }
+:is([data-mira="cima"], [data-mira="baixo"], [data-mira="esquerda"], [data-mira="direita"]) .cs-ticks { opacity: 0; }
+:is([data-mira="cima"], [data-mira="baixo"], [data-mira="esquerda"], [data-mira="direita"]) .cs-seta { opacity: 1; }
+:is([data-mira="cima"], [data-mira="baixo"], [data-mira="esquerda"], [data-mira="direita"]) .cs-ponto i { opacity: 0; }
+[data-mira="baixo"] .cs-seta { transform: rotate(180deg); }
+[data-mira="esquerda"] .cs-seta { transform: rotate(-90deg); }
+[data-mira="direita"] .cs-seta { transform: rotate(90deg); }
+@media print { .cursor-sinal-no { display: none; } }
 
 /* 9. Impressão: sem as marcas de monitor, e tinta sobre papel, com ou sem os gráficos de fundo */
 @media print {

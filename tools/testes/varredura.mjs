@@ -14,13 +14,13 @@ const VETADO = [
   /siena/i, /film foundation/i, /tel aviv/i, /dizengoff/i, /\b972\b/, /leelu/i, /dorit/i, /zohar/i, /\bvariety\b/i, /cinematic triumph/i, /director'?s cut/i, /a film based on/i,
   /savoy/i, /moon in the 12th/i, /\btaboo\b/i, /kafka/i, /my project x/i, /prisoner x/i, /ana maxim/i, /outsider[- ]freud/i, /freud/i, /by any means/i, /housewife/i,
   /rating[-_ ]?stars?/i, /footagemenu-stars/i, /stars\.svg/i, /\b5\/5\b/, /★|☆/,
-  /a24/i, /all rights reserved/i, /lorem ipsum/i, /no items found/i, /this is some text/i, /data-wf-site/, /website-files\.com/, /webflow\.com\b/i,
+  /steam/i, /a24/i, /all rights reserved/i, /lorem ipsum/i, /no items found/i, /this is some text/i, /data-wf-site/, /website-files\.com/, /webflow\.com\b/i,
   /assista (agora|gr[áa]tis|online)/i, /baixe|download gr[áa]tis/i,
   /\b(Inquiries|Press|Stay up to date|Follow us|All Work|Showcase|Investors|Broadcast|Main Crew|Producers|See case study|Our Services|Who we are|Watch Trailer|Sound on|Hold and drag|Go back|Page not found|Explore)\b/,
 ];
 // bibliotecas e CSS minificados carregam palavras e classes que o público não vê; aqui só a marca conta
 const SO_MARCA = /\/assets\/(js\/(app|webflow|jquery)|css\/(webflow|main|out))/;
-const MARCA = [/siena/i, /film foundation/i, /tel aviv/i, /savoy/i, /kafka/i, /housewife/i, /ana maxim/i, /\.(moon|freud|taboo)\{/];
+const MARCA = [/siena/i, /steam/i, /film foundation/i, /tel aviv/i, /savoy/i, /kafka/i, /housewife/i, /ana maxim/i, /\.(moon|freud|taboo)\{/];
 
 for (const f of arquivos) {
   const r = rel(f);
@@ -58,7 +58,7 @@ for (const f of paginas) {
   }
 }
 
-const PERMITIDOS = [/^https:\/\/discord\.gg\/(wSSJEJAJgt|B5DKdJuuWc)$/, /^https:\/\/www\.youtube\.com\/@/, /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/, /^https:\/\/steamcommunity\.com\/groups\/FilmesHDOnlineGratis$/, /^https:\/\/github\.com\/Olwtelet/, /^https:\/\/filmeshdonlinegratis\.vercel\.app\//, /^https:\/\/www\.themoviedb\.org/, /^https:\/\/policies\.google\.com\/privacy/];
+const PERMITIDOS = [/^https:\/\/discord\.gg\/(wSSJEJAJgt|B5DKdJuuWc)$/, /^https:\/\/www\.youtube\.com\/@/, /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/, /^https:\/\/x\.com\/FilmesHDOG$/, /^https:\/\/github\.com\/Olwtelet/, /^https:\/\/filmeshdonlinegratis\.vercel\.app\//, /^https:\/\/www\.themoviedb\.org/, /^https:\/\/policies\.google\.com\/privacy/];
 for (const u of EXTERNOS) if (!PERMITIDOS.some((re) => re.test(u))) achados.push(`link externo fora da lista: ${u}`);
 
 // Marca nos metadados de cada página
