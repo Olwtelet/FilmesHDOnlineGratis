@@ -11,8 +11,11 @@ import { HOME_META } from '../data/home';
 
 <BaseLayout title={HOME_META.title} rotate="before">
   <Fragment slot="head-local">
-    {/* Abertura vista há menos de 1 h (a mesma regra do app.js): some antes do primeiro quadro, e ele só faz o fade do fundo. */}
-    <script is:inline data-local-replica>(function(){var m=/(?:^|; )preloader_shown=(\d+)/.exec(document.cookie);if(m&&Date.now()-m[1]<36e5)document.documentElement.classList.add('abertura-vista')})()</script>
+    {/* Abertura vista há menos de 1 h (a mesma regra do app.js): some antes do primeiro quadro, e ele só faz o fade do fundo.
+        Senão, a abertura toca, e a faixa do topo espera o sinal junto com ela. A fonte do nome tem font-display: block; se ainda não
+        chegou quando o nome começa a aparecer, a abertura inteira fica na reserva e não troca de fonte com o ENTER na tela. O ouvinte
+        fica aqui, e não num script deferido, para não perder esse instante numa rede lenta. */}
+    <script is:inline data-local-replica>(function(){var h=document.documentElement,m=/(?:^|; )preloader_shown=(\d+)/.exec(document.cookie);h.classList.add(m&&Date.now()-m[1]<36e5?'abertura-vista':'abertura-ativa');document.addEventListener('animationstart',function(e){if(e.animationName==='ab-vem'&&e.target.classList&&e.target.classList.contains('ab-r')&&document.fonts&&!document.fonts.check('800 100px "Sinal Abertura"'))h.classList.add('abertura-reserva')})})()</script>
     <script is:inline defer src="/assets/js/local-preloader.js" data-local-replica></script>
   </Fragment>
   <div data-page="home" data-taxi-view="" class="pw h-screen home">

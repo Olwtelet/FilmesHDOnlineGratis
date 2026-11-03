@@ -366,47 +366,76 @@ body::after { /* scanlines e vinheta de monitor */
   content: ""; position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); pointer-events: none;
 }
 
-/* 7. Abertura sem vídeo: barras em transform e o nome por cima, sem decodificador nenhum. O nome é branco em modo diferença:
-      sobre o cartão fica nas cores invertidas e, conforme o pente fecha, cada barra preta o deixa branco, sempre o inverso
-      exato de fora. Tudo isso roda no compositor, então não para na tarefa longa do app.js. O ENTER continua vindo do timer
-      do app.js; o atraso inicial mantém o botão no mesmo ponto do ritmo. */
+/* 7. Abertura: aquisição de sinal, sem vídeo nem decodificador. O primeiro quadro é preto. Aos .7 s a carta SMPTE entra como
+      sincronismo perdido: desliza de lado até assentar, com três faixas fora do lugar, e a luz só sobe, sem piscar. O nome chega
+      no meio da interferência em três cópias, uma por canal de cor, que convergem até virar branco; o pente de barras pretas
+      fecha a carta e sobra o nome, parado bem antes do ENTER. Cada cópia está em modo diferença: alinhadas, invertem os três
+      canais, como o nome branco de antes. Tudo em transform e opacity, no compositor: nada para na tarefa longa do app.js, e
+      nada roda depois de 2,65 s. O relógio começa no primeiro quadro da abertura; o ENTER continua no timer do app.js. */
+@font-face { /* a mesma Archivo do Sinal Display, mas invisível até chegar: o nome nunca aparece na fonte de reserva e troca */
+  font-family: 'Sinal Abertura';
+  src: url('/assets/fonts/tema/archivo-latin-wdth-normal.woff2') format('woff2');
+  font-weight: 800; font-stretch: 77%; font-style: normal; font-display: block;
+}
 .preloader-w { background-color: #000; }
 .preloader-w .preloader-video { display: none; } /* vazio, só porque o app.js exige o elemento */
 .preloader-cont { z-index: 1; }
 .abertura-vista .abertura { display: none; }
 .abertura { position: absolute; inset: 0; overflow: hidden; contain: strict;
-  --p: 4.6875vw; --atraso: .33s; --ini: .01s; --fim: 2.56s; --cresce0: .62s; --cresce: 1.83s;
-  animation: ab-entra .1s linear var(--atraso) both; }
+  --p: 4.6875vw; --sinal0: .7s; --nome0: .95s; --pente0: 1.15s; --pente: 1.5s; --cresce: 1.7s; }
 @media only screen and (min-width: 1800px) { .abertura { --p: 3.125vw; } }
-@media only screen and (max-width: 991px) { .abertura { --p: 5.9vw; --fim: 2.13s; --cresce0: .5s; --cresce: 1.41s; } }
+@media only screen and (max-width: 991px) { .abertura { --p: 5.9vw; --pente: 1.2s; --cresce: 1.4s; } }
 .ab-carta { position: absolute; inset: 0; background-repeat: no-repeat;
   background-image: var(--faixa-smpte),
     linear-gradient(90deg, var(--smpte-azul) 0 14.2857%, #131313 0 28.5714%, var(--smpte-magenta) 0 42.8571%, #131313 0 57.1428%, var(--smpte-ciano) 0 71.4285%, #131313 0 85.7142%, var(--smpte-cinza) 0 100%),
     linear-gradient(90deg, #00214c 0 17.86%, #fff 0 35.71%, #32006a 0 53.57%, #131313 0 71.43%, #090909 0 76.2%, #131313 0 80.95%, #1d1d1d 0 85.7%, #131313 0 100%);
   background-size: 100% 67%, 100% 8%, 100% 25%;
-  background-position: 0 0, 0 72.83%, 0 100%; }
+  background-position: 0 0, 0 72.83%, 0 100%;
+  animation: ab-sinal .5s cubic-bezier(.2,.6,.3,1) var(--sinal0) both; }
+/* faixas da própria carta, recortadas e deslocadas, como erro de tracking; somem antes de o nome assentar */
+.ab-rasgo.um { clip-path: inset(19% 0 78.6% 0); animation: ab-rasgo-um .66s linear var(--sinal0) both; }
+.ab-rasgo.dois { clip-path: inset(57% 0 41.8% 0); animation: ab-rasgo-dois .66s linear var(--sinal0) both; }
+.ab-rasgo.tres { clip-path: inset(80% 0 16.6% 0); animation: ab-rasgo-tres .66s linear var(--sinal0) both; }
 .ab-comb { position: absolute; inset: 0; display: flex; justify-content: center; }
-.ab-comb i { display: block; flex: none; width: var(--p); height: 100%; animation: ab-barra var(--fim) cubic-bezier(.37,0,.63,1) calc(var(--atraso) + var(--ini)) both; }
+.ab-comb i { display: block; flex: none; width: var(--p); height: 100%; animation: ab-barra var(--pente) cubic-bezier(.37,0,.63,1) var(--pente0) both; }
 .ab-fora i { background: #000; }
 /* O bloco fica um pouco acima do centro, para o botão ENTRAR ter onde aparecer embaixo dele */
-.ab-nome { position: absolute; inset: 0 0 12svh; display: flex; flex-direction: column; align-items: center; justify-content: center; white-space: nowrap;
-  font-family: 'Sinal Display', 'Sinal Reserva', Arial, sans-serif; font-size: min(12vw, 26svh); line-height: 1; letter-spacing: 0; font-kerning: none; color: #fff; text-transform: uppercase; mix-blend-mode: difference; /* sem aperto: com ele, o R e o Á de GRÁTIS se tocam */
-  animation: ab-cresce var(--cresce) linear calc(var(--atraso) + var(--cresce0)) both; }
-.ab-nome > span { display: block; }
+.ab-nome { position: absolute; inset: 0 0 12svh;
+  font-family: 'Sinal Abertura', 'Sinal Reserva', Arial, sans-serif; font-size: min(12vw, 26svh); line-height: 1; letter-spacing: 0; font-kerning: none; text-transform: uppercase; } /* sem aperto: com ele, o R e o Á de GRÁTIS se tocam */
+.abertura-reserva .ab-nome { font-family: 'Sinal Reserva', Arial, sans-serif; } /* a fonte não chegou até o nome aparecer: a reserva fica até o fim, sem troca (script do head em pages/index.astro) */
+.abertura .ab-nome { opacity: 1; animation: none; } /* desfaz a reserva do BaseLayout, que só vale se este arquivo não chegar */
+.ab-canal { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; white-space: nowrap; mix-blend-mode: difference; }
+.ab-canal > span { display: block; }
+.ab-r { color: #f00; animation: ab-vem .3s linear var(--nome0) both, ab-cresce var(--cresce) cubic-bezier(.3,.5,.3,1) var(--nome0) both, ab-desvio-r .95s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
+.ab-g { color: #0f0; animation: ab-vem .3s linear var(--nome0) both, ab-cresce var(--cresce) cubic-bezier(.3,.5,.3,1) var(--nome0) both, ab-desvio-g .95s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
+.ab-b { color: #00f; animation: ab-vem .3s linear var(--nome0) both, ab-cresce var(--cresce) cubic-bezier(.3,.5,.3,1) var(--nome0) both, ab-desvio-b .95s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-  .ab-nome { font-size: min(21vw, 13svh); text-align: center; }
-  .ab-nome span span { display: block; }
+  .ab-nome { font-size: min(21vw, 13svh); }
+  .ab-canal { text-align: center; }
+  .ab-canal span span { display: block; }
 }
-@keyframes ab-entra { from { opacity: 0 } to { opacity: 1 } }
+/* A faixa do topo também espera o sinal: o primeiro quadro é todo preto. A da página corre noutro relógio, porque o body nasce
+   antes da abertura, então fica escondida até depois do nome parar; uma cópia dentro da abertura acende junto com a carta. */
+html.abertura-ativa body::before { animation: ab-vem 0s linear 4s both; }
+.ab-faixa { position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); animation: ab-vem .3s linear var(--sinal0) both; }
+@keyframes ab-vem { from { opacity: 0 } to { opacity: 1 } }
+@keyframes ab-sinal { 0% { opacity: 0; translate: -3.2vw 0 } 24% { opacity: .5; translate: 2.4vw 0 } 46% { opacity: .78; translate: -1.2vw 0 } 66% { translate: .55vw 0 } 84% { translate: -.2vw 0 } 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-rasgo-um { 0% { opacity: 0; translate: 9vw 0 } 18% { opacity: 1 } 50% { translate: -5vw 0 } 78% { opacity: 1; translate: 2vw 0 } 100% { opacity: 0; translate: 0 0 } }
+@keyframes ab-rasgo-dois { 0% { opacity: 0; translate: -12vw 0 } 18% { opacity: 1 } 50% { translate: 6vw 0 } 78% { opacity: 1; translate: -2.5vw 0 } 100% { opacity: 0; translate: 0 0 } }
+@keyframes ab-rasgo-tres { 0% { opacity: 0; translate: 5vw 0 } 18% { opacity: 1 } 50% { translate: -3vw 0 } 78% { opacity: 1; translate: 1vw 0 } 100% { opacity: 0; translate: 0 0 } }
 @keyframes ab-barra { from { transform: scaleX(0) } to { transform: scaleX(1.02) } }
-@keyframes ab-cresce { 0% { transform: scale(.9) } 25% { transform: scale(.94) } 50% { transform: scale(.97) } 75% { transform: scale(.99) } 100% { transform: scale(1) } }
-@media (prefers-reduced-motion: reduce) {
-  .ab-carta, .ab-fora { display: none; }
-  .ab-nome { mix-blend-mode: normal; animation: ab-entra .4s linear both; }
+@keyframes ab-cresce { from { scale: .94 } to { scale: 1 } }
+@keyframes ab-desvio-r { 0% { translate: -1.6vw 0 } 38% { translate: .5vw 0 } 100% { translate: 0 0 } }
+@keyframes ab-desvio-g { 0% { translate: .45vw 0 } 38% { translate: -.15vw 0 } 100% { translate: 0 0 } }
+@keyframes ab-desvio-b { 0% { translate: 1.6vw 0 } 38% { translate: -.5vw 0 } 100% { translate: 0 0 } }
+@media (prefers-reduced-motion: reduce) { /* revelação simples: o preto, e o nome branco aparecendo, sem carta nem deslocamento */
+  .ab-carta, .ab-fora, .ab-g, .ab-b { display: none; }
+  .ab-r { color: #fff; mix-blend-mode: normal; animation: ab-vem .6s linear calc(var(--sinal0) + .05s) both; }
+  .ab-faixa { animation-duration: .6s; animation-delay: calc(var(--sinal0) + .05s); }
 }
 @media (forced-colors: active) { /* o sistema troca as cores: em modo diferença, o nome sumiria sobre as barras */
-  .ab-carta, .ab-fora { display: none; }
-  .ab-nome { mix-blend-mode: normal; }
+  .ab-carta, .ab-fora, .ab-g, .ab-b { display: none; }
+  .ab-r { mix-blend-mode: normal; }
 }
 
 /* 7b. Fase 2: home, Programação e menu */

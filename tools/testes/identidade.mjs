@@ -105,14 +105,16 @@ if (PARTES.includes('abertura')) {
     await page.waitForFunction(() => { const b = document.querySelector('[data-preloader="btn"]'); return b && b.onclick && +getComputedStyle(b).opacity > 0.9; }, null, { timeout: 60000 });
     await page.screenshot({ path: path.join(SAIDA, `abertura-${nome}-enter.jpg`), type: 'jpeg', quality: 78 });
     const m = await page.evaluate(() => {
+      // a caixa do texto de uma cópia: as três ficam alinhadas no ENTER, e as caixas dos div das cópias cobririam a tela inteira
       const nomeEl = document.querySelector('.ab-nome');
+      const copia = document.querySelector('.ab-r');
       const r = document.createRange();
-      r.selectNodeContents(nomeEl);
+      r.selectNodeContents(copia);
       const linhas = [...r.getClientRects()].filter((q) => q.width > 4);
       const caixa = { top: Math.min(...linhas.map((q) => q.top)), bottom: Math.max(...linhas.map((q) => q.bottom)), left: Math.min(...linhas.map((q) => q.left)), right: Math.max(...linhas.map((q) => q.right)) };
       const btn = [...document.querySelectorAll('[data-preloader="btn"] a, [data-preloader="btn"] button, [data-preloader="btn"] > *')].map((b) => b.getBoundingClientRect()).filter((q) => q.width > 0)[0];
       const cs = getComputedStyle(nomeEl);
-      return { corpo: parseFloat(cs.fontSize), fonte: cs.fontFamily, carregada: document.fonts.check(`${cs.fontSize} "Sinal Display"`), caixa, btnTopo: btn ? btn.top : null, vw: innerWidth, vh: innerHeight, simbolo: document.querySelectorAll('.ab-simbolo, .ab-janela, .ab-dentro').length, texto: nomeEl.textContent.replace(/\s+/g, ' ').trim() };
+      return { corpo: parseFloat(cs.fontSize), fonte: cs.fontFamily, carregada: document.fonts.check(`800 ${cs.fontSize} "Sinal Abertura"`) && !document.documentElement.classList.contains('abertura-reserva'), caixa, btnTopo: btn ? btn.top : null, vw: innerWidth, vh: innerHeight, simbolo: document.querySelectorAll('.ab-simbolo, .ab-janela, .ab-dentro').length, texto: copia.textContent.replace(/\s+/g, ' ').trim() };
     });
     confere(`abertura ${nome}: sem o símbolo`, m.simbolo === 0, `${m.simbolo} nós`);
     confere(`abertura ${nome}: nome completo, na fonte do tema`, /filmes hd online gr[áa]tis/i.test(m.texto) && m.carregada, `${m.texto}, ${m.fonte}`);
@@ -131,9 +133,9 @@ if (PARTES.includes('abertura')) {
   await dormir(1500);
   const calma = await page.evaluate(() => {
     const ver = (s) => { const e = document.querySelector(s); return e ? getComputedStyle(e).display : null; };
-    return { carta: ver('.ab-carta'), barras: ver('.ab-fora'), nome: +getComputedStyle(document.querySelector('.ab-nome')).opacity };
+    return { carta: ver('.ab-carta'), barras: ver('.ab-fora'), copias: [ver('.ab-g'), ver('.ab-b')], nome: +getComputedStyle(document.querySelector('.ab-r')).opacity, cor: getComputedStyle(document.querySelector('.ab-r')).color };
   });
-  confere('abertura com movimento reduzido: só o nome, sobre preto', calma.carta === 'none' && calma.barras === 'none' && calma.nome > 0.9, JSON.stringify(calma));
+  confere('abertura com movimento reduzido: só o nome, branco, sobre preto', calma.carta === 'none' && calma.barras === 'none' && calma.copias.every((c) => c === 'none') && calma.nome > 0.9 && calma.cor === 'rgb(255, 255, 255)', JSON.stringify(calma));
   await page.screenshot({ path: path.join(SAIDA, 'abertura-movimento-reduzido.jpg'), type: 'jpeg', quality: 78 });
   await ctx.close();
 }

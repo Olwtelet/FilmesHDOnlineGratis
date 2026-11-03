@@ -1,6 +1,10 @@
 // Gera os recursos da marca a partir do arquivo oficial reference/brand/simbolo.png, sem redesenhar a forma:
 //   - máscara com transparência (alfa = luminância da fonte; só limpa o ruído do arquivo nas pontas);
-//   - favicon e ícone de toque (o próprio arquivo reduzido, branco sobre preto);
+//   - favicon com transparência: a mesma máscara, recortada num quadrado em volta da forma, com um halo fino, a própria forma
+//     dilatada, por baixo e no tom contrário. Em PNG, branco com halo escuro; em SVG, branco com halo escuro em guia escura e quase
+//     preto com halo claro em guia clara. O halo some na guia do mesmo tom e contorna a forma na do tom contrário, que é o caso da
+//     janela anônima com o Windows claro (guia escura, conteúdo claro);
+//   - ícone de toque (o próprio arquivo reduzido, branco sobre preto: o iOS não aceita transparência ali);
 //   - cartão de teste "sem sinal", só as barras: imagem do item-aviso e dos cartões da página Sobre.
 //   node tools/marca.mjs
 import fs from 'node:fs';
@@ -25,7 +29,51 @@ await mascara.clone().webp({ lossless: true, effort: 6 }).toFile(path.join(SITE,
 await mascara.clone().resize(256, 256).webp({ lossless: true, effort: 6 }).toFile(path.join(SITE, 'simbolo-mascara-256.webp'));
 await mascara.clone().png({ compressionLevel: 9 }).toFile(path.join(SITE, 'simbolo-transparente.png'));
 
-await sharp(FONTE).removeAlpha().resize(32, 32).png().toFile(path.join(SITE, 'favicon-32.png'));
+// Recorte quadrado em volta da forma, com 4% de folga: na guia o símbolo ocupa o ícone quase inteiro. Só enquadra, não redesenha.
+const alfa = await mascara.clone().extractChannel(3).raw().toBuffer();
+let x0 = info.width, y0 = info.height, x1 = 0, y1 = 0;
+for (let y = 0; y < info.height; y++) for (let x = 0; x < info.width; x++) if (alfa[y * info.width + x] > 8) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+const lado = Math.min(info.width, info.height, Math.round(Math.max(x1 - x0 + 1, y1 - y0 + 1) * 1.08));
+const meio = (a, b, limite) => Math.max(0, Math.min(limite - lado, Math.round((a + b + 1) / 2 - lado / 2)));
+const RECORTE_FAVICON = { left: meio(x0, x1, info.width), top: meio(y0, y1, info.height), width: lado, height: lado };
+const alfaEm = (l) => mascara.clone().extract(RECORTE_FAVICON).resize(l, l, { kernel: 'lanczos3' }).extractChannel(3).raw().toBuffer();
+// máximo numa janela quadrada de 2*raio+1, em duas passadas
+function dilatar(a, l, raio) {
+  const meioPasso = new Uint8Array(a.length);
+  const saida = Buffer.alloc(a.length);
+  for (let y = 0; y < l; y++) for (let x = 0; x < l; x++) { let m = 0; for (let d = -raio; d <= raio; d++) if (x + d >= 0 && x + d < l) m = Math.max(m, a[y * l + x + d]); meioPasso[y * l + x] = m; }
+  for (let y = 0; y < l; y++) for (let x = 0; x < l; x++) { let m = 0; for (let d = -raio; d <= raio; d++) if (y + d >= 0 && y + d < l) m = Math.max(m, meioPasso[(y + d) * l + x]); saida[y * l + x] = m; }
+  return saida;
+}
+// alfa vira PNG branco: é assim que a máscara de luminância do SVG lê
+const brancoCom = (a, l) => { const b = Buffer.alloc(l * l * 4, 255); for (let i = 0; i < l * l; i++) b[i * 4 + 3] = a[i]; return sharp(b, { raw: { width: l, height: l, channels: 4 } }).png({ compressionLevel: 9 }).toBuffer(); };
+{
+  // PNG de 32: forma branca sobre halo preto a 85%, de 1 px
+  const forma = await alfaEm(32);
+  const halo = dilatar(forma, 32, 1);
+  const rgba = Buffer.alloc(32 * 32 * 4);
+  for (let i = 0; i < 32 * 32; i++) {
+    const f = forma[i] / 255, h = (halo[i] / 255) * 0.85, a = f + h * (1 - f);
+    const c = a > 0 ? Math.round((255 * f) / a) : 0;
+    rgba[i * 4] = rgba[i * 4 + 1] = rgba[i * 4 + 2] = c;
+    rgba[i * 4 + 3] = Math.round(a * 255);
+  }
+  await sharp(rgba, { raw: { width: 32, height: 32, channels: 4 } }).png({ compressionLevel: 9 }).toFile(path.join(SITE, 'favicon-32.png'));
+}
+{
+  // SVG: a forma e o halo de 3 px a 96, que dá 1 px na guia
+  const forma = await alfaEm(96);
+  const f64 = (await brancoCom(forma, 96)).toString('base64');
+  const h64 = (await brancoCom(dilatar(forma, 96, 3), 96)).toString('base64');
+  fs.writeFileSync(
+    path.join(SITE, 'favicon.svg'),
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">' +
+      '<style>#h{fill:#000;fill-opacity:.85}#f{fill:#fff}@media (prefers-color-scheme:light){#h{fill:#fff;fill-opacity:.9}#f{fill:#151515}}</style>' +
+      `<mask id="mh"><image id="halo" href="data:image/png;base64,${h64}" width="96" height="96"/></mask>` +
+      `<mask id="mf"><image id="forma" href="data:image/png;base64,${f64}" width="96" height="96"/></mask>` +
+      '<rect id="h" width="96" height="96" mask="url(#mh)"/><rect id="f" width="96" height="96" mask="url(#mf)"/></svg>\n',
+  );
+}
 await sharp(FONTE).removeAlpha().resize(180, 180).png().toFile(path.join(SITE, 'icone-toque-180.png'));
 await sharp(FONTE).removeAlpha().resize(512, 512).png().toFile(path.join(SITE, 'icone-512.png'));
 

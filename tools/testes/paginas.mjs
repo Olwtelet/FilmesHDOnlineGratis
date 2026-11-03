@@ -1151,9 +1151,55 @@ async function parteMarca() {
     const m = await sharp(f).metadata();
     confere(`og ${s}: 1200x630 em JPEG`, m.width === 1200 && m.height === 630 && m.format === 'jpeg', `${m.width}x${m.height} ${m.format}`);
   }
-  // O favicon tem de ser o arquivo do proprietário reduzido, pixel a pixel, e não um redesenho.
+  // Os ícones têm de ser o arquivo do proprietário reduzido, pixel a pixel, e não um redesenho. O favicon é a mesma forma com
+  // transparência: o alfa segue a luminância do original no recorte em volta do símbolo, e os cantos são transparentes.
   const FONTE = path.join(RAIZ, 'reference/brand/simbolo.png');
-  for (const [nome, lado] of [['favicon-32.png', 32], ['icone-toque-180.png', 180], ['icone-512.png', 512]]) {
+  {
+    const arq = path.join(DIST, 'assets/img/site/favicon-32.png');
+    const m = await sharp(arq).metadata();
+    const rgba = await sharp(arq).ensureAlpha().raw().toBuffer();
+    const a = Buffer.alloc(32 * 32);
+    for (let i = 0; i < a.length; i++) a[i] = rgba[i * 4 + 3];
+    // o branco do favicon é a forma: o halo é preto, então o vermelho pré-multiplicado pelo alfa só vem dela
+    const branco = Buffer.alloc(32 * 32);
+    for (let i = 0; i < branco.length; i++) branco[i] = Math.round((rgba[i * 4] * rgba[i * 4 + 3]) / 255);
+    const fonte = await sharp(FONTE).removeAlpha().toColourspace('b-w').raw().toBuffer({ resolveWithObject: true });
+    const L = fonte.info.width;
+    const alfaFonte = Buffer.from(fonte.data.map((l) => Math.max(0, Math.min(255, Math.round(((l - 24) * 255) / (232 - 24))))));
+    let x0 = L, y0 = L, x1 = 0, y1 = 0;
+    for (let y = 0; y < L; y++) for (let x = 0; x < L; x++) if (alfaFonte[y * L + x] > 8) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+    const lado = Math.round(Math.max(x1 - x0 + 1, y1 - y0 + 1) * 1.08);
+    const meio = (p, q) => Math.max(0, Math.min(L - lado, Math.round((p + q + 1) / 2 - lado / 2)));
+    const b = await sharp(alfaFonte, { raw: { width: L, height: L, channels: 1 } }).extract({ left: meio(x0, x1), top: meio(y0, y1), width: lado, height: lado }).resize(32, 32, { kernel: 'lanczos3' }).extractChannel(0).raw().toBuffer();
+    let soma = 0;
+    for (let i = 0; i < a.length; i++) soma += Math.abs(branco[i] - b[i]);
+    const cantos = [a[0], a[31], a[32 * 31], a[1023]];
+    confere('favicon-32.png: a forma de simbolo.png com transparência', m.width === 32 && m.hasAlpha && cantos.every((c) => c === 0) && soma / a.length < 6, `${m.width}x${m.height}, alfa ${m.hasAlpha}, cantos ${cantos.join(',')}, diferença média ${(soma / a.length).toFixed(2)}`);
+    // legível nas guias: sobre um fundo claro e um escuro, quantos pixels se afastam do fundo em mais de 60 de luminância
+    for (const [nomeFundo, fundo] of [['clara', 255], ['escura', 32]]) {
+      let vistos = 0;
+      for (let i = 0; i < a.length; i++) { const al = a[i] / 255; if (Math.abs(rgba[i * 4] * al + fundo * (1 - al) - fundo) > 60) vistos++; }
+      confere(`favicon-32.png: legível numa guia ${nomeFundo}`, vistos >= 60, `${vistos} pixels destacados do fundo`);
+    }
+    const svg = fs.readFileSync(path.join(DIST, 'assets/img/site/favicon.svg'), 'utf8');
+    const embutida = (id) => { const x = new RegExp(`id="${id}" href="data:image/png;base64,([^"]+)"`).exec(svg); return x ? Buffer.from(x[1], 'base64') : null; };
+    const formaSvg = embutida('forma');
+    const haloSvg = embutida('halo');
+    let somaSvg = Infinity, contem = false;
+    if (formaSvg && haloSvg) {
+      const f32 = await sharp(formaSvg).resize(32, 32, { kernel: 'lanczos3' }).extractChannel(3).raw().toBuffer();
+      somaSvg = 0;
+      for (let i = 0; i < f32.length; i++) somaSvg += Math.abs(f32[i] - b[i]);
+      somaSvg /= f32.length;
+      const fa = await sharp(formaSvg).extractChannel(3).raw().toBuffer();
+      const ha = await sharp(haloSvg).extractChannel(3).raw().toBuffer();
+      contem = fa.every((v, i) => ha[i] >= v);
+    }
+    confere('favicon.svg: a mesma forma, com halo em volta, e as cores dos dois temas', somaSvg < 6 && contem && svg.includes('prefers-color-scheme:light') && svg.includes('#f{fill:#fff}'), `diferença média ${Number.isFinite(somaSvg) ? somaSvg.toFixed(2) : '-'}, halo contém a forma ${contem}`);
+    const html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+    confere('favicon: SVG e PNG declarados, com versão', html.includes('favicon.svg?v=') && html.includes('rel="icon" type="image/svg+xml"') && html.includes('favicon-32.png?v='));
+  }
+  for (const [nome, lado] of [['icone-toque-180.png', 180], ['icone-512.png', 512]]) {
     const arq = path.join(DIST, 'assets/img/site', nome);
     const a = await sharp(arq).removeAlpha().raw().toBuffer({ resolveWithObject: true });
     const b = await sharp(FONTE).removeAlpha().resize(lado, lado).raw().toBuffer({ resolveWithObject: true });

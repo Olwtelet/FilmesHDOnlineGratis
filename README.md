@@ -89,7 +89,7 @@ Cada suíte aceita `--url` e `--canal=msedge|chrome`. Rode uma por vez: elas usa
 
 ## Inicialização da home
 
-A primeira visita antiga podia travar no vídeo da abertura, em Chrome e Brave reais, por causa do decodificador. A investigação está em [docs/historico/README-replica-siena.md](docs/historico/README-replica-siena.md). Na Fase 2 o vídeo saiu: a abertura é feita de barras em CSS e do nome do site, sem decodificador nenhum.
+A primeira visita antiga podia travar no vídeo da abertura, em Chrome e Brave reais, por causa do decodificador. A investigação está em [docs/historico/README-replica-siena.md](docs/historico/README-replica-siena.md). Na Fase 2 o vídeo saiu: a abertura é uma aquisição de sinal em CSS (preto, carta SMPTE, nome, ENTER), sem decodificador nenhum. A ordem é conferida por `tools/testes/abertura.mjs` e `janela-real.mjs`, que leem o tempo das próprias animações e os pixels dos primeiros quadros.
 
 `public/assets/js/local-preloader.js` e `local-imagens.js` continuam observando a carga e só agem sobre um estado que falhou:
 
