@@ -11,6 +11,16 @@ const MAIN = 'css/main.css';
 
 const TROCAS = [
   {
+    // Abertura "o sinal encontra o cinema": a sequência dura 4,5 s e o nome repousa antes do ENTER, que vem 5,8 s depois do
+    // primeiro quadro da abertura (o início das animações do nome), e nunca antes de 3,5 s depois de o app.js rodar, como no
+    // original: com o app.js atrasado, a abertura já acabou e não sobra espera morta. Com movimento reduzido a abertura é curta e
+    // o ENTER continua aos 3,5 s. local-preloader.js e os testes da abertura usam a mesma regra.
+    arquivo: APP,
+    nome: 'ENTER depois da abertura nova',
+    de: 'setTimeout(()=>{this.showButton()},3500)',
+    para: 'setTimeout(()=>{this.showButton()},(()=>{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return 3500;var n=document.querySelector(".ab-nome"),a=n&&n.getAnimations?n.getAnimations()[0]:null,t=a&&a.startTime!=null?a.startTime:performance.now();return Math.max(3500,t+5800-performance.now())})())',
+  },
+  {
     // Fase 2: o giro de entrada da home para em items[0] (a próxima sessão), para qualquer quantidade de itens.
     arquivo: APP,
     nome: 'giro da home para no item 0',

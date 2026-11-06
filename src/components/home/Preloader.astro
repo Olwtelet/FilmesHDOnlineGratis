@@ -1,8 +1,9 @@
 ---
 /**
- * Abertura da home (div.preloader-w): a aquisição de sinal em CSS, sem vídeo nenhum (bloco 7 do tema), e os botões ENTRAR
- * que a fecham. O <video> vazio fica porque o app.js lê video.muted ao iniciar: sem o elemento, o runtime inteiro para.
- * O nome vai em três cópias, uma por canal de cor; o leitor de tela não ouve nenhuma, porque a abertura inteira é aria-hidden.
+ * Abertura da home (div.preloader-w): "o sinal encontra o cinema", em CSS, sem vídeo nenhum (bloco 7 do tema), e os botões
+ * ENTRAR que a fecham. O <video> vazio fica porque o app.js lê video.muted ao iniciar: sem o elemento, o runtime inteiro para.
+ * A carta vai em seis faixas, que chegam fora de fase; o nome vai em duas cópias, a recortada nas barras e a branca. O leitor de
+ * tela não ouve nenhuma, porque a abertura inteira é aria-hidden.
  */
 import { PRELOADER } from '../../data/home';
 import ExploreButton from '../ui/ExploreButton.astro';
@@ -11,11 +12,12 @@ import ExploreButton from '../ui/ExploreButton.astro';
 <div data-preloader="w" class="preloader-w">
   <video muted="" playsinline="true" class="preloader-video desktop"></video>
   <div class="abertura" aria-hidden="true">
-    <div class="ab-carta"></div>
-    {['um', 'dois', 'tres'].map((n) => <div class={`ab-carta ab-rasgo ${n}`}></div>)}
-    <div class="ab-comb ab-fora">{Array.from({ length: PRELOADER.barrasFora }, () => <i></i>)}</div>
+    <div class="ab-sinal">
+      {['f1', 'f2', 'f3', 'f4', 'f5', 'f6'].map((f) => <div class={`ab-fatia ${f}`}><div class="ab-carta"></div></div>)}
+    </div>
+    <i class="ab-linha"></i>
     <div class="ab-nome">
-      {['r', 'g', 'b'].map((c) => <div class={`ab-canal ab-${c}`}><span>{PRELOADER.nome[0]}</span> <span>{PRELOADER.nome[1]} <span>{PRELOADER.nome[2]}</span></span></div>)}
+      {['cor', 'branco'].map((c) => <div class={`ab-canal ab-${c}`}><span>{PRELOADER.nome[0]}</span> <span>{PRELOADER.nome[1]} <span>{PRELOADER.nome[2]}</span></span></div>)}
     </div>
     <div class="ab-faixa"></div>
   </div>

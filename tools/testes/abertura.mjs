@@ -15,7 +15,10 @@ const CANAL = arg('canal', 'msedge');
 const N = +arg('n', 8);
 const PARTES = arg('partes', 'tempos,quadros,falhas,retorno').split(',');
 const SAIDA = path.resolve(arg('saida', path.join(os.tmpdir(), 'fhdog-abertura')));
-const REF = { enterLimpa: 3751.5, enterCache: 3736, homeLimpa: 1709.5, homeCache: 1712.5 };
+// O ENTER da abertura "o sinal encontra o cinema" vem 5,8 s depois do primeiro quadro da abertura (tools/patch-bundle.mjs), e não
+// mais 3,5 s depois de o app.js rodar: a referência dele é essa, medida do início das animações do nome, e o tempo desde a
+// navegação tem de ficar entre 5,5 e 6,5 s. As referências da home continuam as da Siena medida nesta máquina.
+const REF = { enterAbertura: 5800, enterJanela: [5500, 6500], homeLimpa: 1709.5, homeCache: 1712.5 };
 const FOLGA = 50;
 const CELULAR = {
   viewport: { width: 390, height: 844 },
@@ -40,7 +43,7 @@ const mediana = (a) => {
 const SONDA = () => {
   const m = (window.__m = { longas: [], enter: null, clique: null, home: null, abertura: false, video: [], fonteNoNome: null });
   // no instante em que o nome começa a aparecer, a fonte dele já tinha chegado? Se não, local-preloader.js precisa fixar a reserva
-  document.addEventListener('animationstart', (e) => { if (e.animationName === 'ab-vem' && e.target.classList?.contains('ab-r') && m.fonteNoNome == null) m.fonteNoNome = document.fonts.check('800 100px "Sinal Abertura"'); }, true);
+  document.addEventListener('animationstart', (e) => { if (e.animationName !== 'ab-reserva' && e.target.classList?.contains('ab-nome') && m.fonteNoNome == null) m.fonteNoNome = document.fonts.check('800 100px "Sinal Abertura"'); }, true);
   try {
     new PerformanceObserver((l) => { for (const e of l.getEntries()) m.longas.push([Math.round(e.startTime), Math.round(e.duration)]); }).observe({ type: 'longtask', buffered: true });
   } catch {}
@@ -68,48 +71,54 @@ const SONDA = () => {
 };
 
 // A ordem da abertura, lida uma vez na hora do ENTER, das próprias animações CSS: nada de ler estilo a cada quadro durante a carga.
-// pintura: primeiro quadro do documento; sinal: a carta começa a entrar; nome: as cópias começam a aparecer; parado: a última
-// animação do nome, do pente e das faixas terminou. Também: quantas cópias estão à vista e quantas têm a entrada, se a faixa do
-// topo espera, e se a fonte do nome já estava pronta quando ele começou a aparecer (a SONDA anota) ou se a abertura ficou na reserva. Com movimento reduzido não há carta.
+// pintura: primeiro quadro do documento; sinal: o traço ou a primeira faixa da carta começa; captura: a carta começa a se
+// comprimir no traço; nome: o nome começa a abrir; parado: a última animação do traço, das faixas, da captura e do nome terminou.
+// Também: quantas cópias do nome estão à vista, se a faixa do topo espera, e se a fonte do nome já estava pronta quando ele
+// começou a aparecer (a SONDA anota) ou se a abertura ficou na reserva. Com movimento reduzido não há sinal nem captura.
 const LER_ORDEM = () => {
   const pintura = performance.getEntriesByType('paint').find((e) => e.name === 'first-paint')?.startTime ?? null;
   const de = (fn) => document.getAnimations().filter((a) => a.animationName && a.startTime !== null && fn(a)).map((a) => ({ nome: a.animationName, ini: a.startTime + a.effect.getTiming().delay, fim: a.startTime + a.effect.getComputedTiming().endTime }));
-  const carta = de((a) => a.animationName === 'ab-sinal')[0] || null;
-  const nome = de((a) => a.effect.target?.classList?.contains('ab-canal'));
-  const resto = de((a) => a.effect.target?.closest?.('.ab-comb, .ab-rasgo'));
-  const faixa = de((a) => a.animationName === 'ab-vem' && a.effect.target?.classList?.contains('ab-faixa'))[0] || null;
+  const em = (sel) => (a) => !!a.effect.target?.matches?.(sel) && !a.effect.pseudoElement;
+  const sinal = de(em('.ab-linha, .ab-fatia'));
+  const captura = de((a) => a.animationName === 'ab-captura')[0] || null;
+  const nome = de((a) => em('.ab-nome')(a) && a.animationName !== 'ab-reserva' && a.animationName !== 'ab-fecha');
+  const tudo = de((a) => em('.ab-linha, .ab-fatia, .ab-sinal, .ab-nome, .ab-canal')(a) && a.animationName !== 'ab-reserva' && a.animationName !== 'ab-fecha');
+  const faixa = de(em('.ab-faixa'))[0] || null;
   const topo = de((a) => a.effect.pseudoElement === '::before' && a.animationName === 'ab-vem')[0] || null;
-  const vem = nome.filter((x) => x.nome === 'ab-vem');
   const raiz = document.documentElement.classList;
+  const r = (x) => (x == null ? null : Math.round(x));
+  const relogio = document.querySelector('.ab-nome')?.getAnimations?.().find((a) => a.animationName !== 'ab-reserva');
   return {
-    pintura: pintura === null ? null : Math.round(pintura),
-    sinal: carta ? Math.round(carta.ini) : null,
-    sinalFim: carta ? Math.round(carta.fim) : null,
-    nome: vem.length ? Math.round(Math.min(...vem.map((x) => x.ini))) : null,
-    parado: nome.length ? Math.round(Math.max(...[...nome, ...resto].map((x) => x.fim))) : null,
-    faixa: faixa ? Math.round(faixa.ini) : null,
-    topo: topo ? Math.round(topo.ini) : null,
+    pintura: r(pintura),
+    inicio: relogio && relogio.startTime !== null ? r(relogio.startTime) : null,
+    sinal: sinal.length ? r(Math.min(...sinal.map((x) => x.ini))) : null,
+    captura: r(captura?.ini),
+    nome: nome.length ? r(Math.min(...nome.map((x) => x.ini))) : null,
+    parado: tudo.length ? r(Math.max(...tudo.map((x) => x.fim))) : null,
+    faixa: r(faixa?.ini),
+    topo: r(topo?.ini),
     ativa: raiz.contains('abertura-ativa'),
     copias: [...document.querySelectorAll('.ab-canal')].filter((e) => getComputedStyle(e).display !== 'none').length,
-    entradas: vem.length,
     reserva: raiz.contains('abertura-reserva'),
     fonte: window.__m?.fonteNoNome ?? null,
   };
 };
-// Preto por pelo menos 400 ms depois do primeiro quadro, faixa do topo inclusive; cada cópia à vista com a entrada; o nome entra
-// durante a carta, nunca antes; nada mexe nos últimos 300 ms antes do ENTER; e a fonte estava pronta no nome, ou ficou a reserva.
+// Preto por pelo menos 400 ms depois do primeiro quadro, faixa do topo inclusive. O sinal começa antes da captura, e o nome só
+// abre na captura, nunca antes; com movimento reduzido não há sinal nem captura. O nome fica parado pelo menos 1 s antes do ENTER.
+// A faixa da abertura acende com o sinal (com o nome, no movimento reduzido); a da página, só depois de tudo parar. Duas cópias do
+// nome à vista (uma no movimento reduzido), e a fonte pronta quando o nome apareceu, ou a abertura na reserva.
 function ordemCerta(o, enter, calmo = false) {
   if (!o || o.pintura === null || o.nome === null || o.parado === null) return { ok: false, texto: JSON.stringify(o) };
   const primeiro = Math.min(o.nome, o.sinal ?? Infinity, o.faixa ?? Infinity);
   const preto = primeiro - o.pintura;
-  const durante = calmo ? o.sinal === null : o.sinal !== null && o.nome > o.sinal && o.nome < o.sinalFim + 300;
+  const historia = calmo ? o.sinal === null && o.captura === null : o.sinal !== null && o.captura !== null && o.sinal < o.captura && o.nome >= o.captura && o.nome <= o.captura + 600;
   const folga = enter - o.parado;
-  // a faixa da abertura acende com a carta (com o nome, no movimento reduzido); a da página, só depois de o nome parar
-  const faixas = o.faixa !== null && Math.abs(o.faixa - (calmo ? o.nome : o.sinal)) <= 60 && o.topo !== null && o.topo >= o.parado - 100;
-  const copias = o.ativa && faixas && o.copias === (calmo ? 1 : 3) && o.entradas === o.copias;
+  const faixas = o.faixa !== null && (calmo ? Math.abs(o.faixa - o.nome) <= 60 : o.faixa >= o.sinal - 20 && o.faixa < o.captura) && o.topo !== null && o.topo >= o.parado - 100;
+  const copias = o.ativa && faixas && o.copias === (calmo ? 1 : 2);
   const fonte = o.reserva || o.fonte === true;
-  const ok = preto >= 400 && durante && folga >= 300 && copias && fonte;
-  return { ok, preto, folga, texto: `preto ${preto} ms, sinal ${o.sinal === null ? '-' : o.sinal - o.pintura}, nome ${o.nome - o.pintura}, parado ${o.parado - o.pintura}, ENTER ${Math.round(enter - o.pintura)} ms depois do primeiro quadro; ${o.copias} cópias, ${o.entradas} entradas, faixa ${o.faixa === null ? '-' : o.faixa - o.pintura}, topo ${o.topo === null ? 'sem espera' : o.topo - o.pintura}; fonte ${o.reserva ? 'na reserva' : o.fonte === true ? 'pronta' : o.fonte === false ? 'atrasada e sem reserva' : 'sem registro'}` };
+  const ok = preto >= 400 && historia && folga >= 1000 && copias && fonte;
+  const d = (x) => (x === null ? '-' : x - o.pintura);
+  return { ok, preto, folga, texto: `preto ${preto} ms, sinal ${d(o.sinal)}, captura ${d(o.captura)}, nome ${d(o.nome)}, parado ${d(o.parado)}, ENTER ${Math.round(enter - o.pintura)} ms depois do primeiro quadro; ${o.copias} cópias, faixa ${d(o.faixa)}, topo ${o.topo === null ? 'sem espera' : d(o.topo)}; fonte ${o.reserva ? 'na reserva' : o.fonte === true ? 'pronta' : o.fonte === false ? 'atrasada e sem reserva' : 'sem registro'}` };
 }
 
 function novosErros(page) {
@@ -129,7 +138,7 @@ async function visita(page, limite = 60000) {
   await page.click('[data-preloader="btn"]', { timeout: limite });
   await page.waitForFunction(() => window.__m.home !== null, null, { timeout: limite });
   const m = await lerM(page);
-  return { enter: m.enter, home: m.home - m.clique, longa: Math.max(0, ...m.longas.filter((l) => l[0] < m.enter).map((l) => l[1])), ordem };
+  return { enter: m.enter, desdeAbertura: ordem?.inicio != null ? m.enter - ordem.inicio : null, home: m.home - m.clique, longa: Math.max(0, ...m.longas.filter((l) => l[0] < m.enter).map((l) => l[1])), ordem };
 }
 
 const browser = await chromium.launch({ channel: CANAL, headless: true });
@@ -156,10 +165,18 @@ if (PARTES.includes('tempos')) {
     const m = mediana(a.map((x) => x[k]));
     confere(`${nome}: dentro de ${FOLGA} ms de ${ref}`, Math.abs(m - ref) <= FOLGA, `${fmt(a, k)} ms, n=${a.length}`);
   };
-  gate(`${CANAL} limpa: ENTER`, limpa, 'enter', REF.enterLimpa);
-  gate(`${CANAL} com cache: ENTER`, cache, 'enter', REF.enterCache);
-  gate(`${CANAL} limpa: home depois do clique`, limpa, 'home', REF.homeLimpa);
-  gate(`${CANAL} com cache: home depois do clique`, cache, 'home', REF.homeCache);
+  for (const [rotulo, lista] of [['limpa', limpa], ['com cache', cache]]) {
+    gate(`${CANAL} ${rotulo}: ENTER depois do início da abertura`, lista, 'desdeAbertura', REF.enterAbertura);
+    const fora = lista.filter((v) => v.enter < REF.enterJanela[0] || v.enter > REF.enterJanela[1]);
+    confere(`${CANAL} ${rotulo}: ENTER entre ${REF.enterJanela[0]} e ${REF.enterJanela[1]} ms depois da navegação`, !fora.length, `${fmt(lista, 'enter')} ms`);
+  }
+  // A home: o risco é travar, então só reprova a mais lenta; chegar mais cedo que a Siena não é defeito
+  const ateh = (nome, a, k, ref) => {
+    const m = mediana(a.map((x) => x[k]));
+    confere(`${nome}: até ${FOLGA} ms acima de ${ref}`, m <= ref + FOLGA, `${fmt(a, k)} ms, n=${a.length}`);
+  };
+  ateh(`${CANAL} limpa: home depois do clique`, limpa, 'home', REF.homeLimpa);
+  ateh(`${CANAL} com cache: home depois do clique`, cache, 'home', REF.homeCache);
   console.log(`info  tarefa longa antes do ENTER, limpa ${fmt(limpa, 'longa')} ms; com cache ${fmt(cache, 'longa')} ms`);
   for (const [rotulo, lista] of [['limpa', limpa], ['com cache', cache]]) {
     const r = lista.map((v) => ordemCerta(v.ordem, v.enter));
@@ -212,7 +229,7 @@ async function folhaDeQuadros(rotulo, opcoes, atrasar, { espera = 1500, cache = 
   // Sequência curta, com o tempo desde o primeiro quadro do documento
   if (doc.length > 8) {
     const t0 = pintado / 1000; // os tempos da sequência contam do primeiro quadro pintado
-    const alvos = [0, 300, 500, 650, 750, 850, 1000, 1150, 1400, 1800, 2400, 3000];
+    const alvos = [0, 500, 800, 1050, 1300, 1700, 2100, 2500, 2950, 3200, 3400, 3550, 3700, 3900, 4300, 4800, 5500];
     const idx = alvos.map((ms) => doc.reduce((m, q, i) => (Math.abs((q.t - t0) * 1000 - ms) < Math.abs((doc[m].t - t0) * 1000 - ms) ? i : m), 0));
     idx.push(doc.length - 1);
     const L = 300, A = Math.round((L * opcoes.viewport.height) / opcoes.viewport.width);
@@ -251,7 +268,7 @@ if (PARTES.includes('quadros')) {
   await folhaDeQuadros('1440-fonte-muito-lenta', { viewport: { width: 1440, height: 900 } }, '**/archivo-*.woff2', {
     espera: 4500,
     depois: async (page, conf) => {
-      const ver = () => page.evaluate(() => ({ reserva: document.documentElement.classList.contains('abertura-reserva'), familia: getComputedStyle(document.querySelector('.ab-nome')).fontFamily, visivel: +getComputedStyle(document.querySelector('.ab-r')).opacity }));
+      const ver = () => page.evaluate(() => ({ reserva: document.documentElement.classList.contains('abertura-reserva'), familia: getComputedStyle(document.querySelector('.ab-nome')).fontFamily, visivel: +getComputedStyle(document.querySelector('.ab-branco')).opacity }));
       const noEnter = await ver();
       await page.waitForTimeout(2500);
       const depois = await ver();

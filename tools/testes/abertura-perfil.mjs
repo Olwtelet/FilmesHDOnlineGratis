@@ -28,8 +28,10 @@ const SONDA = () => {
   const m = (window.__p = { registrado: null, disparo: null, fimDisparo: null, estilo: null, longas: [], quadros: [] });
   const original = window.setTimeout;
   window.setTimeout = function (fn, atraso, ...resto) {
-    if (atraso === 3500 && m.registrado === null && typeof fn === 'function') {
+    // o timer do ENTER: o do app.js que chama showButton; o atraso vem da abertura (tools/patch-bundle.mjs)
+    if (m.registrado === null && typeof fn === 'function' && /showButton/.test(String(fn))) {
       m.registrado = performance.now();
+      m.atraso = atraso;
       const cb = fn;
       fn = function () {
         m.disparo = performance.now();
@@ -72,7 +74,7 @@ function porFuncao(perfil) {
 }
 
 function analisar(m) {
-  const devido = m.registrado + 3500;
+  const devido = m.registrado + m.atraso;
   const longas = m.longas.slice().sort((a, b) => a[0] - b[0]);
   // bloco contínuo de tarefas iniciado antes do instante devido: é ele que atrasa o timer
   let ocupadoAte = m.registrado;
@@ -82,7 +84,7 @@ function analisar(m) {
     tLl: m.registrado,
     atrasoTimer: m.disparo - devido,
     atrasoTick: m.estilo - m.fimDisparo,
-    margem: 3500 - (ocupadoAte - m.registrado),
+    margem: m.atraso - (ocupadoAte - m.registrado),
     emCurso: longas.find(([ini, dur]) => ini <= devido && devido <= ini + dur) || null,
     longas,
     quadros: m.quadros,

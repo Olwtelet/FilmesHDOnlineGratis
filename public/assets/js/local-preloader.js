@@ -14,7 +14,9 @@
   if (!wrapper) return;
 
   var TICK_MS = 250;
-  var ENTER_MS = 3500; // the original shows ENTER this long after app.js runs
+  // app.js shows ENTER this long after it runs: 5.8 s while the opening plays, counted from its first frame (tools/patch-bundle.mjs);
+  // 3.5 s with reduced motion, and on a return within the hour, when there is no opening at all
+  var ENTER_MS = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.classList.contains('abertura-vista') ? 3500 : 5800;
   var ENTER_AFTER_APP_MS = ENTER_MS + 2500; // no failure was seen, but ENTER did not come
   var ENTER_LIMIT_MS = 15000; // app.js still not there
   var CLOSE_LIMIT_MS = 1800; // the original fades the overlay in 300 ms
@@ -108,7 +110,21 @@
     state.enterAccepted = true;
     state.enterAcceptedAt = performance.now();
     note('enter-accepted');
+    sair();
   }, true);
+
+  // A saída repete o gesto da captura: o nome se comprime numa linha enquanto a camada some (bloco 7 do tema). Começa já no
+  // aperto do botão principal: depois do clique o app.js monta a home, e a animação só começaria quando a camada já estivesse
+  // sumindo. Se o aperto não vira clique (soltou fora, arrastou, toque longo), o nome volta.
+  function sair(sim) {
+    var abertura = wrapper.querySelector('.abertura');
+    if (abertura) abertura.classList.toggle('ab-saindo', sim !== false);
+  }
+  document.addEventListener('pointerdown', function (e) {
+    if (e.button === 0 && e.isPrimary && btn.contains(e.target) && btn.onclick && !state.enterAccepted) sair();
+  }, true);
+  var desistir = function () { setTimeout(function () { if (!state.enterAccepted) sair(false); }, 60); };
+  ['pointerup', 'pointercancel', 'contextmenu'].forEach(function (tipo) { document.addEventListener(tipo, desistir, true); });
 
   var domImagesShown = false;
   function showDomImages() {

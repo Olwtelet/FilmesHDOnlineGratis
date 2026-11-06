@@ -100,14 +100,15 @@ if (PARTES.includes('abertura')) {
   for (const { nome, opcoes } of LARGURAS) {
     const pedidos = [];
     const { ctx, page } = await abrir('/', opcoes, { semCookies: true, antes: (p) => p.on('request', (r) => pedidos.push(r.url())) });
-    await dormir(1200);
+    // a captura: o nome acabou de abrir, recortado nas barras, e as cores ainda não escorreram para o branco
+    await page.waitForFunction(() => { const a = document.querySelector('.ab-nome').getAnimations().find((x) => x.animationName === 'ab-abre'); return a && a.currentTime >= a.effect.getTiming().delay + 250; }, null, { timeout: 30000 });
     await page.screenshot({ path: path.join(SAIDA, `abertura-${nome}-meio.jpg`), type: 'jpeg', quality: 78 });
     await page.waitForFunction(() => { const b = document.querySelector('[data-preloader="btn"]'); return b && b.onclick && +getComputedStyle(b).opacity > 0.9; }, null, { timeout: 60000 });
     await page.screenshot({ path: path.join(SAIDA, `abertura-${nome}-enter.jpg`), type: 'jpeg', quality: 78 });
     const m = await page.evaluate(() => {
       // a caixa do texto de uma cópia: as três ficam alinhadas no ENTER, e as caixas dos div das cópias cobririam a tela inteira
       const nomeEl = document.querySelector('.ab-nome');
-      const copia = document.querySelector('.ab-r');
+      const copia = document.querySelector('.ab-branco');
       const r = document.createRange();
       r.selectNodeContents(copia);
       const linhas = [...r.getClientRects()].filter((q) => q.width > 4);
@@ -133,7 +134,7 @@ if (PARTES.includes('abertura')) {
   await dormir(1500);
   const calma = await page.evaluate(() => {
     const ver = (s) => { const e = document.querySelector(s); return e ? getComputedStyle(e).display : null; };
-    return { carta: ver('.ab-carta'), barras: ver('.ab-fora'), copias: [ver('.ab-g'), ver('.ab-b')], nome: +getComputedStyle(document.querySelector('.ab-r')).opacity, cor: getComputedStyle(document.querySelector('.ab-r')).color };
+    return { carta: ver('.ab-sinal'), barras: ver('.ab-linha'), copias: [ver('.ab-cor')], nome: +getComputedStyle(document.querySelector('.ab-nome')).opacity * +getComputedStyle(document.querySelector('.ab-branco')).opacity, cor: getComputedStyle(document.querySelector('.ab-branco')).color };
   });
   confere('abertura com movimento reduzido: só o nome, branco, sobre preto', calma.carta === 'none' && calma.barras === 'none' && calma.copias.every((c) => c === 'none') && calma.nome > 0.9 && calma.cor === 'rgb(255, 255, 255)', JSON.stringify(calma));
   await page.screenshot({ path: path.join(SAIDA, 'abertura-movimento-reduzido.jpg'), type: 'jpeg', quality: 78 });

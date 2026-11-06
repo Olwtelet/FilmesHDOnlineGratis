@@ -43,48 +43,54 @@ const mediana = (a) => {
 };
 
 // A ordem da abertura, lida uma vez na hora do ENTER, das próprias animações CSS: nada de ler estilo a cada quadro durante a carga.
-// pintura: primeiro quadro do documento; sinal: a carta começa a entrar; nome: as cópias começam a aparecer; parado: a última
-// animação do nome, do pente e das faixas terminou. Também: quantas cópias estão à vista e quantas têm a entrada, se a faixa do
-// topo espera, e se a fonte do nome já estava pronta quando ele começou a aparecer (a SONDA anota) ou se a abertura ficou na reserva. Com movimento reduzido não há carta.
+// pintura: primeiro quadro do documento; sinal: o traço ou a primeira faixa da carta começa; captura: a carta começa a se
+// comprimir no traço; nome: o nome começa a abrir; parado: a última animação do traço, das faixas, da captura e do nome terminou.
+// Também: quantas cópias do nome estão à vista, se a faixa do topo espera, e se a fonte do nome já estava pronta quando ele
+// começou a aparecer (a SONDA anota) ou se a abertura ficou na reserva. Com movimento reduzido não há sinal nem captura.
 const LER_ORDEM = () => {
   const pintura = performance.getEntriesByType('paint').find((e) => e.name === 'first-paint')?.startTime ?? null;
   const de = (fn) => document.getAnimations().filter((a) => a.animationName && a.startTime !== null && fn(a)).map((a) => ({ nome: a.animationName, ini: a.startTime + a.effect.getTiming().delay, fim: a.startTime + a.effect.getComputedTiming().endTime }));
-  const carta = de((a) => a.animationName === 'ab-sinal')[0] || null;
-  const nome = de((a) => a.effect.target?.classList?.contains('ab-canal'));
-  const resto = de((a) => a.effect.target?.closest?.('.ab-comb, .ab-rasgo'));
-  const faixa = de((a) => a.animationName === 'ab-vem' && a.effect.target?.classList?.contains('ab-faixa'))[0] || null;
+  const em = (sel) => (a) => !!a.effect.target?.matches?.(sel) && !a.effect.pseudoElement;
+  const sinal = de(em('.ab-linha, .ab-fatia'));
+  const captura = de((a) => a.animationName === 'ab-captura')[0] || null;
+  const nome = de((a) => em('.ab-nome')(a) && a.animationName !== 'ab-reserva' && a.animationName !== 'ab-fecha');
+  const tudo = de((a) => em('.ab-linha, .ab-fatia, .ab-sinal, .ab-nome, .ab-canal')(a) && a.animationName !== 'ab-reserva' && a.animationName !== 'ab-fecha');
+  const faixa = de(em('.ab-faixa'))[0] || null;
   const topo = de((a) => a.effect.pseudoElement === '::before' && a.animationName === 'ab-vem')[0] || null;
-  const vem = nome.filter((x) => x.nome === 'ab-vem');
   const raiz = document.documentElement.classList;
+  const r = (x) => (x == null ? null : Math.round(x));
+  const relogio = document.querySelector('.ab-nome')?.getAnimations?.().find((a) => a.animationName !== 'ab-reserva');
   return {
-    pintura: pintura === null ? null : Math.round(pintura),
-    sinal: carta ? Math.round(carta.ini) : null,
-    sinalFim: carta ? Math.round(carta.fim) : null,
-    nome: vem.length ? Math.round(Math.min(...vem.map((x) => x.ini))) : null,
-    parado: nome.length ? Math.round(Math.max(...[...nome, ...resto].map((x) => x.fim))) : null,
-    faixa: faixa ? Math.round(faixa.ini) : null,
-    topo: topo ? Math.round(topo.ini) : null,
+    pintura: r(pintura),
+    inicio: relogio && relogio.startTime !== null ? r(relogio.startTime) : null,
+    sinal: sinal.length ? r(Math.min(...sinal.map((x) => x.ini))) : null,
+    captura: r(captura?.ini),
+    nome: nome.length ? r(Math.min(...nome.map((x) => x.ini))) : null,
+    parado: tudo.length ? r(Math.max(...tudo.map((x) => x.fim))) : null,
+    faixa: r(faixa?.ini),
+    topo: r(topo?.ini),
     ativa: raiz.contains('abertura-ativa'),
     copias: [...document.querySelectorAll('.ab-canal')].filter((e) => getComputedStyle(e).display !== 'none').length,
-    entradas: vem.length,
     reserva: raiz.contains('abertura-reserva'),
     fonte: window.__m?.fonteNoNome ?? null,
   };
 };
-// Preto por pelo menos 400 ms depois do primeiro quadro, faixa do topo inclusive; cada cópia à vista com a entrada; o nome entra
-// durante a carta, nunca antes; nada mexe nos últimos 300 ms antes do ENTER; e a fonte estava pronta no nome, ou ficou a reserva.
+// Preto por pelo menos 400 ms depois do primeiro quadro, faixa do topo inclusive. O sinal começa antes da captura, e o nome só
+// abre na captura, nunca antes; com movimento reduzido não há sinal nem captura. O nome fica parado pelo menos 1 s antes do ENTER.
+// A faixa da abertura acende com o sinal (com o nome, no movimento reduzido); a da página, só depois de tudo parar. Duas cópias do
+// nome à vista (uma no movimento reduzido), e a fonte pronta quando o nome apareceu, ou a abertura na reserva.
 function ordemCerta(o, enter, calmo = false) {
   if (!o || o.pintura === null || o.nome === null || o.parado === null) return { ok: false, texto: JSON.stringify(o) };
   const primeiro = Math.min(o.nome, o.sinal ?? Infinity, o.faixa ?? Infinity);
   const preto = primeiro - o.pintura;
-  const durante = calmo ? o.sinal === null : o.sinal !== null && o.nome > o.sinal && o.nome < o.sinalFim + 300;
+  const historia = calmo ? o.sinal === null && o.captura === null : o.sinal !== null && o.captura !== null && o.sinal < o.captura && o.nome >= o.captura && o.nome <= o.captura + 600;
   const folga = enter - o.parado;
-  // a faixa da abertura acende com a carta (com o nome, no movimento reduzido); a da página, só depois de o nome parar
-  const faixas = o.faixa !== null && Math.abs(o.faixa - (calmo ? o.nome : o.sinal)) <= 60 && o.topo !== null && o.topo >= o.parado - 100;
-  const copias = o.ativa && faixas && o.copias === (calmo ? 1 : 3) && o.entradas === o.copias;
+  const faixas = o.faixa !== null && (calmo ? Math.abs(o.faixa - o.nome) <= 60 : o.faixa >= o.sinal - 20 && o.faixa < o.captura) && o.topo !== null && o.topo >= o.parado - 100;
+  const copias = o.ativa && faixas && o.copias === (calmo ? 1 : 2);
   const fonte = o.reserva || o.fonte === true;
-  const ok = preto >= 400 && durante && folga >= 300 && copias && fonte;
-  return { ok, preto, folga, texto: `preto ${preto} ms, sinal ${o.sinal === null ? '-' : o.sinal - o.pintura}, nome ${o.nome - o.pintura}, parado ${o.parado - o.pintura}, ENTER ${Math.round(enter - o.pintura)} ms depois do primeiro quadro; ${o.copias} cópias, ${o.entradas} entradas, faixa ${o.faixa === null ? '-' : o.faixa - o.pintura}, topo ${o.topo === null ? 'sem espera' : o.topo - o.pintura}; fonte ${o.reserva ? 'na reserva' : o.fonte === true ? 'pronta' : o.fonte === false ? 'atrasada e sem reserva' : 'sem registro'}` };
+  const ok = preto >= 400 && historia && folga >= 1000 && copias && fonte;
+  const d = (x) => (x === null ? '-' : x - o.pintura);
+  return { ok, preto, folga, texto: `preto ${preto} ms, sinal ${d(o.sinal)}, captura ${d(o.captura)}, nome ${d(o.nome)}, parado ${d(o.parado)}, ENTER ${Math.round(enter - o.pintura)} ms depois do primeiro quadro; ${o.copias} cópias, faixa ${d(o.faixa)}, topo ${o.topo === null ? 'sem espera' : d(o.topo)}; fonte ${o.reserva ? 'na reserva' : o.fonte === true ? 'pronta' : o.fonte === false ? 'atrasada e sem reserva' : 'sem registro'}` };
 }
 
 async function emularCelular(cdp) {
@@ -96,7 +102,7 @@ const SONDA = () => {
   if (window.__m) return;
   const m = (window.__m = { enter: null, clique: null, home: null, animou: false, quadros: 0, erros: [], longa: 0, fonteNoNome: null });
   // no instante em que o nome começa a aparecer, a fonte dele já tinha chegado? Se não, local-preloader.js precisa fixar a reserva
-  document.addEventListener('animationstart', (e) => { if (e.animationName === 'ab-vem' && e.target.classList?.contains('ab-r') && m.fonteNoNome == null) m.fonteNoNome = document.fonts.check('800 100px "Sinal Abertura"'); }, true);
+  document.addEventListener('animationstart', (e) => { if (e.animationName !== 'ab-reserva' && e.target.classList?.contains('ab-nome') && m.fonteNoNome == null) m.fonteNoNome = document.fonts.check('800 100px "Sinal Abertura"'); }, true);
   try {
     new PerformanceObserver((l) => { for (const e of l.getEntries()) m.longa = Math.max(m.longa, Math.round(e.duration)); }).observe({ type: 'longtask', buffered: true });
   } catch {}
@@ -175,14 +181,14 @@ async function visita(page, cdp, rotulo, comFoto) {
   const aceso = luz.findIndex((v) => v > 12);
   r.escuro = aceso > 0 ? Math.round(doc[aceso].t * 1000 - pintado) : aceso === 0 ? 0 : null;
   if (comFoto && doc.length > 8) {
-    const alvos = [0, 400, 700, 800, 950, 1100, 1300, 1700, 2300, 3000];
+    const alvos = [0, 600, 1050, 1400, 1800, 2300, 2800, 3200, 3400, 3550, 3750, 4100, 4600, 5300, 99999]; // o último: o quadro do ENTER
     const idx = alvos.map((ms) => doc.reduce((m, q, i) => (Math.abs(q.t * 1000 - pintado - ms) < Math.abs(doc[m].t * 1000 - pintado - ms) ? i : m), 0));
     const blocos = await Promise.all(idx.map(async (i, k) => {
       const legenda = Buffer.from(`<svg width="240" height="22"><rect width="100%" height="100%" fill="#222"/><text x="6" y="16" font-family="monospace" font-size="14" fill="#fff">${Math.round(doc[i].t * 1000 - pintado)} ms</text></svg>`);
       const img = await sharp(Buffer.from(doc[i].data, 'base64')).resize(240, 180, { fit: 'contain', background: '#333' }).toBuffer();
       return { input: await sharp({ create: { width: 240, height: 202, channels: 3, background: '#111' } }).composite([{ input: legenda, top: 0, left: 0 }, { input: img, top: 22, left: 0 }]).jpeg().toBuffer(), left: (k % 5) * 244, top: Math.floor(k / 5) * 206 };
     }));
-    await sharp({ create: { width: 5 * 244, height: 2 * 206, channels: 3, background: '#000' } }).composite(blocos).jpeg({ quality: 85 }).toFile(path.join(SAIDA, `${rotulo}-sequencia.jpg`)).catch(() => {});
+    await sharp({ create: { width: 5 * 244, height: 3 * 206, channels: 3, background: '#000' } }).composite(blocos).jpeg({ quality: 85 }).toFile(path.join(SAIDA, `${rotulo}-sequencia.jpg`)).catch(() => {});
   }
   const antes = await page.evaluate(() => ({ quadros: window.__m.quadros, t: performance.now() }));
   await page.click('[data-preloader="btn"]');

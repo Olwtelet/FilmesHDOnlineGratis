@@ -12,8 +12,6 @@ export const HOME_EXPLORE = {
 };
 
 export const PRELOADER = {
-  /** cobre 100vw no menor período das barras */
-  barrasFora: 33,
   /** as linhas de SITE.name: duas em tela larga, três no celular em pé */
   nome: ['Filmes HD', 'Online', 'Grátis'],
   enterLabel: 'ENTRAR',

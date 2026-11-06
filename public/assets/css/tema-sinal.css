@@ -366,13 +366,17 @@ body::after { /* scanlines e vinheta de monitor */
   content: ""; position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); pointer-events: none;
 }
 
-/* 7. Abertura: aquisição de sinal, sem vídeo nem decodificador. O primeiro quadro é preto. Aos .7 s a carta SMPTE entra como
-      sincronismo perdido: desliza de lado até assentar, com três faixas fora do lugar, e a luz só sobe, sem piscar. O nome chega
-      no meio da interferência em três cópias, uma por canal de cor, que convergem até virar branco; o pente de barras pretas
-      fecha a carta e sobra o nome, parado bem antes do ENTER. Cada cópia está em modo diferença: alinhadas, invertem os três
-      canais, como o nome branco de antes. Tudo em transform e opacity, no compositor: nada para na tarefa longa do app.js, e
-      nada roda depois de 2,65 s. O relógio começa no primeiro quadro da abertura; o ENTER continua no timer do app.js. */
-@font-face { /* a mesma Archivo do Sinal Display, mas invisível até chegar: o nome nunca aparece na fonte de reserva e troca */
+/* 7. Abertura: "o sinal encontra o cinema". Em quatro tempos, contados do primeiro quadro da abertura:
+      1. Expectativa: preto, e aos .7 s um traço fino de sincronismo cresce do centro, na altura do nome.
+      2. Formação: a 1,15 s a carta SMPTE chega em seis faixas fora de fase, cada uma deslocada de lado, e se acerta em duas
+         correções de horizontal, como um monitor travando o sincronismo. A luz só sobe, sem piscar.
+      3. Captura: o sinal fica formado por um instante e, aos 3,15 s, cai. A carta se comprime no traço e, quando chega nele,
+         aos 3,55 s, o nome abre do traço na vertical, recortado nas próprias barras; trava de lado e, aos 4 s, as cores escorrem
+         para o branco sobre preto.
+      4. Repouso: o nome fica parado desde 4,5 s; o ENTER vem do timer do app.js, 5,8 s depois de ele rodar (tools/patch-bundle.mjs).
+      Ao apertar ENTRAR, o nome se comprime de volta numa linha enquanto a camada some, sem atrasar a home (local-preloader.js).
+      Só transform, translate, scale e opacity, no compositor: nada para na tarefa longa do app.js, e nada roda depois de 4,5 s. */
+@font-face { /* a mesma Archivo do Sinal Display, mas invisível até chegar: o nome nunca aparece numa fonte e troca para outra */
   font-family: 'Sinal Abertura';
   src: url('/assets/fonts/tema/archivo-latin-wdth-normal.woff2') format('woff2');
   font-weight: 800; font-stretch: 77%; font-style: normal; font-display: block;
@@ -382,60 +386,72 @@ body::after { /* scanlines e vinheta de monitor */
 .preloader-cont { z-index: 1; }
 .abertura-vista .abertura { display: none; }
 .abertura { position: absolute; inset: 0; overflow: hidden; contain: strict;
-  --p: 4.6875vw; --sinal0: .7s; --nome0: .95s; --pente0: 1.15s; --pente: 1.5s; --cresce: 1.7s; }
-@media only screen and (min-width: 1800px) { .abertura { --p: 3.125vw; } }
-@media only screen and (max-width: 991px) { .abertura { --p: 5.9vw; --pente: 1.2s; --cresce: 1.4s; } }
+  --linha0: .7s; --sinal0: 1.15s; --captura: 3.15s; --nome0: 3.55s; --branco0: 4s;
+  --eixo: calc(50% - 6svh); } /* a altura do centro do nome, que fica 12svh acima do pé da tela */
+/* 1. o traço de sincronismo, que também é o eixo da captura */
+.ab-linha { position: absolute; left: 0; right: 0; top: var(--eixo); height: 2px; margin-top: -1px;
+  background: linear-gradient(90deg, transparent, #fff 18% 82%, transparent);
+  animation: ab-linha 3.15s linear var(--linha0) both; }
+/* 2. a carta em seis faixas: cada faixa recorta a carta inteira na sua altura, e só ela vira camada */
+.ab-sinal { position: absolute; inset: 0; transform-origin: 50% var(--eixo); animation: ab-captura .5s cubic-bezier(.55,0,.85,.35) var(--captura) both; }
+.ab-fatia { position: absolute; left: 0; right: 0; top: calc(var(--y) * 1%); height: calc(var(--h) * 1%); overflow: hidden; }
+.ab-fatia > .ab-carta { top: calc(var(--y) / var(--h) * -100%); height: calc(100 / var(--h) * 100%); bottom: auto; }
+.ab-fatia.f1 { --y: 0; --h: 14; animation: ab-fase-1 1.45s linear var(--sinal0) both; }
+.ab-fatia.f2 { --y: 14; --h: 20; animation: ab-fase-2 1.45s linear calc(var(--sinal0) + .2s) both; }
+.ab-fatia.f3 { --y: 34; --h: 18; animation: ab-fase-3 1.45s linear calc(var(--sinal0) + .05s) both; }
+.ab-fatia.f4 { --y: 52; --h: 15; animation: ab-fase-4 1.45s linear calc(var(--sinal0) + .3s) both; }
+.ab-fatia.f5 { --y: 67; --h: 8; animation: ab-fase-5 1.45s linear calc(var(--sinal0) + .13s) both; }
+.ab-fatia.f6 { --y: 75; --h: 25; animation: ab-fase-6 1.45s linear calc(var(--sinal0) + .25s) both; }
 .ab-carta { position: absolute; inset: 0; background-repeat: no-repeat;
   background-image: var(--faixa-smpte),
     linear-gradient(90deg, var(--smpte-azul) 0 14.2857%, #131313 0 28.5714%, var(--smpte-magenta) 0 42.8571%, #131313 0 57.1428%, var(--smpte-ciano) 0 71.4285%, #131313 0 85.7142%, var(--smpte-cinza) 0 100%),
     linear-gradient(90deg, #00214c 0 17.86%, #fff 0 35.71%, #32006a 0 53.57%, #131313 0 71.43%, #090909 0 76.2%, #131313 0 80.95%, #1d1d1d 0 85.7%, #131313 0 100%);
   background-size: 100% 67%, 100% 8%, 100% 25%;
-  background-position: 0 0, 0 72.83%, 0 100%;
-  animation: ab-sinal .5s cubic-bezier(.2,.6,.3,1) var(--sinal0) both; }
-/* faixas da própria carta, recortadas e deslocadas, como erro de tracking; somem antes de o nome assentar */
-.ab-rasgo.um { clip-path: inset(19% 0 78.6% 0); animation: ab-rasgo-um .66s linear var(--sinal0) both; }
-.ab-rasgo.dois { clip-path: inset(57% 0 41.8% 0); animation: ab-rasgo-dois .66s linear var(--sinal0) both; }
-.ab-rasgo.tres { clip-path: inset(80% 0 16.6% 0); animation: ab-rasgo-tres .66s linear var(--sinal0) both; }
-.ab-comb { position: absolute; inset: 0; display: flex; justify-content: center; }
-.ab-comb i { display: block; flex: none; width: var(--p); height: 100%; animation: ab-barra var(--pente) cubic-bezier(.37,0,.63,1) var(--pente0) both; }
-.ab-fora i { background: #000; }
-/* O bloco fica um pouco acima do centro, para o botão ENTRAR ter onde aparecer embaixo dele */
-.ab-nome { position: absolute; inset: 0 0 12svh;
-  font-family: 'Sinal Abertura', 'Sinal Reserva', Arial, sans-serif; font-size: min(12vw, 26svh); line-height: 1; letter-spacing: 0; font-kerning: none; text-transform: uppercase; } /* sem aperto: com ele, o R e o Á de GRÁTIS se tocam */
+  background-position: 0 0, 0 72.83%, 0 100%; }
+/* 3. o nome: abre do traço, recortado nas barras, e fixa em branco. O bloco fica um pouco acima do centro, para o ENTRAR. */
+.ab-nome { position: absolute; inset: 0 0 12svh; opacity: 1;
+  font-family: 'Sinal Abertura', 'Sinal Reserva', Arial, sans-serif; font-size: min(12vw, 26svh); line-height: 1; letter-spacing: 0; font-kerning: none; text-transform: uppercase; /* sem aperto: com ele, o R e o Á de GRÁTIS se tocam */
+  animation: ab-abre .55s cubic-bezier(.2,.8,.2,1) var(--nome0) both; }
 .abertura-reserva .ab-nome { font-family: 'Sinal Reserva', Arial, sans-serif; } /* a fonte não chegou até o nome aparecer: a reserva fica até o fim, sem troca (script do head em pages/index.astro) */
-.abertura .ab-nome { opacity: 1; animation: none; } /* desfaz a reserva do BaseLayout, que só vale se este arquivo não chegar */
-.ab-canal { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; white-space: nowrap; mix-blend-mode: difference; }
+.ab-canal { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; white-space: nowrap; }
 .ab-canal > span { display: block; }
-.ab-r { color: #f00; animation: ab-vem .3s linear var(--nome0) both, ab-cresce var(--cresce) cubic-bezier(.3,.5,.3,1) var(--nome0) both, ab-desvio-r .95s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
-.ab-g { color: #0f0; animation: ab-vem .3s linear var(--nome0) both, ab-cresce var(--cresce) cubic-bezier(.3,.5,.3,1) var(--nome0) both, ab-desvio-g .95s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
-.ab-b { color: #00f; animation: ab-vem .3s linear var(--nome0) both, ab-cresce var(--cresce) cubic-bezier(.3,.5,.3,1) var(--nome0) both, ab-desvio-b .95s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
+.ab-cor { color: transparent; background: var(--faixa-smpte); -webkit-background-clip: text; background-clip: text; animation: ab-trava .6s cubic-bezier(.2,.7,.25,1) var(--nome0) both; }
+.ab-branco { color: #fff; animation: ab-vem .5s ease-in-out var(--branco0) both; }
+.abertura.ab-saindo .ab-nome { animation: ab-abre .55s cubic-bezier(.2,.8,.2,1) var(--nome0) both, ab-fecha .24s cubic-bezier(.4,0,.2,1) both; } /* começa no aperto do ENTRAR e termina como uma linha, que some com a camada; a entrada continua na lista, para um ENTRAR apertado antes de o nome abrir não o fazer saltar à vista */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
   .ab-nome { font-size: min(21vw, 13svh); }
   .ab-canal { text-align: center; }
   .ab-canal span span { display: block; }
 }
-/* A faixa do topo também espera o sinal: o primeiro quadro é todo preto. A da página corre noutro relógio, porque o body nasce
-   antes da abertura, então fica escondida até depois do nome parar; uma cópia dentro da abertura acende junto com a carta. */
-html.abertura-ativa body::before { animation: ab-vem 0s linear 4s both; }
-.ab-faixa { position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); animation: ab-vem .3s linear var(--sinal0) both; }
+/* A faixa do topo também espera o sinal. A da página corre noutro relógio, porque o body nasce antes da abertura, então fica
+   escondida até depois do ENTER; uma cópia dentro da abertura acende junto com as primeiras faixas da carta. */
+html.abertura-ativa body::before { animation: ab-vem 0s linear 6.4s both; }
+.ab-faixa { position: absolute; inset: 0 0 auto; height: var(--faixa-altura); background: var(--faixa-smpte); animation: ab-vem .4s linear var(--sinal0) both; }
 @keyframes ab-vem { from { opacity: 0 } to { opacity: 1 } }
-@keyframes ab-sinal { 0% { opacity: 0; translate: -3.2vw 0 } 24% { opacity: .5; translate: 2.4vw 0 } 46% { opacity: .78; translate: -1.2vw 0 } 66% { translate: .55vw 0 } 84% { translate: -.2vw 0 } 100% { opacity: 1; translate: 0 0 } }
-@keyframes ab-rasgo-um { 0% { opacity: 0; translate: 9vw 0 } 18% { opacity: 1 } 50% { translate: -5vw 0 } 78% { opacity: 1; translate: 2vw 0 } 100% { opacity: 0; translate: 0 0 } }
-@keyframes ab-rasgo-dois { 0% { opacity: 0; translate: -12vw 0 } 18% { opacity: 1 } 50% { translate: 6vw 0 } 78% { opacity: 1; translate: -2.5vw 0 } 100% { opacity: 0; translate: 0 0 } }
-@keyframes ab-rasgo-tres { 0% { opacity: 0; translate: 5vw 0 } 18% { opacity: 1 } 50% { translate: -3vw 0 } 78% { opacity: 1; translate: 1vw 0 } 100% { opacity: 0; translate: 0 0 } }
-@keyframes ab-barra { from { transform: scaleX(0) } to { transform: scaleX(1.02) } }
-@keyframes ab-cresce { from { scale: .94 } to { scale: 1 } }
-@keyframes ab-desvio-r { 0% { translate: -1.6vw 0 } 38% { translate: .5vw 0 } 100% { translate: 0 0 } }
-@keyframes ab-desvio-g { 0% { translate: .45vw 0 } 38% { translate: -.15vw 0 } 100% { translate: 0 0 } }
-@keyframes ab-desvio-b { 0% { translate: 1.6vw 0 } 38% { translate: -.5vw 0 } 100% { translate: 0 0 } }
-@media (prefers-reduced-motion: reduce) { /* revelação simples: o preto, e o nome branco aparecendo, sem carta nem deslocamento */
-  .ab-carta, .ab-fora, .ab-g, .ab-b { display: none; }
-  .ab-r { color: #fff; mix-blend-mode: normal; animation: ab-vem .6s linear calc(var(--sinal0) + .05s) both; }
-  .ab-faixa { animation-duration: .6s; animation-delay: calc(var(--sinal0) + .05s); }
+@keyframes ab-linha {
+  0% { opacity: 0; scale: 0 1 } 8% { opacity: .6 } 14% { scale: 1 1 } 25% { opacity: .22 } 78% { opacity: .22 }
+  90% { opacity: .95; scale: 1 1 } 100% { opacity: 0; scale: 1 1 } }
+@keyframes ab-captura { 0% { scale: 1 1; opacity: 1 } 80% { scale: 1 .006; opacity: 1 } 100% { scale: 1 .006; opacity: 0 } }
+/* fase: aparece fora do lugar, segura, corrige uma vez, segura, corrige de novo e assenta */
+@keyframes ab-fase-1 { 0% { opacity: 0; translate: -7vw 0 } 18% { opacity: 1 } 40% { translate: -7vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 52% { translate: 2vw 0 } 78% { translate: 2vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 92%, 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-fase-2 { 0% { opacity: 0; translate: 12vw 0 } 18% { opacity: 1 } 40% { translate: 12vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 52% { translate: -3vw 0 } 78% { translate: -3vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 92%, 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-fase-3 { 0% { opacity: 0; translate: -3vw 0 } 18% { opacity: 1 } 40% { translate: -3vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 52% { translate: 1vw 0 } 78% { translate: 1vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 92%, 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-fase-4 { 0% { opacity: 0; translate: 8vw 0 } 18% { opacity: 1 } 40% { translate: 8vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 52% { translate: -2vw 0 } 78% { translate: -2vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 92%, 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-fase-5 { 0% { opacity: 0; translate: -14vw 0 } 18% { opacity: 1 } 40% { translate: -14vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 52% { translate: 4vw 0 } 78% { translate: 4vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 92%, 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-fase-6 { 0% { opacity: 0; translate: 5vw 0 } 18% { opacity: 1 } 40% { translate: 5vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 52% { translate: -1.5vw 0 } 78% { translate: -1.5vw 0; animation-timing-function: cubic-bezier(.3,0,.2,1) } 92%, 100% { opacity: 1; translate: 0 0 } }
+@keyframes ab-abre { 0% { opacity: 0; scale: 1 .02 } 12% { opacity: 1 } 100% { opacity: 1; scale: 1 1 } }
+@keyframes ab-trava { 0% { translate: 1.4vw 0 } 45% { translate: -.35vw 0 } 100% { translate: 0 0 } }
+@keyframes ab-fecha { from { scale: 1 1 } to { scale: 1 .012 } }
+@media (prefers-reduced-motion: reduce) { /* versão curta: o preto, e o nome branco aparecendo devagar aos .75 s; o ENTER volta aos 3,5 s */
+  .ab-sinal, .ab-linha, .ab-cor { display: none; }
+  .ab-nome, .abertura.ab-saindo .ab-nome { animation: ab-vem .8s ease-out .75s both; }
+  .ab-branco { animation: none; }
+  .ab-faixa { animation-duration: .8s; animation-delay: .75s; }
+  html.abertura-ativa body::before { animation-delay: 3.3s; }
 }
-@media (forced-colors: active) { /* o sistema troca as cores: em modo diferença, o nome sumiria sobre as barras */
-  .ab-carta, .ab-fora, .ab-g, .ab-b { display: none; }
-  .ab-r { mix-blend-mode: normal; }
+@media (forced-colors: active) { /* o sistema troca as cores: o recorte nas barras viraria um bloco */
+  .ab-sinal, .ab-linha, .ab-cor { display: none; }
+  .ab-branco { animation: none; }
 }
 
 /* 7b. Fase 2: home, Programação e menu */
