@@ -1,0 +1,434 @@
+{
+  "slug": "rocky-1976",
+  "tmdbId": 1366,
+  "identidade": {
+    "tmdb": "https://www.themoviedb.org/movie/1366-rocky?language=pt-BR",
+    "tituloTmdbPtBR": "Rocky: Um Lutador (1976)",
+    "direcaoTmdb": "John G. Avildsen",
+    "estreiaBrasilTmdb": "06/01/1977 (BR)",
+    "estreiaBrasilAdoroCinema": "7 de janeiro de 1977 (https://www.adorocinema.com/filmes/filme-28251/)",
+    "duracaoTmdb": "1h 59m"
+  },
+  "hero": {
+    "numeroNaFolha": 49,
+    "tmdb": "kM02Hr9plYKvHGvKK5gDQA7zfr3.jpg",
+    "largura": 3680,
+    "altura": 2070,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "Rocky de costas no alto da escadaria, braços erguidos, céu de madrugada rosado e a cidade na névoa. 3680x2070. Assunto no centro: no recorte desktop 16:10 sobra céu em cima para o título; no celular 390x844 a figura inteira com os dois braços cabe no recorte central; a miniatura 160x110 (attention) mantém a figura. É o fim do treino, não o desfecho do filme. Não precisa de recorte."
+  },
+  "cartaz": {
+    "numeroNaFolha": "pt03",
+    "tmdb": "ylHXVM2hIQpCkvNln3uyhTsX5Rk.jpg",
+    "largura": 2000,
+    "altura": 3000,
+    "idioma": "pt-BR",
+    "tipo": "arte",
+    "recorte": null,
+    "motivo": "Pôster pt-BR do TMDB com o título brasileiro \"ROCKY um Lutador\" sobre a fotografia em preto e branco de Rocky com os braços erguidos na escadaria (a mesma do cartaz antecipado americano de 1976). w780 real 780x1170. Escolhido no lugar do principal pt-BR do TMDB (b9B1DXcPNsJfTtc4x2LKA3bykoJ.jpg) porque aquele mostra o abraço com Adrian e o rosto machucado, que remete ao último plano. Procedência do arquivo não confirmada (ver alertas)."
+  },
+  "direcao": {
+    "numeroNaFolha": 39,
+    "tmdb": "rmIJcoKVdVQZhGANK6vALOy1cgx.jpg",
+    "largura": 1774,
+    "altura": 998,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "Rocky de jaqueta de couro olhando para cima no ginásio vazio, na véspera da luta. Original 1774x998, w1280 real 1280x720. No corte 720x1200 com sharp attention o rosto fica inteiro e centrado (conferido na prévia a partir do w1280, o mesmo arquivo que o script usa). Outras testadas e recusadas para esse corte: 57, 55, 06, 45 e 08 (o attention cortava a pessoa ou caía no escuro)."
+  },
+  "cenas": [
+    {
+      "numeroNaFolha": 55,
+      "tmdb": "1KMIgw4OeDpsqtTu2wewLwJ40d7.jpg",
+      "largura": 3684,
+      "altura": 2072,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky de casaco de couro e chapéu diante do portão de ferro, com vagões de carga e a ponte de treliça verde ao fundo: Kensington, o bairro do começo do filme. Assunto central, rosto legível."
+    },
+    {
+      "numeroNaFolha": 13,
+      "tmdb": "lowP61AQNIU59xiVgIAXQVWdgVM.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky sozinho numa passarela de ferro ao entardecer, prédios de tijolo iluminados atrás: figura pequena na cidade, plano de ambiente."
+    },
+    {
+      "numeroNaFolha": 44,
+      "tmdb": "sQ4a6wCUUNh4RTkkGjurM577sLl.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky no apartamento escuro, de chapéu, diante do aquário das tartarugas: o quarto apertado em que ele vive."
+    },
+    {
+      "numeroNaFolha": 57,
+      "tmdb": "pUTjrDCE7BanlIY4rir3HxzXCyp.jpg",
+      "largura": 1919,
+      "altura": 1076,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky no vestiário do ginásio, de pé entre armários, extintor na parede: plano inteiro, luz quente do teto."
+    },
+    {
+      "numeroNaFolha": 50,
+      "tmdb": "45dMhg2FHRKcTFAnelu9EunRbmd.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky diante do espelho do apartamento, com a foto dele criança presa na moldura: rosto em meia-luz."
+    },
+    {
+      "numeroNaFolha": 48,
+      "tmdb": "tnirCmJDCv24iyImhLrp6MBilzr.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky de chapéu e suéter, na sala de cortinas verdes e relógio sobre o móvel: retrato frontal em interior doméstico."
+    },
+    {
+      "numeroNaFolha": 12,
+      "tmdb": "6W8JQxjz6go8YSbR2kkpFll31py.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Adrian de gorro e óculos ao lado de Rocky na pista de patinação vazia: o primeiro encontro dos dois."
+    },
+    {
+      "numeroNaFolha": 43,
+      "tmdb": "h4dbAnsFQnxWoFn9qAdQ5ywD4XO.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Apollo Creed de colete e gravata, sentado no escritório à meia-luz: o campeão fora do ringue."
+    },
+    {
+      "numeroNaFolha": 47,
+      "tmdb": "jTasSTNjEP4sq3YPW7ezv8fPAVz.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Tela de televisão mostrando a repórter de casaco de pele entrevistando Rocky no frigorífico, carcaças ao fundo. Letras no microfone são parte da cena."
+    },
+    {
+      "numeroNaFolha": 18,
+      "tmdb": "zfbKh41P8rkl55ygY5kBX0DuWGn.jpg",
+      "largura": 2667,
+      "altura": 1500,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky de agasalho cinza com os braços erguidos no alto da escadaria, a cidade na névoa e a fonte abaixo: plano aberto do treino, não do desfecho."
+    },
+    {
+      "numeroNaFolha": 34,
+      "tmdb": "5PQX41Lf5iOPogCtyc2lAMXhjAh.jpg",
+      "largura": 1786,
+      "altura": 1005,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky de costas no ginásio vazio olhando o cartaz pendurado com o próprio retrato: a véspera da luta."
+    },
+    {
+      "numeroNaFolha": 46,
+      "tmdb": "kiatmQb7MFplcQ1PiPw0uWCAoji.jpg",
+      "largura": 3680,
+      "altura": 2070,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Rocky de roupão vermelho e dourado diante de Adrian de boina vermelha, num corredor antes da luta."
+    },
+    {
+      "numeroNaFolha": 38,
+      "tmdb": "1m6G1XL6bpPE7zdIlGRvizz4cjM.jpg",
+      "largura": 1728,
+      "altura": 972,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "No ringue antes do primeiro assalto: Rocky de roupão com capuz entre os seus cornermen, Apollo de cartola e roupa de listras e estrelas à esquerda."
+    },
+    {
+      "numeroNaFolha": 7,
+      "tmdb": "r73pJKDOaCGiubkdZBnFJZUXZnn.jpg",
+      "largura": 1781,
+      "altura": 1002,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Vista do alto do ringue de lona azul com estrelas, os dois lutadores e o árbitro no meio de um assalto: a luta em andamento, sem resultado."
+    }
+  ],
+  "descartadas": [
+    {
+      "tmdb": "b9B1DXcPNsJfTtc4x2LKA3bykoJ.jpg",
+      "motivo": "Cartaz pt01: principal pt-BR do TMDB (1000x1500), arte do abraço com Adrian e rosto machucado; remete ao último plano do filme. Alternativa se o dono aceitar a arte clássica."
+    },
+    {
+      "tmdb": "wJ5rLUltZALHgM0hPUcnfrJehA7.jpg",
+      "motivo": "Cartaz pt02: mesma arte do abraço final."
+    },
+    {
+      "tmdb": "3mdz9kvRWJ98Fe46UznHFymS7ec.jpg",
+      "motivo": "Cartaz pt04: recorte da capa do DVD brasileiro de 25 anos; as letras de ROCKY encostam e são cortadas nas bordas; 960x1440."
+    },
+    {
+      "tmdb": "ukOSbWYBDmSnjPZBduMNyd2Sxjk.jpg",
+      "motivo": "Cartaz pt05: capa de DVD com selo do Oscar, lista de extras e faixa \"25 anos edição especial de aniversário\"."
+    },
+    {
+      "tmdb": "1mcJmdbRLusxhoSGjFI3pbEboXt.jpg",
+      "motivo": "Cartaz en01 (2000x3000): arte do cartaz americano de 1976 com as silhuetas de Rocky e Adrian de mãos dadas; procedência mais segura, mas o título é só o original em inglês. Reserva."
+    },
+    {
+      "tmdb": "bacOuUnRBoAO1NjMfsAGX2EKRrS.jpg",
+      "motivo": "bd01: arte, Stallone recortado em pose de guarda sobre fundo vermelho pintado; não é quadro do filme. Mesma figura em 4, 20 e 21."
+    },
+    {
+      "tmdb": "eXY0igZNSmjBxEdC6uWIWjItNG3.jpg",
+      "motivo": "bd04: arte, variante da anterior."
+    },
+    {
+      "tmdb": "n8QJ3mRbsK23sTMvgMq2KJWLfxf.jpg",
+      "motivo": "bd20: arte, variante da anterior, 1600 px."
+    },
+    {
+      "tmdb": "cysjVlMGM4pxSouAynVULjIWOW.jpg",
+      "motivo": "bd21: arte, variante da anterior."
+    },
+    {
+      "tmdb": "vXQM4RH7mYLoR6oCsXTNk2cIVUj.jpg",
+      "motivo": "bd10: montagem em preto e branco de Rocky e Apollo lado a lado; não é quadro do filme."
+    },
+    {
+      "tmdb": "zrx2QSRXuxBvGpnm6QJc9mpBJOS.jpg",
+      "motivo": "bd15: retrato de Rocky sobre bandeira americana pintada; arte promocional."
+    },
+    {
+      "tmdb": "14YmXr5ojtOFcABW3CPP5gKjgNU.jpg",
+      "motivo": "bd14: arte do abraço com Adrian, rosto machucado: remete ao último plano."
+    },
+    {
+      "tmdb": "dmf28PIYUggOqateSh6zVEig7yq.jpg",
+      "motivo": "bd58: mesma arte do abraço final."
+    },
+    {
+      "tmdb": "6LdCwOpUDWMmyQQN4K0m7AQAJQv.jpg",
+      "motivo": "bd25: close do abraço final com o rosto ferido: último plano e desfecho."
+    },
+    {
+      "tmdb": "u7CmbCfJ6yySQbd2vXSnW7Hxmki.jpg",
+      "motivo": "bd33: vista aérea com aglomeração no centro do ringue e microfone descendo: pode ser o anúncio do resultado; fora por precaução."
+    },
+    {
+      "tmdb": "w3rWaTfe7EwGWIS4NKtX7freYDL.jpg",
+      "motivo": "bd54: Rocky com o rosto ferido no corner nos assaltos finais: ferimento visível e proximidade do desfecho."
+    },
+    {
+      "tmdb": "dsVDASDAPOUiQCpczU4ClvpATSv.jpg",
+      "motivo": "bd17: punho erguido de costas sob neve, agasalho de capuz: não consegui confirmar que o plano é do filme de 1976; 1600 px."
+    },
+    {
+      "tmdb": "cGWeLk4md53U6odifT2Rn8rF8Hl.jpg",
+      "motivo": "bd19: foto posada de divulgação (calção vermelho, ao lado de caminhão), não quadro do filme; ano da foto não confirmado."
+    },
+    {
+      "tmdb": "dBrmqAvSS0t1BpiChm2nov8h4n8.jpg",
+      "motivo": "bd08: Rocky e Adrian rosto a rosto, mão enfaixada: parece foto posada e não identifiquei a cena de 1976."
+    },
+    {
+      "tmdb": "yr11jxe6imp2DrZ2rnFRE2FsaYT.jpg",
+      "motivo": "bd53: Adrian deitada sobre Rocky: cenário não identificado com segurança como o de 1976."
+    },
+    {
+      "tmdb": "kEsYIDTrKL328ToImuzPaVP1Q1I.jpg",
+      "motivo": "bd51: escura e desfocada."
+    },
+    {
+      "tmdb": "xUZ2G8MRGEljqgqLxMJItK4iHfY.jpg",
+      "motivo": "bd02: versão em preto e branco do mesmo plano da escadaria escolhido (cena 10)."
+    },
+    {
+      "tmdb": "wC36tEU7AqP5llAvjXkZhZ248tX.jpg",
+      "motivo": "bd03: mesmo plano da cena 10, menor (1600x900)."
+    },
+    {
+      "tmdb": "awcJ4bS8FeGku47bhRhePCsIemw.jpg",
+      "motivo": "bd23: escadaria de costas com braços erguidos: quase duplicata do hero."
+    },
+    {
+      "tmdb": "gN8LLUGR66vp90xkxCt1CYu77hz.jpg",
+      "motivo": "bd24: escadaria de costas com braços erguidos: quase duplicata do hero, outra correção de cor."
+    },
+    {
+      "tmdb": "kK9v1wclQxug6ZUJucD4DTaHgVF.jpg",
+      "motivo": "bd16: quase duplicata da 9 (Rocky e Apollo frente a frente)."
+    },
+    {
+      "tmdb": "4BXA58OOUbYahILpIu08tyqwnxR.jpg",
+      "motivo": "bd28: mesma cena da 46 (roupão e Adrian de boina), outra cor e menor."
+    },
+    {
+      "tmdb": "kVsaFyvYb69HU6tekiV69gYIpTT.jpg",
+      "motivo": "bd56: quase duplicata da 50 (espelho com a foto de criança)."
+    },
+    {
+      "tmdb": "rIikj6opSE8nQ9qli2Maf3yzm4a.jpg",
+      "motivo": "bd36: quase duplicata da 5 (luta sob a bandeira)."
+    },
+    {
+      "tmdb": "p1f5tBruHPwUHXNUqVNpn4pAlut.jpg",
+      "motivo": "bd42: quase duplicata da 5 (luta sob a bandeira)."
+    }
+  ],
+  "reservas": [
+    {
+      "numeroNaFolha": 5,
+      "tmdb": "nKrbDOaTiRk4BdZD5nmmYTIArAA.jpg",
+      "tamanho": "1795x1010"
+    },
+    {
+      "numeroNaFolha": 6,
+      "tmdb": "na4trij3NCasLoKAkuNnCMV8Gpb.jpg",
+      "tamanho": "1781x1002"
+    },
+    {
+      "numeroNaFolha": 9,
+      "tmdb": "yPgAHVzCF0yJGhxupwVwknOHdJj.jpg",
+      "tamanho": "1920x1080"
+    },
+    {
+      "numeroNaFolha": 11,
+      "tmdb": "df75VaJu7F7bFmtA93oJE1tBm4m.jpg",
+      "tamanho": "3680x2070"
+    },
+    {
+      "numeroNaFolha": 22,
+      "tmdb": "tGIIHNiLDBwK8fDQZ9Cb2mDOzLK.jpg",
+      "tamanho": "1920x1080"
+    },
+    {
+      "numeroNaFolha": 26,
+      "tmdb": "qrEIug9KTBYBTieSOSoyihoVjWI.jpg",
+      "tamanho": "1767x994"
+    },
+    {
+      "numeroNaFolha": 27,
+      "tmdb": "cbyS36xQ89PHJTsaZFsn98YMQ3y.jpg",
+      "tamanho": "1838x1034"
+    },
+    {
+      "numeroNaFolha": 29,
+      "tmdb": "6ICEdcGP50FN2MhXmOfzdcyhtyW.jpg",
+      "tamanho": "1772x997"
+    },
+    {
+      "numeroNaFolha": 30,
+      "tmdb": "ldyE1ULHmIRjfu2QAMrS5sf7rKS.jpg",
+      "tamanho": "1785x1004"
+    },
+    {
+      "numeroNaFolha": 31,
+      "tmdb": "1HD0VEkykxvPC7lmkKtu0UjC3eC.jpg",
+      "tamanho": "1753x986"
+    },
+    {
+      "numeroNaFolha": 32,
+      "tmdb": "5bPGMOUY4cvCZgPNofZfKsUOLB2.jpg",
+      "tamanho": "1727x971"
+    },
+    {
+      "numeroNaFolha": 35,
+      "tmdb": "fZCRKBkhUlsroqdP6AgArhDOeS4.jpg",
+      "tamanho": "1839x1034"
+    },
+    {
+      "numeroNaFolha": 37,
+      "tmdb": "ewfnnBDlfUglQXWCpoE9jCrcUlT.jpg",
+      "tamanho": "1715x965"
+    },
+    {
+      "numeroNaFolha": 40,
+      "tmdb": "qTnATBtRcEhTbsC8c5TK2j6gbwI.jpg",
+      "tamanho": "1814x1020"
+    },
+    {
+      "numeroNaFolha": 41,
+      "tmdb": "d4dVneWpYOwmkr5e2Jpn1PvSX4S.jpg",
+      "tamanho": "1756x988"
+    },
+    {
+      "numeroNaFolha": 45,
+      "tmdb": "jP72bAK60inkUnIZcctbCKGOlGj.jpg",
+      "tamanho": "3680x2070"
+    },
+    {
+      "numeroNaFolha": 52,
+      "tmdb": "m5SlRTqAuN3nuQUqDfs7fQ9BGI1.jpg",
+      "tamanho": "1793x1008"
+    }
+  ],
+  "alertas": [
+    "Cartaz: o escolhido (ylHXVM2hIQpCkvNln3uyhTsX5Rk.jpg) foi enviado ao TMDB por um usuário (luancabj); não confirmei se é arte de distribuidora ou streaming ou feita por fã. O arquivo não tem metadados de editor. A foto é do filme e o título \"ROCKY um Lutador\" está certo. Se o dono preferir procedência segura, há duas saídas: o principal pt-BR do TMDB (b9B1DXcPNsJfTtc4x2LKA3bykoJ.jpg), que mostra o abraço final, ou a arte americana de 1976 (1mcJmdbRLusxhoSGjFI3pbEboXt.jpg), só com o título em inglês.",
+    "Não achei o cartaz brasileiro original de 1977. O AdoroCinema mostra o cartaz americano.",
+    "14 cenas distintas, sem repetir hero nem direcao. A lista sem idioma do TMDB tem 58 imagens; 16 descartadas por arte, final, ferimento, dúvida de origem ou baixa qualidade, mais 9 quase duplicatas e 17 reservas aceitáveis.",
+    "Quatro cenas têm original menor que 1920 px, todas acima de 1280: 57 (1919x1076), 34 (1786x1005), 38 (1728x972) e 7 (1781x1002). A direcao (39) tem original de 1774x998 e o site usa o w1280.",
+    "Duas cenas mostram a luta final sem resultado: 38 (antes do primeiro assalto) e 7 (vista aérea, luta em andamento). Nenhuma imagem do resultado, do abraço nem do último plano.",
+    "Cena 9 (bd47): letras no microfone da repórter, texto de cena e não letreiro.",
+    "Identidade conferida no TMDB: id 1366, \"Rocky: Um Lutador (1976)\", direção John G. Avildsen, 1h 59m. A estreia no Brasil diverge por um dia: TMDB 06/01/1977, AdoroCinema 7 de janeiro de 1977. Isso não muda nada nas imagens; fica como nota para a ficha.",
+    "Não consegui provar quadro a quadro que cada still é de 1976. A atribuição vem do cenário, do figurino e dos personagens (Adrian de óculos e gorro, tartarugas, cartaz com o calção errado, Apollo de Tio Sam, lona com estrelas) e dos lotes do mesmo enviador, que trazem cenas reconhecíveis do filme. Ficaram fora as imagens que podiam ser de Rocky II ou de divulgação."
+  ],
+  "totais": {
+    "backdropsSemTexto": 58,
+    "postersPtBR": 5,
+    "postersOutros": 130
+  },
+  "folhasDeContato": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-backdrops-1.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-backdrops-2.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-posters.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-posters-en.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-cartaz-ptbr.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-cartaz-comparacao.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-duvidas.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/folha-cenas-escolhidas.jpg"
+  ],
+  "previasDeRecorte": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/previa-hero.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/previa-direcao.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/folhas/previa-final-hero-direcao-cartaz.jpg"
+  ],
+  "verificacaoTamanhos": "HEAD 200 em original e na versão usada (w1280 ou w780) para as 17 escolhidas; tamanho real lido do cabeçalho JPEG por GET parcial, igual ao da página do TMDB. Detalhe em tamanhos.txt.",
+  "fontes": {
+    "filme": "https://www.themoviedb.org/movie/1366-rocky?language=pt-BR",
+    "backdrops": "https://www.themoviedb.org/movie/1366-rocky/images/backdrops?image_language=xx",
+    "postersPt": "https://www.themoviedb.org/movie/1366-rocky/images/posters?image_language=pt",
+    "postersEn": "https://www.themoviedb.org/movie/1366-rocky/images/posters?image_language=en",
+    "postersXx": "https://www.themoviedb.org/movie/1366-rocky/images/posters?image_language=xx",
+    "cdn": "https://image.tmdb.org/t/p/{original|w1280|w780}/<arquivo>",
+    "adorocinema": "https://www.adorocinema.com/filmes/filme-28251/"
+  },
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/imagens.json"
+}

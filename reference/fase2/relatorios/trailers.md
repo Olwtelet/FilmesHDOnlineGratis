@@ -302,3 +302,14 @@ Both projects stayed read-only, no server was started or stopped, and every brow
 - [IMDb, Truth & Treason](https://www.imdb.com/title/tt21825416)
 - [Filmow, Vivarium](https://filmow.com/vivarium-t234788/)
 - YouTube oEmbed, embed and watch pages for every ID in `trailers.json`
+
+## Added 2026-11-06: four November and December sessions
+
+| slug | feature | videoId | channel | language |
+|---|---|---|---|---|
+| a-clockwork-orange-1971 | Laranja Mecânica | `T54uZPI4Z8A` | Warner Bros. Entertainment | en |
+| they-live-1988 | Eles Vivem | `vSVQ975eTBI` | Shout! Studios | en |
+| late-night-with-the-devil-2023 | Entrevista com o Demônio | `9t6hWlwyTwg` | Diamond Films Brasil | pt-BR legendado |
+| rocky-1976 | Rocky: Um Lutador | `-Hk-LYcavrw` | Amazon MGM Studios | en |
+
+Candidates, alternates, rejections and the checks made without a browser (oEmbed, `playableInEmbed`, BR in `availableCountries`, age gate, resolution) are in `sessoes-2026-11/trailers.json` and summarised in `sessoes-2026-11.md`. Real playback by click and the external YouTube link were tested on the built site with `tools/testes/trailers.mjs`; results are in `docs/FASE2.md`, section 7. No official Brazilian trailer was found for the three older films.

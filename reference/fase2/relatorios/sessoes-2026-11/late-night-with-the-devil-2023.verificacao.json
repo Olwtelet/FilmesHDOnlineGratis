@@ -1,0 +1,273 @@
+{
+  "slug": "late-night-with-the-devil-2023",
+  "fichaCorrecoes": [
+    {
+      "campo": "classificacao.detalhe (e as menções à portaria em tituloBrasil.nota, ano.nota e divergencias)",
+      "atual": "Portaria CPCIND/SENAJUS/MJSP nº 1.083, de 4 de junho de 2024",
+      "correto": "Portaria CPCIND/SENAJUS/MJSP nº 1.096, de 4 de junho de 2024 (DOU de 05/06/2024, edição 106, seção 1, página 64). A URL citada está certa, mas abre uma página do DOU que publica em bloco as portarias nº 1.083 a 1.102; o título da página é o da primeira (1.083), e o registro de \"Entrevista com o Demônio\" está sob a nº 1.096. O valor 16, o processo 08017.001591/2024-41, o pedido de 12, a recomendação para depois das 22h, os descritores (violência extrema, linguagem imprópria, drogas lícitas), a distribuidora Diamond Films do Brasil e \"Austrália, Emirados Árabes Unidos, Estados Unidos - 2023\" conferem.",
+      "fontes": [
+        "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-1.083-de-4-de-junho-de-2024-563694657"
+      ],
+      "gravidade": "erro"
+    },
+    {
+      "campo": "classificacao.outrasEncontradas (trailer) e divergencias",
+      "atual": "Trailer: 14, pela Portaria CPCIND/SENAJUS/MJSP nº 965, de 7 de maio de 2024",
+      "correto": "Trailer: 14, pela Portaria CPCIND/SENAJUS/MJSP nº 975, de 7 de maio de 2024 (DOU de 08/05/2024, edição 88, seção 1, página 69). A página do DOU leva o título da nº 965, primeira do bloco; o trailer está sob a nº 975. O resto (pedido de 10, \"Medo e Violência\", título original grafado \"Late Night Withe The Devil\", processo 08017.001486/2024-10) confere.",
+      "fontes": [
+        "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-965-de-7-de-maio-de-2024-558535488"
+      ],
+      "gravidade": "detalhe"
+    },
+    {
+      "campo": "elenco[Ingrid Torelli].personagem",
+      "atual": "Lilly D'Abo",
+      "correto": "Dúvida. TMDB, AdoroCinema (sinopse), Wikipedia pt e a ficha da DVDfever (que reproduz o IMDb) dizem \"Lilly D'Abo\". A Wikipedia en, cuja lista declara seguir a ordem e os papéis dos créditos finais, diz só \"Lilly\". No próprio filme, a narração do documentário sobre a seita diz que a menina achada nos escombros só atende pelo nome de Lilly (\"She goes only by the name of Lilly\", transcrição de legendas), e nenhuma fonte encontrada confirma o sobrenome nos créditos. Mais seguro: \"Lilly\". Se o catálogo seguir o TMDB como regra para personagens, \"Lilly D'Abo\" fica, mas com a ressalva documentada.",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast?language=pt-BR",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://www.adorocinema.com/filmes/filme-313588/",
+        "https://dvd-fever.co.uk/late-night-with-the-devil-the-dvdfever-cinema-review-david-dastmalchian/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "gravidade": "duvida"
+    },
+    {
+      "campo": "duracao.nota",
+      "atual": "Os 92 do ACMI medem a sessão de festival de 2023 (o corte do SXSW não tinha as três imagens feitas com IA, que entraram depois)",
+      "correto": "A explicação para os 92 é especulação: a Wikipedia só diz que as três imagens de IA, \"very brief interstitials\", não estavam na cópia do SXSW, sem falar em duração. A BBFC registra a cópia de cinema de 2024 com 92 min 48 s (VOD 92 min 45 s, mídia física 92 min 52 s) e arredonda para 93; a crítica da Variety no SXSW 2023 dá 92. A diferença cabe no arredondamento. O valor recomendado, 93 (TMDB, Box Office Mojo, BBFC), continua certo.",
+      "fontes": [
+        "https://www.bbfc.co.uk/release/late-night-with-the-devil-q29sbgvjdglvbjpwwc0xmde5nzqx",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235562221/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil?language=pt-BR",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/"
+      ],
+      "gravidade": "detalhe"
+    },
+    {
+      "campo": "observacoes (datas de festivais de 2023 que o TMDB registra)",
+      "atual": "SXSW 10/03, Overlook 30/03, Bucheon 01/07, Sydney 09/06, NZIFF 29/07, Melbourne 04/08, BFI London 09/10, Chicago 15/10, Adelaide 26/10, Brisbane 31/10, Stockholm 11/11, PIFFF 09/12",
+      "correto": "As datas listadas conferem com o TMDB, mas a lista está incompleta. O TMDB também registra em 2023 Fantasia (Canadá, 30/07), Sitges (07/10), Toronto After Dark (18/10), Philadelphia (21/10) e Denver (09/11). Nada disso muda o ano, que se decide pelo SXSW em 10/03/2023.",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/releases?language=pt-BR"
+      ],
+      "gravidade": "detalhe"
+    }
+  ],
+  "fichaConfirmados": [
+    "tituloBrasil \"Entrevista com o Demônio\": registro oficial (Portaria 1.096/2024 no DOU), TMDB pt-BR, AdoroCinema e Rolling Stone Brasil. Os títulos alternativos \"Tarde Da Noite Com o Demônio\" (TMDB, Brasil) e \"Conversas com o Diabo\" (Portugal, Wikipedia pt) também conferem.",
+    "tituloOriginal \"Late Night with the Devil\", tmdb 938614 e imdb tt14966898: TMDB, Wikidata (P4947 938614, P345 tt14966898) e a URL do Box Office Mojo.",
+    "ano 2023: estreia mundial no SXSW, seção Midnighters, em Austin, em 10/03/2023 (Wikipedia en, Wikidata P577 2023-03-10, TMDB lançamentos dos EUA \"South by Southwest Film Festival 10/03/2023\"; a Variety resenhou do SXSW em 21/03/2023). BBFC: \"Production year 2023\". DOU: \"2023\". É coerente com o catálogo: Obsessão tem ano 2025 (TIFF), não 2026, e Aquilo que Você Deseja tem 2023.",
+    "Lançamentos: EUA 22/03/2024 (1.034 salas, Wikipedia); Shudder/AMC+ digital 19/04/2024 (TMDB); Austrália 11/04/2024 (TMDB, Wikipedia); Irlanda 19/03/2024 e Reino Unido 22/03/2024 (Wikidata); Brasil 04/07/2024 pela Diamond Films (TMDB \"04/07/2024 (BR)\", AdoroCinema releaseDate 2024-07-04, Rolling Stone Brasil de 04/07/2024). A data prevista antes, 26/09/2024, e a antecipação para 4/7 conferem com a Rolling Stone Brasil de 21/04/2024. A Wikipedia pt (22/08/2024) se apoia numa matéria do CinePOP de 20/05/2024 e fica vencida.",
+    "direcao Cameron Cairnes & Colin Cairnes: TMDB, Box Office Mojo, DOU, BBFC, Wikipedia e os dois cartazes. A ordem varia: o cartaz de cinema traz \"written and directed by Colin Cairnes & Cameron Cairnes\" e o da Shudder, \"Cameron Cairnes and Colin Cairnes\".",
+    "duracao 93: TMDB 1h 33m, Box Office Mojo 1 hr 33 min, BBFC \"Approx. running minutes 93m\".",
+    "Roteiro de Cameron e Colin Cairnes, original: TMDB (Director, Writer), Box Office Mojo (Writer), cartazes, Wikipedia (AWGIE \"Feature Film – Original\").",
+    "Fotografia de Matthew Temple: TMDB (Director of Photography), Box Office Mojo, cartaz de cinema (\"director of photography\") e cartaz da Shudder (\"cinematographer\").",
+    "Música de Glenn Richards e Roscoe James Irwin: TMDB (os dois como Original Music Composer) e Box Office Mojo (Composer). Cartaz de cinema: \"night owls music composed & arranged by Roscoe James Irwin\" e \"original score Glenn Richards\". Cartaz da Shudder: \"Music by Roscoe James Irwin and Glenn Richards\".",
+    "Montagem de Cameron e Colin Cairnes: TMDB (Editor), Box Office Mojo, cartaz de cinema (\"editors Colin Cairnes & Cameron Cairnes\").",
+    "Produção de Mat Govoni, Adam White e John Molloy, todos produtores de fato: o cartaz de cinema traz \"produced by Mat Govoni Adam White John Molloy Roy Lee Steven Schneider & Derek Dauchy\"; TMDB e Box Office Mojo os põem como Producer. Produtores executivos, também pelo cartaz: Ben Ross, Rami Yasin, David Dastmalchian, Joel Anderson e Julie Ryan. O Wikidata (P162) inclui Dastmalchian como produtor, o que o cartaz desmente.",
+    "Elenco: David Dastmalchian como Jack Delroy, Laura Gordon como June Ross-Mitchell, Ian Bliss como Carmichael Haig e Fayssal Bazzi como Christou, no TMDB e no Box Office Mojo. Rhys Auteri como Gus McConnell no TMDB e na Wikipedia; no filme, Jack o apresenta como \"Gus McConnell\". Ingrid Torelli como Lilly: ver a dúvida sobre o sobrenome.",
+    "Personagens fora dos seis: Georgina Haig como Madeleine Piper, Josh Quong Tart como Leo Fiske, Steve Mouzakis como Szandor D'Abo, John O'May como Walker Bedford e Michael Ironside como narrador (voz), no TMDB e na Wikipedia en.",
+    "classificacao 16: confere com o registro oficial, só que da Portaria nº 1.096/2024, não da 1.083. Ver a correção.",
+    "pais Austrália, Estados Unidos e Emirados Árabes Unidos: Wikipedia en, Wikidata P495 e DOU. Rodado em Melbourne, segundo a Wikipedia en.",
+    "idiomaOriginal inglês: TMDB, Wikipedia.",
+    "generos Terror e Comédia Sombria: o TMDB dá só Terror, mas a BBFC lista Comedy, Fantasy e Horror e resume o filme como \"Darkly comic\". É uma escolha editorial com apoio.",
+    "Design de produção de Otello Stolfo (alternativa citada): Box Office Mojo e cartaz de cinema.",
+    "Grafias de June Ross-Mitchell, Madeleine Piper e Gus McConnell: TMDB. A Wikipedia pt traz \"Madeleine Delroy\"."
+  ],
+  "dossieRefutados": [
+    {
+      "id": "F05",
+      "problema": "A fala confere, mas a fonte não: a URL citada (signalhorizon.com/?p=18396) abre o \"Ending Explained\" do Signal Horizon, que ainda escreve \"Millie\". A crítica cujo título é a pergunta do prólogo tem outra URL.",
+      "correcao": "Manter o fato e trocar a fonte pela crítica \"What Did You Have to Sacrifice to Get Here Tonight?\" (24/03/2024).",
+      "fontes": [
+        "https://signalhorizon.com/movie-review-what-did-you-have-to-sacrifice-to-get-here-tonight-late-night-with-the-devil-2024/",
+        "https://signalhorizon.com/?p=18396",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ]
+    },
+    {
+      "id": "F09",
+      "problema": "Atribuição inexata: o TheaterByte dá 1.66:1 para as \"documentary parts\", não para os bastidores. Já o DVDfever põe em 1.85:1 tanto o prólogo quanto os intervalos, e só estes em preto e branco. A Variety, porém, descreve o prólogo de oito minutos como preto e branco.",
+      "correcao": "Transmissão em 4:3, colorida. Bastidores dos intervalos em preto e branco e mais largos (1.85:1 segundo o DVDfever). Trecho final em widescreen (2.35:1, DVDfever; FFHM). Atribuir os 1.66:1 do TheaterByte às partes documentais e não fixar a cor do prólogo, porque as fontes divergem.",
+      "fontes": [
+        "https://dvd-fever.co.uk/late-night-with-the-devil-the-dvdfever-cinema-review-david-dastmalchian/",
+        "https://theaterbyte.com/late-night-with-the-devil-ltd-ed-4k-a-unique-horror-experience",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235562221/",
+        "https://foundfootagehorrormovies.com/2024/10/30/late-night-with-the-devil-review-2024"
+      ]
+    },
+    {
+      "id": "F15",
+      "problema": "Fala inexata nos acertos de Christou. Ele não diz \"Edmond\": pergunta \"Who is Edward? Eddie?\", e a filha completa (\"Edmond was my little brother\"). Também não acerta um ursinho: diz a palavra \"papa\", a filha responde que o pai sempre foi \"Dad\", e é a mãe quem lembra que Edmond tinha um ursinho chamado Papa. O paletó dourado confere (podcast Oh No Ross and Carrie).",
+      "correcao": "Dizer que Christou chuta \"Edward, Eddie\" e a palavra \"papa\", e que as próprias mulheres fornecem o nome Edmond e o ursinho Papa. O lance \"dedução, não poderes psíquicos\" ganha força com isso.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ]
+    },
+    {
+      "id": "F16",
+      "problema": "Momento errado: o interrogatório não acontece no ar nem no início do 3º segmento. Ele vem no 3º intervalo, nos bastidores em preto e branco, depois que Leo conta a Jack da morte de Christou e antes do \"we're back in five\" (alguém pergunta \"Where the hell is Haig?\" logo antes da volta). Segundo o podcast, Haig desce até as duas mulheres na plateia durante o intervalo e ainda não sabe da morte de Christou.",
+      "correcao": "Haig interroga as duas mulheres fora do ar, no intervalo que antecede a entrevista com June: elas preencheram um questionário e responderam a perguntas de uma mulher no saguão, a mesma que socorreu Christou. Que o acerto foi colhido antes do programa é a implicação (Film Colossus e DMTalkies leem assim), não uma fala.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/"
+      ]
+    },
+    {
+      "id": "F19",
+      "problema": "Dois detalhes inexatos. (1) Haig não conta cinco erros \"antes do acerto\": diz que Christou errou pelo menos cinco vezes antes de chegar à \"tênue ligação Peterson\" (\"flopped no less than five times before he hit on the tenuous Peterson connection\"). (2) No ar, Jack fala em fotos (\"We've got some pictures up right here\"); só o podcast descreve um segmento em vídeo. O resto confere: o charuto tirado do ar e aceso com a mão (podcast), a IFSIP, os Warren e o \"liar, a cheat, a charlatan, and a fake... I'm honest about it\".",
+      "correcao": "Escrever \"pelo menos cinco erros antes da ligação com Peterson/Peterman\" e \"imagens\" em vez de \"vídeo\".",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ]
+    },
+    {
+      "id": "F20",
+      "problema": "Momento errado: o cheque não reaparece num intervalo. Na volta do 2º intervalo, já no ar, Jack pergunta se Haig vai manter o cheque à mão, e Haig responde que ele está no bolso do peito do paletó de Jack (\"Your breast pocket... He got you, Jack\"). A troca terá sido feita no intervalo, como supõe o podcast, mas a revelação é no ar. Os valores conferem: \"Camera 1. 100 grand\", depois \"Half a $1 million\" e \"half a million bucks\". A DMTalkies erra ao dizer 500 mil desde o início.",
+      "correcao": "Dizer que, de volta ao ar, Haig revela o cheque no bolso do paletó de Jack.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/"
+      ]
+    },
+    {
+      "id": "F22",
+      "problema": "Ordem e atribuição. A central telefônica lotada e a conversa com a Cavendish adiada ficam no mesmo intervalo (o 2º) em que Haig insinua a armação nos bastidores (F21), não no \"intervalo seguinte\". A frase \"None of which is terrible news\" não tem falante marcado na transcrição; pode ser de Jack ou de Leo. O spouting explicado por Haig no ar confere.",
+      "correcao": "Juntar a F21: no mesmo intervalo, Leo informa que a central lotou de ligações irritadas e confusas. Atribuir o \"nada disso é má notícia\" sem nomear o falante, ou omitir.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ]
+    },
+    {
+      "id": "F27",
+      "problema": "Os fatos conferem (Leo traz a notícia do hospital Sinai: hemorragia na ambulância; Jack achava que era parte do número e manda esconder, sobretudo de Gus; \"where's my sacrificial dagger?\"). Mas o próprio finalNaoRevelar do dossiê manda não dizer que Christou morre, e o fato está como spoilerDoFinal false.",
+      "correcao": "Fato confirmado. Marcar como sensível (spoiler de meio de filme) para que os textos não digam que Christou morre, como o próprio dossiê recomenda.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ]
+    },
+    {
+      "id": "F32",
+      "problema": "Três inexatidões. (1) Bipe: a primeira versão obscena da cantiga (\"...went up the hill to fuck each other's brains out\") vai ao ar sem corte; só a repetição perde o palavrão no bipe (podcast, que nota que o censor \"estava atrasado\", e lacuna na transcrição). (2) \"A luz e a eletricidade do estúdio falham\": nenhuma fonte diz isso; o podcast descreve uma descarga de energia azul visível que corre pelo teto do estúdio enquanto a cadeira levita. (3) \"June a traz de volta com uma fórmula em latim\": June recita \"Vade retro Satana...\" e depois uma imprecação que nomeia divindades mesopotâmicas (Anum e Antum, Lahmum...), e Lilly repete as palavras com ela em tom de deboche. A transcrição não deixa claro que foi a fórmula que encerrou o transe. Falta ainda o tapa de June em Lilly (podcast). A levitação (Wikipedia) e o \"we met amongst the tall trees\" conferem.",
+      "correcao": "\"...expõe o caso de Jack com June numa paródia obscena de cantiga infantil, dita sem corte e repetida com bipe; a cadeira levita e descargas de energia cruzam o teto; June recita fórmulas em latim e uma imprecação antiga, que Lilly repete com ela, até que a menina volta a si.\"",
+      "fontes": [
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ]
+    },
+    {
+      "id": "F33",
+      "problema": "Fala inexata: ao telefone, Leo não diz que \"a dupla tem tudo\". Diz \"she's great. She's got it all\", no singular, provavelmente sobre June, já que depois conta que Bedford gostou de June e quer saber quando ela volta. O pedido de desculpas no ar (\"I never should have put you in that position\") vem sem destinatário marcado na transcrição e pode ser para June ou para Lilly; só a transcrição sustenta. O resto confere: o quadro fixo, o \"I want to be a part of it\" e o \"This is sorcery\" / \"Dial up that grin\".",
+      "correcao": "\"Leo, ao telefone, diz que ela (June) tem tudo.\" Deixar o destinatário do pedido de desculpas em aberto ou omitir.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ]
+    },
+    {
+      "id": "F34",
+      "problema": "Atribuição incerta: na transcrição, o \"We're back from the fucking dead!\" vem marcado como fala de outra pessoa entre duas falas de Leo e pode ser de Jack. O resto confere: três técnicos saíram, reunião de emergência da comissão às 7h, Bedford e a chegada à Lua (America Magazine também atribui a Leo), 35 ou 40 de share, a fila das Fortune 500 para a \"ressurreição de Jack Delroy\".",
+      "correcao": "Não atribuir a Leo o \"voltamos dos mortos\", ou dizer \"comemoram\".",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651"
+      ]
+    },
+    {
+      "id": "F35",
+      "problema": "\"Num tom que remete a Madeleine\" é palpite de um só apresentador do podcast Oh No Ross and Carrie, que supõe ter ouvido uma voz de mulher; a coapresentadora diz não ter notado. Nenhuma outra fonte confirma. O resto confere: Jack diz que no fim a voz soou como a de Minnie; Leo invoca Minnie com o \"knock 'em dead\"; outros personagens usam o apelido (Spectre Collie aponta isso como incoerência).",
+      "correcao": "Tirar o \"num tom que remete a Madeleine\" ou dizer que um espectador ouviu ali a voz de Madeleine.",
+      "fontes": [
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://spectrecollie.com/2024/04/22/paved-with-some-sort-of-intention/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ]
+    },
+    {
+      "id": "F39",
+      "problema": "Os fatos conferem: replay quadro a quadro, a figura de Madeleine com a mão no ombro de Jack (podcast) e Haig falando em manipulação de videotape e \"cynical, depraved genius\". Mas o finalNaoRevelar do próprio dossiê manda não dizer quem aparece no quadro congelado, e o fato está como spoilerDoFinal false.",
+      "correcao": "Fato confirmado. Marcar como sensível: nos textos, falar de \"uma presença na fita\" sem nomear Madeleine.",
+      "fontes": [
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ]
+    },
+    {
+      "id": "F45",
+      "problema": "Atribuição sem fonte: a transcrição não diz quem fala o \"And so it is done!\" no filme da seita. A linha vem logo depois da narração sobre D'Abo, e o elenco do TMDB inclui uma \"High Priestess\" e vários discípulos. A ocorrência no prólogo e o letreiro final \"So It Is Done\" (Wikipedia) conferem.",
+      "correcao": "Dizer que a fórmula é dita no ritual do filme da seita, sem atribuí-la a D'Abo.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast?language=pt-BR"
+      ]
+    },
+    {
+      "id": "mitosAEvitar",
+      "problema": "Dois itens estão errados ou vencidos. (1) \"Classificação indicativa no Brasil: só a ficha d'A Gazeta diz 16 anos; não confirmado em fonte oficial\": falso, o 16 está no DOU (Portaria CPCIND/SENAJUS/MJSP nº 1.096, de 4/6/2024, DOU de 05/06/2024). (2) \"Brasil: 04/07/2024 x 22/08/2024, conflito não resolvido\": TMDB, AdoroCinema e Rolling Stone Brasil (matéria do próprio dia 4/7/2024) dão 04/07/2024; a data da Wikipedia pt vem de uma matéria do CinePOP de maio de 2024. Os demais mitos conferem: Mr. Wiggles na Variety; Carmichael Hunt no TheWrap e na Dread Central; Millie no Signal Horizon; \"Dreamers stay awake\" e Leo morto no themoviespoiler; Lilly com \"about eight\" e sangue no vômito na DMTalkies; o cheque de um milhão de Randi na Moria; Moloch na Dread Central.",
+      "correcao": "Trocar o item da classificação por \"16, Portaria 1.096/2024\" e dar o lançamento brasileiro como 04/07/2024 (Diamond Films).",
+      "fontes": [
+        "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-1.083-de-4-de-junho-de-2024-563694657",
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/releases?language=pt-BR",
+        "https://www.adorocinema.com/filmes/filme-313588/",
+        "https://rollingstone.com.br/cinema/entrevista-com-o-demonio-estreia-nos-cinemas-brasileiros/",
+        "https://rollingstone.com.br/cinema/quando-estreia-late-night-with-the-devil-no-brasil/",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235562221/",
+        "https://www.thewrap.com/late-night-with-the-devil-ending-explained-jack-delroy/",
+        "https://dreadcentral.com/reviews/449680/late-night-with-the-devil-will-make-you-want-to-kill-your-television-sxsw-2023-review",
+        "https://themoviespoiler.com/?p=3944",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/",
+        "https://moriareviews.com/horror/late-night-with-the-devil-2023.htm"
+      ]
+    }
+  ],
+  "dossieConfirmados": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F06",
+    "F07",
+    "F08",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14",
+    "F17",
+    "F18",
+    "F21",
+    "F23",
+    "F24",
+    "F25",
+    "F26",
+    "F28",
+    "F29",
+    "F30",
+    "F31",
+    "F36",
+    "F37",
+    "F38",
+    "F40",
+    "F41",
+    "F42",
+    "F43",
+    "F44"
+  ],
+  "classificacaoVeredito": "16 anos, confirmado em registro oficial: Portaria CPCIND/SENAJUS/MJSP nº 1.096, de 4 de junho de 2024, DOU de 05/06/2024, edição 106, seção 1, página 64 (o número certo é 1.096, não 1.083). A distribuidora Diamond Films do Brasil pediu 12. Descritores: violência extrema, linguagem imprópria e drogas lícitas. O trailer é 14, pela Portaria nº 975/2024.",
+  "anoVeredito": "2023. Estreia mundial no SXSW (Midnighters, Austin) em 10/03/2023, segundo Wikipedia en, Wikidata, TMDB e a crítica da Variety no festival. O lançamento comercial foi em 2024 (EUA 22/03, Brasil 04/07). O critério de primeira exibição pública bate com o catálogo: Obsessão tem ano 2025 (TIFF) e Aquilo que Você Deseja, 2023. O TMDB exibe 2024 só pela data primária comercial.",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/verificacao.json"
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "rocky-1976",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/verificacao.json",
+  "anoVeredito": "1976. A primeira exibição pública foi a abertura em Nova York, no Cinema II, em 21/11/1976. Confirmam AFI (New York opening: 21 Nov 1976; Los Angeles: 1 Dec 1976; release: 3 Dec 1976), Wikipedia en (premiere at Cinema II, November 21, 1976, citando Variety e o anúncio no NYT) e Box Office Mojo (Earliest Release Date Sun Nov 21, 1976). O TMDB registra a premiere em 20/11/1976, também em 1976. No Brasil o filme chegou em janeiro de 1977 (TMDB 06/01/1977, AdoroCinema e Wikipedia pt 07/01/1977), o que não muda o ano.",
+  "classificacaoVeredito": "Nenhum registro oficial encontrado. Refiz a busca no DOU (in.gov.br) e não houve resultado para \"Rocky\" + \"Avildsen\", \"Rocky, um Lutador\", \"Rocky - Um Lutador\", \"Rocky um lutador\", \"Título Original: Rocky\", \"Rocky\" + \"Ano de Produção: 1976\" nem \"Rocky\" + \"Estados Unidos - 1976\". A busca funciona: os controles \"Eu Sou Rocky\" (Portarias CGPCIND 2.131/2026 e 1.805/2026, de I Play Rocky) e \"Rocky Balboa\" (atos do MinC sobre o musical) devolveram resultados. O valor null da ficha está certo. O único indício é 12 no TMDB, cinema no Brasil em 06/01/1977, que não é registro oficial e não deve ser publicado como classificação.",
+  "fichaCorrecoes": [
+    {
+      "campo": "divergencias (primeiro nome de Jergens)",
+      "atual": "\"George\" no texto da Wikipedia en, \"Miles\" entre colchetes no AFI (...) Como as fontes não batem, recomendo só \"Jergens\"",
+      "correto": "As duas formas são ditas na tela, então não há erro de fonte. O promotor se apresenta a Rocky como \"George Jergens\", e o atendente da academia diz que veio alguém \"from Miles Jergens\" e entrega um cartão. Nos créditos da tela aparece só \"Jergens\", porque o AFI põe [Miles] entre colchetes, ou seja, fora da tela. A recomendação de usar só \"Jergens\" continua valendo, agora com esse motivo.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.filmsite.org/rock3.html",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "gravidade": "detalhe"
+    },
+    {
+      "campo": "divergencias (sobrenomes Pennino e Goldmill)",
+      "atual": "Não confirmei se os sobrenomes Pennino e Goldmill são ditos neste filme.",
+      "correto": "A transcrição de legendas não traz nenhuma ocorrência de \"Pennino\" nem de \"Goldmill\". No AFI, os dois aparecem entre colchetes, fora dos créditos da tela. Os nomes ditos na tela são Adrian, Paulie e Mickey (e Rocky Balboa e Apollo Creed), o que confirma a escolha de elenco da ficha. Também não se diz o nome \"Duke\" do treinador de Apollo: o AFI credita Tony Burton como \"Apollo's trainer\".",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "gravidade": "detalhe"
+    }
+  ],
+  "fichaConfirmados": [
+    "tituloBrasil \"Rocky: Um Lutador\": é o título do TMDB pt-BR (<title> e cabeçalho), a forma definida pelo proprietário. AdoroCinema e Wikipedia pt usam a variante \"Rocky, um Lutador\", e o lançamento no Brasil foi em janeiro de 1977.",
+    "tituloOriginal \"Rocky\": AFI, Wikipedia en e Box Office Mojo.",
+    "tmdb 1366 e imdb tt0075148: a página do TMDB 1366 é Rocky (1976). A URL do Box Office Mojo com tt0075148 abre Rocky com Avildsen, 21/11/1976. Não acessei o IMDb, que devolve 403.",
+    "ano 1976: estreia em Nova York em 21/11/1976 (AFI, Wikipedia en, Box Office Mojo), premiere em 20/11/1976 no TMDB e lançamento geral em 03/12/1976 (AFI, Wikipedia en, TMDB).",
+    "lancamentoBrasil: 06/01/1977 no TMDB e 07/01/1977 no AdoroCinema e na Wikipedia pt. A divergência está bem registrada.",
+    "direcao John G. Avildsen: AFI, Wikipedia en e pt, Box Office Mojo.",
+    "duracao 119: TMDB 1h 59m, AdoroCinema 1h 59min, Wikipedia en 119 (comentário 119:19 citando o BBFC), Wikipedia pt 119, AFI 119-121, Box Office Mojo \"2 hr\".",
+    "classificacao null: confirmado pela nova busca no DOU, com controles positivos.",
+    "Roteiro Sylvester Stallone: AFI \"Wrt\", Wikipedia en com based_on vazio, Box Office Mojo.",
+    "Fotografia James Crabe: AFI \"Dir of photog\", Wikipedia en, Box Office Mojo. Garrett Brown aparece à parte como \"Spec cam eff\" no AFI.",
+    "Música Bill Conti: AFI \"Mus\", Wikipedia en, Box Office Mojo.",
+    "Montagem Richard Halsey & Scott Conrad: AFI (\"Ed\" e \"Film ed\"), Wikipedia en e Box Office Mojo. A Wikipedia pt marca Conrad como não creditado, divergência já registrada.",
+    "Produção Robert Chartoff e Irwin Winkler: AFI \"Prod\" para os dois e production text \"A Robert Chartoff-Irwin Winkler Production\", Wikipedia en e pt, Box Office Mojo (Chartoff primeiro). Gene Kirkwood é \"Exec prod\" no AFI e ficou fora com razão.",
+    "Elenco Sylvester Stallone / Rocky Balboa: AFI \"Rocky [Balboa]\". O nome completo é dito na tela (\"Mr. Rocky Balboa\").",
+    "Elenco Talia Shire / Adrian: AFI \"Adrian [Pennino]\".",
+    "Elenco Burt Young / Paulie: AFI \"Paulie [Pennino]\".",
+    "Elenco Carl Weathers / Apollo Creed: AFI \"Apollo [Creed]\". O nome completo é dito na tela.",
+    "Elenco Burgess Meredith / Mickey: AFI \"Mickey [Goldmill]\".",
+    "Elenco Thayer David / Jergens: AFI \"[Miles] Jergens\", 6º na ordem de créditos, logo antes de Joe Spinell.",
+    "generos Drama e Esporte: AFI (gênero Drama, subgênero Boxing) e Box Office Mojo (Drama, Sport).",
+    "pais Estados Unidos e idioma Inglês: AFI (Country: United States; Language: English), Wikipedia en e pt."
+  ],
+  "dossieRefutados": [
+    {
+      "id": "f03",
+      "problema": "NÃO CONFIRMADO. O nome \"Resurrection A.C.\" do clube da abertura tem uma fonte só, a legenda de foto de The Fight City (\"Rocky defeats Spider Rico at the Resurrection Athletic Club\"). Minha busca por \"Resurrection Athletic Club\" não achou segunda fonte independente. AFI, filmsite e Shmoop não dão nome ao clube: o filmsite fala em \"dark church arena\", e o Shmoop, em \"mural of Jesus\".",
+      "correcao": "Não usar o nome do clube como fato. Descrever como um salão de luta pobre, numa arena de igreja, sob uma pintura de Cristo (f02, que está confirmado). A leitura religiosa da pista 8 se sustenta com f02 e f38, sem o nome \"Resurrection\".",
+      "fontes": [
+        "https://www.thefightcity.com/?p=47452",
+        "https://www.filmsite.org/rock.html",
+        "https://www.shmoop.com/study-guides/rocky/scene-1-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ]
+    },
+    {
+      "id": "f37",
+      "problema": "SPOILER E ATRIBUIÇÃO. f37 está marcado spoilerDoFinal: false, mas cita uma fala de dentro da luta (\"Finish this bum and let's go home\", no corner de Apollo). Isso contraria a regra do próprio dossiê em finalNaoRevelar: nada da luta depois do primeiro sino. A fala também não acontece \"no 1º assalto\": é no intervalo entre o 1º e o 2º, junto ao comentário sobre o nariz quebrado (f41, que é spoiler). A transcrição não identifica quem fala, e o filmsite atribui a Duke. O resto de f37 se confirma: o corner na abertura (\"You're fightin' like a bum\"), a espectadora, Mickey sobre Spider Rico (\"He's a bum\"), Rocky ser \"at least half a bum\", Paulie com \"scum bum\" e o monólogo da véspera.",
+      "correcao": "Tirar de f37 a ocorrência da luta, ou marcar f37 como spoilerDoFinal: true. Para manter a lista sem spoiler, dá para acrescentar duas ocorrências da transcrição antes da luta: Buddy, o motorista de Gazzo, chama Rocky de \"bum\" no carro (\"This bum gotta say that?\"), e alguém grita \"Get a job, you bum!\" na volta da pista de gelo.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock.html",
+        "https://www.filmsite.org/rock5.html"
+      ]
+    },
+    {
+      "id": "f08",
+      "problema": "PARCIAL. A frase \"You should've seen me\" se confirma: às tartarugas (\"Why weren't you there, huh? You should've seen me\"), a um conhecido a caminho da academia, a Mickey e no bar. Mickey também a usa: \"You shoulda seen me when I knocked Giny Russo outta the ring\", em 14/9/1923. A contagem \"duas vezes a Mickey\" não se sustenta. A transcrição não identifica quem fala, e a segunda ocorrência (\"Big deal. / You should've seen me, too.\") pode ser a resposta de Mickey, não Rocky repetindo.",
+      "correcao": "Dizer que Rocky repete a frase a vários interlocutores, sem número exato e sem \"duas vezes a Mickey\". Manter o eco de Mickey em 1923.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://www.filmsite.org/rock4.html"
+      ]
+    },
+    {
+      "id": "f13",
+      "problema": "PARCIAL (atribuição). O homem que chama Apollo de \"jig clown\" e diz que tem um negócio e não precisa arriscar é Andy. O AFI o credita como \"Bartender\" (Don Sherman), e o filmsite o chama de \"Andy the bartender\". \"Dono do bar\" é inferência a partir de \"I got a business going\". O resto se confirma: o anúncio da luta do Bicentenário em 1º de janeiro, na Filadélfia, os conselhos de Apollo (\"Be a doctor, be a lawyer\") e a defesa de Rocky (\"He took his best shot\").",
+      "correcao": "Chamar de \"o barman (Andy)\" ou \"o homem do balcão\", não de dono.",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.filmsite.org/rock2.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky"
+      ]
+    },
+    {
+      "id": "f31",
+      "problema": "PARCIAL (detalhe inexato). \"Uma foto com a mulher do prefeito\" não é o que está na tela. A transcrição traz \"And send the mayor's wife and make sure we get a picture of it for all the newspapers\": mandar algo à mulher do prefeito e garantir foto para os jornais. A legenda parece ter perdido uma palavra, e em nenhum momento se diz que Apollo posa com ela. O resto se confirma: a TV no frigorífico chamada por Paulie, Paulie querendo aparecer (\"I'm in charge of the meat\"), \"No, I think I invented it\", o barbeiro levado de avião, a verba de circuito fechado (300 mil, \"make it 450\") e a resposta \"I mean business, too\" ao treinador. O AFI diz que Creed ignora a transmissão.",
+      "correcao": "Trocar por \"mandar algo à mulher do prefeito com foto para os jornais\" ou só \"publicidade com foto para os jornais\". Não afirmar foto de Apollo com ela.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ]
+    },
+    {
+      "id": "f33",
+      "problema": "PARCIAL. \"Como ele mesmo diz duas vezes\" não está garantido. Confirmado: no vestiário, Rocky pergunta a Adrian se o roupão não está largo demais (\"you don't think this robe is too baggy, huh?\"). A segunda ocorrência (\"How's the robe? / It's a little baggy\") vem num diálogo sem identificação de quem fala, logo depois de alguém mostrar a acompanhante (\"Look at my date. Cost me $200\"). O filmsite atribui a reclamação do roupão largo a Paulie, na plateia. O resto se confirma: \"Shamrock Meats, Inc.\" lido pelos comentaristas, Mickey com \"I trained you to be a fighter, not a billboard\" e Rocky com \"Paulie gets three grand, I get the robe\".",
+      "correcao": "Dizer só que o roupão está largo e que Rocky pergunta a Adrian se não está largo demais, sem \"duas vezes\".",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html"
+      ]
+    },
+    {
+      "id": "f43",
+      "problema": "PARCIAL (ordem). \"Apollo protege o lado direito, onde está a costela\" não acontece no intervalo antes do 15º. É dentro do 15º assalto, dito pelo comentarista (\"Apollo clearly protecting his right side... his ribs\"), e o filmsite descreve igual. O resto se confirma: \"Cut me, Mick\", Mickey relutando (\"I don't wanna do it!\"), o AFI falando em navalha e no cut man, Duke com \"bleeding inside\" e Apollo com \"You ain't stoppin' nothin'\", Rocky com \"You stop this fight, I'll kill ya\".",
+      "correcao": "Passar a proteção do lado direito para o 15º assalto. Continua spoiler.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ]
+    },
+    {
+      "id": "f06",
+      "problema": "PARCIAL (fonte). O fato se mantém, mas uma das fontes citadas diz outra coisa. O AFI registra a canção dos cantores de esquina como \"Take Me Back\", de Frank Stallone Jr., interpretada por Valentine, e não \"Take You Back\". A forma \"Take You Back\" vem do álbum (faixa \"Take You Back (Street Corner Song from Rocky)\", vocais de Valentine) e da Wikipedia en, que também dá o tonel com fogo (\"around a trash can fire\"). O Shmoop confirma o \"burning barrel\", e o AFI, que os créditos rolam enquanto Rocky volta a pé.",
+      "correcao": "Se o nome da canção entrar no texto, usar \"Take You Back\", a forma do álbum, sem citar o AFI como fonte do título, ou não nomear a canção. O restante de f06 está confirmado.",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky:_Original_Motion_Picture_Score",
+        "https://en.wikipedia.org/wiki/Rocky",
+        "https://www.shmoop.com/study-guides/rocky/scene-2-summary.html"
+      ]
+    },
+    {
+      "id": "nomes-na-tela (f16, f31, f41, f43)",
+      "problema": "AVISO DE NOME. O treinador de Apollo é chamado de \"Duke\" em f16, f31, f41 e f43. O nome vem do filmsite e da Wikipedia (Tony \"Duke\" Evers), mas não é dito na transcrição deste filme, e o AFI credita Tony Burton como \"Apollo's trainer\". Os fatos em si se confirmam: a Wikipedia em Apollo Creed diz que Creed ignora o aviso do treinador sobre o canhoto e promete nocaute em três assaltos.",
+      "correcao": "Nos textos, escrever \"o treinador de Apollo\", não \"Duke\".",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://en.wikipedia.org/wiki/Apollo_Creed"
+      ]
+    },
+    {
+      "id": "mitosAEvitar[15] (George/Miles Jergens)",
+      "problema": "ATRIBUIÇÃO NÃO CONFIRMADA. O item diz que \"o cartão que Mickey lê diz Miles Jergens\". Na transcrição, quem fala de \"some guy here from Miles Jergens\" e entrega o cartão é alguém na academia, sem identificação. O filmsite diz só que Rocky \"is told\". O contexto sugere o atendente, e Mickey só fala depois (\"you dumb dago\"). A essência se confirma: as duas formas do nome são ditas na tela.",
+      "correcao": "Escrever \"o recado e o cartão que Rocky recebe na academia dizem Miles Jergens\", sem atribuir a Mickey.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html"
+      ]
+    }
+  ],
+  "dossieConfirmados": [
+    "f01", "f02", "f04", "f05", "f07", "f09", "f10", "f11", "f12", "f14", "f15", "f16", "f17", "f18", "f19", "f20", "f21", "f22", "f23", "f24", "f25", "f26", "f27", "f28", "f29", "f30", "f32", "f34", "f35", "f36", "f38", "f39", "f40", "f41", "f42", "f44", "f45"
+  ],
+  "notasDeConferencia": [
+    "Fontes abertas por mim nesta verificação: AFI Catalog 53862 (história, créditos, sinopse); transcrição Springfield, lida inteira; filmsite rock.html a rock5.html; Shmoop, cenas 1, 2, 7, 17, 20 e 21; The Fight City (?p=47452); Wikipedia en (Rocky, Rocky: Original Motion Picture Score, Gonna Fly Now, Steadicam, Rocky Steps, Apollo Creed), pela API; Wikipedia pt (Rocky), pela API; TMDB 1366 pt-BR e /releases; AdoroCinema filme-28251; Box Office Mojo tt0075148/credits; Slashfilm 1165877; High-Def Digest (4K, 1.85:1, mixagem mono original corrigida); buscas no DOU em in.gov.br.",
+    "Destaques confirmados: a conta do vestiário (65 dólares menos 15, menos 5, menos 7% dá 40,55; Spider leva 17,20, a partir de 40); o nariz \"never been broken in sixty-four fights\" (filmsite; a transcrição corta o 64); o cartel de 44 vitórias, 38 por nocaute e 20 derrotas; o calção branco e as 190 libras; Apollo invicto em 46 lutas e com 210 libras; Frazier pedindo a Rocky \"Don't hurt him... Go light on him\" (filmsite, Shmoop); \"Gonna Fly Now\" cantada por DeEtta Little e Nelson Pigford, com letra de Carol Connors e Ayn Robbins (AFI e álbum; a Wikipedia grafa DeEtta West), e a letra de só 30 palavras (Wikipedia); a Steadicam no treino de rua e na escadaria (Wikipedia Rocky; Rocky foi o terceiro filme com Steadicam, segundo a Wikipedia Steadicam); a luta filmada no Los Angeles Sports Arena (AFI); só três assaltos completos na tela, o 1º, o 2º e o 15º (Slashfilm); a decisão dividida difícil de ouvir (filmsite).",
+    "finalNaoRevelar está correto: Rocky perde por decisão dividida para Creed (AFI, Wikipedia en, filmsite). Segundo o AFI, a arte de divulgação mostra Rocky envolto em bandeira, \"as he appears at the end of the fight\". Uma imagem desse momento, ou do cartaz com Rocky e Adrian de mãos dadas (do final descartado, segundo a Slashfilm), entrega ou confunde o desfecho, e é preciso cuidado ao escolher os ativos."
+  ]
+}

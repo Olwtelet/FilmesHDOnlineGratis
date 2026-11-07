@@ -1,0 +1,195 @@
+{
+  "slug": "a-clockwork-orange-1971",
+  "titulo": "Laranja Mecânica",
+  "categoria": "Ficção Científica",
+  "linhasTitulo": 2,
+  "sessao": {
+    "data": "2026-11-14",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Laranja Mecânica",
+      "tituloOriginal": "A Clockwork Orange",
+      "ano": 1971,
+      "direcao": "Stanley Kubrick",
+      "duracao": 136,
+      "generos": [
+        "Ficção Científica",
+        "Crime",
+        "Distopia"
+      ],
+      "trailer": {
+        "youtube": "T54uZPI4Z8A",
+        "canal": "Warner Bros. Entertainment",
+        "idioma": "en",
+        "tituloVideo": "A Clockwork Orange | Trailer | Warner Bros. Entertainment"
+      },
+      "tmdb": 185,
+      "imdb": "tt0066921"
+    }
+  ],
+  "sinais": [
+    "ficção-científica",
+    "crime",
+    "distopia",
+    "perturbador",
+    "clássico",
+    "cult",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Antes dos médicos, o estéreo",
+    "leitura": "O capelão prega a escolha a um Alex que já vive de estímulo: um som na janela lhe sopra o golpe, e no quarto a Nona traz explosões que ele imagina. Kubrick faz o mesmo com a plateia e põe Rossini na briga. O tratamento só converte o prazer em náusea e põe outra mão no botão.",
+    "descricao": "Um delinquente fã de Beethoven sai da prisão por um tratamento que o faz enjoar da violência. Kubrick discute a escolha de quem já obedecia à música.",
+    "notasHome": [
+      {
+        "rotulo": "Fita da Nona",
+        "frase": "Alex já junta Beethoven e sangue"
+      },
+      {
+        "rotulo": "Colírio no rosto",
+        "frase": "Ele vê surras à força; nós vimos por gosto"
+      },
+      {
+        "rotulo": "Capela da prisão",
+        "frase": "Quem defende a escolha prega o inferno"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Leite do Korova",
+        "frase": "O zoom recua de Alex encarando a lente até o Korova, onde o leite com droga o deixa pronto para bater. O estímulo vem do balcão."
+      },
+      {
+        "rotulo": "A janela com o som ligado",
+        "frase": "Na marina, Alex diz que pensar é de tolo: a ideia veio de um estéreo na janela. A câmera lenta filma um reflexo, não uma escolha."
+      },
+      {
+        "rotulo": "Algo como vitamina",
+        "frase": "Alex escolhe às cegas: quer sair cedo e ouve que a injeção é algo como vitamina. Já o Ministro quer celas para presos políticos."
+      },
+      {
+        "rotulo": "A Nona nos cinejornais",
+        "frase": "A Nona do quarto agora embala tropas nazistas. Alex protesta pelo Beethoven, não pelas imagens, e ouve que a escolha foi dele."
+      },
+      {
+        "rotulo": "Grampos nas pálpebras",
+        "frase": "No Ludovico, Alex vê de olhos presos, com médicos atrás. No cassino, vimos a briga virar balé com Rossini sem ninguém nos amarrar."
+      },
+      {
+        "rotulo": "O quarto alugado",
+        "frase": "Na volta, o quarto está alugado e a câmera não se mexe. Ela andava solta na violência; casa e prisão prendem Alex em quadro fixo."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Stanley Kubrick"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Anthony Burgess"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "John Alcott"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Wendy Carlos"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Stanley Kubrick"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Alex DeLarge",
+        "nome": "Malcolm McDowell"
+      },
+      {
+        "funcao": "Frank Alexander",
+        "nome": "Patrick Magee"
+      },
+      {
+        "funcao": "Chefe da guarda",
+        "nome": "Michael Bates"
+      },
+      {
+        "funcao": "Dim",
+        "nome": "Warren Clarke"
+      },
+      {
+        "funcao": "Dr. Brodsky",
+        "nome": "Carl Duering"
+      },
+      {
+        "funcao": "Capelão da prisão",
+        "nome": "Godfrey Quigley"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "1yRzYfJkpntBZndVkZQGYdPedZI.jpg"
+    },
+    "cartaz": {
+      "tmdb": "eEPSMCXtUD3qoJvw7Jf4Gjsutw1.jpg"
+    },
+    "direcao": {
+      "tmdb": "3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "1yRzYfJkpntBZndVkZQGYdPedZI.jpg"
+      },
+      {
+        "tmdb": "3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg"
+      },
+      {
+        "tmdb": "36ELtTpBcwYc81swndrENcuFkzu.jpg"
+      },
+      {
+        "tmdb": "eczQrUbbMd9EcvIPg2B9UqiKNN7.jpg"
+      },
+      {
+        "tmdb": "xGGqvhUt4b0PwfYWwlTtaOWIej7.jpg"
+      },
+      {
+        "tmdb": "ysnVjBz5iRSRSl3xrNcQTUfa4L3.jpg"
+      },
+      {
+        "tmdb": "8Fz8yHK1onHdCmcF0zCCWhHo7zG.jpg"
+      },
+      {
+        "tmdb": "hOsLllMWQBHmGqs8tCu3BEul4w6.jpg"
+      },
+      {
+        "tmdb": "skyOmzgiSSH8pggZxkbZ5KhKPCz.jpg"
+      },
+      {
+        "tmdb": "2APYkrXV0N8nSl7tqTOSDUudE34.jpg"
+      },
+      {
+        "tmdb": "9L1iTXyptMR0OSRwJpGc3Ey8yb2.jpg"
+      },
+      {
+        "tmdb": "xSnnEst7fOrum4bocqmUkteuglO.jpg"
+      },
+      {
+        "tmdb": "1ryfCZmrac8IN4N03wheWYcCvL4.jpg"
+      },
+      {
+        "tmdb": "cC57BgeaBVHhbivLu3ZEO88rvY7.jpg"
+      }
+    ]
+  }
+}

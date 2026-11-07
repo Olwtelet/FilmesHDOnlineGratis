@@ -1,0 +1,606 @@
+{
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/trailers.json",
+  "metodo": "Sem navegador. Candidatos: busca do YouTube e busca dentro dos canais (/@canal/search), lidas do ytInitialData via fetch do Node (trailers-work/yt-search.mjs e yt-channel.mjs), mais busca na web para distribuidoras. Para cada ID (trailers-work/verify.mjs, saída em meta-<ID>.json): oEmbed (código HTTP, título, author_name); ytInitialPlayerResponse da página watch com Accept-Language pt-BR (playabilityStatus.status, playableInEmbed, trava de idade, availableCountries, lengthSeconds, publishDate, ownerChannelName, externalChannelId, maior altura em streamingData, faixas de legenda e de áudio); e a página do iframe https://www.youtube-nocookie.com/embed/<ID>?enablejsapi=1&origin=http://localhost:4321, de onde sai o embedded_player_response.previewPlayabilityStatus. Calibração da prévia do iframe: giAMydh9_4I (Bugonia, que tocou no teste do projeto) dá OK com playableInEmbed true; vLa0FX_xi08 (Vivarium UK, erro 150 na rodada anterior) dá UNPLAYABLE, \"Este conteúdo tem restrição de idade\". A chamada direta a youtubei/v1/player com o cliente WEB_EMBEDDED_PLAYER devolve erro 152-18 até para Bugonia, por falta de token, e foi descartada como sinal. Conteúdo conferido nas folhas de storyboard do próprio YouTube (i.ytimg.com/sb, trailers-work/storyboard.mjs, imagens em trailers-work/frames/) para os primários e para dois alternativos: mostram o filme certo, o idioma das legendas embutidas e os cartões de abertura e fim. Selo de verificado lido nos resultados da busca do YouTube (\"Verificado\") e, quando presente, na página do canal. Nenhum vídeo foi reproduzido: a reprodução real fica para o teste do projeto (tools/testes/trailers.mjs). O link externo de cada trailer é https://www.youtube.com/watch?v=<ID>. Fontes web: Rolling Stone Brasil (https://rollingstone.com.br/cinema/entrevista-com-o-demonio-estreia-nos-cinemas-brasileiros/ e https://rollingstone.com.br/cinema/quando-estreia-late-night-with-the-devil-no-brasil/), AdoroCinema (https://www.adorocinema.com/filmes/filme-313588/noticias/), Wikipedia API Late_Night_with_the_Devil (https://en.wikipedia.org/wiki/Late_Night_with_the_Devil), Fathom (https://www.fathomentertainment.com/news/fathom-entertainment-announce-rocky-50-in-theatres/), Blu-ray.com sobre as restaurações 4K da StudioCanal (https://m.blu-ray.com/news/newsitem.php?id=23944), IndieWire via IMDb News sobre o canal oficial de Kubrick (https://m.imdb.com/news/ni64705290, só pelo resultado de busca: IMDb devolve 403).",
+  "filmes": [
+    {
+      "slug": "a-clockwork-orange-1971",
+      "nota": "Laranja Mecânica (A Clockwork Orange), Stanley Kubrick, 1971. Não achei trailer brasileiro oficial: busca no canal Warner Bros. Pictures Brasil (@WarnerBrosPicturesBR) por \"Laranja Mecânica\" e \"Clockwork Orange\" não trouxe vídeo; os uploads em português achados são de terceiros (Estante, TrailersBR) ou do ingresso.com. Ausência na busca não prova que não exista.",
+      "primario": {
+        "youtube": "T54uZPI4Z8A",
+        "tituloVideo": "A Clockwork Orange | Trailer | Warner Bros. Entertainment",
+        "canal": "Warner Bros. Entertainment",
+        "canalId": "UCgKkNPU2Ib7_TcyAl8M2S-w",
+        "canalOficial": "Warner Bros. Entertainment (@warnerbrosentertainment), canal com selo de verificado na busca do YouTube; a Warner Bros. é a distribuidora original e dona do filme (o trailer do BFI fecha com o logo da Warner no bloco de créditos, e o canal do próprio Kubrick diz que o filme foi lançado pela Warner Bros. Pictures).",
+        "idioma": "en",
+        "playableInEmbed": true,
+        "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+        "filmeCerto": "Título do oEmbed \"A Clockwork Orange | Trailer | Warner Bros. Entertainment\"; descrição fala de Alex (Malcolm McDowell) e da terapia de aversão; storyboard mostra Alex e os drugues no Korova, o chapéu-coco, o carro e o cartão final com a capa do filme. Não é remake nem vídeo de fã.",
+        "oembed": 200,
+        "brDisponivel": true,
+        "duracaoS": 123,
+        "alturaMax": 2160,
+        "publicado": "2021-08-03",
+        "nota": "Trailer de 2021 para o lançamento em 4K UHD: abre com o cartão verde da MPA (classificação R), tem o letreiro \"FOR THE FIRST TIME ON 4K ULTRA HD\" e fecha com \"OWN IT 9/21 ON 4K ULTRA HD AND DIGITAL\". Áudio em inglês, sem legenda embutida vista no storyboard. As faixas extras de áudio parecem dublagem automática do YouTube; na rodada anterior o player escolheu o original em inglês nesses casos, mas aqui isso não foi testado. Países: contém BR (249). Faixas de áudio listadas: Alemão (DE), Espanhol (US), Francês (FR), Hindi, Indonésio, Italiano, Português (BR), Inglês (US) original. Legendas listadas: nenhuma. Link externo: https://www.youtube.com/watch?v=T54uZPI4Z8A"
+      },
+      "alternativos": [
+        {
+          "youtube": "SC-IwKQsTh0",
+          "tituloVideo": "New trailer for Stanley Kubrick's A Clockwork Orange - back in cinemas from 5 April | BFI",
+          "canal": "BFI",
+          "canalId": "UC9dGqMAPJRpA7M0oSdgtQgg",
+          "canalOficial": "BFI (@britishfilminstitute), com selo de verificado na busca; o BFI relançou o filme nos cinemas do Reino Unido em abril de 2019, e a descrição aponta para clockworkorangetickets.co.uk.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"New trailer for Stanley Kubrick's A Clockwork Orange - back in cinemas from 5 April | BFI\"; descrição cita Kubrick, Burgess, Alex e os drugues; storyboard mostra cenas do filme, os letreiros STANLEY KUBRICK'S / A CLOCKWORK ORANGE e o bloco de créditos com logo da Warner.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 91,
+          "alturaMax": 1080,
+          "publicado": "2019-02-20",
+          "nota": "Trailer novo do relançamento de 2019, 1080p, com cartão \"BACK IN CINEMAS\". Boa opção se o primário cair; o cartão de reestreia é datado. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr), en-GB. Link externo: https://www.youtube.com/watch?v=SC-IwKQsTh0"
+        },
+        {
+          "youtube": "2meAsIclTzQ",
+          "tituloVideo": "A Clockwork Orange (1972) Original Trailer",
+          "canal": "Stanley Kubrick",
+          "canalId": "UCmbG9yXGtHF3Zpzh6zwUMqQ",
+          "canalOficial": "Canal \"Stanley Kubrick\" (@StanleyKubrick), que se descreve como \"The official Stanley Kubrick YouTube channel\" e foi aberto em 9/4/2024; uma nota da IndieWire de julho de 2024 (via IMDb News) fala do \"official Stanley Kubrick YouTube channel\". Sem selo de verificado na busca e sem prova de quem administra: oficialidade não confirmada.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"A Clockwork Orange (1972) Original Trailer\"; descrição cita Alex DeLarge, Malcolm McDowell e a estreia pela Warner Bros. Pictures em 13/1/1972 (data do Reino Unido, por isso o 1972 no título). Trailer original de 60 s.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 60,
+          "alturaMax": 1080,
+          "publicado": "2025-01-01",
+          "nota": "Trailer original de época em 1080p. Só use se a oficialidade do canal for aceita. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: ru(asr). Link externo: https://www.youtube.com/watch?v=2meAsIclTzQ"
+        },
+        {
+          "youtube": "vN-1Mup0UI0",
+          "tituloVideo": "A Clockwork Orange | Masterpiece Trailer | Warner Bros. Entertainment",
+          "canal": "Warner Bros. Entertainment",
+          "canalId": "UCgKkNPU2Ib7_TcyAl8M2S-w",
+          "canalOficial": "Warner Bros. Entertainment (@warnerbrosentertainment), verificado; mesmo canal do primário.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"A Clockwork Orange | Masterpiece Trailer | Warner Bros. Entertainment\"; descrição cita Malcolm McDowell e o Blu-ray de 2011.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 130,
+          "alturaMax": 360,
+          "publicado": "2011-04-26",
+          "nota": "Só 360p: ficaria ruim num quadro grande. Países: contém BR (249). Faixas de áudio listadas: Espanhol (US), Francês (FR), Hindi, Italiano, Português (BR), Inglês (US) original. Legendas listadas: nenhuma. Link externo: https://www.youtube.com/watch?v=vN-1Mup0UI0"
+        },
+        {
+          "youtube": "brDo5yRY6-0",
+          "tituloVideo": "A Clockwork Orange: 40th Anniversary Edition - Available Now on Blu-ray",
+          "canal": "Warner Bros. Rewind",
+          "canalId": "UCsQQo8qb62ikp9kc954V7eQ",
+          "canalOficial": "Warner Bros. Rewind (@WarnerBrosRewind), verificado na busca; canal de catálogo da Warner.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"A Clockwork Orange: 40th Anniversary Edition - Available Now on Blu-ray\"; descrição cita Alex, Malcolm McDowell e Kubrick.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 130,
+          "alturaMax": 270,
+          "publicado": "2014-07-08",
+          "nota": "Só 270p e com chamada de venda do Blu-ray. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: nenhuma. Link externo: https://www.youtube.com/watch?v=brDo5yRY6-0"
+        }
+      ],
+      "rejeitados": [
+        {
+          "youtube": "eRerbaI9axY",
+          "motivo": "ingresso.com, site de venda de ingressos, não é dono dos direitos nem distribuidora; título \"Laranja Mecânica | Trailer Original\", 720p, 60 s. Toca incorporado (OK)."
+        },
+        {
+          "youtube": "SPRzm8ibDQ8",
+          "motivo": "Rotten Tomatoes Classic Trailers, agregador; título traz ano errado \"(1975)\". Toca incorporado (OK), mas há opção do estúdio."
+        },
+        {
+          "youtube": "Tys3BFPmxIg",
+          "motivo": "Warner Bros. France, oficial, mas legendado em francês (VOST) e 480p."
+        },
+        {
+          "youtube": "GdRmiitxQps",
+          "motivo": "Warner Bros. France, mesmo título do anterior (VOST, em francês). Não testado."
+        },
+        {
+          "youtube": "gTP_qxPLhBE",
+          "motivo": "Canal \"Estante\", terceiro sem ligação com Warner; legendas em português feitas por terceiro. Toca incorporado (OK)."
+        },
+        {
+          "youtube": "uEk_kgLEbzw",
+          "motivo": "TrailersBR, republicação de terceiro (\"Trailer 4K Legendado\"). Não testado."
+        },
+        {
+          "youtube": "zSHN8pNGkYg",
+          "motivo": "Classic Movie Trailers, republicação de terceiro. Não testado."
+        },
+        {
+          "youtube": "gxw8olgOr50",
+          "motivo": "The Projection Room, digitalização de cópia 35 mm por colecionador, não é canal do dono. Não testado."
+        },
+        {
+          "youtube": "Vrxo_EH_0lk",
+          "motivo": "Trailer feito por fã \"(Joker 2019 style)\"."
+        },
+        {
+          "youtube": "ko9XPaNGe9E",
+          "motivo": "\"A Reimagined Trailer\", montagem de fã."
+        },
+        {
+          "youtube": "CkX80Yjn_kg",
+          "motivo": "\"(Remake) Trailer\" falso com Evan Peters, vídeo de fã."
+        },
+        {
+          "youtube": "e56mNc6E-tk",
+          "motivo": "Comercial de TV do relançamento de 1973 postado por colecionador; não é trailer de canal oficial."
+        }
+      ]
+    },
+    {
+      "slug": "they-live-1988",
+      "nota": "Eles Vivem (They Live), John Carpenter, 1988. O filme saiu nos EUA pela Universal; o cartão final do trailer da Shout! diz \"Program Content: © 1988 Universal Studios\", e a Shout! Factory (selo Scream Factory) tem a licença de vídeo doméstico nos EUA. A StudioCanal fez a restauração 4K de 2018, mas no YouTube só publicou trailers conjuntos de quatro filmes de Carpenter. Não achei trailer brasileiro oficial: Universal Pictures Brasil e Versátil Home Vídeo (que lançou o Blu-ray no Brasil, segundo vídeos de unboxing) não têm trailer do filme no canal; os uploads \"Eles Vivem legendado\" achados são de terceiros.",
+      "primario": {
+        "youtube": "vSVQ975eTBI",
+        "tituloVideo": "They Live [Collector's Edition] (1988) Official Trailer",
+        "canal": "Shout! Studios",
+        "canalId": "UCpHaAKu74UHvcYCi2g_PvBQ",
+        "canalOficial": "Shout! Studios (@ShoutStudios), canal com selo de verificado (busca e página do canal), da Shout! Factory/Radial Entertainment; a descrição do vídeo liga ao Blu-ray e DVD da Shout! Factory, e o cartão final traz o crédito \"© 1988 Universal Studios\", que mostra a licença do dono.",
+        "idioma": "en",
+        "playableInEmbed": true,
+        "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+        "filmeCerto": "oEmbed \"They Live [Collector's Edition] (1988) Official Trailer\"; descrição \"Trailer for They Live, out 11/6/12 from Shout! Factory\"; storyboard mostra Roddy Piper com os óculos e a escopeta, Meg Foster, Keith David, rosto alienígena na TV e o letreiro \"JOHN CARPENTER'S THEY LIVE\" em neon azul. É o filme de 1988, não \"They Live in the Grey\" nem \"They Live Inside Us\".",
+        "oembed": 200,
+        "brDisponivel": true,
+        "duracaoS": 112,
+        "alturaMax": 1080,
+        "publicado": "2012-10-18",
+        "nota": "Abre com cerca de 3 s da vinheta \"Shout! Factory TV\" e fecha com uns 10 s de cartão \"Now On Blu-ray & DVD / ShoutFactory.com\". No meio, é o trailer de cinema. 1080p. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=vSVQ975eTBI"
+      },
+      "alternativos": [
+        {
+          "youtube": "wWADpP_CGoU",
+          "tituloVideo": "John Carpenter's They Live (1988) - Official Trailer",
+          "canal": "ScreamFactoryTV",
+          "canalId": "UCs7MJ_T5OH1g4TmmkoG2aVw",
+          "canalOficial": "ScreamFactoryTV (@ScreamFactoryTV), canal com selo de verificado na página do canal, do selo Scream Factory da Shout! Factory/Radial.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"John Carpenter's They Live (1988) - Official Trailer\"; descrição idêntica à do primário (Blu-ray da Shout! Factory de 6/11/2012).",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 105,
+          "alturaMax": 470,
+          "publicado": "2013-03-19",
+          "nota": "Provavelmente o mesmo vídeo do primário, mas só 470p. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=wWADpP_CGoU"
+        },
+        {
+          "youtube": "zLQ2d89vCiw",
+          "tituloVideo": "They Live (1988) ORIGINAL TRAILER [HD 1080p]",
+          "canal": "HD Retro Trailers",
+          "canalId": "UC3cs9UJtR6GXwoGcMHhSFYA",
+          "canalOficial": "HD Retro Trailers (@HDRT), verificado, mas é agregador de trailers antigos, não dono dos direitos. Só como reserva.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"They Live (1988) ORIGINAL TRAILER [HD 1080p]\"; 118 s, mesma duração do trailer de cinema (o primário tem 112 s porque troca o fim pelo cartão do Blu-ray).",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 118,
+          "alturaMax": 1080,
+          "publicado": "2018-04-05",
+          "nota": "Trailer original limpo em 1080p, sem cartão de venda. Não atende a regra de canal oficial. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=zLQ2d89vCiw"
+        }
+      ],
+      "rejeitados": [
+        {
+          "youtube": "PeB3vdxF_jM",
+          "motivo": "HD Retro Trailers, duplicata do alternativo zLQ2d89vCiw (agregador)."
+        },
+        {
+          "youtube": "9qg5LBp9BHs",
+          "motivo": "JoBlo Horror 4K, agregador. Toca incorporado (OK)."
+        },
+        {
+          "youtube": "nq09lywyulg",
+          "motivo": "JoBlo Horror 4K, \"Glasses Clip + Trailer\": mistura cena e trailer, agregador."
+        },
+        {
+          "youtube": "tu1s5UNK3zg",
+          "motivo": "StudiocanalUK, oficial, mas é trailer conjunto de quatro restaurações de Carpenter (Fuga de Nova York, A Bruma Assassina, Príncipe das Sombras e Eles Vivem), não só deste filme. Não testado."
+        },
+        {
+          "youtube": "NnbUxUo7XQo",
+          "motivo": "StudiocanalUK, mesmo trailer conjunto de quatro filmes (versão digital). Não testado."
+        },
+        {
+          "youtube": "RKP5M4fe_0M",
+          "motivo": "StudiocanalUK, cena de 40 s (\"chew bubble gum\"), não trailer."
+        },
+        {
+          "youtube": "UZTodcC3ec0",
+          "motivo": "Film&Clips, trailer italiano (\"Essi vivono\") do relançamento 4K na Itália em 2026; idioma italiano e canal sem ligação comprovada com o dono."
+        },
+        {
+          "youtube": "8mVrRCpGdQ0",
+          "motivo": "Intermission Society Trailer Park, republicação de terceiro em 2026."
+        },
+        {
+          "youtube": "1Kk4DinVSNI",
+          "motivo": "Grindhouse Movie Trailers, republicação de terceiro (teaser)."
+        },
+        {
+          "youtube": "eFhZcGjMR4I",
+          "motivo": "Allen Theatres, rede de cinemas, chamada de 20 s do 35º aniversário."
+        },
+        {
+          "youtube": "zswwwqDx6k0",
+          "motivo": "FESTIVALDORIO BR, 240p, canal sem selo e sem prova de ser do festival ou do dono."
+        },
+        {
+          "youtube": "WzyyPjG0PSQ",
+          "motivo": "Upload pessoal (leonardo tavares dardenne) com legenda de terceiro."
+        },
+        {
+          "youtube": "3HUpdTl8Ff4",
+          "motivo": "SóTrailers, republicação de terceiro com legenda."
+        },
+        {
+          "youtube": "ySdrDTAza9k",
+          "motivo": "Canal pessoal (Enigmax). Não testado."
+        },
+        {
+          "youtube": "8pYoBjwfVL8",
+          "motivo": "Trailer \"Fan-Made\" moderno."
+        },
+        {
+          "youtube": "GBZkcrwRYDE",
+          "motivo": "Outro filme: They Live in the Grey (Shudder, 2022)."
+        },
+        {
+          "youtube": "hp5e8lUUWWg",
+          "motivo": "Outro filme: They Live Inside Us (2020)."
+        },
+        {
+          "youtube": "lLlWDkegr_c",
+          "motivo": "Outro filme: They Live Inside Us (Gravitas Ventures)."
+        }
+      ]
+    },
+    {
+      "slug": "late-night-with-the-devil-2023",
+      "nota": "Entrevista com o Demônio (Late Night with the Devil), Cameron e Colin Cairnes. Wikipedia (inglês): estreia mundial no SXSW em 10/3/2023; cinemas nos EUA em 22/3/2024 pela IFC Films (com Shudder), Austrália em 11/4/2024 pela Umbrella. No Brasil, a distribuidora é a Diamond Films (Rolling Stone Brasil), com estreia antecipada para 4/7/2024; o AdoroCinema cita 6/7, divergência não resolvida aqui. O trailer brasileiro foi publicado pela Diamond em 22/5/2024. O critério de ano do catálogo fica com o líder: os trailers não mostram ano. A Wikipedia registra críticas ao uso de imagens geradas por IA que não estavam na versão do SXSW.",
+      "primario": {
+        "youtube": "9t6hWlwyTwg",
+        "tituloVideo": "ENTREVISTA COM O DEMÔNIO | Trailer Oficial Legendado",
+        "canal": "Diamond Films Brasil",
+        "canalId": "UCSTx0Mxios9SL45btnJhSsQ",
+        "canalOficial": "Diamond Films Brasil (@DiamondFilmsBrasil, UCSTx0Mxios9SL45btnJhSsQ), distribuidora do filme no Brasil segundo a Rolling Stone Brasil; é o mesmo canal usado pelo projeto para Os Oito Odiados e Manual Prático da Vingança Lucrativa. Sem selo de verificado na busca.",
+        "idioma": "pt-BR legendado",
+        "playableInEmbed": true,
+        "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+        "filmeCerto": "oEmbed \"ENTREVISTA COM O DEMÔNIO | Trailer Oficial Legendado\"; descrição cita Jack Delroy (David Dastmalchian) e o especial de Halloween de 1977; storyboard mostra legendas em português embutidas (\"Boa noite, minhas corujinhas\"), o letreiro \"NA NOITE DE HALLOWEEN DE 1977\", o título ENTREVISTA COM O DEMÔNIO e o bloco de créditos com \"LATE NIGHT WITH THE DEVIL\".",
+        "oembed": 200,
+        "brDisponivel": true,
+        "duracaoS": 145,
+        "alturaMax": 1080,
+        "publicado": "2024-05-22",
+        "nota": "Legendas em português embutidas, vistas no storyboard. Selos fixos no canto: título no alto à esquerda e \"EM BREVE SOMENTE NOS CINEMAS\" no alto à direita; cartão final \"EM BREVE SOMENTE NOS CINEMAS / VERIFIQUE A CLASSIFICAÇÃO INDICATIVA\", datado de 2024. A faixa original está marcada como \"Português (BR) original\" e há uma faixa \"Inglês (US)\", o mesmo padrão de Bugonia na rodada anterior. Países: contém BR (249). Faixas de áudio listadas: Inglês (US), Português (BR) original. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=9t6hWlwyTwg"
+      },
+      "alternativos": [
+        {
+          "youtube": "7pzCItd7FRs",
+          "tituloVideo": "ENTREVISTA COM O DEMÔNIO | Trailer Oficial Dublado",
+          "canal": "Diamond Films Brasil",
+          "canalId": "UCSTx0Mxios9SL45btnJhSsQ",
+          "canalOficial": "Diamond Films Brasil, o mesmo canal do primário.",
+          "idioma": "pt-BR dublado",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"ENTREVISTA COM O DEMÔNIO | Trailer Oficial Dublado\"; mesma descrição e duração (145 s) do legendado.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 145,
+          "alturaMax": 1080,
+          "publicado": "2024-05-22",
+          "nota": "Versão dublada do mesmo trailer. Países: contém BR (249). Faixas de áudio listadas: Inglês (US), Português (BR) original. Legendas listadas: en-US(asr), pt(asr). Link externo: https://www.youtube.com/watch?v=7pzCItd7FRs"
+        },
+        {
+          "youtube": "cvt-mauboTc",
+          "tituloVideo": "Late Night With the Devil - Official Trailer | HD | IFC Films",
+          "canal": "Independent Film Company",
+          "canalId": "UCOn923UnbV8H9zo_lO6ZCRw",
+          "canalOficial": "Independent Film Company (@IndependentFilmCompany), verificado na busca; canal da IFC Films, distribuidora nos EUA.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Late Night With the Devil - Official Trailer | HD | IFC Films\"; descrição dá elenco (Dastmalchian, Laura Gordon, Ian Bliss) e direção (Cameron Cairnes, Colin Cairnes).",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 155,
+          "alturaMax": 1080,
+          "publicado": "2024-03-06",
+          "nota": "Trailer principal em inglês, 1080p, 155 s. Melhor reserva em inglês. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=cvt-mauboTc"
+        },
+        {
+          "youtube": "YeKYfneOH3o",
+          "tituloVideo": "Late Night with the Devil: Official Trailer | Shudder",
+          "canal": "Shudder",
+          "canalId": "UCcCCIrXmIJOYamxWqeJzI2Q",
+          "canalOficial": "Shudder (@shudder), verificado na busca; coadquirente dos direitos para América do Norte, Reino Unido e Irlanda.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Late Night with the Devil: Official Trailer | Shudder\"; descrição dá elenco e direção e a estreia de 22/3 nos cinemas.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 155,
+          "alturaMax": 1080,
+          "publicado": "2024-03-06",
+          "nota": "Mesma duração do trailer da IFC (155 s); provavelmente o mesmo corte. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=YeKYfneOH3o"
+        },
+        {
+          "youtube": "PcuPANZgv4Q",
+          "tituloVideo": "Late Night With The Devil | Official Trailer",
+          "canal": "Umbrella Entertainment",
+          "canalId": "UCadhU_V17tZia6mvQSYn-tg",
+          "canalOficial": "Umbrella Entertainment (@UmbrellaEntertainment), verificado na busca; distribuidora na Austrália, país de produção.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Late Night With The Devil | Official Trailer\"; descrição cita Dastmalchian e \"In cinemas April 11\".",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 134,
+          "alturaMax": 1080,
+          "publicado": "2024-03-11",
+          "nota": "Corte australiano, 134 s. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=PcuPANZgv4Q"
+        },
+        {
+          "youtube": "TiwvEtimLzQ",
+          "tituloVideo": "Late Night With the Devil - Teaser Trailer | HD | IFC Films",
+          "canal": "Independent Film Company",
+          "canalId": "UCOn923UnbV8H9zo_lO6ZCRw",
+          "canalOficial": "Independent Film Company (IFC Films), verificado.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Late Night With the Devil - Teaser Trailer | HD | IFC Films\".",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 82,
+          "alturaMax": 1080,
+          "publicado": "2024-02-08",
+          "nota": "Teaser de 82 s. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=TiwvEtimLzQ"
+        },
+        {
+          "youtube": "aZ55IhA7arU",
+          "tituloVideo": "Late Night with the Devil 4K UHD & Blu-ray Trailer",
+          "canal": "Second Sight Films",
+          "canalId": "UCeA5rqGSkaCJhbQDLdoGy4Q",
+          "canalOficial": "Second Sight Films (@secondsightfilmsUK), selo britânico de vídeo doméstico; sem selo de verificado na busca.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Late Night with the Devil 4K UHD & Blu-ray Trailer\".",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 64,
+          "alturaMax": 1080,
+          "publicado": "2024-10-28",
+          "nota": "Trailer de venda do disco no Reino Unido, 64 s. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=aZ55IhA7arU"
+        }
+      ],
+      "rejeitados": [
+        {
+          "youtube": "-VVozZG2Sqg",
+          "motivo": "ingresso.com, site de ingressos: republica o trailer legendado da Diamond (mesmos 145 s), sem ser distribuidora."
+        },
+        {
+          "youtube": "R9Pv_3pH64I",
+          "motivo": "ingresso.com, republicação do dublado da Diamond."
+        },
+        {
+          "youtube": "JITy3yQ0erg",
+          "motivo": "Space Trailers, republicação de terceiro (157 s)."
+        },
+        {
+          "youtube": "sOHRVM8cIXk",
+          "motivo": "PortalTrailers, republicação de terceiro (dublado). Não testado."
+        },
+        {
+          "youtube": "LMngW-afF3c",
+          "motivo": "Top NERD, republicação de terceiro. Não testado."
+        },
+        {
+          "youtube": "z2aB4KPTlS0",
+          "motivo": "Tudo Terror, título de terceiro (\"Tarde da noite com o diabo\"), não oficial. Não testado."
+        },
+        {
+          "youtube": "Frvyaj1wtNA",
+          "motivo": "IGN Movie Trailers, imprensa. Toca incorporado (OK)."
+        },
+        {
+          "youtube": "zrk7HKDeZR8",
+          "motivo": "Rotten Tomatoes Trailers, agregador. Toca incorporado (OK)."
+        },
+        {
+          "youtube": "1KDeUHywTXQ",
+          "motivo": "Lionsgate Play (Índia), oficial, mas dublado em hindi."
+        },
+        {
+          "youtube": "dR3CPUjQgBc",
+          "motivo": "HotCorn (Itália), imprensa, em italiano."
+        },
+        {
+          "youtube": "CQx3BPT0iqI",
+          "motivo": "Cena do filme em canal de terceiro, não trailer."
+        },
+        {
+          "youtube": "9QIpRBKi3cs",
+          "motivo": "Promo de TV de fã (\"Halloween 1977\")."
+        },
+        {
+          "youtube": "KldHfULwnO4",
+          "motivo": "Outro filme (\"A Caixa do Demônio\", 2026)."
+        }
+      ]
+    },
+    {
+      "slug": "rocky-1976",
+      "nota": "Rocky: Um Lutador (Rocky), John G. Avildsen, 1976. O dono é a Amazon MGM Studios; o cartão final do trailer diz \"Copyright United Artists Corp. MCMLXXVI\". Em 2026 há o relançamento \"Rocky 50\" em 4K, que a Fathom descreve como sendo \"from Amazon MGM Studios, Park Circus, and Fathom Entertainment\": EUA de 7 a 11/11, Reino Unido e outros países a partir de 6/11, segundo a descrição do trailer da Park Circus. Não achei data brasileira do relançamento nem trailer brasileiro oficial do filme de 1976. Os uploads \"Rocky: Um Lutador legendado\" são do canal de fã Repassando Oficial, e os resultados em português dos canais Prime Video Brasil e Sony Pictures Brasil são os longas à venda, não trailers. Cuidado: \"Eu Sou Rocky\" (I Play Rocky, 2026) é outro filme e domina a busca.",
+      "primario": {
+        "youtube": "-Hk-LYcavrw",
+        "tituloVideo": "ROCKY (1976) | Official Trailer | MGM",
+        "canal": "Amazon MGM Studios",
+        "canalId": "UCf5CjDJvsFvtVIhkfmKAwAA",
+        "canalOficial": "Amazon MGM Studios (@AmazonMGMStudios, UCf5CjDJvsFvtVIhkfmKAwAA), verificado na busca; a descrição do canal diz \"The official YouTube channel for Amazon MGM Studios\". O estúdio é dono do catálogo da United Artists.",
+        "idioma": "en",
+        "playableInEmbed": true,
+        "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+        "filmeCerto": "oEmbed \"ROCKY (1976) | Official Trailer | MGM\"; descrição dá \"Directed By: John G. Avildsen\", roteiro de Sylvester Stallone e elenco (Stallone, Talia Shire, Burt Young); o storyboard abre com o leão da MGM e \"Classic Trailer - Rocky (1976)\", mostra a corrida por Filadélfia e fecha com o cartão \"A John G. Avildsen Film... Copyright United Artists Corp. MCMLXXVI\". Não é Rocky Balboa (2006) nem I Play Rocky (2026).",
+        "oembed": 200,
+        "brDisponivel": true,
+        "duracaoS": 219,
+        "alturaMax": 1080,
+        "publicado": "2022-04-13",
+        "nota": "Trailer de cinema longo, 1080p, 219 s. Os últimos ~15 s são a tela final \"SUBSCRIBE / MORE FROM MGM STUDIOS\" com dois quadros vazios onde o YouTube põe sugestões; no player incorporado podem aparecer só os quadros cinza. A descrição traz \"Rated: PG\" (classificação americana, não a brasileira). Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=-Hk-LYcavrw"
+      },
+      "alternativos": [
+        {
+          "youtube": "dmd9tEt9F30",
+          "tituloVideo": "Rocky: 50th Anniversary | Official 4K Trailer | Park Circus",
+          "canal": "Park Circus",
+          "canalId": "UCBgYZngXEswPgKht9CQhWvg",
+          "canalOficial": "Park Circus (@ParkCircusFilms), distribuidora de clássicos que, segundo a Fathom, é parceira da Amazon MGM no relançamento Rocky 50; é o mesmo canal do primário de De Olhos Bem Fechados. Sem selo de verificado.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Rocky: 50th Anniversary | Official 4K Trailer | Park Circus\"; storyboard mostra a luta com Apollo, o beijo com Adrian, os braços erguidos na escadaria e os cartões \"SYLVESTER STALLONE / ROCKY / 50TH ANNIVERSARY\" e \"In Cinemas November\".",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 64,
+          "alturaMax": 2160,
+          "publicado": "2026-09-30",
+          "nota": "Trailer do relançamento em 2160p, 64 s. Bonito, mas curto e com o cartão \"In Cinemas November\", datado de 2026 e sem data brasileira. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=dmd9tEt9F30"
+        },
+        {
+          "youtube": "ldEl6JuU9H8",
+          "tituloVideo": "Rocky (1976) classic teaser trailer",
+          "canal": "Park Circus",
+          "canalId": "UCBgYZngXEswPgKht9CQhWvg",
+          "canalOficial": "Park Circus, o mesmo canal; a descrição liga às sessões de 40 anos no site da Park Circus.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Rocky (1976) classic teaser trailer\"; descrição sobre os 40 anos do filme em 2016.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 97,
+          "alturaMax": 1080,
+          "publicado": "2016-04-25",
+          "nota": "Teaser clássico, 1080p, 97 s. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: en(asr). Link externo: https://www.youtube.com/watch?v=ldEl6JuU9H8"
+        },
+        {
+          "youtube": "pzm9ui_A_2o",
+          "tituloVideo": "Rocky 50th Anniversary | Nobember 7-11",
+          "canal": "Fathom Entertainment",
+          "canalId": "UCSAexy0-lgubAz-JpyGKGSA",
+          "canalOficial": "Fathom Entertainment (@fathom_entertainment), distribuidora do evento Rocky 50 nos EUA (nota da própria Fathom). Sem selo de verificado na busca.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Rocky 50th Anniversary | Nobember 7-11\" (erro de digitação no título original); descrição sobre Rocky Balboa e Apollo Creed e a prévia de I Play Rocky.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 40,
+          "alturaMax": 2076,
+          "publicado": "2026-09-30",
+          "nota": "Chamada de 40 s com datas americanas; o formato largo (1280x692) deixa faixas pretas no 16:9. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: nenhuma. Link externo: https://www.youtube.com/watch?v=pzm9ui_A_2o"
+        },
+        {
+          "youtube": "Wif1EzGQ9Fk",
+          "tituloVideo": "Rocky - Trailer",
+          "canal": "mgmvod",
+          "canalId": "UCqqTQy4ZyJNnqpevVfTTXzw",
+          "canalOficial": "Não confirmado: canal \"mgmvod\", sem selo e sem prova de ser da MGM. Só como reserva de último caso.",
+          "idioma": "en",
+          "playableInEmbed": true,
+          "status": "watch OK; prévia do iframe youtube-nocookie OK; sem trava de idade: true",
+          "filmeCerto": "oEmbed \"Rocky - Trailer\"; descrição narra a premissa (Apollo Creed, Filadélfia); 215 s, mesma duração do trailer longo do primário.",
+          "oembed": 200,
+          "brDisponivel": true,
+          "duracaoS": 215,
+          "alturaMax": 480,
+          "publicado": "2012-04-13",
+          "nota": "Só 480p. Países: contém BR (249). Faixas de áudio listadas: nenhuma extra. Legendas listadas: nenhuma. Link externo: https://www.youtube.com/watch?v=Wif1EzGQ9Fk"
+        }
+      ],
+      "rejeitados": [
+        {
+          "youtube": "3VUblDwa648",
+          "motivo": "Rotten Tomatoes Classic Trailers, agregador (1080p, 100 s). Toca incorporado (OK), mas há opção do estúdio."
+        },
+        {
+          "youtube": "I2zFQmHWVCI",
+          "motivo": "Rotten Tomatoes Classic Trailers, agregador, 354p."
+        },
+        {
+          "youtube": "hiJqecW8Tkw",
+          "motivo": "HD Retro Trailers, agregador (2160p, 216 s). Toca incorporado (OK)."
+        },
+        {
+          "youtube": "ZLuJxyUT2xg",
+          "motivo": "Fandango, site de ingressos, republica o trailer de 50 anos (76 s), com datas americanas."
+        },
+        {
+          "youtube": "hTaRiTF9WdU",
+          "motivo": "D'Place Entertainment, exibidor/vendedor de ingressos, mesmo trailer de 50 anos."
+        },
+        {
+          "youtube": "gIgq5YosOBM",
+          "motivo": "PLAION PICTURES Italia, oficial para a Itália, mas em italiano e com datas italianas (7 a 15/12)."
+        },
+        {
+          "youtube": "E9pJa7GIR1Y",
+          "motivo": "Repassando Oficial, canal de fã com legenda própria, não distribuidora."
+        },
+        {
+          "youtube": "vuq7q7QPp-s",
+          "motivo": "Repassando Oficial, teaser com legenda de fã."
+        },
+        {
+          "youtube": "WJozbyAyHOg",
+          "motivo": "Canal de terceiro que republica trailers em 4K. Não testado."
+        },
+        {
+          "youtube": "YtqgX7YlwLM",
+          "motivo": "\"Modern Trailer\" de fã."
+        },
+        {
+          "youtube": "29zOneUlSSQ",
+          "motivo": "\"ROCKY REMASTERED\" em canal de terceiro (MacPhoenix). Não testado."
+        },
+        {
+          "youtube": "V_g_Ut0jO-0",
+          "motivo": "Outro filme: I Play Rocky (Eu Sou Rocky, 2026)."
+        },
+        {
+          "youtube": "8tab8fK2_3w",
+          "motivo": "Sequência: Rocky Balboa (2006)."
+        },
+        {
+          "youtube": "SKblDG2YPJU",
+          "motivo": "Amazon MGM, \"50 Years Of Rocky & Creed\": vídeo comemorativo da franquia, não trailer do filme de 1976."
+        }
+      ]
+    }
+  ]
+}

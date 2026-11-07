@@ -1,0 +1,388 @@
+{
+  "slug": "they-live-1988",
+  "tmdbId": 8337,
+  "hero": {
+    "tmdb": "p1FVoXYSSaDXRsSuvYgFN0byRLn.jpg",
+    "largura": 3383,
+    "altura": 1903,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": {
+      "x": 0,
+      "y": 0,
+      "largura": 0.9,
+      "altura": 1
+    },
+    "motivo": "b39. Nada (Roddy Piper) numa banca de revistas, com os óculos escuros na mão e olhar espantado: o instante de ver, centro do filme. Quadro em cor, sem letreiro (capas de revista ao fundo são texto diegético). Recorte proposto {x 0, y 0, largura 0,9, altura 1} dá 3045x1903 (16:10 exato, acima de 1920): no desktop 1440x900 mostra a cena inteira menos a faixa de revistas da borda direita; no celular 390x844 o rosto fica inteiro e centrado (sem o recorte, o corte de celular passa rente ao cabelo e à face, no lado esquerdo). Miniatura 160x110 attention conferida: pega Nada."
+  },
+  "cartaz": {
+    "tmdb": "eaItFukc7nG2NGz3ZzpTrKSrhgw.jpg",
+    "largura": 2000,
+    "altura": 3000,
+    "idioma": "pt-BR",
+    "tipo": "arte",
+    "recorte": null,
+    "motivo": "Pôster pt-BR, o principal do TMDB em português (é o que a página https://www.themoviedb.org/movie/8337-they-live?language=pt-BR usa). Título escrito: \"ELES VIVEM\", o título brasileiro que o TMDB dá ao filme 8337 (\"Eles Vivem (1988)\"). Arte do olho com óculos escuros refletindo um alienígena, a mesma do pôster principal em inglês (ngnybFTuopfbfmmEeX9jjBQQmF6.jpg, \"THEY LIVE\"), com letreiro em português. Sem outro texto visível. w780 conferido (HTTP 200, 109.578 bytes)."
+  },
+  "direcao": {
+    "tmdb": "dR1MzJh6Bkvne1YeCK6RXITQSG4.jpg",
+    "largura": 3380,
+    "altura": 1901,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "b37. Close em preto e branco de um alienígena de terno, como os óculos mostram (pela sinopse da Wikipedia, os óculos deixam o mundo monocromático e revelam as criaturas sob a aparência humana). Rosto no centro e alto, fundo desfocado: o corte 720x1200 attention a partir de w1280 mantém a cabeça inteira e a gravata (prévia gerada com os mesmos parâmetros de tools/imagens-sessoes.mjs). Sem letreiro."
+  },
+  "cenas": [
+    {
+      "tmdb": "p1FVoXYSSaDXRsSuvYgFN0byRLn.jpg",
+      "largura": 3383,
+      "altura": 1903,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Cena 01 = hero (convenção das 21 sessões: cenas[0] é o hero; na galeria vai sem recorte). b39, Nada com os óculos na mão na banca. Cor."
+    },
+    {
+      "tmdb": "dR1MzJh6Bkvne1YeCK6RXITQSG4.jpg",
+      "largura": 3380,
+      "altura": 1901,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Cena 02 = direcao (convenção: cenas[1] é a imagem de direção). b37, close do alienígena em P&B."
+    },
+    {
+      "tmdb": "mq37KmVnHaB6MpAx1uiKBrVDrxG.jpg",
+      "largura": 1920,
+      "altura": 1080,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b12. Nada de mochila diante do quadro \"JOB OPPORTUNITIES\" (texto diegético): o recém-chegado atrás de trabalho, começo do filme. Rosto no centro, sobrevive ao quadrado. Cor."
+    },
+    {
+      "tmdb": "403tFBTwzZgmQ5fhnvWenk7v5JD.jpg",
+      "largura": 3374,
+      "altura": 1898,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b38. Calçada em P&B vista pelos óculos: alienígena de terno com uma revista, um homem ao lado, prateleira com \"CONFORM\", \"NO THOUGHT\", \"SLEEP\" (texto diegético). O duplo mundo numa rua comum."
+    },
+    {
+      "tmdb": "vujsgVoENaQTkEd63fs58zkOtuj.jpg",
+      "largura": 1920,
+      "altura": 1080,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b22. Prédios do centro de Los Angeles ao entardecer vistos de um terreno com sucata. Quadro de ambientação, sem pessoas; dá respiro à galeria. A quase duplicata b28 (jlNfMazDWVjeJrY2t0KxvyCWFhd.jpg) ficou de fora. Cor."
+    },
+    {
+      "tmdb": "tosqKZAgt0gKnDs8MYw1ylnF4B6.jpg",
+      "largura": 1458,
+      "altura": 820,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b48. Outdoor com \"OBEY\" em P&B, a mensagem escondida que os óculos revelam (texto diegético, não é o título). Placa no centro, cabe no quadrado. Abaixo de 1920, acima do mínimo de 1280 para cena."
+    },
+    {
+      "tmdb": "8DLKQUtcRrtY2ic6qJz4t48fEEx.jpg",
+      "largura": 1920,
+      "altura": 1080,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b23. Televisor com chuvisco diante de uma parede de zinco, no escuro. A TV como fonte do sinal, sem mostrar a virada. Cor (escura)."
+    },
+    {
+      "tmdb": "uiCFVKODe4XrudYskTFGq84nwEi.jpg",
+      "largura": 3392,
+      "altura": 1908,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b36. Em P&B, três alienígenas num mercado encarando a câmera, um deles falando no relógio de pulso (a sinopse da Wikipedia cita os alienígenas do supermercado que percebem que Nada os vê, e os relógios comunicadores). Grupo no centro."
+    },
+    {
+      "tmdb": "oG59aOUAUEY6KgekeYo456owHJf.jpg",
+      "largura": 1920,
+      "altura": 1080,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b29. À noite, máquinas de faróis acesos avançando e gente correndo entre barracos: compatível com a batida policial que destrói o acampamento (sinopse da Wikipedia); a cena exata não foi conferida em vídeo. Sem sangue visível. Cor."
+    },
+    {
+      "tmdb": "oqtQviANDl4QoZ9QWcjIFTNyLe2.jpg",
+      "largura": 1454,
+      "altura": 818,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b51. Mão segurando notas de dinheiro com \"THIS IS YOUR GOD\" em P&B (texto diegético). Objeto simples, legível no quadrado. Acima de 1280."
+    },
+    {
+      "tmdb": "yiFprZWsQpET3TEREOte0RT1qHI.jpg",
+      "largura": 1454,
+      "altura": 818,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b54. Nada de óculos escuros e espingarda na entrada de um banco, visto entre duas cabeças desfocadas (a sinopse da Wikipedia situa a ida ao banco no meio do filme). Arma baixa, sem disparo nem sangue. Cor. Acima de 1280."
+    },
+    {
+      "tmdb": "gaFyOS8Pui8XuOBmNXLsxyjo93l.jpg",
+      "largura": 1454,
+      "altura": 818,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b52. Televisor em P&B mostrando um alienígena de terno num púlpito diante de \"OBEY\" (texto diegético). Versão vista pelos óculos; a versão colorida b10 ficou de fora. Acima de 1280."
+    },
+    {
+      "tmdb": "iTjpbh5lxBZcQbLEY434enFsTIW.jpg",
+      "largura": 1458,
+      "altura": 820,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b57. Frank (Keith David) num beco, apontando, ao lado de caçambas: a única cena da galeria centrada nele. Cor. Acima de 1280."
+    },
+    {
+      "tmdb": "7cbTXykFZd417ZV08kdm7oqopSj.jpg",
+      "largura": 3374,
+      "altura": 1898,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "b41. A briga no beco: Nada segura Frank, que já está de óculos escuros. Cor. Ver alerta: fio de sangue no lábio de Nada (marca de briga, sem ferida aberta); a briga fica no meio do filme, não no fim."
+    }
+  ],
+  "descartadas": [
+    {
+      "tmdb": "AjmvMmMxMzNZfTblBnUmD8S4JYy.jpg",
+      "motivo": "b32, 3840x2160. Alienígena em cor num bar, com clientes espantados olhando para ele. Alienígena em cor visto por gente comum só acontece depois que o sinal cai (fim do filme; \"humans discover the aliens among them\" na sinopse da Wikipedia). Revela o desfecho."
+    },
+    {
+      "tmdb": "heV82ASGEoAvhF3SWEUvzHh6k66.jpg",
+      "motivo": "b13, 1452x816. Mesma cena do bar do fim (quase duplicata de b32). Revela o desfecho."
+    },
+    {
+      "tmdb": "vnp2tCy5rWlX59TzRZk67B0MZ3H.jpg",
+      "motivo": "b42, 3353x1886. Mesma cena do bar do fim (quase duplicata de b32). Revela o desfecho."
+    },
+    {
+      "tmdb": "sEeBP3ap9dvsKsHRcuSYQMXd0vi.jpg",
+      "motivo": "b10, 2048x1150. Alienígena colorido em púlpito diante de \"OBEY\": parece foto de divulgação encenada (no filme, o político aparece em P&B pelos óculos, b52), e alienígena em cor aponta para o fim. Mantida b52."
+    },
+    {
+      "tmdb": "ixTS9y7LlkoIRgmVJHkLhRhS5Jh.jpg",
+      "motivo": "b20, 2048x1150. Frank (de colete) e Nada com fuzis num corredor com porta \"OFFICE\": infiltração final na base/emissora. Sequência final."
+    },
+    {
+      "tmdb": "traonOkt0SJ2Q8QpQKB201j6o1d.jpg",
+      "motivo": "b25, 1920x1080. Monitor \"PLEASE STAND BY\" com o logotipo 54 numa redação: a emissora Cable 54, onde o filme termina. Sequência final."
+    },
+    {
+      "tmdb": "2YCcEy3eKROMDalKzqMmr5fubxM.jpg",
+      "motivo": "b30, 1920x1080. Redação cheia de monitores, provavelmente a Cable 54 do fim. Evitada por segurança."
+    },
+    {
+      "tmdb": "8gwllb1oESNZ3uzlYUDUgbrqF03.jpg",
+      "motivo": "b24, 1920x1080. Clarão de explosão desfocado: ilegível e possivelmente a destruição do transmissor no fim."
+    },
+    {
+      "tmdb": "mbVScMJBJZX0puyWJc8TIhMWX6A.jpg",
+      "motivo": "b34, 1920x1080. Nada atirando à queima-roupa num policial num beco. Sem sangue visível, mas é tiro contra uma pessoa em primeiro plano; evitado."
+    },
+    {
+      "tmdb": "bwyLycDaQdS3rS4crpbYssYLJRy.jpg",
+      "motivo": "b01, 3840x2160. Arte do olho com óculos (a arte do pôster), não é still; o cartaz já usa essa arte."
+    },
+    {
+      "tmdb": "fJK2dK6ZtFX3KmmZ6teDGQabu4w.jpg",
+      "motivo": "b03, 3840x2160. Variante da arte do olho com óculos. Arte, duplicata."
+    },
+    {
+      "tmdb": "7GbGvD1KGvHrMzoIxyCnxCIZFSi.jpg",
+      "motivo": "b08, 1920x1080. Variante da arte do olho com óculos. Arte, duplicata."
+    },
+    {
+      "tmdb": "5DpVDZeM4x2s33IAJSBywuMDJ5m.jpg",
+      "motivo": "b11, 3840x2160. Variante da arte do olho com óculos. Arte, duplicata."
+    },
+    {
+      "tmdb": "rVz6V1SdOpmMKI7Q9im9lrUngyt.jpg",
+      "motivo": "b17, 1920x1080. Variante da arte do olho com óculos. Arte, duplicata."
+    },
+    {
+      "tmdb": "ybQY0GgRrSx8hvH97MxOydQlfp1.jpg",
+      "motivo": "b05, 3840x2160. Ilustração estilizada de Nada e Frank armados entre prédios: arte de fã."
+    },
+    {
+      "tmdb": "obJWp8ue3bD1Y8Nwpk7XiND4Kmx.jpg",
+      "motivo": "b07, 1920x1080. Variante da ilustração de b05: arte de fã."
+    },
+    {
+      "tmdb": "9A88UHYxHzDMCmdrVm1NJVBAaY5.jpg",
+      "motivo": "b06, 1920x1080. Ilustração de alienígena batendo continência diante da bandeira dos EUA: arte de fã."
+    },
+    {
+      "tmdb": "1LId2EdDPRfxGjdJxjCYB2QjxLx.jpg",
+      "motivo": "b14, 1280x720. Mesma ilustração de b06: arte de fã, duplicata."
+    },
+    {
+      "tmdb": "ydE7dTQfbeljbmf2kgsfwQShp5n.jpg",
+      "motivo": "b47, 1920x1080. Mesma ilustração de b06: arte de fã, duplicata."
+    },
+    {
+      "tmdb": "1lFVnKteGgFtACWavgiAapk6aeb.jpg",
+      "motivo": "b09, 1920x1080. Arte de óculos e mão sobre fundo preto: arte, não still."
+    },
+    {
+      "tmdb": "kTkyWJIH5BJ93PMMhR7kEdHhYet.jpg",
+      "motivo": "b18, 1920x1080. Variante de b09: arte, duplicata."
+    },
+    {
+      "tmdb": "dlmkHSOeDvT5raac3uZ5e1f9yHM.jpg",
+      "motivo": "b46, 1920x1080. Variante de b09: arte, duplicata."
+    },
+    {
+      "tmdb": "hMqx9wh4f3D3RTOHVteA41FcU3J.jpg",
+      "motivo": "b15, 1280x720. Colagem ilustrada em vermelho: arte de fã."
+    },
+    {
+      "tmdb": "nwIydy2ODTEKo2Ex2ZHXfapsBEB.jpg",
+      "motivo": "b45, 1920x1080. Montagem ilustrada com Nada, Frank e alienígenas: arte de fã ou montagem promocional."
+    },
+    {
+      "tmdb": "wKc9UTdjFRAelfYo3TfCSw2nvAJ.jpg",
+      "motivo": "b16, 1920x1080. Times Square em P&B coberta de \"OBEY\", \"CONSUME\", \"REPRODUCE\": montagem (o filme se passa em Los Angeles, não em Nova York)."
+    },
+    {
+      "tmdb": "cInofqZY13HVmLl0w4HS3mODiIj.jpg",
+      "motivo": "b44, 1920x1080. Duplicata da montagem b16."
+    },
+    {
+      "tmdb": "jlNfMazDWVjeJrY2t0KxvyCWFhd.jpg",
+      "motivo": "b28, 1920x1080. Quase duplicata do horizonte de Los Angeles b22 (escolhido)."
+    },
+    {
+      "tmdb": "kLCe154WND0woacDFGv7LvYYcAm.jpg",
+      "motivo": "b33, 1400x787. Nada pondo os óculos na banca: mesmo momento do hero b39, quase duplicata."
+    },
+    {
+      "tmdb": "7dfUrUdmWIqSxgVtZGvAVniYJaM.jpg",
+      "motivo": "b50, 1456x818. Quase duplicata de b33 e b39."
+    },
+    {
+      "tmdb": "vYt0IQ4u6ZD36QdAlq41EXCoU07.jpg",
+      "motivo": "b58, 1442x811. Quase duplicata da briga b41 (escolhida, em resolução maior)."
+    },
+    {
+      "tmdb": "7M6WJMcfOqUrIBTA927cmcO4IfR.jpg",
+      "motivo": "b43, 3374x1898. Mesmo momento da briga de b41, enquadramento mais fechado. Quase duplicata."
+    },
+    {
+      "tmdb": "3k2DQBryXzaL7DoAtu6veWWluwt.jpg",
+      "motivo": "b02, 1920x1080. Alienígena lendo jornal numa banca em P&B: próximo demais de b38 (mesma sequência da banca). Reserva."
+    },
+    {
+      "tmdb": "7h0zG144Mx9A3yQo6AiytycdUTe.jpg",
+      "motivo": "b53, 1456x818. Dois alienígenas na banca \"OBEY AND CONFORM\" em P&B: próximo de b38 e b02. Reserva."
+    },
+    {
+      "tmdb": "faWmnpDRoG0Yv9NLKOFtLro6qMq.jpg",
+      "motivo": "b04, 1448x814. Avenida em P&B com outdoors \"CONFORM\", \"CONSUME\", \"WATCH TV\": boa, mas a galeria já tem b48 e b51 de mensagem; mantido o equilíbrio entre cor e P&B. Primeira reserva."
+    },
+    {
+      "tmdb": "1RC7Wadp0bShoax7L9DVmLBLcA1.jpg",
+      "motivo": "b49, 1482x834. Placa \"NO INDEPENDENT THOUGHT\": o texto ocupa a largura toda e seria cortado no quadrado da galeria. Reserva."
+    },
+    {
+      "tmdb": "flj6paUbKLOenWWrV0o0OIcRFCi.jpg",
+      "motivo": "b26, 1920x1080. Frank e Nada de óculos à noite, Frank com um revólver (conferido em zoom): provavelmente terceiro ato, perto da fuga pelo beco que leva à base. Reserva."
+    },
+    {
+      "tmdb": "yiSNKgWG2x3HHFTVHZiuqyQTAo3.jpg",
+      "motivo": "b19, 1280x720. Nada e Frank andando juntos depois da briga: no limite de resolução e repete o desfecho da briga que b41 já mostra. Reserva."
+    },
+    {
+      "tmdb": "dwroMW2GKPafNcNVOdXaWHP00dS.jpg",
+      "motivo": "b40, 3397x1911. Nada de frente para um homem de costas num beco: contexto da cena não confirmado. Reserva."
+    },
+    {
+      "tmdb": "1m4iNiZYLJZd22fSiVbDKPf6rgT.jpg",
+      "motivo": "b55, 1449x815. Nada mirando a espingarda para a câmera: arma apontada ao espectador e corte ruim no quadrado."
+    },
+    {
+      "tmdb": "7etdo1fU94dJSzNYEXcgWMEeglk.jpg",
+      "motivo": "b35, 1600x900. Grafite \"THEY LIVE / WE SLEEP\" na parede: texto diegético, mas lê como o título do filme. Evitado."
+    },
+    {
+      "tmdb": "AqgxfuOXtUanuogPLHJXVSK4DGf.jpg",
+      "motivo": "b56, 1456x818. Óculos caídos no carpete entre cacos de vidro: detalhe de enredo (casa de Holly), pouco legível como cena."
+    },
+    {
+      "tmdb": "rDMVMSY6GuQVv9iz5IhTTrPr0iM.jpg",
+      "motivo": "b21, 1920x1080. Tela de TV muito escura e indistinta."
+    },
+    {
+      "tmdb": "uoUoQn70sOAYwEmLXboji0W7fKt.jpg",
+      "motivo": "b31, 1920x1080. Helicóptero com holofote no escuro: quase só preto."
+    },
+    {
+      "tmdb": "dRlUa9bFXLkckhJmhkkS4E6242C.jpg",
+      "motivo": "b27, 1920x1080. Fachada de prédio vista de baixo: genérica, sem assunto do filme."
+    },
+    {
+      "tmdb": "u3jRTZNfRCvg23IYnW4hjh4OXhh.jpg",
+      "motivo": "Pôster pt-BR 960x1440 com \"JOHN CARPENTER ELES VIVEM\": título certo, mas resolução menor que a do escolhido."
+    },
+    {
+      "tmdb": "eVpyeUEUJYgV6InLBykzGi9wP8K.jpg",
+      "motivo": "Pôster pt-PT 1325x1987 (\"ELES VIVEM\"): marcado como Portugal no TMDB, não Brasil."
+    },
+    {
+      "tmdb": "ngnybFTuopfbfmmEeX9jjBQQmF6.jpg",
+      "motivo": "Pôster principal en-US 2000x3000 (\"THEY LIVE\"), mesma arte do escolhido: dispensado porque há versão pt-BR."
+    },
+    {
+      "tmdb": "7KwThsTozbx9zUVYLWIqmHbRanM.jpg",
+      "motivo": "Pôsteres \"Sem Idioma\" (8): sete ilustrações alternativas, não a arte do filme (zZFWpRP7yvozPIFJxWCkU0IA6Rm, qW614VBAJrdSbzOo9lmOHb45Mou, 8Lh7edo5lqLNB2SNmoF4BltOy2y, z4zSuXUyyvnWmVrpizu3xxfWOIF, rXrk5tUTo81jtFbYzpCLkGGuBP1, 7KwThsTozbx9zUVYLWIqmHbRanM, fspueA9EkhBJYeHoosirQECco2F) e 5BZAabdVTOhE5CePzXTuHoMpayt, a arte do olho sem letreiro, dispensada porque há a versão com o título brasileiro."
+    }
+  ],
+  "alertas": [
+    "Identidade: TMDB 8337, https://www.themoviedb.org/movie/8337-they-live; a página em pt-BR traz \"Eles Vivem (1988)\" e direção de John Carpenter nos dados estruturados. Todas as imagens vêm de https://www.themoviedb.org/movie/8337-they-live/images/backdrops?image_language=xx (58 itens na lista \"Sem Idioma\") e de .../images/posters?image_language=pt (3 itens: 2 pt-BR, 1 pt-PT). A URL ?image_language=pt-BR devolve lista vazia: o filtro do TMDB é \"pt\", e a região (BR ou PT) vem em cada imagem.",
+    "Tamanhos conferidos em 06/11/2026: HEAD 200 image/jpeg em original e w1280 (cartaz: w780) para as 16 escolhidas, mais a leitura do cabeçalho JPEG (256 KB) do original. 16 de 16 iguais ao tamanho que a página do TMDB mostra. Resultado em conferencia.json, na mesma pasta.",
+    "Convenção seguida das 21 sessões publicadas: cenas[0] é o hero e cenas[1] é a direção. Há 14 cenas distintas, 12 além do hero e da direção.",
+    "Recorte do hero proposto: {\"x\": 0, \"y\": 0, \"largura\": 0.9, \"altura\": 1}. O recorte vale para todas as larguras, inclusive a textura do carrossel da home e a miniatura, e só tira a faixa de revistas da direita. Sem ele a imagem também serve, mas no celular 390x844 o rosto de Nada encosta na borda esquerda. Prévias: folha-8 (sem recorte) e folha-9 (com recorte).",
+    "Cena 14 (b41, 7cbTXykFZd417ZV08kdm7oqopSj.jpg): fio de sangue no lábio de Nada, marca da briga, sem ferida aberta nem gore. Se o critério de sangue for mais rígido, a troca indicada é b04 (faWmnpDRoG0Yv9NLKOFtLro6qMq.jpg, 1448x814). b43 não resolve, porque é a mesma briga.",
+    "Cinco cenas têm entre 1454 e 1458 px de largura (b48, b51, b54, b52, b57). Estão acima do mínimo de 1280, mas no TMDB só existem nesse tamanho.",
+    "Spoiler: a sinopse da Wikipedia (https://en.wikipedia.org/wiki/They_Live, seção Plot) diz que os óculos deixam o mundo monocromático e que, no fim, com o sinal destruído, os humanos descobrem os alienígenas. Por isso todo alienígena em cor diante de gente comum (bar: b32, b13, b42) foi tratado como fim, e também ficaram de fora os quadros da emissora Cable 54 (b20, b25, b30) e o clarão b24. A posição de cada quadro no filme foi deduzida da imagem e da sinopse, sem conferência em vídeo.",
+    "Cartaz: o pôster pt-BR escolhido foi enviado por um usuário do TMDB e traz a arte de 1988 com o letreiro \"ELES VIVEM\". Não confirmei se é o cartaz do lançamento brasileiro da época. O título escrito é o deste filme.",
+    "Esta tarefa não alterou nenhum arquivo do projeto, só leu. No fim, o git status do projeto mostrava tools/testes/interacoes.mjs, ordem.mjs e paginas.mjs modificados, por outra etapa e não por esta. O trabalho está em C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/: listas.json (todas as listagens analisadas), conferencia.json e as pastas mini, w780, w1280, final, orig e folhas."
+  ],
+  "totais": {
+    "backdropsSemTexto": 58,
+    "postersPtBR": 2,
+    "postersOutros": 115
+  },
+  "folhasDeContato": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-1-backdrops-01-30.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-2-backdrops-31-58.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-3-posters.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-4-duvidas.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-7-selecao-final.jpg"
+  ],
+  "previasDeRecorte": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-5-previas-hero.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-6-previas-direcao.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-8-recortes-finais.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/folhas/folha-9-hero-com-recorte.jpg"
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/imagens.json"
+}

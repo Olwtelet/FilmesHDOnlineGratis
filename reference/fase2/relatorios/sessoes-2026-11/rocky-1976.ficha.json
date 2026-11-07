@@ -1,0 +1,229 @@
+{
+  "slug": "rocky-1976",
+  "tituloBrasil": {
+    "valor": "Rocky: Um Lutador",
+    "confere": true,
+    "fontes": [
+      "https://www.themoviedb.org/movie/1366-rocky?language=pt-BR",
+      "https://www.adorocinema.com/filmes/filme-28251/",
+      "https://pt.wikipedia.org/w/index.php?title=Rocky&oldid=73308408",
+      "https://www.wikidata.org/wiki/Q188652",
+      "https://www.justwatch.com/br/filme/rocky-um-lutador"
+    ],
+    "nota": "É o título de lançamento no Brasil. Só a pontuação varia: TMDB pt-BR usa \"Rocky: Um Lutador\", a forma definida pelo proprietário. AdoroCinema, Wikipedia pt e JustWatch BR usam \"Rocky, um Lutador\", e o rótulo pt-br do Wikidata é \"Rocky, Um Lutador\". Os cartazes em português no TMDB (b9B1DXcPNsJfTtc4x2LKA3bykoJ, ukOSbWYBDmSnjPZBduMNyd2Sxjk) trazem \"ROCKY\" e, abaixo, \"UM LUTADOR\", sem pontuação. Recomendo manter \"Rocky: Um Lutador\", que segue o padrão com dois-pontos já usado no catálogo (Pulp Fiction: Tempo de Violência). São 17 caracteres, então não precisa de tituloCurto."
+  },
+  "tituloOriginal": "Rocky",
+  "tmdb": 1366,
+  "imdb": "tt0075148",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rocky",
+  "ano": {
+    "recomendado": 1976,
+    "estreiaMundial": "1976-11-21",
+    "ondeEstreou": "Cinema II, Nova York. Foi a abertura comercial numa sala, não um festival. O TMDB registra uma premiere em Nova York em 1976-11-20.",
+    "lancamentoComercial": "1976-12-03, lançamento geral nos Estados Unidos e no Canadá",
+    "lancamentoBrasil": "1977-01-06 segundo o TMDB; 1977-01-07 segundo o AdoroCinema, citado pela Wikipedia pt",
+    "anoTmdb": 1976,
+    "fontes": [
+      "https://catalog.afi.com/Catalog/moviedetails/53862",
+      "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+      "https://www.boxofficemojo.com/title/tt0075148/credits/",
+      "https://www.wikidata.org/wiki/Q188652",
+      "https://www.themoviedb.org/movie/1366-rocky/releases",
+      "https://www.adorocinema.com/filmes/filme-28251/",
+      "https://pt.wikipedia.org/w/index.php?title=Rocky&oldid=73308408"
+    ],
+    "nota": "Pelo critério do catálogo, o ano é o da primeira exibição pública. Todas as datas candidatas caem em 1976: abertura em Nova York em 21/11/1976 (AFI, que dá ainda a abertura de Los Angeles em 01/12/1976; Wikipedia en, citando Variety e o anúncio no New York Times; Box Office Mojo, \"Earliest Release Date Sun Nov 21, 1976\"; Wikidata P577), premiere em 20/11/1976 no TMDB e lançamento geral em 03/12/1976 (AFI, Wikipedia en, TMDB). O AFI menciona sessões prévias para convidados antes da estreia, sem data, também em 1976. O Brasil recebeu o filme em janeiro de 1977, o que não muda o ano. Os 50 anos de 1976 explicam os relançamentos de novembro de 2026 que o TMDB lista em outros países (Estados Unidos 07/11/2026, México 05/11/2026, Alemanha 03/11/2026, Argentina e Paraguai 12/11/2026). Não achei relançamento no Brasil."
+  },
+  "direcao": {
+    "valor": "John G. Avildsen",
+    "fontes": [
+      "https://www.themoviedb.org/movie/1366-rocky/cast",
+      "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+      "https://pt.wikipedia.org/w/index.php?title=Rocky&oldid=73308408",
+      "https://catalog.afi.com/Catalog/moviedetails/53862",
+      "https://www.boxofficemojo.com/title/tt0075148/credits/",
+      "https://www.wikidata.org/wiki/Q188652",
+      "https://www.adorocinema.com/filmes/filme-28251/"
+    ]
+  },
+  "duracao": {
+    "recomendado": 119,
+    "porFonte": [
+      { "fonte": "TMDB (1h 59m)", "minutos": 119, "url": "https://www.themoviedb.org/movie/1366-rocky?language=pt-BR" },
+      { "fonte": "Wikipedia en (infobox; comentário no código: 119:19, citando o BBFC)", "minutos": 119, "url": "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844" },
+      { "fonte": "Wikipedia pt", "minutos": 119, "url": "https://pt.wikipedia.org/w/index.php?title=Rocky&oldid=73308408" },
+      { "fonte": "Wikidata P2047", "minutos": 119, "url": "https://www.wikidata.org/wiki/Q188652" },
+      { "fonte": "BBFC, cópia de cinema classificada em 07/01/1977 (United Artists): 119m 19s", "minutos": 119, "url": "https://www.bbfc.co.uk/release/rocky-q29sbgvjdglvbjpwwc00mzgwnda" },
+      { "fonte": "AdoroCinema (1h 59min)", "minutos": 119, "url": "https://www.adorocinema.com/filmes/filme-28251/" },
+      { "fonte": "AFI Catalog: registra a faixa de 119 a 121 min; aqui vai o limite inferior", "minutos": 119, "url": "https://catalog.afi.com/Catalog/moviedetails/53862" },
+      { "fonte": "Box Office Mojo (\"2 hr\", arredondado)", "minutos": 120, "url": "https://www.boxofficemojo.com/title/tt0075148/credits/" },
+      { "fonte": "JustWatch BR (2h 0min)", "minutos": 120, "url": "https://www.justwatch.com/br/filme/rocky-um-lutador" },
+      { "fonte": "BBFC, relançamento em cinema de 2020, classificado em 17/09/2020: 121m 0s", "minutos": 121, "url": "https://www.bbfc.co.uk/release/rocky-q29sbgvjdglvbjpwwc00mzgwnda" },
+      { "fonte": "BFI Southbank, sessão em 4K digital (dado do resultado da busca; a página devolveu 403 ao curl)", "minutos": 121, "url": "https://whatson.bfi.org.uk/Online/article/rocky-intro" }
+    ],
+    "nota": "Recomendo 119. É a duração da cópia de cinema de 1977 medida pelo BBFC (119m 19s) e o valor de TMDB, das duas Wikipedias, do Wikidata e do AdoroCinema. O 120 vem de arredondamento para horas cheias (Box Office Mojo, JustWatch). O 121 é da cópia restaurada em 4K relançada em 2020 (BBFC, BFI), que deve ter cartelas ou logos a mais; o AFI cobre as duas pontas com a faixa 119-121. As cópias de vídeo classificadas pelo BBFC entre 1986 e 2005 têm 114 min por causa da aceleração do PAL e não se aplicam."
+  },
+  "classificacao": {
+    "valor": null,
+    "detalhe": "Não encontrei registro oficial. (1) Diário Oficial da União, busca em in.gov.br, que respondeu ao curl com user agent próprio. Buscas sem resultado para o filme: \"Rocky\" + \"Avildsen\" (0); \"Rocky um Lutador\" (0); \"Rocky, um Lutador\" (0); \"Rocky\" + \"1976\" (0); \"Título Original: Rocky\" (0); \"Rocky\" + \"Estados Unidos - 1976\" (0); \"UM LUTADOR\" (só outras obras); \"Rocky\" na Seção 1, todas as datas e também o período 2000-2019 (só outros atos). \"Avildsen\" devolve um único ato: a Portaria 1.170/2020, que classifica outro filme do diretor, INFERNO (Desert Heat, 1999). O mesmo método encontra a Portaria 1.405/2022 de Vivarium, então a busca funciona para portarias de classificação recentes. Portarias antigas publicadas só em tabela ou PDF podem estar fora do índice de texto. (2) O portal público de consulta do ClassInd (classindportal.mj.gov.br) é um aplicativo Angular. A API de busca (/api/solicitacao-classificacao-consultas/list) responde 302 para o login do SSO; não contornei isso, e o site classind.mj.gov.br é o sistema interno, com login. (3) A página do Ministério da Justiça não tem lista por título. Os indícios encontrados (ver outrasEncontradas) apontam para 12 anos, mas nenhum é registro oficial.",
+    "fonte": "Nenhuma fonte oficial encontrada",
+    "outrasEncontradas": [
+      "12: TMDB, lançamento em cinema no Brasil em 06/01/1977 (https://www.themoviedb.org/movie/1366-rocky/releases). Fonte secundária, editada por usuários. Em 1977 a censura federal usava outras faixas etárias, então o 12 provavelmente vem de uma classificação posterior (TV, vídeo ou streaming), não do certificado da época. É inferência, não verificada.",
+      "12: JustWatch BR, \"Classificação de idade 12\" (https://www.justwatch.com/br/filme/rocky-um-lutador). Agregador; só vale como indício.",
+      "M/12: JustWatch Portugal (https://www.justwatch.com/pt/filme/rocky). É a classificação portuguesa e não se aplica ao Brasil.",
+      "Referências estrangeiras, que não se aplicam: PG nos Estados Unidos (AFI; TMDB); no Reino Unido, BBFC 1977 para cinema e reclassificação em 2020, com \"moderate violence, mouthed strong language, domestic abuse\"."
+    ]
+  },
+  "generos": ["Drama", "Esporte"],
+  "categoria": "Drama",
+  "sinais": ["drama", "clássico", "indicação-da-semana"],
+  "pais": "Estados Unidos",
+  "idiomaOriginal": "Inglês",
+  "principais": [
+    {
+      "funcao": "Roteiro",
+      "nome": "Sylvester Stallone",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/",
+        "https://www.wikidata.org/wiki/Q188652"
+      ],
+      "nota": "Roteiro original, sem obra literária de origem: o infobox da Wikipedia en deixa based_on vazio. O AFI e a Wikipedia registram influências (a luta Ali x Wepner de 1975) e o processo de Wepner, que terminou em acordo; nada disso é crédito."
+    },
+    {
+      "funcao": "Fotografia",
+      "nome": "James Crabe",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/",
+        "https://www.wikidata.org/wiki/Q188652"
+      ],
+      "nota": "Garrett Brown, que operou a Steadicam, tem crédito separado de efeitos especiais de câmera (\"Spec cam eff\", no AFI) e não entra aqui."
+    },
+    {
+      "funcao": "Música",
+      "nome": "Bill Conti",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/",
+        "https://www.wikidata.org/wiki/Q188652"
+      ]
+    },
+    {
+      "funcao": "Montagem",
+      "nome": "Richard Halsey & Scott Conrad",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/"
+      ],
+      "nota": "O AFI lista os dois nos créditos (Halsey como \"Ed\" e Conrad como \"Film ed\"); TMDB, Wikipedia en e Box Office Mojo também. A Wikipedia pt marca Conrad como \"(não creditado)\" e o Wikidata só traz Conrad. Pela ordem do AFI e da Wikipedia en, Halsey vem primeiro. São 29 caracteres, dentro do limite de 37."
+    }
+  ],
+  "producao": [
+    {
+      "funcao": "Produção",
+      "nome": "Robert Chartoff",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/",
+        "https://www.wikidata.org/wiki/Q188652"
+      ]
+    },
+    {
+      "funcao": "Produção",
+      "nome": "Irwin Winkler",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/",
+        "https://www.wikidata.org/wiki/Q188652"
+      ]
+    }
+  ],
+  "elenco": [
+    {
+      "personagem": "Rocky Balboa",
+      "nome": "Sylvester Stallone",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/"
+      ]
+    },
+    {
+      "personagem": "Adrian",
+      "nome": "Talia Shire",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/"
+      ]
+    },
+    {
+      "personagem": "Paulie",
+      "nome": "Burt Young",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/"
+      ]
+    },
+    {
+      "personagem": "Apollo Creed",
+      "nome": "Carl Weathers",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844",
+        "https://www.boxofficemojo.com/title/tt0075148/credits/"
+      ]
+    },
+    {
+      "personagem": "Mickey",
+      "nome": "Burgess Meredith",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844"
+      ]
+    },
+    {
+      "personagem": "Jergens",
+      "nome": "Thayer David",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.themoviedb.org/movie/1366-rocky/cast",
+        "https://en.wikipedia.org/w/index.php?title=Rocky&oldid=1383967844"
+      ]
+    }
+  ],
+  "divergencias": [
+    "Nomes dos personagens: os créditos na tela (AFI, coluna \"credited as\") trazem só \"Rocky\", \"Adrian\", \"Paulie\", \"Apollo\", \"Mickey\", \"Jergens\" e \"Gazzo\"; o AFI põe entre colchetes os nomes que não aparecem na tela: Rocky [Balboa], Adrian [Pennino], Paulie [Pennino], Apollo [Creed], Mickey [Goldmill], [Miles] Jergens, [Tony] Gazzo. TMDB e Wikipedia en usam nomes completos: Robert \"Rocky\" Balboa, Adrianna \"Adrian\" Pennino, Paulie Pennino, Michael \"Mickey\" Goldmill. Recomendação: usar o nome completo só quando o próprio AFI o usa na história e na sinopse do filme (\"Rocky Balboa\", \"Apollo Creed\") e o crédito da tela nos demais (Adrian, Paulie, Mickey, Jergens). Não confirmei se os sobrenomes Pennino e Goldmill são ditos neste filme.",
+    "Primeiro nome de Jergens, o promotor: \"George\" no texto da Wikipedia en, \"Miles\" entre colchetes no AFI, \"George 'Miles' Jergens\" na lista de elenco da Wikipedia en. Como as fontes não batem, recomendo só \"Jergens\", que é o crédito na tela. A sexta vaga do elenco segue a ordem de créditos do AFI e do TMDB (Thayer David é o 6º). A alternativa é Joe Spinell como \"Gazzo\" (o agiota para quem Rocky cobra dívidas), 7º nos créditos.",
+    "Data da primeira exibição: 21/11/1976 em AFI, Wikipedia en, Box Office Mojo e Wikidata; 20/11/1976 (\"Premiere, New York City\") no TMDB. O ano é o mesmo.",
+    "Lançamento no Brasil: 06/01/1977 no TMDB; 07/01/1977 no AdoroCinema e na Wikipedia pt, que cita o AdoroCinema. Não achei fonte primária, como jornal da época, para desempatar.",
+    "Duração: 119 (TMDB, Wikipedia en e pt, Wikidata, AdoroCinema, BBFC 1977); 120 (Box Office Mojo e JustWatch BR, em horas arredondadas); 119-121 (AFI); 121 (BBFC 2020 e BFI, cópia 4K). Recomendação: 119.",
+    "Montagem: a Wikipedia pt marca Scott Conrad como \"(não creditado)\"; o AFI lista Conrad nos créditos (\"Film ed\") ao lado de Richard Halsey (\"Ed\"), e TMDB, Wikipedia en e Box Office Mojo trazem os dois; o Wikidata só registra Conrad.",
+    "Produtores: na tela, \"A Robert Chartoff-Irwin Winkler Production\" (AFI, production text), a mesma ordem do Box Office Mojo; AFI, Wikipedia en e pt listam Winkler primeiro. Recomendo a ordem da tela: Chartoff, Winkler. Gene Kirkwood tem crédito de produtor executivo (AFI \"Exec prod\", TMDB \"Executive Producer\", Wikipedia pt \"produção executiva\") e ficou fora de Produção, como no padrão do catálogo. Se entrar, a função é \"Produção executiva\".",
+    "Título brasileiro: \"Rocky: Um Lutador\" (TMDB pt-BR, escolha do proprietário), \"Rocky, um Lutador\" (AdoroCinema, Wikipedia pt, JustWatch BR), \"Rocky, Um Lutador\" (Wikidata pt-br) e \"ROCKY / UM LUTADOR\" sem pontuação nos cartazes brasileiros do TMDB.",
+    "Gêneros: TMDB e AdoroCinema dão só Drama; Box Office Mojo e BBFC, Drama e Sport; Wikidata, filme de drama, filme de ação e filme de boxe; Wikipedia pt, drama esportivo. Recomendação: Drama e Esporte. \"Esporte\" ainda não existe no catálogo e entra pela primeira vez.",
+    "Distribuidora no Brasil: o AdoroCinema dá \"Fox Film do Brasil\". Nos Estados Unidos a distribuidora foi a United Artists (AFI, Wikipedia). Não verifiquei quem distribuiu no Brasil em 1977; o dado não é exibido no site.",
+    "Alerta, não é divergência: existe outro filme de 2026 sobre a produção de Rocky, I Play Rocky, de Peter Farrelly. No DOU ele aparece como \"Eu Sou Rocky\": a Portaria CGPCIND/DSPRAD/SEDIGI 2.131/2026 classifica o filme e a 1.805/2026, o trailer (https://www.in.gov.br/web/dou/-/portaria-cgpcind/dsprad/sedigi-n-2.131-de-15-de-outubro-de-2026-738854434). A imprensa chama de \"Eu Sou o Rocky\". Buscas de trailer e imagens em novembro de 2026 devolvem esse filme, então é preciso conferir ano (1976) e direção (Avildsen) em cada ativo.",
+    "Alerta para o trailer: o BBFC lista um trailer de Rocky classificado em 17/09/2026 para a Park Circus Limited (1m 3s, cinema), ligado ao relançamento de 50 anos no Reino Unido (https://www.bbfc.co.uk/release/rocky-q29sbgvjdglvbjpwwc00mzgwnda). Park Circus é o canal já usado no catálogo para De Olhos Bem Fechados. Não procurei o vídeo no YouTube, que fica fora desta ficha."
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/ficha.json"
+}

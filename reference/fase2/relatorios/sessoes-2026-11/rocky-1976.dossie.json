@@ -1,0 +1,685 @@
+{
+  "slug": "rocky-1976",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/rocky-1976/dossie.json",
+  "fatos": [
+    {
+      "id": "f01",
+      "tipo": "forma",
+      "descricao": "Abertura: sobre fundo preto, a palavra ROCKY atravessa a tela da direita para a esquerda em letras maiores que o quadro, com a fanfarra de trompetes de Bill Conti. Em seguida vem uma cartela com data e lugar: 25 de novembro de 1975, Filadélfia. Conti disse ter usado trompetes na abertura para prender a atenção da sala (AFI).",
+      "momento": "Abertura (aprox. min 0–1)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.filmsite.org/rock.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f02",
+      "tipo": "cena",
+      "descricao": "O primeiro plano depois da cartela é uma pintura de Cristo na parede de um salão de luta. A câmera desce até o ringue, onde Rocky e Spider Rico trocam golpes, os dois de calção escuro, para um público que vaia ambos e aposta. Uma das fontes descreve o Cristo segurando a Eucaristia.",
+      "momento": "Abertura, luta no clube (aprox. min 1–2)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.thefightcity.com/?p=47452",
+        "https://shmoop.com/study-guides/rocky/scene-1-summary.html",
+        "https://www.filmsite.org/rock.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f03",
+      "tipo": "contexto-na-tela",
+      "descricao": "O clube da luta de abertura se chama Resurrection A.C. (Athletic Club), segundo a legenda de foto de The Fight City. Só achei mais um resumo com o nome, gerado por IA e com erros, que não conta como fonte. Conferir no fotograma antes de usar.",
+      "momento": "Abertura (aprox. min 1–2)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.thefightcity.com/?p=47452"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "f04",
+      "tipo": "cena",
+      "descricao": "Spider Rico dá uma cabeçada e abre um corte acima do olho de Rocky. Rocky reage com uma série de socos e vence por nocaute (a Mickey, no dia seguinte, ele diz que foi no 2º assalto). Ao deixar o ringue, pede um cigarro a um espectador, e uma mulher na plateia o chama de “bum” três vezes seguidas.",
+      "momento": "Abertura (aprox. min 1–3)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock.html",
+        "https://shmoop.com/study-guides/rocky/scene-1-summary.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f05",
+      "tipo": "estrutura",
+      "descricao": "No vestiário, o organizador lê a conta em voz alta. Da bolsa de 65 dólares do vencedor saem 15 de vestiário e corner, 5 de chuveiro e toalha e 7% de imposto, e Rocky leva 40,55. O perdedor sai com 17,20. Semanas depois, na coletiva, a bolsa anunciada para Rocky enfrentar Apollo é de 150 mil dólares.",
+      "momento": "Abertura, vestiário (aprox. min 2–3); coletiva no 2º ato",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock.html",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f06",
+      "tipo": "som",
+      "descricao": "Os créditos iniciais rolam enquanto Rocky volta para casa a pé, à noite, por calçadas com lixo. Ele para diante da vitrine de filhotes do pet shop e cumprimenta cantores de esquina em volta de um tonel com fogo. A canção que eles cantam em cena é “Take You Back”, de Frank Stallone, música diegética, diferente da partitura de Conti.",
+      "momento": "Créditos iniciais (aprox. min 3–5)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.filmsite.org/rock.html",
+        "https://shmoop.com/study-guides/rocky/scene-2-summary.html",
+        "https://en.wikipedia.org/wiki/Rocky",
+        "https://en.wikipedia.org/wiki/Rocky_(soundtrack)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f07",
+      "tipo": "cena",
+      "descricao": "O apartamento tem um cômodo só. Lá estão as tartarugas Cuff e Link, o peixinho Moby Dick, um pôster de Rocky Marciano na parede e fotos presas ao espelho, entre elas uma dele aos 8 anos. Rocky conta a vitória aos bichos e põe gelo no corte. O filmsite descreve ainda um colchão velho enrolado servindo de saco de pancada e um toca-discos de compacto.",
+      "momento": "1º ato, apartamento (aprox. min 3–5)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/rock.html",
+        "https://shmoop.com/study-guides/rocky/scene-2-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f08",
+      "tipo": "fala",
+      "descricao": "Rocky repete no primeiro ato a mesma frase, que em português seria “devia ter me visto”, a quem não viu a luta: às tartarugas, a um conhecido na rua, duas vezes a Mickey e no bar. Mickey usa a mesma fórmula quando lembra uma luta sua de 1923. O texto exato está na transcrição. A contagem vem só dela, e o AFI confirma que Rocky só tem as tartarugas para quem contar a vitória.",
+      "momento": "1º ato, recorrente (aprox. min 3–20); Mickey no 2º ato",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://shmoop.com/study-guides/rocky/scene-4-summary.html"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "f09",
+      "tipo": "cena",
+      "descricao": "No cais, Rocky cobra para o agiota Tony Gazzo. Devia quebrar o polegar do devedor Bob se não viessem os 200 dólares. Aceita 130, recusa o casaco que o homem oferece para completar e vai embora sem machucá-lo. Gazzo, no carro, o repreende por decidir sozinho. Rocky argumenta que com o polegar quebrado o homem perde o emprego e não paga mais.",
+      "momento": "1º ato (aprox. min 5–9)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock.html",
+        "https://shmoop.com/study-guides/rocky/scene-3-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f10",
+      "tipo": "cena",
+      "descricao": "Na academia, Rocky arromba com um extintor o cadeado do armário que usava havia seis anos e descobre que ele foi dado a Dipper, um contender jovem e negro. Suas coisas estão num saco pendurado num gancho. Mickey o chama de “tomato” e diz que ele tem coração mas luta como um macaco. Diz também que a única coisa especial nele é o nariz nunca quebrado, e sugere que se aposente.",
+      "momento": "1º ato (aprox. min 10–14)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://shmoop.com/study-guides/rocky/scene-4-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f11",
+      "tipo": "cena",
+      "descricao": "No pet shop, Rocky conta a Adrian uma piada ensaiada sobre tartarugas que engasgam (o trocadilho “shell shock”). Ela responde com monossílabos, e a patroa a manda limpar gaiolas no meio da conversa. À noite ele volta, fala com ela entre as grades da gaiola dos periquitos (diz que parecem doce voando) e a convida para um jogo de basquete no Spectrum. Ela não responde, e ele promete inventar uma piada nova.",
+      "momento": "1º ato (aprox. min 4–5 e 14–16)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://shmoop.com/study-guides/rocky/scene-5-summary.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f12",
+      "tipo": "fala",
+      "descricao": "No banheiro imundo de um bar, de espelho quebrado, Paulie diz que a irmã é uma perdedora, que está chegando aos 30 e vai morrer sozinha. Rocky responde que também tem 30. Paulie devolve que então ele também vai morrer sozinho.",
+      "momento": "1º ato (aprox. min 17–19)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://shmoop.com/study-guides/rocky/scene-6-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f13",
+      "tipo": "contexto-na-tela",
+      "descricao": "No bar, a TV mostra Apollo anunciando a luta do Bicentenário, na Filadélfia, em 1º de janeiro, e aconselhando os jovens a estudar e virar médico ou advogado em vez de atleta. O dono do bar o chama de palhaço com um insulto racial. Rocky defende o campeão: ele arriscou a chance dele, e o dono, o que arriscou? O dono responde que tem um negócio e não precisa arriscar.",
+      "momento": "1º ato (aprox. min 20–23)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383",
+        "https://shmoop.com/study-guides/rocky/scene-6-summary.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f14",
+      "tipo": "cena",
+      "descricao": "Rocky tira Marie, de 12 anos, de uma esquina com rapazes mais velhos e a leva até a porta de casa, fazendo um sermão sobre reputação e sobre a “matemática simples” das amizades. Na porta, ela o xinga (“creep-o”). Ele vai embora perguntando a si mesmo quem é ele para dar conselho.",
+      "momento": "1º ato (aprox. min 23–26)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://shmoop.com/study-guides/rocky/scene-6-summary.html",
+        "https://www.tvinsider.com/gallery/rocky-best-scenes/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f15",
+      "tipo": "cena",
+      "descricao": "No escritório do promotor Jergens, o adversário marcado para Apollo quebrou a mão, e nenhum contender aceita lutar com cinco semanas de aviso. Apollo propõe uma novidade: dar a chance a um azarão local “branco como a neve” e pôr o rosto dele no cartaz ao lado do seu, porque o país é sentimental. Jergens acha a ideia muito americana. Apollo corrige: é muito esperta.",
+      "momento": "Fim do 1º ato (aprox. min 27–30)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f16",
+      "tipo": "cena",
+      "descricao": "Apollo folheia um livro de registro de lutadores e escolhe Rocky pelo apelido, Italian Stallion. Diz que a imprensa vai adorar e que quem descobriu a América foi um italiano. Acha que o cartaz soa como título de filme de monstro. O treinador Duke avisa que canhotos fazem tudo ao contrário, e Apollo responde que derruba Rocky em três assaltos.",
+      "momento": "Fim do 1º ato (aprox. min 31–34)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://shmoop.com/study-guides/rocky/scene-7-summary.html",
+        "https://en.wikipedia.org/wiki/Rocky",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f17",
+      "tipo": "cena",
+      "descricao": "No Dia de Ação de Graças, Adrian não sabia que Paulie traria Rocky. Paulie a chama de perdedora, espeta o peru no forno com um garfo e o atira no beco. Ela se tranca no quarto, e Rocky fala sem jeito com a porta fechada até ela sair, já de casaco e gorro.",
+      "momento": "2º ato, início (aprox. min 34–40)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-8-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.tvinsider.com/gallery/rocky-best-scenes/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f18",
+      "tipo": "estrutura",
+      "descricao": "Na varanda, Adrian lamenta o feriado perdido, e Rocky responde que para ele é só quinta-feira. O filme avança por datas nacionais: Ação de Graças, depois o Natal e por fim o Ano-Novo de 1976, primeiro dia do ano do Bicentenário, quando acontece a luta. No Natal, Paulie volta bêbado cantarolando música natalina (Shmoop) e a TV passa “A Christmas Carol” (filmsite).",
+      "momento": "2º ato (aprox. min 40); Natal perto de min 90; luta no 3º ato",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-17-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f19",
+      "tipo": "cena",
+      "descricao": "A pista de gelo está fechada. Rocky pechincha com o zelador e paga 10 dólares por 10 minutos, e o zelador grita em voz alta os minutos que faltam. Adrian patina e Rocky anda ao lado, de sapato, falando sem parar. Conta que começou a lutar aos 15 e que o pai dizia que ele não nasceu com cérebro e devia usar o corpo. Adrian conta que a mãe dizia o contrário para ela, e ri pela primeira vez.",
+      "momento": "2º ato (aprox. min 41–48)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-9-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.tvinsider.com/gallery/rocky-best-scenes/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f20",
+      "tipo": "fala",
+      "descricao": "Na volta a pé, Rocky diz que os dois formam um bom par, ele burro e ela tímida. Diz que só um idiota quer ser lutador, num ofício em que quase todos acabam “bum”. Adrian responde que não o acha um bum, e ele diz que é pelo menos metade. Depois descreve a dor da manhã seguinte a uma luta e se orgulha de nunca ter quebrado o nariz em 64 lutas.",
+      "momento": "2º ato (aprox. min 48–51)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-9-summary.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f21",
+      "tipo": "cena",
+      "descricao": "No apartamento, Adrian diz que não se sente à vontade, que nunca esteve a sós no apartamento de um homem e que deve ir embora. Rocky pede várias vezes que ela fique e se põe diante da porta (filmsite). Pede que tire os óculos, depois o gorro, diz que sempre a achou bonita e que quer beijá-la, avisando que ela não precisa retribuir. Ela retribui, e os dois vão ao chão junto à porta.",
+      "momento": "2º ato, ponto médio (aprox. min 52–56)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-10-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f22",
+      "tipo": "fala",
+      "descricao": "Na academia, Mickey xinga Rocky de “dumb dago” e explica por que o despreza há seis anos: ele tinha talento e virou quebra-pernas de um agiota de segunda. Rocky diz que é um meio de vida. Mickey responde que é desperdício de vida.",
+      "momento": "2º ato (aprox. min 57–58)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-11-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f23",
+      "tipo": "cena",
+      "descricao": "Rocky vai ao escritório de Jergens achando que é para ser sparring de Apollo e promete não dar golpe baixo. Quando ouve a proposta de disputar o título, recusa: luta em clubes, é um lutador de segunda (“ham-and-egger”), e não seria uma boa luta. Jergens pergunta se ele acredita que a América é a terra da oportunidade e diz que Apollo o escolheu.",
+      "momento": "2º ato (aprox. min 59–61)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-11-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f24",
+      "tipo": "cena",
+      "descricao": "Na casa de Paulie, Rocky e Adrian, já sem os óculos, veem a coletiva pela TV. Apollo cita Valley Forge e Bunker Hill. A um repórter que pergunta se é coincidência lutar contra um branco no dia mais festejado do país, ele devolve a pergunta invertida. Brinca que, se o italiano não souber lutar, deve saber cozinhar. Rocky, ao microfone, diz que fará o melhor e aproveita para mandar um “Yo, Adrian”. Paulie se irrita com as provocações, e Rocky diz que não ligou. Em seguida recusa a ajuda de Paulie no treino, porque ninguém se importava com ele na véspera. Adrian defende as chances dele citando Einstein, Beethoven e Helen Keller. Na porta, a sós, Rocky confessa a ela que se incomodou, sim.",
+      "momento": "2º ato (aprox. min 61–66)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock3.html",
+        "https://shmoop.com/study-guides/rocky/scene-12-summary.html",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f25",
+      "tipo": "personagem",
+      "descricao": "O agiota Gazzo paga o romance e o treino. Dá a Rocky 50 dólares para sair com Adrian, depois 500 para as despesas de treino, dizendo que talvez a sorte esteja do lado dele, e promete assistir à luta da beira do ringue. Na noite da luta, está na plateia com uma acompanhante (filmsite).",
+      "momento": "1º ato (aprox. min 30); 2º ato (aprox. min 67); 3º ato, luta",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock2.html",
+        "https://www.filmsite.org/rock3.html",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-13-summary.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f26",
+      "tipo": "fala",
+      "descricao": "Mickey sobe ao apartamento e chama a chance de Rocky de sorte de aberração. Avisa que não haverá segunda chance e mostra as cicatrizes sob uma lâmpada nua: 21 e 34 pontos sobre os olhos, nariz quebrado 17 vezes. Conta que em 1923 a fama da noite ficou com Dempsey porque Dempsey tinha empresário, e diz que Rocky lembra Marciano e tem coração. Rocky responde que tem coração mas não tem armário. Quando Mickey diz que tem dor e experiência, Rocky diz que ele também tem.",
+      "momento": "2º ato (aprox. min 69–74)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-13-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f27",
+      "tipo": "forma",
+      "descricao": "Mickey sai derrotado e desce a escada devagar. Lá dentro, Rocky grita sozinho: Mickey levou dez anos para vir à casa dele, ao menos teve um auge, e ele nunca teve. Mickey ouve na saída. Rocky então corre atrás do velho na rua. A reconciliação aparece de longe, num plano geral (filmsite), com braço no ombro e aperto de mão. Não há fala legendada entre o desabafo e o rádio da cena seguinte.",
+      "momento": "2º ato (aprox. min 74–77)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/rock4.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://shmoop.com/study-guides/rocky/scene-13-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "f28",
+      "tipo": "cena",
+      "descricao": "Às 4 da manhã o despertador toca, e um locutor de rádio fala dos 28 graus Fahrenheit e passa um trote numa ouvinte. Rocky bebe cinco ovos crus num copo e sai para correr no escuro. Sobe a escadaria do Museu de Arte da Filadélfia e chega ao alto sem fôlego, curvado.",
+      "momento": "2º ato (aprox. min 77–80)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-14-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.tvinsider.com/gallery/rocky-best-scenes/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f29",
+      "tipo": "cena",
+      "descricao": "No frigorífico onde Paulie carrega carcaças, entre peças de boi penduradas, Paulie pergunta grosseiramente se Rocky dorme com a irmã. Rocky passa a socar uma peça de carne até sangrar os nós dos dedos, e Paulie comenta que ele está quebrando as costelas do boi.",
+      "momento": "2º ato (aprox. min 80–82)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-14-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f30",
+      "tipo": "cena",
+      "descricao": "Rocky avisa Adrian que não haverá carinho durante o treino, para não perder força. Na academia, Mickey amarra um barbante entre os tornozelos dele para treinar equilíbrio e manda largar “a moça do pet shop”, porque mulher enfraquece as pernas. Em casa, Adrian o espera arrumada e sem óculos (o filmsite descreve casaco vermelho e boina branca), com o cão Butkus de presente para acompanhá-lo nas corridas. Rocky diz que ela parece uma destruidora de corações.",
+      "momento": "2º ato (aprox. min 82–86)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-14-summary.html",
+        "https://shmoop.com/study-guides/rocky/scene-15-summary.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f31",
+      "tipo": "forma",
+      "descricao": "Paulie chama uma equipe de TV ao frigorífico sem avisar. Rocky protesta, mas soca a carne para a câmera e diz que inventou o método, enquanto Paulie tenta entrar no quadro. Corta para Apollo no escritório, decidindo verba de anúncio em circuito fechado, a viagem do barbeiro e uma foto com a mulher do prefeito. Duke o chama para ver Rocky na TV; Apollo responde que também está a negócios e não vai olhar.",
+      "momento": "2º ato (aprox. min 86–90)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-16-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.avclub.com/more-than-mere-schmaltz-rocky-tells-an-underdog-story-1840397383"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f32",
+      "tipo": "cena",
+      "descricao": "Paulie volta bêbado, ouve Rocky reclamar dele e quebra móveis com um taco de beisebol. Cobra gratidão: busca a carne de Rocky toda manhã, “deu” a irmã a ele, não se casou por causa dela. Adrian grita que cozinha, limpa e cuida dele, que não lhe deve nada e que não é uma perdedora. Paulie a humilha falando da virgindade dela. Ela pergunta a Rocky se ele quer uma colega de quarto, e ele aceita na hora.",
+      "momento": "2º ato, Natal (aprox. min 90–94)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://shmoop.com/study-guides/rocky/scene-17-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f33",
+      "tipo": "cena",
+      "descricao": "Paulie pede para ganhar dinheiro com o nome de Rocky, e ele deixa. Na noite da luta, o roupão de Rocky traz nas costas o anúncio “Shamrock Meats, Inc.”, lido pelos comentaristas. Mickey reclama que treinou um lutador, não um outdoor. Rocky explica que Paulie fica com três mil dólares e ele com o roupão, que está largo demais, como ele mesmo diz duas vezes.",
+      "momento": "Fim do 2º ato (aprox. min 94) e entrada no ringue (3º ato)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock4.html",
+        "https://www.filmsite.org/rock5.html",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f34",
+      "tipo": "som",
+      "descricao": "A montagem do treino é feita sobre “Gonna Fly Now”, música não diegética de Bill Conti com letra de Carol Connors e Ayn Robbins, de umas 30 palavras, cantadas por DeEtta Little e Nelson Pigford. Rocky corre por ruas e mercado, passa sob o trilho elevado e pela beira do rio, faz flexões com um braço e soca o saco e a carne. A sequência termina com ele subindo a mesma escadaria do começo do treino, agora correndo, e se virando para a cidade com os braços erguidos. A corrida é filmada com Steadicam, operada por Garrett Brown.",
+      "momento": "Fim do 2º ato (aprox. min 93–96)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/Gonna_Fly_Now",
+        "https://en.wikipedia.org/wiki/Rocky_(soundtrack)",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-18-summary.html",
+        "https://en.wikipedia.org/wiki/Rocky_Steps",
+        "https://www.tvinsider.com/gallery/rocky-best-scenes/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f35",
+      "tipo": "cena",
+      "descricao": "Na véspera, Rocky entra sozinho no Spectrum vazio, decorado de vermelho, branco e azul, sobe ao ringue e olha os cartazes gigantes dos dois lutadores. Diz a Jergens que o cartaz está errado: ele luta de calção branco com listra vermelha, e o cartaz o mostra de vermelho com listra branca. Jergens responde que isso não importa e que espera dele um grande espetáculo.",
+      "momento": "3º ato, véspera (aprox. min 96–97)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-19-summary.html",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f36",
+      "tipo": "fala",
+      "descricao": "Na cama, Rocky diz a Adrian que não pode vencer, que não está à altura de Apollo e que antes não era ninguém. Diz que não importa perder, nem que lhe abram a cabeça: “all I wanna do is go the distance” (transcrição Springfield). Ninguém foi até o último assalto com Apollo. Se o sino tocar e ele ainda estiver de pé, vai saber pela primeira vez que não é só mais um “bum” do bairro. A fala apresenta a meta, não diz se ela será cumprida.",
+      "momento": "3º ato, véspera (aprox. min 97–99)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-19-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f37",
+      "tipo": "estrutura",
+      "descricao": "A palavra “bum” atravessa o filme. O corner diz que Rocky luta como um, na abertura. A espectadora o chama assim na saída, e Mickey usa a palavra para Spider Rico. Rocky diz que é pelo menos metade de um. Paulie o chama de “scum bum” na briga de Natal. No 1º assalto, o corner de Apollo manda acabar com “esse bum”. E é a palavra do monólogo da véspera.",
+      "momento": "Do 1º ao 3º ato (abertura, aprox. min 13, 50, 92, 98 e luta)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock.html",
+        "https://www.filmsite.org/rock3.html",
+        "https://www.filmsite.org/rock5.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f38",
+      "tipo": "cena",
+      "descricao": "Antes de subir ao ringue, Rocky reza ajoelhado junto à pia do banheiro do vestiário. Adrian diz que vai esperá-lo ali mesmo. Ele brinca que ela não fuja da cidade, pede que lhe deseje sorte e pergunta se o roupão não está largo demais.",
+      "momento": "3º ato, vestiário (aprox. min 99–100)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://shmoop.com/study-guides/rocky/scene-20-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.filmsite.org/rock5.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f39",
+      "tipo": "contexto-na-tela",
+      "descricao": "Na entrada, comentaristas de TV chamam Rocky de azarão de 50 para 1 numa história de Cinderela. Falam em “homem das cavernas contra o cavalheiro”, dão o cartel (44 vitórias, 38 por nocaute, 20 derrotas) e as apostas de Las Vegas de que ele não passa do 3º assalto. O locutor o apresenta de calção branco, com 190 libras. Apollo chega num barco vestido de George Washington e joga dinheiro à plateia. Tira a peruca, reaparece de Tio Sam apontando o dedo ao modo do cartaz de recrutamento (“I want you”) e entra de calção vermelho, branco e azul. Joe Frazier, no papel dele mesmo, sobe ao ringue e pede a Rocky que pegue leve.",
+      "momento": "3º ato, entrada no ringue (aprox. min 100–106)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-20-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f40",
+      "tipo": "forma",
+      "descricao": "A luta mostra por inteiro só os assaltos 1, 2 e 15. Os do meio passam em montagem, com fusões. O som mistura a narração da TV, o ruído da plateia e golpes amplificados. Conti disse ter escrito a música das lutas como uma fuga à maneira de Bach (AFI). Segundo o AFI, há cortes para os amigos de Rocky assistindo pela TV do bar.",
+      "momento": "3º ato, luta (aprox. min 106–116)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://slashfilm.com/1165877/why-the-original-ending-to-rocky-had-to-be-completely-reshot",
+        "https://www.filmsite.org/rock5.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f41",
+      "tipo": "cena",
+      "descricao": "No 1º assalto, Apollo dança, provoca e sorri, e o comentarista diz que Rocky bloqueia os golpes com o rosto. Rocky derruba Apollo, a primeira queda da carreira do campeão. Apollo se levanta e, antes do sino, quebra o nariz de Rocky. No corner, Mickey diz que o nariz quebrou e que ficou até melhor. No corner de Apollo, alguém (o filmsite atribui a Duke) reclama que o desafiante não sabe que aquilo é um show e acha que é uma luta.",
+      "momento": "3º ato, 1º assalto (aprox. min 107–110)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-21-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f42",
+      "tipo": "cena",
+      "descricao": "No 14º assalto, Rocky vai à lona, e Mickey grita para ele ficar no chão. Rocky se arrasta até as cordas e se ergue antes do fim da contagem, quando Apollo já dançava de braços erguidos. Em seguida golpeia as costelas do campeão. Adrian, que ia esperar no vestiário, aparece no fundo da arena para ver.",
+      "momento": "3º ato, 14º assalto (aprox. min 112–113)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://shmoop.com/study-guides/rocky/scene-22-summary.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://www.shmoop.com/study-guides/rocky/ending.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f43",
+      "tipo": "cena",
+      "descricao": "Antes do 15º, a montagem alterna os dois corners. Rocky não enxerga e pede que lhe cortem a pálpebra inchada; o corner reluta e corta (o AFI fala em navalha). Duke diz que Apollo está sangrando por dentro e quer parar a luta, e Apollo proíbe. Rocky ameaça Mickey se ele parar a luta. Apollo protege o lado direito, onde está a costela.",
+      "momento": "3º ato, intervalo do 15º assalto (aprox. min 113–114)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f44",
+      "tipo": "cena",
+      "descricao": "No último sino, abraçados, Apollo diz que não haverá revanche, e Rocky diz que não quer. Os repórteres o cercam e ele responde gritando o nome de Adrian, sem parar. Jergens anuncia ao microfone a maior demonstração de coragem e resistência da história do ringue e uma decisão dividida, lida em meio ao barulho, com o resultado quase inaudível. Adrian atravessa a multidão e perde o gorro, e Rocky pergunta por ele. Os dois repetem que se amam, e a imagem congela num close do rosto inchado de Rocky junto ao de Adrian.",
+      "momento": "Final (aprox. min 115–117, antes dos créditos)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky",
+        "https://www.filmsite.org/rock5.html",
+        "https://en.wikipedia.org/wiki/Rocky",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://shmoop.com/study-guides/rocky/scene-22-summary.html",
+        "https://slashfilm.com/1165877/why-the-original-ending-to-rocky-had-to-be-completely-reshot",
+        "https://www.thewrap.com/culture-lifestyle/culture/sylvester-stallone-original-rocky-ending-the-tonight-show/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f45",
+      "tipo": "forma",
+      "descricao": "Ficha técnica: imagem em 1,85:1, colorida (Technicolor, cópias DeLuxe), mixagem original mono. Fotografia de James Crabe, montagem de Richard Halsey e Scott Conrad, música de Bill Conti, duração de 119 minutos. Rodado em locações na Filadélfia, com cenas em Los Angeles: a luta final foi filmada no Los Angeles Sports Arena, segundo o AFI.",
+      "momento": "Filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://m.blu-ray.com/movies/Rocky-4K-Blu-ray/324786",
+        "https://ultrahd.highdefdigest.com/113539/rocky4kultrahdbluray.html",
+        "https://catalog.afi.com/Catalog/moviedetails/53862",
+        "https://en.wikipedia.org/wiki/Rocky"
+      ],
+      "confianca": "alta"
+    }
+  ],
+  "mitosAEvitar": [
+    "Rocky NÃO vence Apollo neste filme: perde por decisão dividida. A vitória é em Rocky II (1979). Fontes: https://en.wikipedia.org/wiki/Rocky e https://en.wikipedia.org/wiki/Rocky_II",
+    "O “Yo, Adrian” seguido de “eu consegui”, dito pela TV depois de vencer, é de Rocky II. Neste filme, “Yo, Adrian” aparece na coletiva e diante da porta. No final ele só grita o nome dela.",
+    "A frase sobre não importar a força com que você bate, mas quanto aguenta apanhar e seguir em frente, é de Rocky Balboa (2006), não deste filme. Não usar como tese do original sobre resistência. Fonte: https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
+    "A estátua de Rocky na escadaria do museu não aparece no filme: foi encomendada para Rocky III (1982). Fontes: https://en.wikipedia.org/wiki/Rocky_Steps e https://en.wikipedia.org/wiki/Rocky_III",
+    "“Eye of the Tiger” não toca aqui (é de Rocky III). O tema do treino é “Gonna Fly Now”, de Bill Conti. Também não há perseguição a galinha nem centenas de crianças correndo atrás de Rocky pela cidade, que são de Rocky II.",
+    "Rocky não foi o primeiro filme com Steadicam: foi o terceiro, depois de Bound for Glory e Marathon Man (Wikipedia, filmsite). Matérias, inclusive uma com fala de Avildsen ao Inquirer, dizem o contrário. De todo modo é bastidor.",
+    "A luta final não foi filmada no Spectrum. Na tela a arena é o Spectrum, mas segundo o AFI a filmagem foi no Los Angeles Sports Arena. A pista de patinação vazia também foi filmada em Los Angeles (Inquirer, 14/3/2014).",
+    "A imagem do cartaz com Rocky e Adrian de mãos dadas vem do final descartado, em que os dois saem de uma arena vazia. Essa cena não está no filme (Slashfilm, AFI).",
+    "O roteiro publicado no IMSDb (master script com revisões até 7/1/1976) difere do filme: a cartela diz 12 de novembro de 1975, e no final a multidão carrega os lutadores. Não citar o roteiro como se fosse o filme. Na tela, a cartela diz 25 de novembro de 1975.",
+    "Apollo Creed não é um retrato de Muhammad Ali: o AFI fala em personagem vagamente inspirado em Ali, e a Wikipedia cita também Ken Norton. Rocky também não é a história de Chuck Wepner: Stallone nega, Wepner processou e houve acordo. Tudo isso é bastidor e não entra no texto.",
+    "A luta do Bicentenário é em 1º de janeiro de 1976, Ano-Novo, e não em 4 de julho.",
+    "As apostas ditas na tela são de 50 para 1. “Um milhão para um” é slogan do cartaz de divulgação, não fala do filme.",
+    "Sobre o cartaz errado (calção com cores trocadas) há duas versões de bastidor que se contradizem: segundo Avildsen, foi erro de produção transformado em fala; segundo Stallone, foi troca de cor de última hora. Não afirmar nenhuma das duas.",
+    "Não fixar o bairro de Rocky. O AFI diz sul da Filadélfia, mas a casa usada fica em Kensington (Wikipedia, artigo Rocky Steps). As cenas no mercado são de outra região.",
+    "O promotor se apresenta a Rocky como George Jergens, mas o cartão que Mickey lê diz Miles Jergens. As duas formas estão na tela; não corrigir uma pela outra.",
+    "Não usar como fonte os resumos de checkplease.neocities.org (Couch to 4K), gerados por IA e com erros: telefonema de Jergens a Rocky (ele nem tem telefone), briga na véspera de Natal, gorro verde, uísque no roupão, crianças seguindo Rocky, pista em Cherry Hill.",
+    "Joe Frazier afirmou que socar carne e subir a escadaria vieram do treino dele. É alegação do próprio Frazier, não fato confirmado, e é bastidor.",
+    "O nome Resurrection A.C. do clube da abertura tem uma fonte confiável só (f03). Conferir no fotograma antes de basear frase nele.",
+    "As minutagens deste dossiê são estimativas pela posição das falas na transcrição, para 119 minutos de filme. Não publicar minuto exato.",
+    "Não reproduzir a letra de “Gonna Fly Now”, nem trechos dela.",
+    "Não usar atribuições que circulam sem confirmação: quem diz no corner de Apollo que o desafiante acha que é uma luta (o filmsite atribui a Duke) e quem fala que Apollo parece uma grande bandeira (o AV Club atribui a Rocky, mas a transcrição sugere os comentaristas)."
+  ],
+  "finalNaoRevelar": "Rocky não vence: aguenta os 15 assaltos e perde para Apollo por decisão dividida. Não revelar nada da luta depois do primeiro sino: que Apollo vai à lona no 1º assalto (a primeira queda da carreira dele); que o nariz de Rocky, nunca quebrado em 64 lutas, quebra; que Rocky cai no 14º e se levanta contra a ordem de Mickey; o corte no olho; a costela quebrada e o sangramento interno de Apollo; a troca entre os dois sobre não haver revanche; Rocky ignorando os repórteres para chamar Adrian; o anúncio abafado da decisão; o gorro perdido, o “eu te amo” e a imagem congelada. Também não dizer que ele “chega ao fim”, “fica de pé no último sino” ou “aguenta os 15 assaltos”, porque isso entrega o desfecho. Pode-se dizer que, na véspera, ele se propõe a aguentar até o fim (f36), sem dizer se consegue. A entrada fantasiada de Apollo (f39) aparece antes do primeiro sino e pode ser usada.",
+  "pistasDeTese": [
+    "Ser visto e escolher quem vê. No primeiro ato, Rocky conta a vitória a quem não estava lá (tartarugas, Mickey, o bar) e diz que as provocações não o atingem, até confessar que atingem. O filme mede dignidade pelo olhar alheio, e o arco de Rocky é trocar a plateia por uma testemunha só. A cena final ancora isso, mas é spoiler; no texto, usar só a primeira metade. Fatos: f07, f08, f24, f44 (spoiler).",
+    "A meta que encolhe para caber no corpo. Na véspera, Rocky troca vencer por aguentar até o fim, e o filme passa a medir dignidade por resistência, não por resultado. Contra a linha pedida: quem manda Rocky ficar no chão é o próprio treinador, e o campeão, sangrando por dentro, também se recusa a parar. Resistir até o fim não é virtude exclusiva do herói, é o que o ringue cobra dos dois. Fatos: f35, f36, f42 (spoiler), f43 (spoiler).",
+    "A oportunidade é um produto. A chance nasce de um cálculo de marketing: o apelido, a piada sobre Colombo, “muito esperto”, o azarão branco escolhido pela etnia. O cartaz erra o calção e o promotor diz que não importa, o roupão vira anúncio de frigorífico e o campeão entra fantasiado de Washington e Tio Sam. O filme mostra a fábula do azarão sendo montada como mercadoria e depois a entrega ao público com fanfarra e montagem. Isso permite uma leitura irônica ou cúmplice. Fatos: f15, f16, f31, f33, f34, f35, f39.",
+    "Rótulos de nascença. Todos no bairro carregam um veredito alheio: o pai (sem cérebro, use o corpo), a mãe de Adrian (sem corpo, use a cabeça), “bum”, “tomato”, “perdedora”, “dumb dago”. O filme é sobre recusar o rótulo. Quem faz isso primeiro, em voz alta, é Adrian contra o irmão, antes de qualquer luta. Fatos: f04, f10, f12, f19, f20, f22, f32, f37.",
+    "Leitura contrária a partir de Adrian. Ela muda de aparência tirando óculos e gorro a pedido de um homem, é segurada na porta, troca a casa do irmão pela de Rocky e é tratada pelo treinador como ameaça às pernas do lutador. O filme dá a ela a frase de dignidade mais direta e logo a devolve ao lugar de quem espera no vestiário. Fatos: f21, f30, f32, f38.",
+    "O corpo como único capital. O vestiário desconta até a toalha. Rocky cobra dívidas com o corpo para um agiota que depois banca o treino. Paulie carrega carcaças e pede emprego para quebrar ossos. A carne pendurada vira saco de pancada, e as costelas do boi ecoam as da luta (spoiler). A dignidade de Rocky é a de quem só tem o corpo para vender e decide até onde vende: ele não quebra o polegar do devedor. Fatos: f05, f09, f19, f25, f29, f43 (spoiler).",
+    "Feriado do país, quinta-feira de Rocky. Ação de Graças, Natal e o Ano-Novo do Bicentenário são festas nacionais, e para Rocky é quinta-feira. Apollo transforma a luta em fantasia patriótica (Washington, Tio Sam, “a terra da oportunidade”). Rocky entra num feriado que não é dele, num espetáculo que o anuncia de calção errado. Fatos: f13, f15, f18, f23, f35, f39.",
+    "Moldura religiosa, com cautela. O filme abre sob uma pintura de Cristo, num clube que uma fonte chama de Resurrection, e Rocky reza ajoelhado antes da luta. A leitura de martírio e de levantar-se está à mão, mas o filme a corta com prosa e piada (“é quinta-feira”, as tartarugas). Confirmar o nome do clube antes de usar. Fatos: f02, f03, f18, f38, f42 (spoiler)."
+  ]
+}

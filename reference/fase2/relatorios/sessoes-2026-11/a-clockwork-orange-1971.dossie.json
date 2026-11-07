@@ -1,0 +1,652 @@
+{
+  "slug": "a-clockwork-orange-1971",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/dossie.json",
+  "fatos": [
+    {
+      "id": "f01",
+      "tipo": "forma",
+      "descricao": "Os créditos de abertura passam sobre cartelas de cor chapada ao som de um arranjo eletrônico de Wendy Carlos para a 'Music for the Funeral of Queen Mary', de Purcell, peça escrita em 1695 para o cortejo fúnebre de uma rainha. Depois vem um close do rosto de Alex olhando direto para a lente, de chapéu-coco e com cílio postiço só num olho. Um zoom para trás revela os quatro sentados no Korova. Segundo o entrevistador Michel Ciment, as três primeiras sequências repetem esse movimento, do close ao cenário inteiro.",
+      "momento": "Parte 1, abertura (primeiros minutos)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f02",
+      "tipo": "cena",
+      "descricao": "No Korova Milkbar, mesas e dispensadores de bebida são esculturas de fibra de vidro de mulheres nuas em pose de móvel. Os quatro bebem 'milk-plus', leite com droga (vellocet, synthemesc ou drencrom). A narração diz que a bebida serve para deixá-los prontos: 'make you ready for a bit of the old ultra-violence'. Antes de qualquer tratamento do Estado, a violência de Alex já começa por uma substância servida num balcão. Transcrição: Springfield! Springfield! (legendas) e roteiro de filmagem de set. 1970.",
+      "momento": "Parte 1, abertura no Korova",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f03",
+      "tipo": "estrutura",
+      "descricao": "Alex narra quase todo o filme em voz off, em nadsat (gíria de base russa e cockney), e fala direto com o espectador: chama a plateia de 'O my brothers' e a si mesmo de 'your humble narrator' ou 'faithful friend and long-suffering narrator'. O filme mostra as imagens que ele imagina (devaneios com Beethoven e com a Bíblia, fantasia final) com o mesmo peso das cenas reais. O autor Paul Duncan observa que tudo é visto do ponto de vista de Alex.",
+      "momento": "Filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f04",
+      "tipo": "cena",
+      "descricao": "Num túnel de pedestres, um mendigo bêbado canta 'Molly Malone'. As sombras alongadas dos quatro avançam sobre ele, eles aplaudem a cantoria e então Alex enfia a bengala na barriga do homem. Antes da surra, o mendigo reclama de um mundo sem 'law and order' em que há homens na Lua. Ele volta a aparecer na Parte 3 (ver f31).",
+      "momento": "Parte 1, primeira saída noturna",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f05",
+      "tipo": "forma",
+      "descricao": "Num cassino abandonado, a câmera desce de um proscênio dourado até o palco, onde a gangue de Billyboy rasga a roupa de uma moça. A voz de Alex anuncia a chegada da turma antes que ele entre no quadro, e Pauline Kael apontou que o corte para o palco expõe a moça ao espectador antes de Alex chegar. A briga entre as gangues é encenada como balé, com corpos atravessando móveis e vidraças, ao som da abertura de 'La gazza ladra', de Rossini.",
+      "momento": "Parte 1, cassino",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc.html",
+        "http://www.visual-memory.co.uk/amk/doc/0051.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f06",
+      "tipo": "cena",
+      "descricao": "No carro Durango 95, eles jogam outros carros para fora da estrada ('hogs of the road') e chegam a uma casa com um letreiro iluminado: 'HOME'. Alex diz à mulher que houve um acidente e pede o telefone. Os quatro entram de máscara, a de Alex com nariz fálico. Alex chuta o escritor Frank Alexander no compasso de 'Singin' in the Rain', que ele mesmo canta. Os dois são amordaçados com uma bola e fita, Alex corta a roupa da sra. Alexander com tesoura e diz ao marido, obrigado a ver: 'Viddy well, little brother'. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 1, 'visita surpresa' à casa HOME",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.filmsite.org/cloc.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f07",
+      "tipo": "cena",
+      "descricao": "De volta ao Korova, uma mulher numa mesa de gente da TV canta de improviso um trecho da 'Ode à Alegria', da 9ª Sinfonia de Beethoven. Alex narra os arrepios que sente. Dim faz um barulho de deboche com a boca, Alex bate nas pernas dele com a bengala por falta de respeito ao compositor, e Dim ameaça briga e recua. A cena prende o culto de Alex à música a um ato de castigo.",
+      "momento": "Parte 1, fim da primeira noite",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc.html",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f08",
+      "tipo": "contexto-na-tela",
+      "descricao": "Alex mora com os pais no 'Municipal Flat Block 18A, Linear North'. No saguão, um mural de trabalhadores em estilo de arte socialista está coberto de desenhos obscenos; há lixo no chão e o elevador não funciona.",
+      "momento": "Parte 1, volta para casa",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.filmsite.org/cloc.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f09",
+      "tipo": "som",
+      "descricao": "No quarto, Alex guarda relógios e carteiras roubados numa gaveta e a cobra Basil em outra, e tem um retrato de Beethoven na parede. Põe para tocar a 9ª Sinfonia numa fita; um close mostra a etiqueta da Deutsche Grammophon (Filarmônica de Berlim, regência de Ferenc Fricsay). Enquanto narra 'Oh bliss, bliss and heaven', o filme corta para as imagens que ele imagina: quatro estatuetas de Cristo crucificado em cortes rápidos no ritmo da música, uma mulher enforcada, explosões, uma avalanche e o próprio Alex com presas de vampiro sangrando. Alex já junta, por conta própria, Beethoven e imagens de violência: é o par que o Ludovico vai usar contra ele.",
+      "momento": "Parte 1, quarto de Alex depois da primeira noite",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f10",
+      "tipo": "personagem",
+      "descricao": "Na manhã seguinte, o pai pergunta onde o filho 'trabalha' à noite, e a mãe repete a desculpa dele ('helping like, here and there'). Alex falta à escola. O agente de condicional Deltoid entra no apartamento, senta na cama ao lado de Alex, que está de cueca, põe o braço no ombro dele e agarra sua virilha. Diz que estudam 'o problema' há quase um século sem avançar e pergunta: 'Is it some devil that crawls inside of you?'. Alex promete se comportar: 'As an unmuddied lake, sir'. A câmera fica parada sobre os dois na cama. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 1, manhã seguinte",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc.html",
+        "http://www.visual-memory.co.uk/amk/doc/0051.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f11",
+      "tipo": "forma",
+      "descricao": "Alex leva duas garotas de uma loja de discos para o quarto. A cena de sexo é filmada com poucos quadros por segundo e passa acelerada na tela, como comédia de pastelão, ao som da abertura de 'Guilherme Tell', de Rossini. Na entrevista a Ciment, Kubrick disse que quis satirizar o uso da câmera lenta para solenizar cenas assim. Pouco depois vem a sequência em câmera lenta da marina (f13): o filme manipula a velocidade da violência e do sexo.",
+      "momento": "Parte 1, tarde do segundo dia",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.filmsite.org/cloc.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f12",
+      "tipo": "fala",
+      "descricao": "No saguão, os droogs se rebelam: Georgie anuncia 'the new way' e propõe roubos grandes para ganhar 'big, big money'. Alex não entende para que dinheiro, se tudo se toma: 'you pluck it from the trees', diz sobre o carro. Georgie responde que ele pensa e fala 'like a little child'. A violência de Alex não visa lucro; os comparsas querem uma carreira. Transcrição: Springfield! e Filmsite.",
+      "momento": "Parte 1, motim dos droogs",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f13",
+      "tipo": "som",
+      "descricao": "Caminhando pela marina do conjunto habitacional, Alex narra que 'thinking was for the gloopy ones' e que a ideia lhe veio da música: 'a window open with a stereo on'. Ouve-se 'La gazza ladra'. Em câmera lenta, ele derruba Georgie e Dim na água e corta a mão de Dim com a lâmina escondida na bengala. Depois narra 'Now they knew who was master and leader. Sheep, thought I'. Pelas palavras dele, a decisão vem de um estímulo de fora, não de uma deliberação. Transcrição: Springfield! e roteiro de filmagem (que marca 'IN SLOW MOTION').",
+      "momento": "Parte 1, marina",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.filmsite.org/cloc2.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f14",
+      "tipo": "cena",
+      "descricao": "Na Woodmere Health Farm, a dona (que se apresenta ao telefone como Miss Weathers e é creditada como Catlady) reconhece o golpe do acidente pelo que leu no jornal e liga para a polícia de Radlett. A casa tem gatos e pinturas eróticas. Alex entra pela janela; ela o ataca com um busto de Beethoven, ele se defende com uma escultura fálica e a golpeia com ela. A cena é filmada com câmera na mão, operada pelo próprio Kubrick. Na saída, Dim quebra uma garrafa de leite no rosto de Alex e o grupo foge; Alex grita 'I'm blind, you bastards!'.",
+      "momento": "Parte 1, fim (prisão de Alex)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html",
+        "http://www.visual-memory.co.uk/amk/doc/0070.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f15",
+      "tipo": "cena",
+      "descricao": "Na delegacia, um policial aperta o nariz ferido de Alex, que agarra os genitais dele; os policiais o espancam e o sangue respinga na parede branca. Um deles resume: 'Violence makes violence'. Deltoid chega, se inclina para a câmera num plano do ponto de vista de Alex, avisa que a vítima morreu e cospe no rosto dele, enquanto os policiais se oferecem para segurá-lo.",
+      "momento": "Transição Parte 1/Parte 2, delegacia",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc2.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f16",
+      "tipo": "cena",
+      "descricao": "Um plano aéreo mostra o presídio com alas que saem em raios de um centro, desenho que um ensaio acadêmico compara ao panóptico. Na admissão, Alex diz o nome completo ('Alexander DeLarge, sir') e o guarda-chefe (Michael Bates), aos gritos, o substitui por um número: 'You are now 655321'. Os pés ficam atrás de uma linha branca pintada no chão, os objetos são lidos um a um num inventário e há uma revista anal com lanterna. A câmera fica quase parada.",
+      "momento": "Parte 2, entrada na prisão",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc2.html",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f17",
+      "tipo": "som",
+      "descricao": "Dois anos depois, na capela, o capelão (Godfrey Quigley) ameaça os presos com o inferno, onde pecadores impenitentes gritam em agonia sem fim. Os presos riem, arrotam e soltam gases. Em seguida ele os obriga a cantar um hino ('Sing up, damn you!') cuja letra diz 'I was a wandering sheep' e 'I would not be controlled'. Nos créditos, o hino aparece como 'Wayward Child', com letra de Fanny Crosby. O defensor da escolha (f19) também governa pelo medo. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, capela da prisão",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f18",
+      "tipo": "cena",
+      "descricao": "Na biblioteca da prisão, Alex lê a Bíblia e se imagina como soldado romano chicoteando Cristo a caminho da cruz, e depois servido por mulheres seminuas. A narração diz que ele gosta das partes de briga e de sexo e não da pregação. Para o capelão, ele finge interesse pelo 'Big Book'. A trilha dessas fantasias usa trechos de 'Scheherazade', de Rimsky-Korsakov, que não aparecem nos créditos (só uma fonte registra a música).",
+      "momento": "Parte 2, biblioteca da prisão",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc2.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f19",
+      "tipo": "fala",
+      "descricao": "Alex pede ao capelão que o indique para o novo tratamento, de que soube por um pedaço de jornal, porque 'it gets you out quickly'. O capelão avisa que o diretor do presídio tem dúvidas e que há perigos, e define: a bondade vem de dentro e é escolhida, 'When a man cannot choose he ceases to be a man'. Alex responde 'I only know I want to be good'. A plateia acabou de ver as fantasias bíblicas, então sabe que é encenação. Transcrição: Springfield!, roteiro de filmagem e Filmsite.",
+      "momento": "Parte 2, conversa com o capelão",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f20",
+      "tipo": "cena",
+      "descricao": "No pátio, os presos andam em círculo. O Ministro do Interior (Anthony Sharp) chega ao som da marcha 'Pomp and Circumstance', de Elgar, e diz ao diretor que o governo precisará das celas para 'political offenders' e que basta 'Kill the criminal reflex'. Alex fala sem ser chamado ('You're absolutely right, sir') e é escolhido. O Ministro o aprova pela lista 'enterprising, aggressive, outgoing, young, bold, vicious'. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, visita do Ministro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f21",
+      "tipo": "fala",
+      "descricao": "No gabinete, o diretor do presídio diz a Alex que não aprova as 'new ridiculous ideas' do ministro, mas que 'orders are orders'. Ele defende o castigo: 'An eye for an eye, I say', e acha injusta a ideia nova de 'turn the bad into good'. O guarda-chefe entrega Alex aos médicos avisando que ele foi e voltará a ser violento, apesar de puxar o saco do capelão. Transcrição: Springfield! e Filmsite.",
+      "momento": "Parte 2, saída da prisão para o Ludovico",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc2.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f22",
+      "tipo": "cena",
+      "descricao": "No Centro Ludovico, a dra. Branom (Madge Ryan) diz que Alex é um 'very lucky boy' por ter sido escolhido e lhe aplica uma injeção. Ele pergunta se são vitaminas e ela responde 'Something like that'. Ninguém lhe explica o método antes de começar. Ele aceita porque quer ser 'a free young malchick again in a fortnight', como diz a narração. O consentimento existe, mas sem informação. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, chegada ao Ludovico",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f23",
+      "tipo": "forma",
+      "descricao": "O tratamento acontece numa pequena sala de cinema. Alex está de camisa de força, preso à poltrona por correias, com uma faixa na testa e fios com presilhas na cabeça. Grampos metálicos mantêm as pálpebras abertas e um assistente pinga colírio que escorre pelo rosto como choro. Na fileira de trás, médicos de jaleco branco observam ao lado de monitores. Os filmes mostram um espancamento por uma gangue e um estupro coletivo, parecidos com os crimes dele, e depois cinejornais de guerra. O ensaio de Anthony Macris descreve a cadeia de olhares: nós vemos Alex, que vê a tela, enquanto os médicos o observam.",
+      "momento": "Parte 2, sessões do Ludovico (meio do filme)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/",
+        "https://www.filmsite.org/cloc2.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f24",
+      "tipo": "fala",
+      "descricao": "Durante a primeira sessão, Alex elogia o filme projetado como 'a very good, professional piece of cine, like it was done in Hollywood' e comenta: 'the colors of the real world only seem really real' quando vistas numa tela. O comentário sobre ver violência no cinema vem de um espectador amarrado. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, primeira sessão do Ludovico",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f25",
+      "tipo": "fala",
+      "descricao": "Alex diz que antes se sentia ótimo vendo ou praticando violência e agora sente náusea. A dra. Branom explica que, quando somos saudáveis, reagimos ao odioso com medo e enjoo: 'You're becoming healthy, that's all'. A náusea produzida pela droga recebe o nome de saúde. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, quarto do Ludovico após a primeira sessão",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f26",
+      "tipo": "som",
+      "descricao": "No segundo dia, a tela mostra cinejornais da Segunda Guerra com tropas nazistas e bombardeios; um ensaio acadêmico identifica trechos de 'O Triunfo da Vontade'. A trilha desses filmes é o 4º movimento da 9ª de Beethoven. Alex grita 'It's a sin!': protesta contra o uso de Beethoven, não contra as imagens. O dr. Brodsky diz à assistente 'Here's the punishment element perhaps' e responde a Alex: 'The choice has been all yours'. A partir daí o condicionamento atinge também a 9ª. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, segunda sessão do Ludovico",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc2.html",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f27",
+      "tipo": "cena",
+      "descricao": "A demonstração do tratamento é um espetáculo num palco iluminado diante de autoridades. O Ministro abre lembrando a promessa de 'law and order' do partido; nos bastidores, alguém diz 'If the polls are right, we have nothing to lose'. Um ator insulta Alex, dá-lhe tapas e o manda lamber a sola do sapato, e Alex lambe. Uma mulher de seios nus se aproxima, ele estende as mãos e cai engasgado. Ele narra que o enjoo veio 'like a detective who'd been watching around the corner'. Os dois atores agradecem os aplausos da plateia com reverências. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, demonstração pública (fim da Parte 2)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f28",
+      "tipo": "fala",
+      "descricao": "Antes do número, o Ministro apresenta Alex dizendo que a prisão lhe ensinou 'the false smile' da hipocrisia (só na transcrição de legendas). Depois do número, o capelão protesta: o rapaz não tem escolha, foi movido pelo interesse próprio e pelo medo da dor, e deixou de ser 'a creature capable of moral choice'. O Ministro responde: 'We're not concerned with motives, with the higher ethics'. Promete que Alex será um 'true Christian, ready to turn the other cheek' e encerra com 'The point is that it works!'. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 2, debate depois da demonstração",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f29",
+      "tipo": "cena",
+      "descricao": "Solto, Alex volta ao apartamento dos pais, que souberam da libertação pelos jornais. O quarto dele foi alugado a um inquilino, Joe. A polícia levou seus pertences por uma 'new regulation' de indenização às vítimas, e a cobra Basil morreu. Quando Alex ergue o braço contra Joe, engasga e cai na poltrona. Joe diz 'You've made others suffer' e que é justo ele sofrer. O pai diz que não pode pedir a Joe que saia porque ele já pagou o aluguel, e Alex sai chorando. A cena é feita em planos longos com a câmera parada. Segundo o Filmsite, a volta é acompanhada pela canção pop 'I Want to Marry a Lighthouse Keeper' (Erika Eigen); a canção está nos créditos (AFI), mas só o Filmsite a liga a esta cena.",
+      "momento": "Parte 3, início",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc3.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "http://www.visual-memory.co.uk/amk/doc/0051.html",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f30",
+      "tipo": "estrutura",
+      "descricao": "O filme se divide em três partes: as noites de Alex, a prisão com o tratamento e a volta à rua. Na terceira, quase todos os que Alex agrediu na primeira voltam a cruzar com ele, agora em posição de força: o mendigo, os ex-comparsas Dim e Georgie e o escritor da casa HOME. O letreiro 'HOME' e as frases de Deltoid também retornam. Kubrick disse a Ciment que o romance o atraiu pelo uso deliberado de coincidência e simetria de enredo. Pete, o quarto droog, não reaparece.",
+      "momento": "Estrutura geral (Partes 1 e 3)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.filmsite.org/cloc3.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f31",
+      "tipo": "cena",
+      "descricao": "À beira do rio, Alex pensa em se matar. O mesmo mendigo da Parte 1 o reconhece, arrasta-o para um túnel e chama outros velhos, que o cercam e batem nele em close. A narração diz: 'It was old age having a go at youth'. Alex não reage, porque apanhar é melhor do que sentir o enjoo. Segundo a Wikipedia, a cena do rio é acompanhada por Rossini. Transcrição: Springfield!.",
+      "momento": "Parte 3, rio e túnel",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc3.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f32",
+      "tipo": "cena",
+      "descricao": "Virada da Parte 3 (não é o final): os dois policiais que interrompem a surra são Dim e Georgie, fardados. Georgie explica: 'A job for two who are now of job age'. Dim pede que não o chamem mais de Dim: 'Officer, call me'. Eles levam Alex algemado por uma estrada de terra no mato, num travelling filmado por trás, ao som do Purcell eletrônico segundo o Filmsite. Afundam a cabeça dele num cocho d'água enquanto batem com o cassetete, 'to make sure you stay cured'. O Estado incorporou a violência da gangue. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 3, policiais",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f33",
+      "tipo": "cena",
+      "descricao": "Sob chuva forte, Alex chega à porta de uma casa com o letreiro 'HOME', narrando 'Home, home, home'. O fisiculturista Julian (David Prowse) o carrega para dentro. O escritor, agora em cadeira de rodas, não o reconhece, porque os invasores usavam máscaras, e o identifica como vítima do tratamento que viu no jornal e 'on the video'. Ao telefone, diz que o rapaz é 'the most potent weapon imaginable' para o governo perder a eleição. Fala em defender a liberdade e conclui que o povo vai trocá-la 'for a quieter life' e por isso precisa ser 'led. Driven. Pushed.'. Na entrevista a Ciment, Kubrick chamou o Ministro de figura da direita e o escritor de lunático da esquerda. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 3, chegada à casa HOME",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f34",
+      "tipo": "cena",
+      "descricao": "Na banheira, Alex cantarola 'Singin' in the Rain', a canção que cantou durante o ataque da Parte 1, e o eco do banheiro amplia o som. O escritor ouve do outro lado da porta, e um plano de baixo mostra o rosto dele se contorcendo: é o momento do reconhecimento. O condicionamento não alcançou essa canção.",
+      "momento": "Parte 3, banho na casa HOME",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f35",
+      "tipo": "cena",
+      "descricao": "No jantar, o escritor conta que a mulher morreu meses depois do ataque e que os médicos falaram em pneumonia, numa epidemia de gripe, mas que para ele ela foi 'a victim of the modern age'. Chama Alex de outra vítima. Os aliados políticos dele perguntam pela música e Alex esclarece: 'it's not all music. It's just the Ninth'. O vinho está drogado. Alex acorda trancado num quarto do andar de cima com a 9ª tocando alto embaixo (o 2º movimento, segundo o disco da trilha) e pula da janela. Um plano subjetivo mostra a queda, e a tela fica preta. Transcrição: Springfield!.",
+      "momento": "Parte 3, jantar e tortura",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc3.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)",
+        "http://www.visual-memory.co.uk/amk/doc/0070.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f36",
+      "tipo": "cena",
+      "descricao": "Alex acorda no hospital, engessado. Uma montagem de manchetes acusa o governo de tê-lo levado ao suicídio. Os pais admitem 'maybe it was our fault too'. Alex conta um sonho repetido com médicos 'playing around with me gulliver'. A dra. Taylor lhe mostra desenhos com balões de fala vazios, ele os preenche com frases de violência e sexo, e ela conclui que ele está 'well on the way to making a complete recovery'. A volta da violência é chamada de recuperação. O filme não mostra nenhum procedimento de descondicionamento. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 3, hospital",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f37",
+      "tipo": "fala",
+      "descricao": "O Ministro visita Alex no hospital e lhe dá comida na boca, e Alex abre a boca a cada bocado. Diz que o governo seguiu recomendações erradas, que 'pôs fora de circulação' o escritor 'subversivo' e oferece emprego e bom salário se Alex ajudar a mudar o 'public's verdict' antes da eleição: 'We always help our friends'. Pergunta como chamá-lo ('Alex, if I may call you Alex') e se apresenta: 'My name is Frederick'. Alex sela o acordo com a frase que disse a Deltoid na Parte 1: 'As an unmuddied lake, Fred'. Kubrick, a Ciment, descreveu Alex nessas imagens como filho alimentado na boca por uma sociedade corrupta. Transcrição: Springfield! e roteiro de filmagem.",
+      "momento": "Parte 3, penúltima cena",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f38",
+      "tipo": "cena",
+      "descricao": "Enfermeiros trazem flores e um aparelho de som. Fotógrafos entram e o Ministro posa abraçado a Alex, 'a symbol of our new understanding'. Toca o 4º movimento da 9ª e Alex faz sinal de positivo para as câmeras. Os olhos dele reviram e entra uma fantasia: em câmera lenta, ele faz sexo com uma mulher na neve, e uma plateia em trajes de época (cartolas, sombrinhas) aplaude. Ele narra 'I was cured, all right!', e há corte seco para a cartela de créditos. Nos créditos finais toca 'Singin' in the Rain' na gravação de Gene Kelly de 1952. Essa fantasia final não está no roteiro de filmagem, que termina com outra imagem.",
+      "momento": "Final",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc3.html",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f39",
+      "tipo": "forma",
+      "descricao": "Muitas cenas usam lentes grande-angulares extremas (a Wikipedia cita uma Kinoptik de 9,8 mm em câmera Arriflex 35 mm), que esticam o espaço e afastam as pessoas umas das outras e do cenário. As cenas de ação, como a da Catlady, são filmadas com câmera na mão, operada pelo próprio Kubrick segundo ele mesmo. Ao lado das velocidades alteradas (f11, f13), são recursos que quebram a ilusão de realidade, como observou o entrevistador Ciment.",
+      "momento": "Filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html",
+        "http://www.visual-memory.co.uk/amk/doc/0070.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f40",
+      "tipo": "forma",
+      "descricao": "Nas cenas de instituição e família (Deltoid na cama, admissão na prisão, volta à casa dos pais), a câmera fica parada e a montagem quase não corta: os personagens ficam presos no mesmo enquadramento em planos longos. O contraste é com a câmera solta e as velocidades alteradas das cenas de violência da Parte 1. Ciment e Kael registram esses planos fixos; Kael viu neles imobilidade excessiva.",
+      "momento": "Partes 1 a 3, cenas domésticas e institucionais",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html",
+        "http://www.visual-memory.co.uk/amk/doc/0051.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f41",
+      "tipo": "som",
+      "descricao": "Beethoven e Rossini muitas vezes saem de aparelhos dentro da cena: a fita de Alex no quarto, a janela com o som ligado na marina, a trilha do filme projetado no Ludovico, o toca-discos do andar de baixo na casa HOME, o som trazido ao hospital. Na Parte 1, quem aperta o botão é Alex; depois, médicos, o escritor e o Ministro. Já Purcell (abertura e outras passagens), Elgar (visita do Ministro), 'Guilherme Tell' (orgia) e 'La gazza ladra' no cassino entram como trilha de fora da cena. No filme, o condicionamento atinge só a 9ª e não toda a música clássica, como no romance.",
+      "momento": "Filme inteiro (as duas últimas ocorrências são do final)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc.html",
+        "https://www.filmsite.org/cloc3.html",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f42",
+      "tipo": "estrutura",
+      "descricao": "A imprensa move cada virada. A Catlady recusa Alex porque leu sobre o ataque aos Alexander. Alex descobre o Ludovico num pedaço de jornal na oficina da prisão. Os pais souberam da soltura pelos jornais da manhã, com manchetes sobre a 'cura' do crime, e o escritor reconhece a vítima do tratamento pelo jornal e pelo vídeo. No final, manchetes acusam o governo e fotógrafos registram a aliança entre Alex e o Ministro.",
+      "momento": "Filme inteiro (as duas últimas ocorrências são do final)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.filmsite.org/cloc3.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "f43",
+      "tipo": "contexto-na-tela",
+      "descricao": "A expressão 'clockwork orange' nunca é dita nem explicada no filme: o crítico Stanley Kauffmann notou que o roteiro deixa de fora a referência do romance ao título, e a transcrição das falas não registra a expressão. O sentido do título fica para o espectador.",
+      "momento": "Filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "f44",
+      "tipo": "forma",
+      "descricao": "A imagem é exibida no formato 1,66:1, mantido na restauração em 4K de 2021, quase quadrada se comparada ao widescreen comum. Só uma das fontes foi lida diretamente (resenha do lançamento em 4K); outras resenhas que confirmariam o dado não puderam ser abertas.",
+      "momento": "Filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://moviemansguide.com/main/?p=27215"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "f45",
+      "tipo": "forma",
+      "descricao": "Olhos e olhar se repetem ao longo do filme. Alex abre o filme encarando a lente, com cílio postiço num olho só, e usa abotoaduras e suspensórios enfeitados com globos oculares. No ataque, obriga o marido a assistir ('Viddy well'). Na Catlady, perde a visão por um instante ('I'm blind'). No Ludovico, tem as pálpebras presas para não deixar de ver, e Georgie, policial, o recebe com 'Evidence of the old glazzies'.",
+      "momento": "Partes 1 a 3",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.filmsite.org/cloc.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.screeningthepast.com/issue-37-aesthetic-issues-in-world-cinema/the-immobilised-body-stanley-kubrick%E2%80%99s-a-clockwork-orange/"
+      ],
+      "confianca": "alta"
+    }
+  ],
+  "mitosAEvitar": [
+    "Dizer que o governo britânico ou a censura (BBFC) proibiu o filme: a BBFC aprovou sem cortes em dez/1971; a Warner o retirou de cartaz no Reino Unido a pedido de Kubrick (1973 segundo a Wikipedia, 1974 segundo o AFI), e ele só voltou aos cinemas britânicos em 2000. Também não tratar como provado que o filme causou crimes: houve acusações da imprensa e de advogados de defesa.",
+    "Dizer que Kubrick cortou o último capítulo do romance: ele adaptou a edição americana, que já saía sem o capítulo 21, e disse ter lido a versão completa só com o roteiro quase pronto. O filme não tem a redenção do livro.",
+    "Ler o final como cura ou redenção de Alex: 'I was cured, all right!' é ironia. Não citar a frase como 'cured indeed' (erro da sinopse do AFI) nem descrever o final do roteiro de filmagem (Alex se imaginando cortando a cara do mundo com uma navalha), que não está no filme.",
+    "Dizer que Alex fica condicionado contra toda a música clássica: no filme é só a 9ª ('it's just the Ninth'); no romance é toda música clássica.",
+    "Dizer que a sra. Alexander se suicidou (erro da sinopse do AFI): no filme o marido conta que os médicos falaram em pneumonia meses depois, numa epidemia de gripe, e que ele culpa o ataque.",
+    "Dizer que o filme mostra uma cirurgia ou um procedimento para desfazer o condicionamento: só há o sonho de Alex com médicos mexendo no seu cérebro, o teste da psiquiatra e a fala do Ministro ('We put you right').",
+    "Dizer que nos filmes do Ludovico Alex vê imagens dos próprios crimes: são filmes encenados parecidos com eles, mais cinejornais de guerra com nazistas.",
+    "Dizer que Pete também vira policial: só Dim e Georgie voltam fardados; Pete não reaparece.",
+    "Dizer que o escritor reconhece o rosto de Alex na porta: os invasores usavam máscaras, e o reconhecimento vem da canção no banho.",
+    "Chamar a sociedade do filme de comunista ou soviética: o nadsat tem base russa e há murais de estilo socialista, mas o filme não define o regime, e Kubrick (a Ciment) descreveu o Ministro como figura da direita e o escritor como lunático da esquerda.",
+    "Dizer que 'Singin' in the Rain' está no romance: não está. Surgiu nos ensaios, e os relatos divergem sobre quem teve a ideia (Kubrick ou McDowell); não atribuir a ninguém.",
+    "Chamar a Catlady de 'Mrs. Webber' (erro da sinopse do AFI): ao telefone ela se apresenta como Miss Weathers, da Woodmere Health Farm.",
+    "Dizer que Alex usa cílios postiços nos dois olhos: é um olho só.",
+    "Citar como fala do filme frases que só estão no roteiro de filmagem de 1970. Exemplo: no telefonema do escritor, 'a little machine capable only of good' não está no filme. Usar a transcrição do filme para falas.",
+    "Afirmar quais peças de Wendy Carlos ('Timesteps') ou de Terry Tucker ('Overture to the Sun') tocam em cenas específicas: não foi possível confirmar onde entram.",
+    "Tratar o Ludovico como terapia real: é ficção, uma paródia da terapia aversiva.",
+    "Dar 1972 como ano do filme: a estreia foi em Nova York em 19/12/1971 (no Reino Unido, 13/1/1972). Duração: 136 min.",
+    "Tratar 'Walter Carlos' e 'Wendy Carlos' como duas pessoas: os créditos originais trazem o nome de nascimento (Walter); a compositora é Wendy Carlos."
+  ],
+  "finalNaoRevelar": "Tudo a partir do banho na casa HOME: o escritor reconhece Alex pela canção 'Singin' in the Rain', droga-o com a ajuda dos aliados e o tortura com a 9ª tocada no andar de baixo; Alex pula da janela e sobrevive. No hospital, a reação à violência e ao sexo volta e a psiquiatra chama isso de 'recuperação'. O Ministro, que pôs o escritor fora de circulação, compra o apoio de Alex com emprego e salário para a eleição, dá-lhe comida na boca e posa para os fotógrafos. A 9ª volta a dar prazer, e o filme termina numa fantasia sexual aplaudida por uma plateia de época, com 'I was cured, all right!'. Também convém não contar que a sra. Alexander morreu depois do ataque nem, se possível, que Dim e Georgie voltam como policiais, a virada do meio da Parte 3.",
+  "pistasDeTese": [
+    "Antes do Estado, Alex já age por estímulo e resposta: bebe leite com droga para ficar 'pronto' para a violência, despreza pensar e age quando a música de uma janela 'dá a ideia', e no quarto junta por conta própria Beethoven e imagens de destruição. O Ludovico não arranca uma liberdade intacta; muda quem aperta o botão. [f02, f09, f13, f41]",
+    "O tratamento é uma sessão de cinema (plateia amarrada, olhos abertos, música clássica sobre violência encenada), e a Parte 1 fez o mesmo com o espectador: balé, Rossini, câmera acelerada e lenta. A frase sobre as cores que só parecem reais na tela vale para a sala do lado de cá. [f05, f11, f23, f24, f26, f45]",
+    "Quem tem autoridade define o que é saúde: no Ludovico a náusea é 'becoming healthy'; no hospital, a volta da violência é 'complete recovery'. O critério muda conforme a necessidade de quem examina, e Alex nunca decide. Os fatos do hospital são do final: usar só como subtexto. [f25, f36]",
+    "A palavra 'escolha' encobre o que acontece. Alex se oferece ao tratamento por cálculo ('gets you out quickly'), finge devoção e aceita a injeção sem saber do que se trata ('Something like that'); depois o médico lhe joga na cara que 'the choice has been all yours'. O filme mostra uma escolha feita sem saber o que se escolhe. [f19, f20, f22, f26]",
+    "Quem fala em liberdade também conduz. O capelão defende a escolha e governa pelo medo do inferno, obrigando presos a cantar 'I would not be controlled'. O escritor fala em tradição de liberdade e quer o povo 'led, driven, pushed'. O Ministro só quer resultado e votos. Nenhum lado oferece a Alex uma escolha. [f17, f19, f28, f33, f37]",
+    "Leitura contrária: a montagem empilha a simpatia em Alex. Ele narra e nos chama de irmãos, a Parte 3 o põe como alvo de todos que ele agrediu, e as vítimas e autoridades aparecem como caricaturas. A defesa da liberdade pode ser lida como defesa do direito de Alex à violência, com o espectador recrutado; foi o argumento de Pauline Kael. [f03, f05, f29, f30, f31, f40]",
+    "Do nome ao número e do número à foto: a prisão troca 'Alexander DeLarge' por 655321, o Estado recruta a violência da gangue como polícia, o diretor do presídio pede 'olho por olho' e a Parte 3 o entrega pelas mãos das vítimas. A imprensa conduz cada virada até os fotógrafos. A liberdade devolvida a Alex vem com um papel de propaganda: os fatos f37 e f42 são do final, usar sem contar. [f16, f21, f30, f32, f37, f42]",
+    "A música não tem moral própria no filme: a mesma 9ª acompanha o êxtase de Alex, cinejornais nazistas, a tortura e a cena final; um busto de Beethoven vira arma na mão da vítima; e a canção que Alex cantou no estupro escapa ao condicionamento. O filme recusa a ideia de que cultura elevada educa. [f07, f09, f14, f26, f34, f41]"
+  ]
+}

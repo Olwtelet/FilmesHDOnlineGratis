@@ -1144,3 +1144,7 @@ Flag: Every poster on TMDB shows a swastika gag over the boy's mouth (one en-US 
 - **Trailers**: out of scope for this report.
 
 Scratch: `raw/` holds fetched pages, thumbnails and contact sheets; `scripts/` holds the pipeline (`fetch-tmdb.js`, `parse.js`, `fetch-wiki.js`, `bom.js`, `probe.js`, `selection.js`, `curated.js`, `build.js`, `report.js`).
+
+## 7. Added 2026-11-06: four November and December sessions
+
+Images, credits and their sources for `a-clockwork-orange-1971`, `they-live-1988`, `late-night-with-the-devil-2023` and `rocky-1976` are in `sessoes-2026-11.md` (in Portuguese), with the research data in `sessoes-2026-11/`. Same method as above: TMDB public pages through curl, textless backdrop list, contact sheets checked by eye, sizes confirmed on the CDN, credits cross-checked against Wikipedia, AFI, BFI, BBFC and Box Office Mojo, and an independent second check of each film's fact sheet and dossier. The image choices were reviewed by eye on the built site, not re-checked independently.

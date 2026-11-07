@@ -1,0 +1,229 @@
+{
+  "slug": "a-clockwork-orange-1971",
+  "tituloBrasil": {
+    "valor": "Laranja Mecânica",
+    "confere": true,
+    "fontes": [
+      "https://www.themoviedb.org/movie/185-a-clockwork-orange?language=pt-BR",
+      "https://pt.wikipedia.org/wiki/Laranja_Mec%C3%A2nica_(filme)",
+      "https://www.wikidata.org/wiki/Q181086",
+      "https://www.adorocinema.com/filmes/filme-260/",
+      "https://omelete.com.br/cinema/versao-restaurada-de-laranja-mecanica-volta-sao-paulo/",
+      "https://cinemacao.com/2018/10/05/filmes-censurados-pela-ditadura-militar/"
+    ],
+    "nota": "Título de lançamento no Brasil confirmado: TMDB pt-BR (Laranja Mecânica (1971)), artigo da Wikipedia em português (Laranja Mecânica (filme), rev. 73087558), rótulo pt-br do Wikidata, AdoroCinema, Omelete (relançamento no CineSESC) e Cinem(ação) (lançamento de 1978). Nenhuma variante brasileira encontrada; a página de títulos alternativos do TMDB não lista outro título para o Brasil. Portugal usa o mesmo título (TMDB /titles). O romance de Anthony Burgess também circula no Brasil como Laranja Mecânica (artigo pt.wikipedia Laranja Mecânica (romance), ligado no infobox do filme). Cabe no ingresso: 16 caracteres, abaixo do limite de 32, sem tituloCurto."
+  },
+  "tituloOriginal": "A Clockwork Orange",
+  "tmdb": 185,
+  "imdb": "tt0066921",
+  "wikipedia": "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+  "ano": {
+    "recomendado": 1971,
+    "estreiaMundial": "19/12/1971, Nova York. Wikipedia en: estreia em Nova York em 19/12/1971. Wikidata (P577): 19/12/1971 em Nova York e Toronto. AFI Catalog: estreias em Los Angeles e Nova York em 19/12/1971. BFI: lançamento nos EUA em 19/12/1971. TMDB: EUA e Canadá (Toronto), 19/12/1971, circuito limitado.",
+    "ondeEstreou": "Nova York (circuito comercial limitado, não festival); Wikidata acrescenta Toronto e o AFI acrescenta Los Angeles na mesma data",
+    "lancamentoComercial": "Países de origem: Estados Unidos, 19/12/1971 em circuito limitado (AFI, TMDB), e 02/02/1972 em circuito amplo (Wikipedia en, Wikidata, Box Office Mojo: 'Earliest Release Date Feb 2, 1972 (Domestic)'). Reino Unido, 13/01/1972 (Wikipedia en, Wikidata, BFI; o BFI registra pré-estreia britânica em 12/01/1972; o TMDB dá 11/01/1972).",
+    "lancamentoBrasil": "1978. O filme ficou proibido pela censura da ditadura e saiu em 1978 com a nudez coberta (Wikipedia en e pt, citando Cinem(ação); Cinem(ação), 05/10/2018: 'só foi lançado anos depois em 78'). O TMDB dá 04/09/1978, com certificação 18 e nota 'Lançamento 136 m.'; dia e mês sem segunda fonte. Relançamento em cinema: 26/04/2013 (AdoroCinema, 'Data de retorno 26/04/2013'; Omelete: versão restaurada no CineSESC 'a partir de 26 de abril'). O TMDB registra outro relançamento brasileiro em 22/08/2014, não confirmado.",
+    "anoTmdb": 1971,
+    "nota": "Critério do catálogo (ano da primeira exibição pública) dá 1971, o mesmo ano do TMDB, da Wikipedia (en e pt), do Wikidata, do AFI, do BFI e do Box Office Mojo. Sem divergência: o lançamento amplo nos EUA e o britânico caem em 1972, e o brasileiro em 1978, mas a primeira exibição pública é de 19/12/1971. O AdoroCinema mostra '26 de abril de 1972, No cinema', data que não corresponde ao lançamento brasileiro (1978) e foi ignorada.",
+    "fontes": [
+      "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+      "https://www.wikidata.org/wiki/Q181086",
+      "https://catalog.afi.com/Catalog/moviedetails/54041",
+      "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+      "https://www.themoviedb.org/movie/185-a-clockwork-orange/releases",
+      "https://www.boxofficemojo.com/title/tt0066921/credits/",
+      "https://pt.wikipedia.org/wiki/Laranja_Mec%C3%A2nica_(filme)",
+      "https://cinemacao.com/2018/10/05/filmes-censurados-pela-ditadura-militar/",
+      "https://www.adorocinema.com/filmes/filme-260/",
+      "https://omelete.com.br/cinema/versao-restaurada-de-laranja-mecanica-volta-sao-paulo/"
+    ]
+  },
+  "direcao": {
+    "valor": "Stanley Kubrick",
+    "fontes": [
+      "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+      "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+      "https://pt.wikipedia.org/wiki/Laranja_Mec%C3%A2nica_(filme)",
+      "https://catalog.afi.com/Catalog/moviedetails/54041",
+      "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+      "https://www.boxofficemojo.com/title/tt0066921/credits/",
+      "https://www.adorocinema.com/filmes/filme-260/creditos/"
+    ]
+  },
+  "duracao": {
+    "recomendado": 136,
+    "porFonte": [
+      { "fonte": "TMDB (página pt-BR: 2h 16m)", "minutos": 136, "url": "https://www.themoviedb.org/movie/185-a-clockwork-orange?language=pt-BR" },
+      { "fonte": "TMDB (página en-US: 2h 17m)", "minutos": 137, "url": "https://www.themoviedb.org/movie/185-a-clockwork-orange?language=en-US" },
+      { "fonte": "TMDB, lançamento brasileiro de 1978 (nota 'Lançamento 136 m.')", "minutos": 136, "url": "https://www.themoviedb.org/movie/185-a-clockwork-orange/releases" },
+      { "fonte": "Wikipedia en (136 min; comentário no infobox: 136:25, citando o BBFC)", "minutos": 136, "url": "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)" },
+      { "fonte": "Wikipedia pt", "minutos": 136, "url": "https://pt.wikipedia.org/wiki/Laranja_Mec%C3%A2nica_(filme)" },
+      { "fonte": "Wikidata (P2047)", "minutos": 136, "url": "https://www.wikidata.org/wiki/Q181086" },
+      { "fonte": "Box Office Mojo (2 hr 16 min)", "minutos": 136, "url": "https://www.boxofficemojo.com/title/tt0066921/credits/" },
+      { "fonte": "BFI (136 mins, 12.277 pés em 35 mm)", "minutos": 136, "url": "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057" },
+      { "fonte": "BBFC (aprox. 136m; submissões de 136m 24s a 136m 29s)", "minutos": 136, "url": "https://www.bbfc.co.uk/release/a-clockwork-orange-q29sbgvjdglvbjpwwc0yodm5ode" },
+      { "fonte": "AFI Catalog ('135 or 137'; registrado aqui o menor valor)", "minutos": 135, "url": "https://catalog.afi.com/Catalog/moviedetails/54041" },
+      { "fonte": "AdoroCinema (2h 16min)", "minutos": 136, "url": "https://www.adorocinema.com/filmes/filme-260/" }
+    ],
+    "nota": "Recomendo 136. Wikipedia en e pt, Wikidata, Box Office Mojo, BFI, BBFC, AdoroCinema e o TMDB em pt-BR dão 136; a minutagem do BBFC (136m 25s) e a metragem do BFI (12.277 pés, cerca de 136,4 min a 24 quadros) confirmam. Só o TMDB em en-US (137) e o AFI ('135 or 137') divergem."
+  },
+  "classificacao": {
+    "valor": null,
+    "detalhe": "Nenhum registro oficial encontrado. Procurado: (1) consulta pública do ClassInd, https://classindportal.mj.gov.br/consulta-filmes, um aplicativo que só roda em navegador; a API que ele chama (/api/solicitacao-classificacao-consultas) redireciona para o login sso.mj.gov.br. Não usei navegador nem a credencial embutida no JavaScript da página. (2) Busca no Diário Oficial da União (in.gov.br/consulta/-/buscar/dou?q=\"Laranja Mecânica\"): o servidor fechou a conexão para curl e para WebFetch; uma nova tentativa com outro user agent foi bloqueada como contorno de bot e não foi refeita. (3) Buscas na web por portaria ou despacho com o título (gov.br, in.gov.br, jusbrasil): nenhuma portaria encontrada. As fontes secundárias se dividem entre 16 e 18. O 18 do TMDB vem do lançamento de 1978, sob a censura federal, antes do sistema atual de classificação indicativa. Os indícios de 16 se referem a exibições posteriores: o relançamento de 2013 no CineSESC, pela Omelete, e o cineclube da USP, com descritores no formato do ClassInd. Para preencher, conferir o título no ClassInd por navegador; não publicar 16 ou 18 sem esse registro.",
+    "fonte": "Nenhuma fonte oficial (ClassInd ou DOU) acessível; ver detalhe",
+    "outrasEncontradas": [
+      "16: Omelete, sessões da versão restaurada no CineSESC (São Paulo), 'As sessões de Laranja Mecânica terão classsificação 16 anos' (indício; o ano 2013 vem do AdoroCinema, 'Data de retorno 26/04/2013'). https://omelete.com.br/cinema/versao-restaurada-de-laranja-mecanica-volta-sao-paulo/",
+      "16: Cineclube do CDCC/USP, 'CLASSIFICAÇÃO INDICATIVA: 16 anos', 'Contém: Conteúdo Sexual, Drogas Ilícitas, Violência Extrema' (indício; página sem data). https://cdcc.usp.br/cineclube/laranja-mecanica/",
+      "16: TMDB, Brasil, relançamento de 22/08/2014, nota 'Relançamento com cortes' (indício; relançamento não confirmado). https://www.themoviedb.org/movie/185-a-clockwork-orange/releases",
+      "16: Filmow, 'Não recomendado para menores de 16 anos', visto só no resumo de uma busca; a página respondeu 403 e não foi conferida. https://filmow.com/laranja-mecanica-t5268/ficha-tecnica/",
+      "18: TMDB, Brasil, lançamento de 04/09/1978, certificação 18; é a que aparece no topo da página pt-BR. Reflete a censura de 1978, não o ClassInd. https://www.themoviedb.org/movie/185-a-clockwork-orange/releases",
+      "18: Salada de Cinema (25/08/2025): na liberação, 'com censura 18 anos', referência ao lançamento da época da ditadura. https://saladadecinema.com.br/?p=11203",
+      "18: Prefeitura de São Paulo, Centro Cultural São Paulo, Cine na Praça, sessão de 27/08/2026, 'Classificação: 18 anos' (programação de evento). https://prefeitura.sp.gov.br/web/cultura/w/centro-cultural-s%C3%A3o-paulo-exibe-mostra-especial-de-stanley-kubrick-no-cine-na-pra%C3%A7a",
+      "A18: Apple TV Brasil, selo 'Classificação A18' (classificação exibida pelo serviço de streaming, não registro do ClassInd). https://tv.apple.com/br/movie/a-clockwork-orange/umc.cmc.3ldbiqqnpx3d6bd8eknxioyaf"
+    ]
+  },
+  "generos": ["Ficção Científica", "Crime", "Distopia"],
+  "categoria": "Ficção Científica",
+  "sinais": ["ficção-científica", "crime", "distopia", "perturbador", "clássico", "cult", "indicação-da-semana"],
+  "pais": "Reino Unido e Estados Unidos",
+  "idiomaOriginal": "Inglês",
+  "principais": [
+    {
+      "funcao": "Roteiro",
+      "nome": "Stanley Kubrick",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ],
+      "nota": "Crédito na tela, segundo o BFI: 'Screenplay by: Stanley Kubrick'. Box Office Mojo e Wikidata também põem Anthony Burgess como roteirista, mas ele é o autor do romance ('Based on the novel by'), não do roteiro."
+    },
+    {
+      "funcao": "Obra original",
+      "nome": "Anthony Burgess",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://pt.wikipedia.org/wiki/Laranja_Mec%C3%A2nica_(filme)"
+      ],
+      "nota": "Romance A Clockwork Orange (Londres, 1962, segundo o AFI), publicado no Brasil como Laranja Mecânica (pt.wikipedia, Laranja Mecânica (romance))."
+    },
+    {
+      "funcao": "Fotografia",
+      "nome": "John Alcott",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://www.boxofficemojo.com/title/tt0066921/credits/",
+        "https://www.adorocinema.com/filmes/filme-260/creditos/"
+      ],
+      "nota": "Crédito na tela: 'Lighting Cameraman' (BFI, AFI). TMDB, Wikipedia, Box Office Mojo e AdoroCinema tratam como diretor de fotografia."
+    },
+    {
+      "funcao": "Música",
+      "nome": "Wendy Carlos",
+      "fontes": [
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://www.boxofficemojo.com/title/tt0066921/credits/",
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "nota": "Nome que mudou: o crédito de 1971 diz 'Electronic Music Composed/Realised by: Walter Carlos' (BFI, AFI), e a Wikipedia anota que o filme a credita pelo nome de nascimento. TMDB, Box Office Mojo, AdoroCinema, Wikidata e o infobox da Wikipedia (en e pt) usam Wendy Carlos. Recomendo exibir Wendy Carlos. A trilha também usa peças já existentes (Beethoven, Rossini, Elgar, Purcell, segundo o AFI), que não entram neste crédito. Alternativa para esta vaga: Montagem, Bill Butler (BFI 'Editor', AFI, TMDB, Wikipedia, Box Office Mojo)."
+    }
+  ],
+  "producao": [
+    {
+      "funcao": "Produção",
+      "nome": "Stanley Kubrick",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://www.boxofficemojo.com/title/tt0066921/credits/"
+      ]
+    }
+  ],
+  "elenco": [
+    {
+      "personagem": "Alex DeLarge",
+      "nome": "Malcolm McDowell",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast"
+      ]
+    },
+    {
+      "personagem": "Frank Alexander",
+      "nome": "Patrick Magee",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast"
+      ]
+    },
+    {
+      "personagem": "Chefe da guarda",
+      "nome": "Michael Bates",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://www.boxofficemojo.com/title/tt0066921/credits/"
+      ]
+    },
+    {
+      "personagem": "Dim",
+      "nome": "Warren Clarke",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://www.boxofficemojo.com/title/tt0066921/credits/"
+      ]
+    },
+    {
+      "personagem": "Dr. Brodsky",
+      "nome": "Carl Duering",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ]
+    },
+    {
+      "personagem": "Capelão da prisão",
+      "nome": "Godfrey Quigley",
+      "fontes": [
+        "https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.themoviedb.org/movie/185-a-clockwork-orange/cast",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)"
+      ]
+    }
+  ],
+  "divergencias": [
+    "Critério do elenco: os créditos de abertura trazem Malcolm McDowell e Patrick Magee e depois 'And featuring in alphabetical order' (AFI), sem hierarquia. A seleção segue a ordem do TMDB (McDowell, Magee, Duering, Bates, Clarke) e do Box Office Mojo (McDowell, Magee, Bates, Clarke) e acrescenta o capelão, peça do argumento sobre escolha. Alternativas conferidas: Anthony Sharp como Ministro do Interior (BFI 'minister of interior', AFI 'Minister [of the Interior]', Wikipedia 'Frederick, Minister of the Interior'); Adrienne Corri como Sra. Alexander e Miriam Karlin como Mulher dos gatos, terceira e quarta no bloco de créditos do cartaz americano, segundo comentário no infobox da Wikipedia; Aubrey Morris como P. R. Deltoid.",
+    "Nomes de personagem: o crédito na tela diz só 'Alex' e 'Mr. Alexander'. O AFI põe [DeLarge] e [Frank] entre colchetes, como informação de fora do crédito; BFI e Wikipedia (en e pt) usam Alex DeLarge e Frank Alexander; o TMDB usa Alex e Mr. Alexander. 'Chief guard' vira Chefe da guarda: só a Wikipedia acrescenta o sobrenome Barnes, ausente no AFI e no BFI.",
+    "Personagem de Miriam Karlin, se entrar: 'Catlady [Mrs. Webber]' no AFI, '\"Catlady\" Weathers' na Wikipedia (en e pt), 'cat lady' no BFI, 'Catlady' no TMDB. Sobrenome não confirmado; usar a descrição Mulher dos gatos.",
+    "Música: o crédito de 1971 é 'Walter Carlos' (BFI, AFI, nota na Wikipedia); as bases atuais usam Wendy Carlos. Recomendado: Wendy Carlos.",
+    "Roteiro: Box Office Mojo ('Writer') e Wikidata (P58) listam Anthony Burgess ao lado de Kubrick. O crédito na tela (BFI, AFI) separa: 'Screenplay by: Stanley Kubrick' e 'Based on the novel by: Anthony Burgess'.",
+    "Produção: só Stanley Kubrick tem crédito de produtor ('Produced by', BFI; 'Prod', AFI; TMDB; Wikipedia). Max L. Raab e Si Litvinoff são produtores executivos (BFI, AFI, TMDB) e Bernard Williams é produtor associado (BFI, AFI, TMDB, AdoroCinema). Ficaram fora, como nas outras fichas do catálogo, que só listam 'Produção'. Se o proprietário quiser incluir, usar a função 'Produção executiva'.",
+    "Duração: TMDB en-US 137 contra TMDB pt-BR 136; AFI '135 or 137'. As demais fontes dão 136.",
+    "Datas de 1971 e 1972: o TMDB lista Israel em 28/10/1971 (cinema), antes da estreia em Nova York. Nenhuma outra fonte confirma a data, que foi ignorada e não muda o ano. Reino Unido: TMDB 11/01/1972; Wikipedia, Wikidata e BFI dão 13/01/1972 (BFI: pré-estreia em 12/01/1972). Local da estreia de 19/12/1971: Nova York (Wikipedia), Nova York e Toronto (Wikidata) ou Los Angeles e Nova York (AFI).",
+    "Lançamento no Brasil: o AdoroCinema diz '26 de abril de 1972, No cinema', contra 1978 da Wikipedia (en e pt), da Cinem(ação) e do TMDB (04/09/1978). A data exata 04/09/1978 só aparece no TMDB. Relançamento: 26/04/2013 no AdoroCinema e no CineSESC (Omelete, sem ano na página) contra 22/08/2014 no TMDB, com a nota 'Relançamento com cortes'.",
+    "Classificação: indícios de 16 (Omelete/CineSESC, cineclube da USP, TMDB 2014) e de 18 (TMDB 1978, sob a censura federal; CCSP 2026; Apple TV A18). Sem registro do ClassInd ou do DOU: valor null.",
+    "Gêneros: TMDB 'Ficção científica e Crime'; BFI 'Crime, Science Fiction'; Box Office Mojo 'Crime, Sci-Fi'; AdoroCinema 'Drama, Ficção Científica'; Wikipedia en 'dystopian crime film'; Wikipedia pt, gênero 'Ficção científica'. A recomendação Ficção Científica, Crime e Distopia cobre as quatro bases; a categoria Ficção Científica segue TMDB, Wikipedia pt e AdoroCinema. Alternativa: categoria Crime (Wikipedia en, BFI).",
+    "País: 'United Kingdom, United States' na Wikipedia e no AFI, 'USA, United Kingdom' no BFI, 'Reino Unido, EUA' no AdoroCinema. Mesmos dois países; mantida a ordem da Wikipedia e do AFI.",
+    "Idioma: o Wikidata (P364) lista inglês e nadsat. A Wikipedia en, em comentário no infobox, trata o nadsat como gíria do inglês e não como língua à parte. Recomendado: Inglês."
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/ficha.json"
+}

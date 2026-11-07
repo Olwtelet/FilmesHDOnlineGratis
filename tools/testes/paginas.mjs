@@ -7,7 +7,7 @@
 //   matriz   cada página em cada tamanho, rolando com a roda ou com toque: console, rede, CSP, terceiros, transbordo, imagens,
 //            texto vazio que ocupa espaço, texto cortado (mede a tinta de cada letra contra as caixas com overflow oculto) e
 //            palavra partida no meio.
-//   titulos  home e Programação nos instantes com sessão futura, inclusive o título longo.
+//   titulos  home e Programação em cada instante de INSTANTES: com sessão futura, com o título longo e com o aviso sem sessão.
 //   menu     painel principal e painel de filmes abertos, medidos do mesmo jeito.
 //   despejo  texto de todas as páginas nos dois estados do relógio, com atributos, metadados, JSON-LD e pseudoelementos,
 //            mais as cadeias dos local-*.js e do app.js, o content do CSS, RSS, sitemap e robots.
@@ -56,12 +56,18 @@ const SESSOES = fs.readdirSync(path.join(RAIZ, 'src/data/sessoes'))
   .filter((f) => f.endsWith('.json') && !f.startsWith('_'))
   .map((f) => JSON.parse(fs.readFileSync(path.join(RAIZ, 'src/data/sessoes', f), 'utf8')));
 const SLUGS = SESSOES.map((s) => s.slug);
+// Meio-dia de dois dias depois da última sessão cadastrada, na hora de São Paulo: o aviso vem em primeiro. Sem relógio, a visita
+// usa a hora do PC, que deixa de cair no aviso sempre que entra uma sessão futura. Um fim explícito conta pelo dia dele.
+const ULTIMA = SESSOES.map((s) => (s.sessao.fim ? s.sessao.fim.slice(0, 10) : s.sessao.data)).sort().at(-1);
+const SEM_SESSAO = new Date(Date.parse(`${ULTIMA}T12:00:00-03:00`) + 2 * 864e5 - 3 * 36e5).toISOString().slice(0, 16);
 
 // Instantes que exercitam os títulos: São Paulo, sempre -03:00 nestas datas.
 const INSTANTES = [
   { rotulo: 'obsessao', quando: '2026-07-01T12:00' },
   { rotulo: 'titulo-longo', quando: '2026-07-20T12:00' },
   { rotulo: 'hoje', quando: '2026-10-31T12:00' },
+  { rotulo: 'novembro', quando: '2026-11-06T12:00' },
+  { rotulo: 'aviso', quando: SEM_SESSAO },
 ];
 
 const resultados = [];
@@ -423,7 +429,8 @@ async function percorrer(page, tam, dataPage, acumulado, voltas = 5) {
   await coletar(page, acumulado);
   const passo = Math.round(tam.height * 0.7);
   if (dataPage === 'home' || dataPage === 'work') {
-    // Roda e toque giram o carrossel: cinco passos bastam para o próximo, o aviso e os títulos longos passarem pela tela.
+    // Roda e toque giram o carrossel: cinco passos bastam para o próximo e os títulos longos passarem pela tela. O aviso, quando
+    // há, já vem em primeiro.
     for (let i = 0; i < voltas; i++) {
       await rolar(page, tam, cdp, passo);
       await espera(1500);
@@ -651,6 +658,8 @@ async function parteMenu() {
   const caminhos = ['/', '/programacao/', '/sobre/', '/contato/', '/cookies/', `/sessoes/${AMOSTRA[0]}/`, '/sessoes/the-menu-2022/'];
   for (const tam of tamanhosValidos) for (const caminho of caminhos) tarefas.push({ caminho, tam });
   for (const tam of tamanhosValidos) tarefas.push({ caminho: '/', tam, quando: INSTANTES[1].quando, rotulo: 'titulo-longo' });
+  // os painéis com o aviso "Sem sinal" no lugar da próxima sessão
+  for (const tam of tamanhosValidos) tarefas.push({ caminho: '/', tam, quando: SEM_SESSAO, rotulo: 'aviso' });
   await emParalelo(tarefas.filter((t) => !FILTRO || FILTRO.test(t.caminho)), PARALELO, (t) => comNavegador((b) => visitarMenu(b, t)));
 }
 
@@ -818,13 +827,14 @@ async function parteDespejo() {
   const grande = TAMANHOS[0];
   const celular = TAMANHOS.find((t) => t.nome === '390x844');
   for (const caminho of paginas) {
-    tarefas.push({ caminho, tam: grande, rotulo: 'sem-sessao' });
+    tarefas.push({ caminho, tam: grande, quando: SEM_SESSAO, rotulo: 'sem-sessao' });
     tarefas.push({ caminho, tam: grande, quando: INSTANTES[0].quando, rotulo: 'com-sessao' });
   }
-  for (const caminho of amostra) tarefas.push({ caminho, tam: celular, rotulo: 'sem-sessao' });
+  for (const caminho of amostra) tarefas.push({ caminho, tam: celular, quando: SEM_SESSAO, rotulo: 'sem-sessao' });
   for (const caminho of ['/', '/programacao/', ...AMOSTRA.map((s) => `/sessoes/${s}/`)]) {
     tarefas.push({ caminho, tam: celular, quando: INSTANTES[0].quando, rotulo: 'com-sessao' });
-    for (const i of INSTANTES.slice(1)) tarefas.push({ caminho, tam: grande, quando: i.quando, rotulo: i.rotulo });
+    // o aviso já é o estado sem-sessao acima
+    for (const i of INSTANTES.slice(1).filter((x) => x.quando !== SEM_SESSAO)) tarefas.push({ caminho, tam: grande, quando: i.quando, rotulo: i.rotulo });
   }
   await emParalelo(tarefas.filter((t) => !FILTRO || FILTRO.test(t.caminho)), PARALELO, (t) => comNavegador((b) => despejarPagina(b, t, destino)));
   fs.writeFileSync(path.join(SAIDA, 'despejo-bruto.jsonl'), destino.map((d) => JSON.stringify(d)).join('\n'));

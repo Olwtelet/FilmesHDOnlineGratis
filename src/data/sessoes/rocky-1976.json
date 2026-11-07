@@ -1,0 +1,194 @@
+{
+  "slug": "rocky-1976",
+  "titulo": "Rocky: Um Lutador",
+  "categoria": "Drama",
+  "linhasTitulo": 2,
+  "sessao": {
+    "data": "2026-12-12",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Rocky: Um Lutador",
+      "tituloOriginal": "Rocky",
+      "ano": 1976,
+      "direcao": "John G. Avildsen",
+      "duracao": 119,
+      "generos": [
+        "Drama",
+        "Esporte"
+      ],
+      "trailer": {
+        "youtube": "-Hk-LYcavrw",
+        "canal": "Amazon MGM Studios",
+        "idioma": "en",
+        "tituloVideo": "ROCKY (1976) | Official Trailer | MGM"
+      },
+      "tmdb": 1366,
+      "imdb": "tt0075148"
+    }
+  ],
+  "sinais": [
+    "drama",
+    "clássico",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "Um homem menor que o letreiro",
+    "leitura": "O letreiro ROCKY não cabe no quadro. Apollo encomenda um azarão branco para um país sentimental, e o filme entrega com trompetes e escadaria. A dignidade de Rocky fica na escala menor: no calção que o cartaz erra e na véspera, quando troca vencer por aguentar até o fim.",
+    "descricao": "Um lutador de clube da Filadélfia ganha a chance do título numa jogada de cartaz. O filme vende a fábula, e Rocky só se propõe a aguentar até o fim.",
+    "notasHome": [
+      {
+        "rotulo": "Livro de lutadores",
+        "frase": "Apollo dita a receita do próprio filme"
+      },
+      {
+        "rotulo": "Cartaz no Spectrum",
+        "frase": "Só Rocky liga para a cor do calção"
+      },
+      {
+        "rotulo": "Roupão de anúncio",
+        "frase": "Fica largo no corpo do lutador"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "A conta do vestiário",
+        "frase": "O vestiário desconta até a toalha: da vitória sobram 40,55 dólares. Na coletiva, a bolsa é de 150 mil. Muda a escala, não o homem."
+      },
+      {
+        "rotulo": "O polegar do devedor",
+        "frase": "Rocky aceita 130 dos 200 dólares e poupa o polegar do devedor. Diante de Gazzo, a piedade vira conta: sem emprego, ninguém paga."
+      },
+      {
+        "rotulo": "Americana ou esperta",
+        "frase": "O azarão branco é ideia de Apollo. Jergens a acha americana, e o campeão corrige: esperta. O cálculo é dele, e a trilha o cumpre."
+      },
+      {
+        "rotulo": "Dez minutos de pista",
+        "frase": "Rocky paga 10 dólares por 10 minutos de pista fechada, e o zelador grita quanto falta. O namoro nasce cronometrado, como uma luta."
+      },
+      {
+        "rotulo": "A escadaria do museu",
+        "frase": "Na primeira subida, Rocky chega curvado. Na segunda, a canção lhe ergue os braços, e o arrepio na sala dá razão a Apollo."
+      },
+      {
+        "rotulo": "A cama da véspera",
+        "frase": "Rocky diz a Adrian que não está à altura de Apollo e só quer aguentar até o fim. Pela primeira vez, a medida é dele."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Sylvester Stallone"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "James Crabe"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Bill Conti"
+      },
+      {
+        "funcao": "Montagem",
+        "nome": "Richard Halsey & Scott Conrad"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Robert Chartoff"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Irwin Winkler"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Rocky Balboa",
+        "nome": "Sylvester Stallone"
+      },
+      {
+        "funcao": "Adrian",
+        "nome": "Talia Shire"
+      },
+      {
+        "funcao": "Paulie",
+        "nome": "Burt Young"
+      },
+      {
+        "funcao": "Apollo Creed",
+        "nome": "Carl Weathers"
+      },
+      {
+        "funcao": "Mickey",
+        "nome": "Burgess Meredith"
+      },
+      {
+        "funcao": "Jergens",
+        "nome": "Thayer David"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "kM02Hr9plYKvHGvKK5gDQA7zfr3.jpg"
+    },
+    "cartaz": {
+      "tmdb": "3mdz9kvRWJ98Fe46UznHFymS7ec.jpg"
+    },
+    "direcao": {
+      "tmdb": "rmIJcoKVdVQZhGANK6vALOy1cgx.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "kM02Hr9plYKvHGvKK5gDQA7zfr3.jpg"
+      },
+      {
+        "tmdb": "rmIJcoKVdVQZhGANK6vALOy1cgx.jpg"
+      },
+      {
+        "tmdb": "1KMIgw4OeDpsqtTu2wewLwJ40d7.jpg"
+      },
+      {
+        "tmdb": "lowP61AQNIU59xiVgIAXQVWdgVM.jpg"
+      },
+      {
+        "tmdb": "sQ4a6wCUUNh4RTkkGjurM577sLl.jpg"
+      },
+      {
+        "tmdb": "pUTjrDCE7BanlIY4rir3HxzXCyp.jpg"
+      },
+      {
+        "tmdb": "45dMhg2FHRKcTFAnelu9EunRbmd.jpg"
+      },
+      {
+        "tmdb": "tnirCmJDCv24iyImhLrp6MBilzr.jpg"
+      },
+      {
+        "tmdb": "6W8JQxjz6go8YSbR2kkpFll31py.jpg"
+      },
+      {
+        "tmdb": "h4dbAnsFQnxWoFn9qAdQ5ywD4XO.jpg"
+      },
+      {
+        "tmdb": "jTasSTNjEP4sq3YPW7ezv8fPAVz.jpg"
+      },
+      {
+        "tmdb": "kiatmQb7MFplcQ1PiPw0uWCAoji.jpg"
+      },
+      {
+        "tmdb": "1m6G1XL6bpPE7zdIlGRvizz4cjM.jpg"
+      },
+      {
+        "tmdb": "r73pJKDOaCGiubkdZBnFJZUXZnn.jpg"
+      }
+    ]
+  }
+}

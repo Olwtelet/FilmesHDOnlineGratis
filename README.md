@@ -78,7 +78,7 @@ Testam o build na 4322. Sobem navegador sem janela, menos os três marcados como
 | `node tools/testes/varredura.mjs` | Marca antiga, filmes de demonstração, estrelas, promessas e links em todo o `dist/` |
 | `node tools/testes/ordem.mjs` | Ordem com relógio controlado, exceções de dia e hora, virada do dia, fusos, aba aberta |
 | `node tools/testes/paginas.mjs` | Toda página em cada tamanho: console, rede, CSP, corte de texto, dados contra o JSON, links |
-| `node tools/testes/trailers.mjs` | Os 22 trailers tocando e todos os caminhos de fechar |
+| `node tools/testes/trailers.mjs` | Todos os trailers tocando e todos os caminhos de fechar |
 | `node tools/testes/interacoes.mjs` | Teclado, mouse, toque, som, menu, filtro, cadeia de navegação, RSS e peso |
 | `node tools/testes/abertura.mjs` | Tempos do ENTER e da home, quadros da abertura, caminhos de falha |
 | `node tools/testes/identidade.mjs` | Abertura, cartão, trailer, leituras, canais, cursor e ida e volta à home a 320, 390, 820, 1440 e 1920 px. Janela real só na parte `aba` |
@@ -97,7 +97,7 @@ A primeira visita antiga podia travar no vídeo da abertura, em Chrome e Brave r
 |---|---|---|
 | Imagem de textura falha | Home oculta para sempre | A imagem vira um pixel transparente e a home segue |
 | Máscara do WebGL falha | Nenhum filme aparece | Vira um pixel branco: os filmes aparecem sem recorte |
-| `app.js` falha ou WebGL indisponível | Sem ENTER, preso | ENTER aos 3,5 s e home em coluna simples, com rolagem |
+| `app.js` falha ou WebGL indisponível | Sem ENTER, preso | ENTER de reserva aos 5,8 s quando a abertura toca (3,5 s com movimento reduzido ou na volta dentro da hora) e home em coluna simples, com rolagem |
 | Contexto WebGL perdido | Filmes somem | Mostra as imagens do DOM |
 | Segundo clique no ENTER | Tutorial roda de novo | Só o primeiro clique vale |
 | Home oculta 12 s depois de o overlay sair e da última textura, ou 120 s com textura pendente | Continua oculta | Libera a home |

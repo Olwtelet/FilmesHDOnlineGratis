@@ -1,0 +1,198 @@
+{
+  "slug": "they-live-1988",
+  "fichaCorrecoes": [],
+  "fichaConfirmados": [
+    "tituloBrasil 'Eles Vivem': TMDB pt-BR (título da página e títulos alternativos, Brasil = 'Eles Vivem'), pt.wikipedia (título-br e título-pt 'Eles Vivem', com ref. AdoroCinema 4660), Wikidata Q72909 (rótulo pt-br e pt 'Eles Vivem'). https://www.themoviedb.org/movie/8337-they-live/titles ; https://pt.wikipedia.org/wiki/Eles_Vivem ; https://www.wikidata.org/wiki/Q72909",
+    "tituloOriginal 'They Live': AFI (título comum; título de copyright 'John Carpenter's They Live'), en.wikipedia. https://catalog.afi.com/Catalog/moviedetails/67101",
+    "ano 1988 / estreia 04/11/1988: AFI 'Release Date: 4 November 1988'; Box Office Mojo 'Earliest Release Date Fri Nov 4, 1988 (Domestic)'; Wikidata P577 1988-11-04 com qualificadores EUA e Canadá; TMDB EUA e Canadá 04/11/1988; BBFC 'Production year 1988', cópia de cinema classificada em 12/12/1988. Nenhuma exibição pública anterior encontrada em busca própria; a filmagem começou em 7/3/1988 (AFI), então qualquer exibição prévia seria também de 1988. https://catalog.afi.com/Catalog/moviedetails/67101 ; https://www.boxofficemojo.com/title/tt0096256/credits/ ; https://www.bbfc.co.uk/release/they-live-q29sbgvjdglvbjpwwc0zmdexmdc",
+    "lancamentoBrasil 01/12/1989 (cinema, '14'): conferido no TMDB, página de lançamentos em pt-BR; continua sem fonte brasileira independente, como a ficha já diz. https://www.themoviedb.org/movie/8337-they-live/releases",
+    "direcao John Carpenter: AFI (Dir), Box Office Mojo (Director), Wikidata P57, en.wikipedia.",
+    "duracao 94: AFI 'Duration (in mins): 94'; Box Office Mojo '1 hr 34 min'; Wikidata P2047 94; BBFC 'Approx. running minutes 94m' e cópia de cinema de 1988 com 93m 54s (relançamento de 2018 com 94m 22s); TMDB pt-BR '1h 33m'. Recomendação de 94 mantida.",
+    "Roteiro 'John Carpenter (como Frank Armitage)': AFI (WRITER: Frank Armitage, Scr; nota sobre o pseudônimo e a origem em Lovecraft), en.wikipedia (efn), pt.wikipedia ('John Carpenter (como Frank Armitage)'), Wikidata P58 = John Carpenter. São 36 caracteres.",
+    "Obra original Ray Nelson: AFI 'Based on the short story \"Eight O'Clock in the Morning\" by Ray Nelson' (fonte literária única listada); en.wikipedia (conto de nov. 1963 na The Magazine of Fantasy & Science Fiction).",
+    "Fotografia Gary B. Kibbe: AFI (Dir of photog), Box Office Mojo, TMDB, en.wikipedia, Wikidata P344.",
+    "Música John Carpenter & Alan Howarth: AFI (Mus, os dois), Box Office Mojo (Composer, os dois), en.wikipedia, TMDB. O Wikidata P86 traz só Carpenter, como a ficha já registra.",
+    "Produção Larry Franco: AFI 'PRODUCERS: Larry Franco, Prod' e 'A Larry Franco production'; Box Office Mojo 'Producer'; Wikidata P162. É produtor de fato. Shep Gordon e Andre Blay são produtores executivos e Sandy King, produtora associada (AFI), fora do campo 'Produção', como a ficha explica.",
+    "Elenco Roddy Piper / Nada: AFI e Box Office Mojo creditam 'Nada'; o nome nunca é dito no filme (AFI; nota da en.wikipedia).",
+    "Elenco Keith David / Frank Armitage: crédito em tela 'Frank' (AFI, Box Office Mojo); o AFI afirma que 'Frank Armitage' é o nome completo do personagem; TMDB, en.wikipedia, pt.wikipedia e Wikiquote usam 'Frank Armitage'. A escolha documentada pela ficha se sustenta.",
+    "Elenco Meg Foster / Holly Thompson: o sobrenome é dito no filme ('So your name's Holly, right?' / 'Holly Thompson', clip.cafe 00:49:37; 'Holly Thompson, 8634 Circleview Drive', 00:50:32). Crédito em tela 'Holly' (AFI). A grafia 'Thompsen' do TMDB está errada.",
+    "Elenco George \"Buck\" Flower / Andarilho (Drifter): AFI, Box Office Mojo, TMDB.",
+    "Elenco Peter Jason / Gilbert: AFI, TMDB, en.wikipedia.",
+    "Elenco Raymond St. Jacques / Pregador de rua (Street preacher): AFI, TMDB, en.wikipedia, pt.wikipedia.",
+    "classificacao null: confirmado que a API do ClassInd (classindportal.mj.gov.br/api/solicitacao-classificacao-consultas) responde 302 para o login sso.mj.gov.br. Uma busca própria não achou portaria para 'Eles Vivem'. Ver classificacaoVeredito.",
+    "generos Ficção Científica, Ação, Terror: AFI 'Horror, Science fiction'; en.wikipedia 'science fiction action horror'; pt.wikipedia 'Ação, Ficção científica, Suspense, Terror'; Box Office Mojo 'Action, Horror, Sci-Fi, Thriller'.",
+    "pais Estados Unidos: AFI 'Country: United States', Wikidata P495 (Q30), pt.wikipedia, BBFC.",
+    "idiomaOriginal Inglês: AFI 'Language: English', Wikidata P364 (Q1860)."
+  ],
+  "dossieRefutados": [
+    {
+      "id": "TL02",
+      "problema": "Detalhe sem fonte: 'trem de carga'. O Hilobrow diz só 'A train pulls away' e a en.wikipedia fala em 'opening train sequence'. Nenhuma fonte aberta diz que é um trem de carga.",
+      "correcao": "Escrever 'um trem se afasta e revela Nada'. O resto confere: figura pequena 'dwarfed by the rail yard, the overpasses', 'flannel shirt and a pack' (Hilobrow); 'no money' e 'all his possessions in a rucksack' (AV Club); caminhada sob os créditos de abertura (Gizmodo).",
+      "fontes": [
+        "https://www.hilobrow.com/2011/11/09/spoiler-alert-they-live/",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://gizmodo.com/10-things-you-might-not-know-about-john-carpenters-cult-1774346855",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ]
+    },
+    {
+      "id": "TL10",
+      "problema": "Fala inexata: Frank não diz que 'vai marretar um carro importado'. A fala é 'They close one more factory, we should take a sledge to one of their fancy fucking foreign cars', no plural e no condicional ('a gente devia'). Na legenda: 'we should take a sledge to their foreign cars'.",
+      "correcao": "Frank diz que, se fecharem mais uma fábrica, 'a gente devia' levar uma marreta a um desses carros importados chiques. O resto confere: mulher e dois filhos em Detroit, sem vê-los há seis meses; siderúrgicas demitindo até quebrar; concessões dos operários e aumentos para os chefes; 'he who has the gold makes the rules'; a vida como 'crazy game' em que cada um tenta derrubar o outro.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/they-close-one-more-factory-we-should-take-a-sledge-to-one-of-their-fancy-fucking-foreign-cars/",
+        "https://clip.cafe/they-live-1988/the-steel-mills-laying-people-off-left-right/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ]
+    },
+    {
+      "id": "TL12",
+      "problema": "Ordem errada: 'We are their cattle' não está na primeira invasão do sinal. Está na segunda (clip.cafe 00:15:23), junto com 'They are dismantling the sleeping middle class... We are being bred for slavery' e com a ordem de desligar o sinal 'at the source'. Na primeira (00:12:36 a 00:13:19) estão os impulsos redirecionados, o estado de consciência induzido, pobres e subclasse crescendo, 'Racial justice and human rights are non-existent' e 'Keep us asleep, keep us selfish, keep us sedated'.",
+      "correcao": "Dividir as falas por invasão como acima. As citações estão corretas, e o comercial de unhas postiças antes da invasão confere na transcrição de Springfield.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/the-poor-the-under-class-are-growing/",
+        "https://clip.cafe/they-live-1988/please-understand-they-are-safe-as-long-as-they-are-not-discovered/",
+        "https://clip.cafe/they-live-1988/they-are-dismantling-the-sleeping-middle-class-s1/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ]
+    },
+    {
+      "id": "TL25",
+      "problema": "Atribuição errada. (1) Nem todos os que conversam são alienígenas: o deprimido é creditado como 'Depressed human' (Stratton Leopold) no AFI e no TMDB. (2) O 'Go for it, man' não vem 'por causa de uma promoção'. Quem foi promovido é quem diz a frase; o deprimido responde 'It's easy for you to say, you got the promotion' e ouve 'it'll come... just don't worry about it'. A Rolling Stone descreve os alienígenas 'blithely telling their coworkers to \"Go for it\"'.",
+      "correcao": "No mercado, clientes falam de amenidades: uma conhecida que não foi à aula de Lamaze; o jantar em que 'she served blue corn tortillas. It's so dated'. Um cliente deprimido, creditado como humano, ouve de um colega 'Go for it, man' e responde que é fácil falar para quem ganhou a promoção. Não afirmar que todos os interlocutores são alienígenas.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/so-depressed-i-dont-know-what-to-do/",
+        "https://clip.cafe/they-live-1988/did-bob-make-you-go-to-john-and-mary-ellens-last-night/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.themoviedb.org/movie/8337-they-live/cast",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533"
+      ]
+    },
+    {
+      "id": "TL27",
+      "problema": "Detalhe sem fonte e ordem trocada. Nenhuma fonte diz que 'You, you're okay' é dito a duas mulheres humanas: o clip.cafe registra só 'You, you're okay. This one, real fucking ugly'. A ordem real é: cheese dip (00:38:10), depois 'You, you're okay / This one, real fucking ugly' (00:38:19), depois 'I take these glasses off... formaldehyde face' (00:38:26), 'Get out or I call the cops', 'You need a Brazilian plastic surgeon' e por fim 'I've got one that can see' (00:38:42). O dossiê põe o 'you're okay' depois do 'formaldehyde-face'.",
+      "correcao": "Manter as falas na ordem acima. Dizer que Nada separa os clientes em voz alta ('você está bem; esta aqui, horrorosa') sem precisar quantas pessoas são nem quem são. O 'I've got one that can see!' é da Rich Lady (Thelma Lee), segundo o clip.cafe.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/you-youre-okay/",
+        "https://clip.cafe/they-live-1988/you-youre-okay-s1/",
+        "https://clip.cafe/they-live-1988/ive-got-one-can-see/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ]
+    },
+    {
+      "id": "TL28",
+      "problema": "Detalhe sem fonte: 'num beco'. O AFI diz 'Back on the street a pair of police officers attempt to apprehend Nada'. O clip.cafe só registra 'That's far enough' e 'let's go someplace quiet', e nenhuma fonte aberta situa a abordagem num beco. Em compensação, a ameaça seguida de proposta de acordo, que o dossiê dá como fonte única (Springfield), também está no clip.cafe: 'It would be easier if we don't have to splatter your brains... you stumbled onto something here. Maybe we can all benefit from this slight misunderstanding. Now let's go someplace quiet so we can talk this over'.",
+      "correcao": "Escrever que dois policiais alienígenas o abordam na rua e o levam a um ponto afastado, sem dizer 'beco'. O resto confere: 'Where'd you get those glasses?' / 'Tooth fairy' (o policial loiro, Norman Howell); 'You look as shitty to us as we do to you'; 'So you bastards die just like we do'.",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://clip.cafe/they-live-1988/all-right-suppose-we-settle-down/",
+        "https://clip.cafe/they-live-1988/it-would-be-easier-if-dont-have-splatter-brains/",
+        "https://clip.cafe/they-live-1988/so-you-bastards-die-just-like-we-do/"
+      ]
+    },
+    {
+      "id": "TL31",
+      "problema": "Fala parafraseada como se fosse literal: Holly não diz que vai 'fingir que vê'. Ela diz 'If you want me to look through your sunglasses, I'll look through your sunglasses. If I don't see what you see, I'm going to see it anyway'. No mesmo trecho, também é dela, com ironia, 'You're fighting the forces of evil that none of us can see without sunglasses' (clip.cafe).",
+      "correcao": "Escrever que ela diz que, se não vir o que ele vê, vai ver 'mesmo assim'. Deixar 'fingir' como leitura, não como fala. O resto confere: refém no estacionamento, 'like a drug... you come down hard', 'You have two guns. You're not sorry. You're in charge', 'Assistant program director... Cable 54', 'They're sending some kind of signals out of TV sets'.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/youre-fighting-the-forces-of-evil/",
+        "https://clip.cafe/they-live-1988/look-things-turned-out-a-little-sour-me-today/",
+        "https://clip.cafe/they-live-1988/so-your-names-holly-right/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ]
+    },
+    {
+      "id": "TL38",
+      "problema": "Revela o final e não está marcado como spoilerDoFinal. O massacre da reunião da resistência ('They're killing everybody', a maioria dos presentes morta) está na lista do próprio dossiê de viradas tardias a poupar (finalNaoRevelar). Os fatos conferem: Springfield ('It's time we started spilling some blood' / 'We bide our time. We locate their signal and shut it off'; 'I thought I'd killed you... I'm so sorry') e Wikipedia (Holly traz informação sobre a origem do sinal; 'the majority of those present killed').",
+      "correcao": "Marcar spoilerDoFinal: true, ou separar o debate interno, que não estraga nada, da chegada de Holly e da invasão policial, marcando só esta parte.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://clip.cafe/they-live-1988/theyre-killing-everybody/",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ]
+    },
+    {
+      "id": "TL39",
+      "problema": "Revela o final e não está marcado como spoilerDoFinal: a fuga pelo portal do relógio, a base subterrânea, a vitória da 'Operation Steel Fist' (o que confirma o massacre) e o banquete da 'human power elite' fazem parte do terço final que o finalNaoRevelar manda poupar. A pista de tese 3 usa este fato, com o banquete e os 39%. Os fatos e as falas conferem no clip.cafe: 'This entryway is temporary and will disappear in ten seconds'; 'bilingual instructions are posted at the end of each corridor'; 'protection and the dominion of this power alliance'; 'an average 39%'; 'The situation is normal again'. Pelo clip.cafe, o orador do banquete é o 'Scruffy Blonde Man' (Robert Grasmere).",
+      "correcao": "Marcar spoilerDoFinal: true e tirar o banquete e os 39% de qualquer texto público. Se a pista 3 for usada, apoiar só em TL28 e TL37.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/attention-your-wristwatch-has-malfunctioned/",
+        "https://clip.cafe/they-live-1988/operation-steel-fist-has-been-a-complete-success/",
+        "https://clip.cafe/they-live-1988/our-projections-show-that-by-the-year-2025not-only-america-but-the-entire-planetwill-be-under-the/",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ]
+    },
+    {
+      "id": "TL40",
+      "problema": "Revela o final e não está marcado como spoilerDoFinal. O Drifter de Justiceville reaparecendo como colaborador e a sala 'the brains of the whole operation', de onde o sinal vai ao satélite, estão no finalNaoRevelar. As pistas 3 e 4 usam este fato. As falas conferem: 'I didn't know you'd been recruited' (Springfield), 'works like one big airport', 'We bump it out all over the world', 'What's the threat? We all sell out every day. Might as well be on the winning team'. Pela Wikiquote, é Frank quem diz 'You'd do it to your own kind'.",
+      "correcao": "Marcar spoilerDoFinal: true. Nos textos, não usar o Drifter colaborador nem o 'We all sell out every day', que além de tudo é bastidor (a frase veio de um executivo da Universal, segundo a en.wikipedia).",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/whats-wrong-with-having-good-a-change-s1/",
+        "https://clip.cafe/they-live-1988/and-here-we-got-the-brains-of-the-whole-operation/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ]
+    },
+    {
+      "id": "TL41",
+      "problema": "Revela o final e não está marcado como spoilerDoFinal: a cena se passa no estúdio da Cable 54 durante o ataque final e mostra que ali fica a sede do sinal, algo que o finalNaoRevelar manda poupar. A pista de tese 4 usa a cena ('a sede do inimigo é um estúdio...'). Atribuição não confirmada: nem o clip.cafe nem o Springfield dizem quem fala ('Is this the two minute break or the thirty second break? / I think it's the thirty second break. They dropped 12, I guess we must be running long'). Chamar os falantes de 'apresentadores do telejornal' é inferência a partir do elenco do AFI (Male/Female news anchor).",
+      "correcao": "Marcar spoilerDoFinal: true e dizer 'no estúdio, alguém discute se o intervalo é de dois minutos ou de trinta segundos', sem atribuir aos apresentadores. Tirar a pista 4 dos textos ou reapoiá-la só em TL12, TL14, TL31 e TL36.",
+      "fontes": [
+        "https://clip.cafe/they-live-1988/is-this-the-two-minute-break-or-the-thirty-second-break/",
+        "https://clip.cafe/they-live-1988/we-are-experiencing-a-technical-difficulty/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ]
+    },
+    {
+      "id": "TL43",
+      "problema": "Detalhe contrariado pelas fontes: 'dois críticos de cinema, um deles alienígena'. O Den of Geek diz que a piada mira 'Siskel & Ebert (all of them aliens)', e o davesmoviesite fala em 'two film critics on TV ... who are exposed as aliens'. Nenhuma fonte aberta diz que só um é alienígena. O resto confere: 'Filmmakers like George Romero and John Carpenter have to show some restraint' e 'You're feeling that V6 power' (clip.cafe), e a última fala, 'Hey, what's wrong, baby?' (Farrago: 'the film's famous final line').",
+      "correcao": "Escrever 'dois críticos de TV, expostos como alienígenas' ou não dizer quantos. A cena já está corretamente marcada como spoilerDoFinal.",
+      "fontes": [
+        "https://www.denofgeek.com/movies/they-live-1988-review",
+        "https://davesmoviesite.blogspot.com/2013/06/the-best-films-i-have-never-seen-before_28.html",
+        "https://clip.cafe/they-live-1988/the-oscar-winners-gave-a-press-conference-and-quot-how-to-buy-a-sailboat-quot-as/",
+        "https://farragomagazine.com/news/article/farrago/2016-05-16-aliens-abs-anti-capitalism-they-live-and-the-cult-of-the-conspiracy-documentary/"
+      ]
+    }
+  ],
+  "dossieConfirmados": [
+    "TL01",
+    "TL03",
+    "TL04",
+    "TL05",
+    "TL06",
+    "TL07",
+    "TL08",
+    "TL09",
+    "TL11",
+    "TL13",
+    "TL14",
+    "TL15",
+    "TL16",
+    "TL17",
+    "TL18",
+    "TL19",
+    "TL20",
+    "TL21",
+    "TL22",
+    "TL23",
+    "TL24",
+    "TL26",
+    "TL29",
+    "TL30",
+    "TL32",
+    "TL33",
+    "TL34",
+    "TL35",
+    "TL36",
+    "TL37",
+    "TL42",
+    "TL44",
+    "TL45"
+  ],
+  "classificacaoVeredito": "Manter null. Nenhum registro oficial verificável. A API do ClassInd (classindportal.mj.gov.br/api/solicitacao-classificacao-consultas) responde 302 para o login sso.mj.gov.br, conferido em 06/11/2026, e não se usou credencial. O DOU (in.gov.br) recusou a conexão nesta rodada (socket hang up), então a busca da ficha, com 0 resultados para 'THEY LIVE', não pôde ser refeita, mas nada a contradiz. Uma busca própria por portaria de 'Eles Vivem' não achou nada. Indícios não oficiais: 14 no TMDB BR (01/12/1989, cinema) e 16 no Filmow, visto só em resumo de buscador.",
+  "anoVeredito": "1988. Primeira exibição pública conhecida: estreia comercial nos EUA e no Canadá em 04/11/1988, pela Universal (AFI; Box Office Mojo 'Earliest Release Date Fri Nov 4, 1988'; Wikidata P577 com EUA e Canadá; TMDB). Nenhuma pré-estreia ou festival anterior foi encontrado. A data anunciada de 21/10/1988 foi adiada (en.wikipedia), e de todo modo qualquer exibição prévia seria de 1988, porque a filmagem começou em 7/3/1988 (AFI). O cinema no Brasil (01/12/1989, TMDB) não muda o ano.",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/verificacao.json"
+}

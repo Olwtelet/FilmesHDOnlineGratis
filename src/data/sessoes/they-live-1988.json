@@ -1,0 +1,201 @@
+{
+  "slug": "they-live-1988",
+  "titulo": "Eles Vivem",
+  "categoria": "Ficção Científica",
+  "linhasTitulo": 1,
+  "sessao": {
+    "data": "2026-11-21",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Eles Vivem",
+      "tituloOriginal": "They Live",
+      "ano": 1988,
+      "direcao": "John Carpenter",
+      "duracao": 94,
+      "generos": [
+        "Ficção Científica",
+        "Ação",
+        "Terror"
+      ],
+      "trailer": {
+        "youtube": "vSVQ975eTBI",
+        "canal": "Shout! Studios",
+        "idioma": "en",
+        "tituloVideo": "They Live [Collector's Edition] (1988) Official Trailer"
+      },
+      "tmdb": 8337,
+      "imdb": "tt0096256"
+    }
+  ],
+  "sinais": [
+    "ficção-científica",
+    "ação",
+    "terror",
+    "suspense",
+    "clássico",
+    "cult",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O poder ganha cara de caveira",
+    "leitura": "Em cor e sem monstro, um alto-falante suspende o vale-alimentação e culpa o computador, e as torres do centro sobem atrás dos barracos. Falta um alvo, e John Carpenter usa os óculos para dar a esse poder rosto de caveira. Rosto leva tiro; alto-falante, não.",
+    "descricao": "Em Los Angeles, um operário acha óculos que mostram ordens nos anúncios e caveiras entre os ricos. John Carpenter dá ao poder um rosto que leva tiro.",
+    "notasHome": [
+      {
+        "rotulo": "Alto-falante",
+        "frase": "Uma voz impessoal culpa o computador"
+      },
+      {
+        "rotulo": "Óculos escuros",
+        "frase": "A cor sai, e no anúncio fica a ordem"
+      },
+      {
+        "rotulo": "Espingarda",
+        "frase": "Na rua e no banco, enfim há em quem atirar"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Quatorze bancos",
+        "frase": "O herói resume Denver sem apontar culpado: dez anos de trabalho, quatorze bancos fechados numa semana. Armado, entra num banco."
+      },
+      {
+        "rotulo": "Canteiro e barraco",
+        "frase": "De dia, o operário ergue um prédio alto; à noite, dorme entre barracos com as torres do centro ao fundo. O plano acusa sem óculos."
+      },
+      {
+        "rotulo": "Viagem ao Caribe",
+        "frase": "Sem cor, o outdoor do Caribe manda casar e procriar, e as notas do jornaleiro se dizem deus. A moça de biquíni já dava uma ordem."
+      },
+      {
+        "rotulo": "Tortilha de milho azul",
+        "frase": "No mercado de luxo, a maioria dos clientes tem rosto de caveira, e o papo é tortilha fora de moda. O assunto não assusta ninguém."
+      },
+      {
+        "rotulo": "A lata de lixo do beco",
+        "frase": "Caveira cai a tiro, com piada para a plateia. Convencer Frank, que tem família e salário a defender, custa cinco minutos de socos."
+      },
+      {
+        "rotulo": "Promoção, casa e carro",
+        "frase": "Quem colabora, diz a reunião, ganha promoção, conta no banco, casa e carro. O catálogo dos anúncios paga gente de rosto humano."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "John Carpenter (como Frank Armitage)"
+      },
+      {
+        "funcao": "Obra original",
+        "nome": "Ray Nelson"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Gary B. Kibbe"
+      },
+      {
+        "funcao": "Música",
+        "nome": "John Carpenter & Alan Howarth"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Larry Franco"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Nada",
+        "nome": "Roddy Piper"
+      },
+      {
+        "funcao": "Frank Armitage",
+        "nome": "Keith David"
+      },
+      {
+        "funcao": "Holly Thompson",
+        "nome": "Meg Foster"
+      },
+      {
+        "funcao": "Andarilho",
+        "nome": "George \"Buck\" Flower"
+      },
+      {
+        "funcao": "Gilbert",
+        "nome": "Peter Jason"
+      },
+      {
+        "funcao": "Pregador de rua",
+        "nome": "Raymond St. Jacques"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "p1FVoXYSSaDXRsSuvYgFN0byRLn.jpg",
+      "recorte": {
+        "x": 0,
+        "y": 0,
+        "largura": 0.9,
+        "altura": 1
+      }
+    },
+    "cartaz": {
+      "tmdb": "eaItFukc7nG2NGz3ZzpTrKSrhgw.jpg"
+    },
+    "direcao": {
+      "tmdb": "dR1MzJh6Bkvne1YeCK6RXITQSG4.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "p1FVoXYSSaDXRsSuvYgFN0byRLn.jpg"
+      },
+      {
+        "tmdb": "dR1MzJh6Bkvne1YeCK6RXITQSG4.jpg"
+      },
+      {
+        "tmdb": "mq37KmVnHaB6MpAx1uiKBrVDrxG.jpg"
+      },
+      {
+        "tmdb": "403tFBTwzZgmQ5fhnvWenk7v5JD.jpg"
+      },
+      {
+        "tmdb": "vujsgVoENaQTkEd63fs58zkOtuj.jpg"
+      },
+      {
+        "tmdb": "tosqKZAgt0gKnDs8MYw1ylnF4B6.jpg"
+      },
+      {
+        "tmdb": "8DLKQUtcRrtY2ic6qJz4t48fEEx.jpg"
+      },
+      {
+        "tmdb": "uiCFVKODe4XrudYskTFGq84nwEi.jpg"
+      },
+      {
+        "tmdb": "oG59aOUAUEY6KgekeYo456owHJf.jpg"
+      },
+      {
+        "tmdb": "oqtQviANDl4QoZ9QWcjIFTNyLe2.jpg"
+      },
+      {
+        "tmdb": "yiFprZWsQpET3TEREOte0RT1qHI.jpg"
+      },
+      {
+        "tmdb": "gaFyOS8Pui8XuOBmNXLsxyjo93l.jpg"
+      },
+      {
+        "tmdb": "iTjpbh5lxBZcQbLEY434enFsTIW.jpg"
+      },
+      {
+        "tmdb": "7cbTXykFZd417ZV08kdm7oqopSj.jpg"
+      }
+    ]
+  }
+}

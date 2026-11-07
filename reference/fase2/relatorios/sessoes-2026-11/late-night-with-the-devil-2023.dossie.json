@@ -1,0 +1,639 @@
+{
+  "slug": "late-night-with-the-devil-2023",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/dossie.json",
+  "fatos": [
+    {
+      "id": "F01",
+      "tipo": "estrutura",
+      "descricao": "O filme se apresenta como documentário: uma voz masculina em off (creditada a Michael Ironside) conta a história do programa e anuncia que o que se verá é a fita mestra recém-descoberta do que foi ao ar naquela noite, mais bastidores inéditos. O título do filme é o nome que a narração dá ao próprio evento, apresentado como a transmissão que chocou o país. Falas em paráfrase; transcrição de legendas não oficial em springfieldspringfield.",
+      "momento": "Prólogo, primeiros ~8 min (estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://dvd-fever.co.uk/late-night-with-the-devil-the-dvdfever-cinema-review-david-dastmalchian/",
+        "https://www.deepfocusreview.com/reviews/late-night-with-the-devil/",
+        "https://www.austinchronicle.com/screens/sxsw-film-review-late-night-with-the-devil-12834316/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F02",
+      "tipo": "contexto-na-tela",
+      "descricao": "A montagem de abertura usa imagens de arquivo dos anos 1970: Guerra do Vietnã, renúncia de Nixon, Charles Manson, David Berkowitz (Son of Sam) algemado, filas em postos de gasolina. A narração define a década como tempo de desconfiança e violência, diz que a televisão leva o horror para dentro das salas de estar e, logo depois, que ela também oferece conforto, frase que introduz o Night Owls.",
+      "momento": "Prólogo, primeiro minuto",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651",
+        "https://dreadcentral.com/reviews/449680/late-night-with-the-devil-will-make-you-want-to-kill-your-television-sxsw-2023-review",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F03",
+      "tipo": "fala",
+      "descricao": "No trecho do primeiro episódio (abril de 1971), Jack se apresenta agradecendo ao público por recebê-lo na sala de estar e brinca que os pais, em Berwyn (Illinois), estão em casa assistindo ao programa de Johnny Carson. Na abertura do especial de Halloween de 1977 ele repete a mesma saudação de entrada nas salas de estar, agora com um 'mais uma vez' (paráfrase; transcrição de legendas não oficial).",
+      "momento": "Prólogo e abertura do especial (~min 9, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F04",
+      "tipo": "contexto-na-tela",
+      "descricao": "A narração resume a carreira: contrato de cinco anos com a rede fictícia UBC, assinado em novembro de 1972 com o dono, Walker Bedford; uma indicação ao Emmy; temporadas sem alcançar Carson, indicações sem prêmio e a fama de eterno segundo colocado (perennial also-ran), com o comentário de que a história só lembra dos reis.",
+      "momento": "Prólogo",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/",
+        "https://www.highonfilms.com/late-night-with-the-devil-2023-movie-ending-explained"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F05",
+      "tipo": "fala",
+      "descricao": "Junto às imagens da assinatura com a UBC ouvem-se boas-vindas à 'família' UBC e uma pergunta sobre o que Jack teve de sacrificar para chegar ali (paráfrase; transcrição de legendas não oficial). A mesma pergunta, em inglês, é o título de uma crítica do Signal Horizon sobre o filme.",
+      "momento": "Prólogo",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://signalhorizon.com/?p=18396"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F06",
+      "tipo": "contexto-na-tela",
+      "descricao": "A narração apresenta The Grove como clube só de homens nas sequoias da Califórnia, do século XIX, com políticos, artistas e grandes empresários; diz que ele se vende como acampamento de verão inofensivo, mas é cercado de rumores sobre cerimônias arcanas e sobre o poder de fazer e desfazer carreiras, e que Jack é ligado a ele desde o rádio. As imagens incluem fotos do lugar e um plano rápido de uma estátua de coruja.",
+      "momento": "Prólogo",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://dreadcentral.com/reviews/449680/late-night-with-the-devil-will-make-you-want-to-kill-your-television-sxsw-2023-review",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F07",
+      "tipo": "cena",
+      "descricao": "Madeleine Piper, atriz de teatro e mulher de Jack, não fumante, recebe diagnóstico de câncer de pulmão terminal em setembro de 1976. Em outubro aparece no programa, já doente, e conta rindo que conheceu Jack nos bastidores de 'Oh! Calcutta!', enquanto ele cora. A narração informa que foi o episódio de maior audiência da história do Night Owls, ainda assim um ponto abaixo de Carson. Duas semanas depois ela morre.",
+      "momento": "Prólogo",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/",
+        "https://www.cinemablend.com/movies/late-night-with-the-devil-ending-explained-what-it-all-meant",
+        "https://signalhorizon.com/?p=18396",
+        "https://www.thewrap.com/late-night-with-the-devil-ending-explained-jack-delroy/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F08",
+      "tipo": "contexto-na-tela",
+      "descricao": "Depois do luto e da volta ao ar, a narração diz que Jack e o produtor Leo Fiske passam a buscar polêmica para ganhar audiência; um trecho mostra um convidado hostil e Jack chamando o intervalo avisando que o convidado não volta. Fecha com audiência em queda livre, patrocinadores nervosos, contrato perto de vencer e a Sweeps Week, semana de medição nacional de audiência, começando no Halloween de 1977.",
+      "momento": "Fim do prólogo",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://dvd-fever.co.uk/late-night-with-the-devil-the-dvdfever-cinema-review-david-dastmalchian/",
+        "https://comic-watch.com/movies/late-night-with-the-devil-heeeeres-satan"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F09",
+      "tipo": "forma",
+      "descricao": "Três regimes de imagem: a transmissão aparece em 4:3 (1.33:1), colorida, com textura de vídeo de estúdio da época; os bastidores dos intervalos aparecem em preto e branco e mais largos (1.85:1 segundo o DVDfever, 1.66:1 segundo o TheaterByte); a sequência final passa a widescreen (2.35:1) com outra textura de imagem.",
+      "momento": "Filme inteiro; troca para widescreen no trecho final",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.austinchronicle.com/screens/sxsw-film-review-late-night-with-the-devil-12834316/",
+        "https://dvd-fever.co.uk/late-night-with-the-devil-the-dvdfever-cinema-review-david-dastmalchian/",
+        "https://theaterbyte.com/late-night-with-the-devil-ltd-ed-4k-a-unique-horror-experience",
+        "https://foundfootagehorrormovies.com/2024/10/30/late-night-with-the-devil-review-2024",
+        "https://creepycatalog.com/creeptober-day-11-late-night-with-the-devil"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F10",
+      "tipo": "forma",
+      "descricao": "Nos bastidores em preto e branco ninguém reage às câmeras que filmam conversas privadas; nenhuma equipe de documentário aparece, e há sinal de várias câmeras de bastidor que nunca se veem umas às outras. O filme não explica de onde vêm essas imagens.",
+      "momento": "Todos os intervalos",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.deepfocusreview.com/reviews/late-night-with-the-devil/",
+        "https://creepycatalog.com/creeptober-day-11-late-night-with-the-devil",
+        "https://spectrecollie.com/2024/04/21/one-thing-i-like-about-late-night-with-the-devil/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F11",
+      "tipo": "som",
+      "descricao": "A música se divide entre o tema e os números da banda do programa (crédito de Night Owls music para Roscoe James Irwin) e a trilha original de Glenn Richards. Segundo a Variety, as duas vão se misturando ao longo do filme, à medida que os personagens deixam de saber se aquilo é entretenimento ou pesadelo.",
+      "momento": "Filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://moriareviews.com/horror/late-night-with-the-devil-2023.htm",
+        "https://dvd-fever.co.uk/late-night-with-the-devil-the-dvdfever-cinema-review-david-dastmalchian/"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F12",
+      "tipo": "som",
+      "descricao": "Nos créditos finais toca Keep It Warm, canção pop de 1976 da dupla Flo & Eddie cuja letra fala de dinheiro e política; segundo a Wikipedia, um trecho dela também toca na cena de abertura.",
+      "momento": "Créditos finais (e abertura, segundo a Wikipedia)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/Moving_Targets_(Flo_%26_Eddie_album)",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F13",
+      "tipo": "cena",
+      "descricao": "O especial abre com a vinheta do patrocinador, o grupo Cavendish, cujo slogan propõe fechar o negócio com um aperto de mão. Gus McConnell anuncia Jack pelo apelido Mr. Midnight e lista as atrações, incluindo a cantora Cleo James e o desfile anual de fantasias; Jack surge escondido e assusta Gus. No monólogo, piadas de época (Billy Carter, Reggie Jackson), um pedido em tom de piada para que o público goste porque é Sweeps Week, a afirmação de que a única pessoa que importa no negócio é o espectador e um pedido a Leo de um diário de audiência Nielsen para uma mulher que grita que o ama (paráfrase; transcrição de legendas não oficial).",
+      "momento": "Abertura do especial (~min 8 a 12, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://moriareviews.com/horror/late-night-with-the-devil-2023.htm"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F14",
+      "tipo": "som",
+      "descricao": "Gus apresenta um teremim, instrumento que se toca sem encostar. Mais tarde, durante a conversa com June e Lilly, o teremim dispara um guincho e copos se quebram; Haig atribui o efeito à microfonia do sistema de som do estúdio, e Lilly diz que foi Mr. Wriggles.",
+      "momento": "Abertura do especial; volta no 3º segmento (~min 47, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F15",
+      "tipo": "cena",
+      "descricao": "Christou, médium de nome único e paletó dourado, faz leitura fria na plateia: erra Peterson (era Peterman, sobrenome de solteira da mulher que largou o espectador), erra outros nomes e desconversa culpando luzes e câmeras pelo sinal embaralhado; depois acerta com mãe e filha o nome de Edmond, filho e irmão que se matou, e um ursinho chamado Papa. Jack avisa que as datas da turnê de Christou vão aparecer na tela.",
+      "momento": "1º segmento (~min 12 a 20, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://themoviespoiler.com/?p=3944",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651",
+        "https://moriareviews.com/horror/late-night-with-the-devil-2023.htm"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F16",
+      "tipo": "cena",
+      "descricao": "Mais tarde, Haig interroga as duas mulheres no ar: elas preencheram um questionário antes de entrar e responderam a perguntas de uma mulher no saguão, a mesma que depois socorreu Christou. O acerto que comoveu o estúdio tinha sido colhido antes do programa.",
+      "momento": "Início do 3º segmento (~min 43, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F17",
+      "tipo": "cena",
+      "descricao": "Quando Jack já chama o intervalo, Christou ouve um zumbido, chama por Minnie e descreve um homem não casado que usa aliança; as luzes do estúdio piscam e Christou grita perguntando quem está ali. Jack explica ao vivo que são refletores velhos com defeito e corta para os comerciais.",
+      "momento": "Fim do 1º segmento (~min 19 a 20, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://themoviespoiler.com/?p=3944",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F18",
+      "tipo": "cena",
+      "descricao": "No primeiro intervalo em preto e branco, Leo diz a Jack que o que aconteceu foi ótima televisão e, perguntado se o efeito das luzes foi ideia dele, aceita o crédito; avisa que o novo vice-presidente de marketing da Cavendish está na primeira fila querendo conhecê-lo, e Jack se recusa a bajular. Gus conta que viu correias e facas nos bastidores e que a equipe está assustada (paráfrase; transcrição de legendas não oficial).",
+      "momento": "1º intervalo (~min 20 a 22, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F19",
+      "tipo": "personagem",
+      "descricao": "Carmichael Haig, ex-mágico conhecido como Carmichael the Conjurer e hoje porta-voz de uma federação cética (IFSIP), entra acendendo um charuto com um truque; um vídeo o mostra a caminho de uma caça a fantasmas em Amityville e ele ironiza Ed e Lorraine Warren. Conta pelo menos cinco erros de Christou antes do acerto e o chama de mentiroso, trapaceiro e charlatão como ele próprio, com a diferença de que ele admite (paráfrase; transcrição de legendas não oficial).",
+      "momento": "2º segmento (~min 22 a 28, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://articles.skeptics.nz/2024/05/13/movie-review-late-night-with-the-devil",
+        "https://comic-watch.com/movies/late-night-with-the-devil-heeeeres-satan"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F20",
+      "tipo": "cena",
+      "descricao": "O cheque de Haig para quem provar um fenômeno sobrenatural: pede-se close na câmera 1 e o valor anunciado é 100 mil dólares; minutos depois o próprio Haig fala em meio milhão, valor repetido mais tarde no programa. Haig diz que ainda não perdeu um centavo com o desafio. Num intervalo, ele faz o cheque reaparecer no bolso do paletó de Jack.",
+      "momento": "2º segmento e retomada seguinte (~min 26 a 32, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://cinapse.co/2024/03/late-night-with-the-devil-is-a-refreshingly-intriguing-spin-on-found-footage/",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F21",
+      "tipo": "cena",
+      "descricao": "Jack conta ao vivo que Minnie era o apelido privado de Madeleine e que a mensagem pode ser para ele. Haig responde que metade da plateia usa aliança e que a morte dela não era segredo, e desafia Christou a chamar o espírito da mulher de Jack no ar. Christou vomita um líquido preto no palco e é levado; nos bastidores, Haig insinua que Jack combinou tudo porque drama no ar ajuda a audiência e cita os amigos poderosos de Jack na Grove.",
+      "momento": "Fim do 2º segmento (~min 27 a 30, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://themoviespoiler.com/?p=3944",
+        "https://www.highonfilms.com/late-night-with-the-devil-2023-movie-ending-explained"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F22",
+      "tipo": "cena",
+      "descricao": "No intervalo seguinte, Leo informa que a central telefônica lotou de ligações de gente irritada e confusa e comenta que nada disso é má notícia; a conversa com o patrocinador fica para depois (paráfrase; transcrição de legendas não oficial). Na volta ao ar, Haig explica o vômito como velho truque de vaudeville chamado spouting, regurgitação controlada.",
+      "momento": "2º intervalo e retomada (~min 30 a 32, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F23",
+      "tipo": "cena",
+      "descricao": "Jack apresenta o livro de June Ross-Mitchell, Conversations with the Devil, que chega às livrarias naquela semana, e exibe, com aviso de conteúdo perturbador, um filme produzido pelo centro de pesquisa dela: a casa-sede da Primeira Igreja de Abraxas, rituais com sangue, o líder Szandor D'Abo, o cerco federal de agosto de 1974, a ordem de encharcar a casa e os fiéis de gasolina e uma menina de 10 anos achada viva nos escombros, Lilly. O filme termina na gravação da primeira sessão de June com ela, em julho de 1976, cortada por gritos.",
+      "momento": "Abertura do 3º segmento (~min 32 a 37, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F24",
+      "tipo": "fala",
+      "descricao": "No filme da seita, D'Abo prega que Abraxas não reconhece bem, mal nem redenção, só o que se deseja e o modo de obtê-lo, e que o mestre exige sacrifício (paráfrase; transcrição de legendas não oficial).",
+      "momento": "Filme dentro do programa, 3º segmento (~min 34 a 36, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.cinemablend.com/movies/late-night-with-the-devil-ending-explained-what-it-all-meant"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F25",
+      "tipo": "personagem",
+      "descricao": "Lilly, 13 anos, olha direto para a lente; Jack a corrige no ar dizendo que ela pode falar com ele e não com a câmera; fora do ar ela pergunta para qual câmera deve olhar, e um técnico comenta que ela encarava a lente. Na entrevista ela diz saber quem Jack é, o homem cuja mulher morreu de câncer, consola-o pela perda e prevê que ele logo será muito famoso (falas em paráfrase; transcrição de legendas não oficial).",
+      "momento": "Entrada de June e Lilly e intervalo seguinte (~min 37 a 41, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://fsugatepost.com/post/late-night-with-the-devil-do-not-adjust-your-set",
+        "https://spectrecollie.com/2024/04/21/one-thing-i-like-about-late-night-with-the-devil/",
+        "https://www.deepfocusreview.com/reviews/late-night-with-the-devil/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F26",
+      "tipo": "cena",
+      "descricao": "Nos bastidores, June diz a Jack que não quer fazer a demonstração: Lilly está mais imprevisível e, na véspera, em estado de fuga, falou o nome dele. Jack responde que imprevisível é bom, que é para isso que existe TV ao vivo e que isso vai vender o livro; ela diz que não se trata do livro, e ele duvida (paráfrase; transcrição de legendas não oficial).",
+      "momento": "3º intervalo (~min 41, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.highonfilms.com/late-night-with-the-devil-2023-movie-ending-explained",
+        "https://www.deepfocusreview.com/reviews/late-night-with-the-devil/",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F27",
+      "tipo": "cena",
+      "descricao": "No mesmo intervalo, Leo conta que Christou morreu de uma hemorragia na ambulância. Jack, que achava que o vômito fazia parte do número, ordena que ninguém saiba, principalmente Gus; em seguida um contrarregra pergunta onde está a adaga sacrificial.",
+      "momento": "3º intervalo (~min 42, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://themoviespoiler.com/?p=3944",
+        "https://www.thewrap.com/late-night-with-the-devil-ending-explained-jack-delroy/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F28",
+      "tipo": "cena",
+      "descricao": "No ar, June se apresenta como parapsicóloga (doutorado, Stanford Research Institute), prefere o termo infestação psíquica a possessão e diz que a entidade é provavelmente uma divindade menor a serviço de Abraxas, não o próprio. Lilly chama o ser de Mr. Wriggles porque ele se contorce para entrar e sair da cabeça dela, e diz que June ensina que todo mundo tem um demônio dentro de si, nem sempre controlável.",
+      "momento": "3º segmento (~min 44 a 48, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://signalhorizon.com/?p=18396",
+        "https://www.cinemablend.com/movies/late-night-with-the-devil-ending-explained-what-it-all-meant"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F29",
+      "tipo": "fala",
+      "descricao": "Haig ironiza June dizendo que, pela leitura gnóstica, Abraxas é um showman consumado que precisa de plateia, e que o nome dele deu origem à palavra mágica dos ilusionistas; alguém na mesa completa: abracadabra (paráfrase; transcrição de legendas não oficial).",
+      "momento": "3º segmento (~min 46, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F30",
+      "tipo": "cena",
+      "descricao": "Jack pergunta a Lilly se Mr. Wriggles pode participar do programa; June recusa dizendo que luzes, câmeras e plateia não são ambiente controlado. A plateia passa a gritar que quer ver e chama June pelo nome; June cede com condições, e Jack anuncia uma estreia da TV ao vivo, a tentativa de falar com o diabo, e chama os patrocinadores. Nos bastidores June o acusa de emboscada, Haig resume a cena como pão e circo e Jack diz a ela que aquele é o momento dela.",
+      "momento": "Fim do 3º segmento e intervalo (~min 49 a 52, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://thecinemaholic.com/late-night-with-the-devil-ending-explained",
+        "https://variety.com/2023/film/reviews/late-night-with-the-devil-review-1235549618/",
+        "https://www.deepfocusreview.com/reviews/late-night-with-the-devil/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F31",
+      "tipo": "cena",
+      "descricao": "Ainda no intervalo, Gus confronta Jack: sabe da morte de Christou, a equipe está com medo e fala em abandonar o programa. Jack responde que só está tentando salvar o programa deles e manda Gus guardar o sermão; Gus diz que Jack não é um homem mau e implora que ele pare antes que algo terrível aconteça (paráfrase; transcrição de legendas não oficial).",
+      "momento": "4º intervalo (~min 52, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.highonfilms.com/late-night-with-the-devil-2023-movie-ending-explained"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F32",
+      "tipo": "cena",
+      "descricao": "A invocação: Lilly presa à cadeira por correias, June a põe em transe; a voz muda e a entidade cumprimenta Jack como velho conhecido, diz que os dois se conheceram entre as árvores altas e expõe o caso de Jack com June numa paródia obscena de cantiga infantil, com palavrão cortado por bipe de censura. A cadeira levita, a luz e a eletricidade do estúdio falham e June a traz de volta com uma fórmula em latim.",
+      "momento": "5º segmento (~min 53 a 60, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://themoviespoiler.com/?p=3944",
+        "https://www.thewrap.com/late-night-with-the-devil-ending-explained-jack-delroy/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F33",
+      "tipo": "cena",
+      "descricao": "Ainda no ar, logo após a invocação, Jack pede desculpas a June por tê-la posto naquela situação; no intervalo, diz a ela que aquilo pode virar um quadro fixo e que quer fazer parte. Leo, ao telefone, diz a alguém que a dupla tem tudo; Gus diz a Leo que aquilo não é mais audiência, é feitiçaria, e Leo manda Gus abrir o sorriso e voltar ao trabalho (paráfrase; transcrição de legendas não oficial).",
+      "momento": "Fim do 5º segmento e 5º intervalo (~min 59 a 62, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "F34",
+      "tipo": "fala",
+      "descricao": "No mesmo intervalo, Leo conta que três técnicos abandonaram o estúdio, que a comissão federal de comunicações marcou reunião de emergência para as 7h e que Bedford, o dono da rede, chamou aquilo de maior evento da TV desde a chegada à Lua; Leo fala em 35, talvez 40 pontos de share, comemora que voltaram dos mortos e diz que as grandes empresas vão fazer fila para participar da ressurreição de Jack (paráfrase; transcrição de legendas não oficial).",
+      "momento": "5º intervalo (~min 62, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651",
+        "https://dreadcentral.com/reviews/449680/late-night-with-the-devil-will-make-you-want-to-kill-your-television-sxsw-2023-review"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F35",
+      "tipo": "personagem",
+      "descricao": "Jack diz a Leo que, no fim da possessão, a voz de Lilly soou igual à de Minnie (antes, fora do ar, Lilly já perguntara a ele se não estava bonita, num tom que remete a Madeleine). Leo responde invocando Minnie: se ela estivesse ali, mandaria Jack voltar ao palco e arrasar (paráfrase; transcrição de legendas não oficial). Personagens além de Jack passam a chamar Madeleine de Minnie, apesar de o apelido ter sido apresentado como privado.",
+      "momento": "5º intervalo (~min 62 a 63, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://spectrecollie.com/2024/04/22/paved-with-some-sort-of-intention/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F36",
+      "tipo": "cena",
+      "descricao": "Na volta, Lilly descreve o transe como estar dormindo e acordada ao mesmo tempo; Haig diz que ela foi hipnotizada e manipulada pela médica, e Jack, aplaudido pela plateia, o acusa de querer escapar de pagar o meio milhão. Haig então hipnotiza Gus: pede luz baixa, close no relógio de bolso, que até Jack olhe, e que os espectadores em casa também prestem atenção; explora o pavor de vermes de Gus (durante a possessão, a entidade já havia ligado vermes à morte de Minnie, segundo a transcrição). Na imagem da transmissão, o pescoço de Gus sangra e vermes saem de seu corpo; Haig estala os dedos e diz Dreamer, here, awake; Gus não lembra de nada.",
+      "momento": "6º segmento (~min 63 a 71, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F37",
+      "tipo": "forma",
+      "descricao": "Jack manda o pessoal do videotape repetir o trecho: no replay, a mesma cena não tem vermes, só Gus se debatendo sob as instruções de Haig. Apenas duas pessoas da plateia levantam a mão dizendo que não viram os vermes da primeira vez. Haig afirma ter hipnotizado a maior parte do estúdio e parte dos espectadores em casa. O espectador do filme viu os vermes na imagem que a narração apresentou como a fita mestra.",
+      "momento": "6º segmento (~min 71 a 73, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://dmtalkies.com/late-night-with-the-devil-ending-explained-2024-shudder-film/",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F38",
+      "tipo": "fala",
+      "descricao": "Lilly sugere rever também a possessão, e Haig concorda que as câmeras de televisão não mentem. A produção avisa que a cantora Cleo James está pronta para encerrar a noite, e Jack adia a apresentação dela para não deixar o público sem resposta. June quer ir embora com Lilly; Lilly diz que as duas ficam porque querem que todos saibam a verdade (paráfrase; transcrição de legendas não oficial).",
+      "momento": "6º segmento (~min 73 a 74, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F39",
+      "tipo": "forma",
+      "descricao": "No replay da possessão, ao contrário do da hipnose, os fenômenos continuam na fita. Jack manda voltar, desacelerar e avançar quadro a quadro; num quadro congelado aparece a figura de Madeleine atrás dele, com a mão em seu ombro. Haig acusa Jack de ter armado tudo, inclusive manipulação de videotape, e chama aquilo de genialidade cínica.",
+      "momento": "6º segmento (~min 74 a 77, estimativa)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://themoviespoiler.com/?p=3944"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F40",
+      "tipo": "cena",
+      "descricao": "Clímax: Lilly, sem as correias, é possuída de novo; a cabeça se abre e brilha como lava, raios cruzam o estúdio. Gus grita uma fórmula cristã de exorcismo e tem o pescoço torcido; June morre; Haig se ajoelha, jura obediência ao demônio, oferece o cheque, diz abracadabra e é queimado; a plateia foge.",
+      "momento": "Fim do 6º segmento (~min 77 a 81, estimativa)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://spectrecollie.com/2024/04/22/paved-with-some-sort-of-intention/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F41",
+      "tipo": "estrutura",
+      "descricao": "Sequência final em widescreen: depois de estática, Gus anuncia de novo Mr. Midnight e a plateia aplaude como se nada tivesse ocorrido. Jack atravessa esquetes vistos no prólogo (o homem das cavernas, o tratador de animais, que agora traz um verme gigante no lugar da aranha, e a entrevista com Madeleine, cuja fala ganha uma cobrança sobre o que ele esqueceu) e uma roda de hipnose de programa de auditório. Olhando para a câmera, Jack implora que o público desligue a televisão.",
+      "momento": "Sequência final (~min 81 a 86, estimativa)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://foundfootagehorrormovies.com/2024/10/30/late-night-with-the-devil-review-2024"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F42",
+      "tipo": "cena",
+      "descricao": "Ainda no pesadelo, uma assinatura de contrato com executivos vira um ritual na Grove, entre árvores altas, com homens fantasiados de coruja e D'Abo; Jack é recebido na família, parabenizado pela vitória de audiência, ouve de novo a pergunta do prólogo sobre o sacrifício, ouve que seu maior sacrifício ainda está por vir e que o share passa de 40, e bebe de uma taça (paráfrase; transcrição de legendas não oficial).",
+      "momento": "Sequência final (~min 86 a 88, estimativa)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://www.cinemablend.com/movies/late-night-with-the-devil-ending-explained-what-it-all-meant"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F43",
+      "tipo": "cena",
+      "descricao": "Madeleine, no leito, diz a Jack que lhe prometeram tudo, ser o número um, e que ele chegou lá mas pagou um preço; descreve a própria morte como saída de cena e diz que a alma dele pertence a eles. Jack responde que não era para ter sido assim. Ela pede que ele acabe com a dor; ele a apunhala com a adaga do culto e volta a si no estúdio vazio: apunhalou Lilly, ao vivo, entre os corpos dos convidados. Repete Dreamer, here, awake enquanto sirenes se aproximam; o letreiro de fim de transmissão vira So It Is Done.",
+      "momento": "Últimos minutos (~min 88 a 90, estimativa)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://www.americamagazine.org/arts-culture/2024/04/10/late-night-devil-horror-review-247651",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://filmcolossus.com/late-night-with-the-devil-explained-2024",
+        "https://spectrecollie.com/2024/04/22/paved-with-some-sort-of-intention/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F44",
+      "tipo": "forma",
+      "descricao": "Motivo da coruja: o programa se chama Night Owls e Jack cumprimenta o público como corujas da noite; os cartões de intervalo do especial fazem trocadilho de coruja com Halloween; o prólogo mostra a estátua de coruja ligada à Grove; o filme da seita exibe símbolos de coruja; e a Grove do pesadelo final tem homens fantasiados de coruja.",
+      "momento": "Prólogo, intervalos, filme da seita e sequência final",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://maximumfun.org/transcripts/oh-no-ross-and-carrie/transcript-oh-no-ross-and-carrie-ep-416-ross-and-carrie-host-late-night-with-the-devil-movie-review-edition",
+        "https://dreadcentral.com/reviews/449680/late-night-with-the-devil-will-make-you-want-to-kill-your-television-sxsw-2023-review",
+        "https://www.deepfocusreview.com/reviews/late-night-with-the-devil/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "F45",
+      "tipo": "forma",
+      "descricao": "A fórmula And so it is done se ouve na montagem do prólogo e no fim do ritual exibido no filme da seita, dita por D'Abo; o letreiro final do filme retoma a frase como So It Is Done (as duas primeiras ocorrências constam só da transcrição; o letreiro, da Wikipedia e de análises).",
+      "momento": "Prólogo, filme da seita (~min 35) e último plano",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=late-night-with-the-devil",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://spectrecollie.com/2024/04/22/paved-with-some-sort-of-intention/"
+      ],
+      "confianca": "media"
+    }
+  ],
+  "mitosAEvitar": [
+    "Ano e datas. Estreia mundial no SXSW, seção Midnighters, em 10/03/2023 (https://en.wikipedia.org/wiki/Late_Night_with_the_Devil, https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil); estreia comercial nos EUA em 22/03/2024 pela IFC Films, com streaming na Shudder a partir de 19/04/2024 (Wikipedia; https://comic-watch.com/movies/late-night-with-the-devil-heeeeres-satan; https://www.thewrap.com/late-night-with-the-devil-ending-explained-jack-delroy/). No Brasil, a Rolling Stone Brasil dá estreia nos cinemas em 04/07/2024 pela Diamond Films (https://rollingstone.com.br/cinema/entrevista-com-o-demonio-estreia-nos-cinemas-brasileiros/), mas a Wikipedia em português diz 22/08/2024: conflito não resolvido. A ficha d'A Gazeta lista produção de 2023 (https://www.agazeta.com.br/hz/filmes-e-series/terror-entrevista-com-o-demonio-exagera-mas-e-sabio-ao-encarar-riscos-0724). Não chamar o filme de 2024 sem explicar o critério.",
+    "O demônio de Lilly é Mr. Wriggles (ela explica o nome pelo jeito de entrar e sair da cabeça dela), não Mr. Wiggles, grafia errada em Variety, DMTalkies e The Cinemaholic. Também não afirmar que é o próprio Abraxas: no ar, June diz que é provavelmente uma divindade menor a serviço dele.",
+    "A fórmula de Haig e das últimas palavras de Jack é Dreamer, here, awake, não Dreamers stay awake (erro de themoviespoiler.com e whatsafterthemovie.com).",
+    "O cético se chama Carmichael Haig (TheWrap e Dread Central escrevem Carmichael Hunt). O apelido de Madeleine é Minnie, não Millie (erro do Signal Horizon). O médium é Christou, não Chrysto.",
+    "O cheque não tem valor único: no ar é apresentado como 100 mil dólares e depois Haig fala em meio milhão, valor repetido depois no programa. Não dizer 1 milhão (comparação com o desafio real de James Randi, feita por Moria Reviews).",
+    "Não afirmar que tudo era alucinação de Jack (whatsafterthemovie.com) nem que nada sobrenatural ocorreu: o replay confirma a levitação e mostra Madeleine no quadro congelado, enquanto o replay da hipnose desmente os vermes. O que realmente foi ao ar no fim fica ambíguo.",
+    "Não afirmar que Leo morre: themoviespoiler.com e whatsafterthemovie.com dizem que sim; highonfilms.com diz que ele puxa Jack para a saída; a Wikipedia não o inclui entre os mortos.",
+    "Lilly não tinha cerca de oito anos ao ser resgatada (DMTalkies): o filme da seita diz 10 anos em agosto de 1974, e June diz que ela tem 13 em 1977.",
+    "Christou vomita líquido preto, não sangue (DMTalkies fala em sangue). A Wikipedia diz hemorragia cerebral; no filme, Leo fala só em hemorragia na ambulância.",
+    "Não é história real: Jack Delroy, Night Owls e a rede UBC são fictícios (https://filmcolossus.com/late-night-with-the-devil-explained-2024; https://www.austinchronicle.com/screens/sxsw-film-review-late-night-with-the-devil-12834316/). O filme chama o clube de The Grove; a ligação com o Bohemian Grove é leitura de críticos, e o nome Moloch para a estátua de coruja vem da resenha da Dread Central, não da narração.",
+    "O filme não é todo found footage nem só a fita mestra: os bastidores em preto e branco não têm câmera explicada e o trecho final abandona o 4:3 e passa a widescreen.",
+    "Não fixar a ordem dos fatos pelos resumos apressados: a morte de Christou é comunicada a Jack no intervalo depois da entrada de Lilly e antes da invocação, e não depois da hipnose (highonfilms.com inverte).",
+    "Fora da voz editorial do site, mas para não repetir errado: segundo os diretores, foram três imagens estáticas geradas com IA, usadas como vinhetas breves de intervalo e ausentes da cópia do SXSW, não o grafismo inteiro do filme (Wikipedia; Film Colossus).",
+    "Duração: 93 min na versão comercial (https://www.deepfocusreview.com/reviews/late-night-with-the-devil/); a Variety registrou 92 min na sessão do SXSW. Classificação indicativa no Brasil: só a ficha d'A Gazeta diz 16 anos; não confirmado em fonte oficial.",
+    "Os nomes brasileiros Corujões com Jack Delroy e Sr. Sinuoso aparecem só na Wikipedia em português; não confirmados na cópia brasileira. Usar Night Owls e Mr. Wriggles."
+  ],
+  "finalNaoRevelar": "Tudo a partir do clímax: Lilly, possuída de novo, com a cabeça aberta e brilhando, mata Gus, June e Haig (que morre ajoelhado oferecendo o cheque). Jack é lançado numa versão de pesadelo do próprio programa, em widescreen, revê esquetes do prólogo, a assinatura com executivos e um ritual na Grove em que fica implícito que seu sucesso foi pago com a vida de Madeleine e o câncer dela. No leito, Madeleine pede que ele acabe com a dor; ele a apunhala com a adaga do culto e, ao voltar a si, descobre que apunhalou Lilly ao vivo, entre os corpos dos convidados, repetindo a fórmula de Haig enquanto chegam sirenes; o letreiro de fim de transmissão vira So It Is Done. Por cautela, convém também não dizer quem aparece no quadro congelado do replay (Madeleine) nem que Christou morre: dá para falar da fita revista e de uma presença na imagem sem nomear.",
+  "pistasDeTese": [
+    "O programa e a seita falam a mesma língua. O patrocínio que propõe fechar negócio com aperto de mão, o contrato de cinco anos, a pergunta sobre sacrifício na assinatura com a UBC, a pregação de D'Abo sobre desejo e sacrifício, o share recitado na Grove e a fórmula do culto no letreiro final colocam rede e seita no mesmo vocabulário: o pacto de Jack é com o formato antes de ser com o diabo. Fatos F04, F05, F13, F24, F42, F45.",
+    "A fita como tribunal que não se sustenta. A narração promete a fita mestra; Haig e Lilly concordam que a câmera não mente; o replay desmente os vermes e confirma a possessão, e um quadro congelado revela uma presença. Mas o espectador viu os vermes na suposta fita, os bastidores vêm de câmeras impossíveis e o fim abandona o 4:3. O filme pede fé no documento e o desmonta. Fatos F01, F09, F10, F36, F37, F38, F39, F41.",
+    "A ambição não é só de Jack. Christou divulga a turnê, Haig exibe o cheque e o desafio, June lança o livro, Leo comemora o share e os patrocinadores, Bedford compara a noite à chegada à Lua, a plateia grita para ver o demônio, e Lilly decide ficar. Jack é o rosto de uma engrenagem que todos alimentam, inclusive quem assiste. Fatos F15, F18, F19, F20, F23, F30, F34, F38.",
+    "O luto vira pauta. A aparição de Madeleine doente foi o recorde de audiência; Jack revela o apelido privado no ar; Haig acusa o uso da viúvez para dar audiência; a menina fala com a voz de Minnie; Leo invoca Minnie para empurrar Jack ao palco; o pesadelo repete a entrevista dela como cobrança. A dor privada de Jack é o produto mais rentável do programa. Fatos F07, F17, F21, F35, F41, F43.",
+    "O espectador dentro do circuito. Jack entra nas salas de estar e diz que o espectador é o único que importa; Haig hipnotiza também quem está em casa e o filme nos mostra os vermes; Lilly encara a lente; Haig diz que Abraxas é um showman que precisa de plateia; Jack termina pedindo que desliguem a TV. Leitura contrária a considerar: o prólogo diz que a televisão também consola. Fatos F02, F03, F13, F25, F29, F36, F37, F41.",
+    "O cético também é número de palco. Haig se declara charlatão honesto, acende charuto com truque, faz o cheque aparecer no bolso de Jack, pede luz baixa e close para hipnotizar, confia na câmera e morre ajoelhado dizendo a palavra mágica dos ilusionistas. A descrença dele é outro espetáculo, e o filme o pune por isso. Fatos F19, F20, F22, F29, F36, F40.",
+    "Leitura contrária: Jack não é cínico puro. Ele achava que o colapso de Christou era encenação, pede desculpas a June, Gus insiste que ele não é mau, e diante de Madeleine diz que não era para ter sido assim. Só que cada recuo é seguido de dobrar a aposta: esconder a morte, propor quadro fixo, salvar o programa. A tese mais justa talvez seja a de um homem que nunca decide e deixa o formato decidir por ele. Fatos F26, F27, F31, F33, F43."
+  ]
+}

@@ -1,0 +1,685 @@
+{
+  "slug": "they-live-1988",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/dossie.json",
+  "fatos": [
+    {
+      "id": "TL01",
+      "tipo": "estrutura",
+      "descricao": "Nos créditos, “John Carpenter’s” surge sobre fundo preto e some antes de “They Live”, que fica em letra branca de pichação. O corte seguinte mostra o mesmo título pichado num pilar de viaduto: o nome do filme vira grafite dentro da cena. A frase volta depois na igreja, como “THEY LIVE WE SLEEP”. Descrição do catálogo AFI (fonte única para a passagem do título ao pilar).",
+      "momento": "0:00, créditos de abertura",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "TL02",
+      "tipo": "cena",
+      "descricao": "Um trem de carga se afasta e revela Nada, pequeno no meio do pátio ferroviário, entre viadutos; camisa de flanela, mochila nas costas, nenhum dinheiro. Ele caminha a pé para o centro de Los Angeles enquanto correm os créditos. A Wikipedia registra a “opening train sequence”; Hilobrow e AV Club descrevem a figura e a mochila.",
+      "momento": "0:00 a 0:03, sob os créditos",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.hilobrow.com/?p=41671",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL03",
+      "tipo": "som",
+      "descricao": "A música de Carpenter e Alan Howarth, que também compõem o resto da trilha, é um blues lento e repetitivo, não as sequências de sintetizador típicas do diretor. A faixa de abertura (“Coming to L.A.”, 4 min) é descrita como batida, gaita e efeitos sonoros (MainTitles); Rolling Stone fala em blues arrastado e Cinema Romantico em riff de blues insistente. Segundo o Gizmodo, o andamento acompanha o passo de Piper na caminhada de abertura. No disco, o tema volta em “Return to Church”, “All Out of Bubble Gum” e “Back to the Streets” (MainTitles).",
+      "momento": "0:00 a 0:03 (tema “Coming to L.A.”); o tema volta ao longo do filme",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.maintitles.net/reviews/they-live/",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533",
+        "https://www.cinemaromantico.org/2015/08/fridays-old-fashioned-they-live-1988.html",
+        "https://gizmodo.com/10-things-you-might-not-know-about-john-carpenters-cult-1774346855",
+        "https://en.wikipedia.org/wiki/They_Live_(soundtrack)"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL04",
+      "tipo": "fala",
+      "descricao": "Na agência de emprego, a entrevistadora pergunta o último emprego. Nada responde Denver, dez anos de trabalho, e que lá “lost fourteen banks in one week”. Resposta: não há nada disponível. Fala conferida em duas transcrições (clip.cafe e Springfield).",
+      "momento": "c. 0:03 (clip.cafe 00:03:21)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/last-place-of-employment-s1/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL05",
+      "tipo": "som",
+      "descricao": "Na mesma agência, um alto-falante anuncia: “Due to a computer error, the food stamp program” está suspenso até segunda ordem, e pede que ninguém se inscreva. A suspensão do vale-alimentação chega por voz impessoal, atribuída a falha de máquina. Só uma transcrição registra o aviso (clip.cafe).",
+      "momento": "c. 0:03 (clip.cafe 00:03:05), antes da entrevista",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/due-to-a-computer-error-the-food-stamp-program-has-been-suspended-until-further-notice/"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "TL06",
+      "tipo": "cena",
+      "descricao": "Numa praça, um pregador de rua cego (Raymond St. Jacques) fala a um grupo pequeno. Abre com “They use their tongues to deceive”, veneno sob os lábios e ausência de temor a Deus, paráfrase de Romanos 3:13-18 (comparação feita com o texto da KJV). Depois diz que “they” recrutaram os ricos e poderosos, que “blinded us to the truth”, pergunta “Why do we worship greed?”, chama-os de “our owners” e termina em “Wake up”. Policiais chegam para retirá-lo e Nada vai embora. A correspondência com Romanos é inferência desta pesquisa; o sermão está em duas transcrições.",
+      "momento": "c. 0:04 (clip.cafe 00:03:54 a 00:04:30)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/they-use-their-tongues-to-deceive/",
+        "https://clip.cafe/they-live-1988/because-outside-the-limit-of-our-sight/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://bible-api.com/romans+3:13-18?translation=kjv"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL07",
+      "tipo": "cena",
+      "descricao": "Adiante na rua, um homem olha fixo para televisores numa vitrine de loja (AFI). A fala que se ouve diz que, vendo TV, a pessoa deixa de ser ela mesma, vira estrela de série, tem talk show, sai de limusine no noticiário, e “I never grow old”. Farrago atribui a fala a uma mulher na TV; o AFI fala em telejornal. Quem diz e de onde vem a voz não foi confirmado com precisão.",
+      "momento": "c. 0:05 (clip.cafe 00:05:17)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://clip.cafe/they-live-1988/sometimes-when-i-watch-tv-i-stop-being-myself/",
+        "https://farragomagazine.com/news/article/farrago/2016-05-16-aliens-abs-anti-capitalism-they-live-and-the-cult-of-the-conspiracy-documentary/"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "TL08",
+      "tipo": "cena",
+      "descricao": "No canteiro de obras de um prédio alto, Nada oferece as próprias ferramentas. O capataz diz que é obra sindicalizada; Nada pede para falar com o delegado sindical (“shop steward”) e trata o homem por “sir”. Consegue serviço de diarista. Recebe dois avisos: proibido dormir no canteiro, pagamento só na quinta.",
+      "momento": "c. 0:06 a 0:07 (clip.cafe 00:06:22 a 00:07:06)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/so-then-may-i-please-speak-with-the-shop-steward/",
+        "https://clip.cafe/they-live-1988/hey-theres-no-sleeping-on-this-site/",
+        "https://www.hilobrow.com/?p=41671",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL09",
+      "tipo": "cena",
+      "descricao": "Frank leva Nada a Justiceville, acampamento de barracos de desempregados na Fourth Street, com comida quente e chuveiro, ao lado de uma igreja. Gilbert, o organizador, pergunta se a mochila tem ferramentas e põe Nada para consertar o chuveiro. Rolling Stone e Cinema Romantico registram os arranha-céus do centro enquadrados atrás dos barracos.",
+      "momento": "c. 0:07 a 0:09",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/you-need-a-place-to-stay/",
+        "https://clip.cafe/they-live-1988/now-you-get-a-chance-to-meet-some-of-the-folk/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533",
+        "https://www.cinemaromantico.org/2015/08/fridays-old-fashioned-they-live-1988.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL10",
+      "tipo": "personagem",
+      "descricao": "No jantar, Frank (Keith David) conta que deixou mulher e dois filhos em Detroit, que as siderúrgicas demitiram e quebraram depois de receber concessões dos operários, enquanto os chefes se davam aumento. Resume: “he who has the gold makes the rules”. Diz que, se fechar mais uma fábrica, vai marretar um carro importado, e descreve a vida como um jogo em que cada um quer derrubar o outro.",
+      "momento": "c. 0:10 (clip.cafe 00:10:19 a 00:10:23)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/the-steel-mills-laying-people-off-left-right/",
+        "https://clip.cafe/they-live-1988/they-close-one-more-factory-we-should-take-a-sledge-to-one-of-their-fancy-fucking-foreign-cars/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL11",
+      "tipo": "fala",
+      "descricao": "Nada responde a Frank que entrega um dia duro de trabalho pelo dinheiro e que a chance virá: “I believe in America. I follow the rules.” O AFI resume que ele pede paciência a Frank. Segundo a Rolling Stone (fonte única nesse ponto), ele diz isso olhando um céu rosado de fim de tarde.",
+      "momento": "c. 0:11 (clip.cafe 00:11:04)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/so-how-you-going-to-make-iti-deliver-a-hard-days-work-for-my-moneyi-just-want-the-chance-itll-comei/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL12",
+      "tipo": "cena",
+      "descricao": "À noite, na TV dos vizinhos em Justiceville, a programação (um comercial de unhas postiças, pela ordem da transcrição de Springfield) é cortada por uma transmissão pirata: um homem de barba (creditado como Bearded Man) diz “Our impulses are being redirected” e fala em “artificially induced state of consciousness”. Diz que pobres e subclasse crescem, que “Racial justice and human rights are non-existent”, que o método deles é “Keep us asleep, keep us selfish, keep us sedated” e que “We are their cattle”. Na segunda invasão, diz que o sinal precisa ser desligado na fonte.",
+      "momento": "c. 0:12 a 0:15 (clip.cafe 00:12:36 a 00:15:23); duas invasões no ar",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://clip.cafe/they-live-1988/the-poor-the-under-class-are-growing/",
+        "https://clip.cafe/they-live-1988/please-understand-they-are-safe-as-long-as-they-are-not-discovered/",
+        "https://clip.cafe/they-live-1988/they-are-dismantling-the-sleeping-middle-class-s1/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://thequietus.com/?p=25613",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL13",
+      "tipo": "cena",
+      "descricao": "Quem assiste à transmissão pirata reclama de dor de cabeça e desliga o aparelho. Um espectador responde ao hacker com “Blow it out your ass”; outro pergunta o que foi aquilo e ouve que era o idiota de novo.",
+      "momento": "c. 0:13 a 0:16 (clip.cafe 00:13:19 e 00:15:56)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://clip.cafe/they-live-1988/please-understand-they-are-safe-as-long-as-they-are-not-discovered/",
+        "https://clip.cafe/they-live-1988/can-somebody-please-explain-to-me-what-the-hell-thats-all-about/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL14",
+      "tipo": "forma",
+      "descricao": "Enquanto a TV mostra o hacker, Nada vê ao longe o pregador cego mexendo os lábios em sincronia com as palavras da transmissão. O pregador da praça e a voz da TV pirata falam o mesmo texto. Descrição do AFI, sem segunda fonte.",
+      "momento": "c. 0:13, durante a transmissão pirata",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "TL15",
+      "tipo": "cena",
+      "descricao": "Nada estranha o “ensaio do coro” até as quatro da manhã; Gilbert desconversa. Ao entrar na igreja, descobre que o coro ouvido de fora é uma gravação. Dentro há caixas, equipamento de laboratório e óculos escuros, e na parede está pichado “THEY LIVE WE SLEEP”. Numa sala ao lado, o grupo discute: só alguns segundos foram ao ar, o sinal deles é sempre bloqueado, e mesmo “manufacturing Hoffman lenses” e roubando bancos não alcançam gente suficiente.",
+      "momento": "c. 0:15 a 0:20 (clip.cafe 00:15:01 a 00:20:04)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://clip.cafe/they-live-1988/but-the-lord-let-see/",
+        "https://clip.cafe/they-live-1988/we-have-to-face-facts/",
+        "https://clip.cafe/they-live-1988/robbing-banks-manufacturing-hoffman-lenses-until-were-blue-in-the-face/",
+        "https://clip.cafe/they-live-1988/choir-practice-went-a-little-late-last-night-didnt-it/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL16",
+      "tipo": "cena",
+      "descricao": "O pregador cego surpreende Nada lá dentro, toca seu rosto e depois suas mãos e conclui “you’re a working man”. Oferece mostrar “the revolution”; Nada diz que fica para outra vez. O pregador: “This world may have blinded me”, mas o Senhor o deixou ver; e avisa que Nada vai voltar.",
+      "momento": "c. 0:19 (clip.cafe 00:19:09 a 00:19:40)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/thats-my-baby-s1/",
+        "https://clip.cafe/they-live-1988/this-world-may-have-blinded-me-s1/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL17",
+      "tipo": "fala",
+      "descricao": "Frank manda Nada esquecer a igreja: tem emprego e vai mantê-lo, está “walking a white line all the time”, não incomoda ninguém. Nada responde que a linha branca fica no meio da estrada: “That’s the worst place to drive.” Na conversa do jantar (TL11) as posições eram as inversas: Nada defendia as regras.",
+      "momento": "c. 0:22 (clip.cafe 00:22:01)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://clip.cafe/they-live-1988/white-lines-in-the-middle-of-the-road-s1/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL18",
+      "tipo": "cena",
+      "descricao": "Ataque noturno: helicóptero, tropa de choque, tratores derrubando os barracos de Justiceville; a igreja é esvaziada. Na fuga, Nada passa por policiais espancando o pregador cego e o homem de barba (“We know who you are”). Segundo a transcrição de Springfield (fonte única nesse ponto), durante o espancamento ouve-se o Salmo 23, “valley of the shadow of death”.",
+      "momento": "c. 0:23 a 0:27 (clip.cafe 00:23:13 a 00:26:28)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.hilobrow.com/?p=41671",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://clip.cafe/they-live-1988/we-know-who-you-are/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL19",
+      "tipo": "cena",
+      "descricao": "Na manhã seguinte, Justiceville está arrasada e a igreja vazia, salvo uma caixa lacrada escondida dentro de uma parede. Nada a abre: só óculos escuros. Larga a caixa num beco, entre o lixo, e fica com um par. São óculos grandes e comuns, “from the drug store” na descrição do Cinema Romantico; nenhuma fonte indica marca.",
+      "momento": "c. 0:28 a 0:30",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://farragomagazine.com/news/article/farrago/2016-05-16-aliens-abs-anti-capitalism-they-live-and-the-cult-of-the-conspiracy-documentary/",
+        "https://www.cinemaromantico.org/2015/08/fridays-old-fashioned-they-live-1988.html"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL20",
+      "tipo": "forma",
+      "descricao": "Os planos de ponto de vista através dos óculos são em preto e branco; o filme, fora deles, é colorido (cópias DeLuxe). Pelo AFI, os planos foram filmados duas vezes, com e sem as mensagens, e descoloridos depois, com interferência visual acrescentada para sugerir a dor de quem usa. Nada tira e repõe os óculos para comparar, e o filme alterna os dois registros; ele mesmo narra: sem óculos, “she looks like a regular person”.",
+      "momento": "c. 0:30 em diante, toda vez que alguém usa os óculos",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://clip.cafe/they-live-1988/i-take-these-glasses-off/",
+        "https://www.hilobrow.com/?p=41671"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL21",
+      "tipo": "forma",
+      "descricao": "Pelos óculos, anúncios viram ordens curtas em letras de forma grandes (“bold-text messages”, Rolling Stone). Confirmadas em duas ou mais fontes: OBEY (no lugar de um anúncio de computador, segundo o AFI), MARRY AND REPRODUCE (no outdoor de viagem ao Caribe com uma mulher de biquíni), CONSUME, BUY, CONFORM, WATCH TV, NO INDEPENDENT THOUGHT, DO NOT QUESTION AUTHORITY, STAY ASLEEP, SUBMIT (AFI; o Hilobrow registra “SUBMIT TO AUTHORITY”). Bancas de revista mandam CONSUME e OBEY. SURRENDER (AV Club) e NO IMAGINATION (Hilobrow) aparecem em uma fonte cada.",
+      "momento": "c. 0:30 a 0:36, primeira caminhada de óculos; mensagens reaparecem depois",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://www.hilobrow.com/?p=41671",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://farragomagazine.com/news/article/farrago/2016-05-16-aliens-abs-anti-capitalism-they-live-and-the-cult-of-the-conspiracy-documentary/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL22",
+      "tipo": "cena",
+      "descricao": "Numa banca, o maço de notas na mão do vendedor diz “THIS IS YOUR GOD”. O vendedor cobra Nada, que folheia uma revista sem pagar: “Either pay for it or put it back.”",
+      "momento": "c. 0:35 (clip.cafe 00:35:27 a 00:35:38)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533",
+        "https://www.hilobrow.com/?p=41671",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://clip.cafe/they-live-1988/hey-buddy-you-going-to-pay-for-that-or-what/",
+        "https://clip.cafe/they-live-1988/look-buddy-i-dont-want-no-hassle-today/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL23",
+      "tipo": "som",
+      "descricao": "Na trilha, uma voz grave e desacelerada repete “Sleep” enquanto Nada anda de óculos. Pelo Gizmodo, é a voz de Carpenter gravada e desacelerada por Howarth; nas transcrições, a palavra se repete três vezes.",
+      "momento": "c. 0:35 (clip.cafe 00:35:50)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://gizmodo.com/10-things-you-might-not-know-about-john-carpenters-cult-1774346855",
+        "https://clip.cafe/they-live-1988/huh-sleep-sleep-sleep/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL24",
+      "tipo": "personagem",
+      "descricao": "Pelos óculos, parte das pessoas são criaturas de rosto esquelético e olhos saltados, vestidas como humanos: homem de terno, senhoras de casaco de pele, gente de carro caro e joias, policiais, um político discursando, apresentadores de TV. Na rua elas se misturam aos humanos; no mercado de luxo são a maior parte da clientela (AFI) e no banco há vários entre clientes e funcionários (Wikipedia).",
+      "momento": "a partir de c. 0:33",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://outlawvern.com/2010/11/27/they-live-deep-focus/",
+        "https://farragomagazine.com/news/article/farrago/2016-05-16-aliens-abs-anti-capitalism-they-live-and-the-cult-of-the-conspiracy-documentary/",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL25",
+      "tipo": "cena",
+      "descricao": "Num mercado de luxo, clientes alienígenas conversam amenidades: uma conhecida que não foi à aula de Lamaze, um jantar com “blue corn tortillas”, “so dated”, um colega deprimido e outro que o anima com “Go for it, man” por causa de uma promoção. Nenhuma das conversas trata de invasão ou de humanos.",
+      "momento": "c. 0:36 a 0:37 (clip.cafe 00:36:26 a 00:37:26)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/can-you-believe-it-s10/",
+        "https://clip.cafe/they-live-1988/did-bob-make-you-go-to-john-and-mary-ellens-last-night/",
+        "https://clip.cafe/they-live-1988/so-depressed-i-dont-know-what-to-do/",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533",
+        "https://moriareviews.com/sciencefiction/they-live-1988.htm"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL26",
+      "tipo": "contexto-na-tela",
+      "descricao": "Na TV do mercado, uma figura de apresentador ou político, com rosto alienígena pelos óculos, diz: “It’s a new morning in America”, “The old cynicism is gone”, fé nos líderes, tudo se resume a “our ability to accept”, “There are no limits”. O AV Club chama essas falas de “morning in America” soundbites; “Morning in America” é o apelido do comercial de reeleição de Reagan de 1984 (“Prouder, Stronger, Better”).",
+      "momento": "c. 0:37 (clip.cafe 00:37:36)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/the-feeling-definitely-there-s1/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://en.wikipedia.org/wiki/Morning_in_America"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL27",
+      "tipo": "fala",
+      "descricao": "Nada, de óculos, ofende uma cliente rica alienígena: “head fell in the cheese dip back in 1957”; tira os óculos, “she looks like a regular person”, repõe, “formaldehyde-face”. A duas mulheres humanas diz “You, you’re okay”. A cliente fala no relógio de pulso: “I’ve got one that can see!”",
+      "momento": "c. 0:38 (clip.cafe 00:38:10 a 00:38:42)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/you-know-look-like-head-fell-in-the-cheese-dip-back-in-1957/",
+        "https://clip.cafe/they-live-1988/i-take-these-glasses-off/",
+        "https://clip.cafe/they-live-1988/ive-got-one-can-see/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL28",
+      "tipo": "cena",
+      "descricao": "Dois policiais alienígenas o abordam num beco. “Where did you get those sunglasses?” “From the Tooth Fairy.” Um diz que Nada parece tão feio para eles quanto eles para ele: “You look as shitty to us”. Na transcrição de Springfield (fonte única nesse trecho), ameaçam estourar os miolos dele e, em seguida, propõem ir a um lugar quieto conversar, porque “maybe we can all benefit from it”. Nada os mata, fica com as armas e diz “So you bastards die just like we do.”",
+      "momento": "c. 0:39 a 0:41 (clip.cafe 00:39:41 a 00:40:39)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/where-did-get-those-sun-glasses/",
+        "https://clip.cafe/they-live-1988/you-look-shitty-us-as-do-you/",
+        "https://clip.cafe/they-live-1988/so-you-bastards-die-just-like-we-do/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL29",
+      "tipo": "cena",
+      "descricao": "Nada entra num banco com espingarda; pelos óculos, vários clientes e funcionários são alienígenas. Diz que veio “to chew bubble gum and kick ass”, e depois “And I’m all out of bubble gum”. Atira em vários. Um deles relata pelo relógio (“Near the entrance. Has a shotgun.”); Nada: “Mama don’t like tattletales”. Esse alienígena some, teletransportado pelo relógio.",
+      "momento": "c. 0:41 a 0:42 (clip.cafe 00:41:31 a 00:42:04)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/i-have-come-here-chew-bubble-gum-kick-ass/",
+        "https://clip.cafe/they-live-1988/near-the-entrance/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL30",
+      "tipo": "cena",
+      "descricao": "Fora do banco, um pequeno aparelho voador de vigilância o acompanha. Nada fala com ele, “who are you, little fella?”, acusa-o de vir mostrar onde ele está e o derruba a tiros. O resenhista Jay Carr, citado pela Wikipedia, descreve os discos voadores do filme como pequenos, de filme B.",
+      "momento": "c. 0:42 (clip.cafe 00:42:36)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/and-are-little-fella/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL31",
+      "tipo": "cena",
+      "descricao": "Nada toma Holly Thompson (Meg Foster) como refém num estacionamento e a obriga a dirigir até a casa dela. Lá diz que os óculos são “like a drug”: dão barato, “but you come down hard”. Ela: “You have two guns. You’re not sorry. You’re in charge.” Quando ele pede que olhe pelos óculos, ela diz que, se não vir o que ele vê, vai fingir que vê. Holly é “assistant program director” da emissora Cable 54; Nada conclui que “They’re sending some kind of signals out of TV sets”.",
+      "momento": "c. 0:44 a 0:50 (clip.cafe 00:44:52 a 00:49:37)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/whoo-its-like-a-drug/",
+        "https://clip.cafe/they-live-1988/look-things-turned-out-a-little-sour-me-today/",
+        "https://clip.cafe/they-live-1988/youre-fighting-the-forces-of-evil/",
+        "https://clip.cafe/they-live-1988/so-your-names-holly-right/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL32",
+      "tipo": "cena",
+      "descricao": "Holly acerta Nada com uma garrafa e o empurra por uma janela que fica vários andares acima do chão (AFI); ele cai, foge ferido ao ouvir as sirenes e deixa os óculos no tapete dela (Wikipedia). Ela dá à polícia o endereço, Circleview Drive. Segundo a resenha de Vern sobre o livro de Lethem (fonte única), a garrafada é vista num plano de cima, comparado a Psicose.",
+      "momento": "c. 0:50 (clip.cafe 00:50:32)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://outlawvern.com/2010/11/27/they-live-deep-focus/",
+        "https://clip.cafe/they-live-1988/holly-thompson-8634-circleview-drive/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL33",
+      "tipo": "fala",
+      "descricao": "Nada procura Frank no canteiro. Frank já sabe da matança: “How many people did you kill?” “Not people.” Frank recusa ver o que Nada quer mostrar e alega a família. Depois vai até o beco levar “One week’s pay”, o pagamento de uma semana.",
+      "momento": "c. 0:53 a 0:55 (clip.cafe 00:53:01 a 00:55:27)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/frank-dont-let-nobody-see-you-ive-had-a-rough-couple-of-days-i-dont-want-nothing-to-do-with-yo/",
+        "https://clip.cafe/they-live-1988/yo-one-weeks-pay-its-the-best-i-could-do/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL34",
+      "tipo": "estrutura",
+      "descricao": "Num beco cheio de lixo, Nada dá a escolha: pôr os óculos ou “start eating that trash can”. Frank: “Not this year.” Segue uma briga corpo a corpo de cerca de 5 min 20 s (Gizmodo; o AFI diz mais de cinco minutos), com golpes de luta livre, pausas em que parece acabar e recomeça, pedido de desculpa no meio, até Nada prender Frank e pôr os óculos no rosto dele.",
+      "momento": "c. 0:56 a 1:00 (clip.cafe 00:56:09 a 00:59:57)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/im-giving-you-a-choice/",
+        "https://clip.cafe/they-live-1988/oh-man-im-sorry-man/",
+        "https://clip.cafe/they-live-1988/put-the-glasses-on/",
+        "https://gizmodo.com/10-things-you-might-not-know-about-john-carpenters-cult-1774346855",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.avclub.com/the-new-cult-canon-they-live-1798213585",
+        "https://au.rollingstone.com/movies/movie-reviews/why-they-live-is-a-subversive-1980s-masterpiece-533",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL35",
+      "tipo": "cena",
+      "descricao": "Machucados, os dois pegam um quarto num hotel barato; Nada brinca na recepção, “Ain’t love grand?”. Um avisa o outro para não usar os óculos por muito tempo: começa a parecer “a knife turning in your skull”. De onde vêm? “They ain’t from Cleveland.” No quarto, Nada conta que o pai o levou ao rio e “told me about the power and the glory”, depois ficou violento e encostou uma navalha na garganta dele; fugiu aos 13. Frank: talvez eles sempre tenham estado aqui, gostando de nos ver nos odiar, “feeding on our own cold fucking hearts”. Nada: “I ain’t daddy’s little boy no more.”",
+      "momento": "c. 1:01 a 1:06 (clip.cafe 01:01:46 a 01:05:57)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/aint-love-grand-s1/",
+        "https://clip.cafe/they-live-1988/brother-lifes-a-bitch/",
+        "https://clip.cafe/they-live-1988/dont-wear-them-glasses-too-long-s1/",
+        "https://clip.cafe/they-live-1988/how-long-have-they-been-there/",
+        "https://clip.cafe/they-live-1988/a-long-time-ago-things-were-different-man/",
+        "https://clip.cafe/they-live-1988/maybe-theyve-always-been-with-us/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://outlawvern.com/2010/11/27/they-live-deep-focus/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL36",
+      "tipo": "cena",
+      "descricao": "Gilbert os chama a uma reunião da resistência: “The world needs a wake up call”, e vão “phone it in”. Na porta: “We’re all human in here”, podem tirar os óculos. Recebem lentes de contato novas, “Got the first shipment today”, com “less interference”. No burburinho, alguém fala de embalagens de algodão-doce cobrindo lixo tóxico e alguém diz “They colorized it” (frase que Lethem destaca, segundo a PopMatters). Distribuem uma lista de esconderijos para decorar e destruir.",
+      "momento": "c. 1:07 a 1:09 (clip.cafe 01:07:10 a 01:08:19)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/theres-a-meeting-tonight/",
+        "https://clip.cafe/they-live-1988/the-world-needs-a-wake-up-call/",
+        "https://clip.cafe/they-live-1988/theyre-using-candy-floss-packages/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://www.popmatters.com/they-live-jonathan-lethem-review"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL37",
+      "tipo": "fala",
+      "descricao": "Na reunião, a explicação: “They’re free-enterprisers”; a Terra é um planeta em desenvolvimento, “Their third world”. Gás carbônico, fluorcarbonos e metano subiram desde 1958: estão “turning our atmosphere into their atmosphere”. A voz do homem de barba: podíamos ser bichos de estimação ou comida, mas “all we really are is livestock”. Pela transcrição de Springfield (fonte única nesses dois pontos), quem colabora ganha “Promotions, bank accounts, new houses, cars”, e a polícia, quase toda humana, ouviu que a resistência é de “Commies”.",
+      "momento": "c. 1:10 (clip.cafe 01:10:00 a 01:10:36)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/what-do-these-things-want/",
+        "https://clip.cafe/they-live-1988/look-around-the-environment-we-live-incarbon-dioxide-fluorocarbons-and-methanehave-increased-since/",
+        "https://clip.cafe/they-live-1988/we-could-be-pets-we-could-be-food/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL38",
+      "tipo": "cena",
+      "descricao": "Na transcrição de Springfield (fonte única para o debate), um membro quer começar a “spilling some blood”; outro responde que com poucas armas não há chance: “We bide our time”, localizar o sinal e desligá-lo. Holly chega com informação sobre a origem do sinal e pede desculpas a Nada por tê-lo jogado pela janela. Logo a polícia invade e mata a maior parte dos presentes (“They’re killing everybody”). A invasão está confirmada por Wikipedia e AFI.",
+      "momento": "c. 1:11 a 1:16 (clip.cafe 01:13:18 a 01:15:36)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://clip.cafe/they-live-1988/theyre-killing-everybody/"
+      ],
+      "confianca": "media"
+    },
+    {
+      "id": "TL39",
+      "tipo": "cena",
+      "descricao": "Encurralados, Frank aciona um relógio alienígena; uma voz automática anuncia “your wristwatch has malfunctioned”, a passagem é temporária, contagem regressiva. No subsolo, outra voz fala de instruções bilíngues; Frank: “What language is that?” Colaboradores comemoram (Wikipedia: alienígenas e colaboradores ricos celebrando a derrota da resistência): “Operation Steel Fist has been a complete success”, terroristas eliminados, “They got to meet the A-Team”. Num banquete, um orador fala de “nós” para “you, the human power elite”: até 2025 o planeta sob a “protection and dominion of this power alliance”, e a renda per capita dos presentes subiu em média 39% no ano. Fecha com “The situation is normal again”.",
+      "momento": "c. 1:16 a 1:19 (clip.cafe 01:16:19 a 01:18:58)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/attention-your-wristwatch-has-malfunctioned/",
+        "https://clip.cafe/they-live-1988/operation-steel-fist-has-been-a-complete-success/",
+        "https://clip.cafe/they-live-1988/our-projections-show-that-by-the-year-2025not-only-america-but-the-entire-planetwill-be-under-the/",
+        "https://clip.cafe/they-live-1988/you-have-given-us-entree-to-the-resources-we-need-in-our-ongoing-quest-for-multidimensional/",
+        "https://clip.cafe/they-live-1988/and-ive-just-received-word-that-our-forces-have-won-a-major-victory/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL40",
+      "tipo": "personagem",
+      "descricao": "No banquete está o Drifter (George “Buck” Flower), ex-morador de Justiceville, agora colaborador. Achando que os dois também se venderam, ele os guia: uma lente gravitacional leva de mundo a mundo, “works like one big airport”; a sala onde fica “the brains of the whole operation” manda o sinal ao satélite e ao mundo inteiro. A Frank, que o acusa de trair os seus: “We all sell out every day”, então melhor “be on the winning team”. E: “There ain’t no countries anymore”.",
+      "momento": "c. 1:19 a 1:24 (clip.cafe 01:20:54 a 01:23:42)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/whats-wrong-with-having-good-a-change-s1/",
+        "https://clip.cafe/they-live-1988/i-dont-know-how-it-works-exactly-but-it-has-to-do-with-some-sort-of-gravitational-lens-deal/",
+        "https://clip.cafe/they-live-1988/and-here-we-got-the-brains-of-the-whole-operation/",
+        "https://en.wikiquote.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL41",
+      "tipo": "cena",
+      "descricao": "No estúdio da Cable 54, durante o intervalo, os apresentadores do telejornal discutem se o intervalo é de dois minutos ou de trinta segundos e concluem que o programa está estourando o tempo. Pouco depois ouve-se “We are experiencing a technical difficulty” e alguém pergunta o que está acontecendo. O AFI credita um apresentador e uma apresentadora de telejornal.",
+      "momento": "c. 1:24 (clip.cafe 01:24:15 a 01:24:30)",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/is-this-the-two-minute-break-or-the-thirty-second-break/",
+        "https://clip.cafe/they-live-1988/we-are-experiencing-a-technical-difficulty/",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=they-live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL42",
+      "tipo": "cena",
+      "descricao": "FINAL. A segurança tranca os elevadores; Nada, Frank e Holly sobem ao telhado, onde fica a antena parabólica do sinal. Holly se revela colaboradora e mata Frank. Nada mata Holly, destrói o transmissor e é morto pelos policiais, que tinham dado a ordem “Stand away from the dish” com contagem regressiva a partir de dez. Ao morrer, mostra o dedo do meio.",
+      "momento": "c. 1:26 a 1:30 (clip.cafe 01:26:09 a 01:28:56)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://clip.cafe/they-live-1988/drop-your-weapon-s10/",
+        "https://clip.cafe/they-live-1988/security-9-5-0/"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL43",
+      "tipo": "cena",
+      "descricao": "FINAL. Sem o sinal, as pessoas passam a ver os alienígenas. Montagem: na TV, dois críticos de cinema, um deles alienígena, reclamam de sexo e violência na tela: “Filmmakers like George Romero and John Carpenter” precisam se conter; um comercial de carro fala em potência V6; na cama, uma mulher percebe o parceiro alienígena, e a última fala é “Hey, what’s wrong, baby?”. Associar os críticos a Siskel e Ebert é leitura de resenhistas; o filme não os nomeia.",
+      "momento": "c. 1:30 até o fim (clip.cafe 01:30:01)",
+      "spoilerDoFinal": true,
+      "fontes": [
+        "https://clip.cafe/they-live-1988/the-oscar-winners-gave-a-press-conference-and-quot-how-to-buy-a-sailboat-quot-as/",
+        "https://davesmoviesite.blogspot.com/2013/06/the-best-films-i-have-never-seen-before_28.html",
+        "https://moriareviews.com/sciencefiction/they-live-1988.htm",
+        "https://farragomagazine.com/news/article/farrago/2016-05-16-aliens-abs-anti-capitalism-they-live-and-the-cult-of-the-conspiracy-documentary/",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL44",
+      "tipo": "forma",
+      "descricao": "Ficha técnica: filmado em Panavision, imagem larga 2.35:1 (High Def Digest), cor DeLuxe, som Dolby Stereo em algumas salas, 94 minutos. Direção e música de John Carpenter, música também de Alan Howarth, fotografia de Gary B. Kibbe, roteiro creditado a “Frank Armitage” (pseudônimo de Carpenter). Estreia nos EUA em 4 de novembro de 1988, pela Universal.",
+      "momento": "filme inteiro",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://bluray.highdefdigest.com/3533/theylive.html",
+        "https://www.theofficialjohncarpenter.com/they-live/",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ],
+      "confianca": "alta"
+    },
+    {
+      "id": "TL45",
+      "tipo": "personagem",
+      "descricao": "O protagonista nunca é chamado pelo nome durante o filme; só os créditos finais o identificam como “Nada”. “John Nada” vem de entrevistas de Carpenter e da imprensa; no conto de Ray Nelson ele era “George Nada”. O herói é anônimo na tela.",
+      "momento": "filme inteiro e créditos finais",
+      "spoilerDoFinal": false,
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.popmatters.com/they-live-jonathan-lethem-review"
+      ],
+      "confianca": "alta"
+    }
+  ],
+  "mitosAEvitar": [
+    "A fala do chiclete é dita no banco, não no supermercado, e a ordem é “chew bubble gum and kick ass”, não “kick ass and chew bubblegum” (clip.cafe 00:41:31; AFI; Wikipedia). Resumos como o do What’s After the Movie situam a frase no mercado: está errado.",
+    "A briga do beco dura cerca de 5 min 20 s (Gizmodo; o AFI diz mais de cinco minutos). Não falar em oito minutos (Moria) nem em “a briga mais longa da história do cinema”.",
+    "O nome “John Nada” (ou “George Nada”) não é dito no filme: na tela ele é anônimo e os créditos dizem só “Nada” (AFI; PopMatters).",
+    "Holly não é alienígena: é humana e colaboradora (Wikipedia: “collaborator”). Além disso é o final e não pode ir para o texto.",
+    "Os alienígenas não são répteis nem comem gente. “Pets... food... livestock” é imagem dita na reunião da resistência; segundo o AFI, Carpenter recusou a sugestão do estúdio de que eles se alimentassem da humanidade.",
+    "Não repetir nem insinuar a leitura antissemita que circula em fóruns: o filme fala de consumo, classe e televisão, e Carpenter a rejeitou publicamente em 2017 (Wikipedia).",
+    "Listas de slogans que circulam na internet e em produtos (WORK 8 HOURS, HONOR APATHY, DOUBT HUMANITY, REWARD INDIFFERENT, MATE SPAWN AND DIE) não foram confirmadas em fonte de cena. Usar só as confirmadas: OBEY, CONSUME, BUY, CONFORM, WATCH TV, MARRY AND REPRODUCE, NO INDEPENDENT THOUGHT, DO NOT QUESTION AUTHORITY, STAY ASLEEP, SUBMIT, THIS IS YOUR GOD.",
+    "“THIS IS YOUR GOD” aparece em notas de dinheiro na mão de um vendedor; não afirmar que é uma nota de um dólar específica nem que a frase está exatamente no lugar de “In God We Trust” (só o AV Club diz isso).",
+    "A frase do mercado é “cheese dip back in 1957”: não trocar o ano.",
+    "O ano do filme é 1988 (estreia nos EUA em 4/11/1988, Universal). Não 1989, que é o ano do VHS.",
+    "A transmissão pirata é feita pelo homem de barba (Bearded Man), não pelo pregador cego; o pregador só repete as palavras de longe (AFI).",
+    "A frase “é como se os alienígenas nos tivessem colorizado” e a piada sobre Ted Turner são de entrevistas de Carpenter, não de diálogo. Na tela há só um “They colorized it” de fundo, na reunião da resistência.",
+    "A trilha é um blues lento de Carpenter e Howarth. Não atribuir saxofone, órgão ou guitarra-solo à abertura: nenhuma fonte de cena confirma. A gaita está em uma fonte (MainTitles).",
+    "Não reproduzir a leitura de Slavoj Žižek (os óculos como crítica da ideologia; a briga como ser forçado à liberdade), a mais repetida sobre o filme. Além de ser crítica de terceiros, o site veta crítico citado.",
+    "A fala do Drifter “We all sell out every day” saiu, segundo Carpenter, de um executivo da Universal: isso é bastidor e não entra no texto. Na tela, a frase é do personagem.",
+    "Não usar bastidor (orçamento, troca de data por causa de Halloween 4, Shepard Fairey, figurantes pagos, Piper vindo da luta livre, improviso da fala do chiclete) nem bilheteria ou crítica da época."
+  ],
+  "finalNaoRevelar": "No terço final, Nada e Frank atravessam o portal do relógio para a base subterrânea ligada à emissora Cable 54, de onde sai o sinal. No telhado, Holly se revela colaboradora dos alienígenas e mata Frank; Nada mata Holly, destrói a antena transmissora e é morto pela polícia, mostrando o dedo do meio. Com o sinal fora do ar, todos passam a ver os alienígenas (montagem com os críticos de TV que citam Romero e Carpenter e a cena de sexo do “what’s wrong, baby?”). Viradas tardias que também convém poupar: o massacre da reunião da resistência, o Drifter de Justiceville reaparecendo como colaborador no banquete e a revelação de que a Cable 54 é a sede do sinal. Pode ser dito sem estragar: que a resistência quer desligar o sinal “na fonte” (o hacker diz isso cedo) e que Holly trabalha numa emissora de TV.",
+  "pistasDeTese": [
+    "Ver dói e se impõe à força: os espectadores da transmissão pirata têm dor de cabeça, os óculos são “like a drug” e depois “a knife” no crânio, Nada mostra a verdade a Holly com duas armas na mão e converte Frank depois de cinco minutos de surra. O filme não acredita em convencer pela conversa; lucidez ali é coisa que se enfia na cara do outro. Fatos: TL13, TL20, TL31, TL34, TL35.",
+    "A propaganda não esconde: o que os óculos revelam é o anúncio dito sem enfeite. O outdoor do Caribe vira MARRY AND REPRODUCE, a nota de dinheiro vira THIS IS YOUR GOD, a TV do mercado prega “our ability to accept”. O preto e branco é o anúncio sem a cor; o perigo estava à vista, só faltava ler literalmente. Fatos: TL20, TL21, TL22, TL23, TL26.",
+    "O poder é sociedade comercial, não invasão: os primeiros policiais alienígenas ameaçam e, no mesmo fôlego, oferecem acordo, a reunião explica que quem colabora ganha promoção, conta e casa, o banquete premia a “human power elite” com 39% de renda, e o Drifter resume que todos se vendem. Os monstros precisam de sócios humanos, e o filme os acha em todo canto. Fatos: TL28, TL37, TL39, TL40, TL24.",
+    "TV contra TV: a resistência também é transmissão (hacker no ar, pregador repetindo em sincronia, “phone it in”), Holly trabalha na programação de uma emissora, e a sede do inimigo é um estúdio preocupado com o tempo do intervalo. A luta não é contra a tela, é pelo canal. (O desfecho na antena confirma, mas não pode ser dito.) Fatos: TL12, TL14, TL31, TL36, TL40, TL41.",
+    "A classe está no cenário e na biografia: Nada chega por causa de quatorze bancos quebrados em Denver, o vale-alimentação é suspenso por “erro de computador”, a obra é sindicalizada e ergue torres que aparecem atrás dos barracos, a polícia derruba Justiceville com tratores. O primeiro alvo armado do herói é um banco. Fatos: TL04, TL05, TL08, TL09, TL18, TL29.",
+    "Contraleitura: os de baixo também escolhem dormir. Nada abre o filme dizendo que acredita na América e segue as regras, Frank anda “na linha branca” e só vê apanhando, os vizinhos mandam o hacker se calar. O sono não vem só do sinal; vem da família a sustentar e do emprego a manter. Fatos: TL11, TL13, TL17, TL33, TL34.",
+    "Contraleitura: a resistência também vende produto e o herói também é atirador. Os óculos vêm em caixas e em “first shipment”, as lentes prometem “less interference”, o grupo rouba bancos para fabricá-las, e Nada entra atirando num banco contra alienígenas que são clientes e funcionários. A saída proposta é outro aparelho de ver, distribuído em série. Fatos: TL15, TL19, TL29, TL36, TL38.",
+    "Religião como fachada e como origem da violência: a igreja esconde o laboratório atrás de um coro gravado, o pregador cego “vê” pelo tato e abre o sermão com Romanos antes de acusar os ricos recrutados, o Salmo 23 se ouve sob o cassetete, e a lembrança de Nada é de um pai que o levou ao rio (“I was saved”) e depois lhe pôs uma navalha no pescoço. A autoridade sagrada e a paterna caem juntas. Fatos: TL06, TL15, TL16, TL18, TL35."
+  ]
+}

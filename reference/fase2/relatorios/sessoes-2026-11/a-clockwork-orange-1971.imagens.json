@@ -1,0 +1,543 @@
+{
+  "slug": "a-clockwork-orange-1971",
+  "tmdbId": 185,
+  "tmdbPagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange",
+  "tituloNoTmdbPtBR": "Laranja Mecânica (1971)",
+  "verificacao": "HEAD 200 em original, w1280 e w780 para as 16 imagens escolhidas; tamanho real lido do cabeçalho JPEG (GET parcial de 256 KB do original) igual ao mostrado no TMDB em todas. Consulta em 2026-11-06.",
+  "hero": {
+    "tmdb": "3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg",
+    "largura": 2560,
+    "altura": 1440,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "Os quatro drugues em contraluz na passagem subterrânea, sombras longas no chão, na chegada até o mendigo (nenhuma agressão no quadro). Imagem escura e azulada, sem letreiro, com área livre para o título. Prévia 16:10 (desktop 1440x900) mostra os quatro; prévia 390x844 (celular) mostra os dois do meio, um com a bengala sobre os ombros, ainda legíveis como silhuetas contra a luz. Funciona sem recorte. 2560 de largura no original (mínimo de 1920 atendido). É a versão maior deste quadro: 2jbACAbmwnRcXuLTrEsnhaqLIaq.jpg é o mesmo quadro em 1280x720, mais claro.",
+    "url": "https://image.tmdb.org/t/p/original/3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg",
+    "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+    "enviadoPorNoTmdb": "kuntsuragi"
+  },
+  "cartaz": {
+    "tmdb": "eEPSMCXtUD3qoJvw7Jf4Gjsutw1.jpg",
+    "largura": 1175,
+    "altura": 1763,
+    "idioma": "pt-BR",
+    "tipo": "arte",
+    "recorte": null,
+    "motivo": "Pôster pt-BR com o título escrito LARANJA MECÂNICA (com acento, conferido na w780): Alex de chapéu-coco erguendo um copo de leite, fundo preto, sem nudez. É a versão brasileira da mesma composição do pôster en-US sk6jCkPtwtEBT0ezwsdmbhTFnDW.jpg (A CLOCKWORK ORANGE). Os pôsteres pt-BR com a arte do triângulo foram descartados porque trazem uma figura feminina nua na base do triângulo. Original 1175x1763, w780 disponível (gera 780 e 500 px; o arquivo cartaz-800 sai com 780 porque o script não amplia).",
+    "url": "https://image.tmdb.org/t/p/original/eEPSMCXtUD3qoJvw7Jf4Gjsutw1.jpg",
+    "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/posters?image_language=pt",
+    "enviadoPorNoTmdb": "Hugo Ribeiro"
+  },
+  "direcao": {
+    "tmdb": "1yRzYfJkpntBZndVkZQGYdPedZI.jpg",
+    "largura": 3840,
+    "altura": 2160,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "Close de Alex sob o chapéu-coco, cabeça baixa e olhos para cima, encarando a câmera; fundo preto, sem bar Korova nem manequins no quadro. No corte 720x1200 com position attention (testado com sharp sobre a w1280, como no tools/imagens-sessoes.mjs), o rosto fica centrado e inteiro, do chapéu ao colarinho. Alternativa também aprovada no corte: hOsLllMWQBHmGqs8tCu3BEul4w6.jpg (Alex de mão estendida, céu branco). Reprovadas no corte: 25LRfapMKi8l50PXBaFlETT1Wji.jpg (o attention pega as luzes brancas e corta o rosto) e xSnnEst7fOrum4bocqmUkteuglO.jpg (corta o rosto). Não entra nas cenas, para não duplicar o close.",
+    "url": "https://image.tmdb.org/t/p/original/1yRzYfJkpntBZndVkZQGYdPedZI.jpg",
+    "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+    "enviadoPorNoTmdb": "BackdropAdder"
+  },
+  "cenas": [
+    {
+      "tmdb": "3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg",
+      "largura": 2560,
+      "altura": 1440,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Os quatro drugues em contraluz na passagem subterrânea, sombras longas no chão, na chegada até o mendigo (nenhuma agressão no quadro). Imagem escura e azulada, sem letreiro, com área livre para o título. Prévia 16:10 (desktop 1440x900) mostra os quatro; prévia 390x844 (celular) mostra os dois do meio, um com a bengala sobre os ombros, ainda legíveis como silhuetas contra a luz. Funciona sem recorte. 2560 de largura no original (mínimo de 1920 atendido). É a versão maior deste quadro: 2jbACAbmwnRcXuLTrEsnhaqLIaq.jpg é o mesmo quadro em 1280x720, mais claro.",
+      "url": "https://image.tmdb.org/t/p/original/3w2v0iNPPNeIKOV5wu1NU1DDHHy.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "kuntsuragi"
+    },
+    {
+      "tmdb": "36ELtTpBcwYc81swndrENcuFkzu.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Os drugues no carro esporte à noite, faróis acesos, fundo de estrada borrado. Ação do primeiro ato sem violência no quadro. A placa do carro é texto diegético. Versão 3840; ggNQsAZhMRCHNwEvDP0OoENCvGq.jpg é o mesmo plano em 1920.",
+      "url": "https://image.tmdb.org/t/p/original/36ELtTpBcwYc81swndrENcuFkzu.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "Alpha60Films"
+    },
+    {
+      "tmdb": "eczQrUbbMd9EcvIPg2B9UqiKNN7.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Retrato de Beethoven na persiana do quarto de Alex (texto diegético com o nome do compositor). Liga a música ao condicionamento da segunda metade. Conferido na w780: só a persiana, a porta e a parede.",
+      "url": "https://image.tmdb.org/t/p/original/eczQrUbbMd9EcvIPg2B9UqiKNN7.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "tmdb22365654"
+    },
+    {
+      "tmdb": "xGGqvhUt4b0PwfYWwlTtaOWIej7.jpg",
+      "largura": 1483,
+      "altura": 834,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "A mãe de Alex, de peruca lilás, à mesa do café na cozinha do apartamento. Cena doméstica de cores fortes, distinta das demais. Menor da seleção (1483 de largura, acima do mínimo de 1280).",
+      "url": "https://image.tmdb.org/t/p/original/xGGqvhUt4b0PwfYWwlTtaOWIej7.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "Toto856"
+    },
+    {
+      "tmdb": "ysnVjBz5iRSRSl3xrNcQTUfa4L3.jpg",
+      "largura": 1858,
+      "altura": 1045,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Alex de costas na loja de discos: teto em espiral, painel TOP TEN e a capa do disco de 2001 no balcão (textos diegéticos). Conferido na w1280: cartazes e capas visíveis sem nudez. As duas moças que ele encontra nessa loja ficam fora deste quadro.",
+      "url": "https://image.tmdb.org/t/p/original/ysnVjBz5iRSRSl3xrNcQTUfa4L3.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "andgdnight_"
+    },
+    {
+      "tmdb": "8Fz8yHK1onHdCmcF0zCCWhHo7zG.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Os quatro drugues caminhando em linha pela marina do conjunto habitacional, de branco, chapéu-coco e bengala. Versão 3840 do plano; 8bIXCeIeP8tMFSk7skYwKWdv4ia.jpg e vnzFhdW2lxOIwfjF0sGHmjCQ9Sh.jpg são o mesmo plano menor. A coquilha branca por cima da calça é figurino, não nudez.",
+      "url": "https://image.tmdb.org/t/p/original/8Fz8yHK1onHdCmcF0zCCWhHo7zG.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "BackdropAdder"
+    },
+    {
+      "tmdb": "hOsLllMWQBHmGqs8tCu3BEul4w6.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Alex em contra-plongée contra o céu branco, de chapéu-coco, sorrindo e estendendo a mão para a câmera. Cena exata não identificada (pode ser foto de cena); sem violência e sem texto.",
+      "url": "https://image.tmdb.org/t/p/original/hOsLllMWQBHmGqs8tCu3BEul4w6.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "tmdb22365654"
+    },
+    {
+      "tmdb": "skyOmzgiSSH8pggZxkbZ5KhKPCz.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Pátio da prisão visto do alto, presos andando em roda entre muros altos. Abre a parte da prisão; composição geométrica, sem rosto em destaque.",
+      "url": "https://image.tmdb.org/t/p/original/skyOmzgiSSH8pggZxkbZ5KhKPCz.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "tmdb22365654"
+    },
+    {
+      "tmdb": "81QN3JEAvLINmK2hcOFZphbsTlD.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Alex de uniforme da prisão, de pé num escritório com lambris, ao lado de um guarda, diante de um homem sentado à mesa. Cena exata não confirmada: descrever só o que se vê.",
+      "url": "https://image.tmdb.org/t/p/original/81QN3JEAvLINmK2hcOFZphbsTlD.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "BackdropAdder"
+    },
+    {
+      "tmdb": "2APYkrXV0N8nSl7tqTOSDUudE34.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Visita de autoridades à prisão: homem de terno claro ao centro, guardas fardados ao redor e Alex à direita. Um guarda usa braçadeira vermelha, sem insígnia. Mostra o Estado escolhendo quem vai para o tratamento.",
+      "url": "https://image.tmdb.org/t/p/original/2APYkrXV0N8nSl7tqTOSDUudE34.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "Alpha60Films"
+    },
+    {
+      "tmdb": "9L1iTXyptMR0OSRwJpGc3Ey8yb2.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Sala de projeção do tratamento: Alex amarrado na poltrona, um médico de jaleco ao lado, cabine de projeção ao fundo. Plano aberto, sem as imagens projetadas no quadro. t9voFjVnT2FOeb3k2TBJsJQafOw.jpg (colírio) é variante do mesmo plano.",
+      "url": "https://image.tmdb.org/t/p/original/9L1iTXyptMR0OSRwJpGc3Ey8yb2.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "BackdropAdder"
+    },
+    {
+      "tmdb": "xSnnEst7fOrum4bocqmUkteuglO.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Alex com os grampos que mantêm as pálpebras abertas e a coroa de eletrodos. Imagem central sobre condicionamento, sem sangue. Escolhida entre quase iguais: a4xb2R1u4i1YO9EmfSD1P7DjTKZ.jpg, p8bzZZDkG5wm0YHhXdK5MTOKOUX.jpg, A1khwK9vTXlD4hiHD3UVN9vcEy5.jpg, 24lV0wo5n2lc33VTsM9aQZNfVTx.jpg; e 3hwKS7e21hzEnXZaOs2FE6e97bc.jpg e 5dF52IuDnrmDmzvC5SRz3lp6lQI.jpg (eletrodos sendo colocados) repetiriam o tema.",
+      "url": "https://image.tmdb.org/t/p/original/xSnnEst7fOrum4bocqmUkteuglO.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "Alpha60Films"
+    },
+    {
+      "tmdb": "1ryfCZmrac8IN4N03wheWYcCvL4.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Alex de terno, no chão, olhando para cima de boca aberta, com mãos de outras pessoas ao redor: a demonstração pública do tratamento. Mostra o efeito do condicionamento sem a humilhação explícita do plano de lamber a sola (descartado).",
+      "url": "https://image.tmdb.org/t/p/original/1ryfCZmrac8IN4N03wheWYcCvL4.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "tmdb22365654"
+    },
+    {
+      "tmdb": "cC57BgeaBVHhbivLu3ZEO88rvY7.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Placa luminosa HOME no jardim escuro da casa do escritor, à noite (texto diegético). Ambiente sem pessoas; não mostra o que acontece dentro da casa em nenhuma das duas visitas.",
+      "url": "https://image.tmdb.org/t/p/original/cC57BgeaBVHhbivLu3ZEO88rvY7.jpg",
+      "pagina": "https://www.themoviedb.org/movie/185-a-clockwork-orange/images/backdrops?image_language=xx",
+      "enviadoPorNoTmdb": "tmdb22365654"
+    }
+  ],
+  "descartadas": [
+    {
+      "tmdb": "a6r0DnAQdnR0758H1V4tbhHdB8Q.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "9xz1XI8LD0DbuAcQiGIHbpoS21F.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "yIonSXf1jdNihhK8PssxO6KCIfz.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "lFj5OAfe5T0ZbaTeawEsWifWXGj.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "qhlt4mZR68VG9C1Hlwlq10D8KHJ.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "tCkm5otRGsanUQLl6kqPJUVhJQJ.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "10NByBN9r3ogNy3eXcF9bUvcAqG.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "vstfnjffMyV86RmBWrbNTsij4vh.jpg",
+      "motivo": "Bar Korova: manequins femininos nus no quadro, mesmo ao fundo."
+    },
+    {
+      "tmdb": "rbHGyWairQNsVgMkGsrR5hcxLsL.jpg",
+      "motivo": "Alex bebendo no balcão, provável bar Korova; risco de manequim ao fundo."
+    },
+    {
+      "tmdb": "nLFxvLokHe3bQmrmAfljIfax2jQ.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "hbQ74TXxbwkoBQ6p9SaK5RaIQrw.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "9qfGTlpO8Pql0B7g8roJcaXEDCr.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "qt5mWjzck5dds1HFXv2Y0v7WfX7.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "x88aox17Wdxyc74MkgAiNgijHAJ.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "ati1zridIt3buNFDV0eUhHqp97J.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "8mi1VZHX970plgXZSOwEYDZISdD.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "w4YWDR3VHYPZuLnJMAJQd22eMv3.jpg",
+      "motivo": "Arte do triângulo ou recriação dela, não still; a versão completa traz figura feminina nua na base."
+    },
+    {
+      "tmdb": "keblhZFIZYiWflmURWNHEuS2jqL.jpg",
+      "motivo": "Arte de fã ou quadro recolorido (túnel em laranja ou sépia, desenho, olho ilustrado)."
+    },
+    {
+      "tmdb": "xEHSB380u9hV0AXmRRO1kgPhO9C.jpg",
+      "motivo": "Arte de fã ou quadro recolorido (túnel em laranja ou sépia, desenho, olho ilustrado)."
+    },
+    {
+      "tmdb": "6OYgy7n9Iadoq83g9jb2Wdid0dw.jpg",
+      "motivo": "Arte de fã ou quadro recolorido (túnel em laranja ou sépia, desenho, olho ilustrado)."
+    },
+    {
+      "tmdb": "PdOlrT3TyQDMDgYkyhkktqn7dP.jpg",
+      "motivo": "Arte de fã ou quadro recolorido (túnel em laranja ou sépia, desenho, olho ilustrado)."
+    },
+    {
+      "tmdb": "A1GuoxReAlasXGrtNXo0qHjPtfP.jpg",
+      "motivo": "Arte de fã ou quadro recolorido (túnel em laranja ou sépia, desenho, olho ilustrado)."
+    },
+    {
+      "tmdb": "so4bY5uzvEnu2zqxs5mNytmGDUG.jpg",
+      "motivo": "Sangue explícito: nariz ferido e curativo ensanguentado."
+    },
+    {
+      "tmdb": "rTPkSA1N8AMUiLQgq7sVjAzL2V3.jpg",
+      "motivo": "Sangue explícito no rosto ou na roupa."
+    },
+    {
+      "tmdb": "n2Y7gyvU76MMq7YZC41cpy2VYWK.jpg",
+      "motivo": "Sangue explícito no rosto ou na roupa."
+    },
+    {
+      "tmdb": "fjcZzWM7PelwPJ9DYPyuiHqGuUu.jpg",
+      "motivo": "Sangue explícito no rosto ou na roupa."
+    },
+    {
+      "tmdb": "bNDQjpQtQGEHVUUCuVe3ccd6Aa0.jpg",
+      "motivo": "Casa da mulher dos gatos: escultura fálica e quadros eróticos, e a agressão que leva à prisão."
+    },
+    {
+      "tmdb": "tQUCi3eDcM1BSlrCaWNYUPlhP1W.jpg",
+      "motivo": "Casa da mulher dos gatos: escultura fálica e quadros eróticos, e a agressão que leva à prisão."
+    },
+    {
+      "tmdb": "AaXSy5SBIqwuwZMQkCQYt71UhyW.jpg",
+      "motivo": "Casa da mulher dos gatos: escultura fálica e quadros eróticos, e a agressão que leva à prisão."
+    },
+    {
+      "tmdb": "fUcZAt6vCjvoOplDLKYMuXk6Pv3.jpg",
+      "motivo": "Invasão da casa do escritor: contexto do estupro (mulher de vermelho, escritor amordaçado)."
+    },
+    {
+      "tmdb": "lbGQW7M87RYWRtfBEEtU6bFyUa.jpg",
+      "motivo": "Invasão da casa do escritor: contexto do estupro (mulher de vermelho, escritor amordaçado)."
+    },
+    {
+      "tmdb": "jkPP5HybMv6iKK090AKplZxsh1x.jpg",
+      "motivo": "Invasão da casa do escritor: contexto do estupro (mulher de vermelho, escritor amordaçado)."
+    },
+    {
+      "tmdb": "pfD4wUHFrI3OPXBfgMPQ3v6GQQt.jpg",
+      "motivo": "Cassino abandonado, cena da gangue de Billy Boy com a moça atacada; escuro e com risco de nudez."
+    },
+    {
+      "tmdb": "tNeMIvr2cKsIEExVMFRnfMJ3D2b.jpg",
+      "motivo": "Reta final (bilhar e escritor durante a tortura com Beethoven, quarto antes do salto, hospital): revela o desfecho."
+    },
+    {
+      "tmdb": "1xlb5d2TKydGJMkO53pg3pVdGw4.jpg",
+      "motivo": "Reta final (bilhar e escritor durante a tortura com Beethoven, quarto antes do salto, hospital): revela o desfecho."
+    },
+    {
+      "tmdb": "iw4QST344o4QjpZJK350VMqOw1F.jpg",
+      "motivo": "Reta final (bilhar e escritor durante a tortura com Beethoven, quarto antes do salto, hospital): revela o desfecho."
+    },
+    {
+      "tmdb": "28lo8VoWkvBtFciSQW8gwKLOg9W.jpg",
+      "motivo": "Reta final (bilhar e escritor durante a tortura com Beethoven, quarto antes do salto, hospital): revela o desfecho."
+    },
+    {
+      "tmdb": "zaAtxG0ufjAGWUx8OyKIHkC1c6F.jpg",
+      "motivo": "Reta final (bilhar e escritor durante a tortura com Beethoven, quarto antes do salto, hospital): revela o desfecho."
+    },
+    {
+      "tmdb": "pc4ME84nLq1dZBryxz6s0CmiUKk.jpg",
+      "motivo": "Dim fardado de policial: revelação do terceiro ato."
+    },
+    {
+      "tmdb": "sotKQ7Zq2vI486QGPf8LntcXPJY.jpg",
+      "motivo": "Alex de cueca na sala do apartamento."
+    },
+    {
+      "tmdb": "gh00LXV00ohVxrhIBbuQzNRuKSA.jpg",
+      "motivo": "Saguão e escada com mural pichado de desenhos obscenos; cena não identificada com segurança."
+    },
+    {
+      "tmdb": "cBFulIR48u3YJ7oeEEx5XRq1cF2.jpg",
+      "motivo": "Saguão e escada com mural pichado de desenhos obscenos; cena não identificada com segurança."
+    },
+    {
+      "tmdb": "7HsyPyoaWEhsdm0FtevItWHJWn3.jpg",
+      "motivo": "Surra no mendigo no túnel (agressão em curso)."
+    },
+    {
+      "tmdb": "eR4Kkth7wf9FqYJ1ZJ92jxwf9ye.jpg",
+      "motivo": "Surra no mendigo no túnel (agressão em curso)."
+    },
+    {
+      "tmdb": "d6uGDpIfmZzK8tZkGhigI2cMHzu.jpg",
+      "motivo": "Mesmo túnel e mesmas silhuetas do hero, com a sombra do mendigo: quase duplicata temática."
+    },
+    {
+      "tmdb": "agggAMzPULFu4NWxhdesOJWXU6P.jpg",
+      "motivo": "Mesmo túnel e mesmas silhuetas do hero, com a sombra do mendigo: quase duplicata temática."
+    },
+    {
+      "tmdb": "2jbACAbmwnRcXuLTrEsnhaqLIaq.jpg",
+      "motivo": "Mesmo quadro do hero, em 1280x720."
+    },
+    {
+      "tmdb": "9zIKsqZOC7hu4pH77J30ERqv5Cy.jpg",
+      "motivo": "Alex com o copo de leite: é a mesma foto do cartaz pt-BR escolhido; repetiria na página."
+    },
+    {
+      "tmdb": "rCzIkO93CHULAUbRyGShvActNua.jpg",
+      "motivo": "Quase duplicata do close de Alex usado na direção (mesmo olhar sob o chapéu)."
+    },
+    {
+      "tmdb": "2dJRup5ji9Fm8HiEsYNtLfwi8nf.jpg",
+      "motivo": "Quase duplicata do close de Alex usado na direção (mesmo olhar sob o chapéu)."
+    },
+    {
+      "tmdb": "a3kWZOqKM0H4Fc6yBRKlIx2tkir.jpg",
+      "motivo": "Quase duplicata do close de Alex usado na direção (mesmo olhar sob o chapéu)."
+    },
+    {
+      "tmdb": "25LRfapMKi8l50PXBaFlETT1Wji.jpg",
+      "motivo": "Quase duplicata do close de Alex usado na direção (mesmo olhar sob o chapéu)."
+    },
+    {
+      "tmdb": "6i5zAh8HvGynpHR9M4dcAbnGpwa.jpg",
+      "motivo": "Quase duplicata do close de Alex usado na direção (mesmo olhar sob o chapéu)."
+    },
+    {
+      "tmdb": "1WOzT8Rm9vY1uIfwI7xyKJKWmkQ.jpg",
+      "motivo": "Quase duplicata do close de Alex usado na direção (mesmo olhar sob o chapéu)."
+    },
+    {
+      "tmdb": "pvNswKh0zxEApo0Gz4Bf0RwVzIw.jpg",
+      "motivo": "As duas moças na loja de discos: vestidas, mas o encontro leva à cena de sexo acelerada; deixadas de fora por cautela."
+    },
+    {
+      "tmdb": "xasUeLFAkmqXvlNzOqwuf3NVYgq.jpg",
+      "motivo": "As duas moças na loja de discos: vestidas, mas o encontro leva à cena de sexo acelerada; deixadas de fora por cautela."
+    },
+    {
+      "tmdb": "nGBiq4aNyWREZUHlwtFrGIkvkZ2.jpg",
+      "motivo": "Quarto de Alex visto por inteiro: o cenário tem quadro de mulher nua e estatuetas; risco não descartado na miniatura."
+    },
+    {
+      "tmdb": "yISlLJjaDfr9yExDxLipo6t5K4.jpg",
+      "motivo": "Quarto de Alex visto por inteiro: o cenário tem quadro de mulher nua e estatuetas; risco não descartado na miniatura."
+    },
+    {
+      "tmdb": "aF4Vztue3ufwRT5QjjwwNejIIOA.jpg",
+      "motivo": "Delegacia com Deltoid: Alex curvado à esquerda, provavelmente com o nariz ensanguentado da cena."
+    },
+    {
+      "tmdb": "hDwa3jBbrmsXC0shq5nGaKxDqRy.jpg",
+      "motivo": "Marina: aceitáveis (sem sangue), ficaram de reserva; repetiriam o figurino branco contra o céu já presente nas cenas."
+    },
+    {
+      "tmdb": "saVD6OJmNEr5YlOGIEeZd8LxViK.jpg",
+      "motivo": "Marina: aceitáveis (sem sangue), ficaram de reserva; repetiriam o figurino branco contra o céu já presente nas cenas."
+    },
+    {
+      "tmdb": "x89PctlkFIwEdNegTX1ciHfAfDY.jpg",
+      "motivo": "Marina: aceitáveis (sem sangue), ficaram de reserva; repetiriam o figurino branco contra o céu já presente nas cenas."
+    },
+    {
+      "tmdb": "aaKlPiXfHEeYn2p4TTOLU2rQYnJ.jpg",
+      "motivo": "Marina: aceitáveis (sem sangue), ficaram de reserva; repetiriam o figurino branco contra o céu já presente nas cenas."
+    },
+    {
+      "tmdb": "og8KqsO37z2KPdNneeDwml3sRhm.jpg",
+      "motivo": "Marina: aceitáveis (sem sangue), ficaram de reserva; repetiriam o figurino branco contra o céu já presente nas cenas."
+    },
+    {
+      "tmdb": "b4dkXuIWF5u1ZNvbHIC7CE3Vc6w.jpg",
+      "motivo": "Reserva: corredor de arquivo, Alex com o embrulho ao voltar para casa, jantar na casa do escritor (este antecipa a reta final)."
+    },
+    {
+      "tmdb": "4V2y64ymGqLXHRqRVZk1Zniaeh4.jpg",
+      "motivo": "Reserva: corredor de arquivo, Alex com o embrulho ao voltar para casa, jantar na casa do escritor (este antecipa a reta final)."
+    },
+    {
+      "tmdb": "45ogbu2Fz7jvuCpq1sIBiFAVUTp.jpg",
+      "motivo": "Reserva: corredor de arquivo, Alex com o embrulho ao voltar para casa, jantar na casa do escritor (este antecipa a reta final)."
+    },
+    {
+      "tmdb": "e8jIwfP8jr81UTFbh2qJVjBhIUL.jpg",
+      "motivo": "Pôster pt-BR com a arte do triângulo: figura feminina nua na base."
+    },
+    {
+      "tmdb": "1f3ONMYe4LXrZrAO0p5ECRPPng7.jpg",
+      "motivo": "Pôster pt-BR com a arte do triângulo: figura feminina nua na base."
+    },
+    {
+      "tmdb": "tNgmc9kKLPYn78yTWZ50omc4QVb.jpg",
+      "motivo": "Pôster pt-BR com a arte do triângulo: figura feminina nua na base."
+    },
+    {
+      "tmdb": "34S39QftoSTWvCaVrLRwg5BozHs.jpg",
+      "motivo": "Pôster pt-BR (2000x3000) igual ao escolhido, mas com o título escrito MECANICA, sem acento."
+    },
+    {
+      "tmdb": "7BwelFQPY8NjxAuQbx2XASEz2yN.jpg",
+      "motivo": "Pôster pt-BR ilustrado com o carro; origem não confirmada."
+    },
+    {
+      "tmdb": "fakjsOssoJxn8nDzzHt9loOWBmS.jpg",
+      "motivo": "Pôster pt-BR em arte pop alternativa; origem não confirmada."
+    },
+    {
+      "tmdb": "sk6jCkPtwtEBT0ezwsdmbhTFnDW.jpg",
+      "motivo": "Pôster en-US com a mesma composição do escolhido; existe a versão pt-BR."
+    }
+  ],
+  "alertas": [
+    "A arte mais conhecida do filme, o triângulo (em 3 dos 7 pôsteres pt-BR e nos principais en-US e sem idioma), tem uma figura feminina nua na base do triângulo; ficou fora de todos os espaços pela regra da tarefa.",
+    "O cartaz pt-BR escolhido (eEPSMCXtUD3qoJvw7Jf4Gjsutw1.jpg, enviado ao TMDB por Hugo Ribeiro) é a versão brasileira da composição com o copo de leite que também existe em en-US (sk6jCkPtwtEBT0ezwsdmbhTFnDW.jpg). Não confirmei se é capa oficial de distribuidora brasileira; o título escrito está certo: LARANJA MECÂNICA.",
+    "Textos diegéticos mantidos de propósito: TOP TEN, UNDERGROUND e a capa de 2001 na loja de discos (ysnVjBz5iRSRSl3xrNcQTUfa4L3.jpg), o nome de Beethoven na persiana (eczQrUbbMd9EcvIPg2B9UqiKNN7.jpg), a placa HOME (cC57BgeaBVHhbivLu3ZEO88rvY7.jpg) e a placa do carro (36ELtTpBcwYc81swndrENcuFkzu.jpg). Nenhum é letreiro de título.",
+    "Duas cenas têm menos de 1920 de largura, ambas acima de 1280: xGGqvhUt4b0PwfYWwlTtaOWIej7.jpg (1483x834) e ysnVjBz5iRSRSl3xrNcQTUfa4L3.jpg (1858x1045). O hero tem 2560x1440.",
+    "Cena exata não confirmada para hOsLllMWQBHmGqs8tCu3BEul4w6.jpg (Alex contra o céu, pode ser foto de cena) e 81QN3JEAvLINmK2hcOFZphbsTlD.jpg (escritório da prisão). Textos que citem essas imagens devem descrever só o que se vê.",
+    "O hero vem da passagem subterrânea onde os drugues espancam um mendigo; o quadro escolhido é a chegada, sem agressão. As variantes com a surra ficaram fora.",
+    "A checagem de nudez e sangue foi feita nas miniaturas w300 das 107 imagens sem idioma, na w780 das 25 finalistas e na w1280 da loja de discos; os originais não foram abertos em tamanho cheio.",
+    "Não revisei os termos de uso e de atribuição do TMDB; para cada escolhida ficam registrados o arquivo, a página de origem e o usuário que enviou a imagem ao TMDB.",
+    "Há 14 cenas distintas. O hero é também a cena 1, como na ficha de De Olhos Bem Fechados; a imagem da direção não repete nas cenas.",
+    "Outros agentes do workflow gravam arquivos de pesquisa nesta mesma pasta (por exemplo scripts/tmdb.js, wiki-en.json, afi.html); não mexi neles. Meus arquivos: imagens.json, bd_xx.json, po_*.json, lista_bd.txt, lista_po.txt, sel.txt, html/, mini/, w780/, w1280/, cab/, recortes/, folhas/ e scripts/folha.mjs, parse.mjs, recortes.mjs, empilha.mjs, tam.mjs, gravar-imagens.mjs."
+  ],
+  "totais": {
+    "backdropsSemTexto": 107,
+    "postersPtBR": 7,
+    "postersOutros": 154
+  },
+  "folhasDeContato": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/bd-1.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/bd-2.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/bd-3.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/bd-sel.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/posters.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/posters-w780.jpg"
+  ],
+  "previasDeRecorte": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/rec-hero.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/rec-dir.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/cartaz-e-recortes.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/folhas/direcao-e-loja.jpg"
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/imagens.json"
+}

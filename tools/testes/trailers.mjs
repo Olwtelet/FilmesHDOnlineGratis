@@ -1,6 +1,6 @@
-// Trailers: os 22 tocando de verdade nas 21 páginas de sessão e todos os caminhos de fechar, contra o build em produção.
+// Trailers: todos tocando de verdade nas páginas de sessão e todos os caminhos de fechar, contra o build em produção.
 //   node tools/testes/trailers.mjs [--url=http://localhost:4322] [--canal=msedge] [--partes=oembed,tocar,...] [--so=expressão] [--paralelo=1] [--tentativas=3] [--saida=pasta]
-// Partes: oembed, tocar, antes, fechar, dupla, rede, repetir, teclado, controles, paisagem, geometria, saida (padrão: todas).
+// Partes: oembed, tocar, antes, fechar, dupla, rede, repetir, teclado, controles, paisagem, geometria, saida, saidas (padrão: todas).
 // Sempre headless. Cada caso reprovado sai como FALHA e o processo termina com código 1.
 //
 // Como o player é lido: frame.evaluate dentro do iframe de youtube-nocookie, em #movie_player e no <video> dele. O site monta
@@ -26,7 +26,7 @@ const PARALELO = +arg('paralelo', '1');
 const TENTATIVAS = +arg('tentativas', '3');
 const SAIDA = arg('saida', '');
 const SO = arg('so', ''); // só os casos cujo nome casa com esta expressão
-const PARTES = arg('partes', 'oembed,tocar,antes,fechar,dupla,rede,repetir,teclado,controles,paisagem,geometria,saida').split(',');
+const PARTES = arg('partes', 'oembed,tocar,antes,fechar,dupla,rede,repetir,teclado,controles,paisagem,geometria,saida,saidas').split(',');
 if (SAIDA) fs.mkdirSync(SAIDA, { recursive: true });
 
 const PASTA = path.resolve(import.meta.dirname, '../../src/data/sessoes');
@@ -1683,6 +1683,26 @@ async function parteSaida() {
   await emLotes(tarefas);
 }
 
+// Em cada sessão, o controle discreto abre no YouTube o mesmo vídeo que toca incorporado
+async function parteSaidas() {
+  await emLotes(
+    SESSOES.map((s) => () =>
+      caso(`saídas ${s.slug}`, 'desktop', async (page, ctx) => {
+        const f = s.filmes[0];
+        await irPara(page, s.slug);
+        await abrirTrailer(page);
+        await page.waitForFunction((id) => document.querySelector('iframe.yt-trailer')?.src.includes(`/embed/${id}`), f.id, { timeout: 15000 });
+        const m = await medirAberto(page);
+        const href = m.saida.href || null;
+        const [aba] = await Promise.all([ctx.waitForEvent('page', { timeout: 15000 }), clicarEm(page, m.saida.x, m.saida.y)]);
+        const chegou = aba.url().includes(`watch?v=${f.id}`) || (await aba.waitForURL(`**/watch?v=${f.id}*`, { timeout: 30000 }).then(() => true, () => false));
+        confere(`saídas ${s.slug}: o link externo leva ao mesmo trailer`, chegou && !!href && href.includes(`watch?v=${f.id}`), `${href} → ${aba.url()}`);
+        await aba.close();
+      }),
+    ),
+  );
+}
+
 // Tamanhos além dos pedidos: só a geometria, sem esperar o vídeo
 async function parteGeometria() {
   const tarefas = [];
@@ -1704,7 +1724,7 @@ async function parteGeometria() {
 
 // ---------------------------------------------------------------- execução
 
-const TODAS = { oembed: parteOembed, tocar: parteTocar, antes: parteAntes, fechar: parteFechar, dupla: parteDupla, rede: parteRede, repetir: parteRepetir, teclado: parteTeclado, controles: parteControles, paisagem: partePaisagem, geometria: parteGeometria, saida: parteSaida };
+const TODAS = { oembed: parteOembed, tocar: parteTocar, antes: parteAntes, fechar: parteFechar, dupla: parteDupla, rede: parteRede, repetir: parteRepetir, teclado: parteTeclado, controles: parteControles, paisagem: partePaisagem, geometria: parteGeometria, saida: parteSaida, saidas: parteSaidas };
 for (const p of PARTES) {
   console.log(`\n== ${p} (${CANAL})`);
   await TODAS[p]();

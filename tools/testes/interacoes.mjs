@@ -29,7 +29,11 @@ const TELAS = {
   tabletMovel: { viewport: { width: 820, height: 1180 }, isMobile: true, hasTouch: true, userAgent: UA_TABLET },
 };
 const JULHO = '2026-07-01T12:00:00-03:00'; // obsession-2026 em primeiro
-const SEM_SESSAO = '2026-11-02T12:00:00-03:00'; // aviso em primeiro
+// Dois dias depois da última sessão cadastrada: o aviso vem em primeiro, e o teste não muda quando entra uma sessão nova
+const DADOS = fs.readdirSync(path.resolve(import.meta.dirname, '../../src/data/sessoes')).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname, '../../src/data/sessoes', f), 'utf8')));
+const N_SESSOES = DADOS.length;
+const ULTIMA = DADOS.map((s) => (s.sessao.fim ? s.sessao.fim.slice(0, 10) : s.sessao.data)).sort().at(-1); // um fim explícito conta pelo dia dele
+const SEM_SESSAO = new Date(new Date(`${ULTIMA}T12:00:00-03:00`).getTime() + 2 * 864e5).toISOString(); // aviso em primeiro
 const SESSAO = '/sessoes/obsession-2026/';
 const LISTAS = ['[data-roll="container"]', '.work-roll-w', '.work-overl-w', '[data-menu="films"]', '[data-menu="footages"]', '.menu-films-w'];
 const ESPERA = { timeout: 240000, polling: 200 };
@@ -175,6 +179,32 @@ async function assentar(page, limite = 120000) {
     await dorme(page, 250);
   }
   throw new Error(`carrossel não assentou: ${JSON.stringify(ultimo)}`);
+}
+
+// Onde o carrossel para depois da entrada. O giro de entrada só começa quando o WebGL da página termina de carregar, e o
+// carrossel já está visível, parado no item 0, antes dele: com o PC carregado o giro pode começar segundos depois de
+// pronta(), e uma leitura só pega o meio do caminho. Primeiro espera o canvas com imagem: o WebGL carregou, e o giro já foi
+// disparado. Depois lê só quando passam 12 s sem nenhum movimento, contados do último.
+async function paradaFinal(page, quieto = 12000, limite = 120000) {
+  const t0 = Date.now();
+  let comImagem = false;
+  while (!comImagem && Date.now() - t0 < limite) {
+    const px = await page.evaluate(() => Promise.race([window.__amostrar(), new Promise((r) => setTimeout(() => r(null), 2000))]));
+    if (px && px.desvio >= 3) comImagem = true;
+    else await dorme(page, 250);
+  }
+  if (!comImagem) return { ...(await carrossel(page)), semImagem: true };
+  let ultimo = null, iguais = 0, mexeu = false, desde = Date.now();
+  while (Date.now() - t0 < limite) {
+    const c = await carrossel(page);
+    if (!c || (ultimo && (c.i !== ultimo.i || Math.abs(c.dist - ultimo.dist) > 1))) { if (ultimo) mexeu = true; desde = Date.now(); }
+    if (c && c.dist < 14 && ultimo && ultimo.i === c.i && Math.abs(ultimo.dist - c.dist) <= 1) iguais++;
+    else iguais = 0;
+    ultimo = c;
+    if (iguais >= 3 && Date.now() - desde >= quieto) return { ...c, mexeu };
+    await dorme(page, 250);
+  }
+  return { ...ultimo, mexeu, semParar: true };
 }
 
 async function pronta(page) {
@@ -572,7 +602,7 @@ async function secaoTeclado() {
     });
   }
 
-  // 5. O âncora do lightbox do Webflow é o único de 21 que recebe foco
+  // 5. O âncora do lightbox do Webflow: nenhum dos que ficam fora da tela recebe foco
   await tenta('âncora do lightbox', async () => {
     const { ctx, page } = await abrir({ caminho: '/programacao/', quando: JULHO });
     await pronta(page);
@@ -916,8 +946,8 @@ async function secaoMouse() {
     await page.mouse.move(720, 480);
     await page.click('a.explore-w:not(.mobile) >> visible=true');
     await esperarPagina(page, 'work', '/programacao/');
-    const c2 = await carrossel(page);
-    confere('home sem sessão: EXPLORAR leva à Programação, com o aviso em primeiro', c2.sessao === 'AVISO', JSON.stringify(c2));
+    const c2 = await paradaFinal(page);
+    confere('home sem sessão: EXPLORAR leva à Programação, com o aviso em primeiro', c2.sessao === 'AVISO' && !c2.semImagem && !c2.semParar, JSON.stringify(c2));
     confere('home sem sessão: console limpo', !page.erros.length, page.erros.slice(0, 2).join(' | '));
     await ctx.close();
   });
@@ -1458,7 +1488,7 @@ async function medir(page, cdp) {
 }
 
 async function secaoCadeia() {
-  for (const [quando, rotulo, n, primeira] of [[JULHO, 'com sessão', 21, 'obsession-2026'], [SEM_SESSAO, 'sem sessão', 22, 'AVISO']]) {
+  for (const [quando, rotulo, n, primeira] of [[JULHO, 'com sessão', N_SESSOES, 'obsession-2026'], [SEM_SESSAO, 'sem sessão', N_SESSOES + 1, 'AVISO']]) {
     await tenta(`cadeia ${rotulo}`, async () => {
       const { ctx, page } = await abrir({ caminho: '/', quando });
       const cdp = await ctx.newCDPSession(page);
@@ -1519,8 +1549,10 @@ async function secaoCadeia() {
         if (li.n && li.ordem.join() !== ordemBase) problemas.push('ordem mudou entre saltos');
         if (li.n && li.ordem[0] !== primeira) problemas.push(`primeira ${li.ordem[0]}`);
         if (dp === 'home' || dp === 'work') {
-          const c = await carrossel(page);
-          if (c.i !== 0) problemas.push(`carrossel em ${c.i}`);
+          const c = await paradaFinal(page);
+          if (c.semImagem) problemas.push(`canvas sem imagem em 120 s: ${JSON.stringify(c)}`);
+          else if (c.semParar) problemas.push(`carrossel não parou: ${JSON.stringify(c)}`);
+          else if (c.i !== 0) problemas.push(`carrossel em ${c.i}`);
           const px = await page.evaluate(() => window.__amostrar());
           const d1 = await page.evaluate(() => window.__gl.desenhos);
           if (px.desvio < 3) problemas.push(`canvas sem imagem ${JSON.stringify(px)}`); // o alfa é sempre 1: quem prova imagem é o contraste
@@ -1613,7 +1645,7 @@ async function secaoRss() {
     const mapa = await (await pedir(ctx, `${URL_BASE}/sitemap.xml`)).text();
     const rotas = [...mapa.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
     rotas.push('/404.html');
-    confere('páginas varridas incluem as 21 sessões', rotas.filter((r) => r.startsWith('/sessoes/')).length === 21, `${rotas.length} rotas`);
+    confere(`páginas varridas incluem as ${N_SESSOES} sessões`, rotas.filter((r) => r.startsWith('/sessoes/')).length === N_SESSOES, `${rotas.length} rotas`);
     const achados = [];
     for (const r of rotas) {
       const html = await (await pedir(ctx, URL_BASE + r)).text();

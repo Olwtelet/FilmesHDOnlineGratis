@@ -1,0 +1,268 @@
+{
+  "slug": "late-night-with-the-devil-2023",
+  "tmdbId": 938614,
+  "hero": {
+    "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg",
+    "largura": 3639,
+    "altura": 2046,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "Still do estúdio antes da virada: June Ross-Mitchell (Laura Gordon), Lilly (Ingrid Torelli), Jack Delroy (David Dastmalchian) e Carmichael Haig (Ian Bliss) sentados no cenário de Night Owls, com o painel de arco-íris dos anos 70 ao fundo. Sem sangue, sem possessão. No recorte desktop 16:10 o grupo inteiro cabe; no celular 390x844 (centro) Jack fica inteiro no meio do quadro. Miniatura 160x110 (attention) mostra o grupo. Não precisa de recorte. O letreiro parcial do cenário (\"...GHT O...\") é texto diegético, não título."
+  },
+  "cartaz": {
+    "tmdb": "blckaGzdEJ4PdG5RxZPcb77VYFV.jpg",
+    "largura": 2000,
+    "altura": 3000,
+    "idioma": "pt-BR",
+    "tipo": "arte",
+    "recorte": null,
+    "motivo": "Pôster pt-BR com o título brasileiro certo, \"Entrevista com o Demônio\", na mesma tipografia vermelha do cartaz brasileiro com bloco de créditos (7LHsIZW5y5cLuio7VYHb4zJ3fLq), sobre a arte oficial do apresentador com a cabeça em chamas. Sem bloco de créditos nem moldura, o título fica legível em 500 px. É o pôster que a página pt-BR do TMDB mostra (og:image). w780 confirmado (HTTP 200, 138 KB)."
+  },
+  "direcao": {
+    "tmdb": "1q6Cx3RqP2Tq7WHGr32hKqrWafm.jpg",
+    "largura": 3840,
+    "altura": 2160,
+    "idioma": "xx",
+    "tipo": "still",
+    "recorte": null,
+    "motivo": "Jack Delroy sentado na arquibancada vazia do estúdio, com a mão sobre uma câmera de TV. Na prévia 720x1200 a partir de w1280 com position \"attention\", o corte vertical pega o rosto e o terno de Jack inteiros e deixa a câmera de fora. O logotipo da câmera (\"ubc tv\") é diegético e sai no corte."
+  },
+  "cenas": [
+    {
+      "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg",
+      "largura": 3639,
+      "altura": 2046,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Os quatro no sofá do programa antes da virada (a mesma do hero, como nas outras sessões)."
+    },
+    {
+      "tmdb": "qcPxiiTxtKM68PSQcOA8teYcQ1i.jpg",
+      "largura": 1920,
+      "altura": 1080,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Jack em preto e branco, de óculos escuros, afastando a câmera com a mão numa rua de letreiros de Nova York: o registro de documentário do prólogo. Os letreiros (\"Hotel\", \"Broadway\") são diegéticos."
+    },
+    {
+      "tmdb": "1q6Cx3RqP2Tq7WHGr32hKqrWafm.jpg",
+      "largura": 3840,
+      "altura": 2160,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Jack ao lado da câmera de estúdio, plateia vazia (a mesma da direção)."
+    },
+    {
+      "tmdb": "joVjOD0BD7eK6xCIsRw6TKijBch.jpg",
+      "largura": 2700,
+      "altura": 1519,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Lilly presa à cadeira no palco para a demonstração, com Jack segurando a mão dela e June ajoelhada ao lado: preparação do segmento, sem possessão nem sangue."
+    },
+    {
+      "tmdb": "iVwBORDrQIDfpvwbN6MoiFun0Mc.jpg",
+      "largura": 1920,
+      "altura": 1080,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "Jack de costas, em silhueta, diante da plateia e dos refletores: o apresentador e o público, sem revelar nada da trama."
+    },
+    {
+      "tmdb": "xexswVT2XTsfjmydXi88jnhZIkF.jpg",
+      "largura": 2847,
+      "altura": 1601,
+      "idioma": "xx",
+      "tipo": "still",
+      "recorte": null,
+      "motivo": "June se inclina para Lilly, que está de costas na cadeira, no palco com a luz baixa: tensão do segmento sem mostrar o rosto de Lilly, sem sangue nem desfecho."
+    }
+  ],
+  "cenasOpcionaisComRecorte": [
+    {
+      "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg",
+      "recorte": {
+        "x": 0.6,
+        "y": 0.08,
+        "largura": 0.4,
+        "altura": 0.72
+      },
+      "pixelsNoOriginal": "1456x1473",
+      "motivo": "Carmichael Haig (Ian Bliss), o cético, de paletó de veludo vinho. Só se o lead quiser completar a galeria como em truth-treachery-2026; não é still distinto."
+    },
+    {
+      "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg",
+      "recorte": {
+        "x": 0,
+        "y": 0.08,
+        "largura": 0.42,
+        "altura": 0.75
+      },
+      "pixelsNoOriginal": "1528x1535",
+      "motivo": "June e Lilly no sofá, Lilly olhando para a câmera. Mesmo aviso."
+    },
+    {
+      "tmdb": "joVjOD0BD7eK6xCIsRw6TKijBch.jpg",
+      "recorte": {
+        "x": 0.44,
+        "y": 0,
+        "largura": 0.48,
+        "altura": 0.86
+      },
+      "pixelsNoOriginal": "1296x1306",
+      "motivo": "Jack e June no palco. Mesmo aviso."
+    }
+  ],
+  "descartadas": [
+    {
+      "tmdb": "umyOinNa6vqqnqoVc9QqzyaapUz.jpg",
+      "motivo": "Arte promocional (apresentador com a cabeça em chamas sob o refletor), não é still. 3840x2160, xx."
+    },
+    {
+      "tmdb": "siiFWuO3IJzZdDRlGZIcYl94zX9.jpg",
+      "motivo": "Duplicata da arte da cabeça em chamas."
+    },
+    {
+      "tmdb": "q1xlPBPB88N3dff0SHDfakR0Lm9.jpg",
+      "motivo": "Duplicata da arte da cabeça em chamas."
+    },
+    {
+      "tmdb": "4yrOyO3N55XazHQXXYoqiiPQd40.jpg",
+      "motivo": "Retrato promocional de Jack entre dois refletores, a mesma arte dos pôsteres sem texto e de um backdrop com título: arte, não still."
+    },
+    {
+      "tmdb": "2gAeTtLa9T81VHVqzl71py18H18.jpg",
+      "motivo": "Arte promocional de Lilly com o cabelo sobre o rosto sob o refletor (mesma série da arte em chamas); sugere a possessão."
+    },
+    {
+      "tmdb": "lteDQKKBI7vQEJCrPaZpGoA1WCZ.jpg",
+      "motivo": "Montagem promocional: Jack de corpo inteiro com fogo aos pés e cinco rostos do elenco em coluna, dentro de moldura."
+    },
+    {
+      "tmdb": "wutHj5BS0jpHVea32XSEUgiSl0T.jpg",
+      "motivo": "Jack de boca escancarada, gritando diante da espiral do cenário, com um homem amparando uma senhora assustada ao fundo. O contexto da cena não foi confirmado em fonte e tem cara de clímax, que a tarefa manda evitar."
+    },
+    {
+      "tmdb": "kQiql7xYA95beOLNs9f2eTzhqxe.jpg",
+      "motivo": "Quase duplicata de wutHj5BS0jpHVea32XSEUgiSl0T (mesmo quadro, enquadramento mais fechado, 1920x1080); mesmo motivo."
+    },
+    {
+      "tmdb": "php0MFAx4WbI6UAFdBetyH1x7P1.jpg",
+      "motivo": "Pôster pt-PT com o título de Portugal (\"Conversas com o Diabo\"), não o brasileiro."
+    },
+    {
+      "tmdb": "mSztDCheNJ1xc6QPorypfGL5Itz.jpg",
+      "motivo": "Pôster marcado pt-BR com \"Tarde da Noite com o Diabo\", tradução literal que não é o título brasileiro."
+    },
+    {
+      "tmdb": "gGyCpd8m1XITpw69gh9GgjhES6o.jpg",
+      "motivo": "Pôster pt-BR correto (2000x3000), mesma arte com chama maior e título colado à margem; segunda opção, não erro."
+    },
+    {
+      "tmdb": "7LHsIZW5y5cLuio7VYHb4zJ3fLq.jpg",
+      "motivo": "Cartaz brasileiro com bloco de créditos, citações em português e \"Não mude de canal.\" (2000x2937). Parece o de distribuição, mas tem moldura branca e letra miúda que vira ruído em 500 px; alternativa se o lead preferir o cartaz completo."
+    },
+    {
+      "tmdb": "mu8LRWT9GHkfiyHm7kgxT6YNvMW.jpg",
+      "motivo": "Pôster principal en-US (2000x3000), mesma arte com o título em inglês; só reserva, já que existe o pt-BR."
+    },
+    {
+      "tmdb": "1Jz5KW5ZyAcAJkRkRhBEIrdIeUx.jpg",
+      "motivo": "Backdrop pt-PT com o título \"Entrevista com o Demônio\" escrito: letreiro de título."
+    },
+    {
+      "tmdb": "gKXMs6dpKFfZRDO85A1EYxmi5gN.jpg",
+      "motivo": "Backdrop pt com título escrito: letreiro de título."
+    },
+    {
+      "tmdb": "iHMngWPft2uCqQPueGvjOvRMVIj.jpg",
+      "motivo": "Backdrop pt: o still joVjOD0BD7eK6xCIsRw6TKijBch com o título escrito por cima; letreiro e duplicata."
+    },
+    {
+      "tmdb": "qec0Htq1rQUsaaptfH1uw67s1aa.jpg",
+      "motivo": "Backdrop en-US com título: letreiro."
+    },
+    {
+      "tmdb": "6yqA8Wu2v2nJlefwtiL4MyU58IY.jpg",
+      "motivo": "Backdrop en-US com título: letreiro."
+    },
+    {
+      "tmdb": "kDvQo53wH7NDM3SPMo39bkLXPmG.jpg",
+      "motivo": "Backdrop en-US com título sobre o retrato promocional: letreiro."
+    },
+    {
+      "tmdb": "rOIdfteANpVfBsBUmA8F8B6RI7t.jpg",
+      "motivo": "Backdrop zh-HK com título: letreiro."
+    },
+    {
+      "tmdb": "wqg8bV0q5Byw1VbJWyKUUAt4TD5.jpg",
+      "motivo": "Backdrop zh-CN com título: letreiro."
+    },
+    {
+      "tmdb": "2RSBTVVxUNmOa2Bt5fgKrvRycHm.jpg",
+      "motivo": "Backdrop it-IT com título: letreiro."
+    },
+    {
+      "tmdb": "15gvKzOcOGHa0e4BcDOVR6Xm7OR.jpg",
+      "motivo": "Backdrop it-IT com título: letreiro."
+    },
+    {
+      "tmdb": "d4YT0paM7gSlW9m2nK6XAw3WyT1.jpg",
+      "motivo": "Backdrop es-ES com título: letreiro."
+    },
+    {
+      "tmdb": "jsluhmAatrjHsSOdBFxPF0q4oo4.jpg",
+      "motivo": "Backdrop he-IL com título: letreiro."
+    },
+    {
+      "tmdb": "7ANQa2ViTON95UeUTpTh3EZIYls.jpg",
+      "motivo": "Backdrop ru-RU com título: letreiro."
+    }
+  ],
+  "alertas": [
+    "Faltam cenas: o TMDB tem só 14 backdrops sem idioma (xx) para este filme, e os outros 13 (pt 3, en 3, zh 2, it 2, es 1, he 1, ru 1) têm todos letreiro de título. Dos 14 sem idioma, 6 são stills distintos aceitáveis. Os outros 8 são arte promocional (5, três delas a mesma imagem), uma montagem e o par quase duplicado do grito de Jack, descartado porque o contexto não foi confirmado. A galeria vai com 6 cenas e o site repete até chegar a 14. Seis é o mínimo que docs/FASE2.md aceita sem buracos.",
+    "Opcional, decisão do lead: há três recortes testados em cenasOpcionaisComRecorte (Carmichael; June e Lilly; Jack e June), no mesmo padrão de truth-treachery-2026. Cada um tem mais de 1280 px no original. Não contam como stills distintos.",
+    "Duas cenas (qcPxiiTxtKM68PSQcOA8teYcQ1i e iVwBORDrQIDfpvwbN6MoiFun0Mc) têm exatamente 1920x1080 no original. Passam do mínimo de 1280 para cena, e as versões 960 e 640 não ampliam.",
+    "A direção sai de w1280 (1280x720): o corte 0,6 usa uma faixa de 432x720 e o pipeline amplia para 720x1200, como em todas as sessões. O rosto de Jack fica no centro da prévia.",
+    "Ano: o TMDB marca 2024 (título da página: \"Entrevista com o Demônio (2024)\"). Pelas datas do próprio TMDB, a estreia mundial foi no SXSW em 10/03/2023 (festival); no Brasil, o filme chegou aos cinemas em 04/07/2024, com classificação 16 ali, não conferida no ClassInd; e nos EUA saiu em digital na Shudder em 19/04/2024. A Wikipedia confirma o SXSW em 10/03/2023 e a estreia da IFC Films nos cinemas dos EUA em 22/03/2024. A escolha do ano do catálogo fica com o lead; o slug pedido usa 2023.",
+    "O pôster pt-BR escolhido (blckaGzdEJ4PdG5RxZPcb77VYFV) foi enviado por usuário do TMDB e não está travado. A tipografia é igual à do cartaz brasileiro com créditos (7LHsIZW5y5cLuio7VYHb4zJ3fLq). Nesta rodada, nenhum dos dois foi confirmado por fonte da distribuidora brasileira.",
+    "Nada foi gravado em src/ nem em public/. Folhas e prévias ficam na pasta de trabalho. No fim desta rodada, o git status do projeto mostrou tools/testes/interacoes.mjs, ordem.mjs e paginas.mjs modificados. Este agente não escreveu neles; a mudança veio de outro processo."
+  ],
+  "folhasDeContato": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/1-backdrops-xx.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/2-posters-pt-xx.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/3-posters-en.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/4-backdrops-outros.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/5-w780-a.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/6-w780-b.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/7-cartaz-ptBR.jpg"
+  ],
+  "previasDeRecorte": [
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/8-previas-hero.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/9-previas-direcao.jpg",
+    "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/folhas/10-previas-recortes-opcionais.jpg"
+  ],
+  "totais": {
+    "backdropsSemTexto": 14,
+    "postersPtBR": 4,
+    "postersOutros": 112
+  },
+  "verificacao": "HEAD em original, w1280 e w780 dos 7 arquivos escolhidos: todos com HTTP 200 e image/jpeg. O tamanho real, lido do cabeçalho JPEG (GET parcial de 256 KB), bate com o que o TMDB mostra: cRaxd 3639x2046, joVjO 2700x1519, 1q6Cx 3840x2160, qcPxi 1920x1080, iVwBO 1920x1080, xexsw 2847x1601, blcka 2000x3000.",
+  "fontes": [
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil?language=pt-BR",
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/releases",
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/images/backdrops?image_language=xx",
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/images/posters?image_language=pt",
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/images/posters?image_language=xx",
+    "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/images/posters?image_language=en",
+    "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil"
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/imagens.json"
+}

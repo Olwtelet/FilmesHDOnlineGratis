@@ -1,0 +1,219 @@
+{
+  "slug": "they-live-1988",
+  "tituloBrasil": {
+    "valor": "Eles Vivem",
+    "confere": true,
+    "fontes": [
+      "https://www.themoviedb.org/movie/8337?language=pt-BR",
+      "https://www.themoviedb.org/movie/8337-they-live/titles",
+      "https://pt.wikipedia.org/wiki/Eles_Vivem",
+      "https://www.wikidata.org/wiki/Q72909",
+      "https://www.adorocinema.com/filmes/filme-4660/",
+      "https://tv.apple.com/br/movie/eles-vivem/umc.cmc.2q1kjwyu2qo2dx8rj770jdi55",
+      "https://www.justwatch.com/br/filme/eles-vivem"
+    ],
+    "nota": "Mesmo título no Brasil e em Portugal (pt.wikipedia: título-br e título-pt 'Eles Vivem'; rótulo pt-br do Wikidata; título alternativo 'Brazil' no TMDB). Variações: título de copyright 'John Carpenter's They Live' (AFI Catalog; TMDB 'complete title'); 'They Live!' no cartaz (TMDB 'poster title'); lançado na Europa como 'Invasion Los Angeles' (en.wikipedia, TMDB França). Nenhuma variação brasileira encontrada."
+  },
+  "tituloOriginal": "They Live",
+  "tmdb": 8337,
+  "imdb": "tt0096256",
+  "wikipedia": "https://en.wikipedia.org/wiki/They_Live",
+  "ano": {
+    "recomendado": 1988,
+    "estreiaMundial": "1988-11-04",
+    "ondeEstreou": "Lançamento comercial nos cinemas dos EUA e do Canadá pela Universal (en.wikipedia, AFI Catalog, Box Office Mojo 'Earliest Release Date Fri Nov 4, 1988 (Domestic)', Wikidata P577 com EUA e Canadá, site oficial de John Carpenter). Nenhuma exibição pública anterior (festival ou pré-estreia) foi encontrada; Kinoafisha e Filmweb, citados em busca, também dão 04/11/1988 como estreia mundial. A data foi adiada de 21/10/1988 para não concorrer com Halloween 4 (en.wikipedia).",
+    "lancamentoComercial": "1988-11-04 (EUA e Canadá, Universal Pictures)",
+    "lancamentoBrasil": "1989-12-01, cinema, segundo o TMDB (a página em inglês mostra 12/01/1989 no formato mês/dia; a página pt-BR mostra 01/12/1989). A Apple TV BR traz a mesma data em og:video:release_date, provavelmente da mesma base de metadados. Não confirmado em imprensa brasileira da época. Outras datas no Brasil: Blu-ray da Versátil em 2021 (pt.wikipedia); AdoroCinema registra '1 de julho de 2023 para filmes online'.",
+    "anoTmdb": 1988,
+    "nota": "Pelo critério do catálogo (ano da primeira exibição pública), o ano é 1988. Não há divergência: TMDB, en.wikipedia, pt.wikipedia, Wikidata, AFI, Box Office Mojo, BBFC (ano de produção 1988) e o site oficial dão 1988. O lançamento no Brasil em 1989 não muda o ano exibido, como em V de Vingança.",
+    "fontes": [
+      "https://en.wikipedia.org/wiki/They_Live",
+      "https://pt.wikipedia.org/wiki/Eles_Vivem",
+      "https://www.wikidata.org/wiki/Q72909",
+      "https://catalog.afi.com/Catalog/moviedetails/67101",
+      "https://www.boxofficemojo.com/title/tt0096256/credits/",
+      "https://theofficialjohncarpenter.com/they-live/",
+      "https://www.themoviedb.org/movie/8337-they-live/releases",
+      "https://www.bbfc.co.uk/release/they-live-q29sbgvjdglvbjpwwc0zmdexmdc"
+    ]
+  },
+  "direcao": {
+    "valor": "John Carpenter",
+    "fontes": [
+      "https://www.themoviedb.org/movie/8337-they-live/cast",
+      "https://en.wikipedia.org/wiki/They_Live",
+      "https://catalog.afi.com/Catalog/moviedetails/67101",
+      "https://www.boxofficemojo.com/title/tt0096256/credits/",
+      "https://www.bbfc.co.uk/release/they-live-q29sbgvjdglvbjpwwc0zmdexmdc",
+      "https://theofficialjohncarpenter.com/they-live/"
+    ]
+  },
+  "duracao": {
+    "recomendado": 94,
+    "porFonte": [
+      { "fonte": "TMDB (1h 33m)", "minutos": 93, "url": "https://www.themoviedb.org/movie/8337-they-live" },
+      { "fonte": "Wikipedia em inglês (infobox)", "minutos": 94, "url": "https://en.wikipedia.org/wiki/They_Live" },
+      { "fonte": "Wikipedia em português (infobox)", "minutos": 94, "url": "https://pt.wikipedia.org/wiki/Eles_Vivem" },
+      { "fonte": "Wikidata P2047", "minutos": 94, "url": "https://www.wikidata.org/wiki/Q72909" },
+      { "fonte": "Box Office Mojo (1 hr 34 min)", "minutos": 94, "url": "https://www.boxofficemojo.com/title/tt0096256/credits/" },
+      { "fonte": "AFI Catalog", "minutos": 94, "url": "https://catalog.afi.com/Catalog/moviedetails/67101" },
+      { "fonte": "BBFC, cópia de cinema classificada em 12/12/1988: 93m 54s", "minutos": 94, "url": "https://www.bbfc.co.uk/release/they-live-q29sbgvjdglvbjpwwc0zmdexmdc" },
+      { "fonte": "Site oficial de John Carpenter", "minutos": 94, "url": "https://theofficialjohncarpenter.com/they-live/" },
+      { "fonte": "AdoroCinema (1h 33min)", "minutos": 93, "url": "https://www.adorocinema.com/filmes/filme-4660/" },
+      { "fonte": "Apple TV BR (1h34min)", "minutos": 94, "url": "https://tv.apple.com/br/movie/eles-vivem/umc.cmc.2q1kjwyu2qo2dx8rj770jdi55" }
+    ],
+    "nota": "94 é o valor de en.wikipedia, pt.wikipedia, Wikidata, Box Office Mojo, AFI e do site oficial, e o arredondamento da medição da BBFC para a cópia de cinema de 1988 (93m 54s). TMDB e AdoroCinema dão 93, provavelmente truncando os 93m 54s. Na BBFC, o relançamento de 2018 mede 94m 22s e as fitas de vídeo de 1989 a 2008 cerca de 90m, por causa da velocidade do PAL."
+  },
+  "classificacao": {
+    "valor": null,
+    "detalhe": "Nenhum registro oficial encontrado. (1) Diário Oficial da União, busca em in.gov.br por frase exata: 'THEY LIVE' trouxe 0 resultados, e 'John Carpenter' trouxe 1, um edital do INSS sem relação com o filme. O método foi conferido com títulos já publicados no catálogo: 'THE RUNNING MAN' encontra a Portaria 2.204/2025, e 'VIVARIUM' encontra a Portaria 1.405/2022. A busca não alcança 1989, ano do lançamento no Brasil, quando a classificação ainda vinha da censura federal. (2) A consulta pública do ClassInd (classindportal.mj.gov.br) é um aplicativo que chama /api/solicitacao-classificacao-consultas, e a API redireciona para o login do sso.mj.gov.br. Não usei login nem credencial. Os indícios secundários estão em outrasEncontradas.",
+    "fonte": "https://www.in.gov.br/consulta/-/buscar/dou?q=%22THEY+LIVE%22&s=todos&exactDate=all&sortType=0 ; https://classindportal.mj.gov.br/consulta-geral",
+    "outrasEncontradas": [
+      "14: TMDB, página de lançamentos, Brasil, 01/12/1989, cinema (indício, base colaborativa): https://www.themoviedb.org/movie/8337-they-live/releases",
+      "14: JustWatch BR, 'Classificação de idade' (indício, agregador que parece usar o TMDB): https://www.justwatch.com/br/filme/eles-vivem",
+      "A14 'Violência, Linguagem Imprópria': loja Apple TV BR, estúdio Lionsgate (indício, loja ou distribuidora digital): https://tv.apple.com/br/movie/eles-vivem/umc.cmc.2q1kjwyu2qo2dx8rj770jdi55",
+      "16: Filmow, visto só no resumo de um buscador; a página devolve 403 e não foi aberta (indício não verificado): https://filmow.com/eles-vivem-t437/"
+    ]
+  },
+  "generos": ["Ficção Científica", "Ação", "Terror"],
+  "categoria": "Ficção Científica",
+  "sinais": ["ficção-científica", "ação", "terror", "suspense", "cult", "clássico", "indicação-da-semana"],
+  "pais": "Estados Unidos (en.wikipedia, pt.wikipedia, AFI Catalog, Wikidata P495, AdoroCinema 'EUA', BBFC, JustWatch)",
+  "idiomaOriginal": "Inglês (TMDB 'Original Language English', en.wikipedia, AFI, Wikidata P364, AdoroCinema)",
+  "principais": [
+    {
+      "funcao": "Roteiro",
+      "nome": "John Carpenter (como Frank Armitage)",
+      "fontes": [
+        "https://theofficialjohncarpenter.com/they-live/",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://pt.wikipedia.org/wiki/Eles_Vivem",
+        "https://www.themoviedb.org/movie/8337-they-live/cast"
+      ],
+      "nota": "Nos créditos de abertura o roteiro aparece como 'Frank Armitage' (AFI), pseudônimo de Carpenter. O site oficial escreve 'John Carpenter (as Frank Armitage)', e a pt.wikipedia, '(como Frank Armitage)'. Recomendo exibir assim, com 36 caracteres; cabe nos 37. Segundo a en.wikipedia e o AFI, o nome vem de Henry Armitage, personagem de 'The Dunwich Horror', de Lovecraft. É também o nome do personagem de Keith David. O TMDB e o Box Office Mojo dão só 'John Carpenter'."
+    },
+    {
+      "funcao": "Obra original",
+      "nome": "Ray Nelson",
+      "fontes": [
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://theofficialjohncarpenter.com/they-live/",
+        "https://pt.wikipedia.org/wiki/Eles_Vivem",
+        "https://www.themoviedb.org/movie/8337-they-live/cast"
+      ],
+      "nota": "Conto 'Eight O'Clock in the Morning', publicado na The Magazine of Fantasy & Science Fiction de novembro de 1963 (en.wikipedia). No AFI, 'Based on the short story'. O TMDB rotula Nelson como 'Novel', mas é um conto, e o Box Office Mojo o lista como 'Writer'. Houve ainda uma adaptação em quadrinhos, 'Nada', desenhada por Bill Wray, cujos direitos Carpenter também comprou. Ela não aparece como crédito do filme."
+    },
+    {
+      "funcao": "Fotografia",
+      "nome": "Gary B. Kibbe",
+      "fontes": [
+        "https://www.themoviedb.org/movie/8337-they-live/cast",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.boxofficemojo.com/title/tt0096256/credits/",
+        "https://theofficialjohncarpenter.com/they-live/"
+      ]
+    },
+    {
+      "funcao": "Música",
+      "nome": "John Carpenter & Alan Howarth",
+      "fontes": [
+        "https://www.themoviedb.org/movie/8337-they-live/cast",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.boxofficemojo.com/title/tt0096256/credits/",
+        "https://theofficialjohncarpenter.com/they-live/"
+      ],
+      "nota": "O Wikidata (P86) lista só Carpenter; as demais fontes dão os dois. Por precedente do catálogo, a Montagem ficou de fora porque há obra original, como em Doutor Sono, V de Vingança, Sem Limites e De Olhos Bem Fechados. Se preferir Montagem no lugar de Obra original, use 'Gib Jaffe & Frank E. Jimenez', com 28 caracteres, confirmado por TMDB, en.wikipedia, pt.wikipedia, AFI, Box Office Mojo e o site oficial."
+    }
+  ],
+  "producao": [
+    {
+      "funcao": "Produção",
+      "nome": "Larry Franco",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://www.boxofficemojo.com/title/tt0096256/credits/",
+        "https://www.themoviedb.org/movie/8337-they-live/cast",
+        "https://theofficialjohncarpenter.com/they-live/"
+      ]
+    }
+  ],
+  "elenco": [
+    {
+      "personagem": "Nada",
+      "nome": "Roddy Piper",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.boxofficemojo.com/title/tt0096256/credits/",
+        "https://en.wikipedia.org/wiki/They_Live"
+      ]
+    },
+    {
+      "personagem": "Frank Armitage",
+      "nome": "Keith David",
+      "fontes": [
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://pt.wikipedia.org/wiki/Eles_Vivem",
+        "https://www.themoviedb.org/movie/8337-they-live/cast",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ]
+    },
+    {
+      "personagem": "Holly Thompson",
+      "nome": "Meg Foster",
+      "fontes": [
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://pt.wikipedia.org/wiki/Eles_Vivem",
+        "https://catalog.afi.com/Catalog/moviedetails/67101"
+      ]
+    },
+    {
+      "personagem": "Andarilho",
+      "nome": "George \"Buck\" Flower",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://www.boxofficemojo.com/title/tt0096256/credits/",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://www.themoviedb.org/movie/8337-they-live/cast"
+      ]
+    },
+    {
+      "personagem": "Gilbert",
+      "nome": "Peter Jason",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://www.themoviedb.org/movie/8337-they-live/cast"
+      ]
+    },
+    {
+      "personagem": "Pregador de rua",
+      "nome": "Raymond St. Jacques",
+      "fontes": [
+        "https://catalog.afi.com/Catalog/moviedetails/67101",
+        "https://en.wikipedia.org/wiki/They_Live",
+        "https://pt.wikipedia.org/wiki/Eles_Vivem",
+        "https://www.themoviedb.org/movie/8337-they-live/cast"
+      ]
+    }
+  ],
+  "divergencias": [
+    "Protagonista: os créditos finais dizem só 'Nada' (AFI, que anota que o nome nunca é dito no filme; Box Office Mojo). A en.wikipedia traz no código a nota de não trocar para 'John Nada'. O TMDB, a pt.wikipedia, o AdoroCinema e o JustWatch usam 'John Nada'; segundo o AFI, Carpenter usa esse nome em entrevistas, e no conto o personagem se chama George Nada. Recomendado: 'Nada'.",
+    "Personagem de Meg Foster: 'Holly Thompson' na en.wikipedia, na pt.wikipedia e na sinopse do AFI; 'Holly Thompsen' no TMDB; só 'Holly' nos créditos do filme, segundo o AFI e o Box Office Mojo. Recomendado: 'Holly Thompson'. Se o proprietário quiser só o que está nos créditos, use 'Holly'.",
+    "Personagem de Keith David: 'Frank Armitage' no TMDB, na en.wikipedia, na pt.wikipedia e na nota do AFI, que diz ser o nome completo do personagem no filme; só 'Frank' nos créditos, segundo o AFI e o Box Office Mojo. Recomendado: 'Frank Armitage'. É o mesmo pseudônimo do roteiro.",
+    "Duração: 93 no TMDB e no AdoroCinema; 94 nas demais fontes. A BBFC mede 93m 54s na cópia de cinema de 1988 e 94m 22s no relançamento de 2018. Recomendado: 94.",
+    "Roteiro: crédito em tela 'Frank Armitage' (AFI), pseudônimo de John Carpenter, segundo o site oficial, a en.wikipedia, a pt.wikipedia e o AFI. O Box Office Mojo lista também Ray Nelson como 'Writer', e o TMDB marca Nelson como 'Novel', mas a fonte é um conto (en.wikipedia, AFI).",
+    "Quadrinho 'Nada', na antologia Alien Encounters da Eclipse Comics: abril de 1986 segundo a en.wikipedia; 'a 1985 issue' segundo o AFI. Não entra na ficha.",
+    "Música: o Wikidata (P86) dá só John Carpenter; TMDB, en.wikipedia, pt.wikipedia, AFI, Box Office Mojo e o site oficial dão Carpenter e Alan Howarth.",
+    "Gêneros por fonte: TMDB 'Science Fiction, Action, Thriller'; en.wikipedia 'science fiction action horror'; pt.wikipedia 'Ação, Ficção científica, Suspense, Terror'; AFI 'Horror, Science fiction'; Box Office Mojo 'Action, Horror, Sci-Fi, Thriller'. Escolhidos: Ficção Científica, Ação e Terror, presentes em pelo menos três fontes cada. O sinal 'suspense' corresponde ao 'Thriller' do TMDB e do Box Office Mojo e ao 'Suspense' da pt.wikipedia. 'distopia' é opcional, só com a palavra-chave 'dystopia' do TMDB por apoio, e ficou de fora.",
+    "Classificação indicativa: 14 no TMDB BR, no JustWatch BR e na Apple TV BR ('A14'); 16 no Filmow, visto só num resumo de busca. Nenhum registro oficial no DOU nem no ClassInd ao alcance sem login. Valor null.",
+    "Data no Brasil: 01/12/1989 no TMDB. Na página em inglês do TMDB ela aparece como '12/01/1989', no formato mês/dia, e não é 12 de janeiro. Não foi confirmada por fonte brasileira independente.",
+    "Spoiler: a sinopse do AFI e a seção Plot da en.wikipedia revelam o desfecho e as viradas de Holly e do Andarilho. Os textos da sessão não devem usar esses fatos, e os rótulos 'Holly Thompson' e 'Andarilho' foram mantidos neutros.",
+    "Produção executiva: Shep Gordon e Andre Blay (AFI, TMDB); produção associada: Sandy King (AFI, TMDB). Ficaram de fora porque o catálogo só usa 'Produção' e o único produtor creditado é Larry Franco. Ele aparece como 'Larry J. Franco' no Wikidata e no link da pt.wikipedia, e como 'Larry Franco' no crédito do filme (AFI: 'A Larry Franco production')."
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/they-live-1988/ficha.json"
+}

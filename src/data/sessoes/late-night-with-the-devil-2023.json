@@ -1,0 +1,204 @@
+{
+  "slug": "late-night-with-the-devil-2023",
+  "titulo": "Entrevista com o Demônio",
+  "categoria": "Terror",
+  "direcaoCurta": "Cameron & Colin Cairnes",
+  "linhasTitulo": 3,
+  "sessao": {
+    "data": "2026-12-05",
+    "hora": "20:30",
+    "sala": "Sala 24",
+    "salaUrl": "https://discord.gg/B5DKdJuuWc"
+  },
+  "filmes": [
+    {
+      "titulo": "Entrevista com o Demônio",
+      "tituloOriginal": "Late Night with the Devil",
+      "ano": 2023,
+      "direcao": "Cameron Cairnes & Colin Cairnes",
+      "duracao": 93,
+      "classificacao": "16",
+      "generos": [
+        "Terror",
+        "Comédia Sombria"
+      ],
+      "trailer": {
+        "youtube": "9t6hWlwyTwg",
+        "canal": "Diamond Films Brasil",
+        "idioma": "pt-BR legendado",
+        "tituloVideo": "ENTREVISTA COM O DEMÔNIO | Trailer Oficial Legendado"
+      },
+      "tmdb": 938614,
+      "imdb": "tt14966898"
+    }
+  ],
+  "sinais": [
+    "terror",
+    "comédia",
+    "perturbador",
+    "indicação-da-semana"
+  ],
+  "texto": {
+    "manchete": "O diabo precisa de plateia",
+    "leitura": "Jack Delroy é o eterno segundo lugar da TV, e no Halloween a ambição dele ganha uma sócia: a plateia que grita para ver. A narração jura que aquilo é a fita mestra da noite, e nela você vê vermes que o replay apaga. Hipnotizada, a sua sala também entrou no negócio.",
+    "descricao": "Para sair do segundo lugar, um apresentador leva ao ar uma menina que diz ter um demônio. Terror de talk show que põe você entre os que pedem para ver.",
+    "notasHome": [
+      {
+        "rotulo": "Diário Nielsen",
+        "frase": "Jack quer medir até a fã que grita"
+      },
+      {
+        "rotulo": "Bipe atrasado",
+        "frase": "A censura só corta na repetição"
+      },
+      {
+        "rotulo": "Olho na lente",
+        "frase": "A menina encara você, e Jack a corrige"
+      }
+    ],
+    "leituras": [
+      {
+        "rotulo": "Um ponto abaixo de Carson",
+        "frase": "Doente, Madeleine ri no ar e dá ao programa o recorde, um ponto abaixo de Carson. A régua fica posta: a dor rende e não basta."
+      },
+      {
+        "rotulo": "Um ursinho chamado Papa",
+        "frase": "Christou chuta o nome Eddie, a filha diz Edmond. Ele diz papa, a mãe lembra o ursinho. O milagre sai da plateia, e a turnê é dele."
+      },
+      {
+        "rotulo": "Refletor com defeito",
+        "frase": "No ar, as luzes piscam e Jack fala em refletor velho. No intervalo em preto e branco, Leo aceita o crédito. O susto já tem dono."
+      },
+      {
+        "rotulo": "De Abraxas a abracadabra",
+        "frase": "Na piada de Haig, Abraxas é um artista de palco que precisa de plateia. O estúdio confirma: grita o nome de June até ela ceder."
+      },
+      {
+        "rotulo": "Close no relógio de bolso",
+        "frase": "Haig pede luz baixa, close no relógio e a atenção de quem está em casa. Você vê vermes saindo de Gus. O replay não mostra nenhum."
+      },
+      {
+        "rotulo": "Técnicos porta afora",
+        "frase": "Três técnicos abandonam o estúdio e Leo fala em 35, talvez 40 pontos de share. Quem trabalha ali desiste antes de quem assiste."
+      }
+    ]
+  },
+  "creditos": {
+    "principais": [
+      {
+        "funcao": "Roteiro",
+        "nome": "Cameron Cairnes & Colin Cairnes"
+      },
+      {
+        "funcao": "Fotografia",
+        "nome": "Matthew Temple"
+      },
+      {
+        "funcao": "Música",
+        "nome": "Glenn Richards & Roscoe James Irwin"
+      },
+      {
+        "funcao": "Design de produção",
+        "nome": "Otello Stolfo"
+      }
+    ],
+    "producao": [
+      {
+        "funcao": "Produção",
+        "nome": "Mat Govoni"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "Adam White"
+      },
+      {
+        "funcao": "Produção",
+        "nome": "John Molloy"
+      }
+    ],
+    "elenco": [
+      {
+        "funcao": "Jack Delroy",
+        "nome": "David Dastmalchian"
+      },
+      {
+        "funcao": "June Ross-Mitchell",
+        "nome": "Laura Gordon"
+      },
+      {
+        "funcao": "Carmichael Haig",
+        "nome": "Ian Bliss"
+      },
+      {
+        "funcao": "Christou",
+        "nome": "Fayssal Bazzi"
+      },
+      {
+        "funcao": "Lilly",
+        "nome": "Ingrid Torelli"
+      },
+      {
+        "funcao": "Gus McConnell",
+        "nome": "Rhys Auteri"
+      }
+    ]
+  },
+  "imagens": {
+    "hero": {
+      "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg"
+    },
+    "cartaz": {
+      "tmdb": "blckaGzdEJ4PdG5RxZPcb77VYFV.jpg"
+    },
+    "direcao": {
+      "tmdb": "1q6Cx3RqP2Tq7WHGr32hKqrWafm.jpg"
+    },
+    "cenas": [
+      {
+        "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg"
+      },
+      {
+        "tmdb": "1q6Cx3RqP2Tq7WHGr32hKqrWafm.jpg"
+      },
+      {
+        "tmdb": "qcPxiiTxtKM68PSQcOA8teYcQ1i.jpg"
+      },
+      {
+        "tmdb": "joVjOD0BD7eK6xCIsRw6TKijBch.jpg"
+      },
+      {
+        "tmdb": "iVwBORDrQIDfpvwbN6MoiFun0Mc.jpg"
+      },
+      {
+        "tmdb": "xexswVT2XTsfjmydXi88jnhZIkF.jpg"
+      },
+      {
+        "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg",
+        "recorte": {
+          "x": 0.6,
+          "y": 0.08,
+          "largura": 0.4,
+          "altura": 0.72
+        }
+      },
+      {
+        "tmdb": "cRaxdCA9PaVKd1MnTdawbv52WH1.jpg",
+        "recorte": {
+          "x": 0,
+          "y": 0.08,
+          "largura": 0.42,
+          "altura": 0.75
+        }
+      },
+      {
+        "tmdb": "joVjOD0BD7eK6xCIsRw6TKijBch.jpg",
+        "recorte": {
+          "x": 0.44,
+          "y": 0,
+          "largura": 0.48,
+          "altura": 0.86
+        }
+      }
+    ]
+  }
+}

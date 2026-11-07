@@ -1,0 +1,242 @@
+{
+  "slug": "late-night-with-the-devil-2023",
+  "tituloBrasil": {
+    "valor": "Entrevista com o Demônio",
+    "confere": true,
+    "fontes": [
+      "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-1.083-de-4-de-junho-de-2024-563694657",
+      "https://www.themoviedb.org/movie/938614-late-night-with-the-devil?language=pt-BR",
+      "https://www.adorocinema.com/filmes/filme-313588/",
+      "https://rollingstone.com.br/cinema/entrevista-com-o-demonio-estreia-nos-cinemas-brasileiros/",
+      "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil"
+    ],
+    "nota": "Título de lançamento no Brasil confirmado no registro oficial: a Portaria CPCIND/SENAJUS/MJSP nº 1.083/2024 traz 'Título no Brasil: Entrevista com o Demônio', distribuidor Diamond Films do Brasil. Confirmado também por TMDB pt-BR, AdoroCinema, Rolling Stone Brasil e Wikipedia pt (predefinição BRPT2). Variações: Portugal 'Conversas com o Diabo' (Wikipedia pt, TMDB títulos PT); o TMDB lista ainda um título alternativo BR 'Tarde Da Noite Com o Demônio' (tradução literal, sem uso comercial encontrado). 24 caracteres: cabe no ingresso (limite 32), não precisa de tituloCurto."
+  },
+  "tituloOriginal": "Late Night with the Devil",
+  "tmdb": 938614,
+  "imdb": "tt14966898",
+  "wikipedia": "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+  "ano": {
+    "recomendado": 2023,
+    "estreiaMundial": "2023-03-10",
+    "ondeEstreou": "South by Southwest Film Festival (SXSW), seção Midnighters, Austin, Texas, EUA",
+    "lancamentoComercial": "Estados Unidos: 22/03/2024 nos cinemas (IFC Films, 1.034 salas), digital na Shudder/AMC+ em 19/04/2024. Austrália, país-base da produção: 11/04/2024 nos cinemas. Reino Unido: 22/03/2024. Irlanda: 19/03/2024, que é a data primária usada pelo TMDB.",
+    "lancamentoBrasil": "04/07/2024 nos cinemas, pela Diamond Films (TMDB BR, AdoroCinema, Rolling Stone Brasil). A estreia estava marcada para 26/09/2024 e foi antecipada (Rolling Stone Brasil, 21/04/2024). A Wikipedia pt diz 22/08/2024, sem confirmação em outra fonte.",
+    "anoTmdb": 2024,
+    "nota": "Critério do catálogo: o ano exibido é o da primeira exibição pública. A estreia mundial foi no SXSW em 10/03/2023 (Wikipedia en citando Variety e Deadline; TMDB, aba de lançamentos EUA, 'Premiere South by Southwest Film Festival 03/10/2023'; Wikidata P577 2023-03-10), seguida de vários festivais em 2023 (Overlook, Sydney, Melbourne, BFI London, Chicago e outros). O lançamento comercial foi só em 2024. Pelo mesmo critério de Aquilo que Você Deseja (Fantasia 2023, lançamento 2024) e Obsessão (TIFF 2025, lançamento 2026), o ano é 2023. Concordam com 2023: Wikipedia en ('2023 film'), Wikipedia pt (ano 2023), o registro oficial brasileiro (Portaria 1.083/2024: 'Austrália, Emirados Árabes Unidos, Estados Unidos - 2023'), BBFC ('Production year 2023') e AdoroCinema ('Filme 2023'). Divergência: o TMDB exibe 2024 por causa da data primária de 19/03/2024. Recomendação: 2023, coerente com o slug late-night-with-the-devil-2023.",
+    "fontes": [
+      "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+      "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/releases",
+      "https://www.wikidata.org/wiki/Q119718080",
+      "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil",
+      "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-1.083-de-4-de-junho-de-2024-563694657",
+      "https://www.bbfc.co.uk/release/late-night-with-the-devil-q29sbgvjdglvbjpwwc0xmde5nzqx",
+      "https://www.adorocinema.com/filmes/filme-313588/",
+      "https://www.boxofficemojo.com/title/tt14966898/credits/",
+      "https://rollingstone.com.br/cinema/entrevista-com-o-demonio-estreia-nos-cinemas-brasileiros/",
+      "https://rollingstone.com.br/cinema/quando-estreia-late-night-with-the-devil-no-brasil/"
+    ]
+  },
+  "direcao": {
+    "valor": "Cameron Cairnes & Colin Cairnes",
+    "fontes": [
+      "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+      "https://www.boxofficemojo.com/title/tt14966898/credits/",
+      "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-1.083-de-4-de-junho-de-2024-563694657",
+      "https://image.tmdb.org/t/p/original/2f27lHh66ilyp0MLy1NXFtpDJv5.jpg",
+      "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+      "https://www.bbfc.co.uk/release/late-night-with-the-devil-q29sbgvjdglvbjpwwc0xmde5nzqx"
+    ]
+  },
+  "duracao": {
+    "recomendado": 93,
+    "porFonte": [
+      { "fonte": "TMDB (1h 33m)", "minutos": 93, "url": "https://www.themoviedb.org/movie/938614-late-night-with-the-devil" },
+      { "fonte": "Box Office Mojo (1 hr 33 min)", "minutos": 93, "url": "https://www.boxofficemojo.com/title/tt14966898/credits/" },
+      { "fonte": "BBFC, versão de cinema classificada em 05/03/2024 (approx. 93m)", "minutos": 93, "url": "https://www.bbfc.co.uk/release/late-night-with-the-devil-q29sbgvjdglvbjpwwc0xmde5nzqx" },
+      { "fonte": "Wikipedia en (cita a BBFC)", "minutos": 93, "url": "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil" },
+      { "fonte": "Wikipedia pt", "minutos": 93, "url": "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil" },
+      { "fonte": "Wikidata P2047", "minutos": 92, "url": "https://www.wikidata.org/wiki/Q119718080" },
+      { "fonte": "ACMI/MIFF 2023, duração da sessão de festival (1 hour 32 minutes)", "minutos": 92, "url": "https://www.acmi.net.au/whats-on/miff-2023/late-night-with-the-devil" },
+      { "fonte": "AdoroCinema (1h 29min)", "minutos": 89, "url": "https://www.adorocinema.com/filmes/filme-313588/" }
+    ],
+    "nota": "Recomendo 93: TMDB, Box Office Mojo, BBFC (classificação da cópia de cinema do lançamento de 2024) e as duas Wikipedias concordam. Os 92 do ACMI medem a sessão de festival de 2023 (o corte do SXSW não tinha as três imagens feitas com IA, que entraram depois, segundo a Wikipedia en), e o Wikidata também dá 92. Os 89 do AdoroCinema destoam de todas as outras fontes. A busca na web atribuiu 100 min à Screen Guide da Screen Australia, mas a página respondeu 403 e não foi conferida."
+  },
+  "classificacao": {
+    "valor": "16",
+    "detalhe": "Não recomendado para menores de 16 anos. Registro oficial: Portaria CPCIND/SENAJUS/MJSP nº 1.083, de 4 de junho de 2024, DOU de 05/06/2024, edição 106, seção 1, página 64. Título no Brasil: Entrevista com o Demônio (Austrália, Emirados Árabes Unidos, Estados Unidos - 2023). Categoria: longa-metragem. Diretores: Cameron Cairnes e Colin Cairnes. Distribuidor: Diamond Films do Brasil. A distribuidora pediu 12 e o Ministério atribuiu 16, com recomendação de exibição a partir das 22h na TV aberta. Contém violência extrema, linguagem imprópria e drogas lícitas. Processo 08017.001591/2024-41. Encontrado na busca textual do DOU (in.gov.br) pelo título brasileiro.",
+    "fonte": "https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-1.083-de-4-de-junho-de-2024-563694657",
+    "outrasEncontradas": [
+      "Trailer: 14, pela Portaria CPCIND/SENAJUS/MJSP nº 965, de 7 de maio de 2024, DOU de 08/05/2024, edição 88, seção 1, página 69 (título 'Entrevista com o Demônio - Trailer'; contém medo e violência). Vale só para o trailer: https://www.in.gov.br/web/dou/-/portaria-cpcind/senajus/mjsp-n-965-de-7-de-maio-de-2024-558535488",
+      "TMDB BR: 16 (indício secundário, coincide com o registro oficial): https://www.themoviedb.org/movie/938614-late-night-with-the-devil/releases",
+      "AdoroCinema: 'Não recomendado para menos de 16 anos' (indício secundário): https://www.adorocinema.com/filmes/filme-313588/",
+      "Fora do Brasil, não aplicáveis: EUA R (Box Office Mojo, TMDB), Reino Unido 15 (BBFC), Austrália MA 15+ (TMDB, ACMI)"
+    ]
+  },
+  "generos": ["Terror", "Comédia Sombria"],
+  "categoria": "Terror",
+  "sinais": ["terror", "comédia", "perturbador", "indicação-da-semana"],
+  "pais": "Austrália, Estados Unidos e Emirados Árabes Unidos (coprodução; rodado em Melbourne)",
+  "idiomaOriginal": "Inglês",
+  "principais": [
+    {
+      "funcao": "Roteiro",
+      "nome": "Cameron Cairnes & Colin Cairnes",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/2f27lHh66ilyp0MLy1NXFtpDJv5.jpg"
+      ],
+      "nota": "Roteiro original, sem obra de origem. 31 caracteres (limite 37). Os cartazes creditam 'Written & directed by'."
+    },
+    {
+      "funcao": "Fotografia",
+      "nome": "Matthew Temple",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/1AmOmztrHmIvieosgBRHz8oNHeJ.jpg"
+      ]
+    },
+    {
+      "funcao": "Música",
+      "nome": "Glenn Richards & Roscoe James Irwin",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/1AmOmztrHmIvieosgBRHz8oNHeJ.jpg"
+      ],
+      "nota": "35 caracteres (limite 37). No cartaz de cinema, Glenn Richards assina a trilha original ('original score') e Roscoe James Irwin a música do programa Night Owls ('night owls music composed & arranged by'). O cartaz da Shudder junta os dois em 'Music by Roscoe James Irwin and Glenn Richards'. A ordem segue o TMDB e a Wikipedia."
+    },
+    {
+      "funcao": "Montagem",
+      "nome": "Cameron Cairnes & Colin Cairnes",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/2f27lHh66ilyp0MLy1NXFtpDJv5.jpg"
+      ],
+      "nota": "Os irmãos também montaram o filme. Se o proprietário não quiser repetir os nomes do Roteiro, a alternativa confirmada é 'Design de produção: Otello Stolfo' (Box Office Mojo 'Production Designer', cartaz de cinema 'production design', Wikipedia pt 'direção de arte')."
+    }
+  ],
+  "producao": [
+    {
+      "funcao": "Produção",
+      "nome": "Mat Govoni",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/1AmOmztrHmIvieosgBRHz8oNHeJ.jpg"
+      ]
+    },
+    {
+      "funcao": "Produção",
+      "nome": "Adam White",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/1AmOmztrHmIvieosgBRHz8oNHeJ.jpg"
+      ]
+    },
+    {
+      "funcao": "Produção",
+      "nome": "John Molloy",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://image.tmdb.org/t/p/original/1AmOmztrHmIvieosgBRHz8oNHeJ.jpg"
+      ]
+    }
+  ],
+  "elenco": [
+    {
+      "personagem": "Jack Delroy",
+      "nome": "David Dastmalchian",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ]
+    },
+    {
+      "personagem": "June Ross-Mitchell",
+      "nome": "Laura Gordon",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ]
+    },
+    {
+      "personagem": "Carmichael Haig",
+      "nome": "Ian Bliss",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ]
+    },
+    {
+      "personagem": "Christou",
+      "nome": "Fayssal Bazzi",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://www.boxofficemojo.com/title/tt14966898/credits/",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ]
+    },
+    {
+      "personagem": "Lilly D'Abo",
+      "nome": "Ingrid Torelli",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://www.adorocinema.com/filmes/filme-313588/"
+      ]
+    },
+    {
+      "personagem": "Gus McConnell",
+      "nome": "Rhys Auteri",
+      "fontes": [
+        "https://www.themoviedb.org/movie/938614-late-night-with-the-devil/cast",
+        "https://en.wikipedia.org/wiki/Late_Night_with_the_Devil",
+        "https://pt.wikipedia.org/wiki/Late_Night_with_the_Devil"
+      ]
+    }
+  ],
+  "divergencias": [
+    "Ano: o TMDB exibe 2024, pela data primária de 19/03/2024 (Irlanda). Wikipedia en e pt, Wikidata (estreia em 10/03/2023), o registro oficial brasileiro (Portaria 1.083/2024, '2023'), a BBFC ('Production year 2023') e o AdoroCinema dão 2023. Pelo critério do catálogo (primeira exibição pública, SXSW em 10/03/2023), vale 2023.",
+    "Lançamento no Brasil: 04/07/2024 segundo TMDB BR, AdoroCinema e Rolling Stone Brasil (matéria de 04/07/2024). A Wikipedia pt diz 22/08/2024, citando o CinePOP, e nenhuma outra fonte confirma essa data. A Rolling Stone Brasil (21/04/2024) informa que a estreia, marcada para 26/09/2024, foi antecipada para 4 de julho.",
+    "Duração: 93 min em TMDB, Box Office Mojo, BBFC e Wikipedia en e pt; 92 no Wikidata e na sessão do MIFF 2023 (ACMI); 89 no AdoroCinema. A Screen Australia, com 100 min segundo um resumo de busca, não foi conferida (403).",
+    "País: o TMDB lista só Estados Unidos. Wikipedia en (citando o Chicago International Film Festival), Wikidata e o registro oficial brasileiro dão Austrália, Emirados Árabes Unidos e Estados Unidos. A Wikipedia pt dá Austrália e Emirados Árabes Unidos; AdoroCinema e ACMI, só Austrália. O filme foi rodado em Melbourne (Wikipedia en, citando Deadline).",
+    "Ordem dos irmãos Cairnes: o crédito oficial varia. Cameron vem primeiro no TMDB, na portaria brasileira, no Box Office Mojo (direção) e no cartaz ilustrado '© 2024 Shudder' ('Written & directed by Cameron Cairnes and Colin Cairnes'). Colin vem primeiro no cartaz de cinema com selo R e logos de IFC Films e Shudder ('written and directed by Colin Cairnes & Cameron Cairnes'), na Wikipedia en e pt, na BBFC, no ACMI e no Box Office Mojo (roteiro). Recomendo Cameron primeiro, como no TMDB e no registro brasileiro, e na mesma ordem em direção, roteiro e montagem.",
+    "Ordem do elenco: o cartaz da Shudder põe Rhys Auteri antes de Ingrid Torelli; TMDB e Wikipedia en e pt põem Torelli antes. Os seis nomes principais são os mesmos em todas as fontes, e Georgina Haig e Steve Mouzakis vêm como 'co-starring'.",
+    "June: 'June Ross-Mitchell' no TMDB e no Box Office Mojo; 'Dr. June Ross-Mitchell' na Wikipedia en; 'Dra. June Ross-Mitchell' na Wikipedia pt. Recomendo sem o título.",
+    "Lilly: 'Lilly D'Abo' no TMDB, na Wikipedia pt e na sinopse do AdoroCinema; só 'Lilly' na Wikipedia en. Recomendo 'Lilly D'Abo', com apóstrofo reto como no TMDB (o catálogo ainda não tem nome com apóstrofo).",
+    "Madeleine, fora dos seis do elenco: 'Madeleine Piper' no TMDB e na Wikipedia en; 'Madeleine Delroy' na Wikipedia pt.",
+    "Música: a ordem e a função variam. O cartaz de cinema separa 'original score Glenn Richards' de 'night owls music composed & arranged by Roscoe James Irwin'; o cartaz da Shudder e o Box Office Mojo põem Irwin primeiro; TMDB e Wikipedia põem Richards primeiro.",
+    "Produtores: são seis com crédito de 'Producer' confirmado (TMDB, Box Office Mojo, Wikipedia en e pt, cartazes): Mat Govoni, Adam White, John Molloy, Roy Lee, Steven Schneider e Derek Dauchy. O cartaz de cinema os lista nessa ordem; o da Shudder, em ordem alfabética. Recomendo os três primeiros do cartaz de cinema, como nas outras fichas, que usam no máximo três; se couber um quarto, é Roy Lee. Produtores executivos, que não entram: Ben Ross, Rami Yasin, David Dastmalchian, Joel Anderson e Julie Ryan (cartaz de cinema e TMDB), mais 'Darius Family' só no TMDB. O Wikidata põe Dastmalchian como produtor, o que o cartaz desmente: ele é produtor executivo.",
+    "Título original no registro brasileiro: 'Late Night With The Devil' na portaria do filme e 'Late Night Withe The Devil' (erro de digitação) na do trailer. O TMDB e as Wikipedias usam 'Late Night with the Devil'.",
+    "Classificação: o filme é 16 (Portaria 1.083/2024) e o trailer é 14 (Portaria 965/2024). Só o 16 vale para o campo classificacao.",
+    "Gênero: TMDB e AdoroCinema dão só Terror. A BBFC lista Comedy, Fantasy e Horror e resume o filme como 'Darkly comic threat builds to a disturbing, bloody climax in this imaginative found-footage horror film'. A Wikipedia pt dá found footage e terror sobrenatural."
+  ],
+  "observacoes": [
+    "direcaoCurta: 'Cameron Cairnes & Colin Cairnes' tem 31 caracteres e o limite de direcaoCurta (menu, ingresso) é 26, então a sessão precisa do campo. Sugestão: 'Cameron & Colin Cairnes' (23), no formato de 'Bettinelli-Olpin & Gillett' da sessão dupla.",
+    "Narrador: Michael Ironside (voz), segundo TMDB e Wikipedia en. Não entra entre os seis.",
+    "Estreia na TV aberta: a portaria recomenda exibição a partir das 22h. Dado oficial, sem uso no catálogo.",
+    "Imagens usadas só para ler créditos: os cartazes https://image.tmdb.org/t/p/original/1AmOmztrHmIvieosgBRHz8oNHeJ.jpg (cinema; selo R, logos Image Nation, IFC Films, VicScreen, Shudder, Good Fiend, Maslow) e https://image.tmdb.org/t/p/original/2f27lHh66ilyp0MLy1NXFtpDJv5.jpg (ilustrado, '© 2024 Shudder'). Recortes em scratchpad/sessoes-nov/late-night-with-the-devil-2023/img/.",
+    "Não consultados ou bloqueados: IMDb (403 nas rodadas anteriores, não tentado), Screen Australia (403), crítica da Variety (paywall tollbit), página da IFC Films (redireciona para outra empresa), AFI Catalog (não cobre 2023). A consulta pública do ClassInd (classind.mj.gov.br) exige login gov.br; a portaria foi achada pela busca do DOU.",
+    "Datas de festivais de 2023 que o TMDB registra: SXSW 10/03, Overlook 30/03, Bucheon 01/07, Sydney 09/06, NZIFF 29/07, Melbourne 04/08, BFI London 09/10, Chicago 15/10, Adelaide 26/10, Brisbane 31/10, Stockholm 11/11, PIFFF 09/12. Também a Wikipedia confirma o SXSW em 10/03/2023 e o Sydney Film Festival de 9 a 15/06/2023."
+  ],
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/late-night-with-the-devil-2023/ficha.json"
+}

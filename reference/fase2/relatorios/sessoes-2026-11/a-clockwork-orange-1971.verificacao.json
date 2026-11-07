@@ -1,0 +1,142 @@
+{
+  "slug": "a-clockwork-orange-1971",
+  "arquivo": "C:/Users/Usuario/AppData/Local/Temp/claude/ae7fc58918f33cc3/e585a597-e82f-4554-ba24-32f3278ddb38/scratchpad/sessoes-nov/a-clockwork-orange-1971/verificacao.json",
+  "anoVeredito": "1971 confirmado. Primeira exibição pública em 19/12/1971: Wikipedia en ('premiered in New York City on 19 December 1971'), AFI ('Los Angeles and New York openings: 19 Dec 1971') e BFI ('US release 19 December 1971'). As datas de 1972 (Reino Unido em 13/01/1972 segundo Wikipedia e BFI, que registra a pré-estreia britânica em 12/01/1972; circuito amplo nos EUA em 02/02/1972 segundo a Wikipedia) e o lançamento brasileiro de 1978 não mudam o ano. O TMDB pt-BR também titula 'Laranja Mecânica (1971)'.",
+  "classificacaoVeredito": "Manter null. Também não achei registro oficial. A busca do DOU (in.gov.br/consulta/-/buscar/dou) recusou a conexão por curl (HTTP 000) e não foi forçada; o portal do ClassInd (classindportal.mj.gov.br/consulta-filmes) devolve só o esqueleto de um aplicativo de navegador (200, 7,7 KB); a busca na web não achou portaria nem despacho com o título. Os valores que circulam são indícios: 18 no TMDB para o lançamento de 04/09/1978 (censura federal, antes do ClassInd); 16 no TMDB para um relançamento de 22/08/2014 'com cortes'; 16 na Omelete para as sessões no CineSESC, num texto que cita a Mostra de 2011, sem portaria. Nenhum vale como registro do ClassInd ou do DOU.",
+  "fichaCorrecoes": [
+    {
+      "campo": "divergencias (Chefe da guarda, Michael Bates)",
+      "atual": "\"'Chief guard' vira Chefe da guarda: só a Wikipedia acrescenta o sobrenome Barnes, ausente no AFI e no BFI.\"",
+      "correto": "O sobrenome é dito no próprio filme: ao entregar Alex no Centro Ludovico, o guarda se apresenta 'I'm Chief Officer Barnes' (transcrição). O AFI e o BFI só não o põem no crédito. Manter 'Chefe da guarda' na ficha está certo; corrigir apenas a justificativa.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "gravidade": "detalhe"
+    },
+    {
+      "campo": "divergencias (personagem de Miriam Karlin)",
+      "atual": "\"Sobrenome não confirmado; usar a descrição Mulher dos gatos.\"",
+      "correto": "O sobrenome está no diálogo: ao telefone com a polícia ela diz 'It's Miss Weathers at Woodmere Health Farm' (transcrição); o Filmsite também a chama de Miss Weathers. O 'Mrs. Webber' do AFI vem da sinopse/colchete do AFI e não bate com o filme. Se ela entrar no elenco, 'Miss Weathers (a Mulher dos gatos)' ou 'Mulher dos gatos' servem; o crédito de tela é 'Catlady'.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc2.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041"
+      ],
+      "gravidade": "detalhe"
+    }
+  ],
+  "fichaConfirmados": [
+    "tituloBrasil 'Laranja Mecânica': título da página do TMDB em pt-BR ('Laranja Mecânica (1971)') e campo nome da pt.wikipedia (Laranja Mecânica (filme)). Fontes: https://www.themoviedb.org/movie/185-a-clockwork-orange?language=pt-BR ; https://pt.wikipedia.org/wiki/Laranja_Mec%C3%A2nica_(filme)",
+    "tituloOriginal 'A Clockwork Orange': AFI, BFI e campo título-or da pt.wikipedia.",
+    "ano 1971 (ver anoVeredito). Fontes: https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film) ; https://catalog.afi.com/Catalog/moviedetails/54041 ; https://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150027057",
+    "lancamentoBrasil 1978: Wikipedia en ('banned under the military dictatorship until 1978', com tarjas pretas nas cenas de nudez, citando Cinem(ação)); TMDB Brasil: 04/09/1978, 18, 'Lançamento 136 m.', e 22/08/2014, 16, 'Relançamento com cortes'. Fontes: https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film) ; https://www.themoviedb.org/movie/185-a-clockwork-orange/releases",
+    "direcao Stanley Kubrick: AFI ('Dir'), BFI, Wikipedia.",
+    "duracao 136: BBFC 'Approx. running minutes 136m', submissão de 1971 com 136m 24s; TMDB pt-BR '2h 16m'; Wikipedia (136). O AFI dá '135 or 137'. Fontes: https://www.bbfc.co.uk/release/a-clockwork-orange-q29sbgvjdglvbjpwwc0yodm5ode ; https://www.themoviedb.org/movie/185-a-clockwork-orange?language=pt-BR ; https://catalog.afi.com/Catalog/moviedetails/54041",
+    "Roteiro Stanley Kubrick: AFI ('Writer: Stanley Kubrick, Scr'); o roteiro de filmagem de 1970 também traz 'Screenplay by Stanley Kubrick'. Burgess é o autor do romance, não do roteiro.",
+    "Obra original Anthony Burgess: BFI ('Original story: Burgess, Anthony (novel)') e AFI.",
+    "Fotografia John Alcott: AFI 'Lighting cam'.",
+    "Música Wendy Carlos: o AFI registra o crédito de 1971 como 'Walter Carlos, Electronic mus comp and realised by'. Exibir Wendy Carlos, com a nota do nome de crédito, está correto.",
+    "Produção Stanley Kubrick: AFI 'Prod'. Max L. Raab e Si Litvinoff são 'Exec prod' e Bernard Williams é 'Assoc prod' (AFI). Deixá-los fora da função 'Produção' está correto.",
+    "Elenco, os seis pares conferidos no AFI: Malcolm McDowell, Alex [DeLarge]; Patrick Magee, Mr. [Frank] Alexander; Michael Bates, Chief guard; Warren Clarke, Dim; Carl Duering, Dr. Brodsky; Godfrey Quigley, Prison chaplain. Os nomes entre colchetes do AFI são ditos no filme: 'Alexander DeLarge, sir' na admissão do presídio e 'Frank, I think this young man needs some help', 'Certainly, Frank' e 'Well done, Frank' na casa HOME (transcrição). Logo, Alex DeLarge e Frank Alexander estão confirmados.",
+    "Alternativas citadas nas divergências conferem no AFI: Anthony Sharp, Minister [of the Interior]; Adrienne Corri, Mrs. Alexander; Aubrey Morris, Deltoid; Madge Ryan, Dr. Branom; Miriam Karlin, Catlady. Os créditos de abertura trazem McDowell e Magee e depois 'And featuring in alphabetical order' (AFI).",
+    "classificacao null mantido (ver classificacaoVeredito).",
+    "pais Reino Unido e Estados Unidos: AFI ('Countries: United Kingdom, United States'), BFI ('Production country USA, United Kingdom').",
+    "idiomaOriginal Inglês: AFI ('Language: English').",
+    "generos: TMDB pt-BR 'Ficção científica e Crime'; BFI 'Crime'; Wikipedia en, 'dystopian crime film'. O AFI usa 'Drama, Fantasy', base que a ficha não cita; a recomendação Ficção Científica, Crime e Distopia continua defensável."
+  ],
+  "dossieRefutados": [
+    {
+      "id": "f17",
+      "problema": "Atribuição errada e crédito do hino mal apoiado. (1) O dossiê diz que o capelão obriga os presos a cantar ('Sing up, damn you!'). Nenhuma fonte dá essa fala ao capelão: o roteiro de filmagem de set. 1970 a atribui ao CHIEF GUARD ('Sing up damn you. Louder, sing up.' e 'Come on, sing up, damn you.'); a transcrição do filme não nomeia quem fala; o Filmsite usa voz passiva ('The prisoners are forced to... sing'). (2) 'Nos créditos, o hino aparece como Wayward Child, com letra de Fanny Crosby' tem uma única fonte, a lista musical do AFI ('Wayward Child, words by Fanny Crosby, music by Anthony J. Showalter'). Essa mesma lista inclui Scheherazade, que segundo a Wikipedia não está nos créditos finais, então ela não prova o que aparece na tela. O texto 'I was a wandering sheep' é de Horatius Bonar (1843), segundo o Hymnary; 'I was a wayward child' é verso de uma das estrofes. O núcleo da cena está confirmado: dois anos depois, o capelão ameaça com o inferno os pecadores impenitentes; os presos riem, arrotam e soltam gases; o hino 258 tem os versos 'I was a wandering sheep' e 'I would not be controlled'; Alex opera o retroprojetor da letra.",
+      "correcao": "Na capela, o capelão (Godfrey Quigley) ameaça os presos com um inferno onde os pecadores impenitentes gritam em agonia sem fim, e os presos riem, arrotam e soltam gases. Depois todos cantam o hino 258 ('I was a wandering sheep... I would not be controlled'), sob gritos de 'Sing up, damn you!', que o roteiro de filmagem dá ao guarda-chefe. Não atribuir essa ordem ao capelão nem a letra a Fanny Crosby; se citar o crédito, dizer 'creditado no AFI como Wayward Child'. A tese 'o defensor da escolha também governa pelo medo' se sustenta só pelo sermão do inferno. Ajustar também a pista de tese que diz que o capelão obriga os presos a cantar 'I would not be controlled'.",
+      "fontes": [
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc2.html",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)",
+        "https://hymnary.org/text/i_was_a_wandering_sheep"
+      ]
+    },
+    {
+      "id": "f27",
+      "problema": "Atribuição e lugar errados: 'nos bastidores, alguém diz If the polls are right, we have nothing to lose'. Quem diz é o próprio Ministro, já sentado na plateia depois do discurso, respondendo ao assessor que lhe sussurra 'Our necks are out a long way on this, Minister'. Na transcrição a fala do assessor termina com o vocativo 'Minister', e o roteiro de filmagem marca 'He returns to his seat and leans close to his Junior Minister', com a resposta 'I have complete faith in Brodsky. If the polls are right, we have nothing to lose' dada ao MINISTER. O resto do fato está confirmado: discurso com a promessa de 'law and order'; ator que insulta Alex, lhe dá tapas e o faz lamber o sapato; mulher de seios nus; 'like a detective who'd been watching around the corner'; reverências do ator e da atriz sob aplausos.",
+      "correcao": "De volta à cadeira, o Ministro ouve do assessor 'Our necks are out a long way on this, Minister' e responde: 'I have complete faith in Brodsky. If the polls are right, we have nothing to lose'.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html"
+      ]
+    },
+    {
+      "id": "f37",
+      "problema": "Ordem e iniciativa da fala inexatas: 'Pergunta como chamá-lo (Alex, if I may call you Alex) e se apresenta: My name is Frederick'. O Ministro não se apresenta por conta própria. Ele pede para chamá-lo de Alex, Alex responde 'Certainly' e pergunta 'What do they call you at home?', e só então vem 'My name is Frederick'. Os dois textos concordam (transcrição; roteiro de filmagem: ALEX 'Certainly, sir. What do they call you at home?' / MINISTER 'My name is Frederick'). O resto está confirmado: comida na boca, 'recomendações erradas', o escritor 'subversivo' posto fora de circulação, emprego e salário, 'We always help our friends', 'public's verdict', 'As an unmuddied lake, Fred' e a frase de Kubrick a Ciment sobre o 'spoon-fed child of a corrupt, totalitarian society'.",
+      "correcao": "O Ministro pede para chamá-lo de Alex ('if I may call you Alex'); Alex aceita e devolve a pergunta ('What do they call you at home?'); o Ministro responde 'My name is Frederick', e Alex sela o acordo com 'As an unmuddied lake, Fred', a resposta que deu a Deltoid na Parte 1. É Alex quem puxa a intimidade.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.filmsite.org/cloc3.html",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html"
+      ]
+    },
+    {
+      "id": "f30",
+      "problema": "Revela o final sem estar marcado como spoilerDoFinal. Dizer que o escritor da casa HOME volta a cruzar com Alex 'agora em posição de força' antecipa a vingança dele: a droga, a tortura com a 9ª e o salto, tudo depois do banho, que o próprio finalNaoRevelar do dossiê põe como spoiler. 'As frases de Deltoid também retornam' antecipa a penúltima cena: o Ministro repete o 'Do I make myself clear?' de Deltoid e Alex responde 'As an unmuddied lake, Fred'. O fato ainda conta que Dim e Georgie voltam fortes, que o finalNaoRevelar pede para não contar 'se possível'; o f32 também conta. O conteúdo está correto: estrutura em três partes, retorno do mendigo, de Dim e Georgie e do escritor, frase de Kubrick a Ciment ('deliberately heavy use of coincidence and plot symmetry'), Pete que não reaparece.",
+      "correcao": "Marcar spoilerDoFinal: true, ou reescrever sem o escritor 'em posição de força' e sem o retorno das frases de Deltoid. Por exemplo: 'Na terceira parte, Alex volta a cruzar com quem agrediu na primeira; Kubrick disse a Ciment que o romance o atraiu pelo uso deliberado de coincidência e simetria de enredo.'",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc3.html",
+        "http://www.visual-memory.co.uk/amk/doc/interview.aco.html"
+      ]
+    },
+    {
+      "id": "f18",
+      "problema": "Núcleo confirmado; a nota de fonte está errada. '(só uma fonte registra a música)' não procede: a Wikipedia (artigo da trilha) diz que dois trechos de Scheherazade tocam nos devaneios bíblicos e o AFI lista 'selections from Scheherazade by Nikolay Rimsky-Korsakov' entre as músicas. 'Que não aparecem nos créditos' é o que diz a Wikipedia ('nor is it listed in the closing credits'); o AFI a inclui na sua lista, que não é só transcrição da tela. A cena confere: fantasia de soldado romano chicoteando Cristo ('Move on there!'), as servas seminuas que lhe dão uvas, a narração sobre preferir 'fighting and the old in-out' à pregação, o 'Big Book'.",
+      "correcao": "Trocar a nota por: 'A trilha dessas fantasias usa trechos de Scheherazade, de Rimsky-Korsakov, que não estão no disco da trilha e, segundo a Wikipedia, não constam dos créditos finais (o AFI a inclui na sua lista de músicas).'",
+      "fontes": [
+        "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(soundtrack)",
+        "https://catalog.afi.com/Catalog/moviedetails/54041",
+        "https://www.filmsite.org/cloc2.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange"
+      ]
+    },
+    {
+      "id": "f22",
+      "problema": "Núcleo confirmado; duas imprecisões. (1) 'Ninguém lhe explica o método antes de começar' exagera: a dra. Branom diz 'We're going to show you some films' e, à pergunta 'like going to the pictures?', responde 'Something like that'. O que ela esconde é a função da injeção ('Vitamins will it be, then?' / 'Something like that') e o mecanismo do condicionamento. (2) A citação da narração varia entre as fontes: transcrição 'If I was to be a free malchick again in a fortnight'; Filmsite 'a free young malchick again in a fortnight's time'. E ela vem na sala de projeção, já com camisa de força e grampos, não no momento da injeção. Confirmados: 'You're a very lucky boy to have been chosen', a injeção, Madge Ryan como dra. Branom.",
+      "correcao": "A dra. Branom diz que ele é 'a very lucky boy', aplica a injeção e, quando ele pergunta se são vitaminas, responde 'Something like that'; sobre o tratamento, só diz que vão lhe mostrar filmes. Já amarrado na sala de projeção, Alex narra que aguentaria muita coisa para ser um 'free malchick again in a fortnight'. Citar a fala sem 'young' ou parafrasear.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc2.html"
+      ]
+    },
+    {
+      "id": "f45",
+      "problema": "Detalhe de atribuição: 'Georgie, policial, o recebe com Evidence of the old glazzies'. Quem recebe Alex é Dim ('Well, well, well... If it isn't little Alex. Long time no viddy, droog. How goes?'). 'Evidence of the old glazzies' é a resposta de Georgie ao 'I don't believe it' de Alex (roteiro de filmagem: DIM para a saudação, GEORGIE para 'Evidence of the old glazzies. Nothing up our sleeves...'; Filmsite também dá o trecho seguinte a Georgie). O resto confirma: close com o olhar para a lente e o cílio num olho só, abotoaduras e suspensórios com globo ocular (Filmsite), 'Viddy well', 'I'm blind', pálpebras presas no Ludovico. Atenção: este trecho revela a virada de Dim e Georgie como policiais.",
+      "correcao": "...e, quando ele não acredita no que vê, Georgie, agora policial, responde: 'Evidence of the old glazzies'.",
+      "fontes": [
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html",
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc.html",
+        "https://www.filmsite.org/cloc3.html"
+      ]
+    },
+    {
+      "id": "f28",
+      "problema": "Só a nota de fonte está errada: '(só na transcrição de legendas)'. A fala do Ministro sobre 'the false smile, the rubbed hands of hypocrisy' também está no Filmsite e no roteiro de filmagem de 1970. Todo o resto confirma: protesto do capelão ('a creature capable of moral choice'), 'We're not concerned with motives, with the higher ethics', 'true Christian, ready to turn the other cheek', 'The point is that it works!', tudo dito pelo Ministro.",
+      "correcao": "Retirar '(só na transcrição de legendas)'; citar a transcrição, o Filmsite e o roteiro.",
+      "fontes": [
+        "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-clockwork-orange",
+        "https://www.filmsite.org/cloc2.html",
+        "https://www.archiviokubrick.it/opere/film/am/script/aco-script.html"
+      ]
+    }
+  ],
+  "dossieConfirmados": [
+    "f01", "f02", "f03", "f04", "f05", "f06", "f07", "f08", "f09", "f10",
+    "f11", "f12", "f13", "f14", "f15", "f16", "f19", "f20", "f21", "f23",
+    "f24", "f25", "f26", "f29", "f31", "f32", "f33", "f34", "f35", "f36",
+    "f38", "f39", "f40", "f41", "f42", "f43", "f44"
+  ]
+}

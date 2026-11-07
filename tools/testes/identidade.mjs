@@ -31,8 +31,9 @@ const SESSAO = '/sessoes/bugonia-2025/';
 const DUPLA = '/sessoes/ready-or-not-double-feature-2026/';
 
 const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
-// Dois dias depois da última sessão cadastrada: o aviso aparece, e o teste não muda de resposta quando entrar uma sessão nova
-const ULTIMA = fs.readdirSync(path.join(RAIZ, 'src/data/sessoes')).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => JSON.parse(fs.readFileSync(path.join(RAIZ, 'src/data/sessoes', f), 'utf8')).sessao.data).sort().at(-1);
+// Dois dias depois da última sessão cadastrada: o aviso aparece, e o teste não muda de resposta quando entrar uma sessão nova.
+// Um fim explícito conta pelo dia dele.
+const ULTIMA = fs.readdirSync(path.join(RAIZ, 'src/data/sessoes')).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => JSON.parse(fs.readFileSync(path.join(RAIZ, 'src/data/sessoes', f), 'utf8')).sessao).map((s) => (s.fim ? s.fim.slice(0, 10) : s.data)).sort().at(-1);
 const SEM_SESSAO = new Date(new Date(`${ULTIMA}T12:00:00-03:00`).getTime() + 2 * 864e5);
 const resultados = [];
 function confere(nome, ok, detalhe = '') {
