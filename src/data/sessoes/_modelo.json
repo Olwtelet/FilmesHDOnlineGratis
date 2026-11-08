@@ -16,6 +16,7 @@
       "ano": 2026,
       "direcao": "Nome de Quem Dirigiu",
       "duracao": 110,
+      "classificacao": "16",
       "generos": ["Suspense", "Drama"],
       "trailer": { "youtube": "IDDOVIDEO11", "canal": "Canal oficial", "idioma": "pt-BR legendado" }
     }

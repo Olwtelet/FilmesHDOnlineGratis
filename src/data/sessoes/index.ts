@@ -35,7 +35,8 @@ const Filme = z
     ano: z.number().int().min(1888).max(2100),
     direcao: z.string().min(1),
     duracao: z.number().int().positive(),
-    classificacao: z.enum(['L', '10', '12', '14', '16', '18']).optional(),
+    /** classificação etária, a idade recomendada: obrigatória, com a fonte registrada em reference/fase2/relatorios/classificacao-etaria.md */
+    classificacao: z.enum(['L', '10', '12', '14', '16', '18']),
     generos: z.array(z.string().min(1)).min(1),
     /** só em sessão dupla: hora de início deste filme */
     hora: z.string().regex(HORA, 'hora inválida, use HH:MM').optional(),

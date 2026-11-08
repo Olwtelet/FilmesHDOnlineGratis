@@ -21,7 +21,9 @@ const { session } = film;
 const filmes = filmesDaSessao(film.slug);
 const dupla = filmes.length > 1;
 const semana = session.weekday[0].toUpperCase() + session.weekday.slice(1);
-const classificacao = [...new Set(film.ratings)].map((c) => (c === 'L' ? 'Livre' : `${c} anos`)).join(' e ');
+// Classificação etária: a idade recomendada, nunca nota. Na sessão dupla com idades diferentes, uma linha por filme, como a duração.
+const idade = (c: string) => (c === 'L' ? 'Livre' : `${c} anos`);
+const idadesIguais = new Set(filmes.map((f) => f.rating)).size === 1;
 const generos = film.genres.map((g) => g.toLowerCase());
 const sinais = film.signals
   .filter((s) => !SINAIS_OCULTOS.includes(s))
@@ -39,7 +41,9 @@ const ficha = [
   ...(dupla
     ? filmes.map((f) => ({ categoria: `Duração · ${f.title}`, valor: `${f.minutes} min` }))
     : [{ categoria: 'Duração', valor: `${film.minutes} min` }]),
-  ...(classificacao ? [{ categoria: 'Classificação', valor: classificacao }] : []),
+  ...(idadesIguais
+    ? [{ categoria: 'Classificação etária', valor: idade(filmes[0].rating) }]
+    : filmes.map((f) => ({ categoria: `Classificação etária · ${f.title}`, valor: idade(f.rating) }))),
   ...film.genres.map((valor) => ({ categoria: 'Gênero', valor })),
   ...sinais.map((valor) => ({ categoria: 'Sinal', valor })),
 ];

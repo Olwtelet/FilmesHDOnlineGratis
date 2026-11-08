@@ -68,7 +68,7 @@ export interface Film {
   headline: string;
   genres: string[];
   signals: string[];
-  /** sem classificação verificada, fica vazio */
+  /** classificação etária de cada filme, na ordem da sessão; vazio só no cartão sem sessão */
   ratings: string[];
   image: FilmImage;
   /** versão pequena do herói, para menus */
@@ -176,7 +176,7 @@ function paraFilm(s: SessaoDado): Film {
     headline: s.texto.manchete,
     genres: [...new Set(s.filmes.flatMap((f) => f.generos))],
     signals: s.sinais,
-    ratings: s.filmes.map((f) => f.classificacao).filter((c): c is NonNullable<typeof c> => !!c),
+    ratings: s.filmes.map((f) => f.classificacao),
     image: { src: `${base}/hero-1600.webp` },
     thumb: `${base}/miniatura-160.webp`,
     hero: { src: `${base}/hero-1920.webp`, srcset: srcset(`${base}/hero`, [500, 800, 1080, 1600, 1920]) },
@@ -274,6 +274,8 @@ export interface FilmeDaSessao {
   /** hora de início: a própria do filme ou a da sessão */
   time: string;
   youtube: string;
+  /** classificação etária: L, 10, 12, 14, 16 ou 18 */
+  rating: string;
 }
 
 export function filmesDaSessao(slug: string): FilmeDaSessao[] {
@@ -285,6 +287,7 @@ export function filmesDaSessao(slug: string): FilmeDaSessao[] {
     minutes: f.duracao,
     time: f.hora ?? s.sessao.hora,
     youtube: f.trailer.youtube,
+    rating: f.classificacao,
   }));
 }
 

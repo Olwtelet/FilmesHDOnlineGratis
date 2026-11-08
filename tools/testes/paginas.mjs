@@ -1117,6 +1117,10 @@ function parteDados() {
     confere(`${nome}: dia da semana certo`, new RegExp(semana, 'i').test(corpo) && !SEMANA_PT.filter((x) => x !== semana && !/feira/.test(x)).some((x) => new RegExp(`${x} ?,? ?${d}`, 'i').test(corpo)), `${s.sessao.data} é ${semana}`);
     confere(`${nome}: página traz a direção`, s.filmes.every((x) => corpo.includes(x.direcao)), s.filmes.map((x) => x.direcao).join());
     confere(`${nome}: página traz a duração`, s.filmes.every((x) => corpo.includes(String(x.duracao))) || corpo.includes(String(minutos)), `${minutos}`);
+    // classificação etária: idade, em todo filme, e na ficha com o rótulo que diz que é idade
+    const idade = (c) => (c === 'L' ? 'Livre' : `${c} anos`);
+    confere(`${nome}: todo filme com classificação etária no dado`, s.filmes.every((x) => ['L', '10', '12', '14', '16', '18'].includes(x.classificacao)), s.filmes.map((x) => x.classificacao ?? 'nenhuma').join(' e '));
+    confere(`${nome}: ficha traz a classificação etária`, corpo.includes('Classificação etária') && s.filmes.every((x) => corpo.includes(idade(x.classificacao))), s.filmes.map((x) => idade(x.classificacao)).join(' e '));
     const creditos = [...s.creditos.principais, ...s.creditos.producao, ...s.creditos.elenco];
     const semNome = creditos.filter((c) => !corpo.includes(descodificar(c.nome)));
     confere(`${nome}: todos os créditos na página`, !semNome.length, curto(semNome.map((c) => c.nome)));

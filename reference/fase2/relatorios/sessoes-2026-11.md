@@ -10,12 +10,14 @@ Fontes recorrentes: TMDB (página pública, sem API), Wikipedia em inglês e em 
 
 | Data | Sessão | Original | Ano | Direção | Min | Classif. | TMDB | IMDb | Slug |
 |---|---|---|---:|---|---:|---|---:|---|---|
-| 14/11/2026 sáb 20:30 | Laranja Mecânica | A Clockwork Orange | 1971 | Stanley Kubrick | 136 | sem registro oficial | 185 | tt0066921 | `a-clockwork-orange-1971` |
-| 21/11/2026 sáb 20:30 | Eles Vivem | They Live | 1988 | John Carpenter | 94 | sem registro oficial | 8337 | tt0096256 | `they-live-1988` |
+| 14/11/2026 sáb 20:30 | Laranja Mecânica | A Clockwork Orange | 1971 | Stanley Kubrick | 136 | 18 (Apple TV Brasil, A18) | 185 | tt0066921 | `a-clockwork-orange-1971` |
+| 21/11/2026 sáb 20:30 | Eles Vivem | They Live | 1988 | John Carpenter | 94 | 14 (Instituto Moreira Salles) | 8337 | tt0096256 | `they-live-1988` |
 | 05/12/2026 sáb 20:30 | Entrevista com o Demônio | Late Night with the Devil | 2023 | Cameron Cairnes & Colin Cairnes | 93 | 16 | 938614 | tt14966898 | `late-night-with-the-devil-2023` |
-| 12/12/2026 sáb 20:30 | Rocky: Um Lutador | Rocky | 1976 | John G. Avildsen | 119 | sem registro oficial | 1366 | tt0075148 | `rocky-1976` |
+| 12/12/2026 sáb 20:30 | Rocky: Um Lutador | Rocky | 1976 | John G. Avildsen | 119 | 12 (Apple TV Brasil) | 1366 | tt0075148 | `rocky-1976` |
 
 Nenhuma sessão em 07/11 nem em 28/11, por decisão do proprietário: nesses sábados a home continua destacando a próxima sessão cadastrada.
+
+A coluna de classificação foi atualizada em 08/11/2026. Os três valores vêm de fontes públicas brasileiras, não de portaria, e as fontes e a divergência de Laranja Mecânica estão em `classificacao-etaria.md`. As linhas de classificação das fichas abaixo registram a pesquisa de 06/11, quando o critério ainda era só registro oficial.
 
 ## Laranja Mecânica (`a-clockwork-orange-1971`)
 

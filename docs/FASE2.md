@@ -119,7 +119,14 @@ Se a sessão nova mudar o estado da home (por exemplo, sai o aviso), o tutorial 
 npm run tutorial
 ```
 
-O campo opcional `classificacao` só entra quando houver registro confirmado. `linhasTitulo` é o número de linhas do título no herói da página; sem ele, a página mostra só o fio de cima e o de baixo.
+O campo `classificacao` é obrigatório em cada filme: a idade recomendada (L, 10, 12, 14, 16 ou 18), que a ficha mostra como "Classificação etária". O critério é o de `reference/fase2/relatorios/classificacao-etaria.md`:
+- Primeiro, a portaria no DOU.
+- Na falta dela, a classificação publicada para o Brasil em fonte pública sem login, conferida em mais de uma página do filme certo.
+- Classificação americana ou de outro país nunca vira idade brasileira.
+- Selo com a letra A é autoclassificação da plataforma.
+- Com fontes divergentes e versão indefinida, vale a mais restritiva.
+
+Registre no relatório o valor, a URL, a modalidade e a data da consulta. `linhasTitulo` é o número de linhas do título no herói da página; sem ele, a página mostra só o fio de cima e o de baixo.
 
 Para a voz editorial, ver os campos de `texto` no modelo e as sessões já publicadas: tese crítica própria do filme, sem sinopse, superlativo, crítico citado, prêmio, bastidor ou promessa de streaming, e sem revelar o final.
 
@@ -148,7 +155,7 @@ Não copiado do site antigo: `:contentReference[oaicite:0]`, visível na sessão
 
 25 sessões, 26 filmes. A sessão dupla é uma página com dois trailers: 19:30 e 21:30. Em 06/11/2026 entraram quatro sessões de sábado às 20:30 (linhas 22 a 25), e a home deixou de abrir no aviso: destaca Laranja Mecânica e avança sozinha à meia-noite de São Paulo depois de cada sessão, para Eles Vivem em 15/11, Entrevista com o Demônio em 22/11 e Rocky: Um Lutador em 06/12. Não há sessão em 07/11 nem em 28/11; nesses sábados segue em destaque a próxima. A partir de 13/12/2026 às 00:00, se nenhuma outra for cadastrada, a home volta ao aviso "Sem sinal".
 
-| # | Data | Hora | Sessão | Direção | Min | Classif. | Slug |
+| # | Data | Hora | Sessão | Direção | Min | Idade | Slug |
 |---:|---|---|---|---|---:|---|---|
 | 1 | 18/04/2026 sáb | 20:30 | The Long Walk (2025) | Francis Lawrence | 108 | 18 | `the-long-walk-2025` |
 | 2 | 25/04/2026 sáb | 20:30 | The Running Man (2025) | Edgar Wright | 133 | 18 | `the-running-man-2026` |
@@ -158,7 +165,7 @@ Não copiado do site antigo: `:contentReference[oaicite:0]`, visível na sessão
 | 6 | 02/07/2026 qui | 20:30 | Obsessão (2025) | Curry Barker | 109 | 18 | `obsession-2026` |
 | 7 | 04/07/2026 sáb | 20:30 | V de Vingança (2005) | James McTeigue | 132 | 16 | `v-for-vendetta-2005` |
 | 8 | 11/07/2026 sáb | 20:30 | O Senhor das Armas (2005) | Andrew Niccol | 122 | 16 | `lord-of-war-2005` |
-| 9 | 16/07/2026 qui | 20:30 | Aquilo que Você Deseja (2023) | Nicholas Tomnay | 101 | 16 | `what-you-wish-for-2023` |
+| 9 | 16/07/2026 qui | 20:30 | Aquilo que Você Deseja (2023) | Nicholas Tomnay | 101 | 18 | `what-you-wish-for-2023` |
 | 10 | 18/07/2026 sáb | 20:30 | Bugonia (2025) | Yorgos Lanthimos | 118 | 18 | `bugonia-2025` |
 | 11 | 25/07/2026 sáb | 19:30 | Casamento Sangrento + Casamento Sangrento: A Viúva (2019 + 2026) | Bettinelli-Olpin & Gillett | 95 + 108 | 18 | `ready-or-not-double-feature-2026` |
 | 12 | 08/08/2026 sáb | 20:30 | Verdade e Traição (2025) | Matt Whitaker | 121 | 16 | `truth-treachery-2026` |
@@ -171,17 +178,17 @@ Não copiado do site antigo: `:contentReference[oaicite:0]`, visível na sessão
 | 19 | 17/10/2026 sáb | 20:30 | O Lagosta (2015) | Yorgos Lanthimos | 119 | 16 | `the-lobster-2015` |
 | 20 | 24/10/2026 sáb | 20:30 | Pulp Fiction: Tempo de Violência (1994) | Quentin Tarantino | 154 | 18 | `pulp-fiction-1994` |
 | 21 | 31/10/2026 sáb | 20:30 | Os Oito Odiados (2015) | Quentin Tarantino | 168 | 18 | `the-hateful-eight-2015` |
-| 22 | 14/11/2026 sáb | 20:30 | Laranja Mecânica (1971) | Stanley Kubrick | 136 | sem registro | `a-clockwork-orange-1971` |
-| 23 | 21/11/2026 sáb | 20:30 | Eles Vivem (1988) | John Carpenter | 94 | sem registro | `they-live-1988` |
+| 22 | 14/11/2026 sáb | 20:30 | Laranja Mecânica (1971) | Stanley Kubrick | 136 | 18 | `a-clockwork-orange-1971` |
+| 23 | 21/11/2026 sáb | 20:30 | Eles Vivem (1988) | John Carpenter | 94 | 14 | `they-live-1988` |
 | 24 | 05/12/2026 sáb | 20:30 | Entrevista com o Demônio (2023) | Cameron Cairnes & Colin Cairnes | 93 | 16 | `late-night-with-the-devil-2023` |
-| 25 | 12/12/2026 sáb | 20:30 | Rocky: Um Lutador (1976) | John G. Avildsen | 119 | sem registro | `rocky-1976` |
+| 25 | 12/12/2026 sáb | 20:30 | Rocky: Um Lutador (1976) | John G. Avildsen | 119 | 12 | `rocky-1976` |
 
 Exceções ao sábado às 20:30: `the-menu-2022` (terça), `obsession-2026` e `what-you-wish-for-2023` (quinta), `ready-or-not-double-feature-2026` (19:30). Nenhuma sessão tem fim explícito publicado, então todas valem até a meia-noite de São Paulo.
 
 **Sessões de novembro e dezembro de 2026.** Fatos, créditos, imagens e trailers com as fontes de cada um estão em `reference/fase2/relatorios/sessoes-2026-11.md`, e os dados da pesquisa, com todas as URLs, em `reference/fase2/relatorios/sessoes-2026-11/`. Cada ficha teve duas checagens independentes. Decisões desta entrada:
 
 - **Ano de Entrevista com o Demônio: 2023.** O filme estreou no SXSW em 10/03/2023 e foi lançado nos cinemas em 2024 (EUA em 22/03, Brasil em 04/07, pela Diamond Films). O catálogo mostra o ano da primeira exibição pública, como em V de Vingança (2005, lançado em 2006), Obsessão (2025, lançado em 2026) e Aquilo que Você Deseja (2023, lançado em 2024). A portaria brasileira de classificação também registra 2023. O TMDB mostra 2024, pela data comercial. Nos outros três o ano não muda por nenhum critério: 1971, 1988 e 1976.
-- **Classificação indicativa só com registro oficial.** Entrevista com o Demônio é 16, pela Portaria CPCIND/SENAJUS/MJSP nº 1.096/2024 (DOU de 05/06/2024). Para Eles Vivem e Rocky a busca no DOU não achou portaria, e o mesmo método achou as de títulos de controle (The Running Man, Vivarium, Eu Sou Rocky). Segundo a pesquisa, a busca não alcança 1989, ano do lançamento de Eles Vivem no Brasil, quando a classificação ainda vinha da censura federal. O in.gov.br recusa a conexão por linha de comando, então em 07/11/2026 a busca de Laranja Mecânica e a de Eles Vivem foram refeitas no navegador. "Laranja Mecânica" deu 14 resultados, todos de um clube, uma associação ou um festival com esse nome. "A Clockwork Orange" e "They Live" deram 0. "Stanley Kubrick" e "John Carpenter" não trouxeram ato de classificação. A busca alcança pelo menos 2013, o que cobre os relançamentos de Laranja Mecânica no cinema em 2013 e 2014. No mesmo dia, o controle "Late Night With The Devil" achou as duas portarias de Entrevista com o Demônio. A consulta pública do ClassInd só funciona em navegador com login e não foi feita. Nos três o campo ficou vazio, e a página não mostra classificação. Os indícios encontrados (TMDB, lojas, cineclubes) se dividem e não foram publicados. As oito fichas antigas que seguem o TMDB continuam como estavam.
+- **Classificação etária em todos os filmes, desde 08/11/2026.** O campo `classificacao` é a idade recomendada e é obrigatório. Seis filmes têm portaria no DOU, entre eles Entrevista com o Demônio (16, Portaria CPCIND/SENAJUS/MJSP nº 1.096/2024, DOU de 05/06/2024). Os outros vêm de fontes públicas brasileiras sem login: plataformas, exibidores, instituições culturais e os certificados brasileiros do IMDb, conferidos entre si. Na busca de 07/11/2026 no DOU, refeita no navegador, não apareceu portaria de Laranja Mecânica, Eles Vivem nem Rocky: "Laranja Mecânica" só trouxe um clube, uma associação e um festival com esse nome, e o controle "Late Night With The Devil" achou as duas portarias de Entrevista com o Demônio. Os três ficaram assim: Eles Vivem 14, do Instituto Moreira Salles; Rocky: Um Lutador 12, da Apple TV Brasil, sem a letra A; e Laranja Mecânica 18, a indicação mais restritiva, da Apple TV Brasil (A18, autoclassificação da plataforma), porque as fontes brasileiras se dividem entre 16 e 18 e a versão da sessão não está definida. Aquilo que Você Deseja passou de 16, sem fonte pública, para 18, o selo A18 do Prime Video. Fontes, divergências e a decisão de Laranja Mecânica em `reference/fase2/relatorios/classificacao-etaria.md`.
 - **Créditos com nome que não é o da tela.** A música de Laranja Mecânica sai como Wendy Carlos, nome atual, e o crédito de 1971 é Walter Carlos. O roteiro de Eles Vivem sai como "John Carpenter (como Frank Armitage)", o pseudônimo da tela. Em Entrevista com o Demônio a menina é só "Lilly", como o filme a chama; o sobrenome D'Abo das bases não é dito em cena. Em Rocky, Adrian, Paulie e Mickey saem sem os sobrenomes, que o filme não diz. O promotor sai só como Jergens, como no crédito da tela, porque o filme lhe dá dois primeiros nomes, George e Miles.
 - **Imagens.** Nada com nudez, violência sexual ou o final. Sangue, só um fio no lábio de Nada na briga do beco de Eles Vivem (cena 14), que quase não se vê a 960 px; a troca sem sangue está anotada no relatório. Em Laranja Mecânica, nada do bar Korova nem a arte do triângulo, que tem uma figura nua. O hero de Laranja Mecânica é o close de Alex, de fundo escuro: com o túnel dos quatro drugues, a primeira escolha, o rótulo da sessão e o título caíam sobre a luz branca no cartão da home no celular, e o rótulo sumia. O túnel ficou no painel da direção. Entrevista com o Demônio tem só 6 cenas aproveitáveis sem letreiro no TMDB. Das outras 8 sem letreiro, 5 são arte promocional, uma é montagem e duas são o mesmo grito de Jack, de contexto não confirmado. A galeria leva as 6 e 3 recortes delas, e o site repete até 14. O cartaz de Rocky é a capa do DVD brasileiro de 25 anos, com "ROCKY" e, abaixo, "UM LUTADOR"; o cartaz principal em português do TMDB mostra o abraço do final.
 - **Trailers** de canal oficial: Warner Bros. Entertainment (Laranja Mecânica, trailer do lançamento em 4K, em inglês), Shout! Studios (Eles Vivem, trailer da edição de colecionador, em inglês), Diamond Films Brasil (Entrevista com o Demônio, legendado) e Amazon MGM Studios (Rocky, em inglês). Nenhum trailer brasileiro oficial foi achado para os três mais antigos.
@@ -248,6 +255,20 @@ Depois de tirar o aperto das letras, sem o build anterior ao lado: Edge sem jane
 | Site original da Siena, no ar, Edge sem janela, n=6 | 3.913 | 3.736 | 1.710 e 1.713 |
 
 O ENTER é um timer fixo de 3,5 s, contado desde que o `app.js` começa a rodar (230 a 490 ms depois da navegação, nas 60 visitas abaixo). Em 60 visitas perfiladas com a abertura nova, 30 no Edge e 30 no Chrome, com jogo aberto, o timer atrasou no máximo 6 ms, a espera do quadro seguinte foi de no máximo 7 ms, e a preparação terminou de 2,75 a 3,3 s antes do timer, nunca depois. A referência antiga de 1.838 ms até a home era de antes da formatação do PC: o site original, medido agora, dá o mesmo valor deste site.
+
+### Classificação etária dos 26 filmes, 08/11/2026
+
+Build final, servido em 4322. Mudaram o dado de quatro filmes, o rótulo da ficha ("Classificação etária") e a obrigatoriedade do campo.
+
+| Verificação | Resultado | Observação |
+|---|---|---|
+| `npm run build` | Passou | O zod recusa filme sem classificação |
+| `tools/testes/paginas.mjs`, parte dados | 503 de 503 | Duas checagens novas em cada uma das 25 sessões: todo filme tem idade no dado, e a ficha mostra "Classificação etária" com o valor de cada filme. A sessão dupla tem 18 e 18 |
+| `tools/testes/paginas.mjs`, matriz | 165 de 165 | Laranja Mecânica, Eles Vivem, Rocky, Aquilo que Você Deseja e a sessão dupla a 1440, 390 e 320 px: nada cortado nem transbordando |
+| `tools/testes/varredura.mjs` | Nenhum achado | Inclui a regra de nenhuma estrela, nota ou avaliação |
+| Ficha vista no navegador | 1440, 390 e 320 px | O rótulo "Classificação etária" cabe numa linha e o valor fica inteiro dentro da janela da ficha, com o letreiro andando |
+
+**O que não foi verificado nesta parte.** O DOU não abriu nesta rodada: o navegador do app recusa o in.gov.br, e o Chrome estava desconectado. As seis portarias foram mantidas como estavam registradas, sem reabrir. A consulta do ClassInd, que pede login, não fez parte do critério.
 
 ### Sessões de novembro e dezembro de 2026, 06 e 07/11/2026
 
@@ -414,6 +435,6 @@ Do ícone do trailer, sem alteração: o clique com o botão do meio abre a aba 
 - Publicar o `app.js`, o CSS e os áudios originais da estrutura: nenhuma licença foi encontrada nos arquivos.
 - Imagens com símbolos nazistas em `truth-treachery-2026` e `inglourious-basterds-2009`.
 - Título "Verdade e Traição", como publicado, contra "Verdade & Traição", o oficial no Diário Oficial; títulos em inglês mantidos (`The Long Walk`, `The Running Man`, `The Menu`).
-- Classificações sem registro oficial encontrado: oito filmes antigos seguem o TMDB, e `what-you-wish-for-2023` só tem uma listagem. Laranja Mecânica, Eles Vivem e Rocky: Um Lutador ficaram sem classificação. A consulta do ClassInd pede navegador com login e não foi feita. No DOU, a busca não achou portaria de nenhum dos três; a de Laranja Mecânica e a de Eles Vivem foram refeitas no navegador em 07/11/2026, e a busca não alcança 1989. Falta a consulta do ClassInd, que só o proprietário pode fazer, com login. Se o registro existir, basta pôr o valor em `classificacao`. Indícios encontrados, não publicados: Laranja Mecânica 16 ou 18, Eles Vivem 14 ou 16, Rocky 12.
+- Classificação etária de Laranja Mecânica: 18, a indicação mais restritiva entre as fontes brasileiras, porque a versão da sessão não está definida. Se a sessão usar a cópia restaurada e houver portaria dessa versão com 16, trocar o valor no JSON. Os detalhes estão em `reference/fase2/relatorios/classificacao-etaria.md`.
 - As leituras são de fontes secundárias: nenhum filme foi assistido por quem escreveu. Detalhes só de memória estão em `reference/fase2/relatorios/` e no registro da revisão.
 
