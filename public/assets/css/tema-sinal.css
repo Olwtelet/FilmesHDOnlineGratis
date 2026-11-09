@@ -615,23 +615,28 @@ html.trailer-aberto #second { z-index: 3; }
   .trailer-opcoes { top: calc(50% + max(100px, 28.125vw)); }
 }
 
-/* 7d. Fase 2: marca. O símbolo é sempre a mesma máscara (tools/marca.mjs), pintada na cor do texto. A forma ocupa 78% da
-       altura do arquivo: 128,3% faz a altura da forma igualar a da caixa. */
-.marca-simbolo { display: block; background-color: currentColor;
-  -webkit-mask: url(/assets/img/site/simbolo-mascara-256.webp) center / auto 128.3% no-repeat;
-  mask: url(/assets/img/site/simbolo-mascara-256.webp) center / auto 128.3% no-repeat;
+/* 7d. Fase 2: marca. O símbolo é o "A" colorido de reference/brand/logo.jpg, com as cores do arquivo, gerado por tools/marca.mjs:
+       só o fundo externo fica transparente, e um halo escuro fino por baixo devolve o contorno preto do arquivo. Sobre o preto
+       do site o halo some; sobre foto ou fundo claro, ele mantém o símbolo legível sem tingir nem inverter as cores. A forma ocupa
+       94,97% da altura do arquivo. A imagem vai num ::before 105,3% mais alto que a caixa e centrado nela: a forma tem a altura
+       da caixa, como antes, e o halo, que fica na folga do arquivo, passa um pouco da caixa sem ser cortado nem mudar o layout. */
+.marca-simbolo { display: block; position: relative; }
+.marca-simbolo::before { content: ""; position: absolute; left: 50%; top: 50%; height: 105.3%; aspect-ratio: 836 / 1034; transform: translate(-50%, -50%);
+  background: url(/assets/img/site/simbolo-cor-256.webp?v=3) center / 100% 100% no-repeat; pointer-events: none;
   -webkit-print-color-adjust: exact; print-color-adjust: exact; } /* é fundo: sem isto, a impressão apagaria o símbolo */
 .logo-footer.marca-simbolo { aspect-ratio: 89 / 88; }
 /* Logo do menu: a altura é a do antigo SVG (viewBox 131 x 63, com 6,15rem, 5,125rem e 75 px de largura), e --u é uma
-   unidade daquele viewBox. O nome pede cerca de 12% a mais de largura; abaixo de 8,5 px ele deixa de se ler. O filho em
-   difference fica isolado na caixa, como o path dentro do svg; no celular é a caixa inteira que mescla. */
+   unidade daquele viewBox. O nome pede cerca de 12% a mais de largura; abaixo de 8,5 px ele deixa de se ler. O nome em
+   difference fica isolado na caixa, como o path dentro do svg; o símbolo colorido fica fora da mescla. */
 .marca-nav { --u: calc(6.15rem / 131); position: relative; display: flex; align-items: center; gap: calc(var(--u) * 7);
   height: calc(var(--u) * 63); isolation: isolate; }
 .marca-nav > * { mix-blend-mode: difference; }
-.marca-nav .marca-simbolo { flex: none; height: 100%; aspect-ratio: .8; }
+/* o símbolo colorido não mescla: as cores ficam as do arquivo em qualquer fundo, e o contraste vem do halo */
+.marca-nav .marca-simbolo { flex: none; height: 100%; aspect-ratio: .8; mix-blend-mode: normal; }
 .marca-nome { flex: none; font-family: var(--font-display-leve); font-size: max(8.5px, calc(var(--u) * 13)); line-height: 1.12; letter-spacing: .03em; white-space: nowrap; }
 @media screen and (max-width: 767px) { .marca-nav { --u: calc(5.125rem / 131); } }
-@media screen and (max-width: 479px) { .marca-nav { --u: calc(75px / 131); mix-blend-mode: difference; } }
+/* no celular só o nome mescla, como no desktop: a caixa inteira mesclada inverteria as cores do símbolo */
+@media screen and (max-width: 479px) { .marca-nav { --u: calc(75px / 131); } }
 /* Tutorial: guarda a altura da caixa antes de o pôster e o vídeo carregarem */
 .video-2 { aspect-ratio: 1668 / 1080; object-fit: cover; }
 /* com entrelinha 1em, o acento de maiúscula sai da linha: a janela o cortaria na primeira linha e o texto em espera
@@ -726,6 +731,8 @@ html.trailer-aberto #second { z-index: 3; }
 .nav-link.logo, .marca-nav { color: var(--sinal-texto) !important; }
 /* com o trailer aberto, o logo recua quando o bundle o escurece, como no original */
 html.trailer-aberto .nav-link.logo[style*="black"], html.trailer-aberto .nav-link.logo[style*="black"] .marca-nav { color: var(--sinal-linha-forte) !important; transition: color .5s .2s; }
+/* o símbolo colorido não segue a cor do texto: recua pela opacidade, na mesma proporção do nome (#33373c sobre #e8e9ea) */
+html.trailer-aberto .nav-link.logo[style*="black"] .marca-simbolo { opacity: .22; transition: opacity .5s .2s; }
 /* Texto sobre a imagem do topo dos estudos de caso, que fica dentro de uma superfície invertida */
 .work-back-btn, .work-back-btn .roll-cont-eyeb { color: var(--sinal-texto); }
 

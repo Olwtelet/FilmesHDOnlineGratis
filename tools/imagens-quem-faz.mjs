@@ -8,8 +8,9 @@
 // alinha o recorte pelo alto (object-position no tema-sinal.css), então a cabeça e o rosto ficam à vista em todas as larguras.
 // Nada é ampliado: o original só tem 736 px de largura, e o recorte sai na resolução dele.
 //
-// Logo da Sala 24 (1254 x 1254): o símbolo ocupa x 251 a 1033 e y 138 a 1116, com campo preto puro em volta. O recorte deixa
-// uma margem de 4% da altura do símbolo; o resto do respiro vem do padding do painel, que tem o mesmo preto, e o símbolo fica
+// Logo (reference/brand/logo.jpg, a marca do site, 1254 x 1254): o símbolo ocupa x 251 a 1034 e y 135 a 1116, medido por
+// tools/marca.mjs em reference/brand/logo-recorte.json, com campo preto puro em volta. O recorte deixa uma margem de 4% da
+// altura do símbolo; o resto do respiro vem do padding do painel, que tem o mesmo preto, e o símbolo fica
 // grande sem encostar nas bordas. Cores e proporções do símbolo não mudam.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,6 +19,8 @@ import sharp from 'sharp';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const ORIGEM = path.join(ROOT, 'reference/brand');
 const SAIDA = path.join(ROOT, 'public/assets/img/sobre');
+const LOGO = JSON.parse(fs.readFileSync(path.join(ORIGEM, 'logo-recorte.json'), 'utf8'));
+const MARGEM_LOGO = Math.round(LOGO.altura * 0.04);
 
 const SAIDAS = [
   {
@@ -28,10 +31,9 @@ const SAIDAS = [
     qualidade: 82,
   },
   {
-    arquivo: 'Logo da Sala 24.jpg',
+    arquivo: LOGO.arquivo,
     nome: 'sala-24',
-    // símbolo 783 x 979, margem de 39 px (4% da altura)
-    recorte: { left: 251 - 39, top: 138 - 39, width: 783 + 78, height: 979 + 78 },
+    recorte: { left: LOGO.x0 - MARGEM_LOGO, top: LOGO.y0 - MARGEM_LOGO, width: LOGO.largura + 2 * MARGEM_LOGO, height: LOGO.altura + 2 * MARGEM_LOGO },
     larguras: [860, 430],
     qualidade: 90,
   },

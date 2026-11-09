@@ -155,7 +155,7 @@ const LOGO_SALA_24: AboutImage = {
   sizes: PAINEL,
   alt: 'Logo da Sala 24: a letra A em perspectiva, pintada com as barras coloridas de uma carta de teste de TV, sobre fundo preto.',
   width: 860,
-  height: 1056,
+  height: 1058,
   classe: 'team-img--logo',
 };
 
