@@ -484,12 +484,18 @@ if (PARTES.includes('canais')) {
   const comSteam = paginas.filter((f) => /steam/i.test(path.basename(f)) || (/\.(html|xml|json|txt|css|js|svg|webmanifest)$/.test(f) && /steam/i.test(fs.readFileSync(f, 'utf8'))));
   confere('canais: nenhuma menção à Steam no build', !comSteam.length, comSteam.slice(0, 4).map((f) => path.relative(DIST, f)).join(', '));
   const sobre = fs.readFileSync(path.join(DIST, 'sobre/index.html'), 'utf8');
-  confere('canais: X nos dados estruturados', /"sameAs":\[[^\]]*https:\/\/x\.com\/FilmesHDOG/.test(sobre));
+  // contas pedidas pelo proprietário em 08/11/2026; os trailers (youtube.com/watch e /embed) não são link de seguir
+  confere('canais: X nos dados estruturados', /"sameAs":\[[^\]]*https:\/\/x\.com\/Olwtelet"/.test(sobre));
+  confere('canais: YouTube nos dados estruturados', /"sameAs":\[[^\]]*https:\/\/www\.youtube\.com\/@Outelet"/.test(sobre));
   confere('canais: o ícone do X existe', fs.existsSync(path.join(DIST, 'assets/img/site/social-x.svg')));
   for (const [nome, cam] of [['home', '/'], ['sessão', SESSAO], ['Sobre', '/sobre/'], ['Contato', '/contato/'], ['Termos', '/termos/']]) {
     const { ctx, page } = await abrir(cam);
     const links = await page.evaluate(() => [...document.querySelectorAll('a[href*="x.com"]')].map((a) => ({ href: a.href, alvo: a.target, rel: a.rel, rotulo: a.getAttribute('aria-label') || a.textContent.trim(), svg: !!a.querySelector('svg') })));
-    confere(`canais ${nome}: link para a conta no X`, links.length > 0 && links.every((l) => l.href === 'https://x.com/FilmesHDOG' && l.alvo === '_blank' && /noopener/.test(l.rel)), JSON.stringify(links[0] || null));
+    confere(`canais ${nome}: link para a conta no X`, links.length > 0 && links.every((l) => l.href === 'https://x.com/Olwtelet' && l.alvo === '_blank' && /noopener/.test(l.rel)), JSON.stringify(links[0] || null));
+    const yt = await page.evaluate(() => [...document.querySelectorAll('a[href*="youtube.com/"]')].filter((a) => !/\/watch\?|\/embed\//.test(a.href)).map((a) => ({ href: a.href, alvo: a.target, rel: a.rel })));
+    confere(`canais ${nome}: link para o canal no YouTube`, yt.length > 0 && yt.every((l) => l.href === 'https://www.youtube.com/@Outelet' && l.alvo === '_blank' && /noopener/.test(l.rel)), JSON.stringify(yt[0] || null));
+    const mail = await page.evaluate(() => [...document.querySelectorAll('a[href^="mailto:"]')].map((a) => a.getAttribute('href')));
+    confere(`canais ${nome}: todo e-mail leva ao endereço público`, mail.length > 0 && mail.every((h) => h === 'mailto:filmeshdonlinegratisbr@gmail.com'), mail.join(' '));
     await ctx.close();
   }
   const { ctx, page } = await abrir(SESSAO);
@@ -505,7 +511,7 @@ if (PARTES.includes('canais')) {
     await ctx.route(/x\.com/, (r) => r.fulfill({ status: 200, contentType: 'text/html', body: '<!doctype html><title>x</title>' }));
     const tocar = (p) => (opcoes.hasTouch ? page.touchscreen.tap(p.x, p.y) : page.mouse.click(p.x, p.y));
     const medir = (noMenu) => page.evaluate((m) => {
-      const a = [...document.querySelectorAll('a[href="https://x.com/FilmesHDOG"]')].find((e) => !!e.closest('[data-menu="w"]') === m);
+      const a = [...document.querySelectorAll('a[href="https://x.com/Olwtelet"]')].find((e) => !!e.closest('[data-menu="w"]') === m);
       if (!a) return null;
       const r = a.getBoundingClientRect(), s = a.querySelector('svg')?.getBoundingClientRect();
       const x = r.left + r.width / 2, y = r.top + r.height / 2;
@@ -519,9 +525,9 @@ if (PARTES.includes('canais')) {
       const destino = aba.url();
       await aba.close();
       await page.bringToFront();
-      confere(`canais ${nome}, ${onde}: abre a conta`, destino === 'https://x.com/FilmesHDOG', destino);
+      confere(`canais ${nome}, ${onde}: abre a conta`, destino === 'https://x.com/Olwtelet', destino);
     };
-    await page.evaluate(() => [...document.querySelectorAll('a[href="https://x.com/FilmesHDOG"]')].find((e) => !e.closest('[data-menu="w"]')).scrollIntoView({ block: 'center', behavior: 'instant' }));
+    await page.evaluate(() => [...document.querySelectorAll('a[href="https://x.com/Olwtelet"]')].find((e) => !e.closest('[data-menu="w"]')).scrollIntoView({ block: 'center', behavior: 'instant' }));
     await dormir(1800);
     await page.screenshot({ path: path.join(SAIDA, `canais-${nome}.jpg`), type: 'jpeg', quality: 78 });
     await conferir('rodapé', await medir(false));

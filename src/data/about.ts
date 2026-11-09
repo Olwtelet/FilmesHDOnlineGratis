@@ -11,6 +11,13 @@ export interface AboutImage {
   /** versões responsivas; sem elas, sizes também fica de fora */
   srcset?: string;
   sizes?: string;
+  /** texto alternativo; sem ele a imagem é decorativa (alt vazio) */
+  alt?: string;
+  /** tamanho do maior arquivo, para o navegador reservar a proporção */
+  width?: number;
+  height?: number;
+  /** classe a mais na <img>, para o enquadramento no tema-sinal.css */
+  classe?: string;
 }
 
 export interface AboutTitle {
@@ -128,11 +135,28 @@ export interface TeamMember {
   image: AboutImage;
 }
 
-/** Não há retrato de ninguém: o cartão de teste ocupa o lugar da foto. */
-const CARTAO: AboutImage = {
-  src: '/assets/img/site/sem-sinal-800.webp',
-  srcset: '/assets/img/site/sem-sinal-640.webp 640w, /assets/img/site/sem-sinal-800.webp 800w',
-  sizes: '(max-width: 479px) 100vw, (max-width: 991px) 50vw, 25vw',
+// Imagens dos cartões, geradas por tools/imagens-quem-faz.mjs a partir dos originais em reference/brand/. O painel da imagem é metade
+// do cartão até 479 px e a largura inteira abaixo disso; o enquadramento de cada uma fica no tema-sinal.css (seção 7e).
+const PAINEL = '(max-width: 479px) 92vw, (max-width: 991px) 46vw, 24vw';
+
+const FOTO_OLWTELET: AboutImage = {
+  src: `${IMG}/olwtelet-420.webp`,
+  srcset: `${IMG}/olwtelet-300.webp 300w, ${IMG}/olwtelet-420.webp 420w`,
+  sizes: PAINEL,
+  alt: 'Olwtelet de uniforme escuro, com botões e dragonas dourados, caminhando sob um guarda-chuva.',
+  width: 420,
+  height: 981,
+  classe: 'team-img--retrato',
+};
+
+const LOGO_SALA_24: AboutImage = {
+  src: `${IMG}/sala-24-860.webp`,
+  srcset: `${IMG}/sala-24-430.webp 430w, ${IMG}/sala-24-860.webp 860w`,
+  sizes: PAINEL,
+  alt: 'Logo da Sala 24: a letra A em perspectiva, pintada com as barras coloridas de uma carta de teste de TV, sobre fundo preto.',
+  width: 860,
+  height: 1056,
+  classe: 'team-img--logo',
 };
 
 export const ABOUT_TEAM: { title: string; members: TeamMember[] } = {
@@ -142,13 +166,13 @@ export const ABOUT_TEAM: { title: string; members: TeamMember[] } = {
       role: 'Curadoria',
       name: SITE.author,
       bio: 'Escolhe as sessões e registra o motivo de cada uma. Não há fórmula, e a ausência dela é deliberada: um filme entra porque incomodou alguém, porque rendeu discussão até tarde, porque não saiu da cabeça depois dos créditos. Nunca porque quebrou bilheteria, e nunca porque um sistema calculou que você ia gostar.',
-      image: CARTAO,
+      image: FOTO_OLWTELET,
     },
     {
       role: 'Comunidade',
       name: 'Sala 24',
       bio: 'A sala fica em um servidor pequeno do Discord, aberto em 29 de novembro de 2024, sem plano nenhum. A exibição acontece ali, ao vivo, com todo mundo assistindo ao mesmo tempo. A maior parte das sessões é aos sábados, às 20:30, mas o que vale é a data e a hora publicadas na página de cada uma. Não custa nada.',
-      image: CARTAO,
+      image: LOGO_SALA_24,
     },
   ],
 };

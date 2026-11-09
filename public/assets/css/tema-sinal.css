@@ -655,6 +655,24 @@ html.trailer-aberto #second { z-index: 3; }
   .about-he .span-clip { padding-inline: .08em; margin-inline: -.08em; }
 }
 
+/* Sobre, "QUEM FAZ": a foto do Olwtelet e a logo da Sala 24 nos painéis de imagem. No original, a altura do cartão é a maior
+   entre o texto e a imagem; uma foto em pé esticaria o cartão. Aqui a imagem preenche o painel sem ditar a altura dele:
+   de 992 px para cima o painel acompanha o texto, de 480 a 991 px fica em 2:3, e abaixo disso mantém os 18rem do original.
+   Uma faixa SMPTE fina fecha a base do painel, como a do topo da página. */
+.team-img-w { position: relative; }
+.team-img-w::after { content: ""; position: absolute; inset: auto 0 0; height: var(--faixa-altura); background: var(--faixa-smpte); pointer-events: none; }
+.team-img.team-img--retrato, .team-img.team-img--logo { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* a cabeça fica no alto do recorte: alinhado pelo topo, o rosto aparece do painel deitado (1920 px) ao em pé (1280 px) */
+.team-img--retrato { object-fit: cover; object-position: 50% 3%; }
+/* o campo preto da própria logo vira o fundo do painel; o padding dá o respiro e o símbolo fica grande sem encostar */
+.team-img--logo { object-fit: contain; box-sizing: border-box; padding: 9%; background-color: #000; }
+@media screen and (min-width: 480px) and (max-width: 991px) { .team-img-w { aspect-ratio: 2 / 3; } }
+@media screen and (max-width: 479px) {
+  /* a faixa fica acima do tracejado que separa a imagem do texto */
+  .team-img-w::after { bottom: 1px; }
+  .team-img--logo { padding: 7% 9%; }
+}
+
 /* Rodapé, coluna do RSS: campo só de leitura no lugar do e-mail. O .w-input pinta campos readonly de cinza. */
 .ft-newsletter-input[readonly] { background-color: transparent; cursor: text; text-overflow: ellipsis; font-size: .72rem; letter-spacing: 0; padding-left: 1rem; padding-right: 0; }
 .ft-newsletter-btn { position: relative; flex: none; }

@@ -27,8 +27,9 @@ export const ROUTES = {
 export const SOCIAL = {
   /** convite geral do servidor: abre o canal de regras */
   discord: 'https://discord.gg/wSSJEJAJgt',
-  youtube: 'https://www.youtube.com/@FilmesHDOn-lineGrátis',
-  x: 'https://x.com/FilmesHDOG',
+  /** canal para seguir; trailers e vídeos de filmes não passam por aqui */
+  youtube: 'https://www.youtube.com/@Outelet',
+  x: 'https://x.com/Olwtelet',
   github: 'https://github.com/Olwtelet',
 } as const;
 

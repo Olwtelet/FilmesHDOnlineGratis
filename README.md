@@ -34,6 +34,7 @@ Gera `dist/` e serve em **http://localhost:4322** com `tools/serve.mjs`, que res
 | `npm run textos` | Confere o texto editorial além do que o build valida |
 | `npm run tutorial` | Regrava o vídeo do tutorial a partir da home servida na 4322 |
 | `npm run marca` | Gera favicon, máscara e cartão de teste a partir de `reference/brand/simbolo.png` |
+| `node tools/imagens-quem-faz.mjs` | Gera a foto do Olwtelet e a logo da Sala 24 do Sobre a partir dos originais em `reference/brand/` |
 | `node tools/patch-bundle.mjs` | Reaplica as edições locais do `app.js` e do `main.css`; rodar de novo não altera nada |
 
 ## Como cadastrar uma sessão

@@ -24,7 +24,7 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Volta à home | Nenhum `:has()` em `tema-sinal.css`: o estado vem de classes (`html.trailer-aberto`, `.com-principal`, `.com-pequeno`, `.foco-*`) postas por `local-trailer.js` e `local-menu.js`. Cada imagem vira textura uma vez por visita. Filmes e quadros que saem da tela são descartados, e a carga de uma página que já foi trocada é ignorada | Com os 16 `:has()` do tema, a montagem da home gastava segundos em `Document::recalcStyle`. Nenhuma regra sozinha era a culpada. Os 25 do `main.css` original ficam, sem custo mensurável. Sem carregador e sem atraso artificial; números na seção 7 |
 | Leituras | Patch no `app.js`: o slider anda sozinho, dentro do próprio `render`, sem outro timer. Para fora da tela, com a aba escondida, durante o arrasto e com o foco de teclado nas setas. Depois de mexer com o ponteiro, volta em 3 s; depois da seta, em 6 s. Janela que mostra um cartão por vez troca a cada 6 s. Com movimento reduzido, só manual. A barra de progresso passa a dar a volta, e "ARRASTE PARA VER" sai | Pedido do proprietário. A cópia do preenchimento em `.fill-bar::before` evita o salto da barra na volta do ciclo |
 | Cursor | Retícula em `local-cursor.js` e no bloco 8c do tema: anel, ponto central e uma microbarra SMPTE. Estados de link, arrasto vertical e horizontal, play, setas e aperto, lidos por `closest` de `[data-hitbox]`, `[data-videoplayer]`, `[data-roll]`, `[data-slider]`, `[data-reviews]` e dos links. Em `[data-cursor="hide"]`, onde o `app.js` escondia o cursor antigo, a mira fica sem o rótulo de arrasto. O nó antigo `.cursor-w-out` fica no HTML e não aparece | Um cursor só, sem leitura de layout por movimento, e o laço de quadros para quando o anel alcança o ponto. Fora em toque, movimento reduzido, contraste alto e cores forçadas. Campos de texto mantêm o cursor de texto, e o player do YouTube mantém o dele |
-| Canais | Steam sai de dados, ícones e textos. X entra com `https://x.com/FilmesHDOG`, sem o `?s=20` de compartilhamento do endereço recebido. A varredura veta `steam` no build | O endereço respondeu 200, com o título da conta. Os dados de `src/data/site.ts` alimentam rodapé, Sobre e JSON-LD |
+| Canais | Steam sai de dados, ícones e textos. Desde 08/11/2026, o X é `https://x.com/Olwtelet` e o YouTube é `https://www.youtube.com/@Outelet`, e todo e-mail exibido ou em `mailto:` é `filmeshdonlinegratisbr@gmail.com`. A varredura veta `steam` e qualquer outro endereço de X ou de canal do YouTube no build | Os dois endereços responderam 200, com os títulos "Olwtelet (@Olwtelet) / X" e "Olwtelet - YouTube". Os dados de `src/data/site.ts` alimentam rodapé, menus, Contato, páginas legais, Sobre e JSON-LD. Links de trailer não passam por eles |
 | Trailer | `iframe` de `youtube-nocookie` montado no clique dentro do diálogo existente e removido ao fechar; controles do próprio YouTube; barra customizada oculta; `body::after` desligado enquanto aberto | A política do YouTube não permite sobreposição; nenhuma requisição antes do clique |
 | Saída para o YouTube | Ícone sem texto, junto do X, com nome acessível e o filme escolhido. O clique tira o player na hora e fecha o diálogo | Sem frase na tela. O site não enxerga um player que falhou em outra origem, então não há como mostrar um aviso só quando falha; a saída fica sempre à mão |
 | Tamanho do diálogo | A partir de 768 px, encolhe em 16:9 até caber na janela. Em janela larga e baixa o bloco de 80% da largura passava da altura da tela e levava os controles do player, o X e o link junto. Ao mudar o tamanho da janela ou girar o aparelho, o player volta ao centro | Com a rolagem presa, quem girava o celular com o trailer aberto não tinha como voltar |
@@ -62,7 +62,7 @@ Ponto de retorno do código: `backups/pre-fase2-marca.tar.gz` (193 arquivos, sem
 | Caso, prêmios | `FICHA DA SESSÃO`: data, hora, sala, direção, duração, gêneros, sinais | Letreiro derivado do dado, sem logos |
 | Caso, investidores | `NA SALA`: sala, Discord, data, aviso de que o site não exibe o filme | O original só mostra `h3`, `h4` e `h5`, mais o link da sala que o tema reabilita |
 | Caso, próximo | Próxima na ordem calculada | |
-| Sobre, equipe | Curadoria (Olwtelet) e comunidade (Sala 24), com cartão de teste no lugar de retrato | Nenhuma pessoa inventada |
+| Sobre, equipe | Curadoria (Olwtelet), com a foto do Olwtelet, e comunidade (Sala 24), com a logo da Sala 24. Os originais estão em `reference/brand/`, e os recortes são gerados por `tools/imagens-quem-faz.mjs`. O enquadramento fica no `tema-sinal.css`, seção 7e | Nenhuma pessoa inventada. As imagens são as que o proprietário enviou em 08/11/2026 |
 | Sobre, colaboradores | Discord, YouTube, X | Bloco já oculto pelo CSS original |
 | Contato | E-mail, Discord | Sem telefone nem endereço |
 | Rodapé, newsletter | Feed RSS: endereço, botão que copia de verdade, link | Nenhum dado pessoal coletado; nenhum sucesso simulado |
@@ -255,6 +255,30 @@ Depois de tirar o aperto das letras, sem o build anterior ao lado: Edge sem jane
 | Site original da Siena, no ar, Edge sem janela, n=6 | 3.913 | 3.736 | 1.710 e 1.713 |
 
 O ENTER é um timer fixo de 3,5 s, contado desde que o `app.js` começa a rodar (230 a 490 ms depois da navegação, nas 60 visitas abaixo). Em 60 visitas perfiladas com a abertura nova, 30 no Edge e 30 no Chrome, com jogo aberto, o timer atrasou no máximo 6 ms, a espera do quadro seguinte foi de no máximo 7 ms, e a preparação terminou de 2,75 a 3,3 s antes do timer, nunca depois. A referência antiga de 1.838 ms até a home era de antes da formatação do PC: o site original, medido agora, dá o mesmo valor deste site.
+
+### Contato, canais e imagens de "QUEM FAZ", 08/11/2026
+
+Build final, servido em 4322. O build do commit anterior (`2d4beb2`), servido em 4323, foi usado só para as capturas de antes.
+
+**O que mudou.**
+- **Canais.** O YouTube passou a `https://www.youtube.com/@Outelet` e o X a `https://x.com/Olwtelet`, em `src/data/site.ts`. Rodapé, menu, Sobre e JSON-LD leem desse arquivo. O e-mail público já era `filmeshdonlinegratisbr@gmail.com` e ficou igual. Os links de trailer (`youtube.com/watch` e `/embed`) não passam por esses dados e não mudaram.
+- **Imagens dos cartões.** O cartão "Curadoria" mostra a foto do Olwtelet e o "Comunidade" mostra a logo da Sala 24, no lugar do cartão de teste.
+- **Geometria do painel de imagem.** No cartão de teste, a altura variava com o arquivo que o navegador escolhia, porque o de 640 era 16:9 e o de 800, 2:3. Agora a imagem preenche o painel sem ditar a altura do cartão. A 992 px ou mais, o painel acompanha o texto. De 480 a 991 px, fica em 2:3, como o arquivo de 800. Abaixo de 480 px, mantém os 18rem do original, com a imagem inteira dentro dele, e não mais os 140% de altura.
+- **Foto.** Recorte de x 205 a 625 no original de 736 x 981, alinhado pelo topo. Sai da borda direita o tronco, a perna e o canto inferior da pessoa que segura o guarda-chuva. A mão dela no cabo continua, porque cortar ali cortaria o braço de quem está na foto. A marca "SK23" no canto inferior direito também fica fora do recorte; o original, com a marca, está guardado.
+- **Logo.** Recortada no símbolo com 4% de margem e posta com `object-fit: contain` sobre o preto puro da própria imagem. O padding do painel dá o respiro.
+- **Acabamento.** Uma faixa SMPTE de 3 px fecha a base do painel nos dois cartões. Os dois têm texto alternativo. Os arquivos somam 61 KB nas versões maiores.
+
+| Verificação | Resultado | Observação |
+|---|---|---|
+| `npm run build` | Passou | No build há 66 `mailto:filmeshdonlinegratisbr@gmail.com`, 64 `youtube.com/@Outelet` e 64 `x.com/Olwtelet`, e nenhum endereço antigo |
+| `tools/testes/varredura.mjs` | Nenhum achado | A lista de links externos permitidos agora aceita só esses dois perfis |
+| `tools/testes/paginas.mjs`, links, dados e marca | 583 de 583 | O YouTube respondeu 200 com "Olwtelet - YouTube", e o X respondeu 200 com "Olwtelet (@Olwtelet) / X" |
+| `tools/testes/paginas.mjs`, matriz e menus de Sobre e Contato | 336 de 336 | 8 tamanhos, de 320 a 1920 px: a janela não anda de lado, nenhum texto cortado, imagens completas |
+| `tools/testes/identidade.mjs`, canais | 40 de 40 | Em home, sessão, Sobre, Contato e Termos, o X e o YouTube levam aos perfis novos e todo `mailto:` ao endereço público. O clique no X do rodapé e do menu abre `x.com/Olwtelet` em cinco larguras. O JSON-LD traz os dois |
+| Painéis medidos a 1920, 1440, 1280, 820, 390, 360 e 320 px | Mesmas caixas de antes | 459x367, 339x454, 299x475, 376x565 (antes 563), 355x288, 325x288 e 285x288. Nenhum texto sai do cartão |
+| Capturas antes e depois de cada cartão | 1440, 390 e 320 px | A cabeça e o rosto ficam à vista em todas as larguras; a logo fica grande e centrada |
+
+**O que não foi verificado nesta parte.** Safari, Firefox e aparelhos reais. A foto original tem só 736 px de largura, e o recorte tem 420 px. Em telas de alta densidade, a imagem aparece ampliada até cerca de 2 vezes e fica um pouco macia.
 
 ### Classificação etária dos 26 filmes, 08/11/2026
 
