@@ -57,7 +57,7 @@
       e.preventDefault();
       e.stopPropagation();
       if (!e.repeat) alvo.parentElement.click();
-    } else if (e.code === 'Space' && alvo.matches('button.work-toggle:focus-visible, button.menu-film-item:focus-visible')) {
+    } else if (e.code === 'Space' && alvo.matches('button.work-toggle:focus-visible, button.menu-film-item:focus-visible, button[data-som-alternar]:focus-visible')) {
       e.stopPropagation(); // o botão ativa sozinho e o carrossel não anda; depois de um clique do mouse, o Espaço segue girando
     }
   }, true);
@@ -67,8 +67,37 @@
   var marcado = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'checked');
   function espelhar(campo) {
     var menu = campo.closest('.menu-w');
-    if (menu) menu.classList.toggle(campo.id === 'mainpanel' ? 'com-principal' : 'com-pequeno', marcado.get.call(campo));
+    if (!menu) return;
+    menu.classList.toggle(campo.id === 'mainpanel' ? 'com-principal' : 'com-pequeno', marcado.get.call(campo));
+    avaliar(menu);
   }
+
+  // O menu inteiro está aberto quando um dos dois checkboxes está marcado ou quando o bundle abriu, por classe, a leitura (páginas de
+  // sessão) ou o painel de filme (Programação). Quando isso muda, local-som.js toca abrir ou fechar pelo estado real.
+  var abertoAntes = new WeakMap();
+  function avaliar(menu) {
+    if (!menu || !menu.isConnected) return;
+    var aberto = menu.classList.contains('com-principal') || menu.classList.contains('com-pequeno') ||
+      !!menu.querySelector('[data-menu="casepanel"].open, [data-menu="footagepanel"].open');
+    var antes = abertoAntes.get(menu) || false;
+    abertoAntes.set(menu, aberto);
+    if (antes !== aberto) document.dispatchEvent(new CustomEvent('fhd:menu', { detail: { aberto: aberto } }));
+  }
+  var paineis = new MutationObserver(function (mudancas) {
+    mudancas.forEach(function (m) { avaliar(m.target.closest('.menu-w')); });
+  });
+  function vigiarPaineis(raiz) {
+    if (!raiz.querySelectorAll) return;
+    raiz.querySelectorAll('[data-menu="casepanel"], [data-menu="footagepanel"]').forEach(function (p) {
+      paineis.observe(p, { attributes: true, attributeFilter: ['class'] });
+    });
+  }
+  vigiarPaineis(document);
+  // a cada troca de página o Taxi põe uma vista nova, com outra nav
+  var taxi = document.querySelector('[data-taxi]');
+  if (taxi) new MutationObserver(function (mudancas) {
+    mudancas.forEach(function (m) { m.addedNodes.forEach(vigiarPaineis); });
+  }).observe(taxi, { childList: true });
   Object.defineProperty(HTMLInputElement.prototype, 'checked', {
     configurable: true,
     enumerable: marcado.enumerable,

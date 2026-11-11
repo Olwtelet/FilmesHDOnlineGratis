@@ -58,6 +58,8 @@ const { currentPath } = Astro.props;
       <div data-delay=".4" data-menu="line" class="line-menu light"></div>
       <div class="copyright-menu-text">
         <div class="light">{NAV_COPYRIGHT}</div>
+        {/* silencia os efeitos do site (public/assets/js/local-som.js); o rótulo mostra o estado */}
+        <button type="button" class="menu-som" data-som-alternar><span class="menu-som-ligado">COM SOM</span><span class="menu-som-desligado">SEM SOM</span></button>
       </div>
       <div class="menu-dots-w vert">
         <div class="corner-hole-bg">

@@ -2,7 +2,7 @@
 //   padrao.jpg   preto, símbolo, nome e lema
 //   <slug>.jpg   cena da sessão escurecida, símbolo, nome, data, hora, sala e título
 // Lê src/data/sessoes/*.json direto e monta cada imagem num navegador sem janela, com as fontes e as cores do tema.
-// O símbolo é o "A" colorido de tools/marca.mjs (fundo transparente e halo escuro); o nome é só tipografia.
+// O símbolo é a máscara de tools/marca.mjs; o nome é só tipografia.
 //   node tools/gerar-og.mjs            todas
 //   node tools/gerar-og.mjs <slug>     uma sessão e a padrão
 import fs from 'node:fs';
@@ -23,9 +23,7 @@ const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const BASE = `
 html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #000; color: var(--sinal-texto); }
 body::before { display: none; }
-.simbolo { position: relative; aspect-ratio: .8; }
-/* como no tema: a forma tem a altura da caixa, e o halo, na folga do arquivo, passa um pouco dela sem ser cortado */
-.simbolo::before { content: ""; position: absolute; left: 50%; top: 50%; height: 105.3%; aspect-ratio: 836 / 1034; transform: translate(-50%, -50%); background: url(/assets/img/site/simbolo-cor-768.webp) center / 100% 100% no-repeat; }
+.simbolo { background: currentColor; -webkit-mask: url(/assets/img/site/simbolo-mascara.webp) center / auto 128.3% no-repeat; mask: url(/assets/img/site/simbolo-mascara.webp) center / auto 128.3% no-repeat; aspect-ratio: .8; }
 .faixa { position: absolute; left: 0; right: 0; bottom: 0; height: 12px; background: var(--faixa-smpte); }
 `;
 

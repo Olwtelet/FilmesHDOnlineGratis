@@ -136,26 +136,26 @@ export interface TeamMember {
 }
 
 // Imagens dos cartões, geradas por tools/imagens-quem-faz.mjs a partir dos originais em reference/brand/. O painel da imagem é metade
-// do cartão até 479 px e a largura inteira abaixo disso; o enquadramento de cada uma fica no tema-sinal.css (seção 7e).
-const PAINEL = '(max-width: 479px) 92vw, (max-width: 991px) 46vw, 24vw';
-
+// do cartão a partir de 480 px e a largura inteira até 479 px; o enquadramento de cada uma fica no tema-sinal.css (seção 7e). O pôster
+// do Olwtelet cobre o painel: nos painéis altos ele é desenhado com 0,57 vez a altura do painel de largura, mais largo que o próprio
+// painel, e o sizes acompanha a largura desenhada (medida de 320 a 1920 px).
 const FOTO_OLWTELET: AboutImage = {
-  src: `${IMG}/olwtelet-420.webp`,
-  srcset: `${IMG}/olwtelet-300.webp 300w, ${IMG}/olwtelet-420.webp 420w`,
-  sizes: PAINEL,
-  alt: 'Olwtelet de uniforme escuro, com botões e dragonas dourados, caminhando sob um guarda-chuva.',
-  width: 420,
-  height: 981,
+  src: `${IMG}/olwtelet-860.webp`,
+  srcset: `${IMG}/olwtelet-430.webp 430w, ${IMG}/olwtelet-860.webp 860w`,
+  sizes: '(max-width: 479px) 92vw, (max-width: 599px) 57vw, (max-width: 991px) 47vw, (max-width: 1099px) 36vw, (max-width: 1279px) 28vw, 24vw',
+  alt: 'Retrato do Olwtelet em pixel art, com gorro de Papai Noel e pompom, diante de um céu estrelado e de uma grade neon roxa.',
+  width: 860,
+  height: 1509,
   classe: 'team-img--retrato',
 };
 
 const LOGO_SALA_24: AboutImage = {
-  src: `${IMG}/sala-24-860.webp`,
-  srcset: `${IMG}/sala-24-430.webp 430w, ${IMG}/sala-24-860.webp 860w`,
-  sizes: PAINEL,
-  alt: 'Logo da Sala 24: a letra A em perspectiva, pintada com as barras coloridas de uma carta de teste de TV, sobre fundo preto.',
-  width: 860,
-  height: 1058,
+  src: `${IMG}/sala-24-700.webp`,
+  srcset: `${IMG}/sala-24-350.webp 350w, ${IMG}/sala-24-700.webp 700w`,
+  sizes: '(max-width: 479px) 92vw, (max-width: 991px) 46vw, 24vw',
+  alt: 'Logo da Sala 24: a letra A em perspectiva, branca, sobre fundo preto.',
+  width: 700,
+  height: 860,
   classe: 'team-img--logo',
 };
 

@@ -127,7 +127,7 @@ if (PARTES.includes('abertura')) {
     const formas = await contarFormas(png);
     confere(`abertura ${nome}: nenhuma letra encosta na outra`, formas === 21, `${formas} formas, esperadas 21`);
     confere(`abertura ${nome}: nome não encosta no ENTRAR`, m.btnTopo !== null && m.caixa.bottom <= m.btnTopo, `nome até ${Math.round(m.caixa.bottom)}, botão em ${Math.round(m.btnTopo)}`);
-    confere(`abertura ${nome}: o símbolo grande das imagens de compartilhamento não é pedido`, !pedidos.some((u) => /simbolo-cor-768\.webp|simbolo-mascara/.test(u)));
+    confere(`abertura ${nome}: a máscara grande do símbolo não é pedida`, !pedidos.some((u) => /simbolo-mascara\.webp/.test(u)));
     confere(`abertura ${nome}: console limpo`, !page.erros.length, page.erros.slice(0, 2).join(' | '));
     await ctx.close();
   }

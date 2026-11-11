@@ -161,6 +161,22 @@ const TROCAS = [
     para: '',
   },
   {
+    // Sons: a classe de som do bundle (Pi) tocava o realce a cada entrada do ponteiro, sem limite, e o menu em cliques
+    // alternados, que perdiam o compasso; nunca tocava cta_out nem menu_OUT. public/assets/js/local-som.js assume os sons.
+    // Sem itens, onPageChange (chamado em cada navegação do Taxi) não liga nada e nunca chama play numa lista vazia.
+    arquivo: APP,
+    nome: 'sons do bundle sem gatilhos',
+    de: 'var t1=[{selector:"[data-sound-hover]"}]',
+    para: 'var t1=[]',
+  },
+  {
+    // ...e o primeiro clique não cria os Howl do bundle: os arquivos só são baixados pela camada local, em computador com mouse.
+    arquivo: APP,
+    nome: 'sons do bundle não carregam',
+    de: 'document.removeEventListener("click",e),Pi.loadSounds(),Pi.onPageChange()};document.addEventListener("click",e)',
+    para: 'document.removeEventListener("click",e)}',
+  },
+  {
     // Ajuste de linha do título de cada filme da Siena; nenhuma classe dessas existe mais no HTML.
     arquivo: MAIN,
     nome: 'regras por filme do main.css',

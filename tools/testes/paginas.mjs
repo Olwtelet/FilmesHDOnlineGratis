@@ -13,7 +13,7 @@
 //            mais as cadeias dos local-*.js e do app.js, o content do CSS, RSS, sitemap e robots.
 //   links    cada link interno na forma canônica (o Taxi compara a URL como texto) e cada link externo respondendo.
 //   dados    datas, títulos, duração, RSS, sitemap e JSON-LD conferidos contra src/data/sessoes/*.json.
-//   marca    og:image, favicons, ícones e o símbolo colorido conferidos contra reference/brand/logo.jpg.
+//   marca    og:image, favicons, ícones e a máscara conferidos contra reference/brand/simbolo.png; imagens de QUEM FAZ.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -297,8 +297,6 @@ const MEDIR_ESTRUTURA = () => {
     if (r.width < 1 || r.height < 1) return;
     const est = getComputedStyle(el);
     if (est.backgroundImage !== 'none' || (est.maskImage && est.maskImage !== 'none') || (est.webkitMaskImage && est.webkitMaskImage !== 'none')) return;
-    // imagem pintada num pseudo-elemento (o símbolo da marca vai num ::before) também é conteúdo
-    if (['::before', '::after'].some((p) => { const ps = getComputedStyle(el, p); return ps.content !== 'none' && ps.display !== 'none' && ps.backgroundImage !== 'none'; })) return;
     vazios.push({ el: descreve(el), l: +r.width.toFixed(0), a: +r.height.toFixed(0) });
   });
   const alem = [];
@@ -1157,7 +1155,7 @@ function parteDados() {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Marca: og:image e favicons
+// Marca: og:image, favicons, máscara e imagens de QUEM FAZ
 // ---------------------------------------------------------------------------------------------------------------------
 async function parteMarca() {
   const OG = path.join(DIST, 'og');
@@ -1167,127 +1165,138 @@ async function parteMarca() {
     const m = await sharp(f).metadata();
     confere(`og ${s}: 1200x630 em JPEG`, m.width === 1200 && m.height === 630 && m.format === 'jpeg', `${m.width}x${m.height} ${m.format}`);
   }
-  // A marca é o "A" colorido de reference/brand/logo.jpg. Os derivados têm de ser o arquivo do proprietário reduzido, com as
-  // cores dele, e não um redesenho nem uma silhueta: o recorte e a caixa do símbolo vêm de reference/brand/logo-recorte.json,
-  // que tools/marca.mjs grava ao medir o arquivo.
-  const FONTE = path.join(RAIZ, 'reference/brand/logo.jpg');
-  const R = JSON.parse(fs.readFileSync(path.join(RAIZ, 'reference/brand/logo-recorte.json'), 'utf8'));
-  /** recorte do arquivo, reduzido a w x h, em RGB */
-  const fonteEm = (recorte, w, h) => sharp(FONTE).removeAlpha().extract(recorte).resize(w, h, { kernel: 'lanczos3', fit: 'fill' }).raw().toBuffer();
-  /** diferença média de cor, só nos pixels opacos (o halo é preto, como o fundo do arquivo debaixo dele) */
-  const difOpacos = (rgba, ref) => { let s = 0, n = 0; for (let i = 0; i * 4 < rgba.length; i++) if (rgba[i * 4 + 3] >= 250) { for (let c = 0; c < 3; c++) s += Math.abs(rgba[i * 4 + c] - ref[i * 3 + c]); n += 3; } return n ? s / n : Infinity; };
-  /** quantos pixels opacos têm cor forte (máx - mín > 100): o símbolo colorido, não uma silhueta */
-  const coloridos = (rgba) => { let n = 0; for (let i = 0; i * 4 < rgba.length; i++) if (rgba[i * 4 + 3] >= 250 && Math.max(rgba[i * 4], rgba[i * 4 + 1], rgba[i * 4 + 2]) - Math.min(rgba[i * 4], rgba[i * 4 + 1], rgba[i * 4 + 2]) > 100) n++; return n; };
-  const lf = R.ladoFavicon;
-  const recorteFav = { left: Math.round(R.x0 + R.largura / 2 - lf / 2), top: Math.round(R.y0 + R.altura / 2 - lf / 2), width: lf, height: lf };
-  // Pontos do arquivo, medidos em logo.jpg. INTERNOS: pretos (até 6) do miolo do A, em dois pontos, e da cunha à direita da
-  // linha branca, a 40, 47 e 31 px de qualquer pixel acima de 6. Ficam longe o bastante para que o halo de 24 px não os
-  // repinte se o recorte vazar pelas linhas finas. CASA: a casa preta da escala de cinza (valor 11 e 12, encostada no fundo
-  // externo), que some se o limiar do fundo subir. EXTERNOS: o vão abaixo da travessa e dois pontos de fora.
-  const fonteRgb = await sharp(FONTE).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-  const maxNaFonte = ([x, y]) => { const i = (y * fonteRgb.info.width + x) * 3; return Math.max(fonteRgb.data[i], fonteRgb.data[i + 1], fonteRgb.data[i + 2]); };
-  const INTERNOS = [[581, 679], [586, 758], [732, 826]];
-  const CASA = [[310, 740], [305, 760]];
-  const EXTERNOS = [[700, 1030], [300, 200], [1000, 300]];
-  const pontosNaFonte = [...INTERNOS, ...EXTERNOS].every((p) => maxNaFonte(p) <= 6) && CASA.every((p) => maxNaFonte(p) >= 7 && maxNaFonte(p) <= 20);
-  /** nenhum pixel da moldura do arquivo com alfa 200 ou mais: o halo não encosta na borda e não sai cortado */
-  const molduraLivre = (rgba, w, h) => { for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) if ((y === 0 || x === 0 || y === h - 1 || x === w - 1) && rgba[(y * w + x) * 4 + 3] >= 200) return false; return true; };
-  // o recorte do favicon pode passar da borda do arquivo; o que passa é fundo preto
-  const fonteFav = async (l) => {
-    const dentro = { left: Math.max(0, recorteFav.left), top: Math.max(0, recorteFav.top) };
-    dentro.width = Math.min(1254, recorteFav.left + lf) - dentro.left;
-    dentro.height = Math.min(1254, recorteFav.top + lf) - dentro.top;
-    const quadro = await sharp({ create: { width: lf, height: lf, channels: 3, background: '#000' } }).composite([{ input: await sharp(FONTE).removeAlpha().extract(dentro).png().toBuffer(), left: dentro.left - recorteFav.left, top: dentro.top - recorteFav.top }]).png().toBuffer();
-    return sharp(quadro).resize(l, l, { kernel: 'lanczos3' }).removeAlpha().raw().toBuffer();
-  };
+  // Os ícones têm de ser o arquivo do proprietário reduzido, pixel a pixel, e não um redesenho. O favicon é a mesma forma com
+  // transparência: o alfa segue a luminância do original no recorte em volta do símbolo, e os cantos são transparentes.
+  const FONTE = path.join(RAIZ, 'reference/brand/simbolo.png');
+  /** pixels com cor (máximo menos mínimo dos canais acima de 100) entre os que não são transparentes */
+  const coloridos = (buf, canais) => { let n = 0; for (let i = 0; i < buf.length; i += canais) { if (canais === 4 && buf[i + 3] < 128) continue; if (Math.max(buf[i], buf[i + 1], buf[i + 2]) - Math.min(buf[i], buf[i + 1], buf[i + 2]) > 100) n++; } return n; };
   {
     const arq = path.join(DIST, 'assets/img/site/favicon-32.png');
     const m = await sharp(arq).metadata();
     const rgba = await sharp(arq).ensureAlpha().raw().toBuffer();
-    const cantos = [3, 31 * 4 + 3, 32 * 31 * 4 + 3, 1023 * 4 + 3].map((i) => rgba[i]);
-    const dif = difOpacos(rgba, await fonteFav(32));
-    // os pretos internos continuam opacos no favicon: só o fundo externo sai
-    const alfaFav = (buf, l, [sx, sy]) => buf[(Math.floor(((sy - recorteFav.top) / lf) * l) * l + Math.floor(((sx - recorteFav.left) / lf) * l)) * 4 + 3];
-    const int32 = INTERNOS.map((p) => alfaFav(rgba, 32, p));
-    confere('favicon-32.png: o símbolo de logo.jpg, colorido, com fundo transparente', m.width === 32 && m.hasAlpha && cantos.every((c) => c === 0) && dif < 14 && coloridos(rgba) >= 120 && pontosNaFonte && int32.every((a) => a >= 250) && molduraLivre(rgba, 32, 32), `${m.width}x${m.height}, alfa ${m.hasAlpha}, cantos ${cantos.join(',')}, diferença média ${dif.toFixed(2)}, ${coloridos(rgba)} pixels coloridos, pretos internos ${int32.join(',')}, moldura livre ${molduraLivre(rgba, 32, 32)}`);
+    const a = Buffer.alloc(32 * 32);
+    for (let i = 0; i < a.length; i++) a[i] = rgba[i * 4 + 3];
+    // o branco do favicon é a forma: o halo é preto, então o vermelho pré-multiplicado pelo alfa só vem dela
+    const branco = Buffer.alloc(32 * 32);
+    for (let i = 0; i < branco.length; i++) branco[i] = Math.round((rgba[i * 4] * rgba[i * 4 + 3]) / 255);
+    const fonte = await sharp(FONTE).removeAlpha().toColourspace('b-w').raw().toBuffer({ resolveWithObject: true });
+    const L = fonte.info.width;
+    const alfaFonte = Buffer.from(fonte.data.map((l) => Math.max(0, Math.min(255, Math.round(((l - 24) * 255) / (232 - 24))))));
+    let x0 = L, y0 = L, x1 = 0, y1 = 0;
+    for (let y = 0; y < L; y++) for (let x = 0; x < L; x++) if (alfaFonte[y * L + x] > 8) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+    const lado = Math.round(Math.max(x1 - x0 + 1, y1 - y0 + 1) * 1.08);
+    const meio = (p, q) => Math.max(0, Math.min(L - lado, Math.round((p + q + 1) / 2 - lado / 2)));
+    const b = await sharp(alfaFonte, { raw: { width: L, height: L, channels: 1 } }).extract({ left: meio(x0, x1), top: meio(y0, y1), width: lado, height: lado }).resize(32, 32, { kernel: 'lanczos3' }).extractChannel(0).raw().toBuffer();
+    let soma = 0;
+    for (let i = 0; i < a.length; i++) soma += Math.abs(branco[i] - b[i]);
+    const cantos = [a[0], a[31], a[32 * 31], a[1023]];
+    const cor = coloridos(rgba, 4);
+    confere('favicon-32.png: a forma de simbolo.png com transparência, em preto e branco', m.width === 32 && m.hasAlpha && cantos.every((c) => c === 0) && soma / a.length < 6 && cor === 0, `${m.width}x${m.height}, alfa ${m.hasAlpha}, cantos ${cantos.join(',')}, diferença média ${(soma / a.length).toFixed(2)}, ${cor} pixels com cor`);
     // legível nas guias: sobre um fundo claro e um escuro, quantos pixels se afastam do fundo em mais de 60 de luminância
     for (const [nomeFundo, fundo] of [['clara', 255], ['escura', 32]]) {
       let vistos = 0;
-      for (let i = 0; i < 1024; i++) {
-        const al = rgba[i * 4 + 3] / 255;
-        const lum = 0.2126 * rgba[i * 4] + 0.7152 * rgba[i * 4 + 1] + 0.0722 * rgba[i * 4 + 2];
-        if (Math.abs(lum * al + fundo * (1 - al) - fundo) > 60) vistos++;
-      }
+      for (let i = 0; i < a.length; i++) { const al = a[i] / 255; if (Math.abs(rgba[i * 4] * al + fundo * (1 - al) - fundo) > 60) vistos++; }
       confere(`favicon-32.png: legível numa guia ${nomeFundo}`, vistos >= 120, `${vistos} pixels destacados do fundo`);
     }
     const svg = fs.readFileSync(path.join(DIST, 'assets/img/site/favicon.svg'), 'utf8');
-    const x = /id="simbolo" href="data:image\/png;base64,([^"]+)"/.exec(svg);
-    let okSvg = false, detSvg = 'sem imagem embutida';
-    if (x) {
-      const png = Buffer.from(x[1], 'base64');
-      const ms = await sharp(png).metadata();
-      const r96 = await sharp(png).ensureAlpha().raw().toBuffer();
-      const d96 = difOpacos(r96, await fonteFav(96));
-      const int96 = INTERNOS.map((p) => alfaFav(r96, 96, p));
-      okSvg = ms.width === 96 && ms.hasAlpha && r96[3] === 0 && d96 < 14 && coloridos(r96) >= 1000 && !svg.includes('<mask') && int96.every((a) => a >= 250) && molduraLivre(r96, 96, 96);
-      detSvg = `${ms.width}x${ms.height}, diferença média ${d96.toFixed(2)}, ${coloridos(r96)} pixels coloridos, máscara ${svg.includes('<mask')}, pretos internos ${int96.join(',')}, moldura livre ${molduraLivre(r96, 96, 96)}`;
+    const embutida = (id) => { const x = new RegExp(`id="${id}" href="data:image/png;base64,([^"]+)"`).exec(svg); return x ? Buffer.from(x[1], 'base64') : null; };
+    const formaSvg = embutida('forma');
+    const haloSvg = embutida('halo');
+    let somaSvg = Infinity, contem = false;
+    if (formaSvg && haloSvg) {
+      const f32 = await sharp(formaSvg).resize(32, 32, { kernel: 'lanczos3' }).extractChannel(3).raw().toBuffer();
+      somaSvg = 0;
+      for (let i = 0; i < f32.length; i++) somaSvg += Math.abs(f32[i] - b[i]);
+      somaSvg /= f32.length;
+      const fa = await sharp(formaSvg).extractChannel(3).raw().toBuffer();
+      const ha = await sharp(haloSvg).extractChannel(3).raw().toBuffer();
+      contem = fa.every((v, i) => ha[i] >= v);
     }
-    confere('favicon.svg: o mesmo símbolo colorido, transparente, sem máscara monocromática', okSvg, detSvg);
+    confere('favicon.svg: a mesma forma, com halo em volta, e as cores dos dois temas', somaSvg < 6 && contem && svg.includes('prefers-color-scheme:light') && svg.includes('#f{fill:#fff}'), `diferença média ${Number.isFinite(somaSvg) ? somaSvg.toFixed(2) : '-'}, halo contém a forma ${contem}`);
     const html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
-    confere('favicon: SVG, PNG e ícone de toque declarados com a versão 3', html.includes('favicon.svg?v=3') && html.includes('rel="icon" type="image/svg+xml"') && html.includes('favicon-32.png?v=3') && html.includes('icone-toque-180.png?v=3'));
+    // v=4: fura o cache de quem viu a marca colorida (v=3)
+    confere('favicon: SVG, PNG e ícone de toque declarados com a versão 4', html.includes('favicon.svg?v=4') && html.includes('rel="icon" type="image/svg+xml"') && html.includes('favicon-32.png?v=4') && html.includes('icone-toque-180.png?v=4'));
   }
   for (const [nome, lado] of [['icone-toque-180.png', 180], ['icone-512.png', 512]]) {
     const arq = path.join(DIST, 'assets/img/site', nome);
     const a = await sharp(arq).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-    const b = await fonteEm({ left: R.icone.left, top: R.icone.top, width: R.icone.lado, height: R.icone.lado }, lado, lado);
+    const b = await sharp(FONTE).removeAlpha().resize(lado, lado).raw().toBuffer({ resolveWithObject: true });
     let soma = 0, maior = 0;
-    for (let i = 0; i < a.data.length; i++) { const d = Math.abs(a.data[i] - b[i]); soma += d; maior = Math.max(maior, d); }
+    for (let i = 0; i < a.data.length; i++) { const d = Math.abs(a.data[i] - b.data[i]); soma += d; maior = Math.max(maior, d); }
     const media = soma / a.data.length;
-    confere(`${nome}: logo.jpg recortado em volta do símbolo, sem redesenho`, a.info.width === lado && a.info.height === lado && media < 1, `${a.info.width}x${a.info.height} diferença média ${media.toFixed(3)} máxima ${maior}`);
+    confere(`${nome}: igual a simbolo.png reduzido`, a.info.width === lado && a.info.height === lado && media < 1, `${a.info.width}x${a.info.height} diferença média ${media.toFixed(3)} máxima ${maior}`);
   }
-  // O símbolo do menu, do rodapé e do Sobre: as cores do arquivo, fundo externo transparente, pretos internos mantidos.
-  {
-    const arq = path.join(DIST, 'assets/img/site/simbolo-cor-256.webp');
-    const m = await sharp(arq).metadata();
-    const rgba = await sharp(arq).ensureAlpha().raw().toBuffer();
-    const M = R.margemSimbolo;
-    const recorte = { left: R.x0 - M, top: R.y0 - M, width: R.largura + 2 * M, height: R.altura + 2 * M };
-    const dif = difOpacos(rgba, await fonteEm(recorte, m.width, m.height));
-    const alfaEm = (sx, sy) => { const x = Math.round(((sx - recorte.left) / recorte.width) * m.width), y = Math.round(((sy - recorte.top) / recorte.height) * m.height); return rgba[(y * m.width + x) * 4 + 3]; };
-    // os pontos de INTERNOS, CASA e EXTERNOS estão descritos acima, junto do favicon
-    const internos = [...INTERNOS, ...CASA].map(([x, y]) => alfaEm(x, y));
-    const externos = EXTERNOS.map(([x, y]) => alfaEm(x, y));
-    confere('simbolo-cor-256.webp: as cores de logo.jpg, só o fundo externo transparente', m.hasAlpha && dif < 10 && pontosNaFonte && internos.every((v) => v === 255) && externos.every((v) => v === 0) && coloridos(rgba) >= 8000, `${m.width}x${m.height}, diferença média ${dif.toFixed(2)}, pontos conferidos na fonte ${pontosNaFonte}, pretos internos e casa preta ${internos.join(',')}, fundo externo ${externos.join(',')}, ${coloridos(rgba)} pixels coloridos`);
-    // halo: em volta da silhueta, uma borda escura opaca; sobre branco o símbolo não perde o contorno
-    let borda = 0, bordaEscura = 0;
-    for (let y = 1; y < m.height - 1; y++) for (let x = 1; x < m.width - 1; x++) {
-      const i = y * m.width + x;
-      // a redução suaviza a borda: a silhueta é onde o alfa cruza a metade
-      if (rgba[i * 4 + 3] >= 128 && [i - 1, i + 1, i - m.width, i + m.width].some((j) => rgba[j * 4 + 3] < 128)) { borda++; if (Math.max(rgba[i * 4], rgba[i * 4 + 1], rgba[i * 4 + 2]) < 40) bordaEscura++; }
-    }
-    confere('simbolo-cor-256.webp: contorno escuro em volta da silhueta', borda > 0 && bordaEscura / borda > 0.97, `${bordaEscura} de ${borda} pixels da borda escuros`);
-    // o laço acima pula a moldura: um halo cortado pela borda do arquivo só aparece nela
-    const grande = await sharp(path.join(DIST, 'assets/img/site/simbolo-cor-768.webp')).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-    confere('simbolo-cor-256.webp e -768: o halo não encosta na borda do arquivo', molduraLivre(rgba, m.width, m.height) && molduraLivre(grande.data, grande.info.width, grande.info.height), `256 ${molduraLivre(rgba, m.width, m.height)}, 768 ${molduraLivre(grande.data, grande.info.width, grande.info.height)}`);
+  // A máscara do símbolo, nas duas resoluções (a de 256 é a do menu, do rodapé e do Sobre): o alfa segue a luminância do original.
+  for (const nome of ['simbolo-mascara.webp', 'simbolo-mascara-256.webp']) {
+    const alfa = await sharp(path.join(DIST, 'assets/img/site', nome)).ensureAlpha().extractChannel('alpha').raw().toBuffer({ resolveWithObject: true });
+    const lum = await sharp(FONTE).removeAlpha().greyscale().resize(alfa.info.width, alfa.info.height).raw().toBuffer();
+    let divergentes = 0;
+    for (let i = 0; i < alfa.data.length; i++) if ((alfa.data[i] > 127) !== (lum[i] > 127)) divergentes++;
+    const frac = divergentes / alfa.data.length;
+    confere(`${nome}: mesma forma de simbolo.png`, frac < (alfa.info.width < 512 ? 0.006 : 0.002), `${(frac * 100).toFixed(3)}% de pixels divergentes`);
   }
-  // Nada da marca anterior: nem a máscara monocromática nem quem a peça
-  const antigos = ['simbolo-mascara.webp', 'simbolo-mascara-256.webp', 'simbolo-transparente.png'].filter((f) => fs.existsSync(path.join(DIST, 'assets/img/site', f)));
-  const tema = fs.readFileSync(path.join(DIST, 'assets/css/tema-sinal.css'), 'utf8');
-  confere('marca anterior fora do build', !antigos.length && !/simbolo-mascara|simbolo-transparente/.test(tema) && !fs.existsSync(path.join(RAIZ, 'reference/brand/simbolo.png')), antigos.join(', '));
-  // O símbolo não mescla em lugar nenhum: nenhuma regra põe mix-blend-mode diferente de normal na caixa .marca-nav inteira
-  const semComentarios = tema.replace(/\/\*[\s\S]*?\*\//g, '');
-  const mesclaNaCaixa = [...semComentarios.matchAll(/([^{}]*)\{([^{}]*)\}/g)].some(([, sel, corpo]) => /mix-blend-mode:\s*(?!normal\b)[a-z]/.test(corpo) && sel.split(',').some((s) => /\.marca-nav\s*$/.test(s.trim()) || /\.marca-simbolo/.test(s)));
-  confere('tema: o símbolo colorido não mescla com o fundo', /\.marca-nav \.marca-simbolo \{[^}]*mix-blend-mode: normal/.test(tema) && !mesclaNaCaixa);
-  // A imagem inteira, com o halo, é pintada: o ::before é 105,3% mais alto que a caixa e estica o arquivo nele, sem cortar a folga
-  confere('tema: o símbolo é pintado com o halo inteiro', /\.marca-simbolo::before \{[^}]*height: 105\.3%;[^}]*aspect-ratio: 836 \/ 1034;[^}]*simbolo-cor-256\.webp\?v=3\) center \/ 100% 100% no-repeat/.test(tema));
-  // Imagens de compartilhamento, todas: o símbolo colorido na área dele, e não o A branco
-  for (const [s, caixa, minimo] of [['padrao', { left: 490, top: 100, width: 220, height: 280 }, 2000], ...SLUGS.map((slug) => [slug, { left: 50, top: 38, width: 80, height: 100 }, 250])]) {
+  // O tema pinta a máscara na cor do texto, com o filho em difference no menu e a caixa inteira em difference no celular.
+  // Com o trailer aberto, o símbolo recua só pela cor, como o nome.
+  const tema = fs.readFileSync(path.join(DIST, 'assets/css/tema-sinal.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  const regras = [...tema.matchAll(/([^{}]*)\{([^{}]*)\}/g)].map(([, sel, corpo]) => ({ sel: sel.trim(), corpo }));
+  const simbolo = regras.find((r) => r.sel === '.marca-simbolo');
+  confere('tema: o símbolo é a máscara de simbolo.png na cor do texto', !!simbolo && /background-color:\s*currentColor/.test(simbolo.corpo) && /(^|[;\s])mask:\s*url\(\/assets\/img\/site\/simbolo-mascara-256\.webp\) center \/ auto 128\.3% no-repeat/.test(simbolo.corpo), simbolo ? simbolo.corpo.trim().slice(0, 120) : 'sem regra .marca-simbolo');
+  confere('tema: no menu o símbolo e o nome mesclam em difference', regras.some((r) => r.sel === '.marca-nav > *' && /mix-blend-mode:\s*difference/.test(r.corpo)) && /max-width:\s*479px\)\s*\{\s*\.marca-nav\s*\{[^}]*mix-blend-mode:\s*difference/.test(tema));
+  confere('tema: o símbolo não tem ::before nem recuo por opacidade', !regras.some((r) => /\.marca-simbolo::before/.test(r.sel)) && !regras.some((r) => /trailer-aberto/.test(r.sel) && /\.marca-simbolo/.test(r.sel) && /opacity/.test(r.corpo)));
+  // Nada da marca colorida de 09/11/2026: nem os derivados, nem as fontes, nem um gerador que os peça.
+  const coloridosSite = ['simbolo-cor-256.webp', 'simbolo-cor-768.webp'].filter((f) => fs.existsSync(path.join(DIST, 'assets/img/site', f)));
+  const fontesColoridas = ['logo.jpg', 'logo-recorte.json', 'Logo da Sala 24.jpg'].filter((f) => fs.existsSync(path.join(RAIZ, 'reference/brand', f)));
+  const geradores = ['tools/marca.mjs', 'tools/gerar-og.mjs', 'tools/imagens-quem-faz.mjs'].filter((f) => /logo\.jpg|logo-recorte|simbolo-cor|Logo da Sala 24/.test(fs.readFileSync(path.join(RAIZ, f), 'utf8')));
+  confere('marca colorida fora do build, das fontes e dos geradores', !coloridosSite.length && !fontesColoridas.length && !geradores.length && !/simbolo-cor/.test(tema) && fs.existsSync(FONTE), [...coloridosSite, ...fontesColoridas, ...geradores].join(', '));
+  // Imagens de compartilhamento, todas: o símbolo branco na área dele, sem cor
+  for (const [s, caixa, minimo] of [['padrao', { left: 490, top: 100, width: 220, height: 280 }, 15000], ...SLUGS.map((slug) => [slug, { left: 50, top: 38, width: 80, height: 100 }, 2000])]) {
     const f = path.join(OG, `${s}.jpg`);
     if (!fs.existsSync(f)) continue;
     const px = await sharp(f).extract(caixa).removeAlpha().raw().toBuffer();
-    let cor = 0;
-    for (let i = 0; i < px.length; i += 3) if (Math.max(px[i], px[i + 1], px[i + 2]) - Math.min(px[i], px[i + 1], px[i + 2]) > 100) cor++;
-    confere(`og ${s}: o símbolo colorido`, cor >= minimo, `${cor} pixels coloridos na área do símbolo`);
+    let cor = 0, brancos = 0;
+    for (let i = 0; i < px.length; i += 3) {
+      const mx = Math.max(px[i], px[i + 1], px[i + 2]), mn = Math.min(px[i], px[i + 1], px[i + 2]);
+      if (mx - mn > 100) cor++;
+      if (mn > 200 && mx - mn < 24) brancos++;
+    }
+    confere(`og ${s}: o símbolo branco`, cor <= 20 && brancos >= minimo, `${brancos} pixels brancos e ${cor} com cor na área do símbolo`);
+  }
+  // QUEM FAZ, Sala 24: o símbolo preto e branco, recortado de simbolo.png com 4% de margem, sem cor e sem redesenho
+  {
+    const fonte = await sharp(FONTE).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+    let x0 = fonte.info.width, y0 = fonte.info.height, x1 = -1, y1 = -1;
+    for (let y = 0; y < fonte.info.height; y++) for (let x = 0; x < fonte.info.width; x++) { const i = (y * fonte.info.width + x) * 3; if (Math.max(fonte.data[i], fonte.data[i + 1], fonte.data[i + 2]) > 40) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); } }
+    const mg = Math.round((y1 - y0 + 1) * 0.04);
+    const recorte = { left: x0 - mg, top: y0 - mg, width: x1 - x0 + 1 + 2 * mg, height: y1 - y0 + 1 + 2 * mg };
+    for (const w of [700, 350]) {
+      const arq = path.join(DIST, 'assets/img/sobre', `sala-24-${w}.webp`);
+      if (!fs.existsSync(arq)) { confere(`sala-24-${w}.webp`, false, 'não existe'); continue; }
+      const a = await sharp(arq).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+      const b = await sharp(FONTE).removeAlpha().extract(recorte).resize({ width: w }).raw().toBuffer({ resolveWithObject: true });
+      let soma = 0;
+      for (let i = 0; i < Math.min(a.data.length, b.data.length); i++) soma += Math.abs(a.data[i] - b.data[i]);
+      const media = soma / a.data.length, cor = coloridos(a.data, 3);
+      confere(`sala-24-${w}.webp: simbolo.png recortado, em preto e branco`, a.info.width === b.info.width && a.info.height === b.info.height && media < 2 && cor === 0, `${a.info.width}x${a.info.height}, diferença média ${media.toFixed(2)}, ${cor} pixels com cor`);
+    }
+  }
+  // QUEM FAZ, Olwtelet: o pôster é a goat.png inteira, sem esticar, com céu estendido em cima. Abaixo das 50 linhas de
+  // transição, a imagem tem de ser a original reduzida.
+  {
+    const goat = path.join(RAIZ, 'reference/brand/goat.png');
+    for (const w of [860, 430]) {
+      const arq = path.join(DIST, 'assets/img/sobre', `olwtelet-${w}.webp`);
+      if (!fs.existsSync(arq)) { confere(`olwtelet-${w}.webp`, false, 'não existe'); continue; }
+      const m = await sharp(arq).metadata();
+      const escala = w / 1254, topo = Math.round(m.height - 1254 * escala), corte = Math.ceil(60 * escala);
+      const a = await sharp(arq).removeAlpha().extract({ left: 0, top: topo + corte, width: w, height: m.height - topo - corte }).raw().toBuffer();
+      const b = await sharp(goat).removeAlpha().resize(w, Math.round(1254 * escala)).extract({ left: 0, top: corte, width: w, height: Math.round(1254 * escala) - corte }).raw().toBuffer();
+      let soma = 0;
+      const n = Math.min(a.length, b.length);
+      for (let i = 0; i < n; i++) soma += Math.abs(a[i] - b[i]);
+      confere(`olwtelet-${w}.webp: goat.png sem esticar, com o céu estendido em cima`, Math.abs(m.height / w - 2200 / 1254) < 0.01 && soma / n < 6, `${m.width}x${m.height}, diferença média ${(soma / n).toFixed(2)} na parte original`);
+    }
+    const sobra = ['olwtelet-300.webp', 'olwtelet-420.webp', 'sala-24-430.webp', 'sala-24-860.webp'].filter((f) => fs.existsSync(path.join(DIST, 'assets/img/sobre', f)));
+    confere('QUEM FAZ: nenhuma imagem antiga no build', !sobra.length, sobra.join(', '));
   }
 }
 

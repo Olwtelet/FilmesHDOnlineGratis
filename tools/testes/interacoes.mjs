@@ -1171,67 +1171,240 @@ async function secaoMouse() {
 
 // ===================== SOM
 async function secaoSom() {
+  // public/assets/js/local-som.js: realce no hover dos botões de ação (cta_in), acionar no clique (cta_out), abrir e fechar o menu
+  // (menu_IN e menu_OUT), botão de silenciar no menu, nada no toque. A classe de som do app.js fica sem gatilhos (patch-bundle).
+  const gravarToques = () => {
+    window.__toques = [];
+    const p = window.Howl.prototype.play;
+    window.Howl.prototype.play = function () { window.__toques.push(String(this._src).split('/').pop()); return p.apply(this, arguments); };
+  };
+  const toques = (page) => page.evaluate(() => window.__toques.slice());
+  const zerar = (page) => page.evaluate(() => { window.__toques.length = 0; });
+  const contar = (lista, nome) => lista.filter((x) => x === nome).length;
+  // um botão de ação visível, que não seja o do ponto informado
+  const botaoNaTela = (page, longeDe) => page.evaluate((longe) => {
+    const a = [...document.querySelectorAll('[data-sound-hover="0"]')].find((e) => { const r = e.getBoundingClientRect(); if (!r.width || r.top < 0 || r.bottom > innerHeight || getComputedStyle(e).visibility === 'hidden') return false; return !longe || Math.hypot(r.x + r.width / 2 - longe.x, r.y + r.height / 2 - longe.y) > 80; });
+    if (!a) return null;
+    const r = a.getBoundingClientRect();
+    return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
+  }, longeDe || null);
+
   await tenta('som', async () => {
     const mp3 = [];
     const { ctx, page } = await abrir({ caminho: '/', quando: JULHO, antes: async (p) => { p.on('response', (r) => { if (/\.mp3(\?|$)/.test(r.url())) mp3.push([r.url().split('/').pop(), r.status()]); }); } });
     await pronta(page);
-    confere('som: nada é baixado antes do primeiro clique', mp3.length === 0, mp3.join());
-    const global = await page.evaluate(() => {
-      if (!window.Howl) return false;
-      window.__toques = [];
-      const p = window.Howl.prototype.play;
-      window.Howl.prototype.play = function () { window.__toques.push(String(this._src).split('/').pop()); return p.apply(this, arguments); };
-      return true;
-    });
+    confere('som: nada é baixado antes da primeira interação', mp3.length === 0, mp3.join());
+    const global = await page.evaluate(() => typeof window.Howl === 'function');
     confere('som: Howler presente', global);
+    await page.evaluate(gravarToques);
     await page.mouse.move(700, 500);
-    await page.mouse.click(700, 500); // primeiro clique: contexto de áudio e carga dos arquivos
+    await page.mouse.click(700, 500); // primeira interação: contexto de áudio e carga dos arquivos
     await page.waitForFunction(() => window.Howler?._howls?.length >= 4 && window.Howler._howls.every((h) => h.state() !== 'loading'), null, ESPERA);
-    const est = await page.evaluate(() => ({ estados: window.Howler._howls.map((h) => [String(h._src).split('/').pop(), h.state()]), ctx: window.Howler.ctx?.state, webAudio: window.Howler.usingWebAudio }));
-    confere('som: os 4 arquivos carregam', est.estados.length === 4 && est.estados.every((e) => e[1] === 'loaded'), JSON.stringify(est));
+    const est = await page.evaluate(() => ({ estados: window.Howler._howls.map((h) => [String(h._src).split('/').pop(), h.state()]), webAudio: window.Howler.usingWebAudio }));
+    confere('som: os 4 arquivos carregam, uma vez só', est.estados.length === 4 && est.estados.every((e) => e[1] === 'loaded'), JSON.stringify(est));
     await dorme(page, 300);
     const nomes = mp3.map((m) => m[0]).sort().join();
     confere('som: os 4 arquivos respondem 200', mp3.length === 4 && mp3.every((m) => m[1] === 200) && nomes === 'cta_in.mp3,cta_out.mp3,menu_IN.mp3,menu_OUT.mp3', nomes);
-    // passar o mouse no EXPLORAR toca cta_in
-    const ponto = await page.evaluate(() => { const a = [...document.querySelectorAll('[data-sound-hover="0"]')].find((e) => { const r = e.getBoundingClientRect(); return r.width && r.top > 0 && r.bottom < innerHeight && getComputedStyle(e).visibility !== 'hidden'; }); if (!a) return null; const r = a.getBoundingClientRect(); return { x: r.x + r.width / 2, y: r.y + r.height / 2 }; });
-    confere('som: há gatilho de hover na tela', !!ponto, JSON.stringify(ponto));
+
+    // realce: passar o mouse num botão de ação toca cta_in uma vez, mesmo mexendo dentro dele
+    const ponto = await botaoNaTela(page);
+    confere('som: há botão de ação na tela', !!ponto, JSON.stringify(ponto));
     await page.mouse.move(300, 300, { steps: 2 });
+    await dorme(page, 250);
+    await zerar(page);
+    await page.mouse.move(ponto.x, ponto.y, { steps: 4 });
+    await dorme(page, 120);
+    await page.mouse.move(ponto.x + 3, ponto.y + 2, { steps: 3 });
+    await dorme(page, 300);
+    let t = await toques(page);
+    confere('som: hover no botão toca cta_in uma vez', contar(t, 'cta_in.mp3') === 1 && t.length === 1, t.join());
+    // o ponteiro parado não conta: um botão que passa sob ele (o carrossel girando) não toca
+    await zerar(page);
+    await dorme(page, 300);
+    const outro = await botaoNaTela(page, ponto);
+    if (outro) {
+      await page.evaluate((p) => { const el = document.elementFromPoint(p.x, p.y)?.closest('[data-sound-hover="0"]') || document.querySelector('[data-sound-hover="0"]'); el.dispatchEvent(new PointerEvent('pointerover', { bubbles: true, pointerType: 'mouse', clientX: p.x, clientY: p.y })); }, outro);
+      await dorme(page, 200);
+    }
+    t = await toques(page);
+    confere('som: sem movimento do ponteiro, um botão novo sob ele não toca', t.length === 0, t.join());
+
+    // menu: abrir toca menu_IN e fechar toca menu_OUT, uma vez cada
+    await page.mouse.move(600, 600, { steps: 2 });
     await dorme(page, 200);
-    await page.mouse.move(ponto.x, ponto.y, { steps: 3 });
-    await dorme(page, 400);
-    const t1 = await page.evaluate(() => window.__toques.slice());
-    confere('som: hover no botão chama play de cta_in', t1.includes('cta_in.mp3'), t1.join());
-    // clique no menu toca menu_IN
-    await page.mouse.move(600, 600);
-    await page.click(ALVO.principal);
-    await dorme(page, 1300);
-    const t2 = await page.evaluate(() => window.__toques.slice());
-    confere('som: clique no menu chama play de menu_IN', t2.includes('menu_IN.mp3'), t2.join());
-    await page.click(ALVO.principal);
-    await dorme(page, 900);
-    // depois de uma troca de página o gatilho continua vivo e não duplica
-    await page.evaluate(() => { window.__toques.length = 0; });
+    await zerar(page);
+    await abrirMouse(page, 'principal');
+    t = await toques(page);
+    confere('som: abrir o menu toca menu_IN uma vez', contar(t, 'menu_IN.mp3') === 1 && t.length === 1, t.join());
+    await zerar(page);
+    await fecharMouse(page, 'principal');
+    t = await toques(page);
+    confere('som: fechar o menu toca menu_OUT uma vez', contar(t, 'menu_OUT.mp3') === 1 && t.length === 1, t.join());
+
+    // silenciar: o botão no rodapé do menu desliga tudo, e a escolha atravessa a navegação do Taxi
+    await abrirMouse(page, 'principal');
+    const botao = await page.evaluate(() => { const b = document.querySelector('[data-menu="mainpanel"] [data-som-alternar]'); if (!b) return null; const r = b.getBoundingClientRect(); return { x: r.x + r.width / 2, y: r.y + r.height / 2, w: r.width, texto: b.innerText.trim() }; });
+    confere('som: o botão COM SOM aparece no menu', !!botao && botao.w > 0 && botao.texto === 'COM SOM', JSON.stringify(botao));
+    // o nome do site, ao lado, continua numa linha só: o painel não ganha altura
+    const linhasCopyright = await page.evaluate(() => { const r = document.createRange(); r.selectNodeContents(document.querySelector('[data-menu="mainpanel"] .copyright-menu-text .light')); return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size; });
+    confere('som: o copyright continua numa linha ao lado do botão', linhasCopyright === 1, String(linhasCopyright));
+    await page.mouse.click(botao.x, botao.y);
+    await dorme(page, 300);
+    const desligado = await page.evaluate(() => ({ classe: document.documentElement.classList.contains('sons-desligados'), texto: document.querySelector('[data-menu="mainpanel"] [data-som-alternar]').innerText.trim(), mudo: window.Howler._muted }));
+    confere('som: o botão silencia e mostra SEM SOM', desligado.classe && desligado.texto === 'SEM SOM' && desligado.mudo === true, JSON.stringify(desligado));
+    await zerar(page);
+    await fecharMouse(page, 'principal');
+    await page.mouse.move(300, 300, { steps: 2 });
+    const p2 = await botaoNaTela(page);
+    if (p2) await page.mouse.move(p2.x, p2.y, { steps: 4 });
+    await dorme(page, 300);
+    t = await toques(page);
+    confere('som: silenciado, nem o menu nem o hover tocam', t.length === 0, t.join());
     await page.evaluate(() => document.querySelector('[data-menu="mainpanel"] a[href="/sobre/"]').click());
     await esperarPagina(page, 'about', '/sobre/');
-    await page.evaluate(() => { window.__toques.length = 0; });
-    await page.mouse.move(600, 600);
-    await page.click(ALVO.principal);
-    await dorme(page, 1200);
-    const t3 = await page.evaluate(() => window.__toques.slice());
-    confere('som: depois do Taxi o clique no menu chama play uma vez', t3.filter((x) => x === 'menu_IN.mp3').length === 1, t3.join());
+    await abrirMouse(page, 'principal');
+    const aposTaxi = await page.evaluate(() => ({ texto: document.querySelector('[data-menu="mainpanel"] [data-som-alternar]').innerText.trim(), howls: window.Howler._howls.length }));
+    t = await toques(page);
+    confere('som: depois do Taxi continua silenciado, sem tocar e sem recarregar', aposTaxi.texto === 'SEM SOM' && aposTaxi.howls === 4 && t.length === 0, JSON.stringify({ ...aposTaxi, toques: t }));
+    const b2 = await page.evaluate(() => { const r = document.querySelector('[data-menu="mainpanel"] [data-som-alternar]').getBoundingClientRect(); return { x: r.x + r.width / 2, y: r.y + r.height / 2 }; });
+    await page.mouse.click(b2.x, b2.y);
+    await dorme(page, 300);
+    await zerar(page);
+    await fecharMouse(page, 'principal');
+    t = await toques(page);
+    confere('som: religado, fechar o menu volta a tocar', contar(t, 'menu_OUT.mp3') === 1 && !(await page.evaluate(() => window.Howler._muted)), t.join());
+
+    // volta à home pelo logo: nada em dobro
+    await page.evaluate(() => document.querySelector('.nav-link.logo').click());
+    await esperarPagina(page, 'home', '/');
+    await dorme(page, 800);
+    await page.mouse.move(200, 200, { steps: 2 });
+    await dorme(page, 250);
+    await zerar(page);
+    const p3 = await botaoNaTela(page);
+    if (p3) await page.mouse.move(p3.x, p3.y, { steps: 4 });
+    await dorme(page, 300);
+    await page.mouse.move(600, 600, { steps: 2 });
+    await dorme(page, 200);
+    await abrirMouse(page, 'principal');
+    await fecharMouse(page, 'principal');
+    t = await toques(page);
+    confere('som: na volta à home cada gesto toca uma vez', contar(t, 'cta_in.mp3') === (p3 ? 1 : 0) && contar(t, 'menu_IN.mp3') === 1 && contar(t, 'menu_OUT.mp3') === 1 && (await page.evaluate(() => window.Howler._howls.length)) === 4, t.join());
+
+    // teclado: Enter no gatilho abre e fecha com som, mesmo mais de 0,8 s depois da tecla anterior
+    const porTeclado = async () => {
+      await page.keyboard.press('Shift');
+      await page.evaluate(() => document.getElementById('mainpanel').focus());
+      await dorme(page, 1100);
+      await zerar(page);
+      await page.keyboard.press('Enter');
+      await page.waitForFunction(() => document.getElementById('mainpanel')?.checked, null, ESPERA);
+      await dorme(page, 1300);
+      const abrir = await toques(page);
+      await zerar(page);
+      await page.keyboard.press('Enter');
+      await page.waitForFunction(() => !document.getElementById('mainpanel')?.checked, null, ESPERA);
+      await dorme(page, 900);
+      return { abrir, fechar: await toques(page) };
+    };
+    const tec = await porTeclado();
+    confere('som: pelo teclado, abrir e fechar o menu tocam menu_IN e menu_OUT', contar(tec.abrir, 'menu_IN.mp3') === 1 && contar(tec.fechar, 'menu_OUT.mp3') === 1, JSON.stringify(tec));
+    // Espaço no botão de som alterna o som e não gira o carrossel nem fecha o menu
+    await abrirMouse(page, 'principal');
+    await page.keyboard.press('Shift');
+    await page.evaluate(() => document.querySelector('[data-menu="mainpanel"] [data-som-alternar]').focus());
+    await page.keyboard.press('Space');
+    await dorme(page, 400);
+    const espaco = await page.evaluate(() => ({ desligado: document.documentElement.classList.contains('sons-desligados'), aberto: document.getElementById('mainpanel').checked }));
+    await page.keyboard.press('Space');
+    await dorme(page, 300);
+    const espaco2 = await page.evaluate(() => document.documentElement.classList.contains('sons-desligados'));
+    confere('som: Espaço no botão silencia e religa, com o menu aberto', espaco.desligado && espaco.aberto && !espaco2, JSON.stringify({ ...espaco, depois: espaco2 }));
+    await fecharMouse(page, 'principal');
+
+    // acionar: o clique no botão de ação toca cta_out (e navega)
+    await page.mouse.move(200, 200, { steps: 2 });
+    await dorme(page, 250);
+    const p4 = await botaoNaTela(page);
+    await zerar(page);
+    if (p4) { await page.mouse.move(p4.x, p4.y, { steps: 4 }); await dorme(page, 200); await page.mouse.down(); await page.mouse.up(); await dorme(page, 400); }
+    t = await toques(page);
+    confere('som: clicar no botão de ação toca cta_out', !!p4 && contar(t, 'cta_out.mp3') === 1, t.join());
     confere('som: nenhum erro de console, inclusive de CSP', !page.erros.length, page.erros.slice(0, 2).join(' | '));
     await ctx.close();
   });
-  // Celular: sem som por decisão do original
+
+  // Página de sessão: o menu abre na hora (sem a espera da home), pelo teclado também, e a leitura (painel por classe) tem som
+  await tenta('som na página de sessão', async () => {
+    const { ctx, page } = await abrir({ caminho: '/sessoes/rocky-1976/', quando: JULHO });
+    await pronta(page);
+    await page.evaluate(gravarToques);
+    await page.mouse.move(700, 500);
+    await page.mouse.click(700, 500);
+    await page.waitForFunction(() => window.Howler?._howls?.length >= 4 && window.Howler._howls.every((h) => h.state() !== 'loading'), null, ESPERA);
+    await page.keyboard.press('Shift');
+    await page.evaluate(() => document.getElementById('mainpanel').focus());
+    await dorme(page, 1100);
+    await zerar(page);
+    await page.keyboard.press('Enter');
+    await page.waitForFunction(() => document.getElementById('mainpanel')?.checked, null, ESPERA);
+    await dorme(page, 1300);
+    const abriu = await toques(page);
+    await zerar(page);
+    await page.keyboard.press('Enter');
+    await page.waitForFunction(() => !document.getElementById('mainpanel')?.checked, null, ESPERA);
+    await dorme(page, 900);
+    const fechou = await toques(page);
+    confere('som na página de sessão: pelo teclado, abrir e fechar tocam menu_IN e menu_OUT', contar(abriu, 'menu_IN.mp3') === 1 && contar(fechou, 'menu_OUT.mp3') === 1, JSON.stringify({ abriu, fechou }));
+    await page.mouse.move(600, 600, { steps: 2 });
+    await zerar(page);
+    await page.click(ALVO.pequeno);
+    await page.waitForFunction(() => document.querySelector('[data-menu="casepanel"]')?.classList.contains('open'), null, ESPERA);
+    await dorme(page, 1300);
+    const leituraAbre = await toques(page);
+    await zerar(page);
+    await page.click(ALVO.pequeno);
+    await page.waitForFunction(() => !document.querySelector('[data-menu="casepanel"]')?.classList.contains('open'), null, ESPERA);
+    await dorme(page, 900);
+    const leituraFecha = await toques(page);
+    confere('som na página de sessão: a leitura abre com menu_IN e fecha com menu_OUT', contar(leituraAbre, 'menu_IN.mp3') === 1 && contar(leituraFecha, 'menu_OUT.mp3') === 1, JSON.stringify({ leituraAbre, leituraFecha }));
+    confere('som na página de sessão: console limpo', !page.erros.length, page.erros.slice(0, 2).join(' | '));
+    await ctx.close();
+  });
+
+  // Arquivo de som quebrado: nada toca, o menu segue funcionando e o console fica limpo
+  await tenta('som com arquivo quebrado', async () => {
+    const { ctx, page } = await abrir({ caminho: '/', quando: JULHO, antes: async (p) => { await p.route('**/assets/audio/*.mp3', (r) => r.fulfill({ status: 200, contentType: 'audio/mpeg', body: Buffer.from('isto não é um mp3') })); } });
+    await pronta(page);
+    await page.evaluate(gravarToques);
+    await page.mouse.click(700, 500);
+    // com o arquivo inválido o Howler acusa erro ou fica carregando para sempre (sem placa de som, no navegador sem janela); nos
+    // dois casos nada pode tocar
+    await dorme(page, 2500);
+    await page.mouse.move(600, 600, { steps: 2 });
+    await abrirMouse(page, 'principal');
+    const aberto = await marcado(page, 'principal');
+    await fecharMouse(page, 'principal');
+    const t = await toques(page);
+    confere('som com arquivo quebrado: o menu abre e fecha e nada toca', aberto && !(await marcado(page, 'principal')) && t.length === 0, t.join());
+    confere('som com arquivo quebrado: console limpo', !page.erros.length, page.erros.slice(0, 2).join(' | '));
+    await ctx.close();
+  });
+
+  // Celular: sem som. Nada é baixado, nada toca, e o botão de silenciar não aparece
   await tenta('som no celular', async () => {
-    const { ctx, page } = await abrir({ caminho: '/', quando: JULHO, tela: 'c390' });
+    const mp3 = [];
+    const { ctx, page } = await abrir({ caminho: '/', quando: JULHO, tela: 'c390', antes: async (p) => { p.on('request', (r) => { if (/\.mp3(\?|$)/.test(r.url())) mp3.push(r.url().split('/').pop()); }); } });
     await pronta(page);
     await page.evaluate(() => { window.__toques = []; if (window.Howl) { const p = window.Howl.prototype.play; window.Howl.prototype.play = function () { window.__toques.push(1); return p.apply(this, arguments); }; } });
     await page.tap(ALVO.principal);
     await dorme(page, 1300);
+    const botao = await page.evaluate(() => { const b = document.querySelector('[data-menu="mainpanel"] [data-som-alternar]'); return b ? getComputedStyle(b).display : 'sem botão'; });
     await page.tap(ALVO.principal);
     await dorme(page, 1000);
     confere('som no celular: o toque não chama play', (await page.evaluate(() => window.__toques.length)) === 0);
+    confere('som no celular: nenhum arquivo de som é baixado', mp3.length === 0, mp3.join());
+    confere('som no celular: o botão de silenciar não aparece', botao === 'none', botao);
     confere('som no celular: console limpo', !page.erros.length, page.erros.slice(0, 2).join(' | '));
     await ctx.close();
   });

@@ -1,152 +1,81 @@
-// Gera os recursos da marca a partir do arquivo oficial reference/brand/logo.jpg (o "A" colorido, 1254 x 1254, sobre campo
-// preto), sem redesenhar o símbolo: cores, geometria e detalhes são os pixels do arquivo.
-//
-//   1. Fundo externo transparente. Só sai o preto ligado às bordas do quadro. A busca parte das bordas por uma versão erodida
-//      do preto (raio 3), então não atravessa as linhas pretas finas entre as faces; depois volta ao tamanho original. O miolo
-//      do A, a casa preta da escala de cinza e as linhas internas ficam, porque são desenho.
-//   2. Halo escuro: a própria silhueta dilatada, por baixo, no preto do tema. Sobre fundo escuro some; sobre foto ou fundo claro
-//      devolve ao símbolo o contorno preto que ele tem no arquivo. É o que dá contraste em toda tela sem tingir o símbolo.
-//   3. Derivados, cada um no seu enquadramento:
-//      - simbolo-cor-256.webp e simbolo-cor-768.webp: o símbolo recortado justo, com o halo, para menu, rodapé, Sobre e as
-//        imagens de compartilhamento;
-//      - favicon-32.png e favicon.svg: quadrado em volta do símbolo, transparente, com halo de 1 px na escala da guia;
-//      - icone-toque-180.png e icone-512.png: o próprio arquivo, recortado num quadrado em volta do símbolo, com o campo preto
-//        (o iOS não aceita transparência no ícone de toque);
-//      - cartão de teste "sem sinal", só as barras: imagem do item-aviso.
+// Gera os recursos da marca a partir do arquivo oficial reference/brand/simbolo.png, sem redesenhar a forma:
+//   - máscara com transparência (alfa = luminância da fonte; só limpa o ruído do arquivo nas pontas);
+//   - favicon com transparência: a mesma máscara, recortada num quadrado em volta da forma, com um halo fino, a própria forma
+//     dilatada, por baixo e no tom contrário. Em PNG, branco com halo escuro; em SVG, branco com halo escuro em guia escura e quase
+//     preto com halo claro em guia clara. O halo some na guia do mesmo tom e contorna a forma na do tom contrário, que é o caso da
+//     janela anônima com o Windows claro (guia escura, conteúdo claro);
+//   - ícone de toque (o próprio arquivo reduzido, branco sobre preto: o iOS não aceita transparência ali);
+//   - cartão de teste "sem sinal", só as barras: imagem do item-aviso.
 //   node tools/marca.mjs
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const FONTE = path.join(ROOT, 'reference/brand/logo.jpg');
+const FONTE = path.join(ROOT, 'reference/brand/simbolo.png');
 const SITE = path.join(ROOT, 'public/assets/img/site');
 fs.mkdirSync(SITE, { recursive: true });
 
-/** preto do tema (--sinal-preto), usado no halo */
-const HALO = [5, 5, 6];
-/** fundo do arquivo: 0 ou 1 nos quatro cantos; a casa preta da escala de cinza fica em 10 a 12 */
-const LIMIAR_FUNDO = 6;
-const RAIO_EROSAO = 3;
+const { data, info } = await sharp(FONTE).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+const px = info.width * info.height;
+const rgba = Buffer.alloc(px * 4, 255);
+for (let i = 0; i < px; i++) {
+  const o = i * info.channels;
+  const l = 0.2126 * data[o] + 0.7152 * data[o + 1] + 0.0722 * data[o + 2];
+  rgba[i * 4 + 3] = Math.max(0, Math.min(255, Math.round(((l - 24) * 255) / (232 - 24))));
+}
+const mascara = sharp(rgba, { raw: { width: info.width, height: info.height, channels: 4 } });
+await mascara.clone().webp({ lossless: true, effort: 6 }).toFile(path.join(SITE, 'simbolo-mascara.webp'));
+await mascara.clone().resize(256, 256).webp({ lossless: true, effort: 6 }).toFile(path.join(SITE, 'simbolo-mascara-256.webp'));
+await mascara.clone().png({ compressionLevel: 9 }).toFile(path.join(SITE, 'simbolo-transparente.png'));
 
-const { data: rgb, info } = await sharp(FONTE).removeAlpha().toColourspace('srgb').raw().toBuffer({ resolveWithObject: true });
-const W = info.width, H = info.height, N = W * H;
-
-// --- 1. fundo externo -----------------------------------------------------------------------------------------------
-const escuro = new Uint8Array(N);
-for (let i = 0; i < N; i++) escuro[i] = Math.max(rgb[i * 3], rgb[i * 3 + 1], rgb[i * 3 + 2]) <= LIMIAR_FUNDO ? 1 : 0;
-
-/** mínimo (erosão) ou máximo (dilatação) numa janela quadrada de 2*raio+1, em duas passadas */
-function janela(a, w, h, raio, maximo) {
-  const meio = new Uint8Array(a.length), saida = new Uint8Array(a.length);
-  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
-    let v = maximo ? 0 : 255;
-    for (let d = -raio; d <= raio; d++) { const xx = x + d; const s = xx < 0 || xx >= w ? (maximo ? 0 : 255) : a[y * w + xx]; v = maximo ? Math.max(v, s) : Math.min(v, s); }
-    meio[y * w + x] = v;
-  }
-  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
-    let v = maximo ? 0 : 255;
-    for (let d = -raio; d <= raio; d++) { const yy = y + d; const s = yy < 0 || yy >= h ? (maximo ? 0 : 255) : meio[yy * w + x]; v = maximo ? Math.max(v, s) : Math.min(v, s); }
-    saida[y * w + x] = v;
-  }
+// Recorte quadrado em volta da forma, com 4% de folga: na guia o símbolo ocupa o ícone quase inteiro. Só enquadra, não redesenha.
+const alfa = await mascara.clone().extractChannel(3).raw().toBuffer();
+let x0 = info.width, y0 = info.height, x1 = 0, y1 = 0;
+for (let y = 0; y < info.height; y++) for (let x = 0; x < info.width; x++) if (alfa[y * info.width + x] > 8) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+const lado = Math.min(info.width, info.height, Math.round(Math.max(x1 - x0 + 1, y1 - y0 + 1) * 1.08));
+const meio = (a, b, limite) => Math.max(0, Math.min(limite - lado, Math.round((a + b + 1) / 2 - lado / 2)));
+const RECORTE_FAVICON = { left: meio(x0, x1, info.width), top: meio(y0, y1, info.height), width: lado, height: lado };
+const alfaEm = (l) => mascara.clone().extract(RECORTE_FAVICON).resize(l, l, { kernel: 'lanczos3' }).extractChannel(3).raw().toBuffer();
+// máximo numa janela quadrada de 2*raio+1, em duas passadas
+function dilatar(a, l, raio) {
+  const meioPasso = new Uint8Array(a.length);
+  const saida = Buffer.alloc(a.length);
+  for (let y = 0; y < l; y++) for (let x = 0; x < l; x++) { let m = 0; for (let d = -raio; d <= raio; d++) if (x + d >= 0 && x + d < l) m = Math.max(m, a[y * l + x + d]); meioPasso[y * l + x] = m; }
+  for (let y = 0; y < l; y++) for (let x = 0; x < l; x++) { let m = 0; for (let d = -raio; d <= raio; d++) if (y + d >= 0 && y + d < l) m = Math.max(m, meioPasso[(y + d) * l + x]); saida[y * l + x] = m; }
   return saida;
 }
-// fora do quadro conta como fundo na erosão: a borda do arquivo não fecha a busca
-const erodido = janela(escuro, W, H, RAIO_EROSAO, false);
-const externo = new Uint8Array(N);
-const fila = new Int32Array(N);
-let ini = 0, fim = 0;
-const semear = (i) => { if (erodido[i] && !externo[i]) { externo[i] = 1; fila[fim++] = i; } };
-for (let x = 0; x < W; x++) { semear(x); semear((H - 1) * W + x); }
-for (let y = 0; y < H; y++) { semear(y * W); semear(y * W + W - 1); }
-while (ini < fim) {
-  const i = fila[ini++], x = i % W, y = (i - x) / W;
-  if (x > 0) semear(i - 1);
-  if (x < W - 1) semear(i + 1);
-  if (y > 0) semear(i - W);
-  if (y < H - 1) semear(i + W);
-}
-const fundo = janela(externo, W, H, RAIO_EROSAO + 1, true);
-for (let i = 0; i < N; i++) fundo[i] = fundo[i] && escuro[i] ? 1 : 0;
-
-// caixa do símbolo
-let x0 = W, y0 = H, x1 = 0, y1 = 0;
-for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (!fundo[y * W + x]) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
-const larg = x1 - x0 + 1, alt = y1 - y0 + 1;
-
-// --- 2. RGBA: o arquivo onde é símbolo, transparente onde é fundo externo, com o halo por baixo ------------------------
-/** RGBA do símbolo numa tela maior (margem m em volta da caixa), com halo de raio r em pixels do arquivo */
-function rgbaComHalo(m, r) {
-  const w = larg + 2 * m, h = alt + 2 * m;
-  const alfa = new Uint8Array(w * h);
-  const cor = Buffer.alloc(w * h * 3);
-  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
-    const sx = x0 - m + x, sy = y0 - m + y;
-    if (sx < 0 || sy < 0 || sx >= W || sy >= H) continue;
-    const i = sy * W + sx;
-    if (!fundo[i]) { alfa[y * w + x] = 255; cor[(y * w + x) * 3] = rgb[i * 3]; cor[(y * w + x) * 3 + 1] = rgb[i * 3 + 1]; cor[(y * w + x) * 3 + 2] = rgb[i * 3 + 2]; }
-  }
-  const halo = r > 0 ? janela(alfa, w, h, r, true) : new Uint8Array(w * h);
-  const saida = Buffer.alloc(w * h * 4);
-  for (let i = 0; i < w * h; i++) {
-    if (alfa[i]) { saida[i * 4] = cor[i * 3]; saida[i * 4 + 1] = cor[i * 3 + 1]; saida[i * 4 + 2] = cor[i * 3 + 2]; saida[i * 4 + 3] = 255; }
-    else if (halo[i]) { saida[i * 4] = HALO[0]; saida[i * 4 + 1] = HALO[1]; saida[i * 4 + 2] = HALO[2]; saida[i * 4 + 3] = 255; }
-  }
-  return { buf: saida, w, h };
-}
-const raw = ({ buf, w, h }) => sharp(buf, { raw: { width: w, height: h, channels: 4 } });
-
-// --- 3. derivados ---------------------------------------------------------------------------------------------------
-// Símbolo com halo de 24 px do arquivo (cerca de 1 px de tela no menu) e 2 px de folga. A forma ocupa alt/(alt+52) da altura
-// do arquivo: o tema usa esse número para a altura da forma igualar a da caixa.
-const MARGEM = 26;
-const comHalo = rgbaComHalo(MARGEM, 24);
-// 256 serve menu, rodapé e Sobre (até 3x de densidade); 768 só alimenta as imagens de compartilhamento
-await raw(comHalo).resize({ height: 256, kernel: 'lanczos3' }).webp({ lossless: true, effort: 6 }).toFile(path.join(SITE, 'simbolo-cor-256.webp'));
-await raw(comHalo).resize({ height: 768, kernel: 'lanczos3' }).webp({ quality: 92, alphaQuality: 100, effort: 6 }).toFile(path.join(SITE, 'simbolo-cor-768.webp'));
-console.log(`símbolo ${larg} x ${alt} em (${x0}, ${y0}); folga ${MARGEM}: a forma ocupa ${((alt / (alt + 2 * MARGEM)) * 100).toFixed(2)}% da altura`);
-
-// Favicon: quadrado em volta do símbolo com 4% de folga de cada lado, reduzido, e o halo feito na escala do ícone, para dar
-// 1 px na guia. A redução é sobre o símbolo sem halo, com alfa pré-multiplicado: as cores não escurecem na borda.
-const ladoFav = Math.round(Math.max(larg, alt) * 1.08);
-const semHalo = rgbaComHalo(Math.ceil((ladoFav - Math.min(larg, alt)) / 2) + 2, 0);
-const recorteFav = { left: Math.round((semHalo.w - ladoFav) / 2), top: Math.round((semHalo.h - ladoFav) / 2), width: ladoFav, height: ladoFav };
-async function favicon(l, raio, alfaHalo) {
-  const { data } = await raw(semHalo).extract(recorteFav).resize(l, l, { kernel: 'lanczos3' }).raw().toBuffer({ resolveWithObject: true });
-  const a = new Uint8Array(l * l);
-  for (let i = 0; i < l * l; i++) a[i] = data[i * 4 + 3];
-  const h = janela(a, l, l, raio, true);
-  const out = Buffer.alloc(l * l * 4);
-  for (let i = 0; i < l * l; i++) {
-    const fa = a[i] / 255, ha = (h[i] / 255) * alfaHalo, ta = fa + ha * (1 - fa);
-    for (let c = 0; c < 3; c++) out[i * 4 + c] = ta > 0 ? Math.round((data[i * 4 + c] * fa + HALO[c] * ha * (1 - fa)) / ta) : 0;
-    out[i * 4 + 3] = Math.round(ta * 255);
-  }
-  return sharp(out, { raw: { width: l, height: l, channels: 4 } }).png({ compressionLevel: 9 }).toBuffer();
-}
-fs.writeFileSync(path.join(SITE, 'favicon-32.png'), await favicon(32, 1, 0.9));
-// SVG: a mesma imagem a 96 px, com halo de 3 px (1 px na guia). Uma imagem só: as cores do símbolo não mudam com o tema da guia,
-// e o halo escuro some na guia escura e contorna o símbolo na clara.
-fs.writeFileSync(
-  path.join(SITE, 'favicon.svg'),
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><image id="simbolo" href="data:image/png;base64,${(await favicon(96, 3, 0.9)).toString('base64')}" width="96" height="96"/></svg>\n`,
-);
-
-// Ícones de toque: o próprio JPG, num quadrado em volta do símbolo em que ele ocupa 80% da altura, sem margem preta a mais.
-let RECORTE_ICONE;
+// alfa vira PNG branco: é assim que a máscara de luminância do SVG lê
+const brancoCom = (a, l) => { const b = Buffer.alloc(l * l * 4, 255); for (let i = 0; i < l * l; i++) b[i * 4 + 3] = a[i]; return sharp(b, { raw: { width: l, height: l, channels: 4 } }).png({ compressionLevel: 9 }).toBuffer(); };
 {
-  const lado = Math.min(W, H, Math.round(alt / 0.8));
-  const cx = x0 + larg / 2, cy = y0 + alt / 2;
-  const left = Math.max(0, Math.min(W - lado, Math.round(cx - lado / 2)));
-  const top = Math.max(0, Math.min(H - lado, Math.round(cy - lado / 2)));
-  for (const [nome, l] of [['icone-toque-180.png', 180], ['icone-512.png', 512]]) {
-    await sharp(FONTE).removeAlpha().extract({ left, top, width: lado, height: lado }).resize(l, l, { kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(path.join(SITE, nome));
+  // PNG de 32: forma branca sobre halo preto a 85%, de 1 px
+  const forma = await alfaEm(32);
+  const halo = dilatar(forma, 32, 1);
+  const rgba = Buffer.alloc(32 * 32 * 4);
+  for (let i = 0; i < 32 * 32; i++) {
+    const f = forma[i] / 255, h = (halo[i] / 255) * 0.85, a = f + h * (1 - f);
+    const c = a > 0 ? Math.round((255 * f) / a) : 0;
+    rgba[i * 4] = rgba[i * 4 + 1] = rgba[i * 4 + 2] = c;
+    rgba[i * 4 + 3] = Math.round(a * 255);
   }
-  RECORTE_ICONE = { left, top, lado };
+  await sharp(rgba, { raw: { width: 32, height: 32, channels: 4 } }).png({ compressionLevel: 9 }).toFile(path.join(SITE, 'favicon-32.png'));
 }
-
-// Recorte e máscara do fundo, para os testes conferirem os derivados contra o arquivo
-fs.writeFileSync(path.join(ROOT, 'reference/brand/logo-recorte.json'), JSON.stringify({ arquivo: 'logo.jpg', x0, y0, largura: larg, altura: alt, margemSimbolo: MARGEM, ladoFavicon: ladoFav, icone: RECORTE_ICONE, limiarFundo: LIMIAR_FUNDO, raioErosao: RAIO_EROSAO }, null, 1) + '\n');
+{
+  // SVG: a forma e o halo de 3 px a 96, que dá 1 px na guia
+  const forma = await alfaEm(96);
+  const f64 = (await brancoCom(forma, 96)).toString('base64');
+  const h64 = (await brancoCom(dilatar(forma, 96, 3), 96)).toString('base64');
+  fs.writeFileSync(
+    path.join(SITE, 'favicon.svg'),
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">' +
+      '<style>#h{fill:#000;fill-opacity:.85}#f{fill:#fff}@media (prefers-color-scheme:light){#h{fill:#fff;fill-opacity:.9}#f{fill:#151515}}</style>' +
+      `<mask id="mh"><image id="halo" href="data:image/png;base64,${h64}" width="96" height="96"/></mask>` +
+      `<mask id="mf"><image id="forma" href="data:image/png;base64,${f64}" width="96" height="96"/></mask>` +
+      '<rect id="h" width="96" height="96" mask="url(#mh)"/><rect id="f" width="96" height="96" mask="url(#mf)"/></svg>\n',
+  );
+}
+await sharp(FONTE).removeAlpha().resize(180, 180).png().toFile(path.join(SITE, 'icone-toque-180.png'));
+await sharp(FONTE).removeAlpha().resize(512, 512).png().toFile(path.join(SITE, 'icone-512.png'));
 
 // Cartão de teste: as mesmas barras SMPTE do tema.
 const BARRAS = ['#c0c0c0', '#c0c000', '#00c0c0', '#00c000', '#c000c0', '#c00000', '#0000c0'];

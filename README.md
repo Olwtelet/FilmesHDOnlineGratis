@@ -33,8 +33,9 @@ Gera `dist/` e serve em **http://localhost:4322** com `tools/serve.mjs`, que res
 | `npm run og` | Gera os cartões de compartilhamento em `public/og/` |
 | `npm run textos` | Confere o texto editorial além do que o build valida |
 | `npm run tutorial` | Regrava o vídeo do tutorial a partir da home servida na 4322 |
-| `npm run marca` | Gera o símbolo colorido, favicons, ícones de toque e cartão de teste a partir de `reference/brand/logo.jpg` |
-| `node tools/imagens-quem-faz.mjs` | Gera a foto do Olwtelet e a logo da Sala 24 do Sobre a partir dos originais em `reference/brand/` |
+| `npm run marca` | Gera a máscara do símbolo, favicons, ícones de toque e cartão de teste a partir de `reference/brand/simbolo.png` |
+| `node tools/imagens-quem-faz.mjs` | Gera o retrato do Olwtelet (`goat.png`, com o céu estendido) e o símbolo da Sala 24 (`simbolo.png`) do Sobre |
+| `node tools/gerar-sons.mjs` | Sintetiza os quatro efeitos sonoros (matrizes em `reference/sons/`) e grava os MP3 com o codificador do Windows |
 | `node tools/patch-bundle.mjs` | Reaplica as edições locais do `app.js` e do `main.css`; rodar de novo não altera nada |
 
 ## Como cadastrar uma sessão
@@ -56,7 +57,7 @@ src/
                           sessoes/[slug], rss.xml, sitemap.xml
 public/
   assets/js/app.js        runtime original, com as edições de tools/patch-bundle.mjs
-  assets/js/local-*.js    camada local: imagens, abertura, menu, trailer e cursor
+  assets/js/local-*.js    camada local: imagens, abertura, menu, trailer, cursor e sons
   assets/css/tema-sinal.css
   assets/img/sessoes/     imagens de cada sessão, geradas
   og/                     cartões de compartilhamento, gerados
@@ -68,7 +69,7 @@ reference/                histórico: capturas, HTML original, binários retirad
 
 **Ordem das sessões.** `SessoesOrdem.astro` é um script inline com `data-taxi-reload`: roda depois do DOM e antes do `app.js` e dos módulos, no primeiro carregamento e em toda navegação do Taxi, inclusive de página em cache. Ele ordena as listas pelo relógio de São Paulo, sem novo deploy e sem corrida com o WebGL. Ordem e aba aberta estão em [docs/FASE2.md](docs/FASE2.md).
 
-**Edições no runtime.** Ficam todas em `tools/patch-bundle.mjs`: o giro de entrada para no primeiro item, o rótulo `ROLAR`, que o cursor do tema deixou fora da tela, a tecla de depuração retirada, o rollover sem layout por letra, as regras por filme do `main.css`, as leituras que andam sozinhas e, na volta à home, uma textura por imagem e o descarte do que saiu da tela.
+**Edições no runtime.** Ficam todas em `tools/patch-bundle.mjs`: o giro de entrada para no primeiro item, o rótulo `ROLAR`, que o cursor do tema deixou fora da tela, a tecla de depuração retirada, o rollover sem layout por letra, as regras por filme do `main.css`, as leituras que andam sozinhas, na volta à home, uma textura por imagem e o descarte do que saiu da tela, e a classe de som sem gatilhos, porque `local-som.js` assume os sons.
 
 ## Testes
 

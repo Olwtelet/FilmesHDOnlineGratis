@@ -615,28 +615,23 @@ html.trailer-aberto #second { z-index: 3; }
   .trailer-opcoes { top: calc(50% + max(100px, 28.125vw)); }
 }
 
-/* 7d. Fase 2: marca. O símbolo é o "A" colorido de reference/brand/logo.jpg, com as cores do arquivo, gerado por tools/marca.mjs:
-       só o fundo externo fica transparente, e um halo escuro fino por baixo devolve o contorno preto do arquivo. Sobre o preto
-       do site o halo some; sobre foto ou fundo claro, ele mantém o símbolo legível sem tingir nem inverter as cores. A forma ocupa
-       94,97% da altura do arquivo. A imagem vai num ::before 105,3% mais alto que a caixa e centrado nela: a forma tem a altura
-       da caixa, como antes, e o halo, que fica na folga do arquivo, passa um pouco da caixa sem ser cortado nem mudar o layout. */
-.marca-simbolo { display: block; position: relative; }
-.marca-simbolo::before { content: ""; position: absolute; left: 50%; top: 50%; height: 105.3%; aspect-ratio: 836 / 1034; transform: translate(-50%, -50%);
-  background: url(/assets/img/site/simbolo-cor-256.webp?v=3) center / 100% 100% no-repeat; pointer-events: none;
+/* 7d. Fase 2: marca. O símbolo é sempre a mesma máscara (tools/marca.mjs), pintada na cor do texto. A forma ocupa 78% da
+       altura do arquivo: 128,3% faz a altura da forma igualar a da caixa. */
+.marca-simbolo { display: block; background-color: currentColor;
+  -webkit-mask: url(/assets/img/site/simbolo-mascara-256.webp) center / auto 128.3% no-repeat;
+  mask: url(/assets/img/site/simbolo-mascara-256.webp) center / auto 128.3% no-repeat;
   -webkit-print-color-adjust: exact; print-color-adjust: exact; } /* é fundo: sem isto, a impressão apagaria o símbolo */
 .logo-footer.marca-simbolo { aspect-ratio: 89 / 88; }
 /* Logo do menu: a altura é a do antigo SVG (viewBox 131 x 63, com 6,15rem, 5,125rem e 75 px de largura), e --u é uma
-   unidade daquele viewBox. O nome pede cerca de 12% a mais de largura; abaixo de 8,5 px ele deixa de se ler. O nome em
-   difference fica isolado na caixa, como o path dentro do svg; o símbolo colorido fica fora da mescla. */
+   unidade daquele viewBox. O nome pede cerca de 12% a mais de largura; abaixo de 8,5 px ele deixa de se ler. O filho em
+   difference fica isolado na caixa, como o path dentro do svg; no celular é a caixa inteira que mescla. */
 .marca-nav { --u: calc(6.15rem / 131); position: relative; display: flex; align-items: center; gap: calc(var(--u) * 7);
   height: calc(var(--u) * 63); isolation: isolate; }
 .marca-nav > * { mix-blend-mode: difference; }
-/* o símbolo colorido não mescla: as cores ficam as do arquivo em qualquer fundo, e o contraste vem do halo */
-.marca-nav .marca-simbolo { flex: none; height: 100%; aspect-ratio: .8; mix-blend-mode: normal; }
+.marca-nav .marca-simbolo { flex: none; height: 100%; aspect-ratio: .8; }
 .marca-nome { flex: none; font-family: var(--font-display-leve); font-size: max(8.5px, calc(var(--u) * 13)); line-height: 1.12; letter-spacing: .03em; white-space: nowrap; }
 @media screen and (max-width: 767px) { .marca-nav { --u: calc(5.125rem / 131); } }
-/* no celular só o nome mescla, como no desktop: a caixa inteira mesclada inverteria as cores do símbolo */
-@media screen and (max-width: 479px) { .marca-nav { --u: calc(75px / 131); } }
+@media screen and (max-width: 479px) { .marca-nav { --u: calc(75px / 131); mix-blend-mode: difference; } }
 /* Tutorial: guarda a altura da caixa antes de o pôster e o vídeo carregarem */
 .video-2 { aspect-ratio: 1668 / 1080; object-fit: cover; }
 /* com entrelinha 1em, o acento de maiúscula sai da linha: a janela o cortaria na primeira linha e o texto em espera
@@ -660,22 +655,35 @@ html.trailer-aberto #second { z-index: 3; }
   .about-he .span-clip { padding-inline: .08em; margin-inline: -.08em; }
 }
 
-/* Sobre, "QUEM FAZ": a foto do Olwtelet e a logo da Sala 24 nos painéis de imagem. No original, a altura do cartão é a maior
-   entre o texto e a imagem; uma foto em pé esticaria o cartão. Aqui a imagem preenche o painel sem ditar a altura dele:
-   de 992 px para cima o painel acompanha o texto, de 480 a 991 px fica em 2:3, e abaixo disso mantém os 18rem do original.
-   Uma faixa SMPTE fina fecha a base do painel, como a do topo da página. */
+/* Sobre, "QUEM FAZ": o retrato do Olwtelet e a logo da Sala 24 nos painéis de imagem. No original, a altura do cartão é a maior
+   entre o texto e a imagem; uma imagem em pé esticaria o cartão. Aqui a imagem preenche o painel sem ditar a altura dele, e o
+   painel nunca fica mais largo que alto: de 992 px para cima é no mínimo quadrado e acompanha o texto quando ele é mais alto
+   (de quadrado a cerca de 0,38 de largura por altura), de 480 a 991 px é no mínimo 2:3, e abaixo disso é quadrado. Os dois cartões
+   seguem a mesma regra e ficam alinhados. Uma faixa SMPTE fina fecha a base do painel, como a do topo da página. */
 .team-img-w { position: relative; }
 .team-img-w::after { content: ""; position: absolute; inset: auto 0 0; height: var(--faixa-altura); background: var(--faixa-smpte); pointer-events: none; }
 .team-img.team-img--retrato, .team-img.team-img--logo { position: absolute; inset: 0; width: 100%; height: 100%; }
-/* a cabeça fica no alto do recorte: alinhado pelo topo, o rosto aparece do painel deitado (1920 px) ao em pé (1280 px) */
-.team-img--retrato { object-fit: cover; object-position: 50% 3%; }
+/* o pôster (céu estendido para cima) cobre o painel, alinhado pela base: no painel quadrado aparece a imagem original inteira, e nos
+   mais altos entra o céu acima do gorro. Em 63% na horizontal, gorro, pompom e rosto ficam inteiros também nos painéis estreitos */
+.team-img--retrato { object-fit: cover; object-position: 63% 100%; }
 /* o campo preto da própria logo vira o fundo do painel; o padding dá o respiro e o símbolo fica grande sem encostar */
 .team-img--logo { object-fit: contain; box-sizing: border-box; padding: 9%; background-color: #000; }
-@media screen and (min-width: 480px) and (max-width: 991px) { .team-img-w { aspect-ratio: 2 / 3; } }
+/* no mínimo quadrado pelo padding de um filho (porcentagem da largura), e não por aspect-ratio: com o texto mais alto que o
+   painel é largo, o aspect-ratio transformava a altura em largura mínima e os dois cartões passavam da tela de 992 a 1279 px */
+@media screen and (width > 991px) { .team-img-w::before { content: ""; display: block; padding-top: 100%; } }
+/* em intervalo, para casar com as quebras do webflow.css (max-width 479 e 991) também com zoom, em larguras fracionárias */
+@media screen and (479px < width <= 991px) {
+  .team-img-w { aspect-ratio: 2 / 3; }
+  /* de 480 a 573 px a coluna de texto (metade do cartão menos o padding) é mais estreita que OLWTELET a 3,2rem */
+  .team-he { font-size: min(var(--text-h2), calc((50vw - 3 * var(--sgx) - 4px) / 4.7)); }
+}
+/* De 992 a 1365 px a coluna de texto do cartão é estreita (25vw menos a margem), e OLWTELET, com 4,57 em, passava até 40 px da
+   borda do cartão. Ali o nome encolhe com a largura e cabe dentro do padding; de 1366 px para cima fica nos 3,2rem de sempre. */
+@media screen and (991px < width <= 1365px) { .team-he { font-size: min(var(--text-h2), calc((25vw - 5.25rem - 4px) / 4.7)); } }
 @media screen and (max-width: 479px) {
+  .team-img-w { height: auto; aspect-ratio: 1 / 1; }
   /* a faixa fica acima do tracejado que separa a imagem do texto */
   .team-img-w::after { bottom: 1px; }
-  .team-img--logo { padding: 7% 9%; }
 }
 
 /* Rodapé, coluna do RSS: campo só de leitura no lugar do e-mail. O .w-input pinta campos readonly de cinza. */
@@ -715,6 +723,19 @@ html.trailer-aberto #second { z-index: 3; }
   .s.footer.black .col-1-3.left { top: 0; }
 }
 
+/* 7f. Sons (public/assets/js/local-som.js): o botão COM SOM / SEM SOM fica na linha do copyright do menu principal, à direita, no
+   mesmo corpo e na mesma opacidade. O rótulo é curto para caber ao lado do nome, que não quebra: o painel não ganha altura. O estado
+   vem da classe do <html>, que o Taxi não troca, então o rótulo de cada página nova já nasce certo. No toque não há sons, e o botão
+   não aparece. */
+.copyright-menu-text { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.copyright-menu-text > .light { flex: none; white-space: nowrap; }
+.menu-som { appearance: none; margin: 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; letter-spacing: inherit;
+  line-height: inherit; white-space: nowrap; opacity: .5; cursor: pointer; transition: opacity .2s; }
+.menu-som:hover, .menu-som:focus-visible { opacity: 1; }
+.menu-som-desligado, html.sons-desligados .menu-som-ligado { display: none; }
+html.sons-desligados .menu-som-desligado { display: inline; }
+@media (hover: none), (pointer: coarse) { .menu-som { display: none; } }
+
 /* 8. Foco e seleção. Nenhum :has() neste arquivo: aqui, ele fazia cada inserção no DOM recalcular o estilo do documento, o que somava
       de 1 a 3 s na volta à home. O estado vem de classes postas por local-menu.js e local-trailer.js. */
 :focus-visible, a:focus-visible { outline: 2px solid var(--cor-ativo); outline-offset: 2px; } /* a: o a:hover{outline:0} do webflow.css apagaria o anel com o ponteiro em cima */
@@ -731,8 +752,6 @@ html.trailer-aberto #second { z-index: 3; }
 .nav-link.logo, .marca-nav { color: var(--sinal-texto) !important; }
 /* com o trailer aberto, o logo recua quando o bundle o escurece, como no original */
 html.trailer-aberto .nav-link.logo[style*="black"], html.trailer-aberto .nav-link.logo[style*="black"] .marca-nav { color: var(--sinal-linha-forte) !important; transition: color .5s .2s; }
-/* o símbolo colorido não segue a cor do texto: recua pela opacidade, na mesma proporção do nome (#33373c sobre #e8e9ea) */
-html.trailer-aberto .nav-link.logo[style*="black"] .marca-simbolo { opacity: .22; transition: opacity .5s .2s; }
 /* Texto sobre a imagem do topo dos estudos de caso, que fica dentro de uma superfície invertida */
 .work-back-btn, .work-back-btn .roll-cont-eyeb { color: var(--sinal-texto); }
 
