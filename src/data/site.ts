@@ -6,7 +6,7 @@ export const SITE = {
   url: 'https://filmeshdonlinegratis.vercel.app',
   lang: 'pt-BR',
   tagline: 'As ideias são à prova de balas',
-  description: 'Curadoria de cinema: cada sessão é escolhida por quem assistiu e tem o motivo da escolha registrado. A exibição é ao vivo na sala do Discord; o site não hospeda filmes.',
+  description: 'Curadoria de cinema e sessões ao vivo no Discord.',
   author: 'Olwtelet',
   rss: '/rss.xml',
   /** data de abertura do servidor */

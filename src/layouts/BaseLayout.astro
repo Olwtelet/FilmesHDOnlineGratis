@@ -9,7 +9,8 @@ interface Props {
   /** título da página; o nome do site é acrescentado quando cabe */
   title: string;
   description?: string;
-  /** caminho da imagem de compartilhamento, 1200x630 */
+  /** caminho da imagem de compartilhamento, 1200x630; a padrão é gerada por tools/gerar-og.mjs (padrao-v2.jpg: o nome novo fura
+   *  o cache das redes, e padrao.jpg continua respondendo com a mesma imagem) */
   ogImage?: string;
   ogImageAlt?: string;
   /** dados estruturados (JSON-LD) */
@@ -24,8 +25,8 @@ interface Props {
 const {
   title,
   description = SITE.description,
-  ogImage = '/og/padrao.jpg',
-  ogImageAlt = `Símbolo de ${SITE.name}`,
+  ogImage = '/og/padrao-v2.jpg',
+  ogImageAlt = `${SITE.name}: o símbolo da marca e o nome em três linhas, em branco sobre fundo preto, com a faixa de cores da carta de teste embaixo.`,
   jsonLd,
   noindex = false,
   rotate = 'after',

@@ -1,0 +1,49 @@
+AVISO DE DIREITOS AUTORAIS
+
+Filmes HD Online Grátis
+Copyright © 2026 Olwtelet. Todos os direitos reservados.
+
+
+1. O que este aviso cobre
+
+Este aviso vale para as partes originais deste repositório, criadas por Olwtelet ou cujos direitos pertencem a Olwtelet, que é o titular. São elas:
+
+- o código próprio do site: páginas, layouts e componentes em src/; a camada local em public/assets/js/local-*.js; o tema em public/assets/css/tema-sinal.css; e a configuração do projeto. A marcação, as classes, os caminhos SVG e o script do Webflow que vieram de terceiros seguem a seção 3;
+- os dados em src/, exceto os dados factuais dos filmes (fichas, elenco, créditos, classificação etária, gêneros, anos, durações e os identificadores e nomes de arquivo do TMDB, do IMDb e do YouTube), que não são reivindicados;
+- as ferramentas em tools/, inclusive o código das edições de tools/patch-bundle.mjs. Não estão incluídos os arquivos de terceiros que elas editam, nem os trechos do app.js e do main.css originais citados ou adaptados nos campos de e para de tools/patch-bundle.mjs, que seguem a seção 3;
+- os textos da curadoria: manchetes, leituras, descrições e notas das sessões, os textos das páginas, e a documentação em README.md e docs/, exceto o conteúdo da Siena reproduzido em docs/historico/ (veja a seção 3);
+- os efeitos sonoros sintetizados por tools/gerar-sons.mjs, em public/assets/audio/ e reference/sons/;
+- a marca e as imagens do titular em reference/brand/ e os arquivos gerados a partir delas: favicons, ícones, máscaras do símbolo e imagens dos cartões do Sobre;
+- a composição das imagens de compartilhamento em public/og/: o desenho, a tipografia e a disposição. As cenas de filmes que aparecem nelas não estão incluídas.
+
+
+2. O que não é permitido sem autorização
+
+Nenhuma licença é concedida sobre as partes descritas na seção 1. Sem autorização prévia e por escrito do titular, não é permitido copiar, modificar, redistribuir, republicar ou usar essas partes, no todo ou em parte.
+
+Este aviso tem efeito jurídico, não técnico. O repositório é público: qualquer pessoa pode ver o conteúdo, e as funções que o GitHub oferece para repositórios públicos, como visualizar e criar forks dentro da plataforma, seguem os Termos de Serviço do GitHub. Fora do que esses termos garantem, nenhuma permissão é dada.
+
+Para pedir autorização, escreva para filmeshdonlinegratisbr@gmail.com.
+
+
+3. Materiais de terceiros, que este aviso não cobre
+
+Este aviso não reivindica nenhum direito sobre materiais de terceiros. Eles seguem os direitos e os termos dos respectivos titulares, e nada aqui concede ou altera licenças sobre eles. Onde o repositório não identifica uma licença, este aviso também não declara nenhuma.
+
+- Estrutura original do site da Siena Film Foundation, sobre a qual este site foi construído: o runtime public/assets/js/app.js (também na versão com as edições locais), public/assets/css/main.css, out.css e webflow.css, a imagem public/assets/img/site/all-masks.webp, os trechos desses arquivos citados ou adaptados em tools/patch-bundle.mjs, os caminhos SVG copiados da marcação original para src/components/ e a estrutura de marcação e de classes que os componentes, os layouts e as páginas em src/ reproduzem. Também o material de referência em reference/original/ e reference/localized/, e o conteúdo do site da Siena reproduzido em docs/historico/: o texto e a marcação copiados em docs/historico/pages/ e as citações no inventário. Licença não identificada no repositório.
+- Bibliotecas embutidas em public/assets/js/app.js. GSAP e seus plugins são de GreenSock, sujeitos aos termos indicados no próprio arquivo. Howler.js e lil-gui são distribuídos sob a licença MIT. Lenis, Taxi.js e o código WebGL embutido não têm licença identificada no repositório.
+- jQuery 3.5.1 (public/assets/js/jquery-3.5.1.min.js), cuja licença é indicada no cabeçalho do arquivo.
+- Runtime e imagens do Webflow (public/assets/js/webflow*.js, public/assets/img/webflow/ e o script inline do Webflow em src/layouts/BaseLayout.astro). Licença não identificada no repositório.
+- Fontes Archivo e JetBrains Mono (public/assets/fonts/tema/), distribuídas sob a SIL Open Font License, com o copyright dos respectivos projetos registrado nos arquivos.
+- Desenhos dos ícones de Discord, X e YouTube, vindos do projeto simple-icons. As marcas Discord, X e YouTube pertencem aos seus titulares.
+- Imagens de filmes obtidas pelo TMDB e tudo o que é derivado delas: public/assets/img/sessoes/, os recortes de cenas em public/assets/img/sobre/, as cenas nas imagens de compartilhamento das sessões e as imagens de filmes que aparecem no vídeo do tutorial e nas capturas de tela em reference/fase2/capturas/. Pertencem aos estúdios, distribuidoras e fotógrafos de cada filme.
+- Trailers, exibidos pelo YouTube. O repositório não guarda nenhum arquivo de vídeo: guarda os identificadores, os títulos e os canais dos vídeos, metadados públicos nos relatórios em reference/fase2/relatorios/ e capturas de tela em que aparecem quadros dos trailers. Os trailers e esses quadros pertencem aos seus titulares.
+- Dados factuais dos filmes, levantados em fontes externas (TMDB, IMDb, YouTube, portarias de classificação, plataformas e exibidores), guardados em src/data/ e nos relatórios em reference/fase2/relatorios/. Este aviso não reivindica esses dados, e o uso de cada fonte segue os termos dela. Títulos, nomes, créditos e marcas de filmes e de serviços pertencem aos seus titulares.
+- Dependências npm listadas em package.json e package-lock.json, cada uma sob a sua licença.
+
+Os avisos de licença e de direitos que acompanham esses materiais continuam valendo e não são substituídos por este aviso: entre eles, o bloco de licenças no fim de public/assets/js/app.js, o cabeçalho do jQuery, os metadados das fontes e os avisos de direitos nos arquivos de referência da Siena.
+
+
+4. Relação com os termos do site
+
+Os termos de uso do site publicado ficam na página /termos/. Este arquivo trata do conteúdo deste repositório.

@@ -1070,6 +1070,20 @@ function parteDados() {
   const esperadas = ['/', '/programacao/', '/sobre/', '/contato/', '/cookies/', '/termos/', '/privacidade/', ...SLUGS.map((s) => `/sessoes/${s}/`)].map((c) => `https://filmeshdonlinegratis.vercel.app${c}`);
   confere('sitemap: todas as páginas, nenhuma a mais', [...locs].sort().join() === [...esperadas].sort().join(), `${locs.length} endereços`);
 
+  // Home: a descrição padrão curta nas três metas e a imagem padrão nova; as outras páginas sem imagem própria usam a mesma
+  const metasDe = (arquivo) => { const m = {}; nos(parse(fs.readFileSync(path.join(DIST, arquivo), 'utf8')), (n) => { if (n.tagName === 'meta') { const k = atributo(n, 'property') || atributo(n, 'name'); if (k) m[k] = atributo(n, 'content'); } }); return m; };
+  const DESCRICAO = 'Curadoria de cinema e sessões ao vivo no Discord.';
+  const IMAGEM = 'https://filmeshdonlinegratis.vercel.app/og/padrao-v2.jpg';
+  const metasHome = metasDe('index.html');
+  confere('home: description, og:description e twitter:description são a frase padrão', metasHome.description === DESCRICAO && metasHome['og:description'] === DESCRICAO && metasHome['twitter:description'] === DESCRICAO, JSON.stringify([metasHome.description, metasHome['og:description'], metasHome['twitter:description']]));
+  confere('home: og:image e twitter:image na URL nova da imagem padrão, com texto alternativo', metasHome['og:image'] === IMAGEM && metasHome['twitter:image'] === IMAGEM && /símbolo/.test(metasHome['og:image:alt'] || '') && !/prova de balas/i.test(metasHome['og:image:alt'] || ''), `${metasHome['og:image']} | ${metasHome['og:image:alt']}`);
+  for (const arq of ['programacao/index.html', 'sobre/index.html', 'contato/index.html', 'termos/index.html', '404.html']) {
+    const m = metasDe(arq);
+    confere(`${arq}: imagem padrão nova e descrição própria`, m['og:image'] === IMAGEM && m['twitter:image'] === IMAGEM && !!m.description && m.description !== DESCRICAO, `${m['og:image']} | ${(m.description || '').slice(0, 50)}`);
+  }
+  // o lema sai só da arte de compartilhamento: segue no site, no painel de leitura do menu fora das sessões
+  confere('o lema continua no site', /As ideias são à prova de balas/.test(fs.readFileSync(path.join(DIST, 'index.html'), 'utf8')));
+
   for (const s of SESSOES) {
     const f = path.join(DIST, 'sessoes', s.slug, 'index.html');
     const html = fs.readFileSync(f, 'utf8');
@@ -1095,6 +1109,7 @@ function parteDados() {
     confere(`${nome}: twitter:image igual a og:image`, metas['twitter:image'] === metas['og:image']);
     confere(`${nome}: descrição curta para meta`, (metas.description || '').length > 0 && metas.description.length <= 300, `${(metas.description || '').length} caracteres`);
     confere(`${nome}: meta description não cortada no meio`, /[.!?…]$/.test((metas.description || '').trim()), (metas.description || '').slice(-40));
+    confere(`${nome}: a descrição própria da sessão, não a padrão do site`, metas.description === s.texto.descricao && metas['og:description'] === s.texto.descricao && metas['twitter:description'] === s.texto.descricao, (metas.description || '').slice(0, 60));
 
     // JSON-LD
     let okLd = false, detalheLd = 'sem JSON-LD';
@@ -1159,7 +1174,7 @@ function parteDados() {
 // ---------------------------------------------------------------------------------------------------------------------
 async function parteMarca() {
   const OG = path.join(DIST, 'og');
-  for (const s of [...SLUGS, 'padrao']) {
+  for (const s of [...SLUGS, 'padrao-v2', 'padrao']) {
     const f = path.join(OG, `${s}.jpg`);
     if (!fs.existsSync(f)) { confere(`og ${s}`, false, 'não existe'); continue; }
     const m = await sharp(f).metadata();
@@ -1249,7 +1264,21 @@ async function parteMarca() {
   const geradores = ['tools/marca.mjs', 'tools/gerar-og.mjs', 'tools/imagens-quem-faz.mjs'].filter((f) => /logo\.jpg|logo-recorte|simbolo-cor|Logo da Sala 24/.test(fs.readFileSync(path.join(RAIZ, f), 'utf8')));
   confere('marca colorida fora do build, das fontes e dos geradores', !coloridosSite.length && !fontesColoridas.length && !geradores.length && !/simbolo-cor/.test(tema) && fs.existsSync(FONTE), [...coloridosSite, ...fontesColoridas, ...geradores].join(', '));
   // Imagens de compartilhamento, todas: o símbolo branco na área dele, sem cor
-  for (const [s, caixa, minimo] of [['padrao', { left: 490, top: 100, width: 220, height: 280 }, 15000], ...SLUGS.map((slug) => [slug, { left: 50, top: 38, width: 80, height: 100 }, 2000])]) {
+  // a URL antiga da imagem padrão serve a imagem nova, e o gerador não escreve mais o lema
+  confere('og padrao.jpg igual a padrao-v2.jpg, e o gerador sem o lema', fs.existsSync(path.join(OG, 'padrao.jpg')) && fs.readFileSync(path.join(OG, 'padrao.jpg')).equals(fs.readFileSync(path.join(OG, 'padrao-v2.jpg'))) && !/prova de balas/i.test(fs.readFileSync(path.join(RAIZ, 'tools/gerar-og.mjs'), 'utf8')));
+  // só o símbolo e o nome: acima da faixa de cores, nenhum pixel claro fora do bloco deles (x 98 a 971, y 132 a 484 em 16/11/2026),
+  // então lema, subtítulo, data ou texto pequeno que voltem à arte reprovam
+  if (fs.existsSync(path.join(OG, 'padrao-v2.jpg'))) {
+    const { data, info } = await sharp(path.join(OG, 'padrao-v2.jpg')).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+    let fora = 0;
+    for (let y = 0; y < 610; y++) for (let x = 0; x < info.width; x++) {
+      if (x >= 80 && x <= 1000 && y >= 115 && y <= 500) continue;
+      const i = (y * info.width + x) * 3;
+      if (Math.min(data[i], data[i + 1], data[i + 2]) > 120) fora++;
+    }
+    confere('og padrao-v2: nada claro fora do símbolo e do nome', info.width === 1200 && info.height === 630 && fora === 0, `${info.width}x${info.height}, ${fora} pixels claros fora do bloco`);
+  }
+  for (const [s, caixa, minimo] of [['padrao-v2', { left: 110, top: 150, width: 240, height: 310 }, 15000], ...SLUGS.map((slug) => [slug, { left: 50, top: 38, width: 80, height: 100 }, 2000])]) {
     const f = path.join(OG, `${s}.jpg`);
     if (!fs.existsSync(f)) continue;
     const px = await sharp(f).extract(caixa).removeAlpha().raw().toBuffer();

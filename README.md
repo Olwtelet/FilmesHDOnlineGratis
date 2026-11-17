@@ -2,13 +2,20 @@
 
 Site da curadoria de cinema Filmes HD Online Grátis: sessões ao vivo na Sala 24, no Discord, com programação, arquivo e uma página crítica por sessão. O site não hospeda nem exibe filmes.
 
-Feito em **Astro 7**, gera páginas estáticas. A estrutura, as animações e as interações vêm de um runtime original (`public/assets/js/app.js`, com GSAP, Lenis, Taxi.js, Howler e WebGL próprio), guiado por classes e atributos do HTML. A identidade visual é o [Tema Sinal](docs/TEMA.md).
+Feito em **Astro 7**, gera páginas estáticas. A estrutura, as animações e as interações vêm do runtime do site original da Siena (`public/assets/js/app.js`, com GSAP, Lenis, Taxi.js, Howler e o WebGL do próprio runtime), guiado por classes e atributos do HTML. Esse runtime é material de terceiros (veja [Direitos](#direitos)). A identidade visual é o [Tema Sinal](docs/TEMA.md).
 
 | Documento | Conteúdo |
 |---|---|
 | [docs/FASE2.md](docs/FASE2.md) | Decisões, mapeamento dos blocos, funcionalidades do site antigo, **como cadastrar uma sessão**, correções de dados e evidência dos testes |
 | [docs/TEMA.md](docs/TEMA.md) | Tokens e tratamentos do Tema Sinal |
 | [docs/historico/](docs/historico/) | A réplica da Siena: README original, com toda a investigação da inicialização, e o inventário das páginas antigas |
+| [LICENSE](LICENSE) | Aviso de direitos autorais |
+
+## Direitos
+
+As partes originais deste repositório pertencem a Olwtelet, com todos os direitos reservados: o código próprio do site e das ferramentas, os textos da curadoria, a documentação (exceto o conteúdo da Siena reproduzido em `docs/historico/`), os sons sintetizados, a marca e as composições das imagens de compartilhamento. Nenhuma licença é concedida para copiar, modificar, redistribuir, republicar ou usar essas partes sem autorização prévia por escrito. Pedidos de autorização: filmeshdonlinegratisbr@gmail.com.
+
+Os materiais de terceiros seguem os direitos e os termos dos seus titulares, e os avisos de licença que os acompanham continuam valendo. Entre eles estão a estrutura original do site da Siena, as bibliotecas embutidas no `app.js`, o jQuery, o runtime do Webflow, as fontes, os ícones das redes, as imagens de filmes, os trailers, os dados factuais dos filmes e as dependências npm. O texto completo, com o que cada parte cobre, está no [LICENSE](LICENSE).
 
 ## Como rodar
 
@@ -56,7 +63,7 @@ src/
   pages/                  index, programacao, sobre, contato, cookies, termos, privacidade, 404,
                           sessoes/[slug], rss.xml, sitemap.xml
 public/
-  assets/js/app.js        runtime original, com as edições de tools/patch-bundle.mjs
+  assets/js/app.js        runtime do site original (terceiros), com as edições de tools/patch-bundle.mjs
   assets/js/local-*.js    camada local: imagens, abertura, menu, trailer, cursor e sons
   assets/css/tema-sinal.css
   assets/img/sessoes/     imagens de cada sessão, geradas
